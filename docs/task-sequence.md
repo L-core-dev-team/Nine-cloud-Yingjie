@@ -44,4 +44,4 @@ YJ-00 已获准按规划方向启动；其他实施任务尚未执行。独立�
 
 YJ-07只要求最小已有资料匹配能够返回结果或明确无匹配，不要求完成新美术资源生产。YJ-08的失败、关闭、迟到结果与归属检查属于第一次整合的一部分，不能全部推迟到YJ-12。
 
-下一任务书：[YJ-01固定运行基线](task-briefs/YJ-01-runtime-baseline.md)。
+新助手接手入口：[完整开工与接续任务书YJ-START-01](task-briefs/YJ-START-01-project-kickoff.md)。首次执行任务：[YJ-01固定运行基线](task-briefs/YJ-01-runtime-baseline.md)。YJ-START-01为文档编号，不增加开发任务阶段。

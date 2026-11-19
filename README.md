@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-- 项目已获准启动，独立仓库与15份规划文件初始化已完成；远端文件内容核验通过，详见[验证记录](docs/verification.md)。
+- 项目已获准启动，独立仓库与首批规划文件初始化已完成；远端文件内容核验通过，详见[验证记录](docs/verification.md)。
 - 远端仓库：[quakhiak34568-lang/Nine-cloud-Yingjie](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie)，私有，默认分支 `main`。
 - 本仓库承载需求、实施任务、决策和后续实现；当前尚无可运行的映界应用。
 - 用户愿意投入 1–2 个月；6–8 周是当前排期建议。
@@ -18,6 +18,8 @@
 本次导入规划文档，不复制九霄业务代码、图片、私人原件或凭据。万卡阁继续严格隔离。
 
 ## 按顺序阅读
+
+新建开发会话或交给新的执行助手时，先读[完整开工与接续任务书 YJ-START-01](docs/task-briefs/YJ-START-01-project-kickoff.md)。其中已汇总当前基线、完整需求台账、首次工作包、全部任务顺序、并行边界和交接模板。
 
 1. [需求与首版范围](docs/requirements.md)
 2. [启动决定与未决事项](docs/decisions.md)
