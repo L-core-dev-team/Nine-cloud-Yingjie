@@ -16,7 +16,20 @@
 - 仓库：[quakhiak34568-lang/Nine-cloud-Yingjie](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie)。
 - GitHub元数据核实：私有仓库，所有者为quakhiak34568-lang，默认分支为main。
 - GitHub初始提交：`61ad0a685748a1a510d610cdb231e1e286c632ef`。
-- 规划文件上传后，将核对远端分支、文件清单与每个文件的Git blob哈希，并追加实际结果。
+
+## 规划文件上传核验
+
+2026-11-19，已完成以下实际检查：
+
+| 检查对象 | 执行方式 | 结果 |
+| --- | --- | --- |
+| 初始化提交 | GitHub读取main分支 | PASS：`6ebf0b0a2c2dd4b3309ed3456dde0648519b2699` |
+| 完整文件清单 | 递归读取提交对应Git tree | PASS：15份文件，返回未截断，无遗漏或意外新增 |
+| 文件内容一致性 | 将本地UTF-8文件的Git blob SHA-1逐个与远端树记录比较 | PASS：15/15一致 |
+| README可读取性 | 按固定提交读取README正文 | PASS：仓库信息、文档索引、当前阶段正确 |
+| 相对链接与编号 | 本地文档检查 | PASS：无断链，36项需求、15项任务 |
+
+证据提交：[6ebf0b0](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/commit/6ebf0b0a2c2dd4b3309ed3456dde0648519b2699)。其Git tree为`c9e32b692ffc29f2030e37921d38f178f038b815`。本记录由后续文档提交追加，不将该上传核验解释为应用运行或产品验收通过。
 
 ## 尚未执行
 

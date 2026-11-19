@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-- 项目已获准启动，独立仓库已创建，规划文档由本次初始化提交收录。
+- 项目已获准启动，独立仓库与15份规划文件初始化已完成；远端文件内容核验通过，详见[验证记录](docs/verification.md)。
 - 远端仓库：[quakhiak34568-lang/Nine-cloud-Yingjie](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie)，私有，默认分支 `main`。
 - 本仓库承载需求、实施任务、决策和后续实现；当前尚无可运行的映界应用。
 - 用户愿意投入 1–2 个月；6–8 周是当前排期建议。
