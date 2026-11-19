@@ -19,6 +19,8 @@
 
 ## 下一项
 
+[YJ-02完整任务书](task-briefs/YJ-02-image-capability.md)已准备，实验待执行。接续分支为codex/yj-02-image-capability，从YJ-01成果2a2800c继续；审查时main仍为62f3260，不能从旧main假定已含YJ-01报告。本轮[证据复核](reports/YJ-01-evidence-review.md)未重新运行Windows环境。
+
 YJ-02 从同一酒馆的初图、参考图更新、人物到场和复访开始。使用明确标注的剧情样例或后续实际保存的正文；本次固定模拟回复没有酒馆事实。真实图片验证需要可用且获准的参考图编辑服务。目前真实文字与图片调用均为 NOT_RUN。
 
 ## 保留未决

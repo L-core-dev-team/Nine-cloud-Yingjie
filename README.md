@@ -21,7 +21,7 @@
 
 ## 按顺序阅读
 
-新建开发会话或交给新的执行助手时，先读[完整开工与接续任务书 YJ-START-01](docs/task-briefs/YJ-START-01-project-kickoff.md)。其中已汇总当前基线、完整需求台账、首次工作包、全部任务顺序、并行边界和交接模板。
+接手时先读[当前交接](docs/handoff.md)确定阶段，再读[完整开工与接续任务书 YJ-START-01](docs/task-briefs/YJ-START-01-project-kickoff.md)。其中已汇总当前基线、完整需求台账、首次工作包、全部任务顺序、并行边界和交接模板。
 
 1. [需求与首版范围](docs/requirements.md)
 2. [启动决定与未决事项](docs/decisions.md)
@@ -32,7 +32,7 @@
 7. [验证记录](docs/verification.md)
 8. [当前交接与下一步](docs/handoff.md)
 
-下一项实施任务：[YJ-01 固定运行基线](docs/task-briefs/YJ-01-runtime-baseline.md)。
+下一项实施任务：[YJ-02 酒馆图片连续性与参考图能力验证](docs/task-briefs/YJ-02-image-capability.md)。YJ-01提交证据已复核，结论见[复核记录](docs/reports/YJ-01-evidence-review.md)。
 
 ## 历史资料
 

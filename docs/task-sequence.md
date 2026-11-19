@@ -37,11 +37,12 @@ YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。�
 | YJ-00 | 已完成启动方向确认 | 用户授权开始、建仓并上传计划；未决产品细项保持原状态 |
 | 仓库与文档初始化 | 已完成 | 私有仓库已创建，15份文件已上传；main分支、完整文件清单与逐文件Git blob哈希核验通过，见验证记录 |
 | YJ-01 | 已完成 | 独立角色卡会话两次提交、刷新恢复与 PostgreSQL 对账通过；真实模型 NOT_RUN。[运行报告](reports/YJ-01-runtime-baseline-report.md) |
-| YJ-02–YJ-13 | 待开始 | 未进行业务实现、真实生图或联调 |
+| YJ-02 | 待开始 | 完整任务书已准备；真实图片实验NOT_RUN，见[任务书](task-briefs/YJ-02-image-capability.md) |
+| YJ-03–YJ-13 | 待开始 | 未进行业务实现、真实生图或联调 |
 | YJ-M01 | 后续待开始 | 地图具体组织方式尚未确定 |
 
 ## 依赖说明
 
 YJ-07只要求最小已有资料匹配能够返回结果或明确无匹配，不要求完成新美术资源生产。YJ-08的失败、关闭、迟到结果与归属检查属于第一次整合的一部分，不能全部推迟到YJ-12。
 
-新助手接手入口：[完整开工与接续任务书YJ-START-01](task-briefs/YJ-START-01-project-kickoff.md)。首次执行任务：[YJ-01固定运行基线](task-briefs/YJ-01-runtime-baseline.md)。YJ-START-01为文档编号，不增加开发任务阶段。
+新助手接手入口：[完整开工与接续任务书YJ-START-01](task-briefs/YJ-START-01-project-kickoff.md)。当前下一任务：[YJ-02图片能力验证](task-briefs/YJ-02-image-capability.md)。YJ-01限定范围的完成结论见[证据复核](reports/YJ-01-evidence-review.md)。YJ-START-01为文档编号，不增加开发任务阶段。

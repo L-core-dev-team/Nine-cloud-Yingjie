@@ -6,6 +6,10 @@
 
 2026-11-19，九霄 `cd25360c7929e10f8b2b0fad342fedd943d4f323`。本地 Node、实际浏览器和 PostgreSQL、模拟文字供应商。建局、行动、整页刷新、同会话继续、再刷新及两条已完成正文对账均为 PASS。原生权威回合和 Worker 仅静态核查。真实文字模型、参考图生成、真机和用户试玩均为 NOT_RUN。[运行报告](reports/YJ-01-runtime-baseline-report.md) · [回执](reports/evidence/YJ-01-local-run.json)
 
+## YJ-01提交证据复核与YJ-02准备
+
+2026-11-19，独立读取YJ-01任务分支HEAD、报告、JSON回执、复跑脚本与固定上游用例。证据支持本地合成文字基线完成；未独立重跑Windows环境。见[复核记录](reports/YJ-01-evidence-review.md)。YJ-02任务书已准备，真实图片实验仍为NOT_RUN。
+
 ## 规划文档检查
 
 - 已整理原36项需求，保留确认等级与来源。
