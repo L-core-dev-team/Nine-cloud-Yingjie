@@ -4,6 +4,8 @@
 
 ## 当前状态
 
+- YJ-01 已完成本地 Node 合成文字基线，下一项为 YJ-02 酒馆图片连续性验证。[运行报告与复现步骤](docs/reports/YJ-01-runtime-baseline-report.md)
+
 - 项目已获准启动，独立仓库与首批规划文件初始化已完成；远端文件内容核验通过，详见[验证记录](docs/verification.md)。
 - 远端仓库：[quakhiak34568-lang/Nine-cloud-Yingjie](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie)，私有，默认分支 `main`。
 - 本仓库承载需求、实施任务、决策和后续实现；当前尚无可运行的映界应用。

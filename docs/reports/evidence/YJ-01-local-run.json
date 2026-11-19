@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-19",
+  "timezone": "Asia/Shanghai",
+  "upstream": "cd25360c7929e10f8b2b0fad342fedd943d4f323",
+  "node": "26.13.0",
+  "pnpm": "11.19.0",
+  "postgres": "18.4",
+  "chrome": "157.0.8103.79",
+  "checks": [
+    {
+      "status": "PASS",
+      "entry": "/lobby",
+      "provider": "synthetic",
+      "session": "c1a0980b-0ac0-4c94-bb6b-8b541e43a74c",
+      "viewport": [
+        360,
+        800
+      ],
+      "returnedAfterReload": true,
+      "continuedHttpStatus": 200,
+      "secondReload": true,
+      "postgres": {
+        "database": "jiuxiao_test_cards_demo",
+        "revisions": [
+          1,
+          2
+        ],
+        "sessionRevision": 2,
+        "completedRows": 2,
+        "actionsAndNarrativesMatched": true
+      }
+    },
+    {
+      "status": "PASS",
+      "scope": "LOCAL_DEMO_REAL_PG_COOKIE_SYNTHETIC",
+      "width": 360,
+      "import": true,
+      "chat": true,
+      "refresh": true,
+      "focusDraft": true,
+      "logoutIsolation": true,
+      "competingLauncherRejected": true,
+      "productionCalls": false
+    }
+  ],
+  "realTextModel": "NOT_RUN",
+  "imageGeneration": "NOT_RUN",
+  "physicalDevice": "NOT_RUN",
+  "workerRuntime": "NOT_RUN",
+  "checkout": {
+    "tracked": 5013,
+    "absent": 0,
+    "skipped": 0
+  }
+}

@@ -1,5 +1,7 @@
 # 九霄代码核查基线
 
+**YJ-01 当次运行基线**为九霄 `main@cd25360c7929e10f8b2b0fad342fedd943d4f323`。已在本地 Node、PostgreSQL 与模拟文字供应商上核验同一角色卡会话的保存、刷新和继续行动。版本差异、复跑步骤和宿主边界见[运行报告](reports/YJ-01-runtime-baseline-report.md)。下文保留开工前的历史核查。
+
 核查日期：2026-11-19。上游：L-core-dev-team/Nine-cloud；分支：main；固定提交：1bd7bb5ff6e6221378a7cb1292e559fb19bfbfbc。
 
 本稿以 Nine-cloud 主线提交 [1bd7bb5](https://github.com/L-core-dev-team/Nine-cloud/commit/1bd7bb5ff6e6221378a7cb1292e559fb19bfbfbc) 为核查基线。源码核查与已有联测回执支持以下结论；当前可运行性仍由 YJ-01 复核。
