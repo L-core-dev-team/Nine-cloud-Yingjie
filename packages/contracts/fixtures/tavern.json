@@ -1,0 +1,70 @@
+{
+  "evidenceCommit": "13ac86a0c4a130780123cb5ed1768db6c5b43603",
+  "runs": "docs/reports/evidence/YJ-02-image-runs.json",
+  "script": "docs/reports/evidence/YJ-02/fixture-v1.json",
+  "accepted": "docs/reports/evidence/YJ-02/accepted.json",
+  "scene": {
+    "sceneId": "tavern",
+    "name": "酒馆",
+    "aliases": [
+      "村中酒馆"
+    ],
+    "parentSceneId": null,
+    "fixedFeatures": [
+      "右侧柜台",
+      "左墙双窗",
+      "三张方桌",
+      "木梁"
+    ]
+  },
+  "people": {
+    "V1": [
+      "掌柜",
+      "蓝衣客",
+      "赭衣客"
+    ],
+    "V2": [
+      "掌柜",
+      "蓝衣客",
+      "赭衣客",
+      "绿衣旅人",
+      "紫衣旅人"
+    ]
+  },
+  "stages": [
+    {
+      "id": "S0",
+      "version": "V1",
+      "action": "generate",
+      "asset": "I0"
+    },
+    {
+      "id": "S1",
+      "version": "V1",
+      "action": "reuse",
+      "asset": "I0"
+    },
+    {
+      "id": "S2",
+      "version": "V2",
+      "action": "edit",
+      "reference": "I0",
+      "asset": "I1",
+      "change": "增加两位旅人"
+    },
+    {
+      "id": "S3A",
+      "version": "V2",
+      "action": "reuse",
+      "asset": "I1"
+    },
+    {
+      "id": "S3B",
+      "version": "V3",
+      "action": "edit",
+      "reference": "I1",
+      "asset": "I2",
+      "change": "转为傍晚并点灯"
+    }
+  ]
+}

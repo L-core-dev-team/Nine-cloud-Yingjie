@@ -1,0 +1,64 @@
+{
+  "cardRow": {
+    "key": "70000000-0000-4000-8000-000000000001",
+    "action": "本地验证",
+    "narrative": "本地合成回复（非真实模型）",
+    "resulting_revision": 1
+  },
+  "owner": "offline-owner",
+  "wrongSession": "70000000-0000-4000-8000-000000000002",
+  "rejectedAssets": [
+    [
+      "pending",
+      "review-pending"
+    ],
+    [
+      "rejected",
+      "review-rejected"
+    ],
+    [
+      "invalidated",
+      "invalidated"
+    ],
+    [
+      "missing",
+      "file-missing"
+    ],
+    [
+      "corrupt",
+      "digest-mismatch"
+    ]
+  ],
+  "facts": [
+    [
+      "current-story",
+      true,
+      "两位旅人已到场"
+    ],
+    [
+      "memory",
+      true,
+      "昨日在山上"
+    ],
+    [
+      "plan",
+      true,
+      "明日进城"
+    ],
+    [
+      "rumor",
+      true,
+      "听说远山有雪"
+    ],
+    [
+      "current-story",
+      false,
+      "隐藏身份"
+    ],
+    [
+      "image-detail",
+      true,
+      "门外额外光点"
+    ]
+  ]
+}
