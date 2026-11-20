@@ -1,6 +1,6 @@
 # 映界共用画面契约 0.1
 
-维护与导入位置为 [packages/contracts](../../packages/contracts)。私有包名为 `@yingjie/contracts`，包版本 0.1.0。每个可独立交换的来源、地点、视觉快照、决策、能力、尝试和资产都带 `schemaVersion: "0.1"`。严格对象拒绝未知版本、多余字段和缺少的必填字段。仅下表注明的位置用 null 表示未知或不适用。破坏字段、枚举或语义兼容性的改动须发布新格式，双方显式转换后再交换。集合顺序不影响人物、固定特征及保留要求的比较。
+维护与导入位置为 [packages/contracts](../../packages/contracts)。私有包名为 `@yingjie/contracts`，包版本 0.1.1。每个可独立交换的来源、地点、视觉快照、决策、能力、尝试和资产都带 `schemaVersion: "0.1"`。严格对象拒绝未知版本、多余字段和缺少的必填字段。仅下表注明的位置用 null 表示未知或不适用。破坏字段、枚举或语义兼容性的改动须发布新格式，双方显式转换后再交换。集合顺序不影响人物、固定特征及保留要求的比较。
 
 ## 消费入口
 
@@ -36,13 +36,15 @@ export function identifyDecision(input) {
 
 角色卡源码为 [host.ts](https://github.com/L-core-dev-team/Nine-cloud/blob/cd25360c7929e10f8b2b0fad342fedd943d4f323/apps/api/src/card-import/host.ts)、[router.ts](https://github.com/L-core-dev-team/Nine-cloud/blob/cd25360c7929e10f8b2b0fad342fedd943d4f323/apps/api/src/card-import/router.ts)、[service.ts](https://github.com/L-core-dev-team/Nine-cloud/blob/cd25360c7929e10f8b2b0fad342fedd943d4f323/apps/api/src/card-import/service.ts)。原生路径见 [save.ts](https://github.com/L-core-dev-team/Nine-cloud/blob/cd25360c7929e10f8b2b0fad342fedd943d4f323/packages/contracts/src/save.ts)、[server-turn.ts](https://github.com/L-core-dev-team/Nine-cloud/blob/cd25360c7929e10f8b2b0fad342fedd943d4f323/apps/api/src/services/server-turn.ts)、[story-archive.ts](https://github.com/L-core-dev-team/Nine-cloud/blob/cd25360c7929e10f8b2b0fad342fedd943d4f323/apps/api/src/services/story-archive.ts)。
 
+角色卡的 `sessionId` 和 `key` 在 SourceSchema / fromCardHistory 入口校验为 UUID 并规范化为小写；先规范化，再生成归属、事件和请求键。同一 UUID 的大小写不能创建两个会话身份。其他不透明标识（包括 ownerId、fixtureId 和原生来源键）保持原有大小写语义。
+
 YJ-01 回执公开了 session 与修订 1、2，未给出真实 owner 或 key。离线角色卡对照从该回执取 session，用明确的测试 owner、key 及示意正文验证投影。酒馆从头到尾使用 synthetic-fixture。
 
 ## 数据字典
 
 | 记录 | 字段及读取规则 |
 | --- | --- |
-| Scene | source、sceneId 联合限定稳定地点；name、aliases、parentSceneId（可空）、fixedFeatures 描述地点。别名由维护方指向同一 sceneId，层级只表达关联 |
+| Scene | source 的稳定归属部分与 sceneId 联合限定地点；角色卡归属为 kind + ownerId + sessionId，事件 key/revision 仅记来源，不能成为地点主键的一部分；name、aliases、parentSceneId（可空）、fixedFeatures 描述地点。别名由维护方指向同一 sceneId，层级只表达关联 |
 | Fact | source、value、basis、playerKnown。currentFacts 只接受同一来源事件和修订的 current-story 且玩家已知条目。回忆、计划、传闻、图中细节留在候选层；标注由人或未来提取器提供 |
 | Visual | source 与 sceneId、visualVersion 定位快照。people、features 为可见标识集合，timeOfDay、lighting、viewpoint、perspective 记录时间、灯光、视野和人称限制。后续写入方按实质可见变化分配版本，普通对话和复访可重用已有版本 |
 | Decision | target 为完整目标快照，reason 为可解释理由。reuse 指定 assetId；generate 无参考；edit 的 reference 固定 assetId、sha256、原 visualVersion、reviewId，change 描述变化，preservePeople / preserveFeatures 明示须保留集合；skip 说明跳过理由。目标版本来自 target |
@@ -55,9 +57,10 @@ YJ-01 回执公开了 session 与修订 1、2，未给出真实 owner 或 key。
 ## 规则与接入顺序
 
 1. 用 eventKey 在所属 fixture、用户会话或存档分支下定位原事件。classifyDelivery 对照该事件已存的计划。首次 generate / edit 得到 new-request；reuse / skip 为 no-call。同事件规范化输入相同为 duplicate，发生矛盾为 event-conflict。requestKey 编码来源、剧情位置、目标事实/视角与版本、动作及参考内容和保留/变化要求；原因文案不影响出图身份。该键只供本地关联。跨进程唯一约束和人工新尝试由后续实现。
-2. 复用先用 reuseEligibility 核对指定资产，再按 displayEligibility 比对归属、文件、审阅、有效目标及可见状态。旧事件产生的图仍可匹配当前视觉；同版本号与不同事实并存会拒绝。编辑改用 referenceEligibility，核对精确参考、审阅记录和两侧须保留特征；原图与目标版本可不同。
+2. 复用先用 reuseEligibility 核对指定资产，再按 displayEligibility 比对归属、文件、审阅、有效目标及可见状态。旧事件产生的图仍可匹配当前视觉；同版本号与不同事实并存会拒绝。编辑改用 referenceEligibility，核对精确参考、审阅记录和两侧须保留特征；原图与目标版本可不同。精确参考匹配后，同一视觉版本却对应不同人物、特征、灯光、时间、视野或人称会以 visual-mismatch 拒绝；同版本同事实的修图仍可作为合法输入。
 3. 发出后超时用 stopWaiting 保留发出时间及未知结果。停止安排由 schedulingEnabled 表达，停止本地等待由 localWait 表达。nextAttemptAction 在未知且查询已获验证并有真实任务标识时允许查询原请求，否则 hold-unknown；没有自动重发分支。明确失败或根本未发出至多进入策略评估；拒绝、确认取消及已返回均终止该尝试。回调、对账、重试上限和退避由真实适配器补证。
 4. 迟到回执仍归原尝试。先用 resultLink 和 classifyResult 核对请求、目标、输出摘要、参考链。按 requestKey 和 attemptId 找原收件记录；同一结果只记一次，矛盾回传保留冲突。宿主负责原子提交。deliveryEligibility 再结合 localWait 和当前呈现许可判断能否自动显示。主动复访使用新的访问上下文单独检查已保存资产。
 5. historyEligibility 针对**原**归属和当前访问权限单独判断普通历史资格。已失效目标不能抢占视窗；仍在原归属且可读、已接受的资产可以进入原历史。审计保留尝试独立于普通历史。预设跨会话资产须另有获准资产来源和授权范围，本版未开放私人图片跨会话匹配。
 
 契约校验数据形状；关联规则比较记录和宿主提供的访问结果。事实提取、语义审阅、正文真伪、权限真实性、持久化和原子更新需要各自的数据来源或实际运行。实现不读取网络、数据库或图片供应商。
+

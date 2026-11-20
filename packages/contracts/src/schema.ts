@@ -4,6 +4,7 @@ export const schemaVersion = "0.1" as const;
 const version = z.literal(schemaVersion);
 const text = z.string().trim().min(1);
 const id = text;
+const uuid = z.uuid().transform(value => value.toLowerCase());
 const positive = z.int().positive();
 const digest = z.string().regex(/^[0-9a-f]{64}$/);
 const list = z.array(text).refine(items => new Set(items).size === items.length, "duplicate value");
@@ -12,8 +13,8 @@ const obj = z.strictObject;
 
 export const SourceSchema = z.discriminatedUnion("kind", [
   obj({ schemaVersion: version, kind: z.literal("synthetic-fixture"), fixtureId: id, eventId: id }),
-  obj({ schemaVersion: version, kind: z.literal("card-history"), ownerId: id, sessionId: z.uuid(),
-    key: z.uuid(), revision: positive, evidence: z.literal("completed-history") }),
+  obj({ schemaVersion: version, kind: z.literal("card-history"), ownerId: id, sessionId: uuid,
+    key: uuid, revision: positive, evidence: z.literal("completed-history") }),
   obj({ schemaVersion: version, kind: z.literal("native-turn"), ownerId: id, saveId: id,
     branchId: z.string().regex(/^[A-Za-z0-9][A-Za-z0-9._:-]{0,199}$/), parentBranchId: id.nullable(),
     forkRevision: z.int().nonnegative(), key: id, revision: positive, evidence: z.literal("accepted-archived-text") })
@@ -23,7 +24,7 @@ export const SourceSchema = z.discriminatedUnion("kind", [
 export type Source = z.infer<typeof SourceSchema>;
 
 // Accept exactly the projection returned by CardImportService.history.
-const historyRow = obj({ key: z.uuid(), action: text, narrative: text, resulting_revision: positive });
+const historyRow = obj({ key: uuid, action: text, narrative: text, resulting_revision: positive });
 export function fromCardHistory(ownerId: string, sessionId: string, row: unknown) {
   const { key, narrative, resulting_revision } = historyRow.parse(row);
   const source = SourceSchema.parse({ schemaVersion, kind: "card-history", ownerId, sessionId,

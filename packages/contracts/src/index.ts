@@ -79,6 +79,8 @@ export function referenceEligibility(asset: Asset, plan: Extract<Decision,{actio
   const ref = plan.reference;
   if (asset.assetId !== ref.assetId || asset.sha256 !== ref.sha256 ||
       asset.target.visualVersion !== ref.visualVersion || asset.review.id !== ref.reviewId) return "wrong-reference";
+  if (asset.target.visualVersion === plan.target.visualVersion && !sameVisual(asset.target, plan.target))
+    return "visual-mismatch";
   const retained = (required: string[], from: string[], to: string[]) =>
     required.every(item => from.includes(item) && to.includes(item));
   return retained(plan.preservePeople, asset.target.people, plan.target.people) &&
