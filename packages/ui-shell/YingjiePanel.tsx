@@ -6,6 +6,8 @@ type Props = {owner:string; sessionId:string; revision:number};
 type Frame = {decision?:string; source?:"preset"|"tasks"|undefined; reason?:string; tags?:string[]; state:string; revision:number; scene:string|null; version:string|null; people:number|null; assetId:string|null};
 const messages:Record<string,string>={
   "no-match":"没有可用的预设图。",ambiguous:"地点或素材有歧义，暂不展示。",
+  "ledger-review":"历史图片请求待核对，文字行动可继续。",
+  "verify-scene":"当前画面待核实，仍可继续文字行动。",
   "not-ready":"暂无线索，尚未定位当前场景。",unscheduled:"等待画面计划",queued:"图片任务已准备",waiting:"正在等待图片返回",
   failed:"生成失败，文字行动可继续。",refused:"图片请求被拒绝。",unknown:"结果未知，保留原请求等待核实。",
   disabled:"已停止安排新图，文字行动可继续。",skip:"本轮跳过画面更新。","review-pending":"图片已保存，等待审阅。",
@@ -47,8 +49,12 @@ export function YingjiePanel({owner,sessionId,revision}:Props) {
         const next=await r.json();
         if(!ctl.signal.aborted){
           setFrame(next);
-          if(next.revision===revision && pref.enabled)
-            timer=setTimeout(()=>void refresh(automatic && next.state==="unscheduled"),["queued","waiting","review-pending","unscheduled"].includes(next.state)?300:1800);
+          if(pref.enabled && next.revision<=revision){
+            const behind=next.revision<revision;
+            const unclaimed=next.state==="unscheduled" || next.state==="queued";
+            const waiting=behind || unclaimed || next.state==="waiting" || next.state==="review-pending";
+            timer=setTimeout(()=>void refresh(automatic && !behind && unclaimed),waiting?300:1800);
+          }
         }
       } catch { if(!ctl.signal.aborted)setFrame({source:pref.preset?"preset":undefined,revision,state:"unavailable",scene:null,version:null,people:null,assetId:null}); }
     }

@@ -33,6 +33,7 @@ export async function syncCardHistory({ pool, request, sessionId, signal, extrac
 
   const highWater = await authorize();
   const scope = cardScope(owner,id);
+  const historicalImages=extract.prepare ? await extract.prepare(pool,scope,highWater) : false;
   let after = await checkpoint(pool,scope);
   if (after > highWater) {
     // Another consumer may already have committed a newer, legitimate revision.
@@ -66,6 +67,6 @@ export async function syncCardHistory({ pool, request, sessionId, signal, extrac
   const current = await authorize();
   if (current < saved.revision) throw Error("history-regressed");
   signal.throwIfAborted();
-  return { revision: saved.revision, applied, result: current === saved.revision ? saved.result :
+  return { revision: saved.revision, applied, ...(historicalImages ? {historicalImages:true} : {}), result: current === saved.revision ? saved.result :
     { status:"not-ready", reason:"new-history-available" } };
 }

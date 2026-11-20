@@ -1,0 +1,1031 @@
+{
+  "recoveredStaleRevision": 7,
+  "coldLedger": "historical 5-person session held on open and refresh",
+  "browser": "157.0.8103.79",
+  "source": "synthetic saved by original ordinary CardSession",
+  "action": "继续观察",
+  "realTextCalls": 0,
+  "realImageCalls": 0,
+  "sends": [
+    {
+      "action": "generate",
+      "version": "V2",
+      "reference": null,
+      "unknown": false
+    },
+    {
+      "action": "edit",
+      "version": "V4",
+      "reference": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb",
+      "unknown": false
+    },
+    {
+      "action": "edit",
+      "version": "V5",
+      "reference": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb",
+      "unknown": false
+    },
+    {
+      "action": "edit",
+      "version": "V7",
+      "reference": "9feccc88e3814af79055bd71b43ec5757f4b8b8b3460787ef349ed3de4031b3f",
+      "unknown": true
+    }
+  ],
+  "steps": [
+    {
+      "revision": 1,
+      "place": "east",
+      "visual": "V1",
+      "people": [
+        "掌柜",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "reason": null,
+      "action": "preset",
+      "panel": "display",
+      "sha256": "7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee"
+    },
+    {
+      "revision": 2,
+      "place": "east",
+      "visual": "V1",
+      "people": [
+        "掌柜",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "reason": null,
+      "action": "preset",
+      "panel": "display",
+      "sha256": "7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee"
+    },
+    {
+      "revision": 3,
+      "place": "east",
+      "visual": "V2",
+      "people": [
+        "掌柜",
+        "紫衣客",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "reason": null,
+      "action": "generate",
+      "panel": "display",
+      "sha256": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb"
+    },
+    {
+      "revision": 4,
+      "place": "east",
+      "visual": "V2",
+      "people": [
+        "掌柜",
+        "紫衣客",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "reason": null,
+      "action": "reuse",
+      "panel": "display",
+      "sha256": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb"
+    },
+    {
+      "revision": 5,
+      "place": "west",
+      "visual": "V1",
+      "people": [
+        "掌柜",
+        "白衣客"
+      ],
+      "reason": null,
+      "action": "skip",
+      "panel": "skip",
+      "sha256": null
+    },
+    {
+      "revision": 6,
+      "place": "east",
+      "visual": "V2",
+      "people": [
+        "掌柜",
+        "紫衣客",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "reason": null,
+      "action": "reuse",
+      "panel": "display",
+      "sha256": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb"
+    },
+    {
+      "revision": 7,
+      "place": "east",
+      "visual": "V3",
+      "people": [
+        "掌柜",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "reason": null,
+      "action": "skip",
+      "panel": "skip",
+      "sha256": null
+    },
+    {
+      "revision": 8,
+      "place": "east",
+      "visual": "V4",
+      "people": [
+        "掌柜",
+        "紫衣客",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "reason": null,
+      "action": "edit",
+      "panel": "display",
+      "sha256": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb"
+    },
+    {
+      "revision": 9,
+      "place": "east",
+      "visual": "V4",
+      "people": [
+        "掌柜",
+        "紫衣客",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "reason": null,
+      "action": "reuse",
+      "panel": "display",
+      "sha256": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb"
+    },
+    {
+      "revision": 10,
+      "place": "east",
+      "visual": null,
+      "people": null,
+      "reason": "unresolved-visible-change",
+      "action": "skip",
+      "panel": "verify-scene",
+      "sha256": null
+    },
+    {
+      "revision": 11,
+      "place": "east",
+      "visual": null,
+      "people": null,
+      "reason": "unresolved-visible-change",
+      "action": "skip",
+      "panel": "verify-scene",
+      "sha256": null
+    },
+    {
+      "revision": 12,
+      "place": null,
+      "visual": null,
+      "people": null,
+      "reason": "visible-departure",
+      "action": "skip",
+      "panel": "not-ready",
+      "sha256": null
+    },
+    {
+      "revision": 13,
+      "place": "east",
+      "visual": null,
+      "people": null,
+      "reason": "unresolved-visible-change",
+      "action": "skip",
+      "panel": "verify-scene",
+      "sha256": null
+    },
+    {
+      "revision": 14,
+      "place": "east",
+      "visual": "V4",
+      "people": [
+        "掌柜",
+        "紫衣客",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "reason": null,
+      "action": "reuse",
+      "panel": "display",
+      "sha256": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb"
+    },
+    {
+      "revision": 15,
+      "place": "east",
+      "visual": "V5",
+      "people": [
+        "掌柜",
+        "紫衣客",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "reason": null,
+      "action": "edit",
+      "panel": "display",
+      "sha256": "9feccc88e3814af79055bd71b43ec5757f4b8b8b3460787ef349ed3de4031b3f"
+    },
+    {
+      "revision": 16,
+      "place": "east",
+      "visual": "V5",
+      "people": [
+        "掌柜",
+        "紫衣客",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "reason": null,
+      "action": "reuse",
+      "panel": "display",
+      "sha256": "9feccc88e3814af79055bd71b43ec5757f4b8b8b3460787ef349ed3de4031b3f"
+    },
+    {
+      "revision": 17,
+      "place": null,
+      "visual": null,
+      "people": null,
+      "reason": "visible-departure",
+      "action": "skip",
+      "panel": "not-ready",
+      "sha256": null
+    },
+    {
+      "revision": 18,
+      "place": "east",
+      "visual": "V5",
+      "people": [
+        "掌柜",
+        "紫衣客",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "reason": null,
+      "action": "reuse",
+      "panel": "display",
+      "sha256": "9feccc88e3814af79055bd71b43ec5757f4b8b8b3460787ef349ed3de4031b3f"
+    },
+    {
+      "revision": 19,
+      "place": "east",
+      "visual": "V6",
+      "people": [
+        "掌柜"
+      ],
+      "reason": null,
+      "action": "skip",
+      "panel": "skip",
+      "sha256": null
+    },
+    {
+      "revision": 20,
+      "place": "west",
+      "visual": "V1",
+      "people": [
+        "掌柜",
+        "白衣客"
+      ],
+      "reason": null,
+      "action": "skip",
+      "panel": "skip",
+      "sha256": null
+    },
+    {
+      "revision": 21,
+      "place": "east",
+      "visual": "V6",
+      "people": [
+        "掌柜"
+      ],
+      "reason": null,
+      "action": "skip",
+      "panel": "skip",
+      "sha256": null
+    },
+    {
+      "revision": 22,
+      "place": null,
+      "visual": null,
+      "people": null,
+      "reason": "unsupported-clause",
+      "action": "skip",
+      "panel": "not-ready",
+      "sha256": null
+    },
+    {
+      "revision": 23,
+      "place": "east",
+      "visual": null,
+      "people": null,
+      "reason": "unsupported-clause",
+      "action": "skip",
+      "panel": "verify-scene",
+      "sha256": null
+    },
+    {
+      "revision": 24,
+      "place": "east",
+      "visual": "V7",
+      "people": [
+        "掌柜",
+        "紫衣客",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "reason": null,
+      "action": "edit",
+      "panel": "unknown",
+      "sha256": null
+    },
+    {
+      "revision": 25,
+      "place": "east",
+      "visual": "V7",
+      "people": [
+        "掌柜",
+        "紫衣客",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "reason": null,
+      "action": "skip",
+      "panel": "unknown",
+      "sha256": null
+    }
+  ],
+  "differences": [
+    {
+      "revision": 1,
+      "sha256": "b4bf16de90bc5d69bf5a154481fc98e37c766ac047e12bd2160929f004ffd0f4",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": "east",
+        "reason": null,
+        "visual": "V1",
+        "people": [
+          "掌柜",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "lighting": "日光"
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "east",
+        "reason": null,
+        "visual": "V1",
+        "people": [
+          "掌柜",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "lighting": "日光"
+      },
+      "sameTarget": true
+    },
+    {
+      "revision": 2,
+      "sha256": "82568355353de80f096d408f2a5e7a7d9f512022888b4f72990dc6a02f64131a",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": "east",
+        "reason": null,
+        "visual": "V1",
+        "people": [
+          "掌柜",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "lighting": "日光"
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "east",
+        "reason": null,
+        "visual": "V1",
+        "people": [
+          "掌柜",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "lighting": "日光"
+      },
+      "sameTarget": true
+    },
+    {
+      "revision": 3,
+      "sha256": "46a01bbbcfbf50ddef321db6535f19810782ff425948ebd73a543132b3c1c8c0",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": "east",
+        "reason": null,
+        "visual": "V2",
+        "people": [
+          "掌柜",
+          "紫衣客",
+          "绿衣客",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "lighting": "日光"
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "east",
+        "reason": null,
+        "visual": "V2",
+        "people": [
+          "掌柜",
+          "紫衣客",
+          "绿衣客",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "lighting": "日光"
+      },
+      "sameTarget": true
+    },
+    {
+      "revision": 4,
+      "sha256": "53cdfc586e81d8e55807f86aacf2be4d412719ad1c6474702956e6f08435da6a",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": null,
+        "reason": "unsupported-clause",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "east",
+        "reason": null,
+        "visual": "V2",
+        "people": [
+          "掌柜",
+          "紫衣客",
+          "绿衣客",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "lighting": "日光"
+      },
+      "sameTarget": false
+    },
+    {
+      "revision": 5,
+      "sha256": "7ee084d82c0ac58a48ab4887c87f44e2720c7be4a41b971f944cc82c1bd8fe02",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": "west",
+        "reason": null,
+        "visual": "V1",
+        "people": [
+          "掌柜",
+          "白衣客"
+        ],
+        "lighting": "日光"
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "west",
+        "reason": null,
+        "visual": "V1",
+        "people": [
+          "掌柜",
+          "白衣客"
+        ],
+        "lighting": "日光"
+      },
+      "sameTarget": true
+    },
+    {
+      "revision": 6,
+      "sha256": "ada11de59254179d54aac03e2eb1cb9d7074150bb86e8c09fe1a4ec62eac8b52",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": null,
+        "reason": "unsupported-clause",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "east",
+        "reason": null,
+        "visual": "V2",
+        "people": [
+          "掌柜",
+          "紫衣客",
+          "绿衣客",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "lighting": "日光"
+      },
+      "sameTarget": false
+    },
+    {
+      "revision": 7,
+      "sha256": "291873efc5b260f14544e6a692484204038f30f766a55ba5f44586c19647e1fe",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": null,
+        "reason": "unsupported-clause",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "east",
+        "reason": null,
+        "visual": "V3",
+        "people": [
+          "掌柜",
+          "绿衣客",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "lighting": "日光"
+      },
+      "sameTarget": false
+    },
+    {
+      "revision": 8,
+      "sha256": "e23dc4f48c0fd211bbf7c15f0c372611176cea7c3c6dff9614a55a65d1d1dfb3",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": null,
+        "reason": "missing-baseline",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "east",
+        "reason": null,
+        "visual": "V4",
+        "people": [
+          "掌柜",
+          "紫衣客",
+          "绿衣客",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "lighting": "日光"
+      },
+      "sameTarget": false
+    },
+    {
+      "revision": 9,
+      "sha256": "e23dc4f48c0fd211bbf7c15f0c372611176cea7c3c6dff9614a55a65d1d1dfb3",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": null,
+        "reason": "missing-baseline",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "east",
+        "reason": null,
+        "visual": "V4",
+        "people": [
+          "掌柜",
+          "紫衣客",
+          "绿衣客",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "lighting": "日光"
+      },
+      "sameTarget": false
+    },
+    {
+      "revision": 10,
+      "sha256": "27bcaf0ac36431731297593223250730b0c3781b3fa33366600d95a934ac3307",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": null,
+        "reason": "unsupported-clause",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "east",
+        "reason": "unresolved-visible-change",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "sameTarget": false
+    },
+    {
+      "revision": 11,
+      "sha256": "4b23add99703a09c6de60d9d431df67fcbcac8efb486b073914237dc3242bd1f",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": null,
+        "reason": "unsupported-clause",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "east",
+        "reason": "unresolved-visible-change",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "sameTarget": false
+    },
+    {
+      "revision": 12,
+      "sha256": "09da6c145d51375074f2790ab8a6558c894ce7b26a896dd4007239e558b310a1",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": null,
+        "reason": "missing-baseline",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": null,
+        "reason": "visible-departure",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "sameTarget": false
+    },
+    {
+      "revision": 13,
+      "sha256": "91088ac91a90ca7c76bc378ff78606a8015503a383d080f3a8b3842731d7cda9",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": null,
+        "reason": "unconfirmed-return",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "east",
+        "reason": "unresolved-visible-change",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "sameTarget": false
+    },
+    {
+      "revision": 14,
+      "sha256": "9490d074458abe5b97e46a6ed2ce602c7c11c33e4c72acea8c4dbc0b26db0d76",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": null,
+        "reason": "unsupported-clause",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "east",
+        "reason": null,
+        "visual": "V4",
+        "people": [
+          "掌柜",
+          "紫衣客",
+          "绿衣客",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "lighting": "日光"
+      },
+      "sameTarget": false
+    },
+    {
+      "revision": 15,
+      "sha256": "7eb3901447d13845bdd5286e61cb8b62a3193b9f7e3be920b6c4b50d9e2baa40",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": null,
+        "reason": "unsupported-clause",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "east",
+        "reason": null,
+        "visual": "V5",
+        "people": [
+          "掌柜",
+          "紫衣客",
+          "绿衣客",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "lighting": "灯笼亮起"
+      },
+      "sameTarget": false
+    },
+    {
+      "revision": 16,
+      "sha256": "781014d575fac925b5cc72166624b401b9a81d41f5050a2fc779dfcf2a3858b7",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": null,
+        "reason": "unsupported-clause",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "east",
+        "reason": null,
+        "visual": "V5",
+        "people": [
+          "掌柜",
+          "紫衣客",
+          "绿衣客",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "lighting": "灯笼亮起"
+      },
+      "sameTarget": false
+    },
+    {
+      "revision": 17,
+      "sha256": "09da6c145d51375074f2790ab8a6558c894ce7b26a896dd4007239e558b310a1",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": null,
+        "reason": "missing-baseline",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": null,
+        "reason": "visible-departure",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "sameTarget": false
+    },
+    {
+      "revision": 18,
+      "sha256": "ada11de59254179d54aac03e2eb1cb9d7074150bb86e8c09fe1a4ec62eac8b52",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": null,
+        "reason": "unsupported-clause",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "east",
+        "reason": null,
+        "visual": "V5",
+        "people": [
+          "掌柜",
+          "紫衣客",
+          "绿衣客",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "lighting": "灯笼亮起"
+      },
+      "sameTarget": false
+    },
+    {
+      "revision": 19,
+      "sha256": "c854a2033230e11e9f797e34567723d53e23e3c42ca888f8d16b103c0e00c4e2",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": null,
+        "reason": "unsupported-clause",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "east",
+        "reason": null,
+        "visual": "V6",
+        "people": [
+          "掌柜"
+        ],
+        "lighting": "灯笼亮起"
+      },
+      "sameTarget": false
+    },
+    {
+      "revision": 20,
+      "sha256": "60f367040f436b0556013a8fe525f8ab925791ad86fbd7cfb1e78286c92936b6",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": null,
+        "reason": "unconfirmed-return",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "west",
+        "reason": null,
+        "visual": "V1",
+        "people": [
+          "掌柜",
+          "白衣客"
+        ],
+        "lighting": "日光"
+      },
+      "sameTarget": false
+    },
+    {
+      "revision": 21,
+      "sha256": "9216735057fb833cb97d6b489891837abf7d4c20e641da01d7b0b46a62621b9d",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": null,
+        "reason": "unsupported-clause",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "east",
+        "reason": null,
+        "visual": "V6",
+        "people": [
+          "掌柜"
+        ],
+        "lighting": "灯笼亮起"
+      },
+      "sameTarget": false
+    },
+    {
+      "revision": 22,
+      "sha256": "2572334c8d1403db1dc2fa2dafff49ae1d87b96cd1a75fc606b4d9896dd73cc6",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": null,
+        "reason": "unsupported-clause",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": null,
+        "reason": "unsupported-clause",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "sameTarget": false
+    },
+    {
+      "revision": 23,
+      "sha256": "9216735057fb833cb97d6b489891837abf7d4c20e641da01d7b0b46a62621b9d",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": null,
+        "reason": "unsupported-clause",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "east",
+        "reason": "unsupported-clause",
+        "visual": null,
+        "people": null,
+        "lighting": null
+      },
+      "sameTarget": false
+    },
+    {
+      "revision": 24,
+      "sha256": "029bc977c67177c2943691557583a1424e39f7cd3d9693eda1ddd0d5c0f4f105",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": "east",
+        "reason": null,
+        "visual": "V2",
+        "people": [
+          "掌柜",
+          "紫衣客",
+          "绿衣客",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "lighting": "日光"
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "east",
+        "reason": null,
+        "visual": "V7",
+        "people": [
+          "掌柜",
+          "紫衣客",
+          "绿衣客",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "lighting": "日光"
+      },
+      "sameTarget": false
+    },
+    {
+      "revision": 25,
+      "sha256": "82568355353de80f096d408f2a5e7a7d9f512022888b4f72990dc6a02f64131a",
+      "previous": {
+        "method": "zh-visible-clause/1",
+        "place": "east",
+        "reason": null,
+        "visual": "V2",
+        "people": [
+          "掌柜",
+          "紫衣客",
+          "绿衣客",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "lighting": "日光"
+      },
+      "replayed": {
+        "method": "zh-visible-clause/2",
+        "place": "east",
+        "reason": null,
+        "visual": "V7",
+        "people": [
+          "掌柜",
+          "紫衣客",
+          "绿衣客",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "lighting": "日光"
+      },
+      "sameTarget": false
+    }
+  ],
+  "interruptedAt": 9,
+  "resumedFrom": 8,
+  "shadowTasks": 0,
+  "unknownRequestPreserved": true,
+  "unchangedRequestKeyHashes": [
+    "40472dc304afe3ea56939e44c23745780791aa63d195798b530a97029f4f5c86",
+    "205c63797c24afe25f93cb4ecb58b6e8306132ef8fe04fa1de34728546552342",
+    "f8f2de065ac631768a7725498d1f74ede179b9d17d9367eb1630785ca21a2c48",
+    "029c5725924a788a9fdc24f62d5ac3bce2a0cd22fb4d291aeeaebf2acdaf319f"
+  ]
+}

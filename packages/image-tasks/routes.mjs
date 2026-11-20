@@ -6,7 +6,7 @@ import { automaticView } from "../first-play/view.mjs";
 import { extractSaved } from "../first-play/extract.mjs";
 
 // Local integration host. Bind only alongside the trusted Nine-cloud app. Nothing accepts owner IDs, plans or paths from JSON.
-export function mountDemoRoutes(app,tasks,origin,worldAssets,automatic=false) {
+export function mountDemoRoutes(app,tasks,origin,worldAssets,automatic=false,extractor=extractSaved) {
   const path="/api/yingjie/:session";
   async function context(c) {
     const id=c.req.param("session");
@@ -17,7 +17,7 @@ export function mountDemoRoutes(app,tasks,origin,worldAssets,automatic=false) {
     if(!identity.ok)throw Error("account-inaccessible");
     const owner=(await identity.json()).account.id;
     if(hint && owner!==hint)throw Error("account-inaccessible");
-    const snapshot=await syncCardHistory({pool:tasks.pool,sessionId:id,request,signal:new AbortController().signal,extract:automatic?extractSaved:annotate});
+    const snapshot=await syncCardHistory({pool:tasks.pool,sessionId:id,request,signal:new AbortController().signal,extract:automatic?extractor:annotate});
     let action="";
     if(!automatic && snapshot.result.status==="ready") {
       const r=await request("/api/card-import/sessions/"+id+"/history?after="+(snapshot.revision-1),{headers:{"x-jiuxiao-account":owner}});
@@ -33,7 +33,7 @@ export function mountDemoRoutes(app,tasks,origin,worldAssets,automatic=false) {
       if(c.req.method==="POST" && c.req.header("origin")!==origin) return c.body(null,403);
       const permit=c.req.query("view"),serial=Number(c.req.query("seq"));
       if(!/^[a-f0-9-]{36}$/i.test(permit??"") || !Number.isSafeInteger(serial) || serial<0)return c.body(null,400);
-      if(automatic)return await automaticView(c,{tasks,world:worldAssets,context,permit,serial});
+      if(automatic)return await automaticView(c,{tasks,world:worldAssets,context,permit,serial,method:extractor.method});
       const ctx=await context(c);
       const source=c.req.query("source")??"tasks";
       if(!["tasks","preset"].includes(source))return c.body(null,400);

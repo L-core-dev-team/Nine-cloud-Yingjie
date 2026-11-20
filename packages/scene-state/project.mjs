@@ -69,11 +69,24 @@ export function project(state, source, observations) {
   if (!Array.isArray(observations)) throw Error("annotations-pending");
   let place = state.places.find(p => p.scene.sceneId === state.current);
   const touched = new Set();
+  let surveyFields;
   for (const { basis, playerKnown, operation: op } of observations) {
     const fact = FactSchema.parse({ source, basis, playerKnown, value: op.type });
     if (!currentFacts(source, [fact]).length) continue;
     switch (op.type) {
+      case "hold":
+        if (!place) throw Error("hold-without-place");
+        place.pending = {reason:label(op.reason),source};
+        break;
+      case "confirm-survey":
+        if (!place || !fields.every(field => surveyFields?.has(field))) throw Error("incomplete-survey");
+        delete place.pending;
+        break;
       case "unknown":
+        if (op.unresolvedPlaces) {
+          for (const prior of state.places) prior.pending = {reason:label(op.reason),source};
+        }
+
       case "leave":
         place = null;
         state.reason = label(op.reason);
@@ -81,6 +94,7 @@ export function project(state, source, observations) {
       case "create":
       case "visit":
         place = selectPlace(state, op, source);
+        surveyFields = new Set();
         break;
       case "rename":
         if (!place) throw Error("rename-without-place");
@@ -94,6 +108,7 @@ export function project(state, source, observations) {
       case "remove":
         if (!place) throw Error("change-without-place");
         updateFacts(place, op, source);
+        if (op.type === "set") surveyFields?.add(op.field);
         break;
       default: throw Error("unsupported-operation");
     }
@@ -105,6 +120,7 @@ export function project(state, source, observations) {
   if (!place) return { status: "not-ready", reason: state.reason ?? "unlocated" };
   state.reason = null;
   const scene = SceneSchema.parse(place.scene);
+  if (place.pending) return { status:"not-ready", reason:place.pending.reason, scene };
   if (!fields.every(f => Object.hasOwn(place.facts, f))) {
     return { status: "not-ready", reason: "incomplete-visible-facts", scene };
   }
@@ -113,7 +129,7 @@ export function project(state, source, observations) {
 }
 
 function snapshot(place, source) {
-  if (!fields.every(f => Object.hasOwn(place.facts, f))) return;
+  if (place.pending || !fields.every(f => Object.hasOwn(place.facts, f))) return;
   const visual = VisualSchema.parse({ schemaVersion, source, sceneId: place.scene.sceneId,
     visualVersion: "V" + (place.version || 1), ...place.facts });
   if (!place.visual || !sameVisual(place.visual, visual)) {

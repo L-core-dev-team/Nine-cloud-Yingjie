@@ -44,7 +44,7 @@ export async function withHost(pool,run,storage,play) {
     const {selectWorldbookEntries}=await load("card-import/worldbook.js");
     const world=new WorldAssets(runtime.pool,pool,selectWorldbookEntries,storage);
     if(play)await pool.query(await readFile(new URL("../../first-play/schema.sql",import.meta.url),"utf8"));
-    mountDemoRoutes(app,tasks,origin,world,Boolean(play));
+    mountDemoRoutes(app,tasks,origin,world,Boolean(play),play?.extractor);
     app.get("/compliance/beian-police.png",async c=>{
       c.header("Content-Type","image/png");return c.body(await readFile(join(root,"public/compliance/beian-police.png")));
     });

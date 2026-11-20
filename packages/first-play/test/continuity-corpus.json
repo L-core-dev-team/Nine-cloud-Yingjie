@@ -1,0 +1,279 @@
+{
+  "source": "开发自编参考，公开于本任务合成语料；无独立标注或真实玩家文本。",
+  "baseline": {
+    "location": "east",
+    "name": "青石酒馆",
+    "parent": "东村",
+    "people": [
+      "掌柜",
+      "紫衣客",
+      "绿衣客",
+      "蓝衣客",
+      "赭衣客"
+    ],
+    "timeOfDay": "日间",
+    "lighting": "日光",
+    "viewpoint": "正门",
+    "perspective": "玩家所见",
+    "features": [
+      "柜台",
+      "双窗"
+    ]
+  },
+  "interpretation": "每条从同一独立前态开始。ops 为预期操作，未列字段沿用前态。hold 保留已确认成员并暂停展示。unknown 表示位置未定。evidence 是原正文中的直接依据。",
+  "cases": [
+    {
+      "id": "named",
+      "text": "紫衣客推门出去了。",
+      "evidence": "紫衣客推门出去了。",
+      "ops": [
+        "remove:people=紫衣客"
+      ]
+    },
+    {
+      "id": "qualified",
+      "text": "刚才在门边的绿衣客走出去了，堂里静了下来。",
+      "evidence": "刚才在门边的绿衣客走出去了，堂里静了下来。",
+      "ops": [
+        "remove:people=绿衣客"
+      ]
+    },
+    {
+      "id": "single",
+      "text": "门一合，只剩掌柜独自守店。",
+      "evidence": "门一合，只剩掌柜独自守店。",
+      "ops": [
+        "set:people=掌柜"
+      ]
+    },
+    {
+      "id": "twilight",
+      "text": "窗外的日色渐渐褪尽，掌柜把三盏灯笼逐一点亮。",
+      "evidence": "窗外的日色渐渐褪尽，掌柜把三盏灯笼逐一点亮。",
+      "ops": [
+        "set:timeOfDay=傍晚",
+        "set:lighting=灯笼亮起"
+      ]
+    },
+    {
+      "id": "rename",
+      "text": "这家酒馆正式改名为“老周的店”。",
+      "evidence": "这家酒馆正式改名为“老周的店”。",
+      "ops": [
+        "rename:老周的店"
+      ]
+    },
+    {
+      "id": "quote",
+      "text": "蓝衣客说：“门一合，只剩掌柜独自守店。”",
+      "evidence": "蓝衣客说：“门一合，只剩掌柜独自守店。”",
+      "ops": []
+    },
+    {
+      "id": "rumor",
+      "text": "听说紫衣客推门出去了。",
+      "evidence": "听说紫衣客推门出去了。",
+      "ops": []
+    },
+    {
+      "id": "memory",
+      "text": "你记得昨夜只剩掌柜独自守店。",
+      "evidence": "你记得昨夜只剩掌柜独自守店。",
+      "ops": []
+    },
+    {
+      "id": "future",
+      "text": "明天掌柜会将三盏灯笼点亮。",
+      "evidence": "明天掌柜会将三盏灯笼点亮。",
+      "ops": []
+    },
+    {
+      "id": "dream",
+      "text": "你梦见紫衣客推门出去了。",
+      "evidence": "你梦见紫衣客推门出去了。",
+      "ops": []
+    },
+    {
+      "id": "negative",
+      "text": "紫衣客并没有推门出去。",
+      "evidence": "紫衣客并没有推门出去。",
+      "ops": []
+    },
+    {
+      "id": "timeref",
+      "text": "昨夜掌柜将三盏灯笼一一点亮。",
+      "evidence": "昨夜掌柜将三盏灯笼一一点亮。",
+      "ops": []
+    },
+    {
+      "id": "plan",
+      "text": "紫衣客打算推门出去。",
+      "evidence": "紫衣客打算推门出去。",
+      "ops": []
+    },
+    {
+      "id": "pronoun",
+      "text": "他出去了。",
+      "evidence": "他出去了。",
+      "ops": [
+        "hold"
+      ]
+    },
+    {
+      "id": "cross",
+      "text": "你端起茶盏。他出去了。",
+      "evidence": "你端起茶盏。他出去了。",
+      "ops": [
+        "hold"
+      ]
+    },
+    {
+      "id": "count",
+      "text": "后来走了两人。",
+      "evidence": "后来走了两人。",
+      "ops": [
+        "hold"
+      ]
+    },
+    {
+      "id": "appearance",
+      "text": "堂内仿佛只剩掌柜。",
+      "evidence": "堂内仿佛只剩掌柜。",
+      "ops": [
+        "hold"
+      ]
+    },
+    {
+      "id": "unconfirmed",
+      "text": "堂里的人纷纷起身告辞。",
+      "evidence": "堂里的人纷纷起身告辞。",
+      "ops": [
+        "hold"
+      ]
+    },
+    {
+      "id": "remote",
+      "text": "西村的紫衣客推门出去了。",
+      "evidence": "西村的紫衣客推门出去了。",
+      "ops": [
+        "unknown"
+      ]
+    },
+    {
+      "id": "unseen",
+      "text": "隔墙似乎有人点灯。",
+      "evidence": "隔墙似乎有人点灯。",
+      "ops": [
+        "unknown"
+      ]
+    },
+    {
+      "id": "destination",
+      "text": "你回到青石酒馆。",
+      "evidence": "你回到青石酒馆。",
+      "ops": [
+        "unknown"
+      ]
+    },
+    {
+      "id": "pastmixed",
+      "text": "你记得昨夜众人告辞。门一合，只剩掌柜独自守店。",
+      "evidence": "你记得昨夜众人告辞。门一合，只剩掌柜独自守店。",
+      "ops": [
+        "unknown"
+      ]
+    },
+    {
+      "id": "compound",
+      "text": "听说紫衣客推门出去了，掌柜却真的走出大堂。",
+      "evidence": "听说紫衣客推门出去了，掌柜却真的走出大堂。",
+      "ops": [
+        "unknown"
+      ]
+    },
+    {
+      "id": "stranger",
+      "text": "白衣客推门出去了。",
+      "evidence": "白衣客推门出去了。",
+      "ops": [
+        "hold"
+      ]
+    },
+    {
+      "id": "mixed",
+      "text": "掌柜说：“紫衣客推门出去了。”他出去了。",
+      "evidence": "掌柜说：“紫衣客推门出去了。”他出去了。",
+      "ops": [
+        "hold"
+      ]
+    },
+    {
+      "id": "quoteother",
+      "text": "“窗纸上的日色已经褪尽，掌柜将三盏灯笼一一点亮。”",
+      "evidence": "“窗纸上的日色已经褪尽，掌柜将三盏灯笼一一点亮。”",
+      "ops": []
+    },
+    {
+      "id": "unknown_view",
+      "text": "你从窗缝望去，看不清谁走了。",
+      "evidence": "你从窗缝望去，看不清谁走了。",
+      "ops": [
+        "hold"
+      ]
+    },
+    {
+      "id": "repeat",
+      "text": "紫衣客走进大堂。",
+      "evidence": "紫衣客走进大堂。",
+      "ops": [
+        "add:people=紫衣客"
+      ]
+    },
+    {
+      "id": "partial",
+      "text": "掌柜仍在堂里。",
+      "evidence": "掌柜仍在堂里。",
+      "ops": []
+    },
+    {
+      "id": "vagueplace",
+      "text": "你去了另一家酒馆。",
+      "evidence": "你去了另一家酒馆。",
+      "ops": [
+        "unknown"
+      ]
+    },
+    {
+      "id": "memory-scope",
+      "text": "你想起上次众人告辞的情形。紫衣客离开了大堂。",
+      "ops": [
+        "unknown"
+      ],
+      "evidence": "你想起上次众人告辞的情形。紫衣客离开了大堂。"
+    },
+    {
+      "id": "person-then-place",
+      "text": "他出去了。你走出了酒馆。",
+      "ops": [
+        "unknown"
+      ],
+      "evidence": "他出去了。你走出了酒馆。"
+    },
+    {
+      "id": "rumor-and-now",
+      "text": "听说紫衣客推门出去了但眼前绿衣客走进大堂。",
+      "ops": [
+        "unknown"
+      ],
+      "evidence": "听说紫衣客推门出去了但眼前绿衣客走进大堂。"
+    },
+    {
+      "id": "named-elsewhere",
+      "text": "刚还在西村柜台边的紫衣客推门出去了。",
+      "ops": [
+        "unknown"
+      ],
+      "evidence": "刚还在西村柜台边的紫衣客推门出去了。"
+    }
+  ]
+}

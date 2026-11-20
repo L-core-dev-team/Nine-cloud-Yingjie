@@ -10,6 +10,7 @@ export async function chooseFrame(tasks,world,ctx,enabled) {
   if(preset.status==="matched")return {action:"preset",reason:"reviewed-preset",preset};
   const miss=preset.reason;
   if(!fallbackReasons.has(miss))return {action:"skip",reason:miss,miss};
+  if(ctx.historicalImages)return {action:"skip",reason:"unreconciled-image-ledger",hold:"ledger-review",miss};
   // A request already recorded for this event owns its retry/unknown state.
   const existing=await tasks.taskFor(ctx);
   if(existing)return {action:existing.plan.action,reason:existing.plan.reason,miss,plan:existing.plan};

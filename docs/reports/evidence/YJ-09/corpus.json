@@ -1,0 +1,1296 @@
+{
+  "zh-visible-clause/1": {
+    "reference": {
+      "stats": {
+        "exact": 17,
+        "incorrectAccept": 0,
+        "abstain": 7,
+        "unnecessaryAbstain": 0,
+        "wrongAbstentionKind": 0
+      },
+      "rows": [
+        {
+          "id": "建立场景",
+          "expected": [
+            "create:east",
+            "set:viewpoint=正门",
+            "set:perspective=玩家所见",
+            "set:features=柜台/双窗",
+            "set:people=掌柜/蓝衣客/赭衣客",
+            "set:timeOfDay=日间",
+            "set:lighting=日光"
+          ],
+          "actual": [
+            "create:east",
+            "set:viewpoint=正门",
+            "set:perspective=玩家所见",
+            "set:features=柜台/双窗",
+            "set:people=掌柜/蓝衣客/赭衣客",
+            "set:timeOfDay=日间",
+            "set:lighting=日光"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "普通交谈",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "两人入场",
+          "expected": [
+            "add:people=绿衣客/紫衣客"
+          ],
+          "actual": [
+            "add:people=绿衣客/紫衣客"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "离开",
+          "expected": [
+            "leave"
+          ],
+          "actual": [
+            "leave"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "复访",
+          "expected": [
+            "visit:east"
+          ],
+          "actual": [
+            "visit:east"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "灯光",
+          "expected": [
+            "set:timeOfDay=傍晚",
+            "set:lighting=灯笼亮起"
+          ],
+          "actual": [
+            "set:timeOfDay=傍晚",
+            "set:lighting=灯笼亮起"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "人物离场",
+          "expected": [
+            "remove:people=紫衣客"
+          ],
+          "actual": [
+            "remove:people=紫衣客"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "等价叙述",
+          "expected": [
+            "add:people=青衣客/白衣客"
+          ],
+          "actual": [
+            "add:people=青衣客/白衣客"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "人物名单",
+          "expected": [
+            "set:people=掌柜/黑衣客"
+          ],
+          "actual": [
+            "set:people=掌柜/黑衣客"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "重排",
+          "expected": [
+            "set:lighting=灯笼亮起",
+            "set:timeOfDay=傍晚"
+          ],
+          "actual": [
+            "set:lighting=灯笼亮起",
+            "set:timeOfDay=傍晚"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "传闻",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "否定",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "计划",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "回忆",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "未定位",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "混合未知",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "同名异地",
+          "expected": [
+            "create:west"
+          ],
+          "actual": [
+            "create:west"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "未揭示身份",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "假设引语",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "未发生并伴随变化",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "视角变化",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "疑问",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "未闭合引语",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "否定与明示混合",
+          "expected": [
+            "add:people=青衣客"
+          ],
+          "actual": [
+            "add:people=青衣客"
+          ],
+          "category": "exact"
+        }
+      ]
+    },
+    "prose": {
+      "stats": {
+        "exact": 4,
+        "incorrectAccept": 0,
+        "abstain": 3,
+        "unnecessaryAbstain": 3,
+        "wrongAbstentionKind": 0
+      },
+      "rows": [
+        {
+          "id": "P1",
+          "expected": [
+            "add:people=绿衣客/紫衣客"
+          ],
+          "actual": [
+            "add:people=绿衣客/紫衣客"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "P2",
+          "expected": [
+            "add:people=青衣客"
+          ],
+          "actual": [
+            "add:people=青衣客"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "P3",
+          "expected": [
+            "remove:people=紫衣客",
+            "set:timeOfDay=傍晚"
+          ],
+          "actual": [
+            "remove:people=紫衣客",
+            "set:timeOfDay=傍晚"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "P4",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "P5",
+          "expected": [
+            "remove:people=紫衣客"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "P6",
+          "expected": [
+            "set:people=掌柜"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "P7",
+          "expected": [
+            "set:timeOfDay=傍晚",
+            "set:lighting=灯笼亮起"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        }
+      ]
+    },
+    "continuity": {
+      "stats": {
+        "exact": 2,
+        "incorrectAccept": 1,
+        "abstain": 31,
+        "unnecessaryAbstain": 14,
+        "wrongAbstentionKind": 8
+      },
+      "rows": [
+        {
+          "id": "named",
+          "expected": [
+            "remove:people=紫衣客"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "qualified",
+          "expected": [
+            "remove:people=绿衣客"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "single",
+          "expected": [
+            "set:people=掌柜"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "twilight",
+          "expected": [
+            "set:timeOfDay=傍晚",
+            "set:lighting=灯笼亮起"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "rename",
+          "expected": [
+            "rename:老周的店"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "quote",
+          "expected": [],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "rumor",
+          "expected": [],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "memory",
+          "expected": [],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "future",
+          "expected": [],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "dream",
+          "expected": [],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "negative",
+          "expected": [],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "timeref",
+          "expected": [],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "plan",
+          "expected": [],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "pronoun",
+          "expected": [
+            "hold"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "cross",
+          "expected": [
+            "hold"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "count",
+          "expected": [
+            "hold"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "appearance",
+          "expected": [
+            "hold"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "unconfirmed",
+          "expected": [
+            "hold"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "remote",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "unseen",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "destination",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "pastmixed",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "compound",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "stranger",
+          "expected": [
+            "hold"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "mixed",
+          "expected": [
+            "hold"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "quoteother",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "unknown_view",
+          "expected": [
+            "hold"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "repeat",
+          "expected": [
+            "add:people=紫衣客"
+          ],
+          "actual": [
+            "add:people=紫衣客"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "partial",
+          "expected": [],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "vagueplace",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "memory-scope",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "remove:people=紫衣客"
+          ],
+          "category": "incorrectAccept"
+        },
+        {
+          "id": "person-then-place",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "rumor-and-now",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "named-elsewhere",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        }
+      ]
+    }
+  },
+  "zh-visible-clause/2": {
+    "reference": {
+      "stats": {
+        "exact": 16,
+        "incorrectAccept": 0,
+        "abstain": 8,
+        "unnecessaryAbstain": 1,
+        "wrongAbstentionKind": 1
+      },
+      "rows": [
+        {
+          "id": "建立场景",
+          "expected": [
+            "create:east",
+            "set:viewpoint=正门",
+            "set:perspective=玩家所见",
+            "set:features=柜台/双窗",
+            "set:people=掌柜/蓝衣客/赭衣客",
+            "set:timeOfDay=日间",
+            "set:lighting=日光"
+          ],
+          "actual": [
+            "create:east",
+            "set:viewpoint=正门",
+            "set:perspective=玩家所见",
+            "set:features=柜台/双窗",
+            "set:people=掌柜/蓝衣客/赭衣客",
+            "set:timeOfDay=日间",
+            "set:lighting=日光"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "普通交谈",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "两人入场",
+          "expected": [
+            "add:people=绿衣客/紫衣客"
+          ],
+          "actual": [
+            "add:people=绿衣客/紫衣客"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "离开",
+          "expected": [
+            "leave"
+          ],
+          "actual": [
+            "leave"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "复访",
+          "expected": [
+            "visit:east"
+          ],
+          "actual": [
+            "visit:east"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "灯光",
+          "expected": [
+            "set:timeOfDay=傍晚",
+            "set:lighting=灯笼亮起"
+          ],
+          "actual": [
+            "set:timeOfDay=傍晚",
+            "set:lighting=灯笼亮起"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "人物离场",
+          "expected": [
+            "remove:people=紫衣客"
+          ],
+          "actual": [
+            "hold"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "等价叙述",
+          "expected": [
+            "add:people=青衣客/白衣客"
+          ],
+          "actual": [
+            "add:people=青衣客/白衣客"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "人物名单",
+          "expected": [
+            "set:people=掌柜/黑衣客"
+          ],
+          "actual": [
+            "set:people=掌柜/黑衣客"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "重排",
+          "expected": [
+            "set:lighting=灯笼亮起",
+            "set:timeOfDay=傍晚"
+          ],
+          "actual": [
+            "set:lighting=灯笼亮起",
+            "set:timeOfDay=傍晚"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "传闻",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "否定",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "计划",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "回忆",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "未定位",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "混合未知",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "同名异地",
+          "expected": [
+            "create:west"
+          ],
+          "actual": [
+            "create:west"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "未揭示身份",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "hold"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "假设引语",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "未发生并伴随变化",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "视角变化",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "疑问",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "未闭合引语",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "否定与明示混合",
+          "expected": [
+            "add:people=青衣客"
+          ],
+          "actual": [
+            "add:people=青衣客"
+          ],
+          "category": "exact"
+        }
+      ]
+    },
+    "prose": {
+      "stats": {
+        "exact": 7,
+        "incorrectAccept": 0,
+        "abstain": 0,
+        "unnecessaryAbstain": 0,
+        "wrongAbstentionKind": 0
+      },
+      "rows": [
+        {
+          "id": "P1",
+          "expected": [
+            "add:people=绿衣客/紫衣客"
+          ],
+          "actual": [
+            "add:people=绿衣客/紫衣客"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "P2",
+          "expected": [
+            "add:people=青衣客"
+          ],
+          "actual": [
+            "add:people=青衣客"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "P3",
+          "expected": [
+            "remove:people=紫衣客",
+            "set:timeOfDay=傍晚"
+          ],
+          "actual": [
+            "remove:people=紫衣客",
+            "set:timeOfDay=傍晚"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "P4",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "P5",
+          "expected": [
+            "remove:people=紫衣客"
+          ],
+          "actual": [
+            "remove:people=紫衣客"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "P6",
+          "expected": [
+            "set:people=掌柜"
+          ],
+          "actual": [
+            "set:people=掌柜"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "P7",
+          "expected": [
+            "set:timeOfDay=傍晚",
+            "set:lighting=灯笼亮起"
+          ],
+          "actual": [
+            "set:timeOfDay=傍晚",
+            "set:lighting=灯笼亮起"
+          ],
+          "category": "exact"
+        }
+      ]
+    },
+    "continuity": {
+      "stats": {
+        "exact": 16,
+        "incorrectAccept": 0,
+        "abstain": 18,
+        "unnecessaryAbstain": 0,
+        "wrongAbstentionKind": 0
+      },
+      "rows": [
+        {
+          "id": "named",
+          "expected": [
+            "remove:people=紫衣客"
+          ],
+          "actual": [
+            "remove:people=紫衣客"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "qualified",
+          "expected": [
+            "remove:people=绿衣客"
+          ],
+          "actual": [
+            "remove:people=绿衣客"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "single",
+          "expected": [
+            "set:people=掌柜"
+          ],
+          "actual": [
+            "set:people=掌柜"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "twilight",
+          "expected": [
+            "set:timeOfDay=傍晚",
+            "set:lighting=灯笼亮起"
+          ],
+          "actual": [
+            "set:timeOfDay=傍晚",
+            "set:lighting=灯笼亮起"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "rename",
+          "expected": [
+            "rename:老周的店"
+          ],
+          "actual": [
+            "rename:老周的店"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "quote",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "rumor",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "memory",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "future",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "dream",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "negative",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "timeref",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "plan",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "pronoun",
+          "expected": [
+            "hold"
+          ],
+          "actual": [
+            "hold"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "cross",
+          "expected": [
+            "hold"
+          ],
+          "actual": [
+            "hold"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "count",
+          "expected": [
+            "hold"
+          ],
+          "actual": [
+            "hold"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "appearance",
+          "expected": [
+            "hold"
+          ],
+          "actual": [
+            "hold"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "unconfirmed",
+          "expected": [
+            "hold"
+          ],
+          "actual": [
+            "hold"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "remote",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "unseen",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "destination",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "pastmixed",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "compound",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "stranger",
+          "expected": [
+            "hold"
+          ],
+          "actual": [
+            "hold"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "mixed",
+          "expected": [
+            "hold"
+          ],
+          "actual": [
+            "hold"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "quoteother",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "unknown_view",
+          "expected": [
+            "hold"
+          ],
+          "actual": [
+            "hold"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "repeat",
+          "expected": [
+            "add:people=紫衣客"
+          ],
+          "actual": [
+            "add:people=紫衣客"
+          ],
+          "category": "exact"
+        },
+        {
+          "id": "partial",
+          "expected": [],
+          "actual": [],
+          "category": "exact"
+        },
+        {
+          "id": "vagueplace",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "memory-scope",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "person-then-place",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "rumor-and-now",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        },
+        {
+          "id": "named-elsewhere",
+          "expected": [
+            "unknown"
+          ],
+          "actual": [
+            "unknown"
+          ],
+          "category": "abstain"
+        }
+      ]
+    }
+  }
+}

@@ -1,14 +1,13 @@
 import {chooseFrame} from "./planner.mjs";
-import {method} from "./extract.mjs";
 import {reviewFixture} from "../image-tasks/demo.mjs";
 
-export async function automaticView(c,{tasks,world,context,permit,serial}) {
+export async function automaticView(c,{tasks,world,context,permit,serial,method}) {
   async function readContext(){
     const ctx=await context(c);
     if(ctx.revision){
-      const audit=(await tasks.pool.query("SELECT audit->>'method' AS method FROM yingjie_play.extraction WHERE scope=$1 AND revision=$2",
+      const audit=(await tasks.pool.query("SELECT audit->>'method' AS method, audit->>'replayOnly' AS replay FROM yingjie_play.extraction WHERE scope=$1 AND revision=$2",
         [ctx.scope,ctx.revision])).rows[0];
-      if(audit?.method!==method)throw Error("incompatible-projection");
+      if(audit?.replay || audit?.method!==method)throw Error("incompatible-projection");
     }
     return ctx;
   }
@@ -42,7 +41,7 @@ export async function automaticView(c,{tasks,world,context,permit,serial}) {
   }
   async function frame(choice,snapshot){
     if(choice.preset)return {state:"display",source:"preset",assetId:choice.preset.handle,bytes:choice.preset.bytes};
-    if(!choice.plan)return {state:choice.hold??(["not-ready","disabled"].includes(choice.reason)?choice.reason:"skip")};
+    if(!choice.plan)return {state:choice.reason==="not-ready" && snapshot.result.scene?"verify-scene":choice.hold??(["not-ready","disabled"].includes(choice.reason)?choice.reason:"skip")};
     const result=await tasks.view(snapshot,permit,serial);
     return {state:result.state,source:"tasks",assetId:result.asset?.assetId,bytes:result.bytes};
   }

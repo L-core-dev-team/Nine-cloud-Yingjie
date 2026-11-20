@@ -12,7 +12,7 @@ const doorwayArrival=full("门帘掀开，","一前一后跨进大堂");
 const negated=full("","没有(?:走进大堂|离开大堂)");
 const places={"东村":"east","西村":"west"};
 
-function sentences(text) {
+export function sentences(text) {
   const chunks=[];
   let start=0,quoted=false;
   for(let i=0;i<=text.length;i++){
@@ -28,7 +28,7 @@ function sentences(text) {
   return quoted?null:chunks;
 }
 
-function classify(s,known) {
+export function classify(s,known) {
   const result=(rule,...ops)=>({rule,ops});
   let m;
   if((m=s.match(/^你(?:走进|来到)(东村|西村)的青石酒馆$/))){
@@ -104,11 +104,18 @@ export function extractSaved({source,narrative,state}) {
 }
 
 // Same transaction as the state/checkpoint. Refuse to inherit an unversioned fixture projection.
-extractSaved.record=async(db,{scope,revision,audit})=>{
-  if(revision>1){
-    const previous=await db.query("SELECT 1 FROM yingjie_play.extraction WHERE scope=$1 AND revision=$2 AND audit->>'method'=$3",
-      [scope,revision-1,method]);
-    if(!previous.rowCount)throw Error("incompatible-projection");
-  }
-  await db.query("INSERT INTO yingjie_play.extraction(scope,revision,audit) VALUES($1,$2,$3)",[scope,revision,audit]);
-};
+export function bindMethod(extract,version,{replayOnly=false}={}) {
+  extract.method=version;
+  extract.record=async(db,{scope,revision,audit})=>{
+    if(audit.method!==version)throw Error("incompatible-projection");
+    if(replayOnly)audit.replayOnly=true;
+    if(revision>1){
+      const previous=await db.query(`SELECT 1 FROM yingjie_play.extraction WHERE scope=$1 AND revision=$2
+        AND audit->>'method'=$3 AND COALESCE((audit->>'replayOnly')::boolean,false)=$4`,[scope,revision-1,version,replayOnly]);
+      if(!previous.rowCount)throw Error("incompatible-projection");
+    }
+    await db.query("INSERT INTO yingjie_play.extraction(scope,revision,audit) VALUES($1,$2,$3)",[scope,revision,audit]);
+  };
+  return extract;
+}
+bindMethod(extractSaved,method);
