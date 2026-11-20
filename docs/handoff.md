@@ -27,10 +27,21 @@ YJ-02 成果分支 `codex/yj-02-image-capability` 已核对到 `13ac86a0c4a13078
 
 - 实现提交 [5463c96](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/commit/5463c96eae5996a69bcc61b5887c6c3d50f8b3e9) 位于 `codex/yj-03-shared-contracts`。接手起点为 `e0b16bc`。继续从任务分支最新 HEAD 取成果。
 - [契约 0.1](contracts/visual-contracts-v0.1.md) 和 [包入口](../packages/contracts) 是后续模块的共用格式。[验证报告](reports/YJ-03-shared-contracts-report.md) 给出上游源码映射、命令、正反例和未运行项。
-- 离线冻结安装、编译、8 组 C01–C12 检查和三张原 PNG 校验通过。角色卡历史、合成酒馆及原生回合分别建模；普通对话与无变化复访可复用，傍晚编辑沿用五人图。
+- 原执行报告记录离线冻结安装、编译、8 组 C01–C12 检查和三张原 PNG 校验通过。角色卡历史、合成酒馆及原生回合分别建模；普通对话与无变化复访可复用，傍晚编辑沿用五人图。
 - YJ-04 可接角色卡已完成历史与地点持久化；YJ-06、YJ-07 可消费样例与地点身份。YJ-05 可开发通用结果处理，独立后端图片 API 及真实供应商能力仍为 BLOCKED / NOT_RUN。
 
 复核时 `main` 为 `62f3260fc391ea10349bd792c1c77875e76665c7`，尚未包含任务分支的全部成果。本轮不合并 main、不修改九霄上游。YJ-01 的[限定范围复核](reports/YJ-01-evidence-review.md)继续有效。
+
+## YJ-03 复核修补与 YJ-04 接手 · 2026-11-20
+
+当前接续分支为 `codex/yj-04-scene-state`，从 YJ-03 最终提交 `7d68284e95754f06e853123ac3c719788266ae0a` 建立。定向修补提交为 [e5d6cf2](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/commit/e5d6cf2e73dc5131209f9793677e3eebf24a7c73)；本节与任务书会在其后提交。接手时读取远端实际 HEAD，不用固定 SHA 覆盖后续成果。
+
+- 修复编辑入口接受“同视觉版本、不同可见事实”，以及角色卡 UUID 大小写拆分事件/请求身份两个可复现缺口。包升级为 `@yingjie/contracts@0.1.1`，交换格式仍为 `0.1`；原图片和原测试不改。
+- 本次独立通过：原锁文件安装、修补前后编译、新增 2 组回归、原来源映射 1 组。原图字节和全量原测试本次 NOT_RUN，不能把原报告的 8 组通过算作本次重跑。见[复核报告](reports/YJ-03-evidence-review.md)。
+- [YJ-04 完整任务书](task-briefs/YJ-04-scene-state.md)已准备。先在完整副本复跑全部 10 组契约检查，然后实现真实已保存普通角色卡历史读取、稳定地点身份、变化继承、持久化、分页、重放和重启恢复。
+- 地点主键不包含每轮 key/revision；新一轮没有提到旧人物，不自动视为离开。没有足够事实时明确未就绪，不伪造可见状态。
+- YJ-04 状态业务实现尚未执行，不需要等待图片供应商入口。
+- YJ-02 后端准备继续使用独立分支 `codex/yj-02-backend-readiness`；本次核查其 HEAD 为 `18c7dd9cf82f161024c1bfa3951b9a95d63b80f1`。任务书在[该分支](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/blob/codex/yj-02-backend-readiness/docs/task-briefs/YJ-02-backend-readiness.md)。如需共用契约修补，可单独接入上述补丁提交；不要将整个 04 分支合入以覆盖 02 的交接记录。
 
 ## 保留未决
 

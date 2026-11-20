@@ -1,0 +1,61 @@
+{
+  "reviewedCommit": "7d68284e95754f06e853123ac3c719788266ae0a",
+  "fixCommit": "e5d6cf2e73dc5131209f9793677e3eebf24a7c73",
+  "dateLocal": "2026-11-20",
+  "timezone": "Asia/Shanghai",
+  "environment": {
+    "platform": "Linux",
+    "node": "24.22.3",
+    "npm": "11.19.1"
+  },
+  "originalSourceFilesVerified": 14,
+  "originalCounterexamples": [
+    {
+      "case": "same-visual-version-different-facts",
+      "referenceVersion": "V1",
+      "targetVersion": "V1",
+      "referencePeople": 3,
+      "targetPeople": 5,
+      "observed": "eligible",
+      "expected": "reject"
+    },
+    {
+      "case": "same-card-uuid-different-case",
+      "bothSchemaAccepted": true,
+      "eventKeyEqual": false,
+      "requestKeyEqual": false,
+      "observed": "new-request",
+      "expected": "duplicate"
+    }
+  ],
+  "install": {
+    "offlineInitial": "ENOTCACHED",
+    "lockedInstall": "PASS",
+    "newDependencies": 0
+  },
+  "buildBefore": "PASS",
+  "buildAfter": "PASS",
+  "executedChecks": [
+    {
+      "command": "node --test test/review-boundaries.test.mjs",
+      "chunk_id": "7bed91",
+      "wall_time_seconds": 0.304891492,
+      "exit_code": 0,
+      "original_token_count": 74,
+      "output": "✔ review: an edit cannot change visible facts under the same visual version (1.758433ms)\n✔ review: card UUID case cannot split an event, request or access scope (3.489795ms)\nℹ tests 2\nℹ suites 0\nℹ pass 2\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 278.128692\n"
+    },
+    {
+      "command": "node --test --test-name-pattern='^C01 ' test/contracts.test.mjs",
+      "chunk_id": "5e7642",
+      "wall_time_seconds": 0.302823593,
+      "exit_code": 0,
+      "original_token_count": 51,
+      "output": "✔ C01 completed-history projection and C02 disjoint, versioned sources (2.413717ms)\nℹ tests 1\nℹ suites 0\nℹ pass 1\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 278.904452\n"
+    }
+  ],
+  "fullOriginalSuite": "NOT_RUN",
+  "pngByteVerification": "NOT_RUN",
+  "limitation": "Original PNG bytes not present in this review workspace. New tests use recorded digests as host inputs, not byte verification.",
+  "modelCalls": 0,
+  "databaseIntegration": "NOT_RUN"
+}
