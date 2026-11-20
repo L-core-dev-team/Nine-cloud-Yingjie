@@ -1,14 +1,13 @@
+import {classifyTrigger,readTriggerEvent,triggerReceipt} from "./trigger.mjs";
 import {chooseFrame} from "./planner.mjs";
 import {reviewFixture} from "../image-tasks/demo.mjs";
 
-export async function automaticView(c,{tasks,world,context,permit,serial,method}) {
+export async function automaticView(c,{tasks,world,context,permit,serial,method,applyTriggers=true}) {
   async function readContext(){
     const ctx=await context(c);
-    if(ctx.revision){
-      const audit=(await tasks.pool.query("SELECT audit->>'method' AS method, audit->>'replayOnly' AS replay FROM yingjie_play.extraction WHERE scope=$1 AND revision=$2",
-        [ctx.scope,ctx.revision])).rows[0];
-      if(audit?.replay || audit?.method!==method)throw Error("incompatible-projection");
-    }
+    const event=ctx.revision?await readTriggerEvent(tasks.pool,ctx.scope,ctx.revision):null;
+    if(ctx.revision && (event?.audit.replayOnly || event?.audit.method!==method))throw Error("incompatible-projection");
+    if(applyTriggers)ctx.trigger=classifyTrigger(ctx.result,event);
     return ctx;
   }
   const ctx=await readContext();
@@ -20,9 +19,6 @@ export async function automaticView(c,{tasks,world,context,permit,serial,method}
   const original=c.req.param("asset") || c.req.param("preset");
   const info={action:pick.action,reason:pick.reason,hold:pick.hold??null,presetReason:pick.miss??null,enabled,
     handle:pick.preset?.handle??pick.plan?.assetId??pick.plan?.reference?.assetId??null};
-  // Keep changes to a live choice (for example revocation); polling an unchanged view adds no rows.
-  if(write || enabled && !original)await tasks.pool.query(`INSERT INTO yingjie_play.choice(scope,revision,permit,serial,record)
-    VALUES($1,$2,$3,$4,$5) ON CONFLICT DO NOTHING`,[ctx.scope,ctx.revision,permit,serial,info]);
   if(write && pick.plan){
     const submitted=await tasks.submit(ctx,permit,serial,pick.plan);
     if(submitted==="event-conflict" || submitted==="disabled")throw Error(submitted);
@@ -43,10 +39,13 @@ export async function automaticView(c,{tasks,world,context,permit,serial,method}
     if(choice.preset)return {state:"display",source:"preset",assetId:choice.preset.handle,bytes:choice.preset.bytes};
     if(!choice.plan)return {state:choice.reason==="not-ready" && snapshot.result.scene?"verify-scene":choice.hold??(["not-ready","disabled"].includes(choice.reason)?choice.reason:"skip")};
     const result=await tasks.view(snapshot,permit,serial);
-    return {state:result.state,source:"tasks",assetId:result.asset?.assetId,bytes:result.bytes};
+    return {state:result.state,source:"tasks",assetId:result.asset?.assetId,bytes:result.bytes,auditAsset:result.auditAsset};
   }
   c.header("Cache-Control","private, no-store");
   const view=await frame(pick,ctx);
+  if(ctx.trigger)Object.assign(info,triggerReceipt(ctx.trigger,pick,view));
+  if(write || enabled && !original)await tasks.pool.query(`INSERT INTO yingjie_play.choice(scope,revision,permit,serial,record)
+    VALUES($1,$2,$3,$4,$5) ON CONFLICT DO NOTHING`,[ctx.scope,ctx.revision,permit,serial,info]);
   if(original){
     const matches=f=>f.state==="display" && f.assetId===original && (f.source==="preset")===!!c.req.param("preset");
     if(!matches(view))return c.body(null,404);
@@ -57,7 +56,7 @@ export async function automaticView(c,{tasks,world,context,permit,serial,method}
     c.header("Content-Type","image/png");c.header("X-Content-Type-Options","nosniff");
     return c.body(checked.bytes);
   }
-  return c.json({state:view.state,source:view.source,decision:pick.action,reason:pick.reason,
+  return c.json({state:view.state,source:view.source,decision:pick.action,reason:pick.reason,trigger:ctx.trigger?.reason,
     revision:ctx.revision,scene:ctx.result.scene?.name??null,version:ctx.result.visual?.visualVersion??null,
     people:ctx.result.visual?.people.length??null,assetId:view.assetId??null});
 }

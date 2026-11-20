@@ -6,7 +6,7 @@ import { automaticView } from "../first-play/view.mjs";
 import { extractSaved } from "../first-play/extract.mjs";
 
 // Local integration host. Bind only alongside the trusted Nine-cloud app. Nothing accepts owner IDs, plans or paths from JSON.
-export function mountDemoRoutes(app,tasks,origin,worldAssets,automatic=false,extractor=extractSaved) {
+export function mountDemoRoutes(app,tasks,origin,worldAssets,automatic=false,extractor=extractSaved,applyTriggers=true) {
   const path="/api/yingjie/:session";
   async function context(c) {
     const id=c.req.param("session");
@@ -33,7 +33,7 @@ export function mountDemoRoutes(app,tasks,origin,worldAssets,automatic=false,ext
       if(c.req.method==="POST" && c.req.header("origin")!==origin) return c.body(null,403);
       const permit=c.req.query("view"),serial=Number(c.req.query("seq"));
       if(!/^[a-f0-9-]{36}$/i.test(permit??"") || !Number.isSafeInteger(serial) || serial<0)return c.body(null,400);
-      if(automatic)return await automaticView(c,{tasks,world:worldAssets,context,permit,serial,method:extractor.method});
+      if(automatic)return await automaticView(c,{tasks,world:worldAssets,context,permit,serial,method:extractor.method,applyTriggers});
       const ctx=await context(c);
       const source=c.req.query("source")??"tasks";
       if(!["tasks","preset"].includes(source))return c.body(null,400);

@@ -1,3 +1,5 @@
+import { visibleSpecification } from "../first-play/consistency.mjs";
+import { assessFixture } from "./fixture-review.mjs";
 import { readFile } from "node:fs/promises";
 import { setTimeout as delay } from "node:timers/promises";
 import { sameVisual, schemaVersion } from "../contracts/dist/index.js";
@@ -43,7 +45,7 @@ export class TavernProvider {
     if(plan.reason==="演练失败")return {state:"failed"};
     if(plan.reason==="演练拒绝")return {state:"refused"};
     if(plan.reason==="演练未知")throw Error("mock-transport-timeout");
-    const pic=pictures[pictureIndex(plan.target)];
+    const pic=pictures[pictureIndex(visibleSpecification(plan.target))];
     if(!pic)return {state:"refused"};
     return {state:"returned",bytes:await readFile(new URL(pic.file,directory))};
   }
@@ -72,8 +74,7 @@ export async function reviewFixture(tasks,ctx,task) {
   const row=(await tasks.pool.query(`SELECT a.record FROM yingjie_image.asset a JOIN yingjie_image.attempt t ON t.id=a.id
     WHERE t.task=$1 AND a.scope=$2 AND a.record->'review'->>'status'='pending'`,[task.id,ctx.scope])).rows[0];
   if(!row)return;
-  const a=row.record,expected=pictures[pictureIndex(a.target)];
-  if(expected?.sha256!==a.sha256)return;
-  await tasks.review(ctx,a.assetId,{id:a.review.id,status:"accepted",assessment:"matches",
-    basis:"YJ-02-image-runs.json/"+expected.file,reason:"固定样例摘要与已审阅画面及目标事实匹配"});
+  const a=row.record,verdict=assessFixture(a.sha256,a.target);
+  if(verdict.status==="pending")return;
+  await tasks.review(ctx,a.assetId,{id:a.review.id,...verdict},{onlyPending:true});
 }

@@ -44,7 +44,20 @@ test("automatic first play from completed text through original CardSession and 
     const page=await client.newPage();page.setDefaultTimeout(12000);
     const errors=[];page.on("pageerror",e=>errors.push(e.message));
     const go=async id=>{await page.goto(origin+"/cards/session/"+id);await page.getByRole("button",{name:"进入映界"}).click();};
-    const state=(s,action)=>page.locator('.yj-figure[data-state="'+s+'"]'+(action?'[data-decision="'+action+'"]':'')).waitFor();
+    const state=async(s,action)=>{
+      try{
+        await page.locator('.yj-figure[data-state="'+s+'"]'+(action?'[data-decision="'+action+'"]':'')).waitFor();
+      }catch(error){
+        const scope=JSON.stringify(["card-history",demo.owner,session.toLowerCase()]);
+        const journal=(await pool.query(`SELECT e.revision,e.result->>'status' AS scene,
+          t.plan->>'action' AS plan,a.record->'outcome'->>'state' AS outcome FROM yingjie_scene.event e
+          LEFT JOIN yingjie_image.task t USING(scope,event_key) LEFT JOIN yingjie_image.attempt a ON a.task=t.id
+          WHERE e.scope=$1 ORDER BY e.revision DESC LIMIT 3`,[scope])).rows;
+        const panel=await page.locator(".yj-figure").evaluateAll(nodes=>nodes.map(el=>({...el.dataset})));
+        t.diagnostic(JSON.stringify({expected:s,action,revision,panel,journal,mockAttempts:sends.length}));
+        throw error;
+      }
+    };
     let revision=0,session=demo.id;
     const play=async narrative=>{
       body=narrative;
@@ -149,6 +162,6 @@ test("automatic first play from completed text through original CardSession and 
     t.diagnostic(JSON.stringify({savedTurns:journal.length,versions:journal.map(r=>r.result.visual?.visualVersion??null),
       choices:choices.map(r=>r.action),sends:sends.map(({attempt,...receipt})=>receipt),browser:browser.version()}));
    } finally {release.resolve();await browser.close();}
-  },{assets:catalog.slice(0,1),directory:pathToFileURL(dir+"/")},{model:()=>body,provider}));
+  },{assets:catalog.slice(0,1),directory:pathToFileURL(dir+"/")},{model:()=>body,provider,archivedSelection:true}));
  } finally {await rm(dir,{recursive:true,force:true});}
 });

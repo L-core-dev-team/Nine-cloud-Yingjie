@@ -12,7 +12,7 @@ export function book(name) {
 }
 
 // Called only for the fresh synthetic account created by createPlayers. Grants never come from HTTP JSON.
-export async function prepareTavern(context,origin,pool,baseCard) {
+export async function prepareTavern(context,origin,pool,baseCard,makeBook=book) {
   const api=async(method,path,data)=>{
     const response=await context.request.fetch(origin+"/api/card-import"+path,{method,data,headers:{Origin:origin}});
     assert.ok(response.ok(),path+" HTTP "+response.status());
@@ -20,7 +20,7 @@ export async function prepareTavern(context,origin,pool,baseCard) {
   };
   const importBook=doc=>api("POST","/imports",{kind:"worldbook",filename:"fixture.json",rightsConfirmed:true,
     bytesBase64:Buffer.from(JSON.stringify(doc)).toString("base64")});
-  const embedded=book("卡内图志"),linked=book("酒馆结构录"),global=book("东村地志");
+  const embedded=makeBook("卡内图志"),linked=makeBook("酒馆结构录"),global=makeBook("东村地志");
   const link=await importBook(linked),snap=await importBook(global);
   const card=await api("POST","/cards/"+baseCard+"/versions",{changes:{character_book:embedded},links:[{uri:"fixture-book",importId:link.id}]});
   await api("PUT","/worldbooks/"+snap.id+"/global",{enabled:true});

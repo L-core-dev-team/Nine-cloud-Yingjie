@@ -6,6 +6,7 @@ import { pathToFileURL } from "node:url";
 import { upstream, requireApi, cardRuntime } from "../../scene-state/test/local-db.mjs";
 import { yingjiePlugin } from "../mount.mjs";
 import { Originals } from "../../image-tasks/files.mjs";
+import { assessFixture } from "../../image-tasks/fixture-review.mjs";
 import { ImageTasks } from "../../image-tasks/index.mjs";
 import { TavernProvider,script } from "../../image-tasks/demo.mjs";
 import { WorldAssets } from "../../world-assets/index.mjs";
@@ -38,13 +39,13 @@ export async function withHost(pool,run,storage,play) {
     const origin="http://127.0.0.1:"+server.address().port;
     app=createApp(undefined,undefined,{service:auth,origin},undefined,cards);
     await pool.query(await readFile(new URL("../../image-tasks/schema.sql",import.meta.url),"utf8"));
-    const tasks=new ImageTasks(pool,new Originals(join(dir,"originals")),play?.provider??new TavernProvider());
+    const tasks=new ImageTasks(pool,new Originals(join(dir,"originals")),play?.provider??new TavernProvider(),{assess:assessFixture});
     if(play && tasks.capability.origin!=="mock")throw Error("local-image-provider-required");
     await pool.query(await readFile(new URL("../../world-assets/schema.sql",import.meta.url),"utf8"));
     const {selectWorldbookEntries}=await load("card-import/worldbook.js");
     const world=new WorldAssets(runtime.pool,pool,selectWorldbookEntries,storage);
     if(play)await pool.query(await readFile(new URL("../../first-play/schema.sql",import.meta.url),"utf8"));
-    mountDemoRoutes(app,tasks,origin,world,Boolean(play),play?.extractor);
+    mountDemoRoutes(app,tasks,origin,world,Boolean(play),play?.extractor,!play?.archivedSelection);
     app.get("/compliance/beian-police.png",async c=>{
       c.header("Content-Type","image/png");return c.body(await readFile(join(root,"public/compliance/beian-police.png")));
     });

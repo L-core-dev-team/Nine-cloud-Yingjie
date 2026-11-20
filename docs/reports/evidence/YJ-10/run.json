@@ -1,0 +1,340 @@
+{
+  "browser": "157.0.8103.79",
+  "input": "synthetic completed history",
+  "review": "developer fixture oracle",
+  "realImageCalls": 0,
+  "realTextCalls": 0,
+  "secretStringsInVisibleData": false,
+  "revokedDownload": 404,
+  "rejectedReview": "mismatch:people",
+  "afterRestart": {
+    "action": "skip",
+    "hold": "unknown",
+    "hasPlan": false,
+    "calls": 0
+  },
+  "steps": [
+    {
+      "revision": 1,
+      "place": "east",
+      "version": "V1",
+      "sha256": "b4bf16de90bc5d69bf5a154481fc98e37c766ac047e12bd2160929f004ffd0f4",
+      "fields": [
+        "people",
+        "features",
+        "viewpoint",
+        "perspective",
+        "timeOfDay",
+        "lighting"
+      ],
+      "candidate": true,
+      "trigger": "new-place",
+      "emphasis": "unsupported",
+      "selection": "no-eligible-reference",
+      "suppressed": null,
+      "state": "display",
+      "action": "generate",
+      "sends": 1
+    },
+    {
+      "revision": 2,
+      "place": "east",
+      "version": "V1",
+      "sha256": "82568355353de80f096d408f2a5e7a7d9f512022888b4f72990dc6a02f64131a",
+      "fields": [],
+      "candidate": false,
+      "trigger": "unchanged-visual",
+      "emphasis": "unsupported",
+      "selection": "same-reviewed-visual",
+      "suppressed": "unchanged-visual",
+      "state": "display",
+      "action": "reuse",
+      "sends": 1
+    },
+    {
+      "revision": 3,
+      "place": "east",
+      "version": "V1",
+      "sha256": "6eecd07dff3e668258706766f77011e76414a804db028a0819bef82fe70d4977",
+      "fields": [],
+      "candidate": false,
+      "trigger": "unchanged-visual",
+      "emphasis": "unsupported",
+      "selection": "same-reviewed-visual",
+      "suppressed": "unchanged-visual",
+      "state": "display",
+      "action": "reuse",
+      "sends": 1
+    },
+    {
+      "revision": 4,
+      "place": "east",
+      "version": "V2",
+      "sha256": "46a01bbbcfbf50ddef321db6535f19810782ff425948ebd73a543132b3c1c8c0",
+      "fields": [
+        "people"
+      ],
+      "candidate": true,
+      "trigger": "people-changed",
+      "emphasis": "arrival",
+      "selection": "visible-facts-changed",
+      "suppressed": "review-rejected",
+      "state": "review-rejected",
+      "action": "edit",
+      "sends": 2
+    },
+    {
+      "revision": 5,
+      "place": "east",
+      "version": "V2",
+      "sha256": "82568355353de80f096d408f2a5e7a7d9f512022888b4f72990dc6a02f64131a",
+      "fields": [],
+      "candidate": false,
+      "trigger": "unchanged-visual",
+      "emphasis": "unsupported",
+      "selection": "unchanged-visual",
+      "suppressed": "unchanged-visual",
+      "state": "skip",
+      "action": "skip",
+      "sends": 2
+    },
+    {
+      "revision": 6,
+      "place": "east",
+      "version": "V2",
+      "sha256": "4b23add99703a09c6de60d9d431df67fcbcac8efb486b073914237dc3242bd1f",
+      "fields": [],
+      "candidate": false,
+      "trigger": "unchanged-visual",
+      "emphasis": "unsupported",
+      "selection": "unchanged-visual",
+      "suppressed": "unchanged-visual",
+      "state": "skip",
+      "action": "skip",
+      "sends": 2
+    },
+    {
+      "revision": 7,
+      "place": "east",
+      "version": "V3",
+      "sha256": "f6b7893cc3faf127a80ec03797c30c07a6cc88621a049f2dcc7156e1103a9993",
+      "fields": [
+        "timeOfDay",
+        "lighting"
+      ],
+      "candidate": true,
+      "trigger": "light-or-time-changed",
+      "emphasis": "unsupported",
+      "selection": "visible-facts-changed",
+      "suppressed": null,
+      "state": "display",
+      "action": "edit",
+      "sends": 3
+    },
+    {
+      "revision": 8,
+      "place": "east",
+      "version": "V3",
+      "sha256": "82568355353de80f096d408f2a5e7a7d9f512022888b4f72990dc6a02f64131a",
+      "fields": [],
+      "candidate": false,
+      "trigger": "unchanged-visual",
+      "emphasis": "unsupported",
+      "selection": "same-reviewed-visual",
+      "suppressed": "unchanged-visual",
+      "state": "display",
+      "action": "reuse",
+      "sends": 3
+    },
+    {
+      "revision": 9,
+      "place": "east",
+      "version": "V3",
+      "sha256": "82568355353de80f096d408f2a5e7a7d9f512022888b4f72990dc6a02f64131a",
+      "fields": [],
+      "candidate": false,
+      "trigger": "unchanged-visual",
+      "emphasis": "unsupported",
+      "selection": "no-grant",
+      "suppressed": "no-grant",
+      "state": "skip",
+      "action": "skip",
+      "sends": 3
+    },
+    {
+      "revision": 10,
+      "place": "east",
+      "version": "V4",
+      "sha256": "81237fb4ce8b0732cde69956caf8615a7891febaca49946874cc89fa934a4d08",
+      "fields": [
+        "people"
+      ],
+      "candidate": true,
+      "trigger": "people-changed",
+      "emphasis": "unsupported",
+      "selection": "outside-local-provider",
+      "suppressed": "outside-local-provider",
+      "state": "skip",
+      "action": "skip",
+      "sends": 3
+    },
+    {
+      "revision": 11,
+      "place": "east",
+      "version": "V5",
+      "sha256": "e23dc4f48c0fd211bbf7c15f0c372611176cea7c3c6dff9614a55a65d1d1dfb3",
+      "fields": [
+        "people"
+      ],
+      "candidate": true,
+      "trigger": "people-changed",
+      "emphasis": "unsupported",
+      "selection": "visible-facts-changed",
+      "suppressed": "prior-attempt-unknown",
+      "state": "unknown",
+      "action": "edit",
+      "sends": 4
+    },
+    {
+      "revision": 12,
+      "place": "east",
+      "version": "V5",
+      "sha256": "82568355353de80f096d408f2a5e7a7d9f512022888b4f72990dc6a02f64131a",
+      "fields": [],
+      "candidate": false,
+      "trigger": "unchanged-visual",
+      "emphasis": "unsupported",
+      "selection": "prior-attempt",
+      "suppressed": "prior-attempt-unknown",
+      "state": "unknown",
+      "action": "skip",
+      "sends": 4
+    },
+    {
+      "revision": 13,
+      "place": "east",
+      "version": null,
+      "sha256": "27bcaf0ac36431731297593223250730b0c3781b3fa33366600d95a934ac3307",
+      "fields": [],
+      "candidate": false,
+      "trigger": "unknown-visible-state",
+      "emphasis": "unsupported",
+      "selection": "not-ready",
+      "suppressed": "unknown-visible-state",
+      "state": "verify-scene",
+      "action": "skip",
+      "sends": 4
+    },
+    {
+      "revision": 14,
+      "place": "east",
+      "version": null,
+      "sha256": "4b23add99703a09c6de60d9d431df67fcbcac8efb486b073914237dc3242bd1f",
+      "fields": [],
+      "candidate": false,
+      "trigger": "unknown-visible-state",
+      "emphasis": "unsupported",
+      "selection": "disabled",
+      "suppressed": "disabled",
+      "state": "disabled",
+      "action": "skip",
+      "sends": 4
+    }
+  ],
+  "sends": [
+    {
+      "mode": "normal",
+      "action": "generate",
+      "visual": "V1",
+      "reference": null,
+      "spec": {
+        "sceneId": "east",
+        "people": [
+          "掌柜",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "features": [
+          "双窗",
+          "柜台"
+        ],
+        "timeOfDay": "日间",
+        "lighting": "日光",
+        "viewpoint": "正门",
+        "perspective": "玩家所见"
+      }
+    },
+    {
+      "mode": "contradiction",
+      "action": "edit",
+      "visual": "V2",
+      "reference": "7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee",
+      "spec": {
+        "sceneId": "east",
+        "people": [
+          "掌柜",
+          "紫衣客",
+          "绿衣客",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "features": [
+          "双窗",
+          "柜台"
+        ],
+        "timeOfDay": "日间",
+        "lighting": "日光",
+        "viewpoint": "正门",
+        "perspective": "玩家所见"
+      }
+    },
+    {
+      "mode": "normal",
+      "action": "edit",
+      "visual": "V3",
+      "reference": "7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee",
+      "spec": {
+        "sceneId": "east",
+        "people": [
+          "掌柜",
+          "紫衣客",
+          "绿衣客",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "features": [
+          "双窗",
+          "柜台"
+        ],
+        "timeOfDay": "傍晚",
+        "lighting": "灯笼亮起",
+        "viewpoint": "正门",
+        "perspective": "玩家所见"
+      }
+    },
+    {
+      "mode": "unconfirmed",
+      "action": "edit",
+      "visual": "V5",
+      "reference": "9feccc88e3814af79055bd71b43ec5757f4b8b8b3460787ef349ed3de4031b3f",
+      "spec": {
+        "sceneId": "east",
+        "people": [
+          "掌柜",
+          "紫衣客",
+          "绿衣客",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "features": [
+          "双窗",
+          "柜台"
+        ],
+        "timeOfDay": "傍晚",
+        "lighting": "灯笼亮起",
+        "viewpoint": "正门",
+        "perspective": "玩家所见"
+      }
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "basis": "YJ-02-image-runs.json/visualReview + fixture-v1.json; developer transcription for the three approved originals. No automated image interpretation.",
+  "assets": [
+    {
+      "id": "I0",
+      "sha256": "7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee",
+      "sceneId": "east",
+      "people": [
+        "掌柜",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "features": [
+        "柜台",
+        "双窗"
+      ],
+      "timeOfDay": "日间",
+      "lighting": "日光",
+      "viewpoint": "正门",
+      "perspective": "玩家所见",
+      "inspection": "左侧双窗、右侧柜台、三桌，原三人在场。"
+    },
+    {
+      "id": "I1",
+      "sha256": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb",
+      "sceneId": "east",
+      "people": [
+        "掌柜",
+        "蓝衣客",
+        "赭衣客",
+        "绿衣客",
+        "紫衣客"
+      ],
+      "features": [
+        "柜台",
+        "双窗"
+      ],
+      "timeOfDay": "日间",
+      "lighting": "日光",
+      "viewpoint": "正门",
+      "perspective": "玩家所见",
+      "inspection": "保留原三人，绿色和紫色旅人在后门过道。"
+    },
+    {
+      "id": "I2",
+      "sha256": "9feccc88e3814af79055bd71b43ec5757f4b8b8b3460787ef349ed3de4031b3f",
+      "sceneId": "east",
+      "people": [
+        "掌柜",
+        "蓝衣客",
+        "赭衣客",
+        "绿衣客",
+        "紫衣客"
+      ],
+      "features": [
+        "柜台",
+        "双窗"
+      ],
+      "timeOfDay": "傍晚",
+      "lighting": "灯笼亮起",
+      "viewpoint": "正门",
+      "perspective": "玩家所见",
+      "inspection": "五人仍在，室内三盏灯亮，窗外转蓝。"
+    }
+  ]
+}

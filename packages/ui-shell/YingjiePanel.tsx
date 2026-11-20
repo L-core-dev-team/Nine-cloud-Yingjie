@@ -3,7 +3,7 @@ import "./yingjie.css";
 
 const automatic=import.meta.env.YJ_AUTOMATIC === true;
 type Props = {owner:string; sessionId:string; revision:number};
-type Frame = {decision?:string; source?:"preset"|"tasks"|undefined; reason?:string; tags?:string[]; state:string; revision:number; scene:string|null; version:string|null; people:number|null; assetId:string|null};
+type Frame = {trigger?:string; decision?:string; source?:"preset"|"tasks"|undefined; reason?:string; tags?:string[]; state:string; revision:number; scene:string|null; version:string|null; people:number|null; assetId:string|null};
 const messages:Record<string,string>={
   "no-match":"没有可用的预设图。",ambiguous:"地点或素材有歧义，暂不展示。",
   "ledger-review":"历史图片请求待核对，文字行动可继续。",
@@ -16,6 +16,7 @@ const messages:Record<string,string>={
 };
 const automaticLabels:Record<string,string>={preset:"已审阅预设 · YJ-02",reuse:"复用已审阅图片",edit:"参考编辑 · 本地模拟",generate:"生成 · 本地模拟",skip:"自动选择"};
 const presetReasons:Record<string,string>={
+  "unchanged-visual":"现场没有可见变化，本轮无需新图。","outside-local-provider":"当前构图暂无合适素材。",
   "no-worldbook":"当前会话没有关联世界书。","no-grant":"当前会话没有获准用于配图的世界书条目。",
   "book-version":"世界书版本与授权记录不符。","invalid-book":"世界书暂不可读。","empty-book":"世界书没有可用条目。",
   "unsupported-rule":"该世界书的规则尚未支持配图。","entry-inactive":"已批准的地点条目当前不可用。",
@@ -73,11 +74,12 @@ export function YingjiePanel({owner,sessionId,revision}:Props) {
     {!automatic && <label className="yj-source">画面来源 <select aria-label="画面来源" value={pref.preset?"preset":"tasks"} onChange={e=>{
       const preset=e.target.value==="preset";setFrame(null);setBroken("");setPref(p=>({...p,preset,serial:p.serial+1}));
     }}><option value="tasks">本地模拟图片任务</option><option value="preset">世界书预设</option></select></label>}
-    <figure className="yj-figure" data-decision={current?.decision??""} data-state={state} data-reason={current?.reason??""} data-version={current?.version??""}>
+    <figure className="yj-figure" data-revision={current?.revision??""} data-decision={current?.decision??""} data-state={state} data-reason={current?.reason??""} data-version={current?.version??""}>
       {show?<img alt={current?.scene+"，"+current?.people+"人在场"} src={src} onError={()=>setBroken(src)}/>:
         <div className="yj-empty" role="status">{src && broken===src?"原图加载失败。":((state==="no-match" || automatic && state==="skip") && current?.reason?presetReasons[current.reason]:undefined)??messages[state]??"当前图片不适用。"}</div>}
       <figcaption><span>{automatic?(automaticLabels[current?.decision??"skip"]??"自动选择"):pref.preset?(show?"已审阅预设 · YJ-02 酒馆样例":"世界书预设"):(show?"YJ-02 酒馆原图 · 本地模拟":"本地模拟图片任务")}</span>
       {show && current?.tags?.length ? <span>{current.tags.join(" · ")}</span>:null}
+      {current?.trigger==="people-changed" && ["queued","waiting"].includes(state) && <span>人物变化，画面待更新</span>}
       {current?.version&&<span>{current.version} · {current.people} 人</span>}</figcaption>
     </figure>
   </section>;

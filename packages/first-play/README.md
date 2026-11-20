@@ -2,6 +2,12 @@
 
 在原九霄普通角色卡页面点击“进入映界”。本地首段游玩宿主自动选择图片来源。运行 `node packages/ui-shell/demo.mjs` 可打开可交互演示；固定上游、本地角色卡 PostgreSQL、Chrome 和环境变量准备见 [05 运行说明](../image-tasks/README.md)。演示的文字供应商按回合输出[示例正文](story.mjs)，可以每轮提交相同的行动。画面入口仅读取已有鉴权历史中的 completed 正文。
 
+## YJ-10 触发与一致性
+
+本地自动宿主默认启用 [visible-change/1](trigger.mjs)。选择器从已鉴权投影读取该修订实际登记的视觉版本以及同地点上一次可见快照，决定是否允许新发送。复访无变化、普通交谈及含糊变化可从同一选择端点取得复用或跳过理由。单独复跑 08 历史脚本时，宿主显式使用旧选择策略，以保留当时的重试行为。
+
+[资产资格](consistency.mjs)与[样例可见元素清单](../image-tasks/reviewed-elements.json)分别负责当前使用和原件事实对照。面板只取得显示理由和获准句柄。YJ-11 可按鉴权 scope 联查 choice、task、attempt 和 asset 的审阅记录，打开当前图及编辑前仍须实时检查授权、版本和字节。[报告、命令和证据](../../docs/reports/YJ-10-trigger-consistency-report.md)
+
 ## YJ-09 复访与重建
 
 交互演示默认选用 [zh-visible-clause/2](continuity.mjs)。它依据受信正文解析明确的离场、全量名单、时段与灯光，并按村名和已登记别名复访。位置已知但人物变化含糊时，面板可继续文字行动；地点的最后确认名单保留，当前图片等待完整调查。原 /1 提取器及 08 回归仍可使用各自的库。

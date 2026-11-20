@@ -28,8 +28,8 @@ async function conflict(db,task,kind,details) {
 }
 
 export class ImageTasks {
-  constructor(pool, files, provider, {timeoutMs=30000}={}) {
-    this.pool=pool; this.files=files; this.provider=provider; this.timeoutMs=timeoutMs;
+  constructor(pool, files, provider, {timeoutMs=30000,assess=null}={}) {
+    this.pool=pool; this.files=files; this.provider=provider; this.timeoutMs=timeoutMs; this.assess=assess;
     this.capability=CapabilitySchema.parse(provider.capability);
   }
   async permit(ctx, id, serial, enabled) {
@@ -84,6 +84,8 @@ export class ImageTasks {
     if(plan.action!=="edit")return {ok:true};
     const file=await this.asset(db,ctx.scope,plan.reference.assetId);
     if(!file)return {ok:false,reason:"reference-missing"};
+    const review=this.assess?.(file.asset.sha256,file.asset.target);
+    if(review && review.status!=="accepted")return {ok:false,reason:review.reason};
     const reason=referenceEligibility(file.asset,plan,{source:ctx.result.visual.source,authorized:ctx.authorized,
       observedSha256:file.bytes?file.asset.sha256:null});
     return {ok:reason==="eligible",reason,bytes:file.bytes};
@@ -157,11 +159,12 @@ export class ImageTasks {
       return outcome.state;
     });
   }
-  async review(ctx,id,review) {
+  async review(ctx,id,review,{onlyPending=false}={}) {
     checked(ctx);
     return transaction(this.pool,async db=>{
       const row=await one(db,"SELECT record FROM yingjie_image.asset WHERE id=$1 AND scope=$2 FOR UPDATE",[id,ctx.scope]);
       if(!row)throw Error("asset-inaccessible");
+      if(onlyPending && (row.record.invalidated || row.record.review.status!=="pending"))return "already-reviewed";
       const asset=AssetSchema.parse({...row.record,review});
       if(review.status==="accepted" && !await this.files.read(asset.storageKey,asset.sha256))throw Error("file-integrity");
       await db.query("UPDATE yingjie_image.asset SET record=$2 WHERE id=$1",[id,asset]);
@@ -187,6 +190,11 @@ export class ImageTasks {
     const access={source:v.source,authorized:true,observedSha256:file.bytes?file.asset.sha256:null};
     const verdict=plan.action==="reuse"?reuseEligibility(file.asset,plan,access,true):
       deliveryEligibility(plan,attempt,file.asset,v,access,true);
-    return verdict==="eligible"?{state:"display",...file}:{state:verdict};
+    const auditAsset={id:file.asset.assetId,reviewId:file.asset.review.id,status:file.asset.review.status,
+      assessment:file.asset.review.assessment};
+    if(verdict!=="eligible")return {state:verdict,auditAsset};
+    const reviewed=this.assess?.(file.asset.sha256,file.asset.target);
+    if(reviewed && reviewed.status!=="accepted")return {state:"review-"+reviewed.status,auditAsset};
+    return {state:"display",...file,auditAsset};
   }
 }

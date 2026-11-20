@@ -1,3 +1,4 @@
+import { assessFixture } from "../image-tasks/fixture-review.mjs";
 import { lstat,readFile } from "node:fs/promises";
 import { sha256,pngInfo } from "../image-tasks/files.mjs";
 import { sameVisual } from "../contracts/dist/index.js";
@@ -31,6 +32,10 @@ export function matchPlace(ctx,{sources,bindings},selector) {
   if (ctx.result.status!=="ready") return miss("no-current-visual","not-ready");
   if (!sources.length) return miss("no-worldbook");
   const {scene,visual}=ctx.result;
+  const visibleTags=new Set([scene.name,scene.parentSceneId,...scene.aliases,...visual.features,...visual.people]);
+  if([scene.name,...scene.aliases].some(name=>name.endsWith("酒馆"))){
+    visibleTags.add("酒馆");visibleTags.add(scene.parentSceneId+"酒馆");
+  }
   const matches=[];
   let reason="no-grant";
   for (const source of sources) {
@@ -45,7 +50,7 @@ export function matchPlace(ctx,{sources,bindings},selector) {
       if (!b.fixed_features.every(f=>scene.fixedFeatures.includes(f) && visual.features.includes(f))) {
         reason="structure-mismatch";continue;
       }
-      matches.push({catalog:b.catalog,tags:b.tags,features:b.fixed_features,
+      matches.push({catalog:b.catalog,tags:b.tags.filter(tag=>visibleTags.has(tag)),features:b.fixed_features,
         provenance:{kind:source.kind,card:source.card_id,import:source.id,original:source.sha256,
           book:b.book_sha,entry:b.entry_sha,basis:b.basis}});
     }
@@ -83,6 +88,7 @@ export async function selectPreset(ctx,place,{assets=catalog,directory=new URL("
     if (sha256(bytes)!==a.sha256) return miss("invalid-original");
     const {width,height}=pngInfo(bytes);
     if (width!==a.pixels[0] || height!==a.pixels[1]) return miss("invalid-original");
+    if(assessFixture(a.sha256,visual).status!=="accepted")return miss("review-ineligible");
     // Scope the display handle even for two sessions independently licensed for the same bytes.
     const handle=digest([ctx.scope,scene.sceneId,a.version,a.catalog,a.id,a.sha256,place.sources]);
     return {status:"matched",handle,place,asset:a,bytes};
