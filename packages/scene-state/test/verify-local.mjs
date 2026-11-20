@@ -4,7 +4,7 @@ import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { upstream } from "./local-db.mjs";
 
-const tests = ["live-card.test.mjs","persistence.test.mjs"].map(f=>fileURLToPath(new URL(f,import.meta.url)));
+const tests = process.argv.length>2 ? process.argv.slice(2) : ["live-card.test.mjs","persistence.test.mjs"].map(f=>fileURLToPath(new URL(f,import.meta.url)));
 const bin = process.env.CARD_DEMO_POSTGRES_BIN;
 const data = join(upstream,".cards-local","postgres");
 function ctl(...args) {
