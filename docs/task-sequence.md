@@ -2,7 +2,7 @@
 
 更新：2026-11-20。
 
-YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。YJ-02 工具级实验已复核，可为 YJ-03 提供样例；独立后端图片 API 接入仍阻塞且未运行。YJ-03 任务书已准备，契约实现待开始。周数从获准启动后的时间计算，正式产品验收指标由道主后续决定。
+YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。YJ-02 工具级实验已复核，可为 YJ-03 提供样例；独立后端图片 API 接入仍阻塞且未运行。YJ-03 已完成 0.1 共用契约与 C01–C12 离线验证。周数从获准启动后的时间计算，正式产品验收指标由道主后续决定。
 
 | 任务 | 前置依赖 | 交付与完成检查 | 建议窗口 |
 | --- | --- | --- | --- |
@@ -38,7 +38,7 @@ YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。YJ
 | 仓库与文档初始化 | 已完成 | 私有仓库已创建，15份文件已上传；main分支、完整文件清单与逐文件Git blob哈希核验通过，见验证记录 |
 | YJ-01 | 已完成 | 独立角色卡会话两次提交、刷新恢复与 PostgreSQL 对账通过；真实模型 NOT_RUN。[运行报告](reports/YJ-01-runtime-baseline-report.md) |
 | YJ-02 | 进行中；后端接入子项阻塞 | 工具级真实生图、两次参考更新与无变化复用已完成并复核。应用直连供应商 BLOCKED / NOT_RUN。[图片能力报告](reports/YJ-02-image-capability-report.md) · [证据复核](reports/YJ-02-evidence-review.md) |
-| YJ-03 | 待开始；任务书已准备 | [共用契约与离线验证任务书](task-briefs/YJ-03-shared-contracts.md)已提供；不依赖新增付费生图即可推进通用部分 |
+| YJ-03 | 已完成 | [0.1 契约](contracts/visual-contracts-v0.1.md)已实现，编译、正反例与原图摘要复核通过。[验证报告](reports/YJ-03-shared-contracts-report.md) |
 | YJ-04–YJ-13 | 待开始 | 映界业务实现及真实会话驱动图片联调尚未执行 |
 | YJ-M01 | 后续待开始 | 地图具体组织方式尚未确定 |
 
@@ -46,4 +46,4 @@ YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。YJ
 
 YJ-07只要求最小已有资料匹配能够返回结果或明确无匹配，不要求完成新美术资源生产。YJ-08的失败、关闭、迟到结果与归属检查属于第一次整合的一部分，不能全部推迟到YJ-12。
 
-新助手直接接手 [YJ-03 完整任务书](task-briefs/YJ-03-shared-contracts.md)，分支为 `codex/yj-03-shared-contracts`。项目全貌见[完整开工任务书 YJ-START-01](task-briefs/YJ-START-01-project-kickoff.md)，当前证据见[YJ-02 复核](reports/YJ-02-evidence-review.md)。YJ-03 可使用来源、参考和复用样例，但不把二者拼成真实会话到图片的联调证据。YJ-START-01 为文档编号，不增加开发任务阶段。
+新助手从[已完成契约与接续条件](reports/YJ-03-shared-contracts-report.md)读取 YJ-04 至 YJ-07 的输入，成果分支为 `codex/yj-03-shared-contracts`。项目全貌见[完整开工任务书 YJ-START-01](task-briefs/YJ-START-01-project-kickoff.md)，当前证据见[YJ-02 复核](reports/YJ-02-evidence-review.md)。YJ-03 可使用来源、参考和复用样例，但不把二者拼成真实会话到图片的联调证据。YJ-START-01 为文档编号，不增加开发任务阶段。

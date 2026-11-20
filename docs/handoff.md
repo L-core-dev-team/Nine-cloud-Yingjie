@@ -23,14 +23,12 @@ YJ-02 成果分支 `codex/yj-02-image-capability` 已核对到 `13ac86a0c4a13078
 
 本次已读取记录与脚本，并在 GitHub 固定提交的原图展示页逐张核对人物及主要布局，支持本批工具级样例结论。本次未重新调用图片工具、未重跑 probe.py，也未独立重算 PNG 的 SHA-256。完整范围见[YJ-02 证据复核](reports/YJ-02-evidence-review.md)。
 
-## 现在执行 YJ-03
+## YJ-03 已完成 · 任务分支交接
 
-- 接续分支：`codex/yj-03-shared-contracts`，从 YJ-02 成果接续；先读取实际 HEAD，不从落后的 main 重做。
-- 任务入口：[YJ-03 共用数据格式与离线契约验证](task-briefs/YJ-03-shared-contracts.md)。任务书已准备，契约实现尚未执行。
-- 目标：最小类型/schema、来源映射、视觉版本、参考资格、结果与审阅语义、正反例及实际离线检查。
-- 重点：剧情修订不同不必然使旧图失效；已接受不等于当前可显示；编辑参考可来自旧视觉版本，但必须满足该计划的保留要求。
-- 不需要新增生图调用。独立后端 API 仍需获准入口及认证，供应商查询、取消、费用与真实会话联调仍待验证。
-- YJ-03 收口后，YJ-04、YJ-06、YJ-07 可按共享契约开展；YJ-05 通用部分可推进，真实适配与调用仍受后端条件约束。
+- 实现提交 [5463c96](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/commit/5463c96eae5996a69bcc61b5887c6c3d50f8b3e9) 位于 `codex/yj-03-shared-contracts`。接手起点为 `e0b16bc`。继续从任务分支最新 HEAD 取成果。
+- [契约 0.1](contracts/visual-contracts-v0.1.md) 和 [包入口](../packages/contracts) 是后续模块的共用格式。[验证报告](reports/YJ-03-shared-contracts-report.md) 给出上游源码映射、命令、正反例和未运行项。
+- 离线冻结安装、编译、8 组 C01–C12 检查和三张原 PNG 校验通过。角色卡历史、合成酒馆及原生回合分别建模；普通对话与无变化复访可复用，傍晚编辑沿用五人图。
+- YJ-04 可接角色卡已完成历史与地点持久化；YJ-06、YJ-07 可消费样例与地点身份。YJ-05 可开发通用结果处理，独立后端图片 API 及真实供应商能力仍为 BLOCKED / NOT_RUN。
 
 复核时 `main` 为 `62f3260fc391ea10349bd792c1c77875e76665c7`，尚未包含任务分支的全部成果。本轮不合并 main、不修改九霄上游。YJ-01 的[限定范围复核](reports/YJ-01-evidence-review.md)继续有效。
 
