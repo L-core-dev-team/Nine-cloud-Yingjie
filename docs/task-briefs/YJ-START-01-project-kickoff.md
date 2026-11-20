@@ -1,6 +1,6 @@
 # 九霄 · 映界：新项目开工与接续任务书
 
-> 接续状态更新（2026-11-19）：YJ-01的本地合成文字基线已完成，当前下一项为[YJ-02图片能力验证](YJ-02-image-capability.md)。接手先读[当前交接](../handoff.md)和[YJ-01证据复核](../reports/YJ-01-evidence-review.md)。下列正文记录开工时的完整安排，不能据其中“YJ-01待开始”的历史状态重复开工。
+> 接续状态更新（2026-11-20）：YJ-01 本地合成文字基线已完成，YJ-02 工具级酒馆样例已复核；后端图片 API 仍 BLOCKED / NOT_RUN。当前执行入口为 [YJ-03 共用契约与离线验证](YJ-03-shared-contracts.md)，接续分支 `codex/yj-03-shared-contracts`。先读[当前交接](../handoff.md)和[YJ-02 证据复核](../reports/YJ-02-evidence-review.md)。下列正文保留开工时安排，不能据其中“YJ-01 待开始”的历史状态重复开工。
 
 - 文档编号：YJ-START-01
 - 文档版本：1.0
