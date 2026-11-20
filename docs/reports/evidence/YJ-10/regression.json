@@ -1,0 +1,129 @@
+{
+  "upstream": "Nine-cloud@cd25360c7929e10f8b2b0fad342fedd943d4f323",
+  "setup": "Windows, PostgreSQL 18.4, Chrome 157.0.8103.79, contracts 0.1.1",
+  "png": {
+    "command": "python docs/reports/evidence/YJ-02/probe.py verify",
+    "exit": 0,
+    "files": 3,
+    "referenceEdits": 2
+  },
+  "parallelTimeout": {
+    "originalTimeoutMs": 12000,
+    "parallelRunsIncluding08": 7,
+    "observedMatchingTimeouts": 0,
+    "historicalCause": "unconfirmed"
+  },
+  "runs": [
+    {
+      "run": "contract",
+      "command": "npm --prefix packages/contracts test",
+      "exit": 0,
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 647.5563,
+      "includes08FailureScenario": false
+    },
+    {
+      "run": "base",
+      "command": "node packages/scene-state/test/verify-local.mjs packages/scene-state/test/live-card.test.mjs packages/scene-state/test/persistence.test.mjs packages/image-tasks/test/recovery.test.mjs packages/ui-shell/test/browser.test.mjs packages/world-assets/test/matching.test.mjs packages/world-assets/test/live.test.mjs packages/first-play/test/extract.test.mjs packages/first-play/test/browser.test.mjs packages/first-play/test/continuity.test.mjs packages/first-play/test/revisit-browser.test.mjs",
+      "exit": 0,
+      "passed": 14,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 31235.0833,
+      "includes08FailureScenario": true
+    },
+    {
+      "run": "interim",
+      "command": "node packages/scene-state/test/verify-local.mjs packages/scene-state/test/live-card.test.mjs packages/scene-state/test/persistence.test.mjs packages/image-tasks/test/recovery.test.mjs packages/ui-shell/test/browser.test.mjs packages/world-assets/test/matching.test.mjs packages/world-assets/test/live.test.mjs packages/first-play/test/extract.test.mjs packages/first-play/test/browser.test.mjs packages/first-play/test/continuity.test.mjs packages/first-play/test/revisit-browser.test.mjs",
+      "exit": 0,
+      "passed": 14,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 29487.1276,
+      "includes08FailureScenario": true
+    },
+    {
+      "run": "target",
+      "command": "node packages/scene-state/test/verify-local.mjs packages/first-play/test/trigger.test.mjs packages/first-play/test/trigger-browser.test.mjs",
+      "exit": 0,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 10735.7953,
+      "includes08FailureScenario": false
+    },
+    {
+      "run": "full1",
+      "command": "node packages/scene-state/test/verify-local.mjs packages/scene-state/test/live-card.test.mjs packages/scene-state/test/persistence.test.mjs packages/image-tasks/test/recovery.test.mjs packages/ui-shell/test/browser.test.mjs packages/world-assets/test/matching.test.mjs packages/world-assets/test/live.test.mjs packages/first-play/test/extract.test.mjs packages/first-play/test/browser.test.mjs packages/first-play/test/continuity.test.mjs packages/first-play/test/revisit-browser.test.mjs packages/first-play/test/trigger.test.mjs packages/first-play/test/trigger-browser.test.mjs",
+      "exit": 0,
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 33025.6816,
+      "includes08FailureScenario": true
+    },
+    {
+      "run": "final",
+      "command": "node packages/scene-state/test/verify-local.mjs packages/scene-state/test/live-card.test.mjs packages/scene-state/test/persistence.test.mjs packages/image-tasks/test/recovery.test.mjs packages/ui-shell/test/browser.test.mjs packages/world-assets/test/matching.test.mjs packages/world-assets/test/live.test.mjs packages/first-play/test/extract.test.mjs packages/first-play/test/browser.test.mjs packages/first-play/test/continuity.test.mjs packages/first-play/test/revisit-browser.test.mjs packages/first-play/test/trigger.test.mjs packages/first-play/test/trigger-browser.test.mjs",
+      "exit": 0,
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 32798.0894,
+      "includes08FailureScenario": true
+    },
+    {
+      "run": "risk",
+      "command": "node packages/scene-state/test/verify-local.mjs packages/first-play/test/browser.test.mjs packages/first-play/test/revisit-browser.test.mjs packages/first-play/test/trigger-browser.test.mjs",
+      "exit": 0,
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 20505.3805,
+      "includes08FailureScenario": true
+    },
+    {
+      "run": "release",
+      "command": "node packages/scene-state/test/verify-local.mjs packages/scene-state/test/live-card.test.mjs packages/scene-state/test/persistence.test.mjs packages/image-tasks/test/recovery.test.mjs packages/ui-shell/test/browser.test.mjs packages/world-assets/test/matching.test.mjs packages/world-assets/test/live.test.mjs packages/first-play/test/extract.test.mjs packages/first-play/test/browser.test.mjs packages/first-play/test/continuity.test.mjs packages/first-play/test/revisit-browser.test.mjs packages/first-play/test/trigger.test.mjs packages/first-play/test/trigger-browser.test.mjs",
+      "exit": 0,
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 33163.4182,
+      "includes08FailureScenario": true,
+      "checks": [
+        "✔ automatic first play from completed text through original CardSession and scoped image bytes (31153.0132ms)",
+        "✔ both versioned extractors on fixed labeled passages, including deliberate abstentions (12.6104ms)",
+        "✔ saved-body observations against separately specified reference labels (5.3999ms)",
+        "✔ additional prose against semantic reference, count abstentions separately (0.3593ms)",
+        "✔ original CardSession across two villages, ambiguity, full survey and isolated replays (32414.5648ms)",
+        "✔ saved turns on original CardSession: narrative triggers, reviewed elements and hidden worldbook (22956.0936ms)",
+        "✔ confirmed visual changes, no-op and unsupported emphasis (2.6384ms)",
+        "✔ review, current display and reference use have separate verdicts (1.2953ms)",
+        "✔ rumor, reported speech, dreams and unseen narrators cannot add a present character (6.1912ms)",
+        "✔ provider capability cannot override authorization or a suppressed trigger (0.8496ms)",
+        "✔ independent senders, hard exits, timeout reconciliation and duplicate receipts (17590.612ms)",
+        "✔ reference eligibility, explicit retry, live scope and file integrity (3859.0044ms)",
+        "✔ saved ordinary card history via authenticated loopback HTTP and separate PostgreSQL state (14027.3886ms)",
+        "✔ process death, concurrent replay, restart, aliases, missing facts and visual history (24272.5241ms)",
+        "✔ bounded 100-row pages, mid-page failure, checkpoint resume and stale access (2412.881ms)",
+        "✔ ordinary CardSession → saved text → scene → PostgreSQL task → reviewed original → browser (27618.6707ms)",
+        "✔ saved ordinary session, pinned global version, scoped grants and reviewed presets through Chrome (25698.561ms)",
+        "✔ stable place and versioned source pins, conservative book subset (3.4133ms)",
+        "✔ exact visual facts, review, rights and current bytes gate selection (29.1348ms)"
+      ]
+    },
+    {
+      "run": "repeat",
+      "command": "node packages/scene-state/test/verify-local.mjs packages/scene-state/test/live-card.test.mjs packages/scene-state/test/persistence.test.mjs packages/image-tasks/test/recovery.test.mjs packages/ui-shell/test/browser.test.mjs packages/world-assets/test/matching.test.mjs packages/world-assets/test/live.test.mjs packages/first-play/test/extract.test.mjs packages/first-play/test/browser.test.mjs packages/first-play/test/continuity.test.mjs packages/first-play/test/revisit-browser.test.mjs packages/first-play/test/trigger.test.mjs packages/first-play/test/trigger-browser.test.mjs",
+      "exit": 0,
+      "passed": 19,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 33667.6996,
+      "includes08FailureScenario": true
+    }
+  ]
+}

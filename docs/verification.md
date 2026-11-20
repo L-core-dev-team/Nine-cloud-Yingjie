@@ -2,6 +2,10 @@
 
 更新：2026-11-20。
 
+## YJ-10 本地验证
+
+YJ-10 本地实现与验证已完成。原普通角色卡 14 轮共 4 次模拟发送，错图被拒后连续两轮交谈均未重发。最终两次综合回归各 19/19，真实模型调用 0。契约 10/10，原件 3/3。在包含旧 08 编辑失败场景的七次并行运行中未复现历史超时，原等待阈值为 12 秒，根因仍未证实。[各次命令与退出结果](reports/evidence/YJ-10/regression.json) · [场景、发送和拒绝依据](reports/YJ-10-trigger-consistency-report.md)
+
 ## YJ-09 提交证据复核与 YJ-10 任务书准备（本轮）
 
 只读核对 `codex/yj-09-revisit-continuity@cabd3f1b7229f10c4470c5b847a187143b291026`，读取[报告](reports/YJ-09-revisit-continuity-report.md)、[65 段对照](reports/evidence/YJ-09/corpus.json)、[25 轮回执](reports/evidence/YJ-09/journey.json)、[完整回归记录](reports/evidence/YJ-09/regression.json)及核心源码。原执行者的结果为契约 10/10、最终回归连续两次 14/14；同批合成语料 /2 为 39 正确采纳、0 错误采纳、26 放弃判断。原回归一次并行等待超时具体根因未证实。本轮未重新运行这些测试或模型调用。

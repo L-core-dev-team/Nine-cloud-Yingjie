@@ -2,7 +2,11 @@
 
 更新：2026-11-20。
 
-## 最新接续 · YJ-10 开工任务书就绪
+## 当前接续 · YJ-11 图片历史与纠错
+
+YJ-10 本地实现与验证已完成。原普通角色卡 14 轮共 4 次模拟发送，错图被拒后连续两轮交谈均未重发。最终两次综合回归各 19/19，真实模型调用 0。接续分支 `codex/yj-10-trigger-consistency`，实现提交 [66a22e89](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/commit/66a22e89154568071d0c7ffbd629df8f495d8843)。按鉴权 scope 关联 choice、task、attempt、asset。旧行可能没有触发审计；同一 SHA 的两个资产可能有不同目标、审阅和纠错结论。回看历史、用于当前图和用于编辑需要分别核权，未知发送沿用原尝试。真实模型、独立标注、真机和生产挂载保留 NOT_RUN。[详细报告与回退](reports/YJ-10-trigger-consistency-report.md) · [逐轮证据](reports/evidence/YJ-10/run.json)
+
+## 开工时记录 · YJ-10 任务书就绪
 
 - YJ-09 最新远端提交已核验：`codex/yj-09-revisit-continuity@cabd3f1b7229f10c4470c5b847a187143b291026`。本次读取其源码、65 段语料证据、25 轮回执、报告及间歇性超时记录，未独立在 Windows/PG/Chrome 环境复跑。
 - 已从该提交创建 `codex/yj-10-trigger-consistency` 并提交[完整执行任务书](task-briefs/YJ-10-trigger-consistency.md)。**YJ-10 业务代码与测试 NOT_RUN**；只完成开工准备和接续文件。YJ-09 原成果分支、映界 `main` 和九霄上游不改。
