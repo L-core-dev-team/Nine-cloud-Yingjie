@@ -2,6 +2,10 @@
 
 更新：2026-11-20。
 
+## YJ-04 场景状态与恢复
+
+完整契约 10/10，通过 Node、回环 HTTP 及真实 PostgreSQL 的状态检查 3/3。真实普通历史写入一条修订；独立合成样例验证 102 行分页、事务中断、两个子进程竞争、地点别名与五人复访。命令、证据边界、未运行项见[工程报告](reports/YJ-04-scene-state-report.md)和[脱敏回执](reports/evidence/YJ-04-local-run.json)。
+
 ## YJ-03 独立复核、定向修补与 YJ-04 任务书
 
 2026-11-20，复核原提交 `7d68284e95754f06e853123ac3c719788266ae0a`，14 份本地源码/元数据与远端 Git blob 一致，并核对九霄固定提交的鉴权、历史查询与保存代码。实际复现编辑入口同版本不同事实、UUID 大小写拆分身份两项缺口，在独立接续分支修补至包 0.1.1（交换格式仍 0.1）。修补提交 [e5d6cf2](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/commit/e5d6cf2e73dc5131209f9793677e3eebf24a7c73)。

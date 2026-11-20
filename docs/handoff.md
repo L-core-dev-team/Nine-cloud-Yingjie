@@ -32,7 +32,7 @@ YJ-02 成果分支 `codex/yj-02-image-capability` 已核对到 `13ac86a0c4a13078
 
 复核时 `main` 为 `62f3260fc391ea10349bd792c1c77875e76665c7`，尚未包含任务分支的全部成果。本轮不合并 main、不修改九霄上游。YJ-01 的[限定范围复核](reports/YJ-01-evidence-review.md)继续有效。
 
-## YJ-03 复核修补与 YJ-04 接手 · 2026-11-20
+## YJ-03 复核修补与 YJ-04 接手（开工时记录）· 2026-11-20
 
 当前接续分支为 `codex/yj-04-scene-state`，从 YJ-03 最终提交 `7d68284e95754f06e853123ac3c719788266ae0a` 建立。定向修补提交为 [e5d6cf2](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/commit/e5d6cf2e73dc5131209f9793677e3eebf24a7c73)；本节与任务书会在其后提交。接手时读取远端实际 HEAD，不用固定 SHA 覆盖后续成果。
 
@@ -43,6 +43,12 @@ YJ-02 成果分支 `codex/yj-02-image-capability` 已核对到 `13ac86a0c4a13078
 - YJ-04 状态业务实现尚未执行，不需要等待图片供应商入口。
 - YJ-02 后端准备使用独立分支 `codex/yj-02-backend-readiness`。本轮交接更新时，远端已推进到 `340c8bfb2cafe01be994b0d0ce77829b6274c7b7`；[补充报告](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/blob/340c8bfb2cafe01be994b0d0ce77829b6274c7b7/docs/reports/YJ-02-backend-readiness-report.md)记录离线请求准备与本地 mock 已完成，真实后端仍 BLOCKED / NOT_RUN。本轮只登记新提交并读取报告，未复核或复跑该批实验。
 - 02 补充实现仍消费 0.1.0；如需共用契约修补，可单独接入上述 0.1.1 补丁提交，随后复跑该分支的契约和准备检查。不要将整个 04 分支合入以覆盖 02 的交接记录。
+
+## YJ-04 已完成 · 当前接续点
+
+- 任务分支 `codex/yj-04-scene-state`，起点 `6cf460e`。实现提交 [a8b33d4](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/commit/a8b33d4cfb50dcbea0d1b411008a3360e1810421) 已核对远端。后续取本分支最新 HEAD。
+- 在完整副本复跑契约 10/10；状态验证 3/3。已通过真实本地 HTTP 和 PostgreSQL 读取普通角色卡已完成历史，并独立验证合成酒馆五人复访、事务中断、竞争、分页和进程重启。[报告与未验证项](reports/YJ-04-scene-state-report.md)
+- YJ-06、07 可从[状态入口](../packages/scene-state/README.md)消费。YJ-05 通用工作可继续；独立后端 API、自由文本提取、生产挂载及端到端出图仍待对应阶段落实。
 
 ## 保留未决
 
