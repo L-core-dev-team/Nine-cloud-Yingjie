@@ -43,7 +43,7 @@ YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。YJ
 | YJ-05 | 通用部分已完成；真实供应商阻塞 | PostgreSQL、参考编辑、原件核验、并发与跨进程恢复通过。[05 报告](reports/YJ-05-image-tasks-report.md) |
 | YJ-06 | 本地实现已完成；待生产集成 | 九霄原角色卡页面、模拟图片后台、桌面及窄屏浏览器联调通过。[06 报告](reports/YJ-06-ui-report.md) |
 | YJ-07 | 已完成本地交付 | 三类会话世界书来源、地点授权、预设图审阅和字节核验通过；原九步流程回归通过。[07 报告](reports/YJ-07-worldbook-assets-report.md) |
-| YJ-08 | 接续任务书已就绪 | 可先进行正文提取对照、预设与任务选择及模拟联调；真实图片供应商需获准 API。[08 任务书](task-briefs/YJ-08-first-play-integration.md) |
+| YJ-08 | 本地首段游玩已完成；真实供应商待验证 | 已保存正文提取、五类自动选择和普通角色卡页面联调通过。补充散文 4 段一致、3 段放弃判断。[08 运行报告](reports/YJ-08-first-play-integration-report.md) |
 | YJ-09–YJ-13 | 待开始 | 按首段游玩联调结果接续 |
 | YJ-M01 | 后续待开始 | 地图具体组织方式尚未确定 |
 

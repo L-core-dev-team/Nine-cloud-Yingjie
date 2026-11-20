@@ -2,7 +2,15 @@
 
 更新：2026-11-20。
 
-## 当前接续点 · YJ-07 已完成本地交付
+## 当前接续点 · YJ-08 本地首段游玩已完成
+
+分支 `codex/yj-08-first-play-integration`，基线 `5562e42233cb0d5bcaeb1179eb9aa02bfcd9fa4f`。已从 GitHub 回读并核对实现提交 [c6b7981776e2579e0fe241ecd40dbad0095de995](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/commit/c6b7981776e2579e0fe241ecd40dbad0095de995) 和整树。本次交接提交随后更新报告、看板和入口。后续读取本分支最新 HEAD。
+
+- 原普通角色卡页面使用已保存正文及受限规则，主会话 13 轮同一玩家行动。通过预设、复用、参考编辑、生成、跳过，以及失败、关图、复访、刷新、损坏、撤权、迟到及结果未知验证。[报告与命令](reports/YJ-08-first-play-integration-report.md) · [逐回合回执](reports/evidence/YJ-08/run.json)
+- 规则对照 24/24；另外 7 段散文中 4 段一致，3 段放弃判断。本地运行使用合成文字及图片服务。契约 10/10，综合检查 12/12。真实模型和真实图片 API 调用均为 0。
+- 下一项 YJ-09 可扩展连续人物变化、别名与重访的人工对照和重放验证。接入真实模型前需要获准语料或模型/认证；真实图片服务另需获准 API、额度、参考编辑与回执协议、审阅入口。生产挂载及真机未验。[提取、选择与回退说明](../packages/first-play/README.md)
+
+## YJ-07 完成本地交付时记录
 
 分支 `codex/yj-07-worldbook-assets`，接手基线 `bd2f552ba0c0480202c4366a92f0d95d4cb117f8`。已核对本地及远端实现提交 [da97633de7c83d0b743d8e5766cb2317867a2cea](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/commit/da97633de7c83d0b743d8e5766cb2317867a2cea)。九霄固定上游工作树干净。此后的报告提交仅增加接续资料，下一次工作从分支最新 HEAD 开始。
 

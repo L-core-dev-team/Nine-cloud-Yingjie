@@ -103,6 +103,10 @@
 
 [da97633de7c83d0b743d8e5766cb2317867a2cea](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/commit/da97633de7c83d0b743d8e5766cb2317867a2cea) 的远端树与本地一致。Windows、固定九霄运行时、PostgreSQL 18.4 及 Chrome 的本次 9 组综合检查全部通过；独立契约测试 10 组通过，原图探针 3 张通过。原 05/06 用例发送 9 次本地 mock，07 预设用例发送 0 次。获准合成世界书经过真实导入、关联和权限路由；原件损坏、授权撤销、会话删除均有实际拒绝回执。私人资料、真实模型、生产与真机 NOT_RUN。[完整报告](reports/YJ-07-worldbook-assets-report.md) · [运行回执](reports/evidence/YJ-07/run.json)
 
+## YJ-08 首段游玩 · 本地自动选择
+
+实现提交 [c6b7981776e2579e0fe241ecd40dbad0095de995](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/commit/c6b7981776e2579e0fe241ecd40dbad0095de995)。以同一玩家行动在九霄普通角色卡页面驱动多段已保存的合成剧情，PG 事件正文摘要、来源 key、规则依据、视觉版本与预设/任务结果完成对账。通过契约 10 组、原图 3 张、综合检查 12 组。08 浏览器用例 6 次模拟发送，真实图片服务 0 次。24 段规则参考均通过，另外 7 段中 4 段语义一致、3 段放弃判断。独立人工盲评、通用自由文本、真实供应商及生产部署待验证。[运行报告](reports/YJ-08-first-play-integration-report.md) · [逐回合证据](reports/evidence/YJ-08/run.json)
+
 ## 后续记录格式
 
 每条记录应包括日期、仓库与提交、检查对象、执行方式、实际结果、证据位置及未覆盖部分。不能把历史记录、静态检查和当次真实运行混写为同一项PASS。

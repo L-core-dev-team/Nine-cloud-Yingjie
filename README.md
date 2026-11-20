@@ -4,12 +4,14 @@
 
 ## 当前状态
 
+当前分支已接通普通角色卡页面的本地首段游玩。正文经有限规则提取后，可自动选择已审预设、复用、编辑、生成或跳过。真实供应商和通用自由文本理解仍待验证。[YJ-08 运行报告](docs/reports/YJ-08-first-play-integration-report.md) · [可交互演示与复跑](packages/first-play/README.md)
+
 - YJ-01 已完成本地 Node 合成文字基线；YJ-02 工具级真实样例已复核，后端准备独立推进；YJ-03 已交付共用契约，复核后定向修补至 `@yingjie/contracts@0.1.1`（交换格式仍为 0.1）。
 - YJ-04 已在 `codex/yj-04-scene-state` 完成普通角色卡历史读取、地点状态持久化与跨进程恢复。下游可从 [模块入口](packages/scene-state) 和[运行报告](docs/reports/YJ-04-scene-state-report.md)接续。
 
 - 项目已获准启动，独立仓库与首批规划文件初始化已完成；远端文件内容核验通过，详见[验证记录](docs/verification.md)。
 - 远端仓库：[quakhiak34568-lang/Nine-cloud-Yingjie](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie)，私有，默认分支 `main`。
-- 本仓库承载需求、实施任务、决策和后续实现；当前尚无可运行的映界应用。
+- 本仓库承载需求、实施任务、决策及本地可运行的映界原型。
 - 用户愿意投入 1–2 个月；6–8 周是当前排期建议。
 - 原有暂定项和明确后置事项继续保留，不因项目启动被批量改为已确认。
 - 开源许可证尚未选定，当前不作新的代码或素材许可承诺。
