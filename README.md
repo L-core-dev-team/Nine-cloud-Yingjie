@@ -4,6 +4,8 @@
 
 ## 当前状态
 
+**最新接续：** YJ-08 已完成限定范围的 13 轮本地已保存正文联调。YJ-09 的[同地复访与持续变化任务书](docs/task-briefs/YJ-09-revisit-continuity.md)已就绪，接续分支为 `codex/yj-09-revisit-continuity`；**YJ-09 业务实现尚未执行**。真实文字/图片模型、生产部署和手机真机仍未验证。
+
 当前分支已接通普通角色卡页面的本地首段游玩。正文经有限规则提取后，可自动选择已审预设、复用、编辑、生成或跳过。真实供应商和通用自由文本理解仍待验证。[YJ-08 运行报告](docs/reports/YJ-08-first-play-integration-report.md) · [可交互演示与复跑](packages/first-play/README.md)
 
 - YJ-01 已完成本地 Node 合成文字基线；YJ-02 工具级真实样例已复核，后端准备独立推进；YJ-03 已交付共用契约，复核后定向修补至 `@yingjie/contracts@0.1.1`（交换格式仍为 0.1）。
@@ -24,7 +26,7 @@
 
 ## 按顺序阅读
 
-接手时先读[当前交接](docs/handoff.md)、[YJ-03 复核与修补](docs/reports/YJ-03-evidence-review.md)，再查阅 [YJ-04 状态模块与复跑命令](packages/scene-state/README.md)。YJ-05 至 YJ-07 可按共用契约安排各自工作。[完整开工与接续任务书 YJ-START-01](docs/task-briefs/YJ-START-01-project-kickoff.md)保留项目全貌与历史启动安排，不能据其早期状态重复执行已完成任务。
+接手时先读[当前交接](docs/handoff.md)、[YJ-08 运行与提取限制](docs/reports/YJ-08-first-play-integration-report.md)，然后按 [YJ-09 完整任务书](docs/task-briefs/YJ-09-revisit-continuity.md)在独立分支继续。YJ-01 至 YJ-08 的已完成部分不重复开工。[完整开工与接续任务书 YJ-START-01](docs/task-briefs/YJ-START-01-project-kickoff.md)保留项目全貌与历史启动安排，不能据其早期状态重复执行已完成任务。
 
 1. [需求与首版范围](docs/requirements.md)
 2. [启动决定与未决事项](docs/decisions.md)

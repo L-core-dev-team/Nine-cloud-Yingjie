@@ -2,6 +2,13 @@
 
 更新：2026-11-20。
 
+## 最新接续点 · YJ-09 任务书准备完毕
+
+- YJ-08 固定成果分支 `codex/yj-08-first-play-integration` 的远端 HEAD 已只读核对为 `00c42157e4066565eb9d5d5a140b78188ebe0b81`。已读取[工程报告](reports/YJ-08-first-play-integration-report.md)、[逐回合回执](reports/evidence/YJ-08/run.json)、提取器源码及代表性测试；**本轮没有在用户 Windows 环境重跑测试**。
+- 原记录显示：13 轮九霄已保存合成正文、规则对照 24/24、额外散文 4/7 一致且 3/7 放弃判断、契约 10/10、综合检查 12/12；图片/文字真实模型调用均为 0。原标签由同一开发会话编写，不是独立盲评，更不能当作真实玩家语义正确率。
+- 已从 YJ-08 最终提交新建 `codex/yj-09-revisit-continuity`。[YJ-09 完整任务书](task-briefs/YJ-09-revisit-continuity.md)重点处理含蓄人物离场、只剩某人、间接昼夜灯光、同地点别名和跨地点复访、未知画面资格与版本化安全重放；**本次只准备任务书和交接，YJ-09 业务代码及测试均 NOT_RUN**。
+- 02/05 的独立真实后端图片 API 仍 BLOCKED / NOT_RUN；YJ-09 可用已有合成资料、原三张 PNG 和 PG/Chrome mock 先做定向开发。真实文本模型、独立人工语料、生产挂载、移动真机仍需后续单独验证。继续由一个 Codex 使用独立任务分支，勿修改九霄 main、映界 main 或万卡阁。
+
 ## 当前接续点 · YJ-08 本地首段游玩已完成
 
 分支 `codex/yj-08-first-play-integration`，基线 `5562e42233cb0d5bcaeb1179eb9aa02bfcd9fa4f`。已从 GitHub 回读并核对实现提交 [c6b7981776e2579e0fe241ecd40dbad0095de995](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/commit/c6b7981776e2579e0fe241ecd40dbad0095de995) 和整树。本次交接提交随后更新报告、看板和入口。后续读取本分支最新 HEAD。

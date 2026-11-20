@@ -2,6 +2,12 @@
 
 更新：2026-11-20。
 
+## YJ-08 成果读取与 YJ-09 开工准备（本轮，只读+文档）
+
+2026-11-20 核对远端 `codex/yj-08-first-play-integration@00c42157e4066565eb9d5d5a140b78188ebe0b81`；读取原报告、13 轮 JSON 回执、`zh-visible-clause/1` 规则实现和提取对照。原执行报告记录契约 10/10、综合 12/12、合成规则 24/24、额外散文 4 段一致/3 段保守放弃；这些是**提交证据，不是本轮独立实机复跑**。真实文字/图片服务调用均为 0。详见 [YJ-08 原运行报告](reports/YJ-08-first-play-integration-report.md)。
+
+本轮仅创建 [YJ-09 任务书](task-briefs/YJ-09-revisit-continuity.md) 与接续分支、更新索引。YJ-09 实际代码、测试、数据库联调均 NOT_RUN。提取器新版本应单独重放并记录样例来源，未取得独立人工盲评不得宣称真实玩家准确率。真实图像后端、生产挂载、手机真机仍 BLOCKED / NOT_RUN。
+
 ## YJ-04 场景状态与恢复
 
 完整契约 10/10，通过 Node、回环 HTTP 及真实 PostgreSQL 的状态检查 3/3。真实普通历史写入一条修订；独立合成样例验证 102 行分页、事务中断、两个子进程竞争、地点别名与五人复访。命令、证据边界、未运行项见[工程报告](reports/YJ-04-scene-state-report.md)和[脱敏回执](reports/evidence/YJ-04-local-run.json)。
