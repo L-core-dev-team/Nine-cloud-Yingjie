@@ -2,6 +2,13 @@
 
 更新：2026-11-20。
 
+## 最新接续：YJ-11 任务书已就绪
+
+- YJ-10 完成分支 `codex/yj-10-trigger-consistency@95cb7a9145f914c2b72196730891a46e215ed5af` 已核对远端。读取[运行报告](reports/YJ-10-trigger-consistency-report.md)、[14 轮证据](reports/evidence/YJ-10/run.json)、[19 组回归记录](reports/evidence/YJ-10/regression.json)和历史关联/审阅关键源码；**本次没有在 Windows 本机复跑测试或调用模型**。
+- YJ-10 执行记录：14 轮内 5 个视觉触发候选、4 次本地 mock 发送；五人场景收到错误三人图后审阅拒绝，两轮交谈未补发；综合回归最终两次 19/19。曾有 09 的一次并行超时，本轮 7 次未复现，原根因仍未证实。真实模型与独立图片 API 均 NOT_RUN。
+- 已从 YJ-10 完成提交建立 `codex/yj-11-image-history-corrections`，上传[完整 YJ-11 任务书](task-briefs/YJ-11-image-history-corrections.md)。重点是本会话图片历史、安全浏览、追加式反馈与审阅纠错、保留原任务和资产证据、受控替代图；现有 `task.event_key UNIQUE` 不允许偷偷复用原任务身份派发。
+- **YJ-11 业务实现、真实 PG/HTTP/Chrome 新验证均未执行。** 下一执行者使用同一个 Codex，先检查实际 HEAD 和工作区，按任务书编码与实测；不得修改两个项目 main、万卡阁或未经许可调用真实供应商。
+
 ## 当前接续 · YJ-11 图片历史与纠错
 
 YJ-10 本地实现与验证已完成。原普通角色卡 14 轮共 4 次模拟发送，错图被拒后连续两轮交谈均未重发。最终两次综合回归各 19/19，真实模型调用 0。接续分支 `codex/yj-10-trigger-consistency`，实现提交 [66a22e89](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/commit/66a22e89154568071d0c7ffbd629df8f495d8843)。按鉴权 scope 关联 choice、task、attempt、asset。旧行可能没有触发审计；同一 SHA 的两个资产可能有不同目标、审阅和纠错结论。回看历史、用于当前图和用于编辑需要分别核权，未知发送沿用原尝试。真实模型、独立标注、真机和生产挂载保留 NOT_RUN。[详细报告与回退](reports/YJ-10-trigger-consistency-report.md) · [逐轮证据](reports/evidence/YJ-10/run.json)

@@ -1,5 +1,11 @@
 # 变更记录
 
+## 2026-11-20 YJ-10 成果复核与 YJ-11 开工准备
+
+- 核对 YJ-10 固定分支提交、14 轮逐项回执、综合 19/19 运行证据及既有图片任务/审阅结构；此轮未在原 Windows 环境独立复测。
+- 新建 `codex/yj-11-image-history-corrections`，提交[完整图片历史与安全纠错任务书](docs/task-briefs/YJ-11-image-history-corrections.md)，更新 README、任务看板、验证与交接。
+- 本次为任务书及文档交付，YJ-11 业务代码/测试未运行；真实模型、供应商、生图费用与生产接入保持 NOT_RUN。
+
 ## 2026-11-20 YJ-10 出图触发与视觉一致性
 
 普通交谈复用或跳过，可见状态确有变化时才考虑模拟编辑或生成。新增可回放的触发依据、原件审阅对照及受信标签过滤。[运行与交接](docs/reports/YJ-10-trigger-consistency-report.md)

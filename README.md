@@ -4,6 +4,8 @@
 
 ## 当前状态
 
+**YJ-11 开工准备完成：** 已从 YJ-10 最终提交 `95cb7a9` 建立 `codex/yj-11-image-history-corrections`，并上传[图片历史与纠错完整任务书](docs/task-briefs/YJ-11-image-history-corrections.md)。目前只有任务书和交接材料，**YJ-11 的历史功能、审阅纠错与浏览器测试均未执行**。原任务分支和 `main` 未变。
+
 **当前接续为 YJ-11 图片历史与纠错。** YJ-10 本地实现与验证已完成。原普通角色卡 14 轮共 4 次模拟发送，错图被拒后连续两轮交谈均未重发。最终两次综合回归各 19/19，真实模型调用 0。[YJ-10 报告与运行命令](docs/reports/YJ-10-trigger-consistency-report.md)
 
 **此前接续**　YJ-09 已完成本地工程交付。原普通角色卡 25 轮同一行动，东/西村同名异地、改名复访、含糊离场后隐藏与完整调查恢复、双版本 PG 重放均有逐轮回执。65 段合成对照中新版正确采纳 39、错采 0、放弃 26。YJ-10 可接入关键事件、当前图片适用性和可知范围审计。[YJ-09 运行报告与命令](docs/reports/YJ-09-revisit-continuity-report.md)

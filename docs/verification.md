@@ -2,6 +2,12 @@
 
 更新：2026-11-20。
 
+## YJ-10 提交证据复核与 YJ-11 准备（本轮）
+
+已只读核对 `codex/yj-10-trigger-consistency@95cb7a9145f914c2b72196730891a46e215ed5af`，读取[实现报告](reports/YJ-10-trigger-consistency-report.md)、[14 轮回执](reports/evidence/YJ-10/run.json)、[回归记录](reports/evidence/YJ-10/regression.json)与现有 PG/选择/审阅代码。原报告记录契约 10/10、原 PNG 3/3、综合两次 19/19；错三人图用于五人目标时审阅拒绝，相关资产没有成为当前图或参考图。09 的历史并行超时在 10 的七次并行运行中未复现，但根因未查清。**这都是源报告证据，本轮未在原运行环境复跑。**
+
+已建立 [YJ-11 完整任务书](task-briefs/YJ-11-image-history-corrections.md)及独立接续分支，明确图片历史/纠错账本、授权下载与新请求身份。此次只提交文档与接续索引，YJ-11 实际代码、PG/HTTP/Chrome 测试均 NOT_RUN。真实文本模型、独立图片供应商、用户正式素材及生产发布仍 NOT_RUN。
+
 ## YJ-10 本地验证
 
 YJ-10 本地实现与验证已完成。原普通角色卡 14 轮共 4 次模拟发送，错图被拒后连续两轮交谈均未重发。最终两次综合回归各 19/19，真实模型调用 0。契约 10/10，原件 3/3。在包含旧 08 编辑失败场景的七次并行运行中未复现历史超时，原等待阈值为 12 秒，根因仍未证实。[各次命令与退出结果](reports/evidence/YJ-10/regression.json) · [场景、发送和拒绝依据](reports/YJ-10-trigger-consistency-report.md)
