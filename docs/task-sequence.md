@@ -37,7 +37,7 @@ YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。YJ
 | YJ-00 | 已完成启动方向确认 | 用户授权开始、建仓并上传计划；未决产品细项保持原状态 |
 | 仓库与文档初始化 | 已完成 | 私有仓库已创建，15份文件已上传；main分支、完整文件清单与逐文件Git blob哈希核验通过，见验证记录 |
 | YJ-01 | 已完成 | 独立角色卡会话两次提交、刷新恢复与 PostgreSQL 对账通过；真实模型 NOT_RUN。[运行报告](reports/YJ-01-runtime-baseline-report.md) |
-| YJ-02 | 进行中；真实后端接入仍受条件约束 | 工具级样例已完成并复核。现执行[后端接入准备补充任务](task-briefs/YJ-02-backend-readiness.md)：核查、dry-run、本地 mock 和缺口清单；任务书已准备，实现待执行。独立后端真实 API 仍 BLOCKED / NOT_RUN。 |
+| YJ-02 | 进行中，后端离线准备已完成 | 工具级样例已复核。已消费契约 0.1，dry-run 和 4 类本地 mock 通过。独立后端真实 API 为 BLOCKED / NOT_RUN。见[接入准备报告](reports/YJ-02-backend-readiness-report.md)。 |
 | YJ-03 | 已完成 | [0.1 契约](contracts/visual-contracts-v0.1.md)已实现，编译、正反例与原图摘要复核通过。[验证报告](reports/YJ-03-shared-contracts-report.md) |
 | YJ-04–YJ-13 | 待开始 | 映界业务实现及真实会话驱动图片联调尚未执行 |
 | YJ-M01 | 后续待开始 | 地图具体组织方式尚未确定 |

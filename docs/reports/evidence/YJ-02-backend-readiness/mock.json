@@ -1,0 +1,269 @@
+{
+  "mode": "local-mock",
+  "logicalRequests": 4,
+  "mockSends": 4,
+  "externalImageCalls": 0,
+  "verified": [
+    "four-actions",
+    "corrupt-reference-blocked",
+    "result-link",
+    "missing-metadata",
+    "explicit-failure",
+    "unknown-replay-one-send",
+    "redaction"
+  ],
+  "records": [
+    {
+      "name": "normal",
+      "stageId": "S0",
+      "mockSends": 1,
+      "nextAction": "terminal",
+      "attempt": {
+        "schemaVersion": "0.1",
+        "requestKey": "[\"[\\\"synthetic-fixture\\\",\\\"fixture-tavern-01\\\",\\\"S0\\\"]\",null,\"tavern\",\"V1\",[[\"掌柜\",\"蓝衣客\",\"赭衣客\"],[\"三张方桌\",\"右侧柜台\",\"左墙双窗\",\"木梁\"],\"日间\",\"灯笼未亮\",\"室内固定广角\",\"不显示玩家形象\"],\"generate\",null]",
+        "attemptId": "f1688684-4f2a-4a31-b93c-3434b40a6638",
+        "capability": {
+          "schemaVersion": "0.1",
+          "entry": "in-process-fixture",
+          "origin": "mock",
+          "verifiedAt": "2026-11-20T09:40:18.803Z",
+          "generate": "supported",
+          "referenceEdit": "supported",
+          "query": "unknown",
+          "cancel": "unknown",
+          "idempotency": "unknown"
+        },
+        "sentAt": "2026-11-20T09:40:18.803Z",
+        "observedAt": "2026-11-20T09:40:18.805Z",
+        "outcome": {
+          "state": "returned",
+          "assetId": "mock-f1688684-4f2a-4a31-b93c-3434b40a6638",
+          "sha256": "7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee"
+        },
+        "localWait": "active",
+        "providerRequestId": {
+          "value": "mock-job-1",
+          "source": "provider-response"
+        },
+        "model": null,
+        "seed": null,
+        "usage": null,
+        "cost": null
+      },
+      "asset": {
+        "schemaVersion": "0.1",
+        "assetId": "mock-f1688684-4f2a-4a31-b93c-3434b40a6638",
+        "target": {
+          "schemaVersion": "0.1",
+          "source": {
+            "schemaVersion": "0.1",
+            "kind": "synthetic-fixture",
+            "fixtureId": "fixture-tavern-01",
+            "eventId": "S0"
+          },
+          "sceneId": "tavern",
+          "visualVersion": "V1",
+          "people": [
+            "掌柜",
+            "蓝衣客",
+            "赭衣客"
+          ],
+          "features": [
+            "右侧柜台",
+            "左墙双窗",
+            "三张方桌",
+            "木梁"
+          ],
+          "lighting": "灯笼未亮",
+          "timeOfDay": "日间",
+          "viewpoint": "室内固定广角",
+          "perspective": "不显示玩家形象"
+        },
+        "requestKey": "[\"[\\\"synthetic-fixture\\\",\\\"fixture-tavern-01\\\",\\\"S0\\\"]\",null,\"tavern\",\"V1\",[[\"掌柜\",\"蓝衣客\",\"赭衣客\"],[\"三张方桌\",\"右侧柜台\",\"左墙双窗\",\"木梁\"],\"日间\",\"灯笼未亮\",\"室内固定广角\",\"不显示玩家形象\"],\"generate\",null]",
+        "attemptId": "f1688684-4f2a-4a31-b93c-3434b40a6638",
+        "reference": null,
+        "sha256": "7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee",
+        "width": 1672,
+        "height": 941,
+        "format": "png",
+        "invalidated": false,
+        "storageKey": "docs/reports/evidence/YJ-02/I0.png",
+        "review": {
+          "id": "pending-f1688684-4f2a-4a31-b93c-3434b40a6638",
+          "status": "pending",
+          "assessment": "indeterminate",
+          "reason": "引用原工具样图作模拟回执，未进行新图审阅",
+          "basis": "local-mock"
+        }
+      },
+      "link": "linked",
+      "provenance": {
+        "kind": "existing-codex-tool-png",
+        "assetId": "I0"
+      }
+    },
+    {
+      "name": "missing-remote-metadata",
+      "stageId": "S2",
+      "mockSends": 1,
+      "nextAction": "terminal",
+      "attempt": {
+        "schemaVersion": "0.1",
+        "requestKey": "[\"[\\\"synthetic-fixture\\\",\\\"fixture-tavern-01\\\",\\\"S2\\\"]\",null,\"tavern\",\"V2\",[[\"掌柜\",\"紫衣旅人\",\"绿衣旅人\",\"蓝衣客\",\"赭衣客\"],[\"三张方桌\",\"右侧柜台\",\"左墙双窗\",\"木梁\"],\"日间\",\"灯笼未亮\",\"室内固定广角\",\"不显示玩家形象\"],\"edit\",[\"I0\",\"7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee\",\"V1\",\"review-I0\",[\"掌柜\",\"蓝衣客\",\"赭衣客\"],[\"三张方桌\",\"右侧柜台\",\"左墙双窗\",\"木梁\"],\"增加两位旅人\"]]",
+        "attemptId": "b6b4d4f4-1aae-41ff-810a-198867c0e6ba",
+        "capability": {
+          "schemaVersion": "0.1",
+          "entry": "in-process-fixture",
+          "origin": "mock",
+          "verifiedAt": "2026-11-20T09:40:18.808Z",
+          "generate": "supported",
+          "referenceEdit": "supported",
+          "query": "unknown",
+          "cancel": "unknown",
+          "idempotency": "unknown"
+        },
+        "sentAt": "2026-11-20T09:40:18.808Z",
+        "observedAt": "2026-11-20T09:40:18.810Z",
+        "outcome": {
+          "state": "returned",
+          "assetId": "mock-b6b4d4f4-1aae-41ff-810a-198867c0e6ba",
+          "sha256": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb"
+        },
+        "localWait": "active",
+        "providerRequestId": null,
+        "model": null,
+        "seed": null,
+        "usage": null,
+        "cost": null
+      },
+      "asset": {
+        "schemaVersion": "0.1",
+        "assetId": "mock-b6b4d4f4-1aae-41ff-810a-198867c0e6ba",
+        "target": {
+          "schemaVersion": "0.1",
+          "source": {
+            "schemaVersion": "0.1",
+            "kind": "synthetic-fixture",
+            "fixtureId": "fixture-tavern-01",
+            "eventId": "S2"
+          },
+          "sceneId": "tavern",
+          "visualVersion": "V2",
+          "people": [
+            "掌柜",
+            "蓝衣客",
+            "赭衣客",
+            "绿衣旅人",
+            "紫衣旅人"
+          ],
+          "features": [
+            "右侧柜台",
+            "左墙双窗",
+            "三张方桌",
+            "木梁"
+          ],
+          "lighting": "灯笼未亮",
+          "timeOfDay": "日间",
+          "viewpoint": "室内固定广角",
+          "perspective": "不显示玩家形象"
+        },
+        "requestKey": "[\"[\\\"synthetic-fixture\\\",\\\"fixture-tavern-01\\\",\\\"S2\\\"]\",null,\"tavern\",\"V2\",[[\"掌柜\",\"紫衣旅人\",\"绿衣旅人\",\"蓝衣客\",\"赭衣客\"],[\"三张方桌\",\"右侧柜台\",\"左墙双窗\",\"木梁\"],\"日间\",\"灯笼未亮\",\"室内固定广角\",\"不显示玩家形象\"],\"edit\",[\"I0\",\"7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee\",\"V1\",\"review-I0\",[\"掌柜\",\"蓝衣客\",\"赭衣客\"],[\"三张方桌\",\"右侧柜台\",\"左墙双窗\",\"木梁\"],\"增加两位旅人\"]]",
+        "attemptId": "b6b4d4f4-1aae-41ff-810a-198867c0e6ba",
+        "reference": {
+          "assetId": "I0",
+          "sha256": "7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee",
+          "visualVersion": "V1",
+          "reviewId": "review-I0"
+        },
+        "sha256": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb",
+        "width": 1672,
+        "height": 941,
+        "format": "png",
+        "invalidated": false,
+        "storageKey": "docs/reports/evidence/YJ-02/I1.png",
+        "review": {
+          "id": "pending-b6b4d4f4-1aae-41ff-810a-198867c0e6ba",
+          "status": "pending",
+          "assessment": "indeterminate",
+          "reason": "引用原工具样图作模拟回执，未进行新图审阅",
+          "basis": "local-mock"
+        }
+      },
+      "link": "linked",
+      "provenance": {
+        "kind": "existing-codex-tool-png",
+        "assetId": "I1"
+      }
+    },
+    {
+      "name": "explicit-failure",
+      "stageId": "S2",
+      "mockSends": 1,
+      "nextAction": "scheduling-disabled",
+      "attempt": {
+        "schemaVersion": "0.1",
+        "requestKey": "[\"[\\\"synthetic-fixture\\\",\\\"fixture-tavern-01\\\",\\\"S2\\\"]\",null,\"tavern\",\"V2\",[[\"掌柜\",\"紫衣旅人\",\"绿衣旅人\",\"蓝衣客\",\"赭衣客\"],[\"三张方桌\",\"右侧柜台\",\"左墙双窗\",\"木梁\"],\"日间\",\"灯笼未亮\",\"室内固定广角\",\"不显示玩家形象\"],\"edit\",[\"I0\",\"7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee\",\"V1\",\"review-I0\",[\"掌柜\",\"蓝衣客\",\"赭衣客\"],[\"三张方桌\",\"右侧柜台\",\"左墙双窗\",\"木梁\"],\"增加两位旅人\"]]",
+        "attemptId": "3115f1c4-8c8d-4f04-99e7-0482ecbcd29b",
+        "capability": {
+          "schemaVersion": "0.1",
+          "entry": "in-process-fixture",
+          "origin": "mock",
+          "verifiedAt": "2026-11-20T09:40:18.812Z",
+          "generate": "supported",
+          "referenceEdit": "supported",
+          "query": "unknown",
+          "cancel": "unknown",
+          "idempotency": "unknown"
+        },
+        "sentAt": "2026-11-20T09:40:18.812Z",
+        "observedAt": "2026-11-20T09:40:18.812Z",
+        "outcome": {
+          "state": "failed",
+          "reason": "mock-explicit-failure"
+        },
+        "localWait": "active",
+        "providerRequestId": null,
+        "model": null,
+        "seed": null,
+        "usage": null,
+        "cost": null
+      },
+      "asset": null
+    },
+    {
+      "name": "unknown-after-send",
+      "stageId": "S3B",
+      "mockSends": 1,
+      "nextAction": "hold-unknown",
+      "attempt": {
+        "schemaVersion": "0.1",
+        "requestKey": "[\"[\\\"synthetic-fixture\\\",\\\"fixture-tavern-01\\\",\\\"S3B\\\"]\",null,\"tavern\",\"V3\",[[\"掌柜\",\"紫衣旅人\",\"绿衣旅人\",\"蓝衣客\",\"赭衣客\"],[\"三张方桌\",\"右侧柜台\",\"左墙双窗\",\"木梁\"],\"傍晚\",\"灯笼亮\",\"室内固定广角\",\"不显示玩家形象\"],\"edit\",[\"I1\",\"004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb\",\"V2\",\"review-I1\",[\"掌柜\",\"紫衣旅人\",\"绿衣旅人\",\"蓝衣客\",\"赭衣客\"],[\"三张方桌\",\"右侧柜台\",\"左墙双窗\",\"木梁\"],\"转为傍晚并点灯\"]]",
+        "attemptId": "a7726481-654a-4196-b5f6-f03ff4dec873",
+        "capability": {
+          "schemaVersion": "0.1",
+          "entry": "in-process-fixture",
+          "origin": "mock",
+          "verifiedAt": "2026-11-20T09:40:18.814Z",
+          "generate": "supported",
+          "referenceEdit": "supported",
+          "query": "unknown",
+          "cancel": "unknown",
+          "idempotency": "unknown"
+        },
+        "sentAt": "2026-11-20T09:40:18.814Z",
+        "observedAt": "2026-11-20T09:40:18.814Z",
+        "outcome": {
+          "state": "unknown",
+          "reason": "dispatch-result-unknown"
+        },
+        "localWait": "stopped",
+        "providerRequestId": null,
+        "model": null,
+        "seed": null,
+        "usage": null,
+        "cost": null
+      },
+      "asset": null
+    }
+  ]
+}

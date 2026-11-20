@@ -1,0 +1,489 @@
+{
+  "mode": "dry-run",
+  "source": "synthetic-fixture",
+  "backendStatus": "BLOCKED / NOT_RUN",
+  "gaps": [
+    "approved-backend-image-entry",
+    "backend-authentication",
+    "approved-live-call-scope"
+  ],
+  "logicalRequests": 3,
+  "mockSends": 0,
+  "externalImageCalls": 0,
+  "records": [
+    {
+      "plan": {
+        "schemaVersion": "0.1",
+        "target": {
+          "schemaVersion": "0.1",
+          "source": {
+            "schemaVersion": "0.1",
+            "kind": "synthetic-fixture",
+            "fixtureId": "fixture-tavern-01",
+            "eventId": "S0"
+          },
+          "sceneId": "tavern",
+          "visualVersion": "V1",
+          "people": [
+            "掌柜",
+            "蓝衣客",
+            "赭衣客"
+          ],
+          "features": [
+            "右侧柜台",
+            "左墙双窗",
+            "三张方桌",
+            "木梁"
+          ],
+          "lighting": "灯笼未亮",
+          "timeOfDay": "日间",
+          "viewpoint": "室内固定广角",
+          "perspective": "不显示玩家形象"
+        },
+        "reason": "初次进入，掌柜、蓝衣客、赭衣客共三人。",
+        "action": "generate"
+      },
+      "eligibility": null,
+      "logicalInput": {
+        "action": "generate",
+        "target": {
+          "schemaVersion": "0.1",
+          "source": {
+            "schemaVersion": "0.1",
+            "kind": "synthetic-fixture",
+            "fixtureId": "fixture-tavern-01",
+            "eventId": "S0"
+          },
+          "sceneId": "tavern",
+          "visualVersion": "V1",
+          "people": [
+            "掌柜",
+            "蓝衣客",
+            "赭衣客"
+          ],
+          "features": [
+            "右侧柜台",
+            "左墙双窗",
+            "三张方桌",
+            "木梁"
+          ],
+          "lighting": "灯笼未亮",
+          "timeOfDay": "日间",
+          "viewpoint": "室内固定广角",
+          "perspective": "不显示玩家形象"
+        },
+        "prompt": "Wide horizontal naturalistic cinematic still of a modest timber tavern in an ancient Chinese cultivation-world village. A single fixed wide-angle interior view, daylight. Carefully stage exactly two separate square lattice windows side by side on the left wall, a long wooden counter along the right wall, three clearly distinct free-standing square tables in the central hall with space between all three. Exposed dark crossbeams overhead. Leave a clear walking aisle near the rear doorway. Exactly three human beings, all fully legible: gray-haired innkeeper in a charcoal apron behind the right counter, one blue-robed guest seated by the nearer left table, and one ochre-robed guest seated at a different table. Distinct faces, no one obscures anyone else. Three unlit lanterns, ordinary lived-in room, no writing, no extra people, no reflections or figures outdoors. No panels, no labels, no player avatar."
+      },
+      "attempt": {
+        "schemaVersion": "0.1",
+        "requestKey": "[\"[\\\"synthetic-fixture\\\",\\\"fixture-tavern-01\\\",\\\"S0\\\"]\",null,\"tavern\",\"V1\",[[\"掌柜\",\"蓝衣客\",\"赭衣客\"],[\"三张方桌\",\"右侧柜台\",\"左墙双窗\",\"木梁\"],\"日间\",\"灯笼未亮\",\"室内固定广角\",\"不显示玩家形象\"],\"generate\",null]",
+        "attemptId": "b398a4a9-3e34-41b5-b0bb-bbaa67db4963",
+        "capability": {
+          "schemaVersion": "0.1",
+          "entry": "logical-preparation",
+          "origin": "offline",
+          "verifiedAt": null,
+          "generate": "unknown",
+          "referenceEdit": "unknown",
+          "query": "unknown",
+          "cancel": "unknown",
+          "idempotency": "unknown"
+        },
+        "sentAt": null,
+        "observedAt": "2026-11-20T09:40:18.488Z",
+        "outcome": {
+          "state": "not-sent",
+          "reason": "prepared-only"
+        },
+        "localWait": "active",
+        "providerRequestId": null,
+        "model": null,
+        "seed": null,
+        "usage": null,
+        "cost": null
+      }
+    },
+    {
+      "plan": {
+        "schemaVersion": "0.1",
+        "target": {
+          "schemaVersion": "0.1",
+          "source": {
+            "schemaVersion": "0.1",
+            "kind": "synthetic-fixture",
+            "fixtureId": "fixture-tavern-01",
+            "eventId": "S1"
+          },
+          "sceneId": "tavern",
+          "visualVersion": "V1",
+          "people": [
+            "掌柜",
+            "蓝衣客",
+            "赭衣客"
+          ],
+          "features": [
+            "右侧柜台",
+            "左墙双窗",
+            "三张方桌",
+            "木梁"
+          ],
+          "lighting": "灯笼未亮",
+          "timeOfDay": "日间",
+          "viewpoint": "室内固定广角",
+          "perspective": "不显示玩家形象"
+        },
+        "reason": "谈到远山，地点、光照和在场人均未改变。",
+        "action": "reuse",
+        "assetId": "I0"
+      },
+      "eligibility": "eligible",
+      "logicalInput": null,
+      "attempt": null
+    },
+    {
+      "plan": {
+        "schemaVersion": "0.1",
+        "target": {
+          "schemaVersion": "0.1",
+          "source": {
+            "schemaVersion": "0.1",
+            "kind": "synthetic-fixture",
+            "fixtureId": "fixture-tavern-01",
+            "eventId": "S2"
+          },
+          "sceneId": "tavern",
+          "visualVersion": "V2",
+          "people": [
+            "掌柜",
+            "蓝衣客",
+            "赭衣客",
+            "绿衣旅人",
+            "紫衣旅人"
+          ],
+          "features": [
+            "右侧柜台",
+            "左墙双窗",
+            "三张方桌",
+            "木梁"
+          ],
+          "lighting": "灯笼未亮",
+          "timeOfDay": "日间",
+          "viewpoint": "室内固定广角",
+          "perspective": "不显示玩家形象"
+        },
+        "reason": "两位获救旅人已进店，原三人仍在。",
+        "action": "edit",
+        "reference": {
+          "assetId": "I0",
+          "sha256": "7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee",
+          "visualVersion": "V1",
+          "reviewId": "review-I0"
+        },
+        "preservePeople": [
+          "掌柜",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "preserveFeatures": [
+          "右侧柜台",
+          "左墙双窗",
+          "三张方桌",
+          "木梁"
+        ],
+        "change": "增加两位旅人"
+      },
+      "eligibility": "eligible",
+      "logicalInput": {
+        "action": "edit",
+        "target": {
+          "schemaVersion": "0.1",
+          "source": {
+            "schemaVersion": "0.1",
+            "kind": "synthetic-fixture",
+            "fixtureId": "fixture-tavern-01",
+            "eventId": "S2"
+          },
+          "sceneId": "tavern",
+          "visualVersion": "V2",
+          "people": [
+            "掌柜",
+            "蓝衣客",
+            "赭衣客",
+            "绿衣旅人",
+            "紫衣旅人"
+          ],
+          "features": [
+            "右侧柜台",
+            "左墙双窗",
+            "三张方桌",
+            "木梁"
+          ],
+          "lighting": "灯笼未亮",
+          "timeOfDay": "日间",
+          "viewpoint": "室内固定广角",
+          "perspective": "不显示玩家形象"
+        },
+        "prompt": "Edit the provided tavern image. Keep the same camera, framing, daylight, wood beams, long counter on the right, both windows on the left, the same three square tables, lanterns and original three people exactly where they were, preserving their outfits. Add exactly two adult rescued travelers standing separately in the open aisle near the back entrance, both well inside the room and easy to count: a woman in moss-green travel clothes with a small cloth bundle and a man in plum travel clothes. Show both heads and torsos clearly and keep the innkeeper and two original guests visible. The resulting image has exactly five people. Change only the arrival of these two travelers. Same visual style and landscape image shape.",
+        "reference": {
+          "assetId": "I0",
+          "sha256": "7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee",
+          "visualVersion": "V1",
+          "reviewId": "review-I0",
+          "storageKey": "docs/reports/evidence/YJ-02/I0.png"
+        },
+        "change": "增加两位旅人",
+        "preservePeople": [
+          "掌柜",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "preserveFeatures": [
+          "右侧柜台",
+          "左墙双窗",
+          "三张方桌",
+          "木梁"
+        ]
+      },
+      "attempt": {
+        "schemaVersion": "0.1",
+        "requestKey": "[\"[\\\"synthetic-fixture\\\",\\\"fixture-tavern-01\\\",\\\"S2\\\"]\",null,\"tavern\",\"V2\",[[\"掌柜\",\"紫衣旅人\",\"绿衣旅人\",\"蓝衣客\",\"赭衣客\"],[\"三张方桌\",\"右侧柜台\",\"左墙双窗\",\"木梁\"],\"日间\",\"灯笼未亮\",\"室内固定广角\",\"不显示玩家形象\"],\"edit\",[\"I0\",\"7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee\",\"V1\",\"review-I0\",[\"掌柜\",\"蓝衣客\",\"赭衣客\"],[\"三张方桌\",\"右侧柜台\",\"左墙双窗\",\"木梁\"],\"增加两位旅人\"]]",
+        "attemptId": "ab105737-a0e8-49b2-b37c-18ede1af097e",
+        "capability": {
+          "schemaVersion": "0.1",
+          "entry": "logical-preparation",
+          "origin": "offline",
+          "verifiedAt": null,
+          "generate": "unknown",
+          "referenceEdit": "unknown",
+          "query": "unknown",
+          "cancel": "unknown",
+          "idempotency": "unknown"
+        },
+        "sentAt": null,
+        "observedAt": "2026-11-20T09:40:18.495Z",
+        "outcome": {
+          "state": "not-sent",
+          "reason": "prepared-only"
+        },
+        "localWait": "active",
+        "providerRequestId": null,
+        "model": null,
+        "seed": null,
+        "usage": null,
+        "cost": null
+      }
+    },
+    {
+      "plan": {
+        "schemaVersion": "0.1",
+        "target": {
+          "schemaVersion": "0.1",
+          "source": {
+            "schemaVersion": "0.1",
+            "kind": "synthetic-fixture",
+            "fixtureId": "fixture-tavern-01",
+            "eventId": "S3A"
+          },
+          "sceneId": "tavern",
+          "visualVersion": "V2",
+          "people": [
+            "掌柜",
+            "蓝衣客",
+            "赭衣客",
+            "绿衣旅人",
+            "紫衣旅人"
+          ],
+          "features": [
+            "右侧柜台",
+            "左墙双窗",
+            "三张方桌",
+            "木梁"
+          ],
+          "lighting": "灯笼未亮",
+          "timeOfDay": "日间",
+          "viewpoint": "室内固定广角",
+          "perspective": "不显示玩家形象"
+        },
+        "reason": "离开后回来，同一酒馆与五人都未变化。",
+        "action": "reuse",
+        "assetId": "I1"
+      },
+      "eligibility": "eligible",
+      "logicalInput": null,
+      "attempt": null
+    },
+    {
+      "plan": {
+        "schemaVersion": "0.1",
+        "target": {
+          "schemaVersion": "0.1",
+          "source": {
+            "schemaVersion": "0.1",
+            "kind": "synthetic-fixture",
+            "fixtureId": "fixture-tavern-01",
+            "eventId": "S3B"
+          },
+          "sceneId": "tavern",
+          "visualVersion": "V3",
+          "people": [
+            "掌柜",
+            "蓝衣客",
+            "赭衣客",
+            "绿衣旅人",
+            "紫衣旅人"
+          ],
+          "features": [
+            "右侧柜台",
+            "左墙双窗",
+            "三张方桌",
+            "木梁"
+          ],
+          "lighting": "灯笼亮",
+          "timeOfDay": "傍晚",
+          "viewpoint": "室内固定广角",
+          "perspective": "不显示玩家形象"
+        },
+        "reason": "天色转晚，灯亮，五人仍在。",
+        "action": "edit",
+        "reference": {
+          "assetId": "I1",
+          "sha256": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb",
+          "visualVersion": "V2",
+          "reviewId": "review-I1"
+        },
+        "preservePeople": [
+          "掌柜",
+          "蓝衣客",
+          "赭衣客",
+          "绿衣旅人",
+          "紫衣旅人"
+        ],
+        "preserveFeatures": [
+          "右侧柜台",
+          "左墙双窗",
+          "三张方桌",
+          "木梁"
+        ],
+        "change": "转为傍晚并点灯"
+      },
+      "eligibility": "eligible",
+      "logicalInput": {
+        "action": "edit",
+        "target": {
+          "schemaVersion": "0.1",
+          "source": {
+            "schemaVersion": "0.1",
+            "kind": "synthetic-fixture",
+            "fixtureId": "fixture-tavern-01",
+            "eventId": "S3B"
+          },
+          "sceneId": "tavern",
+          "visualVersion": "V3",
+          "people": [
+            "掌柜",
+            "蓝衣客",
+            "赭衣客",
+            "绿衣旅人",
+            "紫衣旅人"
+          ],
+          "features": [
+            "右侧柜台",
+            "左墙双窗",
+            "三张方桌",
+            "木梁"
+          ],
+          "lighting": "灯笼亮",
+          "timeOfDay": "傍晚",
+          "viewpoint": "室内固定广角",
+          "perspective": "不显示玩家形象"
+        },
+        "prompt": "Use the supplied five-person tavern image as the edit target. Change only the time of day and lighting: evening blue outside the two left windows, existing lanterns now visibly lit, warm light inside sufficient to see all five distinct people. Preserve the framing, beams, three tables, long counter and arrangement. Preserve the same five people at the exact positions and in the clothes shown, including the moss-green and plum travelers near the entrance. No other changes. Match the reference image shape and style.",
+        "reference": {
+          "assetId": "I1",
+          "sha256": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb",
+          "visualVersion": "V2",
+          "reviewId": "review-I1",
+          "storageKey": "docs/reports/evidence/YJ-02/I1.png"
+        },
+        "change": "转为傍晚并点灯",
+        "preservePeople": [
+          "掌柜",
+          "蓝衣客",
+          "赭衣客",
+          "绿衣旅人",
+          "紫衣旅人"
+        ],
+        "preserveFeatures": [
+          "右侧柜台",
+          "左墙双窗",
+          "三张方桌",
+          "木梁"
+        ]
+      },
+      "attempt": {
+        "schemaVersion": "0.1",
+        "requestKey": "[\"[\\\"synthetic-fixture\\\",\\\"fixture-tavern-01\\\",\\\"S3B\\\"]\",null,\"tavern\",\"V3\",[[\"掌柜\",\"紫衣旅人\",\"绿衣旅人\",\"蓝衣客\",\"赭衣客\"],[\"三张方桌\",\"右侧柜台\",\"左墙双窗\",\"木梁\"],\"傍晚\",\"灯笼亮\",\"室内固定广角\",\"不显示玩家形象\"],\"edit\",[\"I1\",\"004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb\",\"V2\",\"review-I1\",[\"掌柜\",\"紫衣旅人\",\"绿衣旅人\",\"蓝衣客\",\"赭衣客\"],[\"三张方桌\",\"右侧柜台\",\"左墙双窗\",\"木梁\"],\"转为傍晚并点灯\"]]",
+        "attemptId": "bc222389-61ae-4bf0-bfc9-d7884972ca3a",
+        "capability": {
+          "schemaVersion": "0.1",
+          "entry": "logical-preparation",
+          "origin": "offline",
+          "verifiedAt": null,
+          "generate": "unknown",
+          "referenceEdit": "unknown",
+          "query": "unknown",
+          "cancel": "unknown",
+          "idempotency": "unknown"
+        },
+        "sentAt": null,
+        "observedAt": "2026-11-20T09:40:18.499Z",
+        "outcome": {
+          "state": "not-sent",
+          "reason": "prepared-only"
+        },
+        "localWait": "active",
+        "providerRequestId": null,
+        "model": null,
+        "seed": null,
+        "usage": null,
+        "cost": null
+      }
+    },
+    {
+      "plan": {
+        "schemaVersion": "0.1",
+        "target": {
+          "schemaVersion": "0.1",
+          "source": {
+            "schemaVersion": "0.1",
+            "kind": "synthetic-fixture",
+            "fixtureId": "fixture-tavern-01",
+            "eventId": "skip-example"
+          },
+          "sceneId": "tavern",
+          "visualVersion": "V1",
+          "people": [
+            "掌柜",
+            "蓝衣客",
+            "赭衣客"
+          ],
+          "features": [
+            "右侧柜台",
+            "左墙双窗",
+            "三张方桌",
+            "木梁"
+          ],
+          "lighting": "灯笼未亮",
+          "timeOfDay": "日间",
+          "viewpoint": "室内固定广角",
+          "perspective": "不显示玩家形象"
+        },
+        "reason": "额外离线分支：玩家关闭图片",
+        "action": "skip"
+      },
+      "eligibility": null,
+      "logicalInput": null,
+      "attempt": null
+    }
+  ]
+}
