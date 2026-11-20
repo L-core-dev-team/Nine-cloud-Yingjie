@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-**最新接续：** YJ-08 已完成限定范围的 13 轮本地已保存正文联调。YJ-09 的[同地复访与持续变化任务书](docs/task-briefs/YJ-09-revisit-continuity.md)已就绪，接续分支为 `codex/yj-09-revisit-continuity`；**YJ-09 业务实现尚未执行**。真实文字/图片模型、生产部署和手机真机仍未验证。
+**最新接续**　YJ-09 已完成本地工程交付。原普通角色卡 25 轮同一行动，东/西村同名异地、改名复访、含糊离场后隐藏与完整调查恢复、双版本 PG 重放均有逐轮回执。65 段合成对照中新版正确采纳 39、错采 0、放弃 26。YJ-10 可接入关键事件、当前图片适用性和可知范围审计。[YJ-09 运行报告与命令](docs/reports/YJ-09-revisit-continuity-report.md)
 
 当前分支已接通普通角色卡页面的本地首段游玩。正文经有限规则提取后，可自动选择已审预设、复用、编辑、生成或跳过。真实供应商和通用自由文本理解仍待验证。[YJ-08 运行报告](docs/reports/YJ-08-first-play-integration-report.md) · [可交互演示与复跑](packages/first-play/README.md)
 
@@ -26,7 +26,7 @@
 
 ## 按顺序阅读
 
-接手时先读[当前交接](docs/handoff.md)、[YJ-08 运行与提取限制](docs/reports/YJ-08-first-play-integration-report.md)，然后按 [YJ-09 完整任务书](docs/task-briefs/YJ-09-revisit-continuity.md)在独立分支继续。YJ-01 至 YJ-08 的已完成部分不重复开工。[完整开工与接续任务书 YJ-START-01](docs/task-briefs/YJ-START-01-project-kickoff.md)保留项目全貌与历史启动安排，不能据其早期状态重复执行已完成任务。
+接手时先读[当前交接](docs/handoff.md)、[YJ-09 报告](docs/reports/YJ-09-revisit-continuity-report.md)和[任务看板](docs/task-sequence.md)。完整规划保存在 [YJ-START-01](docs/task-briefs/YJ-START-01-project-kickoff.md)。
 
 1. [需求与首版范围](docs/requirements.md)
 2. [启动决定与未决事项](docs/decisions.md)

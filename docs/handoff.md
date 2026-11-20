@@ -2,7 +2,11 @@
 
 更新：2026-11-20。
 
-## 最新接续点 · YJ-09 任务书准备完毕
+## 当前接续点 · YJ-10 可开始本地验证
+
+YJ-09 已完成本地工程交付。原普通角色卡 25 轮同一行动，东/西村同名异地、改名复访、含糊离场后隐藏与完整调查恢复、双版本 PG 重放均有逐轮回执。65 段合成对照中新版正确采纳 39、错采 0、放弃 26。YJ-10 可接入关键事件、当前图片适用性和可知范围审计。[实现与逐轮回执 ebfb5e06](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/commit/ebfb5e06193117feef0ea884bcd99c3ae50a4e5e)。接续分支 `codex/yj-09-revisit-continuity`。部署或供真实用户切换前，需独立语料、素材审阅和历史发送账本对账。真实模型与图片 API、生产和真机保留 NOT_RUN。[报告、命令、回退与证据](reports/YJ-09-revisit-continuity-report.md)
+
+## 开工时记录 · YJ-09 任务书准备完毕
 
 - YJ-08 固定成果分支 `codex/yj-08-first-play-integration` 的远端 HEAD 已只读核对为 `00c42157e4066565eb9d5d5a140b78188ebe0b81`。已读取[工程报告](reports/YJ-08-first-play-integration-report.md)、[逐回合回执](reports/evidence/YJ-08/run.json)、提取器源码及代表性测试；**本轮没有在用户 Windows 环境重跑测试**。
 - 原记录显示：13 轮九霄已保存合成正文、规则对照 24/24、额外散文 4/7 一致且 3/7 放弃判断、契约 10/10、综合检查 12/12；图片/文字真实模型调用均为 0。原标签由同一开发会话编写，不是独立盲评，更不能当作真实玩家语义正确率。
