@@ -1,0 +1,95 @@
+{
+  "date": "2026-11-20",
+  "branch": "codex/yj-05-06-integrated",
+  "implementation": "59cf875649c9b676f59c63280bbc54b602d6b5c3",
+  "baseline": "ccd50472c424607991e43667ba998129320105a6",
+  "upstream": "cd25360c7929e10f8b2b0fad342fedd943d4f323",
+  "contracts": "@yingjie/contracts@0.1.1",
+  "schemaVersion": "0.1",
+  "runtime": {
+    "node": "26.13.0",
+    "postgresql": "18.4",
+    "chrome": "157.0.8103.79"
+  },
+  "contractsTests": {
+    "passed": 10,
+    "failed": 0,
+    "skipped": 0
+  },
+  "originalsProbe": {
+    "files": 3,
+    "referenceEdits": 2,
+    "reuseStages": [
+      "S1",
+      "S3A"
+    ]
+  },
+  "pgAndBrowserTests": {
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0,
+    "durationMs": 21359.1628,
+    "sceneState": 3,
+    "imageTasks": 2,
+    "browserIntegration": 1
+  },
+  "worker": {
+    "crashExitByPosition": {
+      "queued": 60,
+      "possibleSend": 61,
+      "beforeFile": 62,
+      "afterFileBeforeDatabaseCommit": 63
+    },
+    "racingProcesses": 2,
+    "raceSends": 1,
+    "concurrentSubmits": 5,
+    "tasksFromConcurrentSubmits": 1
+  },
+  "browser": {
+    "viewportDesktop": [
+      1280,
+      800
+    ],
+    "viewportMobile": [
+      390,
+      844
+    ],
+    "mobilePageWidth": 390,
+    "mobileInputWidth": 340,
+    "mobileHistoryScrolled": true,
+    "mobileImageFit": "contain",
+    "decisions": {
+      "generate": 2,
+      "edit": 7,
+      "reuse": 6,
+      "skip": 1
+    },
+    "mockSends": 9,
+    "externalImageCalls": 0,
+    "display": [
+      "V1:I0",
+      "V1:I0",
+      "V2:I1",
+      "not-ready",
+      "V2:I1",
+      "V3:I2"
+    ],
+    "sourceSha256": [
+      "7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee",
+      "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb",
+      "9feccc88e3814af79055bd71b43ec5757f4b8b8b3460787ef349ed3de4031b3f"
+    ],
+    "screenshotSha256": {
+      "desktop.jpg": "349631614961a87204053689eedf214a502c245482092a202d3790e8f84934c5",
+      "mobile.jpg": "257ee217426ce3982e5366e4cd21e6a1c1670da1298b4f0f335103c8a8fc6ce3"
+    }
+  },
+  "notRun": [
+    "real-text-extraction",
+    "real-image-provider",
+    "physical-mobile-device",
+    "production-mount",
+    "production-build",
+    "provider-query-cancel-billing"
+  ]
+}

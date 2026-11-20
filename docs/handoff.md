@@ -2,7 +2,13 @@
 
 更新：2026-11-20。
 
-## 最新指示
+## YJ-05 + YJ-06 当前接续点 · 2026-11-20
+
+- 分支 `codex/yj-05-06-integrated`。从 YJ-04 完成提交 `ccd50472c424607991e43667ba998129320105a6` 接续，实际实现提交 [59cf8756](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/commit/59cf875649c9b676f59c63280bbc54b602d6b5c3)。两个原任务书分支保留。后续接手请读取整合分支最新 HEAD。
+- 05 的持久任务、审阅归属和跨进程恢复已完成本地验证；06 已挂载九霄独立副本的普通角色卡页面。联合浏览器用例以固定文字和三张旧图走通九步，含关闭、失败、刷新、会话切换及迟到。契约 10/10，PG 与浏览器 6/6。原图探针 3/3。[05 报告](reports/YJ-05-image-tasks-report.md) · [06 报告](reports/YJ-06-ui-report.md) · [复跑命令](../packages/image-tasks/README.md)
+- YJ-07 对接授权后的地点和视觉版本、获准世界书与可审阅预设资产。YJ-08 对接真实文字提取、画面决策和经批准的供应商、宿主及审阅入口。独立图片 API、费用、真实模型、真机、生产挂载均保留未验。
+
+## 启动时指示
 
 用户已要求开始，创建独立映界仓库并上传现有计划。草案0.1作为工作基线；暂定项和后置事项保持原状态。
 
@@ -44,7 +50,7 @@ YJ-02 成果分支 `codex/yj-02-image-capability` 已核对到 `13ac86a0c4a13078
 - YJ-02 后端准备使用独立分支 `codex/yj-02-backend-readiness`。本轮交接更新时，远端已推进到 `340c8bfb2cafe01be994b0d0ce77829b6274c7b7`；[补充报告](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/blob/340c8bfb2cafe01be994b0d0ce77829b6274c7b7/docs/reports/YJ-02-backend-readiness-report.md)记录离线请求准备与本地 mock 已完成，真实后端仍 BLOCKED / NOT_RUN。本轮只登记新提交并读取报告，未复核或复跑该批实验。
 - 02 补充实现仍消费 0.1.0；如需共用契约修补，可单独接入上述 0.1.1 补丁提交，随后复跑该分支的契约和准备检查。不要将整个 04 分支合入以覆盖 02 的交接记录。
 
-## YJ-04 已完成 · 当前接续点
+## YJ-04 已完成 · 当时接续点
 
 - 任务分支 `codex/yj-04-scene-state`，起点 `6cf460e`。实现提交 [a8b33d4](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/commit/a8b33d4cfb50dcbea0d1b411008a3360e1810421) 已核对远端。后续取本分支最新 HEAD。
 - 在完整副本复跑契约 10/10；状态验证 3/3。已通过真实本地 HTTP 和 PostgreSQL 读取普通角色卡已完成历史，并独立验证合成酒馆五人复访、事务中断、竞争、分页和进程重启。[报告与未验证项](reports/YJ-04-scene-state-report.md)

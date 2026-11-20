@@ -95,6 +95,10 @@
 - 手机和电脑端实际游玩：NOT_RUN。
 - 公开发布与生产部署：NOT_RUN。
 
+## YJ-05 + YJ-06 本地联合运行 · 2026-11-20
+
+固定实现 [59cf8756](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/commit/59cf875649c9b676f59c63280bbc54b602d6b5c3)。本次重新编译 0.1.1，共用契约 10/10，通过三张原图和参考链探针。PostgreSQL、原普通角色卡宿主及 Chrome 本次共 6/6 通过，其中 3 组为 YJ-04 回归，2 组为任务恢复和安全边界，1 组为实际页面联合流程。截图为桌面及移动视口。分层证据与覆盖缺口见 [05 报告](reports/YJ-05-image-tasks-report.md)、[06 报告](reports/YJ-06-ui-report.md)、[结构化回执](reports/evidence/YJ-05-06/run.json)。真实供应商和真机 NOT_RUN。
+
 ## 后续记录格式
 
 每条记录应包括日期、仓库与提交、检查对象、执行方式、实际结果、证据位置及未覆盖部分。不能把历史记录、静态检查和当次真实运行混写为同一项PASS。

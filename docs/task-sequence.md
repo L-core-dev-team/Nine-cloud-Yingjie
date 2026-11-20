@@ -40,11 +40,15 @@ YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。YJ
 | YJ-02 | 进行中；后端接入子项阻塞 | 工具级样例已复核；独立准备分支已提交 `340c8bf`，报告记录 dry-run 与本地 mock 完成，本轮未复核该批补充实验。应用直连供应商仍 BLOCKED / NOT_RUN。[图片报告](reports/YJ-02-image-capability-report.md) · [原样例复核](reports/YJ-02-evidence-review.md) |
 | YJ-03 | 已完成交付；定向修补已提交 | 原报告记录 8 组通过；两处边界缺口已修补至包 0.1.1，编译、新增 2 组与原来源映射 1 组通过。YJ-04 已在完整副本补跑全部 10 组与原图核对。[原报告](reports/YJ-03-shared-contracts-report.md) · [复核记录](reports/YJ-03-evidence-review.md) |
 | YJ-04 | 已完成 | 角色卡已保存历史与独立合成酒馆分别验证，事务中断、并发重放、分页和跨进程恢复通过。[运行报告](reports/YJ-04-scene-state-report.md) |
-| YJ-05–YJ-13 | 待开始 | 图片任务、前端和真实会话驱动图片联调等业务实现尚未执行 |
+| YJ-05 | 通用部分已完成；真实供应商阻塞 | PostgreSQL、参考编辑、原件核验、并发与跨进程恢复通过。[05 报告](reports/YJ-05-image-tasks-report.md) |
+| YJ-06 | 本地实现已完成；待生产集成 | 九霄原角色卡页面、模拟图片后台、桌面及窄屏浏览器联调通过。[06 报告](reports/YJ-06-ui-report.md) |
+| YJ-07–YJ-13 | 待开始 | 07 接入获准世界书与预设图；08 接入实际正文提取、供应商和宿主 |
 | YJ-M01 | 后续待开始 | 地图具体组织方式尚未确定 |
 
 ## 依赖说明
 
 YJ-07只要求最小已有资料匹配能够返回结果或明确无匹配，不要求完成新美术资源生产。YJ-08的失败、关闭、迟到结果与归属检查属于第一次整合的一部分，不能全部推迟到YJ-12。
 
-新助手先读[当前交接](handoff.md)和[YJ-03 复核修补](reports/YJ-03-evidence-review.md)，从 `codex/yj-04-scene-state` 消费[已实现的状态模块](../packages/scene-state/README.md)。原 YJ-03 成果保留在 `codex/yj-03-shared-contracts`，YJ-05 至 YJ-07 消费契约时应纳入 0.1.1 修补。项目全貌见[完整开工任务书 YJ-START-01](task-briefs/YJ-START-01-project-kickoff.md)，当前证据见[YJ-02 复核](reports/YJ-02-evidence-review.md)。YJ-03 可使用来源、参考和复用样例，但不把二者拼成真实会话到图片的联调证据。YJ-START-01 为文档编号，不增加开发任务阶段。
+05、06 的共同接续分支为 `codex/yj-05-06-integrated`，实现提交 `59cf875649c9b676f59c63280bbc54b602d6b5c3`。
+
+YJ-04 开工时的指引：先读[当前交接](handoff.md)和[YJ-03 复核修补](reports/YJ-03-evidence-review.md)，从 `codex/yj-04-scene-state` 消费[已实现的状态模块](../packages/scene-state/README.md)。原 YJ-03 成果保留在 `codex/yj-03-shared-contracts`，YJ-05 至 YJ-07 消费契约时应纳入 0.1.1 修补。项目全貌见[完整开工任务书 YJ-START-01](task-briefs/YJ-START-01-project-kickoff.md)，当前证据见[YJ-02 复核](reports/YJ-02-evidence-review.md)。YJ-03 可使用来源、参考和复用样例，但不把二者拼成真实会话到图片的联调证据。YJ-START-01 为文档编号，不增加开发任务阶段。
