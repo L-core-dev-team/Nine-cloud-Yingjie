@@ -2,6 +2,12 @@
 
 更新：2026-11-20。
 
+## YJ-09 提交证据复核与 YJ-10 任务书准备（本轮）
+
+只读核对 `codex/yj-09-revisit-continuity@cabd3f1b7229f10c4470c5b847a187143b291026`，读取[报告](reports/YJ-09-revisit-continuity-report.md)、[65 段对照](reports/evidence/YJ-09/corpus.json)、[25 轮回执](reports/evidence/YJ-09/journey.json)、[完整回归记录](reports/evidence/YJ-09/regression.json)及核心源码。原执行者的结果为契约 10/10、最终回归连续两次 14/14；同批合成语料 /2 为 39 正确采纳、0 错误采纳、26 放弃判断。原回归一次并行等待超时具体根因未证实。本轮未重新运行这些测试或模型调用。
+
+已创建 [YJ-10 完整任务书](task-briefs/YJ-10-trigger-consistency.md)，只记录准备完成，**YJ-10 实际代码、PG/HTTP/Chrome 新测试均 NOT_RUN**。没有真实图片 API、文字模型、正式语料独立人工审核、生产部署、真机的本轮新验证。
+
 ## YJ-09 本机运行
 
 契约 10/10，三张原图及两级参考链通过，综合回归 14/14。原角色卡已保存的 25 段合成正文经两版独立重建，注入失败后从修订 8 并发续读，重放无图片任务。YJ-08 脚本一次并发等待超时的记录和后续复查一并保留。[运行报告](reports/YJ-09-revisit-continuity-report.md) · [逐轮回执](reports/evidence/YJ-09/journey.json)
