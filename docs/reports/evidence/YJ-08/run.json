@@ -1,0 +1,497 @@
+{
+  "input": "local synthetic narrative saved by ordinary CardSession; every action = 继续观察",
+  "method": "zh-visible-clause/1",
+  "browser": "157.0.8103.79",
+  "realTextModelCalls": 0,
+  "realImageApiCalls": 0,
+  "mockSends": [
+    {
+      "mode": "none",
+      "action": "generate",
+      "version": "V2",
+      "ref": null
+    },
+    {
+      "mode": "fail",
+      "action": "edit",
+      "version": "V3",
+      "ref": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb"
+    },
+    {
+      "mode": "none",
+      "action": "edit",
+      "version": "V3",
+      "ref": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb"
+    },
+    {
+      "mode": "late",
+      "action": "edit",
+      "version": "V5",
+      "ref": "9feccc88e3814af79055bd71b43ec5757f4b8b8b3460787ef349ed3de4031b3f"
+    },
+    {
+      "mode": "none",
+      "action": "generate",
+      "version": "V1",
+      "ref": null
+    },
+    {
+      "mode": "unknown",
+      "action": "edit",
+      "version": "V2",
+      "ref": "7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee"
+    }
+  ],
+  "primarySession": [
+    {
+      "revision": 1,
+      "narrative": "你走进东村的青石酒馆。你从正门望去，固定的柜台和双窗清晰可见。堂内只有掌柜、蓝衣客和赭衣客。此时是白日，日光照入堂内。",
+      "sha256": "b4bf16de90bc5d69bf5a154481fc98e37c766ac047e12bd2160929f004ffd0f4",
+      "evidence": [
+        {
+          "rule": "enter",
+          "start": 0,
+          "length": 10
+        },
+        {
+          "rule": "view",
+          "start": 11,
+          "length": 19
+        },
+        {
+          "rule": "roster",
+          "start": 31,
+          "length": 14
+        },
+        {
+          "rule": "daylight",
+          "start": 46,
+          "length": 12
+        }
+      ],
+      "rulesOutput": [
+        "create",
+        "set",
+        "set",
+        "set",
+        "set",
+        "set",
+        "set"
+      ],
+      "people": [
+        "掌柜",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "version": "V1",
+      "choices": [
+        {
+          "action": "preset",
+          "reason": "reviewed-preset",
+          "presetReason": null,
+          "hold": null,
+          "enabled": true
+        },
+        {
+          "action": "skip",
+          "reason": "invalid-original",
+          "presetReason": "invalid-original",
+          "hold": null,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "revision": 2,
+      "narrative": "你与掌柜闲谈茶价。",
+      "sha256": "82568355353de80f096d408f2a5e7a7d9f512022888b4f72990dc6a02f64131a",
+      "evidence": [
+        {
+          "rule": "conversation",
+          "start": 0,
+          "length": 8
+        }
+      ],
+      "rulesOutput": [],
+      "people": [
+        "掌柜",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "version": "V1",
+      "choices": [
+        {
+          "action": "preset",
+          "reason": "reviewed-preset",
+          "presetReason": null,
+          "hold": null,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "revision": 3,
+      "narrative": "绿衣客和紫衣客从后门走了进来。",
+      "sha256": "46a01bbbcfbf50ddef321db6535f19810782ff425948ebd73a543132b3c1c8c0",
+      "evidence": [
+        {
+          "rule": "arrival",
+          "start": 0,
+          "length": 14
+        }
+      ],
+      "rulesOutput": [
+        "add"
+      ],
+      "people": [
+        "掌柜",
+        "紫衣客",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "version": "V2",
+      "choices": [
+        {
+          "action": "generate",
+          "reason": "no-eligible-reference",
+          "presetReason": "visual-mismatch",
+          "hold": null,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "revision": 4,
+      "narrative": "你继续听掌柜讲茶经。",
+      "sha256": "0446a21032c89991011e2daec21b169ab99bbe346437116973086090169215fc",
+      "evidence": [
+        {
+          "rule": "conversation",
+          "start": 0,
+          "length": 9
+        }
+      ],
+      "rulesOutput": [],
+      "people": [
+        "掌柜",
+        "紫衣客",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "version": "V2",
+      "choices": [
+        {
+          "action": "reuse",
+          "reason": "same-reviewed-visual",
+          "presetReason": "visual-mismatch",
+          "hold": null,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "revision": 5,
+      "narrative": "你走出了酒馆。",
+      "sha256": "09da6c145d51375074f2790ab8a6558c894ce7b26a896dd4007239e558b310a1",
+      "evidence": [
+        {
+          "rule": "leave",
+          "start": 0,
+          "length": 6
+        }
+      ],
+      "rulesOutput": [
+        "leave"
+      ],
+      "people": null,
+      "version": null,
+      "choices": [
+        {
+          "action": "skip",
+          "reason": "not-ready",
+          "presetReason": null,
+          "hold": null,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "revision": 6,
+      "narrative": "你回到东村的青石酒馆，眼前景物与离开时一样。",
+      "sha256": "91088ac91a90ca7c76bc378ff78606a8015503a383d080f3a8b3842731d7cda9",
+      "evidence": [
+        {
+          "rule": "return",
+          "start": 0,
+          "length": 21
+        }
+      ],
+      "rulesOutput": [
+        "visit"
+      ],
+      "people": [
+        "掌柜",
+        "紫衣客",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "version": "V2",
+      "choices": [
+        {
+          "action": "reuse",
+          "reason": "same-reviewed-visual",
+          "presetReason": "visual-mismatch",
+          "hold": null,
+          "enabled": true
+        },
+        {
+          "action": "skip",
+          "reason": "disabled",
+          "presetReason": null,
+          "hold": null,
+          "enabled": false
+        }
+      ]
+    },
+    {
+      "revision": 7,
+      "narrative": "你端起茶盏。",
+      "sha256": "4b23add99703a09c6de60d9d431df67fcbcac8efb486b073914237dc3242bd1f",
+      "evidence": [
+        {
+          "rule": "conversation",
+          "start": 0,
+          "length": 5
+        }
+      ],
+      "rulesOutput": [],
+      "people": [
+        "掌柜",
+        "紫衣客",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "version": "V2",
+      "choices": [
+        {
+          "action": "skip",
+          "reason": "disabled",
+          "presetReason": null,
+          "hold": null,
+          "enabled": false
+        },
+        {
+          "action": "reuse",
+          "reason": "same-reviewed-visual",
+          "presetReason": "visual-mismatch",
+          "hold": null,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "revision": 8,
+      "narrative": "已是傍晚。三盏灯笼亮了起来。",
+      "sha256": "f6b7893cc3faf127a80ec03797c30c07a6cc88621a049f2dcc7156e1103a9993",
+      "evidence": [
+        {
+          "rule": "dusk",
+          "start": 0,
+          "length": 4
+        },
+        {
+          "rule": "lamps",
+          "start": 5,
+          "length": 8
+        }
+      ],
+      "rulesOutput": [
+        "set",
+        "set"
+      ],
+      "people": [
+        "掌柜",
+        "紫衣客",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "version": "V3",
+      "choices": [
+        {
+          "action": "edit",
+          "reason": "visible-facts-changed",
+          "presetReason": "visual-mismatch",
+          "hold": null,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "revision": 9,
+      "narrative": "掌柜说：“绿衣客离开了大堂。”",
+      "sha256": "26d917ea1822751b23caac17fbad9b5ee41ccf9dc48b4fc822d041bb7e4e88db",
+      "evidence": [
+        {
+          "rule": "quoted-speech",
+          "start": 0,
+          "length": 15
+        }
+      ],
+      "rulesOutput": [],
+      "people": [
+        "掌柜",
+        "紫衣客",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "version": "V3",
+      "choices": [
+        {
+          "action": "edit",
+          "reason": "visible-facts-changed",
+          "presetReason": "visual-mismatch",
+          "hold": null,
+          "enabled": true
+        },
+        {
+          "action": "skip",
+          "reason": "no-grant",
+          "presetReason": "no-grant",
+          "hold": null,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "revision": 10,
+      "narrative": "你与掌柜闲谈茶价。",
+      "sha256": "82568355353de80f096d408f2a5e7a7d9f512022888b4f72990dc6a02f64131a",
+      "evidence": [
+        {
+          "rule": "conversation",
+          "start": 0,
+          "length": 8
+        }
+      ],
+      "rulesOutput": [],
+      "people": [
+        "掌柜",
+        "紫衣客",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "version": "V3",
+      "choices": [
+        {
+          "action": "skip",
+          "reason": "no-grant",
+          "presetReason": "no-grant",
+          "hold": null,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "revision": 11,
+      "narrative": "紫衣客离开了大堂。",
+      "sha256": "81237fb4ce8b0732cde69956caf8615a7891febaca49946874cc89fa934a4d08",
+      "evidence": [
+        {
+          "rule": "departure",
+          "start": 0,
+          "length": 8
+        }
+      ],
+      "rulesOutput": [
+        "remove"
+      ],
+      "people": [
+        "掌柜",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "version": "V4",
+      "choices": [
+        {
+          "action": "skip",
+          "reason": "outside-local-provider",
+          "presetReason": "visual-mismatch",
+          "hold": null,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "revision": 12,
+      "narrative": "紫衣客走进大堂。",
+      "sha256": "e23dc4f48c0fd211bbf7c15f0c372611176cea7c3c6dff9614a55a65d1d1dfb3",
+      "evidence": [
+        {
+          "rule": "arrival",
+          "start": 0,
+          "length": 7
+        }
+      ],
+      "rulesOutput": [
+        "add"
+      ],
+      "people": [
+        "掌柜",
+        "紫衣客",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "version": "V5",
+      "choices": [
+        {
+          "action": "edit",
+          "reason": "visible-facts-changed",
+          "presetReason": "visual-mismatch",
+          "hold": null,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "revision": 13,
+      "narrative": "你端起茶盏。",
+      "sha256": "4b23add99703a09c6de60d9d431df67fcbcac8efb486b073914237dc3242bd1f",
+      "evidence": [
+        {
+          "rule": "conversation",
+          "start": 0,
+          "length": 5
+        }
+      ],
+      "rulesOutput": [],
+      "people": [
+        "掌柜",
+        "紫衣客",
+        "绿衣客",
+        "蓝衣客",
+        "赭衣客"
+      ],
+      "version": "V5",
+      "choices": [
+        {
+          "action": "skip",
+          "reason": "prior-attempt",
+          "presetReason": "visual-mismatch",
+          "hold": "waiting",
+          "enabled": true
+        }
+      ]
+    }
+  ],
+  "additionalSavedAbstention": "堂里的人纷纷起身告辞。门一合，只剩掌柜独自守店。",
+  "screenshotSha256": "13331b10be7d97246b1088c41c0faa4a15bf2fe8e285bfce323995f26141ed63"
+}

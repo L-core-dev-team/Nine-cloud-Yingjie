@@ -55,7 +55,8 @@ export async function consume(pool, input, extract) {
       return reason;
     }
     const narrative = input.rawNarrative.trim();
-    const observations = await extract({ source, narrative, action: input.action.trim() });
+    const extracted = await extract({ source, narrative, action: input.action.trim(), state:stream.state });
+    const observations = Array.isArray(extracted) ? extracted : extracted?.observations;
     const before = new Map(stream.state.places.map(p => [p.scene.sceneId, p.version]));
     const result = project(stream.state, source, observations);
     const accepted = observations.filter(note => note.basis === "current-story" && note.playerKnown === true);
@@ -64,6 +65,9 @@ export async function consume(pool, input, extract) {
     await db.query(`INSERT INTO yingjie_scene.event(scope,revision,event_key,input_hash,raw_text_hash,normalized_text_hash,source,observations,versions,result)
       VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)`, [...identity, hash(input.rawNarrative), hash(narrative), source,
         JSON.stringify(accepted), JSON.stringify(versions), result]);
+    if (extracted?.audit) {
+      await extract.record(db,{scope,revision,audit:extracted.audit});
+    }
     await db.query("UPDATE yingjie_scene.stream SET revision=$2,state=$3 WHERE scope=$1", [scope, revision, stream.state]);
     await db.query("COMMIT");
     return "applied";

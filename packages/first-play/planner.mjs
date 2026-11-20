@@ -1,0 +1,56 @@
+import {displayEligibility,referenceEligibility,sameVisual,schemaVersion} from "../contracts/dist/index.js";
+import {pictureIndex} from "../image-tasks/demo.mjs";
+
+const fallbackReasons=new Set(["no-worldbook","no-preset","different-place","visual-mismatch"]);
+export async function chooseFrame(tasks,world,ctx,enabled) {
+  if(!ctx.authorized)throw Error("account-inaccessible");
+  if(!enabled)return {action:"skip",reason:"disabled"};
+  if(ctx.result.status!=="ready")return {action:"skip",reason:"not-ready"};
+  const preset=await world.resolve(ctx);
+  if(preset.status==="matched")return {action:"preset",reason:"reviewed-preset",preset};
+  const miss=preset.reason;
+  if(!fallbackReasons.has(miss))return {action:"skip",reason:miss,miss};
+  // A request already recorded for this event owns its retry/unknown state.
+  const existing=await tasks.taskFor(ctx);
+  if(existing)return {action:existing.plan.action,reason:existing.plan.reason,miss,plan:existing.plan};
+  const target=ctx.result.visual;
+  const rows=(await tasks.pool.query(`SELECT a.id FROM yingjie_image.asset a JOIN yingjie_image.attempt t ON a.id=t.id
+    WHERE a.scope=$1 AND a.record->'target'->>'sceneId'=$2 AND a.record->'review'->>'status'='accepted'
+      AND (a.record->'target'->'source'->>'revision')::int <= $3 AND t.record->>'localWait'='active' ORDER BY (a.record->'target'->'source'->>'revision')::int DESC,a.id`,
+    [ctx.scope,target.sceneId,ctx.revision])).rows;
+  let edit;
+  for(const {id} of rows){
+    const file=await tasks.asset(tasks.pool,ctx.scope,id);
+    if(!file?.bytes)continue;
+    const a=file.asset,access={source:target.source,authorized:true,observedSha256:a.sha256};
+    if(displayEligibility(a,target,access,true)==="eligible"){
+      const plan={schemaVersion,target,action:"reuse",reason:"same-reviewed-visual",assetId:id};
+      return {action:plan.action,reason:plan.reason,miss,plan};
+    }
+    if(!edit && tasks.capability.referenceEdit==="supported"){
+      const plan={schemaVersion,target,action:"edit",reason:"visible-facts-changed",
+        reference:{assetId:id,sha256:a.sha256,reviewId:a.review.id,visualVersion:a.target.visualVersion},
+        preservePeople:target.people.filter(p=>a.target.people.includes(p)),
+        preserveFeatures:target.features.filter(f=>a.target.features.includes(f)),change:"按已保存正文的当前视觉快照更新"};
+      if(referenceEligibility(a,plan,access)==="eligible")edit=plan;
+    }
+  }
+  // A new text event can still describe exactly the same picture. Never duplicate an
+  // unconfirmed send just because the event key changed. YJ-05 still owns the attempt.
+  await tasks.recover();
+  const unsettled=(await tasks.pool.query(`SELECT t.plan->'target' AS target,
+      a.record->'outcome'->>'state' AS outcome,asset.record->'review'->>'status' AS review
+    FROM yingjie_image.task t JOIN LATERAL
+      (SELECT record,id FROM yingjie_image.attempt WHERE task=t.id ORDER BY ordinal DESC LIMIT 1) a ON true
+    LEFT JOIN yingjie_image.asset asset ON asset.id=a.id
+    WHERE t.scope=$1 AND t.plan->'target'->>'sceneId'=$2 AND t.plan->'target'->>'visualVersion'=$3
+      AND (a.record->'outcome'->>'state' IN ('waiting','unknown') OR asset.record->'review'->>'status'='pending')
+    ORDER BY (t.plan->'target'->'source'->>'revision')::int DESC`,[ctx.scope,target.sceneId,target.visualVersion])).rows;
+  const pending=unsettled.find(row=>sameVisual(row.target,target));
+  if(pending)return {action:"skip",reason:"prior-attempt",hold:pending.review==="pending"?"review-pending":pending.outcome,miss};
+  if(tasks.capability.origin!=="mock" || pictureIndex(target)<0)return {action:"skip",reason:"outside-local-provider",miss};
+  if(edit)return {action:edit.action,reason:edit.reason,miss,plan:edit};
+  if(tasks.capability.generate!=="supported")return {action:"skip",reason:"generation-unavailable",miss};
+  const plan={schemaVersion,target,action:"generate",reason:"no-eligible-reference"};
+  return {action:plan.action,reason:plan.reason,miss,plan};
+}

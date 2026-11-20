@@ -2,7 +2,8 @@ import { requireApi,withDatabase } from "../scene-state/test/local-db.mjs";
 import { withHost } from "./test/host.mjs";
 import { createPlayers } from "./test/player.mjs";
 import { prepareTavern } from "../world-assets/test/tavern.mjs";
-import { script } from "../image-tasks/demo.mjs";
+import {walkthroughModel} from "../first-play/story.mjs";
+import {catalog} from "../world-assets/index.mjs";
 
 // Local interactive demo on the same mounted host and disposable database as the browser test.
 await withDatabase(pool=>withHost(pool,async({origin,codes})=>{
@@ -10,16 +11,11 @@ await withDatabase(pool=>withHost(pool,async({origin,codes})=>{
   try {
     const context=await browser.newContext();
     const {cardId}=await createPlayers(context,origin,codes);
-    const {id,owner}=await prepareTavern(context,origin,pool,cardId);
+    const {id}=await prepareTavern(context,origin,pool,cardId);
     const page=await context.newPage();
     const closed=page.waitForEvent("close",{timeout:0});
-    await page.addInitScript(({owner,id})=>{
-      const key="yj-demo-view:"+owner+":"+id;
-      if(!sessionStorage.getItem(key))sessionStorage.setItem(key,JSON.stringify({id:crypto.randomUUID(),serial:0,enabled:true,preset:true}));
-    },{owner,id});
     await page.goto(origin+"/cards/session/"+id);
-    console.log("在角色卡页面选择「进入映界」。依次输入下列行动，关掉该标签页结束演示。");
-    console.log(script.slice(0,6).map(row=>row[0]).join(" → "));
+    console.log("进入映界后提交任意文字。演示文字服务按回合给出固定正文，画面由已保存正文自动选择。关闭标签页结束。");
     await closed;
   } finally {await browser.close();}
-}));
+},{assets:catalog.slice(0,1)},{model:walkthroughModel}));
