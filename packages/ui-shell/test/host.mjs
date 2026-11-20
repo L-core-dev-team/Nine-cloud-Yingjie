@@ -8,10 +8,11 @@ import { yingjiePlugin } from "../mount.mjs";
 import { Originals } from "../../image-tasks/files.mjs";
 import { ImageTasks } from "../../image-tasks/index.mjs";
 import { TavernProvider,script } from "../../image-tasks/demo.mjs";
+import { WorldAssets } from "../../world-assets/index.mjs";
 import { mountDemoRoutes } from "../../image-tasks/routes.mjs";
 
 const load=path=>import(pathToFileURL(join(upstream,"apps/api/dist",path)));
-export async function withHost(pool,run) {
+export async function withHost(pool,run,storage) {
   const dir=await mkdtemp(join(tmpdir(),"yingjie-host-"));
   const runtime=cardRuntime();
   let server;
@@ -37,7 +38,10 @@ export async function withHost(pool,run) {
     app=createApp(undefined,undefined,{service:auth,origin},undefined,cards);
     await pool.query(await readFile(new URL("../../image-tasks/schema.sql",import.meta.url),"utf8"));
     const tasks=new ImageTasks(pool,new Originals(join(dir,"originals")),new TavernProvider());
-    mountDemoRoutes(app,tasks,origin);
+    await pool.query(await readFile(new URL("../../world-assets/schema.sql",import.meta.url),"utf8"));
+    const {selectWorldbookEntries}=await load("card-import/worldbook.js");
+    const world=new WorldAssets(runtime.pool,pool,selectWorldbookEntries,storage);
+    mountDemoRoutes(app,tasks,origin,world);
     app.get("/compliance/beian-police.png",async c=>{
       c.header("Content-Type","image/png");return c.body(await readFile(join(root,"public/compliance/beian-police.png")));
     });
@@ -49,7 +53,7 @@ export async function withHost(pool,run) {
       c.header("Content-Type",file.endsWith(".css")?"text/css":"text/javascript");
       return c.body(await readFile(join(output,"assets",file)));
     });
-    await run({origin,codes,tasks});
+    await run({origin,codes,tasks,world});
   } finally {
     if(server){server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}
     await runtime.pool.end();

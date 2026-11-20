@@ -22,5 +22,5 @@ export async function createPlayers(context,origin,codes) {
     const card=await post(context.request,prefix+"/cards",{importId:preview.id,source:"local-test",notes:"YJ-05/06",links:[]});
     const first=randomUUID(),second=randomUUID();
     for(const id of [first,second])await post(context.request,prefix+"/sessions",{id,cardId:card.id});
-    return {first,second,login};
+    return {first,second,login,cardId:card.id};
 }

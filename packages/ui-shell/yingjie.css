@@ -14,11 +14,19 @@
 .yj-track::after { content:""; background:white; border-radius:50%; width:14px; height:14px; }
 .yj-toggle[aria-checked=true] .yj-track { background:#a7be93; justify-content:flex-end; }
 .yj-toggle[aria-checked=true] .yj-track::after { background:#203b30; }
+.yj-source {display:flex;align-items:center;gap:8px;margin-bottom:8px;font-size:13px;white-space:nowrap;}
+.yj-source select {width:auto;flex:1;min-width:0;max-width:100%;font:inherit;}
 .yj-figure { margin:0; }
 .yj-figure img,.yj-empty { box-sizing:border-box; display:block; width:100%; aspect-ratio:1672/941;
   border-radius:5px; background:#101a17; object-fit:contain; }
 .yj-empty { display:grid; place-items:center; text-align:center; padding:12px; color:#d8dccf; }
 .yj-figure figcaption { padding-top:10px; }
+@media(min-width:721px) {
+  .yj-panel {align-self:stretch;display:flex;flex-direction:column;min-height:0;overflow:auto;}
+  .yj-panel-head,.yj-source {flex:none;}
+  .yj-figure {flex:1;min-height:100px;display:grid;grid-template-rows:minmax(0,1fr) auto;}
+  .yj-figure img,.yj-empty {height:100%;min-height:0;}
+}
 @media(max-width:720px) {
   .game-frame .game-workspace.card-session:has(.yj-panel) { grid-template-columns:minmax(0,1fr); grid-template-rows:auto minmax(140px,1fr); gap:6px; overflow:auto; }
   .yj-panel {padding:9px 12px;} .yj-panel-head {margin-bottom:6px;}
