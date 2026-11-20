@@ -1,0 +1,41 @@
+{
+  "evidenceKind": "offline-fixture",
+  "modelCalls": 0,
+  "cases": [
+    {
+      "input": "no_service",
+      "recorded": "no_service",
+      "resolution": "blocked_before_call"
+    },
+    {
+      "input": "failed",
+      "recorded": "failed",
+      "resolution": "terminal"
+    },
+    {
+      "input": "refused",
+      "recorded": "refused",
+      "resolution": "terminal"
+    },
+    {
+      "input": "cancelled",
+      "recorded": "cancelled",
+      "resolution": "terminal"
+    },
+    {
+      "input": "timeout",
+      "recorded": "timeout",
+      "resolution": "outcome_unknown_no_automatic_retry"
+    },
+    {
+      "input": "unknown",
+      "recorded": "unknown",
+      "resolution": "outcome_unknown_no_automatic_retry"
+    },
+    {
+      "input": "returned_image",
+      "recorded": "returned_image",
+      "resolution": "terminal"
+    }
+  ]
+}

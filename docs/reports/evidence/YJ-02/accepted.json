@@ -1,0 +1,13 @@
+{
+  "fixture": "fixture-tavern-01",
+  "accepted": {
+    "S0": {
+      "file": "I0.png",
+      "sha256": "7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee"
+    },
+    "S2": {
+      "file": "I1.png",
+      "sha256": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb"
+    }
+  }
+}

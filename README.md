@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-- YJ-01 已完成本地 Node 合成文字基线，下一项为 YJ-02 酒馆图片连续性验证。[运行报告与复现步骤](docs/reports/YJ-01-runtime-baseline-report.md)
+- YJ-01 已完成本地 Node 合成文字基线，YJ-02 已取得工具级真实图片样例。[运行报告与复现步骤](docs/reports/YJ-01-runtime-baseline-report.md)
 
 - 项目已获准启动，独立仓库与首批规划文件初始化已完成；远端文件内容核验通过，详见[验证记录](docs/verification.md)。
 - 远端仓库：[quakhiak34568-lang/Nine-cloud-Yingjie](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie)，私有，默认分支 `main`。
@@ -32,7 +32,7 @@
 7. [验证记录](docs/verification.md)
 8. [当前交接与下一步](docs/handoff.md)
 
-下一项实施任务：[YJ-02 酒馆图片连续性与参考图能力验证](docs/task-briefs/YJ-02-image-capability.md)。YJ-01提交证据已复核，结论见[复核记录](docs/reports/YJ-01-evidence-review.md)。
+YJ-02 已验证同一酒馆 3 → 5 → 5 人和无变化复用，应用直连供应商待验证。可开始 YJ-03 的通用字段整理。[图片报告与原图](docs/reports/YJ-02-image-capability-report.md)。YJ-01提交证据已复核，结论见[复核记录](docs/reports/YJ-01-evidence-review.md)。
 
 ## 历史资料
 

@@ -1,0 +1,141 @@
+{
+  "date": "2026-11-20",
+  "timezone": "Asia/Shanghai",
+  "fixture": "YJ-02/fixture-v1.json",
+  "baseline": "84394958f4fd0dc0872d52af8dc9879fc3613a28",
+  "evidenceKind": "live-codex-tool",
+  "source": "synthetic-fixture",
+  "independentProviderAPI": "NOT_RUN",
+  "manualChatUI": "NOT_RUN",
+  "realSessionHistory": "NOT_RUN",
+  "model": null,
+  "seed": null,
+  "providerRequestId": null,
+  "usage": null,
+  "cost": null,
+  "currency": null,
+  "downloadTimeMs": null,
+  "notes": "工具以数据及本地 PNG 返回；未暴露底层模型名、供应商任务标识、用量及费用。文件名中的 UUID 仅作输出溯源。参考路径已转为回执相对路径。时间为调用端 UTC 墙钟。",
+  "calls": [
+    {
+      "id": "I0",
+      "stage": "S0",
+      "attempt": 1,
+      "entry": "tools.image_gen__imagegen",
+      "startedAt": "2026-11-20T08:27:07.211Z",
+      "returnedAt": "2026-11-20T08:28:13.688Z",
+      "elapsedMs": 66477,
+      "input": {
+        "prompt": "Wide horizontal naturalistic cinematic still of a modest timber tavern in an ancient Chinese cultivation-world village. A single fixed wide-angle interior view, daylight. Carefully stage exactly two separate square lattice windows side by side on the left wall, a long wooden counter along the right wall, three clearly distinct free-standing square tables in the central hall with space between all three. Exposed dark crossbeams overhead. Leave a clear walking aisle near the rear doorway. Exactly three human beings, all fully legible: gray-haired innkeeper in a charcoal apron behind the right counter, one blue-robed guest seated by the nearer left table, and one ochre-robed guest seated at a different table. Distinct faces, no one obscures anyone else. Three unlit lanterns, ordinary lived-in room, no writing, no extra people, no reflections or figures outdoors. No panels, no labels, no player avatar.",
+        "transparent_background": false
+      },
+      "referenceSha256": null,
+      "output": {
+        "file": "YJ-02/I0.png",
+        "originalFilename": "exec-e48f995e-404c-4048-905c-4039d298a21a.png",
+        "sha256": "7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee",
+        "pixels": [
+          1672,
+          941
+        ],
+        "bytes": 2476250
+      },
+      "outcome": "returned_image",
+      "visualReview": {
+        "method": "assistant visual inspection",
+        "scope": "synthetic fixture only",
+        "decision": "accepted",
+        "people": 3,
+        "notes": "左墙两窗，中央前左、后中、前右三张桌。蓝衣客端杯，赭衣客坐在后桌，灰发掌柜在右侧柜台后。后门过道空着。"
+      }
+    },
+    {
+      "id": "I1",
+      "stage": "S2",
+      "attempt": 1,
+      "entry": "tools.image_gen__imagegen",
+      "startedAt": "2026-11-20T08:29:06.008Z",
+      "returnedAt": "2026-11-20T08:30:34.849Z",
+      "elapsedMs": 88841,
+      "input": {
+        "prompt": "Edit the provided tavern image. Keep the same camera, framing, daylight, wood beams, long counter on the right, both windows on the left, the same three square tables, lanterns and original three people exactly where they were, preserving their outfits. Add exactly two adult rescued travelers standing separately in the open aisle near the back entrance, both well inside the room and easy to count: a woman in moss-green travel clothes with a small cloth bundle and a man in plum travel clothes. Show both heads and torsos clearly and keep the innkeeper and two original guests visible. The resulting image has exactly five people. Change only the arrival of these two travelers. Same visual style and landscape image shape.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "YJ-02/I0.png"
+        ]
+      },
+      "referenceSha256": "7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee",
+      "output": {
+        "file": "YJ-02/I1.png",
+        "originalFilename": "exec-c50d37e8-40a2-43d4-a10a-42dbc5d225de.png",
+        "sha256": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb",
+        "pixels": [
+          1672,
+          941
+        ],
+        "bytes": 2319506
+      },
+      "outcome": "returned_image",
+      "visualReview": {
+        "method": "assistant visual inspection",
+        "scope": "synthetic fixture only",
+        "decision": "accepted",
+        "people": 5,
+        "notes": "两位站立旅人位于左桌与后桌之间，绿衣者抱布包，紫衣者位于门前。原来三人仍在原位。右柜台、两窗、三桌和梁柱关系可辨；器皿纹理与细节略有变化。"
+      }
+    },
+    {
+      "id": "I2",
+      "stage": "S3B",
+      "attempt": 1,
+      "entry": "tools.image_gen__imagegen",
+      "startedAt": "2026-11-20T08:31:12.957Z",
+      "returnedAt": "2026-11-20T08:32:20.879Z",
+      "elapsedMs": 67922,
+      "input": {
+        "prompt": "Use the supplied five-person tavern image as the edit target. Change only the time of day and lighting: evening blue outside the two left windows, existing lanterns now visibly lit, warm light inside sufficient to see all five distinct people. Preserve the framing, beams, three tables, long counter and arrangement. Preserve the same five people at the exact positions and in the clothes shown, including the moss-green and plum travelers near the entrance. No other changes. Match the reference image shape and style.",
+        "transparent_background": false,
+        "referenced_image_paths": [
+          "YJ-02/I1.png"
+        ]
+      },
+      "referenceSha256": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb",
+      "output": {
+        "file": "YJ-02/I2.png",
+        "originalFilename": "exec-1f03cadc-01c9-4b3f-b357-f8e2821a4b0b.png",
+        "sha256": "9feccc88e3814af79055bd71b43ec5757f4b8b8b3460787ef349ed3de4031b3f",
+        "pixels": [
+          1672,
+          941
+        ],
+        "bytes": 2426234
+      },
+      "outcome": "returned_image",
+      "visualReview": {
+        "method": "assistant visual inspection",
+        "scope": "synthetic fixture only",
+        "decision": "accepted",
+        "people": 5,
+        "notes": "左侧双窗及后门外转蓝，室内可见三盏灯亮起。五人均可数，绿衣、紫衣旅人仍在后门过道。门外远处另有小光点，掌柜表情及桌面物件细节有偏移。"
+      }
+    }
+  ],
+  "reuse": [
+    {
+      "stage": "S1",
+      "scene": "fixture-tavern-01",
+      "acceptedStage": "S0",
+      "file": "YJ-02/I0.png",
+      "sha256": "7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee",
+      "modelCalls": 0
+    },
+    {
+      "stage": "S3A",
+      "scene": "fixture-tavern-01",
+      "acceptedStage": "S2",
+      "file": "YJ-02/I1.png",
+      "sha256": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb",
+      "modelCalls": 0
+    }
+  ]
+}

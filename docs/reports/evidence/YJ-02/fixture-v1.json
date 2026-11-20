@@ -1,0 +1,42 @@
+{
+  "id": "fixture-tavern-01",
+  "version": 1,
+  "source": "synthetic-fixture",
+  "stages": [
+    [
+      "S0",
+      "初次进入，掌柜、蓝衣客、赭衣客共三人。",
+      "I0"
+    ],
+    [
+      "S1",
+      "谈到远山，地点、光照和在场人均未改变。",
+      "reuse:I0"
+    ],
+    [
+      "S2",
+      "两位获救旅人已进店，原三人仍在。",
+      "I0→I1"
+    ],
+    [
+      "S3A",
+      "离开后回来，同一酒馆与五人都未变化。",
+      "reuse:I1"
+    ],
+    [
+      "S3B",
+      "天色转晚，灯亮，五人仍在。",
+      "I1→I2"
+    ]
+  ],
+  "criteria": [
+    "同一室内广角位置，右侧长柜台，左墙两扇窗，中部三张方桌，木梁格局",
+    "原有三人可区分，后两次均能看到两名新增旅人",
+    "仅S3B改为傍晚亮灯，可辨人数与位置；遮挡无法计数时记无法判断"
+  ],
+  "prompts": {
+    "I0": "Wide horizontal naturalistic cinematic still of a modest timber tavern in an ancient Chinese cultivation-world village. A single fixed wide-angle interior view, daylight. Carefully stage exactly two separate square lattice windows side by side on the left wall, a long wooden counter along the right wall, three clearly distinct free-standing square tables in the central hall with space between all three. Exposed dark crossbeams overhead. Leave a clear walking aisle near the rear doorway. Exactly three human beings, all fully legible: gray-haired innkeeper in a charcoal apron behind the right counter, one blue-robed guest seated by the nearer left table, and one ochre-robed guest seated at a different table. Distinct faces, no one obscures anyone else. Three unlit lanterns, ordinary lived-in room, no writing, no extra people, no reflections or figures outdoors. No panels, no labels, no player avatar.",
+    "I1": "Edit the provided tavern image. Keep the same camera, framing, daylight, wood beams, long counter on the right, both windows on the left, the same three square tables, lanterns and original three people exactly where they were, preserving their outfits. Add exactly two adult rescued travelers standing separately in the open aisle near the back entrance, both well inside the room and easy to count: a woman in moss-green travel clothes with a small cloth bundle and a man in plum travel clothes. Show both heads and torsos clearly and keep the innkeeper and two original guests visible. The resulting image has exactly five people. Change only the arrival of these two travelers. Same visual style and landscape image shape.",
+    "I2": "Use the supplied five-person tavern image as the edit target. Change only the time of day and lighting: evening blue outside the two left windows, existing lanterns now visibly lit, warm light inside sufficient to see all five distinct people. Preserve the framing, beams, three tables, long counter and arrangement. Preserve the same five people at the exact positions and in the clothes shown, including the moss-green and plum travelers near the entrance. No other changes. Match the reference image shape and style."
+  }
+}
