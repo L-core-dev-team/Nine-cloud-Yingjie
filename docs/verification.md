@@ -99,6 +99,10 @@
 
 固定实现 [59cf8756](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/commit/59cf875649c9b676f59c63280bbc54b602d6b5c3)。本次重新编译 0.1.1，共用契约 10/10，通过三张原图和参考链探针。PostgreSQL、原普通角色卡宿主及 Chrome 本次共 6/6 通过，其中 3 组为 YJ-04 回归，2 组为任务恢复和安全边界，1 组为实际页面联合流程。截图为桌面及移动视口。分层证据与覆盖缺口见 [05 报告](reports/YJ-05-image-tasks-report.md)、[06 报告](reports/YJ-06-ui-report.md)、[结构化回执](reports/evidence/YJ-05-06/run.json)。真实供应商和真机 NOT_RUN。
 
+## YJ-07 世界书与获准预设 · 2026-11-20
+
+[da97633de7c83d0b743d8e5766cb2317867a2cea](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/commit/da97633de7c83d0b743d8e5766cb2317867a2cea) 的远端树与本地一致。Windows、固定九霄运行时、PostgreSQL 18.4 及 Chrome 的本次 9 组综合检查全部通过；独立契约测试 10 组通过，原图探针 3 张通过。原 05/06 用例发送 9 次本地 mock，07 预设用例发送 0 次。获准合成世界书经过真实导入、关联和权限路由；原件损坏、授权撤销、会话删除均有实际拒绝回执。私人资料、真实模型、生产与真机 NOT_RUN。[完整报告](reports/YJ-07-worldbook-assets-report.md) · [运行回执](reports/evidence/YJ-07/run.json)
+
 ## 后续记录格式
 
 每条记录应包括日期、仓库与提交、检查对象、执行方式、实际结果、证据位置及未覆盖部分。不能把历史记录、静态检查和当次真实运行混写为同一项PASS。

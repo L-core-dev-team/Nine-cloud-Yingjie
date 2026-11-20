@@ -1,0 +1,89 @@
+{
+  "date": "2026-11-20",
+  "branch": "codex/yj-07-worldbook-assets",
+  "start": "bd2f552ba0c0480202c4366a92f0d95d4cb117f8",
+  "upstream": "cd25360c7929e10f8b2b0fad342fedd943d4f323",
+  "contracts": "0.1.1",
+  "schemaVersion": "0.1",
+  "runtime": {
+    "node": "26.13.0",
+    "postgresql": "18.4",
+    "chrome": "157.0.8103.79"
+  },
+  "input": "synthetic owner, ordinary CardSession, imported fixture books, YJ-02 reviewed PNGs",
+  "baselineNineStepPassed": true,
+  "contractsTests": {
+    "passed": 10,
+    "failed": 0,
+    "skipped": 0
+  },
+  "pngProbe": {
+    "verified": 3,
+    "referenceEdits": 2
+  },
+  "localRun": {
+    "passed": 9,
+    "failed": 0,
+    "skipped": 0,
+    "durationMs": 20946.7313,
+    "yj04": 3,
+    "yj05": 2,
+    "yj05_06_browser": 1,
+    "yj07": 3
+  },
+  "worldbook": {
+    "sourceKinds": [
+      "embedded",
+      "linked",
+      "snapshot"
+    ],
+    "oldSessionRetainedGlobal": true,
+    "newSessionSawReplacement": true,
+    "unrelatedGrantIgnored": true,
+    "wrongImportDigestWithheldDocument": true,
+    "independentProcessRecovery": true
+  },
+  "presetBrowser": {
+    "sequence": [
+      "I0",
+      "I0",
+      "I1",
+      "not-ready",
+      "I1",
+      "I2"
+    ],
+    "storedImageTasks": 0,
+    "providerSends": 0,
+    "oldVersionDownload": 404,
+    "crossSessionHandle": 404,
+    "corruptOriginal": 404,
+    "revokedGrantDownload": 404,
+    "deletedSession": 403,
+    "foreignAccount": 403
+  },
+  "legacyBrowser": {
+    "decisionCount": 16,
+    "mockProviderSends": 9,
+    "mobileViewport": [
+      390,
+      844
+    ]
+  },
+  "originalSha256": [
+    "7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee",
+    "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb",
+    "9feccc88e3814af79055bd71b43ec5757f4b8b8b3460787ef349ed3de4031b3f"
+  ],
+  "screenshotSha256": "246edfebf6a09a668b959a719664d1c7e42c190484a0e2d133e2f00d8bca8cb1",
+  "realModelCalls": {
+    "text": 0,
+    "image": 0
+  },
+  "notRun": [
+    "private-worldbook-content",
+    "free-text-extraction",
+    "live-image-provider",
+    "production-mount",
+    "physical-mobile-device"
+  ]
+}
