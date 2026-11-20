@@ -37,7 +37,7 @@ YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。YJ
 | YJ-00 | 已完成启动方向确认 | 用户授权开始、建仓并上传计划；未决产品细项保持原状态 |
 | 仓库与文档初始化 | 已完成 | 私有仓库已创建，15份文件已上传；main分支、完整文件清单与逐文件Git blob哈希核验通过，见验证记录 |
 | YJ-01 | 已完成 | 独立角色卡会话两次提交、刷新恢复与 PostgreSQL 对账通过；真实模型 NOT_RUN。[运行报告](reports/YJ-01-runtime-baseline-report.md) |
-| YJ-02 | 进行中；后端接入子项阻塞 | 工具级样例已复核；独立分支 `codex/yj-02-backend-readiness` 的后端准备任务已交付，可与 04 并行。应用直连供应商仍 BLOCKED / NOT_RUN。[图片报告](reports/YJ-02-image-capability-report.md) · [证据复核](reports/YJ-02-evidence-review.md) |
+| YJ-02 | 进行中；后端接入子项阻塞 | 工具级样例已复核；独立准备分支已提交 `340c8bf`，报告记录 dry-run 与本地 mock 完成，本轮未复核该批补充实验。应用直连供应商仍 BLOCKED / NOT_RUN。[图片报告](reports/YJ-02-image-capability-report.md) · [原样例复核](reports/YJ-02-evidence-review.md) |
 | YJ-03 | 已完成交付；定向修补已提交 | 原报告记录 8 组通过；两处边界缺口已修补至包 0.1.1，编译、新增 2 组与原来源映射 1 组通过。本次未重跑全量和原图字节检查。[原报告](reports/YJ-03-shared-contracts-report.md) · [复核记录](reports/YJ-03-evidence-review.md) |
 | YJ-04 | 待开始；任务书已准备 | `codex/yj-04-scene-state` 已含契约修补；按[任务书](task-briefs/YJ-04-scene-state.md)先复跑完整检查，再实现地点状态与持久化 |
 | YJ-05–YJ-13 | 待开始 | 图片任务、前端和真实会话驱动图片联调等业务实现尚未执行 |

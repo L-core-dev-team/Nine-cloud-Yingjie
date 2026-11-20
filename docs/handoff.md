@@ -41,7 +41,8 @@ YJ-02 成果分支 `codex/yj-02-image-capability` 已核对到 `13ac86a0c4a13078
 - [YJ-04 完整任务书](task-briefs/YJ-04-scene-state.md)已准备。先在完整副本复跑全部 10 组契约检查，然后实现真实已保存普通角色卡历史读取、稳定地点身份、变化继承、持久化、分页、重放和重启恢复。
 - 地点主键不包含每轮 key/revision；新一轮没有提到旧人物，不自动视为离开。没有足够事实时明确未就绪，不伪造可见状态。
 - YJ-04 状态业务实现尚未执行，不需要等待图片供应商入口。
-- YJ-02 后端准备继续使用独立分支 `codex/yj-02-backend-readiness`；本次核查其 HEAD 为 `18c7dd9cf82f161024c1bfa3951b9a95d63b80f1`。任务书在[该分支](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/blob/codex/yj-02-backend-readiness/docs/task-briefs/YJ-02-backend-readiness.md)。如需共用契约修补，可单独接入上述补丁提交；不要将整个 04 分支合入以覆盖 02 的交接记录。
+- YJ-02 后端准备使用独立分支 `codex/yj-02-backend-readiness`。本轮交接更新时，远端已推进到 `340c8bfb2cafe01be994b0d0ce77829b6274c7b7`；[补充报告](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/blob/340c8bfb2cafe01be994b0d0ce77829b6274c7b7/docs/reports/YJ-02-backend-readiness-report.md)记录离线请求准备与本地 mock 已完成，真实后端仍 BLOCKED / NOT_RUN。本轮只登记新提交并读取报告，未复核或复跑该批实验。
+- 02 补充实现仍消费 0.1.0；如需共用契约修补，可单独接入上述 0.1.1 补丁提交，随后复跑该分支的契约和准备检查。不要将整个 04 分支合入以覆盖 02 的交接记录。
 
 ## 保留未决
 
