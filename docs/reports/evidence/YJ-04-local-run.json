@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-20",
+  "startingHead": "6cf460e7d4920653c192cf1e3c177145b32d9376",
+  "upstream": "cd25360c7929e10f8b2b0fad342fedd943d4f323",
+  "node": "26.13.0",
+  "contracts": {
+    "packageVersion": "0.1.1",
+    "schemaVersion": "0.1",
+    "passed": 10,
+    "failed": 0,
+    "skipped": 0
+  },
+  "command": "node packages/scene-state/test/verify-local.mjs",
+  "suiteExit": 0,
+  "passed": 3,
+  "failed": 0,
+  "skipped": 0,
+  "diagnostics": [
+    {
+      "suite": "live-card",
+      "transport": "loopback-http",
+      "provider": "synthetic",
+      "pendingRows": 0,
+      "completedRevision": 1,
+      "applied": 1,
+      "sceneStatus": "not-ready",
+      "foreignOwner": "rejected",
+      "group": "rejected",
+      "revokedCookie": "rejected"
+    },
+    {
+      "suite": "synthetic-tavern",
+      "db": "18.4",
+      "crashExit": 61,
+      "checkpointAfterCrash": 2,
+      "race": [
+        "applied",
+        "duplicate"
+      ],
+      "committedEvents": 12,
+      "versions": [
+        "V1",
+        "V2",
+        "V3",
+        "V4"
+      ],
+      "revisitPeople": 5
+    },
+    {
+      "suite": "synthetic-pagination",
+      "cleanCursors": [
+        0,
+        100
+      ],
+      "rows": 102,
+      "checkpointAtFailure": 39,
+      "abort": "rejected",
+      "deletedSession": "rejected"
+    }
+  ]
+}
