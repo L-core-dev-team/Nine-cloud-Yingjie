@@ -2,6 +2,13 @@
 
 更新：2026-11-21。
 
+## 最新执行任务：YJ-P02-L1 Luna 最多一次真实文字试点（任务书就绪）
+
+- 道主已确认具有 OpenAI API Key，并同意将 **GPT-6 Luna 单次文字测试**的本次预算上限设为 **USD $0.10**。模型固定 `gpt-6-luna`，最高 1 次 Responses API 文本推理，使用**开发自编合成酒馆**，**不批准图片/私人角色卡/万卡阁或世界书原文外发**。成功、失败或结果未知都停止，不自动重试。
+- 已在 `codex/yj-p02-openai-adapter@7f0d9d454886c6021a876cd3a8c9bcfda99404e9` 之上建立独立 `codex/yj-p02-l1-luna-text`，交付[完整 YJ-P02-L1 任务书](task-briefs/YJ-P02-L1-luna-text-smoke.md)。本次**只有任务书及交接材料**，业务代码、离线新测试及真实 API 调用均 NOT_RUN。
+- 先检查本机受信进程是否有 `OPENAI_API_KEY`（只返回是否可用，不读取/输出其值），核对官方 Standard 价、输入≤8000 tokens 与输出≤1200 tokens，使用 `store:false`、`reasoning.effort:none`、禁 SDK 自动重试、持久化 one-shot 发送额度。无法保障门禁即 LIVE_BLOCKED，不用其他型号顶替。
+- 成功必须先由九霄存成 completed-history，再读回映界提取结果；原件与图片 API 请求次数维持 0。YJ-13 LOCAL_DEMO_PASS、P01 OFFLINE_PASS 和已有两个项目 main 不动。P02 图片生成、参考编辑、纠错替代与生产仍未获放行。
+
 ## YJ-P02 最新接续：OpenAI API 已选，适配任务书就绪
 
 - 道主已选择**使用自己的 OpenAI API 账户**作为映界文字及图片真实服务供应商；这一决定不等于已授权具体付费调用、参考图外发或供应商留存/审核条款。ChatGPT 订阅与 API 的账单/额度仍须分别检查。

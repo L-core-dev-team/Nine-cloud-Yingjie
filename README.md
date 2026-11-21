@@ -4,6 +4,8 @@
 
 ## 当前状态
 
+**最新受控试点任务（仅文字）：** 道主已确认有 OpenAI API Key，并同意在 USD $0.10 总预算约束下以 `gpt-6-luna` 测试**最多 1 次真实文字请求**。已创建独立分支 `codex/yj-p02-l1-luna-text` 并上传[完整任务书](docs/task-briefs/YJ-P02-L1-luna-text-smoke.md)。本轮只是任务书准备，**尚未实际调用 API**。只准开发自编合成酒馆文本，不批准图片或私人材料外发；发送前必须完成价格、token、受信密钥和持久防重门禁。
+
 **已选真实供应商：OpenAI API。** 道主已确认在映界下一阶段使用自己的 OpenAI API 账户。已在 `codex/yj-p02-openai-adapter` 创建[官方协议适配与受控试点任务书](docs/task-briefs/YJ-P02-openai-adapter.md)；**本次只有任务书和交接，OpenAI adapter 业务代码、实际接口调用与测试尚未执行**。具体模型只是候选；API Project 权限、外发素材、预算和真实请求授权未确认，真实发送必须保持关闭。
 
 **YJ-P01 OFFLINE_PASS，真实试点 LIVE_BLOCKED。** 原角色卡在合成数据上完成生成、参考编辑和保守留空；受信授权、预留上限、信息过滤与 unknown 重开防重已通过离线检查。 [运行报告与真实试点条件](docs/reports/YJ-P01-real-service-readiness-report.md)

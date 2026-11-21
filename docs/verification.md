@@ -2,6 +2,12 @@
 
 更新：2026-11-21。
 
+## YJ-P02-L1 单次 Luna 试点任务书准备（本轮）
+
+已读 GitHub 的原 P02 适配任务书与 P01 报告，核对现有 P02 接续分支 `7f0d9d454886c6021a876cd3a8c9bcfda99404e9`。官方文档列明 `gpt-6-luna` 支持 Responses API、Standard 短上下文文字价格为输入 $0.10/百万 tokens、输出 $0.50/百万 tokens；当前试点拟限制输入≤8000、输出≤1200，单笔估计成本约 $0.0014（非供应商账单保证）。官方模型、响应数据留存和输出上限资料见任务书。道主已同意本次最多一笔 Luna 文字请求、USD $0.10 总预算，资料仅限开发自编合成酒馆。
+
+本轮**只创建 [YJ-P02-L1 完整任务书](task-briefs/YJ-P02-L1-luna-text-smoke.md)与接续分支**；当前并未配置或读取 Key，也未独立执行任何 Luna 请求、PG/HTTP/Chrome 实验或费用门禁测试。真实 API 调用：0，业务实现 NOT_RUN。先离线验收，未配置密钥/无法确认硬门禁则保持 LIVE_BLOCKED。图片生成/参考编辑并未获得本次授权。
+
 ## YJ-P01 交付证据复核与 YJ-P02 OpenAI 适配任务准备（本轮）
 
 只读核对 `codex/yj-p01-real-service-readiness@2caab0d92059d77097af5a4e6859f56e51516c99`、[P01 运行报告](reports/YJ-P01-real-service-readiness-report.md)、[禁网 7/7](reports/evidence/YJ-P01/offline-final.json)、[原角色卡 3 轮 fake 回执](reports/evidence/YJ-P01/local-card-final.json)及[回归 21/22→22/22](reports/evidence/YJ-P01/yj13-regression.json)。这些是源执行证据，本轮未在 Windows / PG / Chrome 实地重跑；P01 首轮预设标签超时根因仍未确定。
