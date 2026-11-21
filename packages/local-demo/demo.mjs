@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import {randomUUID,createHash} from "node:crypto";
-import {readFile,writeFile,realpath,access,cp,lstat,mkdtemp,open,unlink} from "node:fs/promises";
+import {readFile,writeFile,realpath,access,cp,lstat,readdir,mkdtemp,open,unlink} from "node:fs/promises";
 import {join,resolve,basename,dirname} from "node:path";
 import {tmpdir} from "node:os";
 import {fresh,admin,start,stop,upstream} from "./cluster.mjs";
@@ -42,11 +42,14 @@ if(mode==="init"){
       const stopped=await lstat(join(dir,"postgres","postmaster.pid")).then(()=>false,e=>{if(e.code==="ENOENT")return true;throw e;});
       if(!stopped)throw Error("close the demo and verify PostgreSQL has stopped before snapshot");
       const target=await mkdtemp(join(tmpdir(),"yj13-demo-"));
-      await cp(dir,target,{recursive:true,force:false,errorOnExist:true,filter:async path=>{
-        if(path===lockPath)return false;
-        if((await lstat(path)).isSymbolicLink())throw Error("unexpected link in demo directory");
-        return true;
-      }});
+      const entries=(await readdir(dir)).filter(name=>name!=="demo.lock" && name!=="demo.json");
+      // Publish the identity marker last, so an interrupted cold copy cannot be opened.
+      for(const name of [...entries,"demo.json"]){
+        await cp(join(dir,name),join(target,name),{recursive:true,force:false,errorOnExist:true,filter:async path=>{
+          if((await lstat(path)).isSymbolicLink())throw Error("unexpected link in demo directory");
+          return true;
+        }});
+      }
       console.log(target);
     }else{
       process.env.YJ13_CLUSTER=dir;
