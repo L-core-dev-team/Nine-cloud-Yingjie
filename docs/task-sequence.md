@@ -2,6 +2,8 @@
 
 更新：2026-11-21。
 
+**YJ-P02 接续入口：** 道主已选择 OpenAI API；[专用文字/图片 API 适配与安全门禁任务书](task-briefs/YJ-P02-openai-adapter.md)已在独立分支上传，业务实现与付费请求尚未开始。具体模型、项目 API 访问权限、参考图外发和费用预算仍待确认。P01 的 OFFLINE_PASS 与 YJ-13 的 LOCAL_DEMO_PASS 均保持。
+
 **YJ-P01 OFFLINE_PASS，真实试点 LIVE_BLOCKED。** 原角色卡在合成数据上完成生成、参考编辑和保守留空；受信授权、预留上限、信息过滤与 unknown 重开防重已通过离线检查。 [回执与 P02 放行条件](reports/YJ-P01-real-service-readiness-report.md)
 
 **YJ-13 LOCAL_DEMO_PASS。** 完整隔离回归连续 22/22、22/22；原角色卡 35 轮、第二会话 2 轮，已实测启停、回退和 14 表配对恢复。 [运行报告](reports/YJ-13-local-demo-closeout-report.md)
@@ -62,6 +64,7 @@ YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。YJ
 | YJ-12 | 定向本地验证完成；连续全量回归待稳定 | [反馈恢复与 PG/原件恢复已核查](reports/YJ-12-recovery-terminal-report.md)；综合先 22/22 后 18/22（验证码 HTTP 429） |
 | YJ-13 | LOCAL_DEMO_PASS，本地合成演示已完成 | [35 轮、独立回归、启停与故障恢复](reports/YJ-13-local-demo-closeout-report.md) |
 | YJ-P01 | OFFLINE_PASS；LIVE_BLOCKED | [实现、实测、纠错独立身份提案与下一轮条件](reports/YJ-P01-real-service-readiness-report.md) |
+| YJ-P02 | 待开始；OpenAI 已选、完整任务书已上传 | [OpenAI API 受信 adapter、生成/编辑协议、PG 发送前门禁与授权试点条件](task-briefs/YJ-P02-openai-adapter.md)；真实调用 NOT_RUN |
 | YJ-M01 | 后续待开始 | 地图具体组织方式尚未确定 |
 
 ## 依赖说明

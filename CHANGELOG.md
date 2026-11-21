@@ -1,5 +1,11 @@
 # 变更记录
 
+## 2026-11-21 P02 OpenAI API 供应商确认与适配准备
+
+- 道主已选择使用自己的 OpenAI API 账户作为映界下一阶段的文字及图片供应商；具体模型、外发素材、预算/次数和真实发送授权尚未确认。
+- 自 P01 完成提交新建 `codex/yj-p02-openai-adapter`，上传[OpenAI 文字/图片官方协议与离线门禁完整任务书](docs/task-briefs/YJ-P02-openai-adapter.md)，更新 README、决策、任务看板与交接。
+- 本次仅为离线开发任务准备，P02 业务适配代码和测试 NOT_RUN，真实文字/图片请求 0。P01、YJ-13 与 main 均不改。
+
 ## 2026-11-21 YJ-P01
 
 **YJ-P01 OFFLINE_PASS，真实试点 LIVE_BLOCKED。** 原角色卡在合成数据上完成生成、参考编辑和保守留空；受信授权、预留上限、信息过滤与 unknown 重开防重已通过离线检查。 [报告](docs/reports/YJ-P01-real-service-readiness-report.md)

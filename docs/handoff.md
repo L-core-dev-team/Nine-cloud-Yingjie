@@ -2,6 +2,14 @@
 
 更新：2026-11-21。
 
+## YJ-P02 最新接续：OpenAI API 已选，适配任务书就绪
+
+- 道主已选择**使用自己的 OpenAI API 账户**作为映界文字及图片真实服务供应商；这一决定不等于已授权具体付费调用、参考图外发或供应商留存/审核条款。ChatGPT 订阅与 API 的账单/额度仍须分别检查。
+- 已核对 `codex/yj-p01-real-service-readiness@2caab0d92059d77097af5a4e6859f56e51516c99` 的远端 HEAD、[P01 报告](reports/YJ-P01-real-service-readiness-report.md)、离线 7/7、三轮本地 fake 及 YJ-13 原回归 21/22→22/22。本轮未在用户 Windows/PG/Chrome 环境独立重跑测试。
+- 从 P01 成果建立 `codex/yj-p02-openai-adapter`，上传[OpenAI 文字/图片专用适配与安全放行任务书](task-briefs/YJ-P02-openai-adapter.md)。候选文字为 `gpt-6.2-sol`，候选图片为 `gpt-image-2.6-sunburst`，均需核对项目访问与费用，**尚未冻结型号**。Images API 的生成、编辑协议依据 2026-11-21 官方文档核查。
+- **本轮只创建任务书和交接记录，P02 业务代码、合同/供应商 live 联调及任何真实 API 调用均 NOT_RUN。** 下一名 Codex 可先实现禁网 adapter、PG 发送前门禁和本地 mock HTTP 对照；没有具体外发许可、预算、模型访问与实时请求授权时不得联网请求 OpenAI。
+- YJ-13 `LOCAL_DEMO_PASS` 与 P01 `OFFLINE_PASS` 不变；纠错替代 `contract-adapter-required`、独立人工审图、手机真机及生产仍为未验证。
+
 ## YJ-P01 当前交付
 
 **YJ-P01 OFFLINE_PASS，真实试点 LIVE_BLOCKED。** 原角色卡在合成数据上完成生成、参考编辑和保守留空；受信授权、预留上限、信息过滤与 unknown 重开防重已通过离线检查。 离线实现提交 `ec0196e`。纠错替代仍为 contract-adapter-required。仅在道主确认供应商、素材用途、上限、审核留存和真实调用授权后另起 P02。[复跑命令及证据](reports/YJ-P01-real-service-readiness-report.md)

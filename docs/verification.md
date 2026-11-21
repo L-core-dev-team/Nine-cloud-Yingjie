@@ -2,6 +2,14 @@
 
 更新：2026-11-21。
 
+## YJ-P01 交付证据复核与 YJ-P02 OpenAI 适配任务准备（本轮）
+
+只读核对 `codex/yj-p01-real-service-readiness@2caab0d92059d77097af5a4e6859f56e51516c99`、[P01 运行报告](reports/YJ-P01-real-service-readiness-report.md)、[禁网 7/7](reports/evidence/YJ-P01/offline-final.json)、[原角色卡 3 轮 fake 回执](reports/evidence/YJ-P01/local-card-final.json)及[回归 21/22→22/22](reports/evidence/YJ-P01/yj13-regression.json)。这些是源执行证据，本轮未在 Windows / PG / Chrome 实地重跑；P01 首轮预设标签超时根因仍未确定。
+
+已通过官方 OpenAI 开发者文档确认文字 API、图片生成 `v1/images/generations` 与图片编辑 `v1/images/edits` 可作为候选接口；型号 `gpt-6.2-sol`、`gpt-image-2.6-sunburst` 仅是待用户/项目访问与预算核实的候选，不代表项目模型权限已经开通。用户选择使用自己的 OpenAI API 账户，真实调用的费用/素材外发范围仍未获批准。
+
+本轮从 P01 成果创建 [YJ-P02 完整任务书](task-briefs/YJ-P02-openai-adapter.md)及独立分支；P02 业务实现、禁网测试、付费调用、原件外发与真实数据审核均 NOT_RUN。严禁把本次文档创建写成 OpenAI live 接入完成。
+
 ## YJ-P01 当次验证
 
 **YJ-P01 OFFLINE_PASS，真实试点 LIVE_BLOCKED。** 原角色卡在合成数据上完成生成、参考编辑和保守留空；受信授权、预留上限、信息过滤与 unknown 重开防重已通过离线检查。 Node 禁网子进程 7/7，丢失确认后第二个进程零重发；回环 PG、Cookie HTTP 与真实 Chrome 检查三条 completed-history，fake 文字 3 次、图片 2 次。真实 API、供应商计费和独立图审 NOT_RUN。[分类证据与回归记录](reports/YJ-P01-real-service-readiness-report.md)
