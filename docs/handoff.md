@@ -2,6 +2,10 @@
 
 更新：2026-11-21。
 
+## 最新执行要求：一次性 API Key 输入页面（未实现）
+
+道主不希望手动配置 PowerShell 环境变量，要求 Codex 提供可由本人填写 API Key 的**受保护一次性输入页面**。从 YJ-P02-L1 `ac0ccbec121a5c3238264894cc0c4449de2922e8` 建立独立 `codex/yj-p02-l1-key-entry-ui` 分支；执行[安全输入 UI 任务书](task-briefs/YJ-P02-L1-key-entry-ui.md)。这项工作目前仅上传任务要求，**界面与可访问地址仍未创建**。仅允许在本机可访问受信 loopback 或平台原生安全凭据入口操作，禁止公开无认证 URL、聊天接收 Key 或存盘。填入 Key 本身不触发 $0.10 单次 Luna 付费测试，必须明确点击后再走原持久账本。原 L1 的 OFFLINE_PASS/LIVE_BLOCKED 证据不变。
+
 ## YJ-P02-L1 当前交付
 
 从任务提交 `98d2883` 接续。单次适配、当日预算、持久防重及原会话合成回合均已通过。真实调用在检查密钥及项目权限时停止，状态 LIVE_BLOCKED，实际与可能发送均为 0。同机后续预检及账本路径见[报告与回执](reports/YJ-P02-L1-luna-text-smoke-report.md)。
