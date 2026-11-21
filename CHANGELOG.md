@@ -1,5 +1,11 @@
 # 变更记录
 
+## 2026-11-21 YJ-12 证据复核与 YJ-13 本地试玩准备
+
+- 核对 YJ-12 固定远端 HEAD、恢复报告、22/22 和随后的 18/22 回归记录，后者四组停在本地 `/api/auth/code` 429；本轮未独立执行运行测试。
+- 从 YJ-12 完成提交创建 `codex/yj-13-local-demo-closeout`，上传[本地连续试玩/稳定回归/交接任务书](docs/task-briefs/YJ-13-local-demo-closeout.md)，更新接手、看板、首页及验证。
+- 仅文档与任务准备，YJ-13 业务实现和试玩 NOT_RUN；要求保留认证限流，不把合成 demo 说成真实模型上线。
+
 ## 2026-11-21 YJ-12 恢复与终端稳定性
 
 已在普通角色卡页验证断网反馈、撤权后的回执核对、未知请求防重，以及停写后的 PostgreSQL 和私有原件恢复。YJ-13 可从本地模拟连续试玩接续。[运行报告、命令与回退](docs/reports/YJ-12-recovery-terminal-report.md)

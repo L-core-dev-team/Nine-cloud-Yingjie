@@ -2,6 +2,12 @@
 
 更新：2026-11-21。
 
+## YJ-12 原证据核对与 YJ-13 接续准备（本轮）
+
+只读核对 `codex/yj-12-recovery-terminal@022d20a0a792ff52b9acfb9fa471c991b5e63755`、[运行报告](reports/YJ-12-recovery-terminal-report.md)和[每次回归的原始记录](reports/evidence/YJ-12/regression.json)。原执行者记录契约 10/10、原 PNG 3/3、YJ-11 基线 20/20。YJ-12 定向测试与停写 PostgreSQL 14 表+图片文件隔离恢复通过；综合一次 22/22，随后的同代码一次 18/22，四组浏览器用例因 `/api/auth/code` HTTP 429 未继续验证。**本轮没有独立重跑这些检查；429 的具体配额来源未证实，不能写稳定全绿。**
+
+九霄固定上游认证服务具备 per-IP、per-email 和全局验证码发送限流，已读取相关源码。此次新增[完整 YJ-13 任务书](task-briefs/YJ-13-local-demo-closeout.md)和独立分支；YJ-13 实际代码、连续原页面试玩、重复回归、真机和真实图片/文字模型均 NOT_RUN。首要关口为验证/隔离合成测试限流，不破坏生产认证安全逻辑。
+
 ## YJ-12 当次运行
 
 已在普通角色卡页验证断网反馈、撤权后的回执核对、未知请求防重，以及停写后的 PostgreSQL 和私有原件恢复。YJ-13 可从本地模拟连续试玩接续。[运行报告、命令与回退](reports/YJ-12-recovery-terminal-report.md) [脱敏回执](reports/evidence/YJ-12/run.json) · [各轮通过与失败](reports/evidence/YJ-12/regression.json)

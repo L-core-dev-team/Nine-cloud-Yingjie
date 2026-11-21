@@ -2,6 +2,14 @@
 
 更新：2026-11-21。
 
+## YJ-13 最新接续：任务书就绪，稳定性关口尚待执行
+
+- 已核对 `codex/yj-12-recovery-terminal@022d20a0a792ff52b9acfb9fa471c991b5e63755` 的远端 HEAD、[运行报告](reports/YJ-12-recovery-terminal-report.md)、[真实回归记录](reports/evidence/YJ-12/regression.json)与独立恢复代码。**本轮没有在用户 Windows/PG/Chrome 上重新执行测试**。
+- 原报告确认断网反馈与撤权后的同 UUID 核对、waiting/unknown 恢复、停写 `pg_dump/pg_restore` 及私有原件核查、Chrome 桌面/移动视口的定向通过。**但同一代码综合先 22/22，随即 18/22，四组在 `/api/auth/code` 返回 429，后续断言未执行。此项不能标记为稳定回归 PASS。**
+- 九霄固定上游认证源码有真实的 per-IP 每小时验证码请求配额、per-email 及全局上限；与报告限流现象一致，但**尚未读取本次限流计数证明是哪一层触发**。YJ-13 以隔离合成测试环境为首要任务，禁止关闭生产认证限流或无限重试。
+- 已从 YJ-12 完成提交新建 `codex/yj-13-local-demo-closeout`，提交[完整执行任务书](task-briefs/YJ-13-local-demo-closeout.md)；本轮只做任务书与交接，**YJ-13 业务代码、PG/HTTP/Chrome 实机和连续试玩均 NOT_RUN**。
+- YJ-13 应先验证完整回归连续可复现，再进行原角色卡 30–50 轮合成连续试玩、可复现演示入口/回退以及恢复复核。即使本地 LOCAL_DEMO_PASS，真实模型、独立图像审核、纠错替代生成、真机及生产仍保持未验证/阻塞。
+
 ## YJ-13 接续
 
 已在普通角色卡页验证断网反馈、撤权后的回执核对、未知请求防重，以及停写后的 PostgreSQL 和私有原件恢复。YJ-13 可从本地模拟连续试玩接续。[运行报告、命令与回退](reports/YJ-12-recovery-terminal-report.md)
