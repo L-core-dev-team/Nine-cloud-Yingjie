@@ -2,7 +2,11 @@
 
 更新：2026-11-21。
 
-## YJ-P01 第二阶段接续准备（本轮仅文档）
+## YJ-P01 当前交付
+
+**YJ-P01 OFFLINE_PASS，真实试点 LIVE_BLOCKED。** 原角色卡在合成数据上完成生成、参考编辑和保守留空；受信授权、预留上限、信息过滤与 unknown 重开防重已通过离线检查。 离线实现提交 `ec0196e`。纠错替代仍为 contract-adapter-required。仅在道主确认供应商、素材用途、上限、审核留存和真实调用授权后另起 P02。[复跑命令及证据](reports/YJ-P01-real-service-readiness-report.md)
+
+## 归档 · P01 开工前准备
 
 - 已核对 YJ-13 远端完成提交 `codex/yj-13-local-demo-closeout@2b54c28e8e587e05311b957c5437024c6ecb4271`，读取[本地报告](reports/YJ-13-local-demo-closeout-report.md)、最终隔离集群回归 22/22 ×2、限流复现记录、35+2 轮合成试玩与[运行手册](local-demo.md)。本轮没有独立在用户 Windows 环境运行这些命令，保留当次执行证据的界限。
 - YJ-13 为 **LOCAL_DEMO_PASS**，仅保证现有合成故事、三张原 PNG 和本地 mock 的原型。真实文字服务、图片生成/参考编辑 API 和其费用/审核能力仍为 NOT_RUN；纠错替代请求仍需要独立身份契约；手机真机与生产均未验证。

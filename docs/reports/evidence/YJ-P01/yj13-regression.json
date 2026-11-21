@@ -1,0 +1,49 @@
+{
+  "mode": "regression",
+  "head": "7f381cdf258a469c4358bd6d08a6f54881afce71",
+  "fixtureId": "591c5d13-e6fa-4adf-ab20-1d38ff696de5",
+  "exit": 1,
+  "signal": null,
+  "error": null,
+  "elapsedMs": 83910,
+  "before": {
+    "maxConnections": 100,
+    "ip": [],
+    "challenges": {
+      "accounts": 0,
+      "max_per_email": 0
+    },
+    "globalSent": 0
+  },
+  "after": {
+    "maxConnections": 100,
+    "ip": [
+      {
+        "identity": "unidentified",
+        "count": 10
+      },
+      {
+        "identity": "127.0.0.1",
+        "count": 2
+      }
+    ],
+    "challenges": {
+      "accounts": 12,
+      "max_per_email": 1
+    },
+    "globalSent": 12
+  },
+  "tests": {
+    "tests": 22,
+    "pass": 21,
+    "fail": 1,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [
+    "✖ saved ordinary session, pinned global version, scoped grants and reviewed presets through Chrome",
+    "✖ failing tests:",
+    "✖ saved ordinary session, pinned global version, scoped grants and reviewed presets through Chrome"
+  ]
+}

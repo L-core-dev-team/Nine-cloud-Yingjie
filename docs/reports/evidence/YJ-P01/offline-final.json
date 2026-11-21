@@ -1,0 +1,51 @@
+{
+  "status": "OFFLINE_PASS",
+  "node": "v26.13.0",
+  "tests": {
+    "cases": [
+      "offline contract runner has no network permission",
+      "CardModel sends only the cleared action and unsupported prose abstains",
+      "absent, revoked, expired, wrong scope and incomplete approvals never reach fake",
+      "scope, current facts and explicit material rights gate generation and editing",
+      "two connections share slots and never exceed count or total reservations",
+      "acknowledged failure keeps reservation and count boundary; refusal stays distinct",
+      "unconfirmed image cannot be resent after closing and reopening the ledger"
+    ],
+    "tests": 7,
+    "pass": 7,
+    "fail": 0,
+    "skipped": 0
+  },
+  "restart": [
+    {
+      "phase": "loss",
+      "fakeSends": 1,
+      "reservations": [
+        {
+          "state": "unknown",
+          "calls": 1,
+          "reservedUnits": 4
+        }
+      ],
+      "networkPermission": false
+    },
+    {
+      "phase": "reopen",
+      "fakeSends": 0,
+      "reservations": [
+        {
+          "state": "unknown",
+          "calls": 1,
+          "reservedUnits": 4
+        }
+      ],
+      "networkPermission": false
+    }
+  ],
+  "networkPermission": false,
+  "liveTextCalls": 0,
+  "liveImageCalls": 0,
+  "execution": "in-process fake; no network capability in any child",
+  "cost": null,
+  "usage": null
+}

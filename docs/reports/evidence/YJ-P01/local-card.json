@@ -1,0 +1,49 @@
+{
+  "status": "OFFLINE_PASS",
+  "browser": "158.0.8127.36",
+  "node": "v26.13.0",
+  "turns": [
+    {
+      "revision": 1,
+      "source": "completed-history",
+      "bodyHash": "b4bf16de90bc5d69bf5a154481fc98e37c766ac047e12bd2160929f004ffd0f4",
+      "state": "display",
+      "decision": "generate"
+    },
+    {
+      "revision": 2,
+      "source": "completed-history",
+      "bodyHash": "46a01bbbcfbf50ddef321db6535f19810782ff425948ebd73a543132b3c1c8c0",
+      "state": "display",
+      "decision": "edit"
+    },
+    {
+      "revision": 3,
+      "source": "completed-history",
+      "bodyHash": "da327c21dace1b5625c808d4566717e16bebac769ad56ebffee97f1fc88b2701",
+      "state": "not-ready",
+      "decision": null
+    }
+  ],
+  "operations": [
+    "text",
+    "generate",
+    "text",
+    "edit",
+    "text"
+  ],
+  "referenceSha256": "7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee",
+  "attempts": 2,
+  "reservations": [
+    {
+      "state": "returned",
+      "calls": 5,
+      "reservedUnits": 10
+    }
+  ],
+  "realTextCalls": 0,
+  "realImageCalls": 0,
+  "providerRequestId": null,
+  "usage": null,
+  "cost": null
+}

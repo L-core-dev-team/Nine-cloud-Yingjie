@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-**第二阶段准备入口：** [YJ-P01 真实文字/图片服务接入前置核查任务书](docs/task-briefs/YJ-P01-real-service-readiness.md)已提交到独立 `codex/yj-p01-real-service-readiness` 分支。**P01 业务代码与测试尚未执行，真实模型试点也没有获准。** 本地合成演示保持 YJ-13 `LOCAL_DEMO_PASS`，原成果不受影响。
+**YJ-P01 OFFLINE_PASS，真实试点 LIVE_BLOCKED。** 原角色卡在合成数据上完成生成、参考编辑和保守留空；受信授权、预留上限、信息过滤与 unknown 重开防重已通过离线检查。 [运行报告与真实试点条件](docs/reports/YJ-P01-real-service-readiness-report.md)
 
 **YJ-13 LOCAL_DEMO_PASS。** 完整隔离回归连续 22/22、22/22；原角色卡 35 轮、第二会话 2 轮，已实测启停、回退和 14 表配对恢复。 [本机试玩](docs/local-demo.md) · [运行报告与剩余条件](docs/reports/YJ-13-local-demo-closeout-report.md)
 

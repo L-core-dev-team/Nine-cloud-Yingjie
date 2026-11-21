@@ -2,7 +2,11 @@
 
 更新：2026-11-21。
 
-## YJ-13 完成证据核对与 P01 任务准备（本轮）
+## YJ-P01 当次验证
+
+**YJ-P01 OFFLINE_PASS，真实试点 LIVE_BLOCKED。** 原角色卡在合成数据上完成生成、参考编辑和保守留空；受信授权、预留上限、信息过滤与 unknown 重开防重已通过离线检查。 Node 禁网子进程 7/7，丢失确认后第二个进程零重发；回环 PG、Cookie HTTP 与真实 Chrome 检查三条 completed-history，fake 文字 3 次、图片 2 次。真实 API、供应商计费和独立图审 NOT_RUN。[分类证据与回归记录](reports/YJ-P01-real-service-readiness-report.md)
+
+## 归档 · YJ-13 完成证据核对与 P01 任务准备
 
 经 GitHub 核对 `codex/yj-13-local-demo-closeout@2b54c28e8e587e05311b957c5437024c6ecb4271`，读取[工程报告](reports/YJ-13-local-demo-closeout-report.md)、[最终回归1](reports/evidence/YJ-13/release-1.json)、[最终回归2](reports/evidence/YJ-13/release-2.json)、[限流回执](reports/evidence/YJ-13/limit-fixed.json)、[试玩与恢复记录](reports/evidence/YJ-13/)和实际启动脚本。源记录分别为 22/22、22/22，合成剧情 35+2 轮，图片任务 10、mock 发送 4，真实供应商调用 0。历史 YJ-12 22/22、18/22 仍保留；新集群限流可复现但原四次 429 的瞬时计数未能倒推。
 

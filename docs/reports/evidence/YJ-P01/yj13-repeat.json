@@ -1,0 +1,45 @@
+{
+  "mode": "regression",
+  "head": "ec0196e267f3dd4dcde5c8a731b09509c4c8beac",
+  "fixtureId": "b09a0e50-13a3-4bae-b45c-7ed2421d7890",
+  "exit": 0,
+  "signal": null,
+  "error": null,
+  "elapsedMs": 77329,
+  "before": {
+    "maxConnections": 100,
+    "ip": [],
+    "challenges": {
+      "accounts": 0,
+      "max_per_email": 0
+    },
+    "globalSent": 0
+  },
+  "after": {
+    "maxConnections": 100,
+    "ip": [
+      {
+        "identity": "unidentified",
+        "count": 11
+      },
+      {
+        "identity": "127.0.0.1",
+        "count": 2
+      }
+    ],
+    "challenges": {
+      "accounts": 13,
+      "max_per_email": 1
+    },
+    "globalSent": 13
+  },
+  "tests": {
+    "tests": 22,
+    "pass": 22,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": []
+}

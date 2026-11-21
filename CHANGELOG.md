@@ -1,5 +1,9 @@
 # 变更记录
 
+## 2026-11-21 YJ-P01
+
+**YJ-P01 OFFLINE_PASS，真实试点 LIVE_BLOCKED。** 原角色卡在合成数据上完成生成、参考编辑和保守留空；受信授权、预留上限、信息过滤与 unknown 重开防重已通过离线检查。 [报告](docs/reports/YJ-P01-real-service-readiness-report.md)
+
 ## 2026-11-21 YJ-13 收口核对与 P01 离线接入准备
 
 - 只读核对 YJ-13 的 LOCAL_DEMO_PASS 证据、两次 22/22、35+2 轮、14 表恢复与开关/账本范围；本轮未独立重跑原 Windows/PG/Chrome。
