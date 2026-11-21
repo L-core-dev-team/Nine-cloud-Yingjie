@@ -1,0 +1,68 @@
+{
+  "mode": "limit",
+  "head": "9c52f9edea6a5c062d1300d2a599a49543716834",
+  "fixtureId": "51d40dfd-3c35-45c6-b642-d6b24d97d70a",
+  "exit": 0,
+  "signal": null,
+  "error": null,
+  "elapsedMs": 5201,
+  "before": {
+    "maxConnections": 100,
+    "ip": [],
+    "challenges": {
+      "accounts": 0,
+      "max_per_email": 0
+    },
+    "globalSent": 0
+  },
+  "after": {
+    "maxConnections": 100,
+    "ip": [
+      {
+        "identity": "unidentified",
+        "count": 60
+      }
+    ],
+    "challenges": {
+      "accounts": 60,
+      "max_per_email": 1
+    },
+    "globalSent": 60
+  },
+  "rejection": {
+    "status": 429,
+    "code": "RATE_LIMITED",
+    "retryAfter": "60",
+    "before": {
+      "maxConnections": 100,
+      "ip": [
+        {
+          "identity": "unidentified",
+          "count": 60
+        }
+      ],
+      "challenges": {
+        "accounts": 60,
+        "max_per_email": 1
+      },
+      "globalSent": 60
+    },
+    "after": {
+      "maxConnections": 100,
+      "ip": [
+        {
+          "identity": "unidentified",
+          "count": 60
+        }
+      ],
+      "challenges": {
+        "accounts": 60,
+        "max_per_email": 1
+      },
+      "globalSent": 60
+    },
+    "origin": "loopback",
+    "requests": 61,
+    "group": "fresh synthetic account per request"
+  }
+}

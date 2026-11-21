@@ -1,0 +1,45 @@
+{
+  "mode": "play",
+  "head": "9c52f9edea6a5c062d1300d2a599a49543716834",
+  "fixtureId": "8dd4d221-2bf7-419c-b8bd-3429239fcdbd",
+  "exit": 1,
+  "signal": null,
+  "error": null,
+  "elapsedMs": 28255,
+  "before": {
+    "maxConnections": 100,
+    "ip": [],
+    "challenges": {
+      "accounts": 0,
+      "max_per_email": 0
+    },
+    "globalSent": 0
+  },
+  "after": {
+    "maxConnections": 100,
+    "ip": [
+      {
+        "identity": "unidentified",
+        "count": 1
+      }
+    ],
+    "challenges": {
+      "accounts": 1,
+      "max_per_email": 1
+    },
+    "globalSent": 1
+  },
+  "tests": {
+    "tests": 1,
+    "pass": 0,
+    "fail": 1,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [
+    "✖ original CardSession across two villages, ambiguity, full survey and isolated replays",
+    "✖ failing tests:",
+    "✖ original CardSession across two villages, ambiguity, full survey and isolated replays"
+  ]
+}

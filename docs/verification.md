@@ -2,7 +2,11 @@
 
 更新：2026-11-21。
 
-## YJ-12 原证据核对与 YJ-13 接续准备（本轮）
+## YJ-13 当前交付
+
+**YJ-13 LOCAL_DEMO_PASS。** 完整隔离回归连续 22/22、22/22；原角色卡 35 轮、第二会话 2 轮，已实测启停、回退和 14 表配对恢复。 [启动与回退](local-demo.md) · [回执索引和未验证条件](reports/YJ-13-local-demo-closeout-report.md)
+
+## YJ-13 开工前的历史复核
 
 只读核对 `codex/yj-12-recovery-terminal@022d20a0a792ff52b9acfb9fa471c991b5e63755`、[运行报告](reports/YJ-12-recovery-terminal-report.md)和[每次回归的原始记录](reports/evidence/YJ-12/regression.json)。原执行者记录契约 10/10、原 PNG 3/3、YJ-11 基线 20/20。YJ-12 定向测试与停写 PostgreSQL 14 表+图片文件隔离恢复通过；综合一次 22/22，随后的同代码一次 18/22，四组浏览器用例因 `/api/auth/code` HTTP 429 未继续验证。**本轮没有独立重跑这些检查；429 的具体配额来源未证实，不能写稳定全绿。**
 

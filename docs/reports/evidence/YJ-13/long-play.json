@@ -1,0 +1,41 @@
+{
+  "mode": "play",
+  "head": "9c52f9edea6a5c062d1300d2a599a49543716834",
+  "fixtureId": "777a6894-e9ab-414d-9679-f4534e46d15c",
+  "exit": null,
+  "signal": "SIGTERM",
+  "error": "ETIMEDOUT",
+  "elapsedMs": 532117,
+  "before": {
+    "maxConnections": 100,
+    "ip": [],
+    "challenges": {
+      "accounts": 0,
+      "max_per_email": 0
+    },
+    "globalSent": 0
+  },
+  "after": {
+    "maxConnections": 100,
+    "ip": [
+      {
+        "identity": "unidentified",
+        "count": 1
+      }
+    ],
+    "challenges": {
+      "accounts": 1,
+      "max_per_email": 1
+    },
+    "globalSent": 1
+  },
+  "tests": {
+    "tests": null,
+    "pass": null,
+    "fail": null,
+    "cancelled": null,
+    "skipped": null,
+    "todo": null
+  },
+  "failures": []
+}

@@ -1,0 +1,41 @@
+{
+  "mode": "terminal",
+  "head": "aba459ec3a3d01d063ede1aa60455bcabe842d15",
+  "fixtureId": "a0ac2a8b-4348-4935-8a3f-4e837183fbdf",
+  "exit": 0,
+  "signal": null,
+  "error": null,
+  "elapsedMs": 17110,
+  "before": {
+    "maxConnections": 100,
+    "ip": [],
+    "challenges": {
+      "accounts": 0,
+      "max_per_email": 0
+    },
+    "globalSent": 0
+  },
+  "after": {
+    "maxConnections": 100,
+    "ip": [
+      {
+        "identity": "unidentified",
+        "count": 2
+      }
+    ],
+    "challenges": {
+      "accounts": 2,
+      "max_per_email": 1
+    },
+    "globalSent": 2
+  },
+  "tests": {
+    "tests": 2,
+    "pass": 2,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": []
+}

@@ -1,0 +1,48 @@
+{
+  "initial": {
+    "revision": 1,
+    "historyBefore": 0,
+    "historyAfter": 1,
+    "mockSends": 0,
+    "digest": "950b77895063ee02f9bda6222208c40378706b658aec3f98dfe102b0ad63aac2",
+    "browser": "157.0.8103.79"
+  },
+  "reopened": {
+    "revision": 1,
+    "historyBefore": 1,
+    "historyAfter": 1,
+    "mockSends": 0,
+    "digest": "950b77895063ee02f9bda6222208c40378706b658aec3f98dfe102b0ad63aac2",
+    "browser": "157.0.8103.79"
+  },
+  "diagnostic": {
+    "completed": 1,
+    "counts": {
+      "scene.event": 1,
+      "image.task": 0,
+      "image.attempt": 0,
+      "image.asset": 0,
+      "history.review_event": 0
+    },
+    "attemptsByOutcome": []
+  },
+  "advanced": {
+    "revision": 2,
+    "historyBefore": 1,
+    "historyAfter": 2,
+    "mockSends": 0,
+    "digest": "3b7de131514f93ea8dfd934c8e56d986af59d55fdcbb2d3ab7e945edae252303",
+    "browser": "157.0.8103.79"
+  },
+  "recovered": {
+    "revision": 1,
+    "historyBefore": 1,
+    "historyAfter": 1,
+    "mockSends": 0,
+    "digest": "950b77895063ee02f9bda6222208c40378706b658aec3f98dfe102b0ad63aac2",
+    "browser": "157.0.8103.79"
+  },
+  "restore": "separate stopped same-host copy",
+  "realTextCalls": 0,
+  "realImageCalls": 0
+}

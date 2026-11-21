@@ -2,7 +2,11 @@
 
 更新：2026-11-21。
 
-## YJ-13 最新接续：任务书就绪，稳定性关口尚待执行
+## YJ-13 当前交付
+
+**YJ-13 LOCAL_DEMO_PASS。** 完整隔离回归连续 22/22、22/22；原角色卡 35 轮、第二会话 2 轮，已实测启停、回退和 14 表配对恢复。 [启动与回退](local-demo.md) · [回执索引和未验证条件](reports/YJ-13-local-demo-closeout-report.md)
+
+## YJ-13 开工前的历史复核
 
 - 已核对 `codex/yj-12-recovery-terminal@022d20a0a792ff52b9acfb9fa471c991b5e63755` 的远端 HEAD、[运行报告](reports/YJ-12-recovery-terminal-report.md)、[真实回归记录](reports/evidence/YJ-12/regression.json)与独立恢复代码。**本轮没有在用户 Windows/PG/Chrome 上重新执行测试**。
 - 原报告确认断网反馈与撤权后的同 UUID 核对、waiting/unknown 恢复、停写 `pg_dump/pg_restore` 及私有原件核查、Chrome 桌面/移动视口的定向通过。**但同一代码综合先 22/22，随即 18/22，四组在 `/api/auth/code` 返回 429，后续断言未执行。此项不能标记为稳定回归 PASS。**

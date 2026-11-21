@@ -1,0 +1,47 @@
+{
+  "mode": "regression",
+  "head": "72fb24d753386c71d33a084d153281dc5ede9e91",
+  "fixtureId": "900834c1-acff-4bfc-9592-cd7f02010f62",
+  "exit": 1,
+  "signal": null,
+  "error": null,
+  "elapsedMs": 73709,
+  "before": {
+    "ip": [],
+    "challenges": {
+      "accounts": 0,
+      "max_per_email": 0
+    },
+    "globalSent": 0
+  },
+  "after": {
+    "ip": [
+      {
+        "identity": "unidentified",
+        "count": 10
+      },
+      {
+        "identity": "127.0.0.1",
+        "count": 2
+      }
+    ],
+    "challenges": {
+      "accounts": 12,
+      "max_per_email": 1
+    },
+    "globalSent": 12
+  },
+  "tests": {
+    "tests": 22,
+    "pass": 21,
+    "fail": 1,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "failures": [
+    "✖ original card history, protected originals and append-only correction across processes",
+    "✖ failing tests:",
+    "✖ original card history, protected originals and append-only correction across processes"
+  ]
+}
