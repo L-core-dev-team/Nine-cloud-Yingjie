@@ -1,5 +1,11 @@
 # 变更记录
 
+## 2026-11-21 YJ-11 证据核对与 YJ-12 开工准备
+
+- 确认 YJ-11 完成分支 HEAD，阅读原运行报告、三次 20/20 回归及反馈、原件、会话鉴权代码；没有在用户 Windows 环境重跑。
+- 创建 `codex/yj-12-recovery-terminal`，提交[断网、重启、乱序与终端稳定性任务书](docs/task-briefs/YJ-12-recovery-terminal.md)，更新接手、看板、验证与首页。
+- 明确反馈已提交但回执丢失、原件撤权时的幂等核对边界；PG 与原件的隔离恢复、真机与真实供应商尚未执行。YJ-12 业务实现仍 NOT_RUN。
+
 ## 2026-11-21 YJ-11 图片历史与审阅纠错
 
 原角色卡新增逐轮历史、受保护原件预览与问题反馈。PG 追加记录审阅和撤下，当前画面及编辑参考随之重新核验。历史替代请求在契约适配前返回 `contract-adapter-required`。[运行证据](docs/reports/YJ-11-image-history-corrections-report.md)

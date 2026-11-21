@@ -2,6 +2,13 @@
 
 更新：2026-11-21。
 
+## 最新接续：YJ-12 完整任务书就绪（业务未开始）
+
+- 已核对 `codex/yj-11-image-history-corrections@4ea1f354181216a7fcfc7833a898f9e02f2630bf` 与[原运行报告](reports/YJ-11-image-history-corrections-report.md)、[回归回执](reports/evidence/YJ-11/regression.json)。原执行记录有契约 10/10、综合三次 20/20、11 轮合成历史与 6 次本地 mock；本次未在 Windows PG/Chrome 环境重新运行。
+- 从 YJ-11 成果创建 `codex/yj-12-recovery-terminal`，已提交[完整 YJ-12 任务书](task-briefs/YJ-12-recovery-terminal.md)。**此轮只创建任务书和接手文档，YJ-12 新代码、断网实验和备份恢复均 NOT_RUN。**
+- 定向审阅发现：反馈接口先核验目标再查询已提交同 UUID 命令，浏览器刷新又可能丢失只存在 useRef 的命令。YJ-12 须对“反馈已提交、响应丢失、随后图片撤权”做有权限且不重复的恢复，并防止旧账号/会话借回执取得原件。
+- YJ-12 还应验证等待/未知的发送归属，账号切换和迟到、前端离线与窄屏，以及合成测试 PG + 私有原件共同恢复。真实图片 API、独立人工审图、生产和手机真机仍未验证。纠错替代仍 `blocked:contract-adapter-required`；不绕过唯一任务约束。
+
 ## YJ-12 接续
 
 使用 `codex/yj-11-image-history-corrections` 的实际最新提交。图片历史按本会话已保存正文修订分页，反馈命令与任务请求分别去重。保留 `yingjie_history`、原任务表及原件目录，也保留预设撤下检查。YJ-12 应验证断网期间的反馈回执恢复、真机切换账户、旧请求乱序与长期备份恢复。仅在扩展受信请求契约后接入纠错替代。真实服务、独立人工审图与正式部署仍为 NOT_RUN。[运行报告及复跑说明](reports/YJ-11-image-history-corrections-report.md)
