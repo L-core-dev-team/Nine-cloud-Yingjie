@@ -9,7 +9,9 @@ if (execFileSync("git", ["-C",upstream,"rev-parse","HEAD"],{encoding:"utf8"}).tr
     "cd25360c7929e10f8b2b0fad342fedd943d4f323") throw Error("wrong-upstream");
 export const requireApi = createRequire(join(upstream,"apps/api/package.json"));
 const { Pool } = requireApi("pg");
-const state = JSON.parse(readFileSync(join(upstream,".cards-local/state.json"),"utf8"));
+export const clusterDir = process.env.YJ13_CLUSTER || join(upstream,".cards-local");
+const state = JSON.parse(readFileSync(join(clusterDir,"state.json"),"utf8"));
+if(process.env.YJ13_CLUSTER && state.format!=="yj13-local-v1")throw Error("wrong-isolated-cluster");
 if (!state.installed || !Number.isInteger(state.port)) throw Error("local-demo-not-installed");
 const address = { host:"127.0.0.1",port:state.port,connectionTimeoutMillis:3000 };
 export function cardRuntime() {
