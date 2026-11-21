@@ -4,6 +4,8 @@
 
 ## 当前状态
 
+**最新接口交互要求：** 道主希望使用 [L1 一次性 API Key 安全输入页面](docs/task-briefs/YJ-P02-L1-key-entry-ui.md)，而不是手工设置 PowerShell 环境变量。当前只准备任务书；输入页、地址和真实 API 运行均尚未交付。原 $0.10、单次合成 Luna 文字授权不变，图片与私人素材外发仍禁止。
+
 **YJ-P02-L1 文字适配 OFFLINE_PASS，真实试点 LIVE_BLOCKED。** 受信进程缺少密钥，项目访问权限尚未核实。真实文字和图片调用均为 0。原角色卡的模拟回合已由 Chrome、PostgreSQL 和映界提取共同核对。[运行报告和复跑入口](docs/reports/YJ-P02-L1-luna-text-smoke-report.md)
 
 **原 P02 准备记录，已选真实供应商：OpenAI API。** 道主已确认在映界下一阶段使用自己的 OpenAI API 账户。已在 `codex/yj-p02-openai-adapter` 创建[官方协议适配与受控试点任务书](docs/task-briefs/YJ-P02-openai-adapter.md)；**本次只有任务书和交接，OpenAI adapter 业务代码、实际接口调用与测试尚未执行**。具体模型只是候选；API Project 权限、外发素材、预算和真实请求授权未确认，真实发送必须保持关闭。
