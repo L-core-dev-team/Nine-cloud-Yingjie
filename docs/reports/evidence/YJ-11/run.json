@@ -1,0 +1,54 @@
+{
+  "browser": "157.0.8103.79",
+  "viewport": [
+    390,
+    844
+  ],
+  "turns": 11,
+  "pages": [
+    8,
+    3
+  ],
+  "refusal": [
+    "waiting",
+    "refused"
+  ],
+  "delayedSessionRead": "discarded",
+  "attempts": [
+    "failed",
+    "returned"
+  ],
+  "mockSends": 6,
+  "sameDigestDistinctAssets": 3,
+  "unknownRestart": {
+    "outcomes": [
+      "unknown"
+    ],
+    "media": 0,
+    "replacement": "contract-adapter-required",
+    "sends": 0
+  },
+  "lateOriginalStatus": "review-pending",
+  "tasksAddedByFeedback": 0,
+  "feedbackSends": 0,
+  "dismissedKeepsOriginal": 200,
+  "duplicateCommands": 14,
+  "concurrentDecisions": [
+    "invalidated",
+    "stale-review"
+  ],
+  "audit": [
+    "pending",
+    "accepted",
+    "rejected"
+  ],
+  "withdrawnCurrent": 404,
+  "withdrawnHistorical": 404,
+  "withdrawnReference": "invalidated",
+  "digestFailure": 404,
+  "revoked": 404,
+  "deleted": 403,
+  "otherAccount": 403,
+  "otherSession": 404,
+  "realProviderCalls": 0
+}

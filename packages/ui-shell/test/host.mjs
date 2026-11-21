@@ -45,7 +45,8 @@ export async function withHost(pool,run,storage,play) {
     const {selectWorldbookEntries}=await load("card-import/worldbook.js");
     const world=new WorldAssets(runtime.pool,pool,selectWorldbookEntries,storage);
     if(play)await pool.query(await readFile(new URL("../../first-play/schema.sql",import.meta.url),"utf8"));
-    mountDemoRoutes(app,tasks,origin,world,Boolean(play),play?.extractor,!play?.archivedSelection);
+    if(play)await pool.query(await readFile(new URL("../../image-history/schema.sql",import.meta.url),"utf8"));
+    const history=mountDemoRoutes(app,tasks,origin,world,Boolean(play),play?.extractor,!play?.archivedSelection);
     app.get("/compliance/beian-police.png",async c=>{
       c.header("Content-Type","image/png");return c.body(await readFile(join(root,"public/compliance/beian-police.png")));
     });
@@ -57,7 +58,7 @@ export async function withHost(pool,run,storage,play) {
       c.header("Content-Type",file.endsWith(".css")?"text/css":"text/javascript");
       return c.body(await readFile(join(output,"assets",file)));
     });
-    await run({origin,codes,tasks,world});
+    await run({origin,codes,tasks,world,history});
   } finally {
     if(server){server.closeAllConnections();await new Promise(resolve=>server.close(resolve));}
     await runtime.pool.end();

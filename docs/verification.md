@@ -1,8 +1,12 @@
 # 映界验证记录
 
-更新：2026-11-20。
+更新：2026-11-21。
 
-## YJ-10 提交证据复核与 YJ-11 准备（本轮）
+## YJ-11 本地验收
+
+普通角色卡页保存 11 轮合成剧情，历史分页 8＋3。验收覆盖真实 Cookie、PG 事务、跨进程审阅竞争、故障回滚、同摘要资产隔离、未知回执和迟到。浏览器及原件均在本机运行，图片发送使用 mock。[脱敏回执](reports/evidence/YJ-11/run.json) · [回归与复跑说明](reports/YJ-11-image-history-corrections-report.md)
+
+## YJ-10 提交证据复核与 YJ-11 准备（归档）
 
 已只读核对 `codex/yj-10-trigger-consistency@95cb7a9145f914c2b72196730891a46e215ed5af`，读取[实现报告](reports/YJ-10-trigger-consistency-report.md)、[14 轮回执](reports/evidence/YJ-10/run.json)、[回归记录](reports/evidence/YJ-10/regression.json)与现有 PG/选择/审阅代码。原报告记录契约 10/10、原 PNG 3/3、综合两次 19/19；错三人图用于五人目标时审阅拒绝，相关资产没有成为当前图或参考图。09 的历史并行超时在 10 的七次并行运行中未复现，但根因未查清。**这都是源报告证据，本轮未在原运行环境复跑。**
 

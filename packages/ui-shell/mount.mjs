@@ -5,11 +5,11 @@ export function yingjiePlugin(webRoot) {
   const dir=join(webRoot,"src","routes").replaceAll("\\","/");
   return {name:"yingjie-card-session",enforce:"pre",
     resolveId(id,importer) {
-      if(importer?.replaceAll("\\","/").startsWith(dir+"/") && ["./YingjiePanel","./yingjie.css"].includes(id))
-        return dir+"/"+(id==="./YingjiePanel"?"YingjiePanel.tsx":"yingjie.css");
+      if(importer?.replaceAll("\\","/").startsWith(dir+"/") && ["./YingjiePanel","./ImageHistory","./yingjie.css"].includes(id))
+        return dir+"/"+(id.endsWith(".css")?"yingjie.css":id.slice(2)+".tsx");
     },
     load(id) {
-      for(const name of ["YingjiePanel.tsx","yingjie.css"])if(id.replaceAll("\\","/")===dir+"/"+name)
+      for(const name of ["YingjiePanel.tsx","ImageHistory.tsx","yingjie.css"])if(id.replaceAll("\\","/")===dir+"/"+name)
         return readFileSync(new URL(name,import.meta.url),"utf8");
     },
     transform(code,id) {

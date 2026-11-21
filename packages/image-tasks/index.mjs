@@ -101,6 +101,7 @@ export class ImageTasks {
       const prior=await one(db,"SELECT * FROM yingjie_image.attempt WHERE task=$1 ORDER BY ordinal DESC LIMIT 1",[taskId]);
       if(prior && !(retry && nextAttemptAction(prior.record,true)==="eligible-for-policy-review"))return "already-claimed";
       const capability=task.plan.action==="generate"?this.capability.generate:this.capability.referenceEdit;
+      if(task.plan.action==="edit")await db.query("SELECT id FROM yingjie_image.asset WHERE scope=$1 AND id=$2 FOR SHARE",[ctx.scope,task.plan.reference.assetId]);
       const ref=capability==="supported"?await this.reference(db,ctx,task.plan):{ok:false,reason:"capability-unverified"};
       const time=now(),id=randomUUID();
       const attempt=AttemptSchema.parse({schemaVersion,attemptId:id,requestKey:task.request_key,capability:this.capability,

@@ -38,7 +38,7 @@ const associated = `
     WHERE i.kind=CASE WHEN r.kind='embedded' THEN 'card' ELSE 'worldbook' END
     ORDER BY r.kind,i.id`;
 
-export async function readSources(cards,projection,ctx) {
+export async function readSources(cards,projection,ctx,liveRevision=ctx.revision) {
   if (!ctx.authorized) throw Error("account-inaccessible");
   const scene=SceneSchema.parse(ctx.result.scene), visual=VisualSchema.parse(ctx.result.visual);
   const src=visual.source;
@@ -51,7 +51,7 @@ export async function readSources(cards,projection,ctx) {
   // Only actual session.card_id can grant access. A stale grant to a previous card cannot open its document.
   const cardIds=bindings.map(row=>row.card_id);
   const { rows }=await cards.query(associated,
-    [src.ownerId,src.sessionId,src.revision,cardIds,ids,bindings.map(row=>row.import_sha)]);
+    [src.ownerId,src.sessionId,liveRevision,cardIds,ids,bindings.map(row=>row.import_sha)]);
   if (!rows.some(r=>r.kind==="embedded")) throw Error("session-inaccessible");
   return {bindings:bindings.filter(b=>b.card_id===rows[0].card_id),sources:rows.filter(r=>r.has_book)};
 }

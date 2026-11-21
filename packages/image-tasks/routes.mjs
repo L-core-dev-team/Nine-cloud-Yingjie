@@ -1,3 +1,4 @@
+import { mountHistory } from "../image-history/routes.mjs";
 import { syncCardHistory } from "../scene-state/index.mjs";
 import { cardScope } from "../scene-state/store.mjs";
 import { annotate,demoPlan,reviewFixture } from "./demo.mjs";
@@ -28,6 +29,7 @@ export function mountDemoRoutes(app,tasks,origin,worldAssets,automatic=false,ext
     }
     return {authorized:true,scope:cardScope(owner,id),...snapshot,action};
   }
+  const history=automatic?mountHistory(app,path,tasks,worldAssets,context,origin):null;
   const handle=async c=>{
     try {
       if(c.req.method==="POST" && c.req.header("origin")!==origin) return c.body(null,403);
@@ -92,4 +94,5 @@ export function mountDemoRoutes(app,tasks,origin,worldAssets,automatic=false,ext
     }
   };
   app.get(path,handle);app.post(path,handle);app.get(path+"/original/:asset",handle);app.get(path+"/preset/:preset",handle);
+  return history;
 }

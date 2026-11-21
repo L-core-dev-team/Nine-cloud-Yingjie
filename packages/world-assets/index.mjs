@@ -101,12 +101,15 @@ export class WorldAssets {
   constructor(cards,projection,selectEntries,storage) {
     Object.assign(this,{cards,projection,selectEntries,storage});
   }
-  async resolve(ctx) {
+  async resolve(ctx,liveRevision=ctx.revision,projection=this.projection) {
     if (!ctx.authorized) throw Error("account-inaccessible");
     if (ctx.result.status!=="ready") return miss(ctx.result.reason??"no-history",
       ctx.result.reason==="ambiguous-place"?"ambiguous":"not-ready");
-    const sources=await readSources(this.cards,this.projection,ctx);
+    const sources=await readSources(this.cards,projection,ctx,liveRevision);
     const place=matchPlace(ctx,sources,this.selectEntries);
-    return selectPreset(ctx,place,this.storage);
+    const preset=await selectPreset(ctx,place,this.storage);
+    if(preset.status==="matched" && await this.presetWithdrawn?.(ctx.scope,preset.handle,projection))
+      return {...miss("review-ineligible"),withdrawn:preset.handle};
+    return preset;
   }
 }

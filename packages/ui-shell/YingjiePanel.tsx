@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./yingjie.css";
+import {ImageHistory} from "./ImageHistory";
 
 const automatic=import.meta.env.YJ_AUTOMATIC === true;
 type Props = {owner:string; sessionId:string; revision:number};
@@ -82,5 +83,6 @@ export function YingjiePanel({owner,sessionId,revision}:Props) {
       {current?.trigger==="people-changed" && ["queued","waiting"].includes(state) && <span>人物变化，画面待更新</span>}
       {current?.version&&<span>{current.version} · {current.people} 人</span>}</figcaption>
     </figure>
+    {automatic && <ImageHistory key={key} path={path} owner={owner} revision={revision}/>}
   </section>;
 }
