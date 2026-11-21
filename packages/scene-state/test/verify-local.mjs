@@ -1,3 +1,6 @@
+import { createHash } from "node:crypto";
+import { createServer } from "node:net";
+import { tmpdir } from "node:os";
 import { spawnSync } from "node:child_process";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
@@ -13,6 +16,14 @@ function ctl(...args) {
   if (r.error) throw r.error;
   return r.status;
 }
+// Only one wrapper may manage pg_ctl for a given cluster while its child tests are running.
+const lockName="yj-pg-"+createHash("sha256").update(data).digest("hex").slice(0,24);
+const lockPath=process.platform==="win32"?"\\\\.\\pipe\\"+lockName:join(tmpdir(),lockName+".sock");
+const lease=createServer(socket=>socket.end());
+if(bin)await new Promise((resolve,reject)=>{
+  lease.once("error",error=>reject(error.code==="EADDRINUSE"?Error("validation-owner-active"):error));
+  lease.listen(lockPath,resolve);
+});
 let started=false;
 try {
   if (bin) {
@@ -29,5 +40,6 @@ try {
   if (r.error) throw r.error;
   process.exitCode=r.status ?? 1;
 } finally {
-  if (started && ctl("-m","fast","-w","stop")!==0) throw Error("local-postgres-stop-failed");
+  try{if (started && ctl("-m","fast","-w","stop")!==0) throw Error("local-postgres-stop-failed");}
+  finally{if(bin)await new Promise(resolve=>lease.close(resolve));}
 }

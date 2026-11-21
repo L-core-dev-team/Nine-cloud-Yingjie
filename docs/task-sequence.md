@@ -2,9 +2,9 @@
 
 更新：2026-11-21。
 
-**YJ-12 开工入口：** [断网、重启、乱序响应与终端稳定性完整任务书](task-briefs/YJ-12-recovery-terminal.md)已提交到独立分支。YJ-11 本地工程完成；YJ-12 业务与新增测试未运行。恢复不应重复反馈、重复外部发送或让失权旧图重新展示。
+**当前接续为 YJ-13。** 已在普通角色卡页验证断网反馈、撤权后的回执核对、未知请求防重，以及停写后的 PostgreSQL 和私有原件恢复。YJ-13 可从本地模拟连续试玩接续。[运行报告、命令与回退](reports/YJ-12-recovery-terminal-report.md)
 
-**当前接续为 YJ-12。** YJ-11 已交付本会话图片历史、独立原件核权、反馈与受信撤下。YJ-12 继续核验断网、跨设备、乱序与恢复。[YJ-11 运行报告](reports/YJ-11-image-history-corrections-report.md)
+**YJ-11 交付记录。** YJ-11 已交付本会话图片历史、独立原件核权、反馈与受信撤下。YJ-12 继续核验断网、跨设备、乱序与恢复。[YJ-11 运行报告](reports/YJ-11-image-history-corrections-report.md)
 
 **YJ-10 交付记录**　YJ-10 本地实现与验证已完成。原普通角色卡 14 轮共 4 次模拟发送，错图被拒后连续两轮交谈均未重发。最终两次综合回归各 19/19，真实模型调用 0。YJ-11 可按资产原归属及最新授权消费审阅、选择和拒绝记录。[报告与接口](reports/YJ-10-trigger-consistency-report.md)
 
@@ -55,7 +55,7 @@ YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。YJ
 | YJ-09 | 已完成本地交付 | 25 轮复访及未知恢复、版本化重放与原流程回归通过。[报告及回执](reports/YJ-09-revisit-continuity-report.md) |
 | YJ-10 | 本地实现与验证已完成 | 已确认视觉变化触发、普通交谈抑制、审阅和参考资格、可知事实过滤。[运行报告](reports/YJ-10-trigger-consistency-report.md) |
 | YJ-11 | 本地工程验证完成 | [历史、反馈、纠错与资格撤下](reports/YJ-11-image-history-corrections-report.md)；替代生成等待独立请求契约 |
-| YJ-12 | 待开始；任务书已上传 | [断网反馈恢复、跨账号隔离、任务 unknown 与 PG/原件恢复演练](task-briefs/YJ-12-recovery-terminal.md)，新增业务/测试 NOT_RUN |
+| YJ-12 | 已完成（本地验证） | [反馈恢复、跨进程与终端验收、PG 和原件恢复](reports/YJ-12-recovery-terminal-report.md) |
 | YJ-13 | 待开始 | 连续试玩与初代交接，须区分本地 mock 和真实模型缺口 |
 | YJ-M01 | 后续待开始 | 地图具体组织方式尚未确定 |
 

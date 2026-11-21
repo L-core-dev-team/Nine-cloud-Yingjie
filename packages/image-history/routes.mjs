@@ -41,6 +41,8 @@ export function mountHistory(app,path,tasks,world,context,origin){
     if(!checked.bytes || checked.generation!==target.generation)return c.body(null,404);
     c.header("Content-Type","image/png");return c.body(checked.bytes);
   }));
+  app.get(path+"/feedback/:command",handle(async(c,ctx)=>
+    c.json(await history.receipt(ctx,c.req.param("command"),c.req.header("x-yj-fingerprint")))));
   app.post(path+"/feedback",handle(async(c,ctx)=>c.json(await history.report(ctx,await feedbackBody(c.req.raw)))));
   return history;
 }

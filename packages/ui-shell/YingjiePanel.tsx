@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./yingjie.css";
 import {ImageHistory} from "./ImageHistory";
 
@@ -6,6 +6,7 @@ const automatic=import.meta.env.YJ_AUTOMATIC === true;
 type Props = {owner:string; sessionId:string; revision:number};
 type Frame = {trigger?:string; decision?:string; source?:"preset"|"tasks"|undefined; reason?:string; tags?:string[]; state:string; revision:number; scene:string|null; version:string|null; people:number|null; assetId:string|null};
 const messages:Record<string,string>={
+  offline:"网络已断开，恢复后重新核对画面与反馈。",
   "no-match":"没有可用的预设图。",ambiguous:"地点或素材有歧义，暂不展示。",
   "ledger-review":"历史图片请求待核对，文字行动可继续。",
   "verify-scene":"当前画面待核实，仍可继续文字行动。",
@@ -26,7 +27,7 @@ const presetReasons:Record<string,string>={
   "review-ineligible":"预设图审阅未通过或已失效。","invalid-original":"预设原件校验失败。","missing-original":"预设原件缺失。"
 };
 function readPreference(key:string) {
-  try { const saved=JSON.parse(sessionStorage.getItem(key)||"null");
+  try { const saved=JSON.parse(localStorage.getItem(key)||sessionStorage.getItem(key)||"null");
     if(saved && typeof saved.id==="string" && Number.isSafeInteger(saved.serial) && typeof saved.enabled==="boolean")return saved;
   } catch { /* Private browsing can disable local storage. */ }
   return {id:crypto.randomUUID(),serial:0,enabled:true,preset:false};
@@ -38,10 +39,44 @@ export function YingjiePanel({owner,sessionId,revision}:Props) {
   const [broken,setBroken]=useState("");
   const path="/api/yingjie/"+encodeURIComponent(sessionId);
   const query="?view="+encodeURIComponent(pref.id)+"&seq="+pref.serial+(pref.preset?"&source=preset":"");
+  const [ready,setReady]=useState(false),[awake,setAwake]=useState(true),[epoch,wake]=useState(0);
+  const sequence=useRef(0),resumeOnly=useRef(false);
+  const token=key+":"+revision+":"+query+":"+epoch;
+  const currentToken=useRef(token);currentToken.current=token;
+  async function preference(change?:"enabled"|"preset"){
+    if(!navigator.locks){setReady(false);setFrame(null);return;}
+    await navigator.locks.request(key,()=>{
+      const next=readPreference(key);
+      if(change && next.id===pref.id && next.serial===pref.serial){next[change]=!next[change];next.serial++;}
+      localStorage.setItem(key,JSON.stringify(next));sessionStorage.setItem(key,JSON.stringify(next));
+      setPref(previous=>previous.id===next.id && previous.serial===next.serial && previous.enabled===next.enabled && previous.preset===next.preset?previous:next);setReady(true);
+    }).catch(()=>{setReady(false);setFrame(null);});
+  }
   useEffect(()=>{
+    void preference();
+    function lifecycle(event?:Event){
+      sequence.current++;setFrame(null);setBroken("");
+      resumeOnly.current=true;
+      const active=event?.type!=="pagehide" && event?.type!=="freeze" && !document.hidden && navigator.onLine;
+      setAwake(active);if(active)void preference();wake(n=>n+1);
+    }
+    function storage(e:StorageEvent){if(e.key===key)lifecycle();}
+    window.addEventListener("storage",storage);
+    for(const name of ["online","offline","pageshow","pagehide"])window.addEventListener(name,lifecycle);
+    for(const name of ["visibilitychange","freeze","resume"])document.addEventListener(name,lifecycle);
+    return ()=>{sequence.current++;window.removeEventListener("storage",storage);
+      for(const name of ["online","offline","pageshow","pagehide"])window.removeEventListener(name,lifecycle);
+      for(const name of ["visibilitychange","freeze","resume"])document.removeEventListener(name,lifecycle);};
+  },[key]);
+  useEffect(()=>{
+    if(!ready||!awake)return;
+    const request=++sequence.current;
+    const valid=()=>request===sequence.current && token===currentToken.current;
     const ctl=new AbortController();
     let timer:ReturnType<typeof setTimeout>;
-    try {sessionStorage.setItem(key,JSON.stringify(pref));}catch{}
+
+    const observed=key+":last-view",stamp=query+"@"+revision;
+    const readOnly=resumeOnly.current || sessionStorage.getItem(observed)===stamp;
     async function refresh(first:boolean) {
       try {
         const r=await fetch(path+query,{method:first?"POST":"GET",credentials:"same-origin",cache:"no-store",
@@ -49,31 +84,42 @@ export function YingjiePanel({owner,sessionId,revision}:Props) {
           ...(first?{body:JSON.stringify({enabled:pref.enabled})}:{})});
         if(!r.ok)throw Error("view-unavailable");
         const next=await r.json();
-        if(!ctl.signal.aborted){
+        if(valid() && !ctl.signal.aborted){
+          if(r.headers.get("x-yj-owner")!==owner || r.headers.get("x-yj-session")!==sessionId ||
+            r.headers.get("x-yj-permit")!==pref.id || r.headers.get("x-yj-serial")!==String(pref.serial))throw Error("view-mismatch");
+          if(r.headers.get("x-yj-revision")!==String(next.revision) || next.revision<revision){
+            setFrame(null);timer=setTimeout(()=>void refresh(false),500);return;
+          }
+          if(next.state==="display"){
+            const auth=await fetch("/api/auth/session",{credentials:"same-origin",cache:"no-store",signal:ctl.signal});
+            if(!auth.ok || (await auth.json()).account?.id!==owner)throw Error("account-changed");
+            if(!valid() || ctl.signal.aborted)return;
+          }
+          if(first && next.revision===revision)sessionStorage.setItem(observed,stamp);
           setFrame(next);
           if(pref.enabled && next.revision<=revision){
             const behind=next.revision<revision;
             const unclaimed=next.state==="unscheduled" || next.state==="queued";
             const waiting=behind || unclaimed || next.state==="waiting" || next.state==="review-pending";
-            timer=setTimeout(()=>void refresh(automatic && !behind && unclaimed),waiting?300:1800);
+            timer=setTimeout(()=>void refresh(!readOnly && automatic && !behind && unclaimed),waiting?300:1800);
           }
         }
-      } catch { if(!ctl.signal.aborted)setFrame({source:pref.preset?"preset":undefined,revision,state:"unavailable",scene:null,version:null,people:null,assetId:null}); }
+      } catch { if(valid() && !ctl.signal.aborted)setFrame({source:pref.preset?"preset":undefined,revision,state:"unavailable",scene:null,version:null,people:null,assetId:null}); }
     }
-    void refresh(true);
-    return ()=>{ctl.abort();clearTimeout(timer);};
-  },[path,query,owner,revision,key,pref]);
+    void refresh(!readOnly);resumeOnly.current=false;
+    return ()=>{sequence.current++;ctl.abort();clearTimeout(timer);};
+  },[path,query,owner,revision,key,pref,ready,awake,epoch]);
   const current=frame?.revision===revision && (automatic || (frame.source==="preset")===Boolean(pref.preset))?frame:null;
-  const state=!pref.enabled?"disabled":current?.state??"queued";
+  const state=!awake?"offline":!ready?"unavailable":!pref.enabled?"disabled":current?.state??"queued";
   const src=state==="display" && current?.assetId ? path+(current.source==="preset"?"/preset/":"/original/")+current.assetId+query : "";
   const show=src && broken!==src;
   return <section className="yj-panel" aria-label="映界场景">
     <div className="yj-panel-head"><div><span className="yj-mode">映界 · 固定样例</span><h2>{current?.scene??"场景画面"}</h2></div>
       <button className="yj-toggle" role="switch" aria-checked={pref.enabled} aria-label="生成图片"
-        onClick={()=>{setFrame(null);setBroken("");setPref(p=>({...p,serial:p.serial+1,enabled:!p.enabled}));}}>
+        onClick={()=>{setFrame(null);setBroken("");resumeOnly.current=false;void preference("enabled");}}>
         <span aria-hidden="true" className="yj-track"/>{pref.enabled?"生图已开":"生图已关"}</button></div>
-    {!automatic && <label className="yj-source">画面来源 <select aria-label="画面来源" value={pref.preset?"preset":"tasks"} onChange={e=>{
-      const preset=e.target.value==="preset";setFrame(null);setBroken("");setPref(p=>({...p,preset,serial:p.serial+1}));
+    {!automatic && <label className="yj-source">画面来源 <select aria-label="画面来源" value={pref.preset?"preset":"tasks"} onChange={()=>{
+      setFrame(null);setBroken("");void preference("preset");
     }}><option value="tasks">本地模拟图片任务</option><option value="preset">世界书预设</option></select></label>}
     <figure className="yj-figure" data-revision={current?.revision??""} data-decision={current?.decision??""} data-state={state} data-reason={current?.reason??""} data-version={current?.version??""}>
       {show?<img alt={current?.scene+"，"+current?.people+"人在场"} src={src} onError={()=>setBroken(src)}/>:
@@ -83,6 +129,6 @@ export function YingjiePanel({owner,sessionId,revision}:Props) {
       {current?.trigger==="people-changed" && ["queued","waiting"].includes(state) && <span>人物变化，画面待更新</span>}
       {current?.version&&<span>{current.version} · {current.people} 人</span>}</figcaption>
     </figure>
-    {automatic && <ImageHistory key={key} path={path} owner={owner} revision={revision}/>}
+    {automatic && awake && <ImageHistory key={token} path={path} owner={owner} revision={revision} permit={pref.id+":"+pref.serial}/>}
   </section>;
 }

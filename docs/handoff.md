@@ -2,7 +2,13 @@
 
 更新：2026-11-21。
 
-## 最新接续：YJ-12 完整任务书就绪（业务未开始）
+## YJ-13 接续
+
+已在普通角色卡页验证断网反馈、撤权后的回执核对、未知请求防重，以及停写后的 PostgreSQL 和私有原件恢复。YJ-13 可从本地模拟连续试玩接续。[运行报告、命令与回退](reports/YJ-12-recovery-terminal-report.md)
+
+沿用 `codex/yj-12-recovery-terminal` 的实际最新提交。保留 YJ-11 审阅流水、YJ-12 回执查询和按账户/会话保存的命令摘要。恢复前一并核对授权来源快照、14 张投影表及私有原件，先只读复核 unknown。正式供应商、真机和生产恢复各需独立验收。
+
+## 归档 · YJ-12 开工材料
 
 - 已核对 `codex/yj-11-image-history-corrections@4ea1f354181216a7fcfc7833a898f9e02f2630bf` 与[原运行报告](reports/YJ-11-image-history-corrections-report.md)、[回归回执](reports/evidence/YJ-11/regression.json)。原执行记录有契约 10/10、综合三次 20/20、11 轮合成历史与 6 次本地 mock；本次未在 Windows PG/Chrome 环境重新运行。
 - 从 YJ-11 成果创建 `codex/yj-12-recovery-terminal`，已提交[完整 YJ-12 任务书](task-briefs/YJ-12-recovery-terminal.md)。**此轮只创建任务书和接手文档，YJ-12 新代码、断网实验和备份恢复均 NOT_RUN。**

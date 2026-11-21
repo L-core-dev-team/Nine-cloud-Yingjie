@@ -27,6 +27,10 @@ export function mountDemoRoutes(app,tasks,origin,worldAssets,automatic=false,ext
       if(row?.key!==snapshot.result.visual.source.key)throw Error("stale-target");
       action=row.action;
     }
+    if(!c.get("yjViewStamped")){
+      c.header("X-YJ-Owner",owner);c.header("X-YJ-Session",id.toLowerCase());c.header("X-YJ-Revision",String(snapshot.revision));
+      c.set("yjViewStamped",true);
+    }
     return {authorized:true,scope:cardScope(owner,id),...snapshot,action};
   }
   const history=automatic?mountHistory(app,path,tasks,worldAssets,context,origin):null;
@@ -35,6 +39,7 @@ export function mountDemoRoutes(app,tasks,origin,worldAssets,automatic=false,ext
       if(c.req.method==="POST" && c.req.header("origin")!==origin) return c.body(null,403);
       const permit=c.req.query("view"),serial=Number(c.req.query("seq"));
       if(!/^[a-f0-9-]{36}$/i.test(permit??"") || !Number.isSafeInteger(serial) || serial<0)return c.body(null,400);
+      c.header("X-YJ-Permit",permit);c.header("X-YJ-Serial",String(serial));
       if(automatic)return await automaticView(c,{tasks,world:worldAssets,context,permit,serial,method:extractor.method,applyTriggers});
       const ctx=await context(c);
       const source=c.req.query("source")??"tasks";

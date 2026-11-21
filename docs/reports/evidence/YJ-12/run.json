@@ -1,0 +1,93 @@
+{
+  "browser": "157.0.8103.79",
+  "node": "v26.13.0",
+  "portrait": {
+    "width": 390,
+    "height": 844,
+    "overflow": false,
+    "imageFit": "contain",
+    "scrolled": true
+  },
+  "landscape": {
+    "width": 844,
+    "height": 390,
+    "overflow": false,
+    "imageFit": "contain",
+    "scrolled": true
+  },
+  "desktop": {
+    "width": 1280,
+    "height": 800,
+    "overflow": false,
+    "imageFit": "contain",
+    "scrolled": true
+  },
+  "zoom": 1.25,
+  "lifecycle": [
+    "freeze",
+    "resume",
+    "cached-return"
+  ],
+  "waiting": {
+    "attempts": 1,
+    "state": "waiting",
+    "retry": "already-claimed",
+    "sent": true,
+    "cost": null,
+    "remote": null,
+    "sends": 0
+  },
+  "unknown": {
+    "attempts": 1,
+    "state": "unknown",
+    "retry": "already-claimed",
+    "sent": true,
+    "cost": null,
+    "remote": null,
+    "sends": 0
+  },
+  "beforeCommit": "unconfirmed",
+  "afterCommit": "same-command-confirmed",
+  "withdrawnDownload": 404,
+  "wrongAccount": 403,
+  "parameterConflict": 409,
+  "receiptRows": 1,
+  "feedbackSends": 0,
+  "mockSends": 3,
+  "physicalMobile": "NOT_RUN",
+  "realProvider": "NOT_RUN",
+  "restored": {
+    "tables": 14,
+    "counts": {
+      "yingjie_scene.stream": 2,
+      "yingjie_scene.event": 3,
+      "yingjie_scene.conflict": 0,
+      "yingjie_play.choice": 12,
+      "yingjie_play.extraction": 3,
+      "yingjie_world.binding": 1,
+      "yingjie_image.permit": 1,
+      "yingjie_image.task": 3,
+      "yingjie_image.attempt": 3,
+      "yingjie_image.asset": 2,
+      "yingjie_image.conflict": 0,
+      "yingjie_history.report": 2,
+      "yingjie_history.decision": 1,
+      "yingjie_history.review_event": 5
+    },
+    "archiveDigestVerified": true,
+    "sharedReferences": 2,
+    "revision": 3,
+    "version": "V3",
+    "unknown": "retained",
+    "faults": [
+      "truncated-dump",
+      "files-only",
+      "database-only",
+      "corrupt-original",
+      "missing-grant",
+      "missing-review-event"
+    ],
+    "readOnly": true,
+    "restoredSends": 0
+  }
+}

@@ -22,7 +22,7 @@ export function yingjiePlugin(webRoot) {
       edit('<button className="secondary" onClick={back}>',`{session&&!members&&<button type="button" className="secondary" aria-pressed={yingjie} onClick={()=>{
         try{sessionStorage.setItem(modeKey,yingjie?"closed":"open")}catch{} setYingjie(!yingjie);
       }}>{yingjie?"收起映界":"进入映界"}</button>}<button className="secondary" onClick={back}>`);
-      edit('<div className="game-workspace card-session">','<div className="game-workspace card-session">{yingjie && session && !members && <YingjiePanel owner={owner} sessionId={sessionId} revision={session.revision}/>}');
+      edit('<div className="game-workspace card-session">','<div className="game-workspace card-session">{yingjie && session && !members && <YingjiePanel key={modeKey} owner={owner} sessionId={sessionId} revision={session.revision}/>}');
       return {code,map:null};
     }
   };

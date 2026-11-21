@@ -2,7 +2,11 @@
 
 更新：2026-11-21。
 
-## YJ-11 已有证据核对与 YJ-12 开工准备（本轮）
+## YJ-12 当次运行
+
+已在普通角色卡页验证断网反馈、撤权后的回执核对、未知请求防重，以及停写后的 PostgreSQL 和私有原件恢复。YJ-13 可从本地模拟连续试玩接续。[运行报告、命令与回退](reports/YJ-12-recovery-terminal-report.md) [脱敏回执](reports/evidence/YJ-12/run.json) · [各轮通过与失败](reports/evidence/YJ-12/regression.json)
+
+## 归档 · YJ-11 已有证据核对与 YJ-12 开工准备
 
 通过 GitHub 核对 `codex/yj-11-image-history-corrections@4ea1f354181216a7fcfc7833a898f9e02f2630bf`，阅读[工程报告](reports/YJ-11-image-history-corrections-report.md)、[回归](reports/evidence/YJ-11/regression.json)和反馈/鉴权/历史/原件核心源码。YJ-11 原报告记录契约 10/10、原 PNG 三张及两条参考链通过、综合回归三次 20/20；真实模型调用 0。本轮未重新跑 Windows、PostgreSQL、HTTP、Chrome 测试，因此不将其写为新执行结果。
 

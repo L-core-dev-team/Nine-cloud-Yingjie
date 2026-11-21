@@ -117,6 +117,15 @@ export class ImageHistory {
     return {...summary({...row,choice:choices.at(-1)?.record}),choices:choices.map(c=>choice({...c.record,when:c.observed_at})),
       task:task?{id:task.id,action:task.plan.action,requestKeyDigest:task.request_key?digest(task.request_key):null}:null,attempts,media,replacement:replacementStatus()};
   }
+  async receipt(ctx,command,fingerprint){
+    scoped(ctx);
+    if(!uuid.test(command) || !/^[0-9a-f]{64}$/.test(fingerprint??""))throw Error("invalid-feedback");
+    const row=await first(this.pool,"SELECT * FROM yingjie_history.report WHERE scope=$1 AND command=$2",[ctx.scope,command]);
+    if(!row)return {status:"unconfirmed"};
+    const expected=digest(JSON.stringify([row.command,row.kind,row.target,row.revision,row.generation,row.category,row.note]));
+    if(expected!==fingerprint)throw Error("command-conflict");
+    return {status:"committed",id:row.id};
+  }
   async report(ctx,input){
     scoped(ctx);
     if(!input || typeof input!=="object" || Array.isArray(input) || typeof input.command!=="string" ||
@@ -126,14 +135,14 @@ export class ImageHistory {
     input={...input,command:input.command.toLowerCase(),id:input.kind==="asset"?input.id.toLowerCase():input.id};
     return transaction(this.pool,async db=>{
       await db.query("SELECT pg_advisory_xact_lock(hashtextextended($1,0))",[ctx.scope+input.command]);
+      const prior=await first(db,"SELECT * FROM yingjie_history.report WHERE scope=$1 AND command=$2",[ctx.scope,input.command]);
+      if(prior){
+        if(prior.target!==input.id || prior.kind!==input.kind || prior.revision!==input.revision || prior.category!==input.category || prior.note!==input.note || prior.generation!==input.generation)throw Error("command-conflict");
+        return {id:prior.id};
+      }
       await db.query("SELECT pg_advisory_xact_lock(hashtextextended($1,0))",[ctx.scope+input.kind+input.id]);
       if(input.kind==="asset" && uuid.test(input.id))await db.query("SELECT id FROM yingjie_image.asset WHERE scope=$1 AND id=$2 FOR UPDATE",[ctx.scope,input.id]);
       const t=await this.target(ctx,input.revision,input.kind,input.id,db);
-      const prior=await first(db,"SELECT * FROM yingjie_history.report WHERE scope=$1 AND command=$2",[ctx.scope,input.command]);
-      if(prior){
-        if(prior.target!==t.id || prior.kind!==t.kind || prior.revision!==t.revision || prior.category!==input.category || prior.note!==input.note || prior.generation!==input.generation)throw Error("command-conflict");
-        return {id:prior.id};
-      }
       if(t.generation!==input.generation || t.invalidated)throw Error("stale-review");
       const id=randomUUID();
       await db.query(`INSERT INTO yingjie_history.report(id,scope,command,kind,target,revision,scene,visual_version,review_id,generation,category,note,actor,source_ref)

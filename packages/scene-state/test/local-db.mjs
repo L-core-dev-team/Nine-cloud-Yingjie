@@ -21,15 +21,15 @@ export function statePool(database) {
   return new Pool({ ...address, user:"cards_local",password:state.password,database });
 }
 // Create only a new, randomly named test database. Cleanup only after its own CREATE succeeded.
-export async function withDatabase(fn) {
+export async function withDatabase(fn,{empty=false}={}) {
   const database = "yj04_test_" + randomUUID().replaceAll("-","");
   const admin = new Pool({ ...address,user:"cards_local",password:state.password,database:"postgres" });
   let pool;
   try {
     await admin.query("CREATE DATABASE " + database);
     pool = statePool(database);
-    await pool.query(readFileSync(new URL("../schema.sql",import.meta.url),"utf8"));
-    await fn(pool,database);
+    if(!empty)await pool.query(readFileSync(new URL("../schema.sql",import.meta.url),"utf8"));
+    return await fn(pool,database);
   } finally {
     try {
       if (pool) { await pool.end(); await admin.query("DROP DATABASE " + database); }

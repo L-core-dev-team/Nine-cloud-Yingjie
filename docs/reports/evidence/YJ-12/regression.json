@@ -1,0 +1,220 @@
+{
+  "date": "2026-11-21",
+  "base": "0db65c35d90ff3b8ac5ca710b5a0b6d6e711c3eb",
+  "originals": {
+    "files": 3,
+    "referenceEdits": 2,
+    "status": "PASS"
+  },
+  "runs": [
+    {
+      "run": "contracts",
+      "note": "Contract compilation and baseline tests.",
+      "tests": 10,
+      "pass": 10,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "duration_ms": 7238.8352
+    },
+    {
+      "run": "base",
+      "note": "YJ-11 baseline.",
+      "tests": 20,
+      "pass": 20,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "duration_ms": 41669.0376
+    },
+    {
+      "run": "red",
+      "note": "Before fix: committed POST replay after media withdrawal returned 404 instead of 200.",
+      "tests": 1,
+      "pass": 0,
+      "fail": 1,
+      "cancelled": 0,
+      "skipped": 0,
+      "duration_ms": 6813.9074,
+      "groups": [
+        "✖ lost feedback acknowledgement after media withdrawal, browser recovery and isolation"
+      ]
+    },
+    {
+      "run": "green",
+      "note": "Stale-permit assertion raced the initiating tab's acknowledgement. Await its actual HTTP commit.",
+      "tests": 1,
+      "pass": 0,
+      "fail": 1,
+      "cancelled": 0,
+      "skipped": 0,
+      "duration_ms": 10867.9445,
+      "groups": [
+        "✖ lost feedback acknowledgement after media withdrawal, browser recovery and isolation"
+      ]
+    },
+    {
+      "run": "green2",
+      "note": "Focused receipt, authorization and physical pg_dump/restore drill passed.",
+      "tests": 1,
+      "pass": 1,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "duration_ms": 16037.3883
+    },
+    {
+      "run": "full",
+      "note": "New check passed. Injected older revision in inherited YJ-09 test was discarded without a follow-up read.",
+      "tests": 21,
+      "pass": 20,
+      "fail": 1,
+      "cancelled": 0,
+      "skipped": 0,
+      "duration_ms": 39838.5873,
+      "groups": [
+        "✖ original CardSession across two villages, ambiguity, full survey and isolated replays"
+      ]
+    },
+    {
+      "run": "yj09",
+      "note": "Reproduced the same YJ-09 failure in isolation. This establishes the new regression only.",
+      "tests": 1,
+      "pass": 0,
+      "fail": 1,
+      "cancelled": 0,
+      "skipped": 0,
+      "duration_ms": 17830.9213,
+      "groups": [
+        "✖ original CardSession across two villages, ambiguity, full survey and isolated replays"
+      ]
+    },
+    {
+      "run": "two",
+      "note": "YJ-09 passed after read-only reconciliation. CDP state request did not deliver observable DOM freeze/resume.",
+      "tests": 2,
+      "pass": 1,
+      "fail": 1,
+      "cancelled": 0,
+      "skipped": 0,
+      "duration_ms": 18908.2356,
+      "groups": [
+        "✖ lost feedback acknowledgement after media withdrawal, browser recovery and isolation"
+      ]
+    },
+    {
+      "run": "cache",
+      "note": "Browser cached navigation resumed. Second navigation incorrectly waited for a new load event.",
+      "tests": 1,
+      "pass": 0,
+      "fail": 1,
+      "cancelled": 0,
+      "skipped": 0,
+      "duration_ms": 23654.3619,
+      "groups": [
+        "✖ lost feedback acknowledgement after media withdrawal, browser recovery and isolation"
+      ]
+    },
+    {
+      "run": "final",
+      "note": "All inherited groups passed. Recovery test assumed every history traversal would retain the document.",
+      "tests": 21,
+      "pass": 20,
+      "fail": 1,
+      "cancelled": 0,
+      "skipped": 0,
+      "duration_ms": 43496.9829,
+      "groups": [
+        "✖ lost feedback acknowledgement after media withdrawal, browser recovery and isolation"
+      ]
+    },
+    {
+      "run": "terminal",
+      "note": "Lost-storage-event injection listened to the first unrelated storage event. Stale-click precondition was not established.",
+      "tests": 1,
+      "pass": 0,
+      "fail": 1,
+      "cancelled": 0,
+      "skipped": 0,
+      "duration_ms": 40632.5693,
+      "groups": [
+        "✖ lost feedback acknowledgement after media withdrawal, browser recovery and isolation"
+      ]
+    },
+    {
+      "run": "repeat",
+      "note": "History traversal assertion relied on timing/navigation type instead of the reauthorized scene.",
+      "tests": 1,
+      "pass": 0,
+      "fail": 1,
+      "cancelled": 0,
+      "skipped": 0,
+      "duration_ms": 20445.8443,
+      "groups": [
+        "✖ lost feedback acknowledgement after media withdrawal, browser recovery and isolation"
+      ]
+    },
+    {
+      "run": "recover",
+      "note": "Focused test passed with actual cached return and observed freeze/resume.",
+      "tests": 1,
+      "pass": 1,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "duration_ms": 16851.7759
+    },
+    {
+      "run": "verified",
+      "note": "Final implementation, original 20 groups plus two YJ-12 groups.",
+      "tests": 22,
+      "pass": 22,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "duration_ms": 43991.6887,
+      "groups": [
+        "✔ automatic first play from completed text through original CardSession and scoped image bytes",
+        "✔ both versioned extractors on fixed labeled passages, including deliberate abstentions",
+        "✔ saved-body observations against separately specified reference labels",
+        "✔ additional prose against semantic reference, count abstentions separately",
+        "✔ original CardSession across two villages, ambiguity, full survey and isolated replays",
+        "✔ saved turns on original CardSession: narrative triggers, reviewed elements and hidden worldbook",
+        "✔ confirmed visual changes, no-op and unsupported emphasis",
+        "✔ review, current display and reference use have separate verdicts",
+        "✔ rumor, reported speech, dreams and unseen narrators cannot add a present character",
+        "✔ provider capability cannot override authorization or a suppressed trigger",
+        "✔ original card history, protected originals and append-only correction across processes",
+        "✔ independent senders, hard exits, timeout reconciliation and duplicate receipts",
+        "✔ reference eligibility, explicit retry, live scope and file integrity",
+        "✔ a competing pg_ctl verification wrapper cannot stop the active cluster",
+        "✔ lost feedback acknowledgement after media withdrawal, browser recovery and isolation",
+        "✔ saved ordinary card history via authenticated loopback HTTP and separate PostgreSQL state",
+        "✔ process death, concurrent replay, restart, aliases, missing facts and visual history",
+        "✔ bounded 100-row pages, mid-page failure, checkpoint resume and stale access",
+        "✔ ordinary CardSession → saved text → scene → PostgreSQL task → reviewed original → browser",
+        "✔ saved ordinary session, pinned global version, scoped grants and reviewed presets through Chrome",
+        "✔ stable place and versioned source pins, conservative book subset",
+        "✔ exact visual facts, review, rights and current bytes gate selection"
+      ]
+    },
+    {
+      "run": "last",
+      "note": "Same implementation immediately repeated. Four browser groups encountered HTTP 429 at /api/auth/code after repeated use of the local synthetic auth service. Limits retained.",
+      "tests": 22,
+      "pass": 18,
+      "fail": 4,
+      "cancelled": 0,
+      "skipped": 0,
+      "duration_ms": 49765.825,
+      "groups": [
+        "✖ original card history, protected originals and append-only correction across processes",
+        "✖ lost feedback acknowledgement after media withdrawal, browser recovery and isolation",
+        "✖ ordinary CardSession → saved text → scene → PostgreSQL task → reviewed original → browser",
+        "✖ saved ordinary session, pinned global version, scoped grants and reviewed presets through Chrome"
+      ]
+    }
+  ],
+  "phone": "NOT_RUN",
+  "productionDisasterRecovery": "NOT_RUN"
+}
