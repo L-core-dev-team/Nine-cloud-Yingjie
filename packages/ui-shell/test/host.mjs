@@ -51,7 +51,8 @@ export async function withHost(pool,run,storage,play) {
       c.header("Content-Type","image/png");return c.body(await readFile(join(root,"public/compliance/beian-police.png")));
     });
     const index=await readFile(join(output,"index.html"),"utf8");
-    app.get("/cards/session/:id",c=>c.html(index));
+    const cardPage=play?.originals ? index.replace("<body>",'<body><aside aria-label="演示模式">本地模拟样例 · 合成文字与已审酒馆图片</aside>') : index;
+    app.get("/cards/session/:id",c=>c.html(cardPage));
     app.get("/assets/:file",async c=>{
       const file=c.req.param("file");
       if(!/^[\w.-]+\.(js|css)$/.test(file))return c.notFound();

@@ -50,12 +50,22 @@ test("original CardSession across two villages, ambiguity, full survey and isola
    });
    const baseline=extended?await ledgerCounts(pool):null;
    const steps=[];
-   let previousUrl;
+   const trace=async phase=>{if(extended)await writeFile(process.env.YJ13_DETAIL,JSON.stringify({phase,completedChecks:steps.length,steps,sends},null,2)+"\n");};
+   await trace("opened");
+   let previousUrl,firstCompletedAt,quotaPauseMs=0;
    for(const [index,[text,place,version,count,panel,picture]] of route.entries()){
     body=text;const revision=index+1;
     failUnknown=revision>=24;
+    if(extended && revision===31){
+      // The original card endpoint budgets 30 actions per owner in a 60-second PG window.
+      quotaPauseMs=Math.max(0,firstCompletedAt+61000-Date.now());
+      await trace("waiting for original account quota window");
+      await new Promise(resolve=>setTimeout(resolve,quotaPauseMs));
+    }
     await page.getByRole("textbox",{name:"角色卡行动"}).fill("继续观察");
+    const response=extended?page.waitForResponse(r=>r.url()===origin+"/api/card-import/sessions/"+demo.id+"/actions" && r.request().method()==="POST"):null;
     await page.getByRole("button",{name:"提交行动"}).click();
+    if(response){assert.equal((await response).status(),200,"original card action HTTP at revision "+revision);if(revision===1)firstCompletedAt=Date.now();}
     await page.getByText("独立会话 · 修订 "+revision,{exact:true}).waitFor();
     const figure=page.locator('.yj-figure[data-state="'+panel+'"][data-version="'+(version?"V"+version:"")+'"]');
     await figure.waitFor();
@@ -91,6 +101,7 @@ test("original CardSession across two villages, ambiguity, full survey and isola
     }
     steps.push({...(extended?await verifyTurn({page,pool,scope:demo.scope,revision,text,sends:sends.length}):{}),revision,place,visual:event.result.visual?.visualVersion??null,people:event.result.visual?.people??null,
       reason:event.result.reason??null,action:await figure.getAttribute("data-decision"),panel,sha256:digest});
+    await trace("card turn verified");
    }
    assert.equal(staleReply,true);
    assert.deepEqual(sends.map(s=>s.version),["V2","V4","V5","V7"]);
@@ -156,7 +167,7 @@ test("original CardSession across two villages, ambiguity, full survey and isola
      const secondHistory=await demo.api("GET","/sessions/"+second+"/history?after=0");
      assert.equal(secondHistory.length,2);await client.close();
      const restored=process.env.YJ13_RESTORE==="1"?await restoreDrill({pool,database,tasks,world,scope:demo.scope,unknownRevision:24,journeyRevision:route.length}):null;
-     await writeFile(process.env.YJ13_DETAIL,JSON.stringify({browser:browser.version(),baseline,steps,sends,completed:history.length,secondary:secondHistory.length,shadowTasks:0,realTextCalls:0,realImageCalls:0,restored},null,2)+"\n");
+     await writeFile(process.env.YJ13_DETAIL,JSON.stringify({browser:browser.version(),baseline,steps,sends,quotaPauseMs,completed:history.length,secondary:secondHistory.length,shadowTasks:0,realTextCalls:0,realImageCalls:0,restored},null,2)+"\n");
    }
    if(process.env.YJ09_EVIDENCE_DIR){
      await mkdir(process.env.YJ09_EVIDENCE_DIR,{recursive:true});

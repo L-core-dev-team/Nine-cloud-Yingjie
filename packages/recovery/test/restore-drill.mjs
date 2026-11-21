@@ -103,8 +103,8 @@ export async function restoreDrill({pool,database,tasks,world,scope,wrongId,orig
         assert.ok(ctx.result.visual==null);
       }else{
         const first=(await reader.detail(ctx,1)).media[0],wrong=(await reader.detail(ctx,2)).media[0];
-      assert.equal(first.id,originalId);assert.equal(first.readable,true);assert.equal(wrong.id,wrongId);
-      assert.equal(first.sha256,wrong.sha256);assert.equal(wrong.status,"invalidated");assert.equal(wrong.readable,false);
+        assert.equal(first.id,originalId);assert.equal(first.readable,true);assert.equal(wrong.id,wrongId);
+        assert.equal(first.sha256,wrong.sha256);assert.equal(wrong.status,"invalidated");assert.equal(wrong.readable,false);
         sharedReferences=expected.originals[first.sha256].references;
       }
       const pending=await reader.detail(ctx,unknownRevision);
