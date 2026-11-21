@@ -83,6 +83,7 @@ if(mode==="init"){
               const result={completed:before.length,counts:{}};
               for(const table of ["scene.event","image.task","image.attempt","image.asset","history.review_event"])
                 result.counts[table]=(await pool.query("SELECT count(*)::int AS n FROM yingjie_"+table)).rows[0].n;
+              result.attemptsByOutcome=(await pool.query("SELECT record->'outcome'->>'state' AS state,count(*)::int AS attempts FROM yingjie_image.attempt GROUP BY 1 ORDER BY 1")).rows;
               await writeFile(join(dir,"diagnostic.json"),JSON.stringify(result,null,2)+"\n");console.log(JSON.stringify(result));
               return;
             }

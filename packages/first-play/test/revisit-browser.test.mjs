@@ -68,7 +68,7 @@ test("original CardSession across two villages, ambiguity, full survey and isola
     if(response){assert.equal((await response).status(),200,"original card action HTTP at revision "+revision);if(revision===1)firstCompletedAt=Date.now();}
     await page.getByText("独立会话 · 修订 "+revision,{exact:true}).waitFor();
     const figure=page.locator('.yj-figure[data-state="'+panel+'"][data-version="'+(version?"V"+version:"")+'"]');
-    await figure.waitFor();
+    try{await figure.waitFor();}catch(error){if(extended){const seen=await page.locator(".yj-figure").evaluate(el=>({...el.dataset}));await trace("revision "+revision+" expected "+panel+"; actual "+JSON.stringify(seen));}throw error;}
     const event=(await pool.query("SELECT result,raw_text_hash FROM yingjie_scene.event WHERE scope=$1 AND revision=$2",[demo.scope,revision])).rows[0];
     assert.equal(event.raw_text_hash,hash(text));
     assert.equal(event.result.scene?.sceneId??null,place);assert.equal(event.result.visual?.people.length??null,count);

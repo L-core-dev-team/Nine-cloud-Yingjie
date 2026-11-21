@@ -4,7 +4,7 @@ import {sha256} from "../image-tasks/files.mjs";
 export function extend(route) {
   const dialogs=["你与掌柜闲谈茶价。","掌柜说：“明天山里也会下雨。”","你端起茶盏。","你继续听掌柜讲茶经。","蓝衣客说：“昨夜远山有灯。”"];
   return [...route,...dialogs.map(text=>[text,"east",7,5,"unknown"]),
-    ["你回到西村的青石酒馆，眼前景物与离开时一样。","west",1,2,"skip"],
+    route[4], // A complete survey resolves the west tavern after the earlier ambiguous return.
     ["你从后门望去，固定的柜台和双窗清晰可见。","west",2,2,"skip"],
     ["你回到东村的春风客栈，眼前景物与离开时一样。","east",7,5,"unknown"],
     ["你从窗缝望去，看不清谁走了。","east",null,null,"verify-scene"],
