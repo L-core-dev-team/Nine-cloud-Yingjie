@@ -2,6 +2,8 @@
 
 更新：2026-11-21。
 
+**L1 已收口为 LUNA_ONE_CALL_PASS。** 已核对一份真实回执与一行 ACKNOWLEDGED 账本记录。修订 1，映界提取 not-ready，图片调用 0 次。此许可已用完，后续仅核对已有记录与账单。[真实结果](reports/YJ-P02-L1-luna-text-smoke-report.md)
+
 终端可从映界目录运行 `node packages/luna-text/key-entry/terminal.mjs`，本机启动器沿用固定上游、PG 和 Chrome 路径。按道主最新选择，终端在读取密钥前说明项目权限、Standard 费率、合成酒馆范围和最高 USD 0.10。输入单行密钥并按回车即提交这笔试点，Esc 可取消。仍通过原账本预留并写脱敏回执。6 项禁网模拟测试覆盖单次提交、取消、非法输入、多行粘贴、已有占用和管道输入。
 
 ## YJ-P02-L1-K 本机入口交付

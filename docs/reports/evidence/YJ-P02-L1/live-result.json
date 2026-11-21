@@ -1,0 +1,38 @@
+{
+  "status": "LUNA_ONE_CALL_PASS",
+  "receiptWrittenUtc": "2026-11-21T14:34:27+00:00",
+  "executionCommit": "13046a71d4defdd1d04117f80c1711830b3d9263",
+  "approvedTextCalls": 1,
+  "realTextCalls": 1,
+  "realImageCalls": 0,
+  "ledgerRows": 1,
+  "ledgerMatchesReceipt": true,
+  "state": "ACKNOWLEDGED",
+  "httpStatus": 200,
+  "model": "gpt-6-luna",
+  "serviceTier": "default",
+  "responseIdSha256": "daed108ce3b57645a30e931ee96290a8781e865a74e67b36791e9c10892ff7f4",
+  "usage": {
+    "inputTokens": 92,
+    "outputTokens": 39,
+    "reasoningTokens": 0,
+    "estimatedNanoUsd": 28700
+  },
+  "estimatedCostUsd": 2.87e-05,
+  "billedCostUsd": null,
+  "approvedBudgetUsd": 0.1,
+  "requestSha256": "e4199b370fa95e71c18cedd8c4e7c30965ada8ecdcc2978c473c5a3b0f61aad4",
+  "history": {
+    "actionPosts": 1,
+    "fakeSends": 0,
+    "cardStatus": "completed",
+    "revision": 1,
+    "bodySha256": "1c65286041ae74ccae956c08bdca02b3e91f9273411834c83adbd98071e23f98",
+    "source": "completed-history",
+    "sourceMatchesPostgres": true,
+    "extraction": "not-ready",
+    "imageTasks": 0,
+    "imageAttempts": 0,
+    "imageSends": 0
+  }
+}

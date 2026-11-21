@@ -2,7 +2,11 @@
 
 更新：2026-11-21。
 
-## YJ-P02-L1 当次执行
+## YJ-P02-L1 真实执行
+
+本机账本与回执一致，真实文字请求 1 次，HTTP 200。输入 92、输出 39 tokens，原会话与映界核对同一正文摘要，提取 not-ready，图片调用 0 次。[真实回执](reports/evidence/YJ-P02-L1/live-result.json)
+
+## YJ-P02-L1 离线执行记录
 
 契约 10/10，15 个禁网 fake 场景通过，两个进程仅一次取得发送权。Chrome 经原会话保存修订 1，PG 与映界事件正文摘要一致，提取 ready，图片任务和 attempt 均为 0。真实项目凭据或权限尚未就绪，文字真实调用 0 次。[脱敏回执与命令](reports/YJ-P02-L1-luna-text-smoke-report.md)
 

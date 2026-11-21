@@ -1,5 +1,18 @@
 # YJ-P02-L1 单次 Luna 文字试点
 
+## 真实试点已完成 · LUNA_ONE_CALL_PASS
+
+北京时间 2026-11-21 22:34，操作人在本机终端提交了唯一一次测试。运行版本为 `13046a71d4defdd1d04117f80c1711830b3d9263`。只读复核确认本机仅一份执行回执，SQLite 仅一行批准记录，绑定、状态和响应字段逐项一致。账本为 `ACKNOWLEDGED`，本项许可已用完。[脱敏真实回执](evidence/YJ-P02-L1/live-result.json)
+
+| 核对项 | 真实结果 |
+| --- | --- |
+| 供应商响应 | HTTP 200，`gpt-6-luna`，计费层级 `default`。真实文字 1 次，模拟发送 0 次。 |
+| 用量与费用 | 输入 92、输出 39，其中推理 0 tokens。按当日 Standard 价估算 USD 0.0000287，批准上限 USD 0.10；供应商最终账单尚未核对。 |
+| 正文保存与读取 | 原角色卡请求为 `completed`、修订 1。运行时核对了返回正文、PostgreSQL、已登录会话的 completed-history 及映界事件，SHA-256 一致。 |
+| 映界提取 | 真实正文得到 `not-ready`，提取器保守留空。图片任务、attempt 和实际图片调用均为 0。 |
+
+## 归档 · 实发前的离线检查
+
 2026-11-21（北京时间）。**OFFLINE_PASS / LIVE_BLOCKED**。本机受信进程的 `OPENAI_API_KEY` 配置检查返回 false，项目的 Luna Standard 访问权限也尚未确认。预检在创建真实许可和发起模型请求之前停止。真实文字实际发送 0 次、可能发送 0 次、Images API 0 次。真实响应 ID、token、费用估算、账单均无可用数据。 [预检回执](evidence/YJ-P02-L1/live-preflight.json)
 
 ## 授权和协议

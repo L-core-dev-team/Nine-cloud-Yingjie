@@ -4,6 +4,8 @@
 
 ## 当前状态
 
+**YJ-P02-L1 真实文字试点已通过。** 唯一一次 Luna 请求返回 HTTP 200，原角色卡保存修订 1，映界读回正文后判为 `not-ready`。图片调用为 0，单次许可已用完。[运行报告与真实回执](docs/reports/YJ-P02-L1-luna-text-smoke-report.md)
+
 **L1 一次性密钥输入页已在本机验证。** 由本人打开限时邀请，填写密钥后可独立检查配置。只有再次点击开始，才会使用原有的单次 Luna 文字许可。交付时真实 API 请求为 0。[操作说明与脱敏回执](docs/reports/YJ-P02-L1-key-entry-report.md)
 
 **YJ-P02-L1 文字适配 OFFLINE_PASS，真实试点 LIVE_BLOCKED。** 受信进程缺少密钥，项目访问权限尚未核实。真实文字和图片调用均为 0。原角色卡的模拟回合已由 Chrome、PostgreSQL 和映界提取共同核对。[运行报告和复跑入口](docs/reports/YJ-P02-L1-luna-text-smoke-report.md)
