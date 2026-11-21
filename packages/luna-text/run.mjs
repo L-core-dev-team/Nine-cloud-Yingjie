@@ -1,9 +1,10 @@
 import {join} from "node:path";
-import {userInfo,tmpdir} from "node:os";
+import {tmpdir} from "node:os";
 import {existsSync} from "node:fs";
 import {mkdir,mkdtemp,open,rm} from "node:fs/promises";
 import {preflight,priceDate,modelId,prepare,action,ceilingNanoUsd,reserveNanoUsd} from "./adapter.mjs";
 import {SingleApproval} from "./ledger.mjs";
+import {approvalDirectory as liveDir,approvalFile as liveFile} from "./ui-pilot.mjs";
 
 const [mode="preflight",out]=process.argv.slice(2);
 if(!["preflight","fake","live"].includes(mode))throw Error("use preflight, fake or live");
@@ -11,8 +12,6 @@ const key=process.env.OPENAI_API_KEY;
 delete process.env.OPENAI_API_KEY; // No credentials inherited by git, PostgreSQL, build or Chrome.
 const projectDate=process.env.YJ_L1_PROJECT_STANDARD_VERIFIED_ON;
 const blockers=()=>preflight(key,projectDate);
-const liveDir=join(userInfo().homedir,".nine-cloud-yingjie","yj-p02-l1");
-const liveFile=join(liveDir,"approval.sqlite");
 let db,temp;
 const receipt=out?await open(out,"wx",0o600):null;
 const report={mode,keyConfigured:Boolean(key?.trim()),model:modelId,pricingCheckedBeijing:priceDate,

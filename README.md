@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-**最新接口交互要求：** 道主希望使用 [L1 一次性 API Key 安全输入页面](docs/task-briefs/YJ-P02-L1-key-entry-ui.md)，而不是手工设置 PowerShell 环境变量。当前只准备任务书；输入页、地址和真实 API 运行均尚未交付。原 $0.10、单次合成 Luna 文字授权不变，图片与私人素材外发仍禁止。
+**L1 一次性密钥输入页已在本机验证。** 由本人打开限时邀请，填写密钥后可独立检查配置。只有再次点击开始，才会使用原有的单次 Luna 文字许可。交付时真实 API 请求为 0。[操作说明与脱敏回执](docs/reports/YJ-P02-L1-key-entry-report.md)
 
 **YJ-P02-L1 文字适配 OFFLINE_PASS，真实试点 LIVE_BLOCKED。** 受信进程缺少密钥，项目访问权限尚未核实。真实文字和图片调用均为 0。原角色卡的模拟回合已由 Chrome、PostgreSQL 和映界提取共同核对。[运行报告和复跑入口](docs/reports/YJ-P02-L1-luna-text-smoke-report.md)
 

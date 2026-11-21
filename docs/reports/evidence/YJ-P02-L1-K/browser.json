@@ -1,0 +1,21 @@
+{
+  "status": "OFFLINE_PASS",
+  "browser": "158.0.8127.36",
+  "checks": [
+    "host-origin-nonce-content-type-rejected",
+    "invite-single-use",
+    "unprepared-start-denied",
+    "check-no-send-no-reservation",
+    "input-cleared-storage-empty",
+    "refresh-invalidates",
+    "back-invalidates",
+    "clear-close-expiry-heartbeat-loss-invalidates",
+    "ready-still-requires-same-origin-explicit-confirmation",
+    "explicit-double-click-single-fake-send",
+    "unknown-survives-new-session"
+  ],
+  "fakeSends": 1,
+  "externalBrowserRequests": 0,
+  "realTextCalls": 0,
+  "realImageCalls": 0
+}

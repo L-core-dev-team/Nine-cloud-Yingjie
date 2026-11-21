@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>映界 · 一次性密钥输入</title><link rel="stylesheet" href="/style.css"><script defer src="/entry.js"></script></head>
+<body><main><header>九霄 · 映界</header><h1>一次性密钥输入</h1>
+<p>本机检查配置后，由你决定是否开始这一次文字测试。</p>
+<dl><div><dt>文字模型</dt><dd>gpt-6-luna</dd></div><div><dt>总预算</dt><dd>USD $0.10 · 最多一次</dd></div>
+<div><dt>允许发送</dt><dd>开发自编合成酒馆文字</dd></div><div><dt>图片 API</dt><dd>禁用</dd></div></dl>
+<label for="key">OpenAI API Key</label><input id="key" type="password" disabled autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="512">
+<label class="choice"><input id="project" type="checkbox" disabled>我已核实这个项目可使用 Luna 和 Standard 美元费率</label>
+<p id="status" role="status" aria-live="polite">正在验证一次性入口…</p>
+<div class="buttons"><button id="check" disabled>检查配置</button><button id="start" disabled>开始唯一一次 Luna 文字测试</button><button id="clear" disabled>清除并关闭</button></div>
+<small>密钥只在浏览器和本机服务内存中短暂使用。刷新、离开或清除后，入口失效。</small>
+</main></body></html>

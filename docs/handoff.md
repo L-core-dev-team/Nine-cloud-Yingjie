@@ -2,7 +2,11 @@
 
 更新：2026-11-21。
 
-## 最新执行要求：一次性 API Key 输入页面（未实现）
+## YJ-P02-L1-K 本机入口交付
+
+从 `cd2cd3a9f79e35b7333b21136c7d80457ff14ead` 接续，已完成输入页、假密钥浏览器测试、断网防重和原角色卡回归。Windows 用户桌面的 Edge 已验证回环可达。由本人领取短期邀请、填写并单独确认，真实试点交付时为 LIVE_BLOCKED。邀请过期可在原账户重新启动输入服务；原批准账本仍适用。[报告与启动方式](reports/YJ-P02-L1-key-entry-report.md)
+
+## 归档 · 输入页任务准备
 
 道主不希望手动配置 PowerShell 环境变量，要求 Codex 提供可由本人填写 API Key 的**受保护一次性输入页面**。从 YJ-P02-L1 `ac0ccbec121a5c3238264894cc0c4449de2922e8` 建立独立 `codex/yj-p02-l1-key-entry-ui` 分支；执行[安全输入 UI 任务书](task-briefs/YJ-P02-L1-key-entry-ui.md)。这项工作目前仅上传任务要求，**界面与可访问地址仍未创建**。仅允许在本机可访问受信 loopback 或平台原生安全凭据入口操作，禁止公开无认证 URL、聊天接收 Key 或存盘。填入 Key 本身不触发 $0.10 单次 Luna 付费测试，必须明确点击后再走原持久账本。原 L1 的 OFFLINE_PASS/LIVE_BLOCKED 证据不变。
 

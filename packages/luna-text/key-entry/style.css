@@ -1,0 +1,7 @@
+:root{font:16px/1.6 "Segoe UI","Microsoft YaHei",sans-serif;color:#25342f;background:#f4f6f2;color-scheme:light}
+*{box-sizing:border-box}body{margin:0;padding:clamp(16px,6vw,72px) 16px}main{max-width:640px;margin:auto;background:white;border:1px solid #cbd7cf;border-radius:14px;padding:clamp(20px,5vw,44px)}
+header,dt,small{color:#54675c}h1{font-size:2rem;line-height:1.25;margin:.5em 0}p{margin:.75em 0 1em}
+dl{padding:16px 0;margin:1.4rem 0;border-block:1px solid #d4ded6}dl div{display:grid;grid-template-columns:6rem 1fr}dd{margin:0}
+label{font-weight:600}#key{display:block;width:100%;padding:.7rem;font:inherit;border:1px solid #819887;border-radius:6px;margin:.4rem 0 1rem}
+.choice{display:flex;align-items:baseline;gap:.6rem;font-weight:400}button{font:inherit;font-weight:600;border:1px solid #71887a;border-radius:6px;background:white;color:#263c31;padding:.6rem .85rem;cursor:pointer}
+#start:enabled{background:#244c38;color:white}.buttons{display:flex;gap:.6rem;flex-wrap:wrap}button:disabled{opacity:.48;cursor:default}:focus-visible{outline:3px solid #447db3;outline-offset:3px}small{display:block;margin-top:1.25rem}#status{min-height:1.6em;color:#284e39}

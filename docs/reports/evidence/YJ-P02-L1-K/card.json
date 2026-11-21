@@ -1,0 +1,53 @@
+{
+  "mode": "fake",
+  "keyConfigured": false,
+  "model": "gpt-6-luna",
+  "pricingCheckedBeijing": "2026-11-21",
+  "inputBound": 609,
+  "ceilingNanoUsd": 1400000,
+  "reserveNanoUsd": 100000000,
+  "realPossibleSends": 0,
+  "realImageCalls": 0,
+  "actualUsage": null,
+  "estimatedCostUsd": null,
+  "history": {
+    "browser": "158.0.8127.36",
+    "node": "v26.13.0",
+    "actionPosts": 1,
+    "fakeSends": 1,
+    "cardStatus": "completed",
+    "revision": 1,
+    "bodySha256": "b4bf16de90bc5d69bf5a154481fc98e37c766ac047e12bd2160929f004ffd0f4",
+    "source": "completed-history",
+    "sourceMatchesPostgres": true,
+    "extraction": "ready",
+    "imageTasks": 0,
+    "imageAttempts": 0,
+    "imageSends": 0
+  },
+  "status": "OFFLINE_PASS",
+  "reservation": {
+    "approvalId": "YJ-P02-L1-single-luna-text",
+    "ownerHash": "bc96c5b099c173b159f0f4769110635b89436bf4a90ca9202d0e80255b3d3eb6",
+    "sessionHash": "b5170feeb83fcfeb7f933118011dd17975b987385f334aa71992f4679b28d0a2",
+    "actionKeyHash": "52871e0407ddd58c11978b64b5ba7fbbec94aae41b3f91f1c019f8b03f2f579e",
+    "requestSha256": "e4199b370fa95e71c18cedd8c4e7c30965ada8ecdcc2978c473c5a3b0f61aad4",
+    "model": "gpt-6-luna",
+    "maxOutputTokens": 1200,
+    "inputBound": 609,
+    "ceilingNanoUsd": 1400000,
+    "reserveNanoUsd": 100000000,
+    "state": "ACKNOWLEDGED",
+    "httpStatus": 200,
+    "responseId": "resp_local_fixture",
+    "responseModel": "gpt-6-luna",
+    "responseTier": "default",
+    "usage": {
+      "inputTokens": 125,
+      "outputTokens": 58,
+      "reasoningTokens": 0,
+      "estimatedNanoUsd": 41500
+    },
+    "bodySha256": "b4bf16de90bc5d69bf5a154481fc98e37c766ac047e12bd2160929f004ffd0f4"
+  }
+}

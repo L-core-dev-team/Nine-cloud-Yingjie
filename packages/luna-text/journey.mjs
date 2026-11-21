@@ -10,7 +10,7 @@ import {digest} from "../provider-readiness/reservations.mjs";
 import {action,prepare,cardModel,endpoint} from "./adapter.mjs";
 import {reply} from "./test/fake.mjs";
 
-export async function journey({live,ledger,key,gate}) {
+export async function journey({live,ledger,key,takeKey,gate,cancelSignal}) {
   const {dir,state}=await fresh();
   process.env.YJ13_CLUSTER=dir;
   let cardDb,projection;
@@ -28,7 +28,7 @@ export async function journey({live,ledger,key,gate}) {
         assert.equal(init.body,prepare({action}).body);
         fakeSends++;return Response.json(reply());
       });
-    const model=cardModel({ledger,transport:send,key,gate});
+    const model=cardModel({ledger,transport:send,key,takeKey,gate,cancelSignal});
     const provider={capability:{schemaVersion:"0.1",entry:"luna-no-images",origin:"mock",
       verifiedAt:"2026-11-21T00:00:00Z",generate:"unknown",referenceEdit:"unknown",query:"unknown",cancel:"unknown",idempotency:"unknown"},
       async send(){imageSends++;throw Error("NO_IMAGE_PERMISSION");}};
