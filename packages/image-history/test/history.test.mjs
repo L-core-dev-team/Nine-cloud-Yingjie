@@ -93,7 +93,7 @@ test("original card history, protected originals and append-only correction acro
       await panel.getByText("反馈已记录，等待审阅。").waitFor();
       const uiId=(await detail(5)).media[0].reports[0].id;
       const repeats=await Promise.all(Array.from({length:14},(_,i)=>submit(i%2?posted:{...posted,id:posted.id.toUpperCase(),command:posted.command.toUpperCase()})));
-      for(const reply of repeats)assert.equal((await reply.json()).id,uiId);
+      for(const reply of repeats){assert.equal(reply.status(),200,"concurrent feedback HTTP "+reply.status());assert.equal((await reply.json()).id,uiId);}
       assert.equal((await submit({...posted,category:"people"})).status(),409);
       assert.equal((await submit({...posted,actor:"reviewer"})).status(),400);
       assert.equal(await get(current),200);

@@ -183,7 +183,7 @@ test("lost feedback acknowledgement after media withdrawal, browser recovery and
       await client.clearCookies();assert.equal((await client.request.get(original)).status(),403);
       await client.close();
       const restored=await restoreDrill({pool,database,tasks,world,scope:demo.scope,originalId:posted.id,wrongId:wrong.id,unknownRevision:3});
-      if(evidence)await writeFile(join(evidence,"run.json"),JSON.stringify({browser:browser.version(),node:process.version,portrait,landscape,desktop,zoom,lifecycle,waiting,unknown,
+      if(evidence||process.env.YJ13_DETAIL)await writeFile(process.env.YJ13_DETAIL??join(evidence,"run.json"),JSON.stringify({browser:browser.version(),node:process.version,portrait,landscape,desktop,zoom,lifecycle,waiting,unknown,
         beforeCommit:"unconfirmed",afterCommit:"same-command-confirmed",withdrawnDownload:404,wrongAccount:403,parameterConflict:409,
         receiptRows:1,feedbackSends:0,mockSends:sends,physicalMobile:"NOT_RUN",realProvider:"NOT_RUN",restored},null,2)+"\n");
     }finally{await browser.close();}

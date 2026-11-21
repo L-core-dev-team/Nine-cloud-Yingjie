@@ -9,7 +9,7 @@ const tests={
   "image-history":["history"],"recovery":["terminal"]
 };
 const [mode,file]=process.argv.slice(2);
-if (!["limit","regression","play","terminal"].includes(mode)||!file) throw Error("usage: node packages/local-demo/check.mjs limit|regression|play|terminal NEW-RECEIPT.json");
+if (!["limit","regression","play","play-restore","terminal"].includes(mode)||!file) throw Error("usage: node packages/local-demo/check.mjs limit|regression|play|play-restore|terminal NEW-RECEIPT.json");
 const {openSync,closeSync}=await import("node:fs");
 closeSync(openSync(file,"wx")); // refuse to replace evidence
 const {dir,state}=await fresh();
@@ -17,8 +17,9 @@ const env={...process.env,YJ13_CLUSTER:dir};
 for(const name of Object.keys(env)) if(/^YJ\d+_EVIDENCE_DIR$/.test(name))delete env[name];
 const args=mode==="limit"?["packages/local-demo/limit.mjs"]:["packages/scene-state/test/verify-local.mjs",
   ...(mode==="regression"?Object.entries(tests).flatMap(([pkg,files])=>files.map(f=>"packages/"+pkg+"/test/"+f+".test.mjs")):
-    [mode==="play"?"packages/first-play/test/revisit-browser.test.mjs":"packages/recovery/test/terminal.test.mjs"])];
-if(mode==="play"||mode==="terminal")env.YJ13_DETAIL=resolve(file)+".detail.json";
+    [mode.startsWith("play")?"packages/first-play/test/revisit-browser.test.mjs":"packages/recovery/test/terminal.test.mjs"])];
+env.YJ13_RESTORE=mode==="play-restore"?"1":"0";
+if(mode.startsWith("play")||mode==="terminal")env.YJ13_DETAIL=resolve(file)+".detail.json";
 const started=Date.now();
 try {
   const baseline=await counters(state);

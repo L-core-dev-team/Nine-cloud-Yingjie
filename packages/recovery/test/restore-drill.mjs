@@ -47,7 +47,7 @@ async function verify(db,files,expected){
   for(const table of tables)if(actual.ledger[table].digest!==expected.ledger[table].digest)throw Error("ledger-mismatch:"+table);
   assert.deepEqual(actual,expected);
 }
-export async function restoreDrill({pool,database,tasks,world,scope,wrongId,originalId,unknownRevision}){
+export async function restoreDrill({pool,database,tasks,world,scope,wrongId,originalId,unknownRevision,journeyRevision}){
   const temp=await mkdtemp(join(tmpdir(),"yj12-synthetic-")),archive=join(temp,"projection.dump"),manifest=join(temp,"manifest.json");
   const saved=join(temp,"originals"),restored=new Originals(join(temp,"restored"));
   try{
@@ -94,14 +94,24 @@ export async function restoreDrill({pool,database,tasks,world,scope,wrongId,orig
       const provider=new TavernProvider(),reader=new ImageHistory(new ImageTasks(restorePool,restored,provider,{assess:assessFixture}),
         new WorldAssets(world.cards,restorePool,world.selectEntries,world.storage));
       const ctx={scope,authorized:true,...await latest(restorePool,scope)};
-      const first=(await reader.detail(ctx,1)).media[0],wrong=(await reader.detail(ctx,2)).media[0];
+      let sharedReferences;
+      if(journeyRevision){
+        assert.equal(ctx.revision,journeyRevision);
+        const originals=Object.values(expected.originals);
+        sharedReferences=Math.max(...originals.map(item=>item.references));
+        assert.ok(sharedReferences>=2);
+        assert.ok(ctx.result.visual==null);
+      }else{
+        const first=(await reader.detail(ctx,1)).media[0],wrong=(await reader.detail(ctx,2)).media[0];
       assert.equal(first.id,originalId);assert.equal(first.readable,true);assert.equal(wrong.id,wrongId);
       assert.equal(first.sha256,wrong.sha256);assert.equal(wrong.status,"invalidated");assert.equal(wrong.readable,false);
+        sharedReferences=expected.originals[first.sha256].references;
+      }
       const pending=await reader.detail(ctx,unknownRevision);
       assert.equal(pending.attempts.at(-1).outcome,"unknown");assert.equal(provider.calls,0);
       return {tables:tables.length,counts:Object.fromEntries(Object.entries(expected.ledger).map(([k,v])=>[k,v.count])),
-        archiveDigestVerified:true,sharedReferences:expected.originals[first.sha256].references,revision:ctx.revision,
-        version:ctx.result.visual.visualVersion,unknown:"retained",faults:["truncated-dump","files-only","database-only","corrupt-original","missing-grant","missing-review-event"],
+        archiveDigestVerified:true,sharedReferences,revision:ctx.revision,
+        version:ctx.result.visual?.visualVersion??null,unknown:"retained",faults:["truncated-dump","files-only","database-only","corrupt-original","missing-grant","missing-review-event"],
         readOnly:true,restoredSends:provider.calls};
     },{empty:true});
   }finally{await rm(temp,{recursive:true,force:true});}

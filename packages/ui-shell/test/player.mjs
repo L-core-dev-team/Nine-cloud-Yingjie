@@ -8,6 +8,7 @@ import { upstream } from "../../scene-state/test/local-db.mjs";
 export async function createPlayers(context,origin,codes) {
     const post=async(client,path,data)=>{
       const r=await client.post(origin+path,{data,headers:{Origin:origin}});
+      if(path==="/api/auth/code" && r.status()===429)throw Error("synthetic auth rate limited (429), Retry-After="+r.headers()["retry-after"]+"; stop this run and inspect its auth counters");
       assert.ok(r.ok(),path+" HTTP "+r.status());return r.json();
     };
     const login=async client=>{

@@ -39,7 +39,7 @@ export async function withHost(pool,run,storage,play) {
     const origin="http://127.0.0.1:"+server.address().port;
     app=createApp(undefined,undefined,{service:auth,origin},undefined,cards);
     await pool.query(await readFile(new URL("../../image-tasks/schema.sql",import.meta.url),"utf8"));
-    const tasks=new ImageTasks(pool,new Originals(join(dir,"originals")),play?.provider??new TavernProvider(),{assess:assessFixture});
+    const tasks=new ImageTasks(pool,new Originals(play?.originals??join(dir,"originals")),play?.provider??new TavernProvider(),{assess:assessFixture});
     if(play && tasks.capability.origin!=="mock")throw Error("local-image-provider-required");
     await pool.query(await readFile(new URL("../../world-assets/schema.sql",import.meta.url),"utf8"));
     const {selectWorldbookEntries}=await load("card-import/worldbook.js");

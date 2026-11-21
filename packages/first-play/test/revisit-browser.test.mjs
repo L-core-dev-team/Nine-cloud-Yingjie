@@ -16,9 +16,12 @@ import {checkpoint,hash} from "../../scene-state/store.mjs";
 import {extractSaved} from "../extract.mjs";
 import {extractContinuity} from "../continuity.mjs";
 import {replayHistory,compareReplay} from "../replay.mjs";
-import {route} from "./revisit-story.mjs";
+import {route as originalRoute} from "./revisit-story.mjs";
+import {extend,ledgerCounts,verifyTurn} from "../../local-demo/journey.mjs";
+import {restoreDrill} from "../../recovery/test/restore-drill.mjs";
 
 test("original CardSession across two villages, ambiguity, full survey and isolated replays",{timeout:150000},async t=>{
+ const extended=Boolean(process.env.YJ13_DETAIL),route=extended?extend(originalRoute):originalRoute;
  let body="",failUnknown=false;
  const sends=[],local=new TavernProvider();
  const provider={capability:local.capability,async send(claim){
@@ -26,7 +29,7 @@ test("original CardSession across two villages, ambiguity, full survey and isola
    if(failUnknown)throw Error("unknown-local-transport");
    return local.send(claim);
  }};
- await withDatabase(async(pool,database)=>withHost(pool,async({origin,codes})=>{
+ await withDatabase(async(pool,database)=>withHost(pool,async({origin,codes,tasks,world})=>{
   const browser=await requireApi("playwright").chromium.launch({executablePath:process.env.CHROME_PATH,headless:true});
   try{
    const client=await browser.newContext();
@@ -45,6 +48,7 @@ test("original CardSession across two villages, ambiguity, full survey and isola
      if(frame.revision===7){staleReply=true;return route.fulfill({response:res,json:{...frame,revision:6}});}
      return route.fulfill({response:res});
    });
+   const baseline=extended?await ledgerCounts(pool):null;
    const steps=[];
    let previousUrl;
    for(const [index,[text,place,version,count,panel,picture]] of route.entries()){
@@ -85,7 +89,7 @@ test("original CardSession across two villages, ambiguity, full survey and isola
       const child=await promisify(execFile)(process.execPath,["--input-type=module","-e",script,database,demo.scope],{windowsHide:true});
       assert.deepEqual(JSON.parse(child.stdout),{revision,result:event.result});
     }
-    steps.push({revision,place,visual:event.result.visual?.visualVersion??null,people:event.result.visual?.people??null,
+    steps.push({...(extended?await verifyTurn({page,pool,scope:demo.scope,revision,text,sends:sends.length}):{}),revision,place,visual:event.result.visual?.visualVersion??null,people:event.result.visual?.people??null,
       reason:event.result.reason??null,action:await figure.getAttribute("data-decision"),panel,sha256:digest});
    }
    assert.equal(staleReply,true);
@@ -148,6 +152,12 @@ test("original CardSession across two villages, ambiguity, full survey and isola
    assert.equal(sends.length,4);
    const evidence={recoveredStaleRevision:7,coldLedger:"historical 5-person session held on open and refresh",browser:browser.version(),source:"synthetic saved by original ordinary CardSession",action:"继续观察",
      realTextCalls:0,realImageCalls:0,sends,steps,differences,interruptedAt:9,resumedFrom:8,shadowTasks:0,unknownRequestPreserved:true,unchangedRequestKeyHashes:before.map(r=>hash(r.request_key))};
+   if(extended){
+     const secondHistory=await demo.api("GET","/sessions/"+second+"/history?after=0");
+     assert.equal(secondHistory.length,2);await client.close();
+     const restored=process.env.YJ13_RESTORE==="1"?await restoreDrill({pool,database,tasks,world,scope:demo.scope,unknownRevision:24,journeyRevision:route.length}):null;
+     await writeFile(process.env.YJ13_DETAIL,JSON.stringify({browser:browser.version(),baseline,steps,sends,completed:history.length,secondary:secondHistory.length,shadowTasks:0,realTextCalls:0,realImageCalls:0,restored},null,2)+"\n");
+   }
    if(process.env.YJ09_EVIDENCE_DIR){
      await mkdir(process.env.YJ09_EVIDENCE_DIR,{recursive:true});
      await writeFile(join(process.env.YJ09_EVIDENCE_DIR,"journey.json"),JSON.stringify(evidence,null,2)+"\n");

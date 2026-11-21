@@ -18,7 +18,7 @@ function tool(name, args) {
   execFileSync(join(process.env.CARD_DEMO_POSTGRES_BIN,name), args, {windowsHide:true,stdio:"ignore",timeout:60000});
 }
 export function start(dir, state) {
-  tool("pg_ctl", ["-D",join(dir,"postgres"),"-l",join(dir,"postgres.log"),"-o","-h 127.0.0.1 -p "+state.port,"-w","start"]);
+  tool("pg_ctl", ["-D",join(dir,"postgres"),"-l",join(dir,"postgres.log"),"-o","-h 127.0.0.1 -c max_connections=100 -p "+state.port,"-w","start"]);
 }
 export function stop(dir) { tool("pg_ctl", ["-D",join(dir,"postgres"),"-m","fast","-w","stop"]); }
 export function admin(state, db=database) {
@@ -61,7 +61,7 @@ export async function counters(state) {
   const pool=admin(state);
   try {
     const query=async(sql)=>(await pool.query(sql)).rows;
-    return {ip:await query("SELECT CASE WHEN ip IN ('127.0.0.1','::1','unidentified') THEN ip ELSE 'other' END AS identity,count FROM auth_ip_mail_limits ORDER BY count DESC"),
+    return {maxConnections:Number((await query("SHOW max_connections"))[0].max_connections),ip:await query("SELECT CASE WHEN ip IN ('127.0.0.1','::1','unidentified') THEN ip ELSE 'other' END AS identity,count FROM auth_ip_mail_limits ORDER BY count DESC"),
       challenges:(await query("SELECT count(*)::int AS accounts,coalesce(max(window_count),0) AS max_per_email FROM auth_challenges"))[0],
       globalSent:(await query("SELECT coalesce(sum(sent),0)::int AS n FROM auth_mail_limits"))[0].n};
   } finally {await pool.end();}
