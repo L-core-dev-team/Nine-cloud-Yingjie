@@ -36,7 +36,7 @@ try {
       started=true;
     } else if (status!==0) throw Error("local-postgres-status-failed");
   }
-  const r=spawnSync(process.execPath,["--test",...tests],{windowsHide:true,stdio:"inherit"});
+  const r=spawnSync(process.execPath,["--test",...(process.env.YJ13_CLUSTER?["--test-concurrency=2"]:[]),...tests],{windowsHide:true,stdio:"inherit"});
   if (r.error) throw r.error;
   process.exitCode=r.status ?? 1;
 } finally {
