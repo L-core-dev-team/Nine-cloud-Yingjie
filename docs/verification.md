@@ -2,6 +2,12 @@
 
 更新：2026-11-21。
 
+## YJ-P02-L2 开工准备：源证据核查，不是新执行结果
+
+已从 GitHub 核对 L1 完成分支 `7e714c01497b83b1de42069a47862a7d51c9f863`、[真实脱敏回执](reports/evidence/YJ-P02-L1/live-result.json)、运行报告、`packages/first-play/continuity.mjs` 和开发标注对照。真实 Luna 1 次、HTTP 200、L1 `ACKNOWLEDGED`、九霄 completed-history 修订 1、映界读回 SHA 相符但 `not-ready`，图片任务 0。原正文并未公开在 GitHub 回执中，**本轮尚未读取本地真实正文，故不能断言根因或证明 `/2` 有 bug**。
+
+已建立独立[离线 L2 任务书](task-briefs/YJ-P02-L2-live-text-extraction.md)和分支，尚无 L2 新测试/代码。执行者须只读检索匹配 SHA 的原 L1 合成 PG 记录、按原版本审计，事实不足时承认正确 abstain，事实充分时另做版本化修正与负向回归；找不到原文报告 SOURCE_UNAVAILABLE。L2 新增 API 调用 0，旧 L1 授权不可重置。
+
 ## YJ-P02-L1 真实执行
 
 本机账本与回执一致，真实文字请求 1 次，HTTP 200。输入 92、输出 39 tokens，原会话与映界核对同一正文摘要，提取 not-ready，图片调用 0 次。[真实回执](reports/evidence/YJ-P02-L1/live-result.json)

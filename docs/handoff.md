@@ -2,6 +2,13 @@
 
 更新：2026-11-21。
 
+## YJ-P02-L2 当前接续：真实正文只读审计（尚未执行）
+
+- 已只读核对 `codex/yj-p02-l1-key-entry-ui@7e714c01497b83b1de42069a47862a7d51c9f863` 的真实[脱敏回执](reports/evidence/YJ-P02-L1/live-result.json)、L1 运行报告和 `zh-visible-clause/2` 源码；本轮未在本机重跑或读取真实原正文。L1 只有 1 次 `gpt-6-luna` 真实文字请求、92 输入/39 输出 tokens、估算 $0.0000287，原完成修订 1 的正文 SHA 为 `1c65286041ae74ccae956c08bdca02b3e91f9273411834c83adbd98071e23f98`，提取 `not-ready`，图片调用 0。
+- 新建独立分支 `codex/yj-p02-l2-real-text-extraction`，上传[完整 YJ-P02-L2 执行任务书](task-briefs/YJ-P02-L2-live-text-extraction.md)。**本轮仅上传任务和交接，没有读取本地原文、修改提取器、执行新的测试或调用模型。**
+- 首先在受信合成 L1 停写 PostgreSQL 副本中找回原 `completed-history`，SHA 必须精确匹配；查明 `/2` 提取失败证据。若正文欠缺当前画面事实，保留 `not-ready`；若事实明确而句式未识别，才以版本化 `/3` 做保守离线修正。找不到原正文则报告 SOURCE_UNAVAILABLE，**不能用另写的模拟文本冒充**。
+- **严禁**新一次 OpenAI 文字/图片发送、重置 `.nine-cloud-yingjie/yj-p02-l1/approval.sqlite`、再次输入 Key、上传原正文/数据库凭据或写入旧会话。YJ-13/P01/L1 原成果与 main 保持不变。
+
 **L1 已收口为 LUNA_ONE_CALL_PASS。** 已核对一份真实回执与一行 ACKNOWLEDGED 账本记录。修订 1，映界提取 not-ready，图片调用 0 次。此许可已用完，后续仅核对已有记录与账单。[真实结果](reports/YJ-P02-L1-luna-text-smoke-report.md)
 
 终端可从映界目录运行 `node packages/luna-text/key-entry/terminal.mjs`，本机启动器沿用固定上游、PG 和 Chrome 路径。按道主最新选择，终端在读取密钥前说明项目权限、Standard 费率、合成酒馆范围和最高 USD 0.10。输入单行密钥并按回车即提交这笔试点，Esc 可取消。仍通过原账本预留并写脱敏回执。6 项禁网模拟测试覆盖单次提交、取消、非法输入、多行粘贴、已有占用和管道输入。
