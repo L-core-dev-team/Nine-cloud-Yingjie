@@ -1,0 +1,89 @@
+{
+  "status": "OFFLINE_PASS",
+  "node": "v26.13.0",
+  "networkPermission": false,
+  "scenarios": [
+    {
+      "scenario": "completed",
+      "state": "ACKNOWLEDGED",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "401",
+      "state": "REJECTED_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "403",
+      "state": "REJECTED_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "429",
+      "state": "REJECTED_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "503",
+      "state": "UNKNOWN_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "redirect",
+      "state": "UNKNOWN_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "timeout",
+      "state": "UNKNOWN_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "bad-json",
+      "state": "UNKNOWN_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "wrong-model",
+      "state": "FAIL",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "wrong-tier",
+      "state": "FAIL",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "tool",
+      "state": "UNKNOWN_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "usage-missing",
+      "state": "UNKNOWN_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "incomplete",
+      "state": "UNKNOWN_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "unexpected-input-charge",
+      "state": "UNKNOWN_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "over-output-limit",
+      "state": "UNKNOWN_STOP",
+      "fakeSends": 1
+    }
+  ],
+  "concurrentProcesses": 2,
+  "possibleSendsAfterRace": 1,
+  "crashRestart": "APPROVAL_LOCKED",
+  "requestSha256": "e4199b370fa95e71c18cedd8c4e7c30965ada8ecdcc2978c473c5a3b0f61aad4",
+  "inputBound": 609,
+  "realTextCalls": 0,
+  "realImageCalls": 0
+}

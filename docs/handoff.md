@@ -2,7 +2,11 @@
 
 更新：2026-11-21。
 
-## 最新执行任务：YJ-P02-L1 Luna 最多一次真实文字试点（任务书就绪）
+## YJ-P02-L1 当前交付
+
+从任务提交 `98d2883` 接续。单次适配、当日预算、持久防重及原会话合成回合均已通过。真实调用在检查密钥及项目权限时停止，状态 LIVE_BLOCKED，实际与可能发送均为 0。同机后续预检及账本路径见[报告与回执](reports/YJ-P02-L1-luna-text-smoke-report.md)。
+
+## 归档 · L1 任务准备
 
 - 道主已确认具有 OpenAI API Key，并同意将 **GPT-6 Luna 单次文字测试**的本次预算上限设为 **USD $0.10**。模型固定 `gpt-6-luna`，最高 1 次 Responses API 文本推理，使用**开发自编合成酒馆**，**不批准图片/私人角色卡/万卡阁或世界书原文外发**。成功、失败或结果未知都停止，不自动重试。
 - 已在 `codex/yj-p02-openai-adapter@7f0d9d454886c6021a876cd3a8c9bcfda99404e9` 之上建立独立 `codex/yj-p02-l1-luna-text`，交付[完整 YJ-P02-L1 任务书](task-briefs/YJ-P02-L1-luna-text-smoke.md)。本次**只有任务书及交接材料**，业务代码、离线新测试及真实 API 调用均 NOT_RUN。

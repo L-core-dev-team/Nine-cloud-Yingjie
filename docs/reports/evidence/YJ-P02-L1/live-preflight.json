@@ -1,0 +1,18 @@
+{
+  "mode": "preflight",
+  "keyConfigured": false,
+  "model": "gpt-6-luna",
+  "pricingCheckedBeijing": "2026-11-21",
+  "inputBound": 609,
+  "ceilingNanoUsd": 1400000,
+  "reserveNanoUsd": 100000000,
+  "realPossibleSends": 0,
+  "realImageCalls": 0,
+  "actualUsage": null,
+  "estimatedCostUsd": null,
+  "reasons": [
+    "API_KEY_NOT_CONFIGURED",
+    "PROJECT_MODEL_STANDARD_ACCESS_UNCONFIRMED"
+  ],
+  "status": "LIVE_BLOCKED"
+}
