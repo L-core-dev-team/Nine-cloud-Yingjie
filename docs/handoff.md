@@ -2,6 +2,13 @@
 
 更新：2026-11-21。
 
+## YJ-P01 第二阶段接续准备（本轮仅文档）
+
+- 已核对 YJ-13 远端完成提交 `codex/yj-13-local-demo-closeout@2b54c28e8e587e05311b957c5437024c6ecb4271`，读取[本地报告](reports/YJ-13-local-demo-closeout-report.md)、最终隔离集群回归 22/22 ×2、限流复现记录、35+2 轮合成试玩与[运行手册](local-demo.md)。本轮没有独立在用户 Windows 环境运行这些命令，保留当次执行证据的界限。
+- YJ-13 为 **LOCAL_DEMO_PASS**，仅保证现有合成故事、三张原 PNG 和本地 mock 的原型。真实文字服务、图片生成/参考编辑 API 和其费用/审核能力仍为 NOT_RUN；纠错替代请求仍需要独立身份契约；手机真机与生产均未验证。
+- 已从固定 YJ-13 提交创建独立分支 `codex/yj-p01-real-service-readiness` 和[完整 P01 离线准备任务书](task-briefs/YJ-P01-real-service-readiness.md)。本轮只做接入面、权限/素材外发/费用门禁的任务准备；**P01 业务实现、测试与真实供应商请求均未执行**。
+- 下一执行者在一个 Codex 会话中核对九霄文字模型 `CardModel`、映界 `ImageTasks` Provider 接面与历史 unknown/纠错独立身份；未选供应商、没获用户明确批准时只能运行合成 fixture 和离线适配。不得试探收费 API，不把密钥或私人图文写入 GitHub。
+
 ## YJ-13 当前交付
 
 **YJ-13 LOCAL_DEMO_PASS。** 完整隔离回归连续 22/22、22/22；原角色卡 35 轮、第二会话 2 轮，已实测启停、回退和 14 表配对恢复。 [启动与回退](local-demo.md) · [回执索引和未验证条件](reports/YJ-13-local-demo-closeout-report.md)

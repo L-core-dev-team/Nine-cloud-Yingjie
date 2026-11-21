@@ -2,6 +2,12 @@
 
 更新：2026-11-21。
 
+## YJ-13 完成证据核对与 P01 任务准备（本轮）
+
+经 GitHub 核对 `codex/yj-13-local-demo-closeout@2b54c28e8e587e05311b957c5437024c6ecb4271`，读取[工程报告](reports/YJ-13-local-demo-closeout-report.md)、[最终回归1](reports/evidence/YJ-13/release-1.json)、[最终回归2](reports/evidence/YJ-13/release-2.json)、[限流回执](reports/evidence/YJ-13/limit-fixed.json)、[试玩与恢复记录](reports/evidence/YJ-13/)和实际启动脚本。源记录分别为 22/22、22/22，合成剧情 35+2 轮，图片任务 10、mock 发送 4，真实供应商调用 0。历史 YJ-12 22/22、18/22 仍保留；新集群限流可复现但原四次 429 的瞬时计数未能倒推。
+
+**本轮只是只读源码/证据核查及文档准备，没有独立重跑本机命令。** [YJ-P01 接入准备任务书](task-briefs/YJ-P01-real-service-readiness.md)与独立分支已创建，P01 实际代码、PG/HTTP/Chrome 测试、真实文字或图片 API 均 NOT_RUN。任何真实端点、凭据、预算和参考图外发范围须用户另行明确授权。
+
 ## YJ-13 当前交付
 
 **YJ-13 LOCAL_DEMO_PASS。** 完整隔离回归连续 22/22、22/22；原角色卡 35 轮、第二会话 2 轮，已实测启停、回退和 14 表配对恢复。 [启动与回退](local-demo.md) · [回执索引和未验证条件](reports/YJ-13-local-demo-closeout-report.md)

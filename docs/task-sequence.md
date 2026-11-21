@@ -2,6 +2,8 @@
 
 更新：2026-11-21。
 
+**新增第二阶段准备（不改变原 YJ-00～13 的完成范围）：** [YJ-P01 真实文字/图片服务接入前置核查](task-briefs/YJ-P01-real-service-readiness.md)已上传独立分支，业务实现尚未执行。仅允许核对受信接口与离线模拟，真实供应商选择、凭据、调用额度、素材外发授权和费用上限尚待明确批准。
+
 **YJ-13 LOCAL_DEMO_PASS。** 完整隔离回归连续 22/22、22/22；原角色卡 35 轮、第二会话 2 轮，已实测启停、回退和 14 表配对恢复。 [运行报告](reports/YJ-13-local-demo-closeout-report.md)
 
 真实服务试点需先落实供应商、额度、授权素材与受信后端认证。
@@ -59,6 +61,7 @@ YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。YJ
 | YJ-11 | 本地工程验证完成 | [历史、反馈、纠错与资格撤下](reports/YJ-11-image-history-corrections-report.md)；替代生成等待独立请求契约 |
 | YJ-12 | 定向本地验证完成；连续全量回归待稳定 | [反馈恢复与 PG/原件恢复已核查](reports/YJ-12-recovery-terminal-report.md)；综合先 22/22 后 18/22（验证码 HTTP 429） |
 | YJ-13 | LOCAL_DEMO_PASS，本地合成演示已完成 | [35 轮、独立回归、启停与故障恢复](reports/YJ-13-local-demo-closeout-report.md) |
+| YJ-P01 | 第二阶段准备；任务书已上传，未开始代码 | [真实模型接面、离线适配、费用/素材门禁与受控试点放行条件](task-briefs/YJ-P01-real-service-readiness.md) |
 | YJ-M01 | 后续待开始 | 地图具体组织方式尚未确定 |
 
 ## 依赖说明

@@ -1,5 +1,11 @@
 # 变更记录
 
+## 2026-11-21 YJ-13 收口核对与 P01 离线接入准备
+
+- 只读核对 YJ-13 的 LOCAL_DEMO_PASS 证据、两次 22/22、35+2 轮、14 表恢复与开关/账本范围；本轮未独立重跑原 Windows/PG/Chrome。
+- 在 `codex/yj-p01-real-service-readiness` 独立分支上传[文字/图片服务接入前置核查完整任务书](docs/task-briefs/YJ-P01-real-service-readiness.md)，更新交接和任务入口。
+- P01 只有任务与文档准备；未选择真实供应商，未请求密钥或预算，**没有真实模型发送**。原 YJ-13、main 与上游九霄不改。
+
 ## 2026-11-21 YJ-13 本地演示
 
 **YJ-13 LOCAL_DEMO_PASS。** 完整隔离回归连续 22/22、22/22；原角色卡 35 轮、第二会话 2 轮，已实测启停、回退和 14 表配对恢复。 [运行报告](docs/reports/YJ-13-local-demo-closeout-report.md)
