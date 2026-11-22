@@ -7,7 +7,7 @@
 - 九霄只读上游：`L-core-dev-team/Nine-cloud@cd25360c7929e10f8b2b0fad342fedd943d4f323`
 - 目标：完成**映界后端图片生成 generate 与保留人物/结构的参考编辑 edit 的 OpenAI API 适配器**，让已有 YJ-05 ImageTasks/审阅/原件体系可接入真实供应商协议。当前先做零成本、可离线验收的业务代码。
 - **本阶段真实 OpenAI 模型 GET/文字 POST/图片生成与编辑 POST 全部 0 次；严禁索要、读取或保存真实 API Key；用户尚未授权任何新的图片 API 支出。**
-- 与 Dot 任务 [YJ-ENV-01](YJ-ENV-01-dot-loopback.md) 完全并行；任何本机 TCP 环境阻塞单列 ENV_BLOCKED，不要让该阻塞吞掉可独立完成的离线源码工作。
+- 与 Dot 任务 [YJ-ENV-01](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/blob/7d2badc6284174053ed3012766a79edd1346124f/docs/task-briefs/YJ-ENV-01-dot-loopback.md) 完全并行；任何本机 TCP 环境阻塞单列 ENV_BLOCKED，不要让该阻塞吞掉可独立完成的离线源码工作。
 
 ## 一、仓库内已有能力，绝对不要从零重建
 

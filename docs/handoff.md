@@ -2,6 +2,13 @@
 
 更新：2026-11-22。
 
+## 最新并行接续：Codex 图片适配 I1 / Dot 本机环境 ENV-01（仅任务书）
+
+- 已只读核对当前固定基线 `codex/yj-p02-l5b-loopback-closeout@6d9fa510cb6daa75e50eb9a4ebd4a277a8a70ec5`、L5B `ENV_BLOCKED` 最小探针，以及 YJ-02 工具级真图、YJ-05 ImageTasks、P01 供应商 fake、原 P02 OpenAI 适配任务书。**本轮未在 Windows/PG/Chrome 重跑任何测试。**
+- 从同一 L5B SHA 建立互不重叠分支：Codex `codex/yj-p02-i1-image-adapter-offline`（[Images 生图与参考编辑离线任务书](task-briefs/YJ-P02-I1-openai-image-offline.md)）；Dot `dot/yj-env-01-loopback-permission`（[最小本机 TCP/权限取证任务书](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/blob/7d2badc6284174053ed3012766a79edd1346124f/docs/task-briefs/YJ-ENV-01-dot-loopback.md)）。Dot 负责 EACCES 的合法环境诊断，Codex 不得重复调查，改为开发图片 generate/edit API 适配器、已审 PNG 参考、审图门禁、注入假传输及测试。
+- **本次只是上传新任务书及交接，I1/ENV-01 实际实施尚未开始。** 两条线真实 OpenAI 模型权限、文字、图片请求总数 0；不使用真实 API Key，不批准任何新费用。旧 L1 ACKNOWLEDGED、L4 UNKNOWN_STOP、L5 PARTIAL、L5B ENV_BLOCKED 与原 main 保持。真正需要 PG/Chrome/TCP 的验收只能在 Dot 获合法权限并提供可核回执后进行。
+- 官方文档已核实存在 Images API generations/edits 两个端点，`gpt-image-2.6-sunburst` 作为未冻结候选模型；项目访问/收费/效果均 NOT_RUN。详细协议与日后授权条件在 I1 任务书，不能直接拿 YJ-02 的 Codex 工具真图当成应用后端 API 已通过。
+
 ## L5B 本机回环实测
 
 **YJ-P02-L5B · ENV_BLOCKED。** 当前 Windows 环境允许 Node 监听本机随机端口，连接同一端口时返回 `connect EACCES`。HTTP、原生 Chrome、临时 PG、L4R 与 YJ-13 本轮未运行；L5 维持 PARTIAL。[实测与脱敏回执](reports/YJ-P02-L5B-loopback-closeout-report.md)

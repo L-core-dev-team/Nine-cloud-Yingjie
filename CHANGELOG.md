@@ -1,5 +1,11 @@
 # 变更记录
 
+## 2026-11-22 YJ-ENV-01 / YJ-P02-I1 两线并行任务准备
+
+- 道主安排 Dot 独立处理 L5B 的 Windows `127.0.0.1` CONNECT EACCES；已为其准备独立 [ENV-01 任务书](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/blob/7d2badc6284174053ed3012766a79edd1346124f/docs/task-briefs/YJ-ENV-01-dot-loopback.md)，禁止绕过自动审批或关闭系统安全策略。
+- Codex 从同一固定 L5B 完成提交另建 `codex/yj-p02-i1-image-adapter-offline`，交付 [Images 生成/编辑离线协议适配完整任务书](docs/task-briefs/YJ-P02-I1-openai-image-offline.md)，直接复用 YJ-05 ImageTasks 与 YJ-02 旧图，先做无网假传输。
+- 本轮仅任务文档和 GitHub 分支准备；I1/ENV-01 新源码、测试与收费请求未执行，L1/L4/L5 状态、两个 main、万卡阁不动。
+
 ## L5B 本机回环实测
 
 **YJ-P02-L5B · ENV_BLOCKED。** 当前 Windows 环境允许 Node 监听本机随机端口，连接同一端口时返回 `connect EACCES`。HTTP、原生 Chrome、临时 PG、L4R 与 YJ-13 本轮未运行；L5 维持 PARTIAL。[实测与脱敏回执](docs/reports/YJ-P02-L5B-loopback-closeout-report.md)

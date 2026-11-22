@@ -2,6 +2,12 @@
 
 更新：2026-11-22。
 
+## YJ-P02-I1 图片离线适配与 YJ-ENV-01 Dot 环境任务准备
+
+GitHub 只读核对 L5B 完成 SHA `6d9fa510cb6daa75e50eb9a4ebd4a277a8a70ec5` 的 TCP LISTEN PASS、同进程 CONNECT EACCES，以及 [L5B 原回执](reports/evidence/YJ-P02-L5B/loopback.json) 中的 7/23/11/22 项待测状态。源代码中 YJ-05 `ImageTasks` 已提供 PG task、attempt、参考图/资产、unknown 与待审机制；YJ-02 的 3 张真图属于 Codex image_gen 工具实验，**不是供应商 Images API 已接通**。根据 2026-11-22 官方 Images 文档，generations 与 edits 是分别的 API，候选 `gpt-image-2.6-sunburst`，实际项目权限、计费与真实输出 NOT_RUN。
+
+本轮并行创建独立 [Codex I1 任务书](task-briefs/YJ-P02-I1-openai-image-offline.md)及 [Dot ENV-01 任务书](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/blob/7d2badc6284174053ed3012766a79edd1346124f/docs/task-briefs/YJ-ENV-01-dot-loopback.md)，尚未提交新 adapter 源码或完成任何新测试；不因 Dot 环境挂起而停止图片协议的纯离线开发。两项真实 OpenAI 模型查询、文字与图片调用为 0，新增 USD 0，旧许可/main 均不变。
+
 ## L5B 本机回环实测
 
 **YJ-P02-L5B · ENV_BLOCKED。** 当前 Windows 环境允许 Node 监听本机随机端口，连接同一端口时返回 `connect EACCES`。HTTP、原生 Chrome、临时 PG、L4R 与 YJ-13 本轮未运行；L5 维持 PARTIAL。[实测与脱敏回执](reports/YJ-P02-L5B-loopback-closeout-report.md)
