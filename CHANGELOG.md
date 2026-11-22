@@ -1,5 +1,11 @@
 # 变更记录
 
+## 2026-11-22 S2 离线验收核查与 S3 用户可操作预览任务准备
+
+- GitHub 核实 S2 完成提交、100 条锁定语料的 44 eligible / 12 needs-review / 10 conflict / 34 not-ready，以及 20 修订的模拟生成/编辑、复用、迟到归属和拒审。真实 OpenAI/原生 PG/Chrome 均 NOT_RUN。
+- 对照现有 YJ-06 的原角色卡映界 UI，在 S2 完成提交之上独立建立 `codex/yj-p03-s3-offline-playable-preview`，上传 [静态无 TCP、可打开/可点击的 S3 完整任务书](docs/task-briefs/YJ-P03-S3-offline-playable-preview.md)。本轮仅任务与交接，未生成 S3 页面或运行新的测试。
+- 强制区分抽象格式测试 PNG、YJ-02 旧工具真图、真实 Images API 尚未发送，保留 ENV_BLOCKED、LIVE_BLOCKED_COST_BOUND、旧许可、原分支和两个 main。
+
 ## 2026-11-22 S2 隔离回放验收
 
 **YJ-P03-S2 · P03_S2_OFFLINE_PASS。** 100 条预锁定合成案例中，44 条可入画，12 条需复核，10 条冲突，34 条条件不足。危险放行和不必要阻断均为 0。20 个连续修订经过三个地点，模拟生成与编辑各一次，实际费用 USD 0。 [运行报告与复跑](docs/reports/YJ-P03-S2-scene-consistency-slice-report.md)

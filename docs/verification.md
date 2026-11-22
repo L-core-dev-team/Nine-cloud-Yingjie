@@ -2,6 +2,12 @@
 
 更新：2026-11-22。
 
+## GitHub 核查 P03-S2 并准备可点击 S3 体验（本轮只读、非本机执行）
+
+从 GitHub 核实 S2 完成提交 `c5f75abf53d278a2f00e0ee9581bbc45ec224141`，[运行报告](reports/YJ-P03-S2-scene-consistency-slice-report.md)及 [100 项锁定测量](reports/evidence/YJ-P03-S2/measurement.json)、[20 回合/2 模拟发送/3 复用与拒审迟到](reports/evidence/YJ-P03-S2/story-slice.json)、[兼容回归](reports/evidence/YJ-P03-S2/regression.json)，读取 S2 源码和 YJ-06 既有 UI 组件。S2 报告的四类图片资格计数 44/12/10/34 合计 100，无危险放行或多余弃判；同一开发者合成标注，不能代表独立人类盲评。正常运行的 ImageTasks 和原件保存在 SQLite 替身环境，真实 PG/Chrome /九霄后端未通过。上轮禁真实服务 0 次新增费用 0。**本轮没有在 Windows 上重复运行测试。**
+
+自 S2 SHA 建立[独立 S3 静态预览任务书](task-briefs/YJ-P03-S3-offline-playable-preview.md)，要求把 20 修订和已有状态语义做成能实际点击操作的离线前端，同时不把测试 PNG 标成剧情图，不将 YJ-02 工具真图映射到未获许可的新地点。**S3 业务代码、可打开的页面、文件/HTTP/Chrome/手机验证均 NOT_RUN。** 只有实际文件、真实交互与无网回执才能把 S3 升为 PASS；L4 UNKNOWN_STOP、I2 LIVE_BLOCKED_COST_BOUND、Issue #1 EACCES 不变。
+
 ## 2026-11-22 S2 隔离回放验收
 
 **YJ-P03-S2 · P03_S2_OFFLINE_PASS。** 100 条预锁定合成案例中，44 条可入画，12 条需复核，10 条冲突，34 条条件不足。危险放行和不必要阻断均为 0。20 个连续修订经过三个地点，模拟生成与编辑各一次，实际费用 USD 0。 [运行报告与复跑](reports/YJ-P03-S2-scene-consistency-slice-report.md)
