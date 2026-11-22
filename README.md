@@ -4,6 +4,8 @@
 
 ## 当前状态
 
+**最新排障任务 YJ-P02-L4R：** 原 L4 页面最终点击后状态为 `UNKNOWN_STOP`，没有可核验的真实收据和 SQLite 账本。本轮只读 GitHub 源码后，已在独立分支准备[旧环境只读取证与安全页面可观测性修复任务书](docs/task-briefs/YJ-P02-L4R-trigger-forensics.md)。**L4R 业务尚未执行；禁止重新发送、索取 API Key 或复用旧批准。**
+
 **YJ-P02-L4 · UNKNOWN_STOP。** 本人报告已点击。原页面已结束，本机未找到真实回执与专用账本。实际用量、费用及最终画面状态未知，本次核查补发 0 次。[核查结论与历史离线验收](docs/reports/YJ-P02-L4-luna-scene-pilot-report.md)
 
 **YJ-P02-L3 场景证据契约已完成离线联调。** 原角色卡保存的完整调查可建立视觉状态，缺少地点、视角或完整名单时继续显示文字。默认宿主使用原提取器。参见[报告与复跑](docs/reports/YJ-P02-L3-scene-evidence-report.md)。

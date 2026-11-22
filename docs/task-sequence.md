@@ -2,6 +2,8 @@
 
 更新：2026-11-22。
 
+**YJ-P02-L4R 排障接续：** [L4 会话结束但丢失回执的只读取证和零网络页面修复任务书](task-briefs/YJ-P02-L4R-trigger-forensics.md)已上传独立分支，业务未执行。L4 仍为 `UNKNOWN_STOP`，真实送达/费用未知；**严禁重发与重置旧许可**。
+
 **YJ-P02-L4 · UNKNOWN_STOP。** 本人报告已点击。原页面已结束，本机未找到真实回执与专用账本。实际用量、费用及最终画面状态未知，本次核查补发 0 次。[核查结论与历史离线验收](reports/YJ-P02-L4-luna-scene-pilot-report.md)
 
 **YJ-P02-L3 已执行。** 新契约仅在隔离回放中使用。已验证首回合场景证据和后续酒馆连续性，真实服务和图片试点仍未运行。[结果、限制与回退](reports/YJ-P02-L3-scene-evidence-report.md)
@@ -76,7 +78,8 @@ YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。YJ
 | YJ-P02-L1 | 已完成 | 真实文字 1 次，图片 0 次。估算 USD 0.0000287，正式账单待核。[运行报告](reports/YJ-P02-L1-luna-text-smoke-report.md) |
 | YJ-P02-L2 | 已完成 | 真实正文只读回放与局部事实审计；原、新均留空，新增真实请求 0。[报告](reports/YJ-P02-L2-live-text-extraction-report.md) |
 | YJ-P02-L3 | 待开始；任务书已上传 | [完成初始视觉场景的叙事证据/字段完整性契约，真实 API 为 0](task-briefs/YJ-P02-L3-scene-evidence-contract.md)，默认 /2 不变 |
-| YJ-P02-L4 | 待开始；完整任务书已上传 | [新一次 Luna 真实场景叙事试点的禁网准备、独立一次性授权与后续门禁](task-briefs/YJ-P02-L4-luna-scene-pilot.md)；**真实请求未获新授权** |
+| YJ-P02-L4 | `UNKNOWN_STOP`，许可已停止使用 | [点击后核查](reports/YJ-P02-L4-luna-scene-pilot-report.md)：受信回执/账本未找到，真实送达/费用/画面仍未知，不补发 |
+| YJ-P02-L4R | 待开始，仅任务书 | [只读旧证据和本机零网络 UI 阶段可观测性修复](task-briefs/YJ-P02-L4R-trigger-forensics.md)；新增真实 API 调用 0 |
 | YJ-M01 | 后续待开始 | 地图具体组织方式尚未确定 |
 
 ## 依赖说明

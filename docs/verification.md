@@ -2,6 +2,12 @@
 
 更新：2026-11-22。
 
+## YJ-P02-L4R 新任务准备时的源证据核对（非本机执行）
+
+只读核对 L4 远端 HEAD `75270ad14746c77c50e1ebbd2fc012e5df0a0f58`、[点击后原记录](reports/evidence/YJ-P02-L4/post-trigger-review.json)、L4 运行报告和 `packages/luna-text/l4/pilot.mjs`、`packages/luna-text/key-entry/{server.mjs,entry.js}`、`journey.mjs` 与 `ledger.mjs`。确切记录为：用户报告已点最终执行、前端“会话已结束”、事后规范目录与账本/回执均未找到，真实 API 送达、费用和场景 UNKNOWN，核查补发 0。源码表明正常执行在真模型网络传输前应先创建目录/receipt 并写单次账本，因而**同一进程和 home 的缺失资料对未发送是强线索**，但目前尚未独立核对原 OS 用户与运行时路径，不能改判“真实 API 0”或成功。
+
+已在独立[完整 L4R 任务书](task-briefs/YJ-P02-L4R-trigger-forensics.md)列出原进程只读取证、伪造 Key 离线 Chrome/HTTP 重现和安全阶段日志/页面修复。**本轮 L4R 代码、实际 Windows 文件检查与任何新测试 NOT_RUN，真实 OpenAI 新调用 0**。原许可不得重新启用或扣费重试。
+
 ## L4 最终点击后的只读核查
 
 **YJ-P02-L4 · UNKNOWN_STOP。** 本人报告已点击。原页面已结束，本机未找到真实回执与专用账本。实际用量、费用及最终画面状态未知，本次核查补发 0 次。[核查结论与历史离线验收](reports/YJ-P02-L4-luna-scene-pilot-report.md)
