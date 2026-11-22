@@ -2,6 +2,10 @@
 
 映界为《九霄》提供随文字剧情变化、能够复访并保留变化的场景画面。
 
+## 当前接续 · YJ-P04-H2 剧情高光长线排序与出图节奏（仅任务书）
+
+已基于 H1 固定 SHA `74ea5804017ed74db2019045036a7efe1cf15519` 新建 `codex/yj-p04-h2-arc-payoff-cadence` 并上传 [完整 H2 研究任务书](docs/task-briefs/YJ-P04-H2-arc-payoff-cadence.md)：补充权益/关系的安静高潮、跨故事线铺垫与兑现、相对峰值排名、重复高潮去重及可见证据不足时的 text-only 判断。本轮**仅准备文档与分支，H2 新代码和评估 NOT_RUN**。禁止真实 AI API、生成图片、生产切换和修改九霄文字玩法。旧 I2 真实费用门禁仍 LIVE_BLOCKED_COST_BOUND，原生 PG/Chrome 仍 ENV_BLOCKED。
+
 ## YJ-P04-H1 剧情关键事件与高潮研究
 
 H1 已在独立离线回放中完成研究原型。14 条合成故事线的 66 个修订中，16 个标注关键时刻检出 15 个，50 个普通回合误报 0。漏判为渡船所有权变更。真实模型调用和费用均为 0。 [运行报告与回放入口](docs/reports/YJ-P04-H1-highlight-replay-report.md)

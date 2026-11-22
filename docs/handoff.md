@@ -2,6 +2,13 @@
 
 更新：2026-11-22。
 
+## 最新接续 · YJ-P04-H2 长线铺垫/结果排序/少而精的出图节奏（仅任务书）
+
+- GitHub 核对 H1 已验收提交 `codex/yj-p04-h1-highlight-replay@74ea5804017ed74db2019045036a7efe1cf15519`，只读 [H1 报告](reports/YJ-P04-H1-highlight-replay-report.md)、[锁定语料的 15/16、0/50、10/11 回执](reports/evidence/YJ-P04-H1/run.json)、[首轮三项失败及补正](reports/evidence/YJ-P04-H1/first-run.json)、[开源评估](reports/YJ-P04-H1-open-source-assessment.md)、`packages/highlights/` 实际事件/图/回放源码；锁定语料 JSONL 在原冻结提交 `5b4e0e6b42ed3a505db89415ebe283483ccfb5bc` 与 H1 HEAD 的 Git blob 相同。**本轮 GitHub 核验，不在用户 Windows 重新执行 H1 测试。**
+- H1 为可解释的**窄中文谓词离线研究原型**：14 线、66 修订，16 关键时刻检出 15、50 普通误报 0、top-1 10/11；唯一剩余漏判是“渡船”权利变化，并非性能问题。原锁定故事中的 15 个高潮缺独立完整视觉证据，直接导演发送候选 0，这是安全边界，不得通过假视觉绕过。
+- 已自 H1 完成 SHA 创建独立 `codex/yj-p04-h2-arc-payoff-cadence`，上传[完整 H2 任务书](task-briefs/YJ-P04-H2-arc-payoff-cadence.md)，优先通用权益交接、跨回合/跨线兑现、当前前缀的峰值排序、重复提议抑制和 text-only / director-review / defer。至少 160 条全新故事修订、冻结前提交、整条故事线 dev/held 分离；不改原 H1 标签或旧输出，盲评缺失须如实声明。**H2 业务代码、冻结语料及新测试尚未运行。**
+- 映界始终是九霄的视觉插件，不造文字引擎；仅从九霄已保存的授权 completed-history 获取证据，升级前先走独立 replayOnly，后续 D1 导演/画质再测。不碰 L1/L4 旧许可、I2 钱额、两个 main；新增真实 OpenAI 模型/文字/图片请求 0、费用 0。Issue #1 localhost 与 Issue #2 S3 浏览器仍开放。
+
 ## YJ-P04-H1 剧情关键事件与高潮研究
 
 H1 已在独立离线回放中完成研究原型。14 条合成故事线的 66 个修订中，16 个标注关键时刻检出 15 个，50 个普通回合误报 0。漏判为渡船所有权变更。真实模型调用和费用均为 0。 复跑可用 packages/highlights/demo.mjs 指定故事与截止修订，首次及最终失败均有记录。 [运行报告与回放入口](reports/YJ-P04-H1-highlight-replay-report.md)

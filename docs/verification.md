@@ -2,6 +2,12 @@
 
 更新：2026-11-22。
 
+## H1 GitHub 核查与 H2 研究任务书准备（本轮只读）
+
+GitHub 远端 H1 完成 SHA `74ea5804017ed74db2019045036a7efe1cf15519` 与当前分支 HEAD 一致；[H1 报告](reports/YJ-P04-H1-highlight-replay-report.md)、[锁定样本逐线回执](reports/evidence/YJ-P04-H1/run.json)、[首轮三项失败](reports/evidence/YJ-P04-H1/first-run.json)、[成本](reports/evidence/YJ-P04-H1/benchmark.json)和 `packages/highlights/` 实际源码均已只读查看。锁定语料 `packages/highlights/test/locked.jsonl` 在实现前的 `5b4e0e6b42ed3a505db89415ebe283483ccfb5bc` 与当前 H1 Git blob 相等。H1 **15/16 关键时刻、0/50 普通误报、10/11 top-1** 属于开发者自编语料；漏判“渡船”权益转移，不能写成全量 PASS。旧 15 个候选均无法独立满足出图的完整可见字段，发送为 0，安全门禁保留。
+
+从 H1 SHA 新建 `codex/yj-p04-h2-arc-payoff-cadence` 并上传[完整 H2 任务书](task-briefs/YJ-P04-H2-arc-payoff-cadence.md)，要求真实关系因果、权益变化、持续后果、相对高峰及重复视觉提议抑制，先冻结至少 160 新修订再实现 `narrative-highlight/2 replayOnly`，与原 H1 按类别/排序比较。**本轮只上传任务与交接，H2 新代码/样本/基准测试 NOT_RUN，本机 H1 测试也未重跑。** 禁用真实 API，I2 LIVE_BLOCKED_COST_BOUND、原生 PG/Chrome ENV_BLOCKED 继续保持。
+
 ## YJ-P04-H1 剧情关键事件与高潮研究
 
 H1 已在独立离线回放中完成研究原型。14 条合成故事线的 66 个修订中，16 个标注关键时刻检出 15 个，50 个普通回合误报 0。漏判为渡船所有权变更。真实模型调用和费用均为 0。 [运行报告与回放入口](reports/YJ-P04-H1-highlight-replay-report.md)

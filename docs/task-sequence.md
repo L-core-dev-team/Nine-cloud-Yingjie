@@ -2,6 +2,8 @@
 
 更新：2026-11-22。
 
+**YJ-P04-H2 下一阶段任务书已上传：** [权益交接等安静高潮、跨故事线长期铺垫与兑现、相对峰值排名及少而精的候选出图节奏](task-briefs/YJ-P04-H2-arc-payoff-cadence.md)。基于 H1 完成 SHA，**H2 新规则/新评估尚未执行**；旧 H1 15/16、普通误报 0/50、top-1 10/11 原样存档。未批准任何真实模型或图片 API 调用，生产默认和主游戏不变。
+
 ## YJ-P04-H1 剧情关键事件与高潮研究
 
 H1 已在独立离线回放中完成研究原型。14 条合成故事线的 66 个修订中，16 个标注关键时刻检出 15 个，50 个普通回合误报 0。漏判为渡船所有权变更。真实模型调用和费用均为 0。 [运行报告与回放入口](reports/YJ-P04-H1-highlight-replay-report.md)
@@ -103,6 +105,8 @@ YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。YJ
 | YJ-P03-S1 | P03_S1_OFFLINE_PASS · replayOnly | [多地点自然中文、完整人物名单、受信地点注册及可追溯 scene-evidence/2 旁路](task-briefs/YJ-P03-S1-generalized-scene-evidence.md)，完全禁真实 API |
 | YJ-P03-S2 | P03_S2_OFFLINE_PASS | 100 条独立锁定语料与 20 回合模拟切片。原生 PG/Chrome 为 ENV_BLOCKED，真实图片为 LIVE_BLOCKED_COST_BOUND。 |
 | YJ-P03-S3 | S3_PREVIEW_PARTIAL | 已交付可双击静态文件、逐回合只读预览和旧图档案；原生浏览器与手机体验待验。 |
+| YJ-P04-H1 | 离线研究原型交付，仍有 1 条漏判 | [14 条线/66 修订中 15/16 高潮检出、0/50 普通误报、top-1 10/11](reports/YJ-P04-H1-highlight-replay-report.md)；非生产、0 图片调用 |
+| YJ-P04-H2 | 待执行 · 仅完整任务书已上传 | [跨线 Arc Memory、权益转移、关键时刻排序、去重时机与视觉安全边界](task-briefs/YJ-P04-H2-arc-payoff-cadence.md)，完全离线 |
 | YJ-P02-L5B | 环境阻塞 · ENV_BLOCKED | [在受许可的 loopback-only 环境完成本地 Chrome/PG/L4R/YJ-13 验收](task-briefs/YJ-P02-L5B-loopback-closeout.md)，不得提升公网权限或发真实 API |
 | YJ-ENV-01 · Dot | 待执行；任务书已上传 | [合法确认本机 EACCES 阻断与最小 localhost TCP 能力](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/blob/7d2badc6284174053ed3012766a79edd1346124f/docs/task-briefs/YJ-ENV-01-dot-loopback.md)；允许后移交 Codex 补 L5B |
 | YJ-P02-I1 · Codex | 离线完成 · IMAGE_ADAPTER_OFFLINE_PASS | [OpenAI Images 生成、编辑离线适配、参考版权许可、费用门禁与假 PNG 响应](task-briefs/YJ-P02-I1-openai-image-offline.md)；真实 API 仍禁止 |
