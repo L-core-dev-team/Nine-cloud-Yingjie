@@ -4,6 +4,8 @@
 
 ## 当前状态
 
+**YJ-P02-L3 任务书就绪，业务未执行。** [首个场景可见事实契约与零网络离线验证](docs/task-briefs/YJ-P02-L3-scene-evidence-contract.md)：从九霄 completed-history 提取可追溯地点、视点、完整人数、结构、时段和光照；事实不完整仍留空。L2 `/3` 继续 replayOnly，默认仍 `/2`。**L3 真实文字/图片 API 调用、费用均未执行。**
+
 **YJ-P02-L2 已完成。** 修订 1 的真实正文经 SHA 核对，原版弃判正确。隔离回放中的 `/3` 新增三类局部事实审计，仍保留 `not-ready`。本轮模型调用 0 次。[根因、回执与回退](docs/reports/YJ-P02-L2-live-text-extraction-report.md)
 
 **YJ-P02-L1 真实文字试点已通过。** 唯一一次 Luna 请求返回 HTTP 200，原角色卡保存修订 1，映界读回正文后判为 `not-ready`。图片调用为 0，单次许可已用完。[运行报告与真实回执](docs/reports/YJ-P02-L1-luna-text-smoke-report.md)

@@ -2,6 +2,12 @@
 
 更新：2026-11-22。
 
+## YJ-P02-L2 源码与证据核对、L3 开工准备（本轮）
+
+从 GitHub 只读核对 `codex/yj-p02-l2-real-text-extraction@282a76824cfbde7b032a8c4e79dc0c681755ce50`、[L2 原件分析报告](reports/YJ-P02-L2-live-text-extraction-report.md)、[脱敏实文回放](reports/evidence/YJ-P02-L2/replay.json)、[回归](reports/evidence/YJ-P02-L2/regression.json)与 `packages/first-play/initial-survey.mjs`。原 L1 修订 1 的 SHA 精确匹配；/2 首句整句不匹配即弃判，/3 仅补三类局部观察；地点/视角/非排他人物名单仍未确认，因此两版 `not-ready` 合理。旧样本 65/65 输出兼容，完整基线据原记录为两次 22/22，P01 7/7、L1 15/15，**本轮未独立在用户 Windows/PG/Chrome 环境重跑**。
+
+新建[完整 L3 任务书](task-briefs/YJ-P02-L3-scene-evidence-contract.md)与隔离分支，L3 业务实现、图片任务模拟、完整回归以及新供应商请求均 NOT_RUN。下一执行者应核对严格的初始场景字段证据与正反例，在原会话保存合成正文后离线核查；不修改已用尽的 L1 账本，不把局部事实强行转 ready。
+
 ## YJ-P02-L2 当次验证
 
 原 SHA 匹配，`/2` 与留存审计逐项一致；`/3` 记录局部事实，无可用画面。原目录与许可文件指纹一致。契约、既有 65 条语料、防重与浏览器回归见[报告](reports/YJ-P02-L2-live-text-extraction-report.md)。

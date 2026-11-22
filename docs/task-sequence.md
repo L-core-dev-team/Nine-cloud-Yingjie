@@ -2,6 +2,8 @@
 
 更新：2026-11-22。
 
+**YJ-P02-L3 接续：** [首个场景可见事实契约与离线模拟任务书](task-briefs/YJ-P02-L3-scene-evidence-contract.md)已上传独立分支，**业务未执行**。完成条件是合格的合成已保存正文能建立严格视觉状态、不合格正文保持 `not-ready`；不申请或执行任何新 OpenAI API 调用，L1 许可已耗尽。
+
 **YJ-P02-L2 已完成。** 真实修订 1 已核对，结论为 CORRECT_ABSTENTION；局部表达识别 EXTRACTOR_GAP_FIXED_OFFLINE。[报告](reports/YJ-P02-L2-live-text-extraction-report.md)
 
 **YJ-P02-L1 已完成，LUNA_ONE_CALL_PASS。** 一笔真实文字请求已保存并读回，原单次授权已用完。[报告](reports/YJ-P02-L1-luna-text-smoke-report.md)
@@ -71,6 +73,7 @@ YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。YJ
 | YJ-P02 | 待开始；OpenAI 已选、完整任务书已上传 | [OpenAI API 受信 adapter、生成/编辑协议、PG 发送前门禁与授权试点条件](task-briefs/YJ-P02-openai-adapter.md)；真实调用 NOT_RUN |
 | YJ-P02-L1 | 已完成 | 真实文字 1 次，图片 0 次。估算 USD 0.0000287，正式账单待核。[运行报告](reports/YJ-P02-L1-luna-text-smoke-report.md) |
 | YJ-P02-L2 | 已完成 | 真实正文只读回放与局部事实审计；原、新均留空，新增真实请求 0。[报告](reports/YJ-P02-L2-live-text-extraction-report.md) |
+| YJ-P02-L3 | 待开始；任务书已上传 | [完成初始视觉场景的叙事证据/字段完整性契约，真实 API 为 0](task-briefs/YJ-P02-L3-scene-evidence-contract.md)，默认 /2 不变 |
 | YJ-M01 | 后续待开始 | 地图具体组织方式尚未确定 |
 
 ## 依赖说明

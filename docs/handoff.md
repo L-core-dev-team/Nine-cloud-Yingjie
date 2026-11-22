@@ -2,6 +2,13 @@
 
 更新：2026-11-22。
 
+## 最新接续 · YJ-P02-L3 场景证据契约任务书已上传
+
+- 经 GitHub 核对 `codex/yj-p02-l2-real-text-extraction@282a76824cfbde7b032a8c4e79dc0c681755ce50` 的[运行报告](reports/YJ-P02-L2-live-text-extraction-report.md)、[受信原文回放脱敏回执](reports/evidence/YJ-P02-L2/replay.json)、[契约/65 样本/回归](reports/evidence/YJ-P02-L2/regression.json)和 /3 实现。原 SHA 及旧 /2 失败均被复现，/3 只补局部证据，旧版与新版都正确 `not-ready`；**本次未在用户本机重新运行测试或读取原文**。
+- 从 L2 完成提交创建 `codex/yj-p02-l3-scene-evidence-contract` 并上传[完整 L3 场景证据与合成文字生成契约任务书](task-briefs/YJ-P02-L3-scene-evidence-contract.md)。**本次只准备任务书及交接，L3 代码、PG/Chrome 回归和真实模型请求均 NOT_RUN**。
+- 执行重点：先区分“明确在场三人”与“完整名单”，由受信已保存文本确认地点、视角、结构、时段与光照，候选提示模板仅用合成材料验证；缺字段不能强行 ready；新增证据协议不得通过 JSON、世界书秘密或图片倒灌剧情。
+- L1 单笔许可已 `ACKNOWLEDGED` 耗尽，`.nine-cloud-yingjie/yj-p02-l1/approval.sqlite`、原停写数据库、旧 SHA 和历史审计不可修改。L3 实际 OpenAI 文字/图片 API 调用预算 **USD 0**。YJ-13 LOCAL_DEMO_PASS、P01 OFFLINE_PASS、两个 main 保留。
+
 ## YJ-P02-L2 当前交付
 
 原件、原会话和投影已只读核对。正确留空，`/3` 的局部识别改进仅进入独立审计投影，默认宿主继续用 `/2`。保留原 L1 账本及停机集群。[报告与复跑](reports/YJ-P02-L2-live-text-extraction-report.md)
