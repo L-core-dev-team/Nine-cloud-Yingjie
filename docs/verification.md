@@ -2,7 +2,11 @@
 
 更新：2026-11-22。
 
-## YJ-P02-L2 源码与证据核对、L3 开工准备（本轮）
+## YJ-P02-L3 本机离线交付
+
+场景证据旁路和候选叙事模板已在独立工作区实现。Chrome 原角色卡通过后端保存了 32 个合成回合，三处地点可区分，23 个不合格首回合全部留空。第二个空投影库重建六个连续修订，结果和审计逐条一致。L1 实文与原账本本轮未访问。查看[报告、测试结果与回退](reports/YJ-P02-L3-scene-evidence-report.md)和[浏览器回执](reports/evidence/YJ-P02-L3/browser.json)。
+
+## 归档 · L2 证据核对与 L3 开工准备
 
 从 GitHub 只读核对 `codex/yj-p02-l2-real-text-extraction@282a76824cfbde7b032a8c4e79dc0c681755ce50`、[L2 原件分析报告](reports/YJ-P02-L2-live-text-extraction-report.md)、[脱敏实文回放](reports/evidence/YJ-P02-L2/replay.json)、[回归](reports/evidence/YJ-P02-L2/regression.json)与 `packages/first-play/initial-survey.mjs`。原 L1 修订 1 的 SHA 精确匹配；/2 首句整句不匹配即弃判，/3 仅补三类局部观察；地点/视角/非排他人物名单仍未确认，因此两版 `not-ready` 合理。旧样本 65/65 输出兼容，完整基线据原记录为两次 22/22，P01 7/7、L1 15/15，**本轮未独立在用户 Windows/PG/Chrome 环境重跑**。
 

@@ -1,0 +1,513 @@
+{
+  "status": "OFFLINE_PASS",
+  "node": "v26.13.0",
+  "steps": [
+    {
+      "revision": 1,
+      "status": "ready",
+      "scene": "east",
+      "version": "V1",
+      "count": 3,
+      "reason": null
+    },
+    {
+      "revision": 2,
+      "status": "ready",
+      "scene": "east",
+      "version": "V1",
+      "count": 3,
+      "reason": null
+    },
+    {
+      "revision": 3,
+      "status": "ready",
+      "scene": "east",
+      "version": "V2",
+      "count": 5,
+      "reason": null
+    },
+    {
+      "revision": 4,
+      "status": "not-ready",
+      "scene": null,
+      "version": null,
+      "count": null,
+      "reason": "visible-departure"
+    },
+    {
+      "revision": 5,
+      "status": "ready",
+      "scene": "east",
+      "version": "V2",
+      "count": 5,
+      "reason": null
+    },
+    {
+      "revision": 6,
+      "status": "not-ready",
+      "scene": "east",
+      "version": null,
+      "count": null,
+      "reason": "unresolved-visible-change"
+    }
+  ],
+  "negativeCases": [
+    {
+      "label": "actionOnly",
+      "status": "not-ready",
+      "blockers": [
+        "incomplete:place"
+      ]
+    },
+    {
+      "label": "partial",
+      "status": "not-ready",
+      "blockers": [
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:timeOfDay"
+      ]
+    },
+    {
+      "label": "nonexclusive",
+      "status": "not-ready",
+      "blockers": [
+        "incomplete:people"
+      ]
+    },
+    {
+      "label": "noPosition",
+      "status": "not-ready",
+      "blockers": [
+        "incomplete:viewpoint",
+        "incomplete:perspective"
+      ]
+    },
+    {
+      "label": "noStructures",
+      "status": "not-ready",
+      "blockers": [
+        "incomplete:features"
+      ]
+    },
+    {
+      "label": "noTime",
+      "status": "not-ready",
+      "blockers": [
+        "incomplete:timeOfDay"
+      ]
+    },
+    {
+      "label": "noLight",
+      "status": "not-ready",
+      "blockers": [
+        "incomplete:lighting"
+      ]
+    },
+    {
+      "label": "dream",
+      "status": "not-ready",
+      "blockers": [
+        "unverified-scope:memory-or-dream",
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ]
+    },
+    {
+      "label": "plan",
+      "status": "not-ready",
+      "blockers": [
+        "unverified-scope:plan",
+        "arrival-after-observations",
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ]
+    },
+    {
+      "label": "memory",
+      "status": "not-ready",
+      "blockers": [
+        "unverified-scope:memory-or-dream",
+        "arrival-after-observations",
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ]
+    },
+    {
+      "label": "hearsay",
+      "status": "not-ready",
+      "blockers": [
+        "unverified-scope:reported",
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ]
+    },
+    {
+      "label": "mixedQuote",
+      "status": "not-ready",
+      "blockers": [
+        "unverified-scope:reported",
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ]
+    },
+    {
+      "label": "unrevealed",
+      "status": "not-ready",
+      "blockers": [
+        "unverified-scope:unrevealed",
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ]
+    },
+    {
+      "label": "ambiguous",
+      "status": "not-ready",
+      "blockers": [
+        "unverified-scope:ambiguous",
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ]
+    },
+    {
+      "label": "negated",
+      "status": "not-ready",
+      "blockers": [
+        "unverified-scope:negative",
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ]
+    },
+    {
+      "label": "question",
+      "status": "not-ready",
+      "blockers": [
+        "unverified-scope:ambiguous",
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ]
+    },
+    {
+      "label": "duplicatePlace",
+      "status": "not-ready",
+      "blockers": [
+        "arrival-after-observations",
+        "repeated-field:place",
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ]
+    },
+    {
+      "label": "unqualified",
+      "status": "not-ready",
+      "blockers": [
+        "unverified-scope:unknown",
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ]
+    },
+    {
+      "label": "staleAlias",
+      "status": "not-ready",
+      "blockers": [
+        "unverified-scope:unknown",
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ]
+    },
+    {
+      "label": "lateArrival",
+      "status": "not-ready",
+      "blockers": [
+        "arrival-after-observations",
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ]
+    },
+    {
+      "label": "conflictingTime",
+      "status": "not-ready",
+      "blockers": [
+        "repeated-field:timeOfDay",
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ]
+    },
+    {
+      "label": "hiddenJson",
+      "status": "not-ready",
+      "blockers": [
+        "unverified-scope:unknown",
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ]
+    },
+    {
+      "label": "oldImage",
+      "status": "not-ready",
+      "blockers": [
+        "unverified-scope:unknown",
+        "arrival-after-observations",
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ]
+    }
+  ],
+  "imageSends": 0,
+  "realTextCalls": 0,
+  "realImageCalls": 0,
+  "additionalUsd": 0,
+  "chrome": "158.0.8127.36",
+  "initialAudit": {
+    "narrativeSha256": "2a8047d4a58b1067860b87bb34ea723333fb7482f0b18ff7fc9aae12c90761eb",
+    "evidence": [
+      {
+        "rule": "indexed-arrival",
+        "scope": "explicit-current",
+        "start": 0,
+        "length": 10,
+        "playerKnown": true
+      },
+      {
+        "rule": "player-position-and-direction",
+        "scope": "explicit-current",
+        "start": 11,
+        "length": 10,
+        "playerKnown": true
+      },
+      {
+        "rule": "exclusive-roster",
+        "scope": "explicit-current",
+        "start": 22,
+        "length": 20,
+        "playerKnown": true
+      },
+      {
+        "rule": "visible-fixed-structures",
+        "scope": "explicit-current",
+        "start": 43,
+        "length": 14,
+        "playerKnown": true
+      },
+      {
+        "rule": "explicit-time",
+        "scope": "explicit-current",
+        "start": 58,
+        "length": 6,
+        "playerKnown": true
+      },
+      {
+        "rule": "observed-light",
+        "scope": "explicit-current",
+        "start": 65,
+        "length": 6,
+        "playerKnown": true
+      }
+    ],
+    "fields": {
+      "place": {
+        "value": {
+          "name": "青石酒馆",
+          "sceneId": "east",
+          "parentSceneId": "东村"
+        },
+        "precision": "complete",
+        "evidenceIndex": 0
+      },
+      "people": {
+        "value": [
+          "掌柜",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "precision": "complete",
+        "evidenceIndex": 2
+      },
+      "features": {
+        "value": [
+          "柜台",
+          "双窗"
+        ],
+        "precision": "complete",
+        "evidenceIndex": 3
+      },
+      "lighting": {
+        "value": "日光",
+        "precision": "complete",
+        "evidenceIndex": 5
+      },
+      "timeOfDay": {
+        "value": "正午",
+        "precision": "complete",
+        "evidenceIndex": 4
+      },
+      "viewpoint": {
+        "value": "正门",
+        "precision": "complete",
+        "evidenceIndex": 1
+      },
+      "perspective": {
+        "value": "玩家向北所见",
+        "precision": "complete",
+        "evidenceIndex": 1
+      }
+    }
+  },
+  "partialAudit": {
+    "narrativeSha256": "a822c2fcd9aeeb9e804563335dd0c30594228257c384bb77f737403bc88751f2",
+    "evidence": [
+      {
+        "rule": "observed-members",
+        "scope": "explicit-current",
+        "start": 0,
+        "length": 14,
+        "playerKnown": true
+      },
+      {
+        "rule": "visible-fixed-structures",
+        "scope": "explicit-current",
+        "start": 15,
+        "length": 14,
+        "playerKnown": true
+      },
+      {
+        "rule": "observed-light",
+        "scope": "explicit-current",
+        "start": 30,
+        "length": 6,
+        "playerKnown": true
+      }
+    ],
+    "fields": {
+      "place": {
+        "precision": "unknown"
+      },
+      "people": {
+        "value": [
+          "掌柜",
+          "蓝衣客",
+          "赭衣客"
+        ],
+        "precision": "partial",
+        "evidenceIndex": 0
+      },
+      "features": {
+        "value": [
+          "柜台",
+          "双窗"
+        ],
+        "precision": "complete",
+        "evidenceIndex": 1
+      },
+      "lighting": {
+        "value": "日光",
+        "precision": "complete",
+        "evidenceIndex": 2
+      },
+      "timeOfDay": {
+        "precision": "unknown"
+      },
+      "viewpoint": {
+        "precision": "unknown"
+      },
+      "perspective": {
+        "precision": "unknown"
+      }
+    }
+  },
+  "imageTasks": 0,
+  "imageAttempts": 0,
+  "fakeCompletions": 32,
+  "stableReplayRevisions": 6,
+  "duplicateApplied": 0,
+  "foreignAccountDenied": true,
+  "distinctSessions": true,
+  "completeScenes": [
+    "east",
+    "west",
+    "north-observatory"
+  ],
+  "historySource": "completed-history"
+}

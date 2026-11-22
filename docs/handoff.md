@@ -2,7 +2,11 @@
 
 更新：2026-11-22。
 
-## 最新接续 · YJ-P02-L3 场景证据契约任务书已上传
+## YJ-P02-L3 本机离线交付
+
+场景证据旁路和候选叙事模板已在独立工作区实现。Chrome 原角色卡通过后端保存了 32 个合成回合，三处地点可区分，23 个不合格首回合全部留空。第二个空投影库重建六个连续修订，结果和审计逐条一致。L1 实文与原账本本轮未访问。查看[报告、测试结果与回退](reports/YJ-P02-L3-scene-evidence-report.md)和[浏览器回执](reports/evidence/YJ-P02-L3/browser.json)。
+
+## 归档 · L3 任务准备
 
 - 经 GitHub 核对 `codex/yj-p02-l2-real-text-extraction@282a76824cfbde7b032a8c4e79dc0c681755ce50` 的[运行报告](reports/YJ-P02-L2-live-text-extraction-report.md)、[受信原文回放脱敏回执](reports/evidence/YJ-P02-L2/replay.json)、[契约/65 样本/回归](reports/evidence/YJ-P02-L2/regression.json)和 /3 实现。原 SHA 及旧 /2 失败均被复现，/3 只补局部证据，旧版与新版都正确 `not-ready`；**本次未在用户本机重新运行测试或读取原文**。
 - 从 L2 完成提交创建 `codex/yj-p02-l3-scene-evidence-contract` 并上传[完整 L3 场景证据与合成文字生成契约任务书](task-briefs/YJ-P02-L3-scene-evidence-contract.md)。**本次只准备任务书及交接，L3 代码、PG/Chrome 回归和真实模型请求均 NOT_RUN**。

@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-**YJ-P02-L3 任务书就绪，业务未执行。** [首个场景可见事实契约与零网络离线验证](docs/task-briefs/YJ-P02-L3-scene-evidence-contract.md)：从九霄 completed-history 提取可追溯地点、视点、完整人数、结构、时段和光照；事实不完整仍留空。L2 `/3` 继续 replayOnly，默认仍 `/2`。**L3 真实文字/图片 API 调用、费用均未执行。**
+**YJ-P02-L3 场景证据契约已完成离线联调。** 原角色卡保存的完整调查可建立视觉状态，缺少地点、视角或完整名单时继续显示文字。默认宿主使用原提取器。参见[报告与复跑](docs/reports/YJ-P02-L3-scene-evidence-report.md)。
 
 **YJ-P02-L2 已完成。** 修订 1 的真实正文经 SHA 核对，原版弃判正确。隔离回放中的 `/3` 新增三类局部事实审计，仍保留 `not-ready`。本轮模型调用 0 次。[根因、回执与回退](docs/reports/YJ-P02-L2-live-text-extraction-report.md)
 

@@ -2,7 +2,7 @@
 
 更新：2026-11-22。
 
-**YJ-P02-L3 接续：** [首个场景可见事实契约与离线模拟任务书](task-briefs/YJ-P02-L3-scene-evidence-contract.md)已上传独立分支，**业务未执行**。完成条件是合格的合成已保存正文能建立严格视觉状态、不合格正文保持 `not-ready`；不申请或执行任何新 OpenAI API 调用，L1 许可已耗尽。
+**YJ-P02-L3 已执行。** 新契约仅在隔离回放中使用。已验证首回合场景证据和后续酒馆连续性，真实服务和图片试点仍未运行。[结果、限制与回退](reports/YJ-P02-L3-scene-evidence-report.md)
 
 **YJ-P02-L2 已完成。** 真实修订 1 已核对，结论为 CORRECT_ABSTENTION；局部表达识别 EXTRACTOR_GAP_FIXED_OFFLINE。[报告](reports/YJ-P02-L2-live-text-extraction-report.md)
 
