@@ -1,0 +1,1912 @@
+{
+  "method": "narrative-highlight/1",
+  "node": "v26.13.0",
+  "corpusSha256": "926c492f656319e14a0f2f7b894a192f0244f71c4e94d41d9221d4441d7919e8",
+  "groups": {
+    "dev": {
+      "turns": 30,
+      "truePositive": 8,
+      "trueNegative": 22,
+      "miss": 0,
+      "falsePositive": 0,
+      "wrongKind": 0,
+      "byKind": {
+        "ordinary": {
+          "total": 22,
+          "correct": 22
+        },
+        "turn": {
+          "total": 2,
+          "correct": 2
+        },
+        "battle": {
+          "total": 2,
+          "correct": 2
+        },
+        "quiet": {
+          "total": 2,
+          "correct": 2
+        },
+        "emotion": {
+          "total": 2,
+          "correct": 2
+        }
+      },
+      "top1Correct": 5,
+      "rankedStories": 5,
+      "orderedPairs": 4,
+      "expectedPairs": 4,
+      "duplicateDirectorKeys": 0,
+      "directorCandidates": 0,
+      "restatements": 0
+    },
+    "held": {
+      "turns": 36,
+      "truePositive": 7,
+      "trueNegative": 28,
+      "miss": 1,
+      "falsePositive": 0,
+      "wrongKind": 0,
+      "byKind": {
+        "ordinary": {
+          "total": 28,
+          "correct": 28
+        },
+        "quiet": {
+          "total": 4,
+          "correct": 3
+        },
+        "turn": {
+          "total": 1,
+          "correct": 1
+        },
+        "battle": {
+          "total": 1,
+          "correct": 1
+        },
+        "emotion": {
+          "total": 2,
+          "correct": 2
+        }
+      },
+      "top1Correct": 5,
+      "rankedStories": 6,
+      "orderedPairs": 2,
+      "expectedPairs": 2,
+      "duplicateDirectorKeys": 0,
+      "directorCandidates": 0,
+      "restatements": 1
+    }
+  },
+  "failures": [
+    {
+      "story": "渡船",
+      "revision": 3,
+      "expected": "quiet",
+      "actual": "ordinary",
+      "prose": "李禾把自己的名字从分成册上划去，船契落在船工掌心。自此渡船由船工共有。",
+      "abstention": null
+    }
+  ],
+  "runs": [
+    {
+      "story": "渡口",
+      "split": "dev",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "turn",
+        "battle",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "turn",
+        "battle",
+        "ordinary"
+      ],
+      "goldOrder": [
+        4,
+        3
+      ],
+      "actualOrder": [
+        4,
+        3
+      ],
+      "correctOrder": true,
+      "events": 7,
+      "edges": 6
+    },
+    {
+      "story": "账簿",
+      "split": "dev",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "quiet",
+        "ordinary",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "quiet",
+        "ordinary",
+        "ordinary"
+      ],
+      "goldOrder": [
+        3
+      ],
+      "actualOrder": [
+        3
+      ],
+      "correctOrder": true,
+      "events": 6,
+      "edges": 4
+    },
+    {
+      "story": "师徒",
+      "split": "dev",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "emotion",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "emotion",
+        "ordinary"
+      ],
+      "goldOrder": [
+        3
+      ],
+      "actualOrder": [
+        3
+      ],
+      "correctOrder": true,
+      "events": 3,
+      "edges": 2
+    },
+    {
+      "story": "钥匙",
+      "split": "dev",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "quiet",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "quiet",
+        "ordinary"
+      ],
+      "goldOrder": [
+        3
+      ],
+      "actualOrder": [
+        3
+      ],
+      "correctOrder": true,
+      "events": 5,
+      "edges": 4
+    },
+    {
+      "story": "演武",
+      "split": "dev",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary"
+      ],
+      "goldOrder": [],
+      "actualOrder": [],
+      "correctOrder": true,
+      "events": 1,
+      "edges": 0
+    },
+    {
+      "story": "两条线",
+      "split": "dev",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "turn",
+        "emotion",
+        "ordinary",
+        "battle"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "turn",
+        "emotion",
+        "ordinary",
+        "battle"
+      ],
+      "goldOrder": [
+        6,
+        4,
+        3
+      ],
+      "actualOrder": [
+        6,
+        4,
+        3
+      ],
+      "correctOrder": true,
+      "events": 10,
+      "edges": 8
+    },
+    {
+      "story": "纸契",
+      "split": "held",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "quiet",
+        "ordinary",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "quiet",
+        "ordinary",
+        "ordinary"
+      ],
+      "goldOrder": [
+        3
+      ],
+      "actualOrder": [
+        3
+      ],
+      "correctOrder": true,
+      "events": 8,
+      "edges": 9
+    },
+    {
+      "story": "山关",
+      "split": "held",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "turn",
+        "battle",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "turn",
+        "battle",
+        "ordinary"
+      ],
+      "goldOrder": [
+        4,
+        3
+      ],
+      "actualOrder": [
+        4,
+        3
+      ],
+      "correctOrder": true,
+      "events": 7,
+      "edges": 6
+    },
+    {
+      "story": "姐妹",
+      "split": "held",
+      "expected": [
+        "ordinary",
+        "emotion",
+        "ordinary",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "emotion",
+        "ordinary",
+        "ordinary"
+      ],
+      "goldOrder": [
+        2
+      ],
+      "actualOrder": [
+        2
+      ],
+      "correctOrder": true,
+      "events": 3,
+      "edges": 2
+    },
+    {
+      "story": "渡船",
+      "split": "held",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "quiet",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary"
+      ],
+      "goldOrder": [
+        3
+      ],
+      "actualOrder": [],
+      "correctOrder": false,
+      "events": 2,
+      "edges": 0
+    },
+    {
+      "story": "错扣",
+      "split": "held",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "quiet",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "quiet",
+        "ordinary"
+      ],
+      "goldOrder": [
+        4
+      ],
+      "actualOrder": [
+        4
+      ],
+      "correctOrder": true,
+      "events": 7,
+      "edges": 5
+    },
+    {
+      "story": "撤回",
+      "split": "held",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary"
+      ],
+      "goldOrder": [],
+      "actualOrder": [],
+      "correctOrder": true,
+      "events": 2,
+      "edges": 0
+    },
+    {
+      "story": "复线",
+      "split": "held",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "emotion",
+        "ordinary",
+        "quiet"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "emotion",
+        "ordinary",
+        "quiet"
+      ],
+      "goldOrder": [
+        5,
+        3
+      ],
+      "actualOrder": [
+        5,
+        3
+      ],
+      "correctOrder": true,
+      "events": 10,
+      "edges": 7
+    },
+    {
+      "story": "无主",
+      "split": "held",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary"
+      ],
+      "goldOrder": [],
+      "actualOrder": [],
+      "correctOrder": true,
+      "events": 2,
+      "edges": 0
+    }
+  ],
+  "checks": [
+    "a corrected obstacle cannot support a later battle climax",
+    "inner reversal needs the same subject, prior avoidance and a changed action",
+    "foreign scope, unapproved source, tampering, gaps and future rows rejected",
+    "action, hidden data and image descriptions cannot create a highlight",
+    "rankings are reproducible, with no retrospective change to earlier candidates",
+    "repeated fulfillment yields one director candidate and one audited suppression",
+    "same arrival with and without prior stakes; director only gets independently visible facts",
+    "delayed outcome links the original choice; withdrawn and ambiguous objectives abstain",
+    "setup and payoff bind holder, instrument and target before linking",
+    "recent window and full storyline rank different available moments",
+    "all 20 S2 visual revisions replay without promoting routine changes"
+  ],
+  "contrasts": {
+    "s2": [
+      {
+        "revision": 1,
+        "fieldReady": "ready",
+        "consistency": "eligible",
+        "trigger": "new-place",
+        "visibleChange": true,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 2,
+        "fieldReady": "ready",
+        "consistency": "eligible",
+        "trigger": "unchanged-visual",
+        "visibleChange": false,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 3,
+        "fieldReady": "not-ready",
+        "consistency": "not-ready",
+        "trigger": "unknown-visible-state",
+        "visibleChange": false,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 4,
+        "fieldReady": "ready",
+        "consistency": "eligible",
+        "trigger": "new-place",
+        "visibleChange": true,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 5,
+        "fieldReady": "ready",
+        "consistency": "needs-review",
+        "trigger": "light-or-time-changed",
+        "visibleChange": true,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 6,
+        "fieldReady": "ready",
+        "consistency": "needs-review",
+        "trigger": "unchanged-visual",
+        "visibleChange": false,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 7,
+        "fieldReady": "ready",
+        "consistency": "eligible",
+        "trigger": "unchanged-visual",
+        "visibleChange": false,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 8,
+        "fieldReady": "not-ready",
+        "consistency": "not-ready",
+        "trigger": "unknown-visible-state",
+        "visibleChange": false,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 9,
+        "fieldReady": "not-ready",
+        "consistency": "not-ready",
+        "trigger": "unknown-visible-state",
+        "visibleChange": false,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 10,
+        "fieldReady": "ready",
+        "consistency": "eligible",
+        "trigger": "unchanged-visual",
+        "visibleChange": false,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 11,
+        "fieldReady": "ready",
+        "consistency": "eligible",
+        "trigger": "people-changed",
+        "visibleChange": true,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 12,
+        "fieldReady": "ready",
+        "consistency": "eligible",
+        "trigger": "people-changed",
+        "visibleChange": true,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 13,
+        "fieldReady": "not-ready",
+        "consistency": "not-ready",
+        "trigger": "unknown-visible-state",
+        "visibleChange": false,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 14,
+        "fieldReady": "ready",
+        "consistency": "eligible",
+        "trigger": "new-place",
+        "visibleChange": true,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 15,
+        "fieldReady": "ready",
+        "consistency": "eligible",
+        "trigger": "unchanged-visual",
+        "visibleChange": false,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 16,
+        "fieldReady": "ready",
+        "consistency": "eligible",
+        "trigger": "people-changed",
+        "visibleChange": true,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 17,
+        "fieldReady": "ready",
+        "consistency": "eligible",
+        "trigger": "people-changed",
+        "visibleChange": true,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 18,
+        "fieldReady": "ready",
+        "consistency": "needs-review",
+        "trigger": "light-or-time-changed",
+        "visibleChange": true,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 19,
+        "fieldReady": "ready",
+        "consistency": "needs-review",
+        "trigger": "unchanged-visual",
+        "visibleChange": false,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 20,
+        "fieldReady": "ready",
+        "consistency": "eligible",
+        "trigger": "light-or-time-changed",
+        "visibleChange": true,
+        "highlight": "ordinary",
+        "visual": []
+      }
+    ],
+    "reunion": [
+      {
+        "revision": 1,
+        "fieldReady": "not-ready",
+        "consistency": "not-ready",
+        "trigger": "unknown-visible-state",
+        "visibleChange": false,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 2,
+        "fieldReady": "ready",
+        "consistency": "eligible",
+        "trigger": "new-place",
+        "visibleChange": true,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 3,
+        "fieldReady": "ready",
+        "consistency": "eligible",
+        "trigger": "people-changed",
+        "visibleChange": true,
+        "highlight": "quiet",
+        "visual": [
+          "director-review"
+        ]
+      }
+    ],
+    "textOnly": [
+      {
+        "revision": 1,
+        "fieldReady": "not-ready",
+        "consistency": "not-ready",
+        "trigger": "unknown-visible-state",
+        "visibleChange": false,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 2,
+        "fieldReady": "not-ready",
+        "consistency": "not-ready",
+        "trigger": "unknown-visible-state",
+        "visibleChange": false,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 3,
+        "fieldReady": "not-ready",
+        "consistency": "not-ready",
+        "trigger": "unknown-visible-state",
+        "visibleChange": false,
+        "highlight": "quiet",
+        "visual": [
+          "hold"
+        ]
+      },
+      {
+        "revision": 4,
+        "fieldReady": "not-ready",
+        "consistency": "not-ready",
+        "trigger": "unknown-visible-state",
+        "visibleChange": false,
+        "highlight": "ordinary",
+        "visual": []
+      },
+      {
+        "revision": 5,
+        "fieldReady": "not-ready",
+        "consistency": "not-ready",
+        "trigger": "unknown-visible-state",
+        "visibleChange": false,
+        "highlight": "ordinary",
+        "visual": []
+      }
+    ],
+    "repeatedArrival": {
+      "rows": [
+        {
+          "revision": 1,
+          "fieldReady": "not-ready",
+          "consistency": "not-ready",
+          "trigger": "unknown-visible-state",
+          "visibleChange": false,
+          "highlight": "ordinary",
+          "visual": []
+        },
+        {
+          "revision": 2,
+          "fieldReady": "ready",
+          "consistency": "eligible",
+          "trigger": "new-place",
+          "visibleChange": true,
+          "highlight": "ordinary",
+          "visual": []
+        },
+        {
+          "revision": 3,
+          "fieldReady": "ready",
+          "consistency": "eligible",
+          "trigger": "people-changed",
+          "visibleChange": true,
+          "highlight": "quiet",
+          "visual": [
+            "director-review"
+          ]
+        },
+        {
+          "revision": 4,
+          "fieldReady": "ready",
+          "consistency": "eligible",
+          "trigger": "people-changed",
+          "visibleChange": true,
+          "highlight": "ordinary",
+          "visual": []
+        },
+        {
+          "revision": 5,
+          "fieldReady": "ready",
+          "consistency": "eligible",
+          "trigger": "people-changed",
+          "visibleChange": true,
+          "highlight": "ordinary",
+          "visual": []
+        }
+      ],
+      "suppressed": [
+        {
+          "moment": "5@0",
+          "original": "f93b62d1a160cedc5eead8ac1772ec14c4de0ad32343610dd28e43ec06d7f2dd"
+        }
+      ]
+    }
+  },
+  "examples": [
+    {
+      "story": "钥匙",
+      "result": {
+        "method": "narrative-highlight/1",
+        "replayOnly": true,
+        "through": 4,
+        "events": [
+          {
+            "id": "1@0",
+            "type": "plant",
+            "roles": {
+              "actor": "顾川",
+              "object": "铜钥"
+            },
+            "sentence": 0,
+            "ordinal": 0,
+            "evidence": {
+              "revision": 1,
+              "sourceKey": "00000000-0000-4000-b000-c95a99a40ad4",
+              "sha256": "9bf4f1ea00a1cc199abe65ee5f82ed5461ebcba43f8bac8d89b312520114fcf6",
+              "start": 0,
+              "end": 9,
+              "quote": "顾川留下了一枚铜钥"
+            }
+          },
+          {
+            "id": "1@10",
+            "type": "purpose",
+            "roles": {
+              "target": "书库"
+            },
+            "sentence": 0,
+            "ordinal": 1,
+            "evidence": {
+              "revision": 1,
+              "sourceKey": "00000000-0000-4000-b000-c95a99a40ad4",
+              "sha256": "9bf4f1ea00a1cc199abe65ee5f82ed5461ebcba43f8bac8d89b312520114fcf6",
+              "start": 10,
+              "end": 20,
+              "quote": "约定日后用它开启书库"
+            }
+          },
+          {
+            "id": "3@0",
+            "type": "use",
+            "roles": {
+              "actor": "顾川",
+              "object": "铜钥"
+            },
+            "sentence": 0,
+            "ordinal": 0,
+            "evidence": {
+              "revision": 3,
+              "sourceKey": "00000000-0000-4000-b000-24cc2af8f68b",
+              "sha256": "da4d35e9ef00e3f84b999597e4d5368a031cd0db4c1931f644a348da2b923683",
+              "start": 0,
+              "end": 8,
+              "quote": "顾川拿出那枚铜钥"
+            }
+          },
+          {
+            "id": "3@9",
+            "type": "opening",
+            "roles": {
+              "target": "书库"
+            },
+            "sentence": 0,
+            "ordinal": 1,
+            "evidence": {
+              "revision": 3,
+              "sourceKey": "00000000-0000-4000-b000-24cc2af8f68b",
+              "sha256": "da4d35e9ef00e3f84b999597e4d5368a031cd0db4c1931f644a348da2b923683",
+              "start": 9,
+              "end": 14,
+              "quote": "打开了书库"
+            }
+          },
+          {
+            "id": "3@15",
+            "type": "discovery",
+            "roles": {
+              "object": "封存的名册"
+            },
+            "sentence": 1,
+            "ordinal": 2,
+            "evidence": {
+              "revision": 3,
+              "sourceKey": "00000000-0000-4000-b000-24cc2af8f68b",
+              "sha256": "da4d35e9ef00e3f84b999597e4d5368a031cd0db4c1931f644a348da2b923683",
+              "start": 15,
+              "end": 26,
+              "quote": "封存的名册终于重见天日"
+            }
+          }
+        ],
+        "edges": [
+          {
+            "relation": "setup",
+            "from": "1@0",
+            "to": "1@10"
+          },
+          {
+            "relation": "consequence",
+            "from": "3@0",
+            "to": "3@9"
+          },
+          {
+            "relation": "payoff",
+            "from": "1@10",
+            "to": "3@9"
+          },
+          {
+            "relation": "consequence",
+            "from": "3@9",
+            "to": "3@15"
+          }
+        ],
+        "rounds": [
+          {
+            "revision": 1,
+            "kind": "ordinary",
+            "finding": "evidenced-context",
+            "candidateIds": [],
+            "repetitions": [],
+            "abstention": null,
+            "visualVerdict": "not-ready"
+          },
+          {
+            "revision": 2,
+            "kind": "ordinary",
+            "finding": "no-recognized-event",
+            "candidateIds": [],
+            "repetitions": [],
+            "abstention": null,
+            "visualVerdict": "not-ready"
+          },
+          {
+            "revision": 3,
+            "kind": "quiet",
+            "finding": "highlight",
+            "candidateIds": [
+              "b140f9aa2ac75b8b7f3ea8cf5e6f5b89657acdb49ab3b70d4f1c92cae857ca71"
+            ],
+            "repetitions": [],
+            "abstention": null,
+            "visualVerdict": "not-ready"
+          },
+          {
+            "revision": 4,
+            "kind": "ordinary",
+            "finding": "outside-current-scope",
+            "candidateIds": [],
+            "repetitions": [],
+            "abstention": "nonactual-or-reported-scope",
+            "visualVerdict": "not-ready"
+          }
+        ],
+        "candidates": [
+          {
+            "schemaVersion": "HighlightCandidate/1",
+            "method": "narrative-highlight/1",
+            "replayOnly": true,
+            "id": "b140f9aa2ac75b8b7f3ea8cf5e6f5b89657acdb49ab3b70d4f1c92cae857ca71",
+            "revision": 3,
+            "source": {
+              "schemaVersion": "0.1",
+              "kind": "card-history",
+              "ownerId": "s2-synthetic",
+              "sessionId": "00000000-0000-4000-a000-7d301a29d975",
+              "key": "00000000-0000-4000-b000-24cc2af8f68b",
+              "revision": 3,
+              "evidence": "completed-history"
+            },
+            "kind": "quiet",
+            "level": "major",
+            "score": 6,
+            "topic": "书库",
+            "arc": "1@0",
+            "moment": "3@15",
+            "signals": [
+              "plantedProof",
+              "lastingOutcome"
+            ],
+            "reason": "先前留下的凭物由同一人用于约定的目标；被封存的东西重新出现。",
+            "evidence": [
+              {
+                "revision": 1,
+                "sourceKey": "00000000-0000-4000-b000-c95a99a40ad4",
+                "sha256": "9bf4f1ea00a1cc199abe65ee5f82ed5461ebcba43f8bac8d89b312520114fcf6",
+                "start": 0,
+                "end": 9,
+                "quote": "顾川留下了一枚铜钥",
+                "eventId": "1@0",
+                "type": "plant",
+                "roles": {
+                  "actor": "顾川",
+                  "object": "铜钥"
+                }
+              },
+              {
+                "revision": 1,
+                "sourceKey": "00000000-0000-4000-b000-c95a99a40ad4",
+                "sha256": "9bf4f1ea00a1cc199abe65ee5f82ed5461ebcba43f8bac8d89b312520114fcf6",
+                "start": 10,
+                "end": 20,
+                "quote": "约定日后用它开启书库",
+                "eventId": "1@10",
+                "type": "purpose",
+                "roles": {
+                  "target": "书库"
+                }
+              },
+              {
+                "revision": 3,
+                "sourceKey": "00000000-0000-4000-b000-24cc2af8f68b",
+                "sha256": "da4d35e9ef00e3f84b999597e4d5368a031cd0db4c1931f644a348da2b923683",
+                "start": 0,
+                "end": 8,
+                "quote": "顾川拿出那枚铜钥",
+                "eventId": "3@0",
+                "type": "use",
+                "roles": {
+                  "actor": "顾川",
+                  "object": "铜钥"
+                }
+              },
+              {
+                "revision": 3,
+                "sourceKey": "00000000-0000-4000-b000-24cc2af8f68b",
+                "sha256": "da4d35e9ef00e3f84b999597e4d5368a031cd0db4c1931f644a348da2b923683",
+                "start": 9,
+                "end": 14,
+                "quote": "打开了书库",
+                "eventId": "3@9",
+                "type": "opening",
+                "roles": {
+                  "target": "书库"
+                }
+              },
+              {
+                "revision": 3,
+                "sourceKey": "00000000-0000-4000-b000-24cc2af8f68b",
+                "sha256": "da4d35e9ef00e3f84b999597e4d5368a031cd0db4c1931f644a348da2b923683",
+                "start": 15,
+                "end": 26,
+                "quote": "封存的名册终于重见天日",
+                "eventId": "3@15",
+                "type": "discovery",
+                "roles": {
+                  "object": "封存的名册"
+                }
+              }
+            ],
+            "links": [
+              {
+                "relation": "setup",
+                "from": "1@0",
+                "to": "1@10"
+              },
+              {
+                "relation": "payoff",
+                "from": "1@10",
+                "to": "3@9"
+              },
+              {
+                "relation": "consequence",
+                "from": "3@9",
+                "to": "3@15"
+              }
+            ],
+            "depiction": "visible-result",
+            "visual": {
+              "status": "hold",
+              "reason": "insufficient-visible-evidence",
+              "visualKey": null,
+              "send": false
+            }
+          }
+        ],
+        "rankings": {
+          "story": [
+            {
+              "id": "b140f9aa2ac75b8b7f3ea8cf5e6f5b89657acdb49ab3b70d4f1c92cae857ca71",
+              "revision": 3,
+              "rank": 1,
+              "score": 6
+            }
+          ],
+          "recent": [
+            {
+              "id": "b140f9aa2ac75b8b7f3ea8cf5e6f5b89657acdb49ab3b70d4f1c92cae857ca71",
+              "revision": 3,
+              "rank": 1,
+              "score": 6
+            }
+          ],
+          "recentWindow": 4,
+          "storylines": [
+            {
+              "arc": "1@0",
+              "ranking": [
+                {
+                  "id": "b140f9aa2ac75b8b7f3ea8cf5e6f5b89657acdb49ab3b70d4f1c92cae857ca71",
+                  "revision": 3,
+                  "rank": 1,
+                  "score": 6
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "story": "两条线",
+      "result": {
+        "method": "narrative-highlight/1",
+        "replayOnly": true,
+        "through": 6,
+        "events": [
+          {
+            "id": "1@0",
+            "type": "goal",
+            "roles": {
+              "actor": "叶青",
+              "verb": "守住",
+              "object": "东渡"
+            },
+            "sentence": 0,
+            "ordinal": 0,
+            "evidence": {
+              "revision": 1,
+              "sourceKey": "00000000-0000-4000-b000-a38fa6aadb1f",
+              "sha256": "fc9307a4b566054034d6b186448e61c52187558c213cff95707d46e43a4be8b2",
+              "start": 0,
+              "end": 9,
+              "quote": "叶青一心想守住东渡"
+            }
+          },
+          {
+            "id": "1@10",
+            "type": "conflict",
+            "roles": {
+              "actor": "对手",
+              "object": "东渡"
+            },
+            "sentence": 1,
+            "ordinal": 1,
+            "evidence": {
+              "revision": 1,
+              "sourceKey": "00000000-0000-4000-b000-a38fa6aadb1f",
+              "sha256": "fc9307a4b566054034d6b186448e61c52187558c213cff95707d46e43a4be8b2",
+              "start": 10,
+              "end": 17,
+              "quote": "对手封住了东渡"
+            }
+          },
+          {
+            "id": "2@0",
+            "type": "estranged",
+            "roles": {
+              "actor": "林清",
+              "attitude": "原谅",
+              "other": "林望"
+            },
+            "sentence": 0,
+            "ordinal": 0,
+            "evidence": {
+              "revision": 2,
+              "sourceKey": "00000000-0000-4000-b000-ff8151cb6a65",
+              "sha256": "ffc4232897c1926d8568ef411a87d707624a1d9451c5d048d27279652e1235bd",
+              "start": 0,
+              "end": 10,
+              "quote": "林清一直不肯原谅林望"
+            }
+          },
+          {
+            "id": "3@0",
+            "type": "cost",
+            "roles": {
+              "actor": "叶青",
+              "cost": "勋章"
+            },
+            "sentence": 0,
+            "ordinal": 0,
+            "evidence": {
+              "revision": 3,
+              "sourceKey": "00000000-0000-4000-b000-db413367cb18",
+              "sha256": "4b9391062ab2ddda428d793a9ffe4c78e22ba81969703071b671bc07447727bc",
+              "start": 0,
+              "end": 7,
+              "quote": "叶青舍弃了勋章"
+            }
+          },
+          {
+            "id": "3@8",
+            "type": "choice",
+            "roles": {
+              "verb": "守住",
+              "object": "东渡"
+            },
+            "sentence": 0,
+            "ordinal": 1,
+            "evidence": {
+              "revision": 3,
+              "sourceKey": "00000000-0000-4000-b000-db413367cb18",
+              "sha256": "4b9391062ab2ddda428d793a9ffe4c78e22ba81969703071b671bc07447727bc",
+              "start": 8,
+              "end": 14,
+              "quote": "转而守住东渡"
+            }
+          },
+          {
+            "id": "4@0",
+            "type": "release",
+            "roles": {
+              "actor": "林清",
+              "other": "林望"
+            },
+            "sentence": 0,
+            "ordinal": 0,
+            "evidence": {
+              "revision": 4,
+              "sourceKey": "00000000-0000-4000-b000-abb1311bb49b",
+              "sha256": "1e5054284ccbe08f36f5d0c37c5a99ba305743c81048dbc9ddf28095620eb197",
+              "start": 0,
+              "end": 11,
+              "quote": "林清放下了对林望的怨恨"
+            }
+          },
+          {
+            "id": "4@12",
+            "type": "bond",
+            "roles": {
+              "change": "重归于好"
+            },
+            "sentence": 1,
+            "ordinal": 1,
+            "evidence": {
+              "revision": 4,
+              "sourceKey": "00000000-0000-4000-b000-abb1311bb49b",
+              "sha256": "1e5054284ccbe08f36f5d0c37c5a99ba305743c81048dbc9ddf28095620eb197",
+              "start": 12,
+              "end": 20,
+              "quote": "两人从此重归于好"
+            }
+          },
+          {
+            "id": "6@0",
+            "type": "engagement",
+            "roles": {},
+            "sentence": 0,
+            "ordinal": 0,
+            "evidence": {
+              "revision": 6,
+              "sourceKey": "00000000-0000-4000-b000-9184ceed09b8",
+              "sha256": "d76f8cd65733ad3d7d03299d63fb2f999208ac6bb40833208e0eb93d292d5787",
+              "start": 0,
+              "end": 4,
+              "quote": "交锋结束"
+            }
+          },
+          {
+            "id": "6@5",
+            "type": "withdrawal",
+            "roles": {
+              "actor": "对手",
+              "object": "东渡"
+            },
+            "sentence": 0,
+            "ordinal": 1,
+            "evidence": {
+              "revision": 6,
+              "sourceKey": "00000000-0000-4000-b000-9184ceed09b8",
+              "sha256": "d76f8cd65733ad3d7d03299d63fb2f999208ac6bb40833208e0eb93d292d5787",
+              "start": 5,
+              "end": 12,
+              "quote": "对手撤出了东渡"
+            }
+          },
+          {
+            "id": "6@13",
+            "type": "passage",
+            "roles": {
+              "beneficiary": "两岸"
+            },
+            "sentence": 1,
+            "ordinal": 2,
+            "evidence": {
+              "revision": 6,
+              "sourceKey": "00000000-0000-4000-b000-9184ceed09b8",
+              "sha256": "d76f8cd65733ad3d7d03299d63fb2f999208ac6bb40833208e0eb93d292d5787",
+              "start": 13,
+              "end": 21,
+              "quote": "从此两岸恢复通行"
+            }
+          }
+        ],
+        "edges": [
+          {
+            "relation": "setup",
+            "from": "1@0",
+            "to": "3@8"
+          },
+          {
+            "relation": "turning-point",
+            "from": "1@10",
+            "to": "3@8"
+          },
+          {
+            "relation": "cost-of-choice",
+            "from": "3@0",
+            "to": "3@8"
+          },
+          {
+            "relation": "turning-point",
+            "from": "2@0",
+            "to": "4@0"
+          },
+          {
+            "relation": "consequence",
+            "from": "4@0",
+            "to": "4@12"
+          },
+          {
+            "relation": "setup",
+            "from": "1@0",
+            "to": "1@10"
+          },
+          {
+            "relation": "turning-point",
+            "from": "1@10",
+            "to": "6@5"
+          },
+          {
+            "relation": "consequence",
+            "from": "6@5",
+            "to": "6@13"
+          }
+        ],
+        "rounds": [
+          {
+            "revision": 1,
+            "kind": "ordinary",
+            "finding": "evidenced-context",
+            "candidateIds": [],
+            "repetitions": [],
+            "abstention": null,
+            "visualVerdict": "not-ready"
+          },
+          {
+            "revision": 2,
+            "kind": "ordinary",
+            "finding": "evidenced-context",
+            "candidateIds": [],
+            "repetitions": [],
+            "abstention": null,
+            "visualVerdict": "not-ready"
+          },
+          {
+            "revision": 3,
+            "kind": "turn",
+            "finding": "highlight",
+            "candidateIds": [
+              "5190998e3eb44ad6add31b45f173b006673466ad169c066b0673f74ab728e312"
+            ],
+            "repetitions": [],
+            "abstention": null,
+            "visualVerdict": "not-ready"
+          },
+          {
+            "revision": 4,
+            "kind": "emotion",
+            "finding": "highlight",
+            "candidateIds": [
+              "96c17dc82248afa4c932d81ef168fc4a732faa62f41ebc26280d72d451926edc"
+            ],
+            "repetitions": [],
+            "abstention": null,
+            "visualVerdict": "not-ready"
+          },
+          {
+            "revision": 5,
+            "kind": "ordinary",
+            "finding": "no-recognized-event",
+            "candidateIds": [],
+            "repetitions": [],
+            "abstention": null,
+            "visualVerdict": "not-ready"
+          },
+          {
+            "revision": 6,
+            "kind": "battle",
+            "finding": "highlight",
+            "candidateIds": [
+              "7629de117091d277627718a5c465bb747fc407ede5d97d21e63feb124ad160c5"
+            ],
+            "repetitions": [],
+            "abstention": null,
+            "visualVerdict": "not-ready"
+          }
+        ],
+        "candidates": [
+          {
+            "schemaVersion": "HighlightCandidate/1",
+            "method": "narrative-highlight/1",
+            "replayOnly": true,
+            "id": "5190998e3eb44ad6add31b45f173b006673466ad169c066b0673f74ab728e312",
+            "revision": 3,
+            "source": {
+              "schemaVersion": "0.1",
+              "kind": "card-history",
+              "ownerId": "s2-synthetic",
+              "sessionId": "00000000-0000-4000-a000-1e59ff47fce0",
+              "key": "00000000-0000-4000-b000-db413367cb18",
+              "revision": 3,
+              "evidence": "completed-history"
+            },
+            "kind": "turn",
+            "level": "turning-point",
+            "score": 3,
+            "topic": "东渡",
+            "arc": "1@0",
+            "moment": "3@8",
+            "signals": [
+              "choice",
+              "opposition"
+            ],
+            "reason": "人物为受阻的目标付出明确代价；结果尚未写明。",
+            "evidence": [
+              {
+                "revision": 1,
+                "sourceKey": "00000000-0000-4000-b000-a38fa6aadb1f",
+                "sha256": "fc9307a4b566054034d6b186448e61c52187558c213cff95707d46e43a4be8b2",
+                "start": 0,
+                "end": 9,
+                "quote": "叶青一心想守住东渡",
+                "eventId": "1@0",
+                "type": "goal",
+                "roles": {
+                  "actor": "叶青",
+                  "verb": "守住",
+                  "object": "东渡"
+                }
+              },
+              {
+                "revision": 1,
+                "sourceKey": "00000000-0000-4000-b000-a38fa6aadb1f",
+                "sha256": "fc9307a4b566054034d6b186448e61c52187558c213cff95707d46e43a4be8b2",
+                "start": 10,
+                "end": 17,
+                "quote": "对手封住了东渡",
+                "eventId": "1@10",
+                "type": "conflict",
+                "roles": {
+                  "actor": "对手",
+                  "object": "东渡"
+                }
+              },
+              {
+                "revision": 3,
+                "sourceKey": "00000000-0000-4000-b000-db413367cb18",
+                "sha256": "4b9391062ab2ddda428d793a9ffe4c78e22ba81969703071b671bc07447727bc",
+                "start": 0,
+                "end": 7,
+                "quote": "叶青舍弃了勋章",
+                "eventId": "3@0",
+                "type": "cost",
+                "roles": {
+                  "actor": "叶青",
+                  "cost": "勋章"
+                }
+              },
+              {
+                "revision": 3,
+                "sourceKey": "00000000-0000-4000-b000-db413367cb18",
+                "sha256": "4b9391062ab2ddda428d793a9ffe4c78e22ba81969703071b671bc07447727bc",
+                "start": 8,
+                "end": 14,
+                "quote": "转而守住东渡",
+                "eventId": "3@8",
+                "type": "choice",
+                "roles": {
+                  "verb": "守住",
+                  "object": "东渡"
+                }
+              }
+            ],
+            "links": [
+              {
+                "relation": "setup",
+                "from": "1@0",
+                "to": "3@8"
+              },
+              {
+                "relation": "turning-point",
+                "from": "1@10",
+                "to": "3@8"
+              },
+              {
+                "relation": "cost-of-choice",
+                "from": "3@0",
+                "to": "3@8"
+              }
+            ],
+            "depiction": "choice-only",
+            "visual": {
+              "status": "hold",
+              "reason": "text-first",
+              "visualKey": null,
+              "send": false
+            }
+          },
+          {
+            "schemaVersion": "HighlightCandidate/1",
+            "method": "narrative-highlight/1",
+            "replayOnly": true,
+            "id": "96c17dc82248afa4c932d81ef168fc4a732faa62f41ebc26280d72d451926edc",
+            "revision": 4,
+            "source": {
+              "schemaVersion": "0.1",
+              "kind": "card-history",
+              "ownerId": "s2-synthetic",
+              "sessionId": "00000000-0000-4000-a000-1e59ff47fce0",
+              "key": "00000000-0000-4000-b000-abb1311bb49b",
+              "revision": 4,
+              "evidence": "completed-history"
+            },
+            "kind": "emotion",
+            "level": "significant",
+            "score": 4,
+            "topic": "[\"林清\",\"林望\"]",
+            "arc": "2@0",
+            "moment": "4@12",
+            "signals": [
+              "pairedReversal",
+              "opposition"
+            ],
+            "reason": "同一对人物的旧态度发生逆转，后文确认双方关系已经改变。",
+            "evidence": [
+              {
+                "revision": 2,
+                "sourceKey": "00000000-0000-4000-b000-ff8151cb6a65",
+                "sha256": "ffc4232897c1926d8568ef411a87d707624a1d9451c5d048d27279652e1235bd",
+                "start": 0,
+                "end": 10,
+                "quote": "林清一直不肯原谅林望",
+                "eventId": "2@0",
+                "type": "estranged",
+                "roles": {
+                  "actor": "林清",
+                  "attitude": "原谅",
+                  "other": "林望"
+                }
+              },
+              {
+                "revision": 4,
+                "sourceKey": "00000000-0000-4000-b000-abb1311bb49b",
+                "sha256": "1e5054284ccbe08f36f5d0c37c5a99ba305743c81048dbc9ddf28095620eb197",
+                "start": 0,
+                "end": 11,
+                "quote": "林清放下了对林望的怨恨",
+                "eventId": "4@0",
+                "type": "release",
+                "roles": {
+                  "actor": "林清",
+                  "other": "林望"
+                }
+              },
+              {
+                "revision": 4,
+                "sourceKey": "00000000-0000-4000-b000-abb1311bb49b",
+                "sha256": "1e5054284ccbe08f36f5d0c37c5a99ba305743c81048dbc9ddf28095620eb197",
+                "start": 12,
+                "end": 20,
+                "quote": "两人从此重归于好",
+                "eventId": "4@12",
+                "type": "bond",
+                "roles": {
+                  "change": "重归于好"
+                }
+              }
+            ],
+            "links": [
+              {
+                "relation": "turning-point",
+                "from": "2@0",
+                "to": "4@0"
+              },
+              {
+                "relation": "consequence",
+                "from": "4@0",
+                "to": "4@12"
+              }
+            ],
+            "depiction": "inner-change",
+            "visual": {
+              "status": "hold",
+              "reason": "text-first",
+              "visualKey": null,
+              "send": false
+            }
+          },
+          {
+            "schemaVersion": "HighlightCandidate/1",
+            "method": "narrative-highlight/1",
+            "replayOnly": true,
+            "id": "7629de117091d277627718a5c465bb747fc407ede5d97d21e63feb124ad160c5",
+            "revision": 6,
+            "source": {
+              "schemaVersion": "0.1",
+              "kind": "card-history",
+              "ownerId": "s2-synthetic",
+              "sessionId": "00000000-0000-4000-a000-1e59ff47fce0",
+              "key": "00000000-0000-4000-b000-9184ceed09b8",
+              "revision": 6,
+              "evidence": "completed-history"
+            },
+            "kind": "battle",
+            "level": "major",
+            "score": 6,
+            "topic": "东渡",
+            "arc": "1@0",
+            "moment": "6@13",
+            "signals": [
+              "opposition",
+              "resolvedObstacle",
+              "lastingOutcome"
+            ],
+            "reason": "同一方从原先封住的地点撤出，紧随的通行结果完成了此前目标。",
+            "evidence": [
+              {
+                "revision": 1,
+                "sourceKey": "00000000-0000-4000-b000-a38fa6aadb1f",
+                "sha256": "fc9307a4b566054034d6b186448e61c52187558c213cff95707d46e43a4be8b2",
+                "start": 0,
+                "end": 9,
+                "quote": "叶青一心想守住东渡",
+                "eventId": "1@0",
+                "type": "goal",
+                "roles": {
+                  "actor": "叶青",
+                  "verb": "守住",
+                  "object": "东渡"
+                }
+              },
+              {
+                "revision": 1,
+                "sourceKey": "00000000-0000-4000-b000-a38fa6aadb1f",
+                "sha256": "fc9307a4b566054034d6b186448e61c52187558c213cff95707d46e43a4be8b2",
+                "start": 10,
+                "end": 17,
+                "quote": "对手封住了东渡",
+                "eventId": "1@10",
+                "type": "conflict",
+                "roles": {
+                  "actor": "对手",
+                  "object": "东渡"
+                }
+              },
+              {
+                "revision": 6,
+                "sourceKey": "00000000-0000-4000-b000-9184ceed09b8",
+                "sha256": "d76f8cd65733ad3d7d03299d63fb2f999208ac6bb40833208e0eb93d292d5787",
+                "start": 0,
+                "end": 4,
+                "quote": "交锋结束",
+                "eventId": "6@0",
+                "type": "engagement",
+                "roles": {}
+              },
+              {
+                "revision": 6,
+                "sourceKey": "00000000-0000-4000-b000-9184ceed09b8",
+                "sha256": "d76f8cd65733ad3d7d03299d63fb2f999208ac6bb40833208e0eb93d292d5787",
+                "start": 5,
+                "end": 12,
+                "quote": "对手撤出了东渡",
+                "eventId": "6@5",
+                "type": "withdrawal",
+                "roles": {
+                  "actor": "对手",
+                  "object": "东渡"
+                }
+              },
+              {
+                "revision": 6,
+                "sourceKey": "00000000-0000-4000-b000-9184ceed09b8",
+                "sha256": "d76f8cd65733ad3d7d03299d63fb2f999208ac6bb40833208e0eb93d292d5787",
+                "start": 13,
+                "end": 21,
+                "quote": "从此两岸恢复通行",
+                "eventId": "6@13",
+                "type": "passage",
+                "roles": {
+                  "beneficiary": "两岸"
+                }
+              }
+            ],
+            "links": [
+              {
+                "relation": "setup",
+                "from": "1@0",
+                "to": "1@10"
+              },
+              {
+                "relation": "turning-point",
+                "from": "1@10",
+                "to": "6@5"
+              },
+              {
+                "relation": "consequence",
+                "from": "6@5",
+                "to": "6@13"
+              }
+            ],
+            "depiction": "visible-result",
+            "visual": {
+              "status": "hold",
+              "reason": "insufficient-visible-evidence",
+              "visualKey": null,
+              "send": false
+            }
+          }
+        ],
+        "rankings": {
+          "story": [
+            {
+              "id": "7629de117091d277627718a5c465bb747fc407ede5d97d21e63feb124ad160c5",
+              "revision": 6,
+              "rank": 1,
+              "score": 6
+            },
+            {
+              "id": "96c17dc82248afa4c932d81ef168fc4a732faa62f41ebc26280d72d451926edc",
+              "revision": 4,
+              "rank": 2,
+              "score": 4
+            },
+            {
+              "id": "5190998e3eb44ad6add31b45f173b006673466ad169c066b0673f74ab728e312",
+              "revision": 3,
+              "rank": 3,
+              "score": 3
+            }
+          ],
+          "recent": [
+            {
+              "id": "7629de117091d277627718a5c465bb747fc407ede5d97d21e63feb124ad160c5",
+              "revision": 6,
+              "rank": 1,
+              "score": 6
+            },
+            {
+              "id": "96c17dc82248afa4c932d81ef168fc4a732faa62f41ebc26280d72d451926edc",
+              "revision": 4,
+              "rank": 2,
+              "score": 4
+            },
+            {
+              "id": "5190998e3eb44ad6add31b45f173b006673466ad169c066b0673f74ab728e312",
+              "revision": 3,
+              "rank": 3,
+              "score": 3
+            }
+          ],
+          "recentWindow": 4,
+          "storylines": [
+            {
+              "arc": "1@0",
+              "ranking": [
+                {
+                  "id": "7629de117091d277627718a5c465bb747fc407ede5d97d21e63feb124ad160c5",
+                  "revision": 6,
+                  "rank": 1,
+                  "score": 6
+                },
+                {
+                  "id": "5190998e3eb44ad6add31b45f173b006673466ad169c066b0673f74ab728e312",
+                  "revision": 3,
+                  "rank": 2,
+                  "score": 3
+                }
+              ]
+            },
+            {
+              "arc": "2@0",
+              "ranking": [
+                {
+                  "id": "96c17dc82248afa4c932d81ef168fc4a732faa62f41ebc26280d72d451926edc",
+                  "revision": 4,
+                  "rank": 1,
+                  "score": 4
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "story": "reunion",
+      "candidate": {
+        "schemaVersion": "HighlightCandidate/1",
+        "method": "narrative-highlight/1",
+        "replayOnly": true,
+        "id": "3ee4f613eeb642b330f300a55a99f4b562c4251e77fc73c82d6507014cb055b3",
+        "revision": 3,
+        "source": {
+          "schemaVersion": "0.1",
+          "kind": "card-history",
+          "ownerId": "s2-synthetic",
+          "sessionId": "00000000-0000-4000-a000-608af3ec161f",
+          "key": "00000000-0000-4000-b000-46910066ead2",
+          "revision": 3,
+          "evidence": "completed-history"
+        },
+        "kind": "quiet",
+        "level": "major",
+        "score": 6,
+        "topic": "听雨酒馆",
+        "arc": "1@0",
+        "moment": "3@0",
+        "signals": [
+          "plantedProof",
+          "lastingOutcome"
+        ],
+        "reason": "正文确认约定的人实际到场；已核对地点和双方在场名单。",
+        "evidence": [
+          {
+            "revision": 1,
+            "sourceKey": "00000000-0000-4000-b000-f46ca10fce1e",
+            "sha256": "26b51eed6ab36ad63b361221d9aa7bf05dafeee6e68e0388b6de44820019d796",
+            "start": 0,
+            "end": 12,
+            "quote": "林青答应沈安回到听雨酒馆",
+            "eventId": "1@0",
+            "type": "promise",
+            "roles": {
+              "actor": "林青",
+              "other": "沈安",
+              "target": "听雨酒馆"
+            }
+          },
+          {
+            "revision": 1,
+            "sourceKey": "00000000-0000-4000-b000-f46ca10fce1e",
+            "sha256": "26b51eed6ab36ad63b361221d9aa7bf05dafeee6e68e0388b6de44820019d796",
+            "start": 13,
+            "end": 27,
+            "quote": "沈安一直在听雨酒馆等林青归来",
+            "eventId": "1@13",
+            "type": "await",
+            "roles": {
+              "actor": "沈安",
+              "target": "听雨酒馆",
+              "other": "林青"
+            }
+          },
+          {
+            "revision": 3,
+            "sourceKey": "00000000-0000-4000-b000-46910066ead2",
+            "sha256": "349cc1b355c13a7d373883b6f1b0e13398b74d584123e7a5ce133c77b1e4afc8",
+            "start": 0,
+            "end": 6,
+            "quote": "林青走了进来",
+            "eventId": "3@0",
+            "type": "arrival",
+            "roles": {
+              "actor": "林青"
+            }
+          }
+        ],
+        "links": [
+          {
+            "relation": "setup",
+            "from": "1@13",
+            "to": "3@0"
+          },
+          {
+            "relation": "payoff",
+            "from": "1@0",
+            "to": "3@0"
+          }
+        ],
+        "depiction": "visible-arrival",
+        "visual": {
+          "status": "director-review",
+          "reason": "arrival-and-current-survey",
+          "send": false,
+          "visualKey": "[\"s2-synthetic\",\"00000000-0000-4000-a000-608af3ec161f\",\"amber-tavern\",\"V2\",null]",
+          "source": {
+            "schemaVersion": "0.1",
+            "kind": "card-history",
+            "ownerId": "s2-synthetic",
+            "sessionId": "00000000-0000-4000-a000-608af3ec161f",
+            "key": "00000000-0000-4000-b000-46910066ead2",
+            "revision": 3,
+            "evidence": "completed-history"
+          },
+          "sceneId": "amber-tavern",
+          "version": "V2",
+          "reviewSha256": "2bf6b8d738db167807641660e63c55197815cee1bdd5b86d8239183fb44ac707"
+        }
+      }
+    }
+  ],
+  "measured": {
+    "elapsedMs": 78.78949999999998,
+    "processPeakRssKiB": 78520
+  },
+  "modelLoads": 0,
+  "networkPermission": false,
+  "realModelLookups": 0,
+  "textCalls": 0,
+  "imageCalls": 0,
+  "newCostUsd": 0,
+  "humanReview": "NOT_RUN"
+}

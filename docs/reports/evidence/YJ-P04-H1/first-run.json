@@ -1,0 +1,473 @@
+{
+  "corpusSha256": "926c492f656319e14a0f2f7b894a192f0244f71c4e94d41d9221d4441d7919e8",
+  "groups": {
+    "dev": {
+      "turns": 30,
+      "truePositive": 8,
+      "trueNegative": 22,
+      "miss": 0,
+      "falsePositive": 0,
+      "wrongKind": 1,
+      "byKind": {
+        "ordinary": {
+          "total": 22,
+          "correct": 22
+        },
+        "turn": {
+          "total": 2,
+          "correct": 2
+        },
+        "battle": {
+          "total": 2,
+          "correct": 2
+        },
+        "quiet": {
+          "total": 2,
+          "correct": 1
+        },
+        "emotion": {
+          "total": 2,
+          "correct": 2
+        }
+      },
+      "top1Correct": 5,
+      "rankedStories": 5,
+      "orderedPairs": 4,
+      "expectedPairs": 4,
+      "duplicateDirectorKeys": 0,
+      "directorCandidates": 0,
+      "restatements": 0
+    },
+    "held": {
+      "turns": 36,
+      "truePositive": 7,
+      "trueNegative": 28,
+      "miss": 1,
+      "falsePositive": 0,
+      "wrongKind": 1,
+      "byKind": {
+        "ordinary": {
+          "total": 28,
+          "correct": 28
+        },
+        "quiet": {
+          "total": 4,
+          "correct": 2
+        },
+        "turn": {
+          "total": 1,
+          "correct": 1
+        },
+        "battle": {
+          "total": 1,
+          "correct": 1
+        },
+        "emotion": {
+          "total": 2,
+          "correct": 2
+        }
+      },
+      "top1Correct": 5,
+      "rankedStories": 6,
+      "orderedPairs": 2,
+      "expectedPairs": 2,
+      "duplicateDirectorKeys": 0,
+      "directorCandidates": 0,
+      "restatements": 1
+    }
+  },
+  "failures": [
+    {
+      "story": "账簿",
+      "revision": 3,
+      "expected": "quiet",
+      "actual": "turn",
+      "prose": "沈宁舍弃了继承权，转而归还账簿。账簿终于回到失主手里。",
+      "abstention": null
+    },
+    {
+      "story": "纸契",
+      "revision": 3,
+      "expected": "quiet",
+      "actual": "turn",
+      "prose": "陆羽放弃了分红，选择交还纸契。纸契终于回到失主手里。",
+      "abstention": null
+    },
+    {
+      "story": "渡船",
+      "revision": 3,
+      "expected": "quiet",
+      "actual": "ordinary",
+      "prose": "李禾把自己的名字从分成册上划去，船契落在船工掌心。自此渡船由船工共有。",
+      "abstention": null
+    }
+  ],
+  "runs": [
+    {
+      "story": "渡口",
+      "split": "dev",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "turn",
+        "battle",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "turn",
+        "battle",
+        "ordinary"
+      ],
+      "goldOrder": [
+        4,
+        3
+      ],
+      "actualOrder": [
+        4,
+        3
+      ],
+      "correctOrder": true,
+      "events": 7,
+      "edges": 6
+    },
+    {
+      "story": "账簿",
+      "split": "dev",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "quiet",
+        "ordinary",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "turn",
+        "ordinary",
+        "ordinary"
+      ],
+      "goldOrder": [
+        3
+      ],
+      "actualOrder": [
+        3
+      ],
+      "correctOrder": true,
+      "events": 6,
+      "edges": 3
+    },
+    {
+      "story": "师徒",
+      "split": "dev",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "emotion",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "emotion",
+        "ordinary"
+      ],
+      "goldOrder": [
+        3
+      ],
+      "actualOrder": [
+        3
+      ],
+      "correctOrder": true,
+      "events": 3,
+      "edges": 2
+    },
+    {
+      "story": "钥匙",
+      "split": "dev",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "quiet",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "quiet",
+        "ordinary"
+      ],
+      "goldOrder": [
+        3
+      ],
+      "actualOrder": [
+        3
+      ],
+      "correctOrder": true,
+      "events": 5,
+      "edges": 4
+    },
+    {
+      "story": "演武",
+      "split": "dev",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary"
+      ],
+      "goldOrder": [],
+      "actualOrder": [],
+      "correctOrder": true,
+      "events": 1,
+      "edges": 0
+    },
+    {
+      "story": "两条线",
+      "split": "dev",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "turn",
+        "emotion",
+        "ordinary",
+        "battle"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "turn",
+        "emotion",
+        "ordinary",
+        "battle"
+      ],
+      "goldOrder": [
+        6,
+        4,
+        3
+      ],
+      "actualOrder": [
+        6,
+        4,
+        3
+      ],
+      "correctOrder": true,
+      "events": 10,
+      "edges": 8
+    },
+    {
+      "story": "纸契",
+      "split": "held",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "quiet",
+        "ordinary",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "turn",
+        "ordinary",
+        "ordinary"
+      ],
+      "goldOrder": [
+        3
+      ],
+      "actualOrder": [
+        3
+      ],
+      "correctOrder": true,
+      "events": 8,
+      "edges": 7
+    },
+    {
+      "story": "山关",
+      "split": "held",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "turn",
+        "battle",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "turn",
+        "battle",
+        "ordinary"
+      ],
+      "goldOrder": [
+        4,
+        3
+      ],
+      "actualOrder": [
+        4,
+        3
+      ],
+      "correctOrder": true,
+      "events": 7,
+      "edges": 6
+    },
+    {
+      "story": "姐妹",
+      "split": "held",
+      "expected": [
+        "ordinary",
+        "emotion",
+        "ordinary",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "emotion",
+        "ordinary",
+        "ordinary"
+      ],
+      "goldOrder": [
+        2
+      ],
+      "actualOrder": [
+        2
+      ],
+      "correctOrder": true,
+      "events": 3,
+      "edges": 2
+    },
+    {
+      "story": "渡船",
+      "split": "held",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "quiet",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary"
+      ],
+      "goldOrder": [
+        3
+      ],
+      "actualOrder": [],
+      "correctOrder": false,
+      "events": 2,
+      "edges": 0
+    },
+    {
+      "story": "错扣",
+      "split": "held",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "quiet",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "quiet",
+        "ordinary"
+      ],
+      "goldOrder": [
+        4
+      ],
+      "actualOrder": [
+        4
+      ],
+      "correctOrder": true,
+      "events": 7,
+      "edges": 5
+    },
+    {
+      "story": "撤回",
+      "split": "held",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary"
+      ],
+      "goldOrder": [],
+      "actualOrder": [],
+      "correctOrder": true,
+      "events": 2,
+      "edges": 0
+    },
+    {
+      "story": "复线",
+      "split": "held",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "emotion",
+        "ordinary",
+        "quiet"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "emotion",
+        "ordinary",
+        "quiet"
+      ],
+      "goldOrder": [
+        5,
+        3
+      ],
+      "actualOrder": [
+        5,
+        3
+      ],
+      "correctOrder": true,
+      "events": 10,
+      "edges": 7
+    },
+    {
+      "story": "无主",
+      "split": "held",
+      "expected": [
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary"
+      ],
+      "actual": [
+        "ordinary",
+        "ordinary",
+        "ordinary",
+        "ordinary"
+      ],
+      "goldOrder": [],
+      "actualOrder": [],
+      "correctOrder": true,
+      "events": 2,
+      "edges": 0
+    }
+  ]
+}

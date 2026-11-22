@@ -1,0 +1,38 @@
+{
+  "node": "v26.13.0",
+  "method": "one warmup and five synchronous in-process prefix replays, input construction excluded",
+  "rows": [
+    {
+      "revisions": 20,
+      "replays": 5,
+      "medianMs": 1.9399999999999977,
+      "rangeMs": [
+        1.6170999999999935,
+        3.046100000000024
+      ]
+    },
+    {
+      "revisions": 100,
+      "replays": 5,
+      "medianMs": 5.946899999999971,
+      "rangeMs": [
+        4.76339999999999,
+        7.669199999999989
+      ]
+    },
+    {
+      "revisions": 300,
+      "replays": 5,
+      "medianMs": 18.5634,
+      "rangeMs": [
+        15.684300000000007,
+        20.013400000000047
+      ]
+    }
+  ],
+  "processPeakRssKiB": 92576,
+  "networkPermission": false,
+  "modelLoads": 0,
+  "tokenUsage": 0,
+  "serviceCostUsd": 0
+}

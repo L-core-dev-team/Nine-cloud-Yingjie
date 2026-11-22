@@ -1,0 +1,48 @@
+{
+  "NovelIQ": {
+    "commit": "3c22f5a35ef7bbae5b88d137944f69097fbdf0ca",
+    "unit": "surface_tension_components only; controlled counts, no tokenizer or model",
+    "loudNoChange": {
+      "fight": 0.16666666666666666,
+      "exclaim": 8.0,
+      "question": 0.0,
+      "dialogue": 0.0,
+      "pause": 2.0
+    },
+    "quietTransfer": {
+      "fight": 0.0,
+      "exclaim": 0.0,
+      "question": 0.0,
+      "dialogue": 0.0,
+      "pause": 2.0
+    }
+  },
+  "NarrativeAtlas": {
+    "commit": "a6d837969af18774322b6f9782f96906b0a51988",
+    "unit": "graph.match_score + link_scenes_to_arcs",
+    "inputScene": {
+      "id": "tea",
+      "characters_present": [
+        "lin"
+      ],
+      "location": "tavern",
+      "summary": "drinks tea"
+    },
+    "inputArc": {
+      "id": "debt",
+      "characters_involved": [
+        "lin"
+      ],
+      "locations_involved": [
+        "tavern"
+      ],
+      "key_events": [
+        "repayment"
+      ]
+    },
+    "matchScore": 2,
+    "linked": [
+      "debt"
+    ]
+  }
+}

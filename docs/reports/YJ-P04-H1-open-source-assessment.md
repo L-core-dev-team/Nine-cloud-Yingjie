@@ -1,0 +1,18 @@
+# H1 开源调查与实际成本
+
+2026-11-22 核对四个上游仓库的固定版本、LICENSE、说明与实现。H1 使用自写的回放模块，运行时没有引入这些平台或模型。以下区分上游说明、源码核查和本机实测。
+
+| 项目与代码许可证 | 可复用的部分 | 能力边界与本机验证 |
+|---|---|---|
+| NovelIQ · Apache-2.0 | 伏笔事件身份、铺设与兑现的原文证据、授权历史检索。可以借鉴证据记录及事件生命周期。 | 其段落表层张力函数只度量激活强度。本机隔离执行原始分量函数，在 30 词、50 字的控制输入下，喧闹空转得到战斗分量 0.167、每百字感叹号 8；安静交还的两项均为 0。这一步没有运行分词、全书标准化、LLM 标注或整个平台。[许可证](https://github.com/famameilin/NovelIQ/blob/3c22f5a35ef7bbae5b88d137944f69097fbdf0ca/LICENSE) · [张力函数](https://github.com/famameilin/NovelIQ/blob/3c22f5a35ef7bbae5b88d137944f69097fbdf0ca/src/metrics/paragraph_surface_tension.py) · [伏笔读取](https://github.com/famameilin/NovelIQ/blob/3c22f5a35ef7bbae5b88d137944f69097fbdf0ca/src/event_trees/read/foreshadowing.py) |
+| Google LangExtract · Apache-2.0 | 少量样例描述输出类型、切块、多轮提取及将输出对齐回原文。适合未来替换 H1 的候选事件提议器。 | resolver 同时提供精确与模糊对齐；命中区间仍需核验是谁、何时、在何种语气下做了什么。库不提供本任务的高潮真值或排序器。核对固定源码及官方本地 Ollama 示例，本机推理 NOT_RUN。[许可证](https://github.com/google/langextract/blob/0e441bf77ddc3119dd0aa413322959234dd84ee5/LICENSE) · [对齐实现](https://github.com/google/langextract/blob/0e441bf77ddc3119dd0aa413322959234dd84ee5/langextract/resolver.py) · [运行方式](https://github.com/google/langextract/blob/0e441bf77ddc3119dd0aa413322959234dd84ee5/README.md) |
+| PaddleNLP PP-UIE · PaddleNLP 代码 Apache-2.0 | 中文实体、关系和事件的 schema 提问。适合对同一授权段落提出人物、行为、受影响对象，再用原文验证。 | 项目提供 0.5B、1.5B、7B、14B 方案。官方示例的实体、关系结果和通用抽取基准没有衡量跨回合因果或安静高潮。已查实现和模型文件清单，权重未下载、推理 NOT_RUN。0.5B 发布清单未列独立许可证，本次没有核实各权重的再分发权。[代码许可证](https://github.com/PaddlePaddle/PaddleNLP/blob/3f87dac9b719f75399f92f8bf634ae2ef0611832/LICENSE) · [PP-UIE 用法](https://github.com/PaddlePaddle/PaddleNLP/blob/3f87dac9b719f75399f92f8bf634ae2ef0611832/llm/application/information_extraction/README.md) · [实现](https://github.com/PaddlePaddle/PaddleNLP/blob/3f87dac9b719f75399f92f8bf634ae2ef0611832/paddlenlp/taskflow/information_extraction.py) · [0.5B 文件清单](https://paddlenlp.readthedocs.io/en/latest/_static/website/paddlenlp/PP-UIE-0.5B/) |
+| Narrative Atlas · MIT | 选择与本任务相符的 duboisg/narrative-atlas。其场景、故事线检查点、局部时间线及可解释连线可作研究参照。 | 本机直接运行固定版本 graph.py 的 match_score 与 link_scenes_to_arcs。饮茶场景和还债线只共享人物及酒馆就得 2 分，达到默认连线阈值。它可做召回；这条连线本身没有证明茶与债有因果关系。作者报告的长篇处理属于私有语料的一次运行，本机没有复现。完整 Azure 提取 NOT_RUN。[许可证](https://github.com/duboisg/narrative-atlas/blob/a6d837969af18774322b6f9782f96906b0a51988/LICENSE) · [图实现](https://github.com/duboisg/narrative-atlas/blob/a6d837969af18774322b6f9782f96906b0a51988/src/narrative_atlas/graph.py) · [项目及实测范围](https://github.com/duboisg/narrative-atlas/blob/a6d837969af18774322b6f9782f96906b0a51988/README.md) |
+
+## 成本可比范围
+
+- NovelIQ 的计数与图投影可在 CPU 上运行。整书管线还需分块、推理与持久存储，输入篇幅、提供方及是否重复标注都会影响成本。本轮只执行无模型分量函数。[项目说明](https://github.com/famameilin/NovelIQ/blob/3c22f5a35ef7bbae5b88d137944f69097fbdf0ca/README_EN.md)
+- LangExtract 的成本随段落数、抽取轮数、上下文及模型变化。离线本地模型还需权重存储及推理资源；本轮没有启动本地模型服务。[官方用法](https://github.com/google/langextract/blob/0e441bf77ddc3119dd0aa413322959234dd84ee5/README.md)
+- PP-UIE 官方 0.5B 权重文件标注 942.3 MB。仅按参数数目乘以 2 字节粗估，1.5B、7B、14B 的半精度参数分别约 3、14、28 GB，实际还需要运行时、缓存与输入空间。这些数值不能用于承诺整机显存或延迟。[模型规格](https://github.com/PaddlePaddle/PaddleNLP/blob/3f87dac9b719f75399f92f8bf634ae2ef0611832/llm/application/information_extraction/README.md) · [0.5B 发布清单](https://paddlenlp.readthedocs.io/en/latest/_static/website/paddlenlp/PP-UIE-0.5B/)
+- Narrative Atlas 的图连线仅需 CPU。其原提取客户端依赖 Azure OpenAI；分块、分类别提取、续写及重试都可能增加 token 用量。没有实际账单可供 H1 外推。[客户端](https://github.com/duboisg/narrative-atlas/blob/a6d837969af18774322b6f9782f96906b0a51988/src/narrative_atlas/client.py)
+- H1 自身使用 Node CPU。模型加载 0，推理 token 0，外部服务费用 USD 0。节点运行器测量 20、100、300 个合成修订，分别预热一次、测五次。进程峰值 RSS 含 Node 和依赖。未测电费、常驻服务或长篇并发。第三方模型质量和每千回合费用均为未测。[本机组件实测](evidence/YJ-P04-H1/upstream-probes.json) · [H1 成本回执](evidence/YJ-P04-H1/benchmark.json)
