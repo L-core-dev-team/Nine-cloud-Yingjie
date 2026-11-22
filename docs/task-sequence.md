@@ -2,6 +2,8 @@
 
 更新：2026-11-22。
 
+**YJ-P02-L5B 环境验收接续：** [仅针对原生 `127.0.0.1` 回环、Chrome 与临时 PostgreSQL、L4R 和 YJ-13 剩余验收的完整任务书](task-briefs/YJ-P02-L5B-loopback-closeout.md)已提交。**业务尚未执行，未经执行环境明确许可不得绕过沙箱；没有新增付费 API 权限。**
+
 **YJ-P02-L5 · PARTIAL。** 独立零预算账本、崩溃防重、12 项内存处理测试和 7 项真实 Chrome 页面测试已通过。Windows 沙箱阻止本机 TCP，原角色卡／PostgreSQL、L4R 与 YJ-13 整链路尚待验收。真实服务调用 0，L4 继续 UNKNOWN_STOP。[报告、回执与复跑](reports/YJ-P02-L5-one-shot-recovery-report.md)
 
 **YJ-P02-L4R 已完成离线复现与修复。** 本机未找回原进程、真实账本或收据，原 L4 继续 UNKNOWN_STOP。旧页面在两条不同失败路径上给出相同提示；新页面区分服务端受理、发送前拒绝和送达未知。[取证报告与复跑](reports/YJ-P02-L4R-trigger-forensics-report.md)
@@ -83,6 +85,7 @@ YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。YJ
 | YJ-P02-L4 | `UNKNOWN_STOP`，许可已停止使用 | [点击后核查](reports/YJ-P02-L4-luna-scene-pilot-report.md)：受信回执/账本未找到，真实送达/费用/画面仍未知，不补发 |
 | YJ-P02-L4R | 离线取证与修复完成；旧 L4 仍 UNKNOWN_STOP | [Chrome/HTTP 阶段记录修复、原环境核查与回归](reports/YJ-P02-L4R-trigger-forensics-report.md)；本轮真实请求 0 |
 | YJ-P02-L5 | 进行中 · PARTIAL，原生回环验收受阻 | [在独立授权与账本下复用 L4R 可靠状态，并完成全禁网模拟](task-briefs/YJ-P02-L5-one-shot-recovery.md) |
+| YJ-P02-L5B | 待执行 · 仅任务书 | [在受许可的 loopback-only 环境完成本地 Chrome/PG/L4R/YJ-13 验收](task-briefs/YJ-P02-L5B-loopback-closeout.md)，不得提升公网权限或发真实 API |
 | YJ-M01 | 后续待开始 | 地图具体组织方式尚未确定 |
 
 ## 依赖说明

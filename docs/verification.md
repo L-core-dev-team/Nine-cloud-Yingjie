@@ -2,6 +2,12 @@
 
 更新：2026-11-22。
 
+## 本轮只读核对 L5 PARTIAL 并准备 L5B（未在本机重测）
+
+GitHub 远端 L5 完成提交 `94c29a1b68bb7f56626f530d3c0b1e132f15f38a`，根据[原报告](reports/YJ-P02-L5-one-shot-recovery-report.md)与[原回归](reports/evidence/YJ-P02-L5/regression.json)：独立防重与崩溃保留、内存 HTTP 12/12、Chrome 全拦截页面 7/7、公共契约 10/10、L3 30/30、P01 7/7、L1/L4 各 15/15。原生 loopback Chrome 0/7（首次导航 ERR_NETWORK_ACCESS_DENIED），L4R 0/23、YJ-13 0/22（PG/HTTP EACCES），真实九霄 completed-history 修订与正文 SHA NOT_RUN。0/n 在此是未执行数量，不能当成真实断言全失败，也不能视为已通过。L5 原代码只暴露 mock-only rehearse/status，LIVE_DISABLED。
+
+已从 L5 完成提交单独建立[完整 L5B 本地回环环境验收任务书](task-briefs/YJ-P02-L5B-loopback-closeout.md)。本轮仅写 GitHub 文档，不在 Windows 本机补跑、新增模型查询或付费发送。若受限工具拒绝网络权限，需停止 ENV_BLOCKED，不得用管理员命令、不同 shell、隧道或外部机器来绕过审批。原 L1/L4/L5许可和 main 均不变。
+
 ## L5 离线交付与剩余验收
 
 **YJ-P02-L5 · PARTIAL。** 独立零预算账本、崩溃防重、12 项内存处理测试和 7 项真实 Chrome 页面测试已通过。Windows 沙箱阻止本机 TCP，原角色卡／PostgreSQL、L4R 与 YJ-13 整链路尚待验收。真实服务调用 0，L4 继续 UNKNOWN_STOP。[报告、回执与复跑](reports/YJ-P02-L5-one-shot-recovery-report.md)

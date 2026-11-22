@@ -1,5 +1,11 @@
 # 变更记录
 
+## 2026-11-22 L5 PARTIAL 核查与 L5B 原生 loopback 验收任务准备
+
+- 远端核对 L5 提交和脱敏证据：模型与持久防重模拟通过，内存 HTTP 12/12、Chrome 全拦截脚本 7/7；原生 Windows loopback 因 `ERR_NETWORK_ACCESS_DENIED`、PG `EACCES` 阻塞，L4R 23 和 YJ-13 22 项均未执行。
+- 从 L5 完成 HEAD 建立隔离 `codex/yj-p02-l5b-loopback-closeout`，上传[限定回环环境诊断和整链路补测任务书](docs/task-briefs/YJ-P02-L5B-loopback-closeout.md)，更新入口及台账。
+- 本轮仅文档准备，不以外部环境/管理员工具绕过已拒绝的沙箱审批；无新真实 API 授权，L1/L4 原状态不变。
+
 ## L5 离线交付与剩余验收
 
 **YJ-P02-L5 · PARTIAL。** 独立零预算账本、崩溃防重、12 项内存处理测试和 7 项真实 Chrome 页面测试已通过。Windows 沙箱阻止本机 TCP，原角色卡／PostgreSQL、L4R 与 YJ-13 整链路尚待验收。真实服务调用 0，L4 继续 UNKNOWN_STOP。[报告、回执与复跑](docs/reports/YJ-P02-L5-one-shot-recovery-report.md)
