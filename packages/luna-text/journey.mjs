@@ -30,7 +30,7 @@ export async function journey({live,ledger,key,takeKey,gate,cancelSignal,pilot})
         assert.equal(init.body,prepareRequest({action:requestAction}).body);
         fakeSends++;return Response.json(pilot?.fakeReply?.()??reply());
       });
-    const model=cardModel({ledger,transport:send,key,takeKey,gate,cancelSignal,prepareRequest,hashResponseId:Boolean(pilot)});
+    const model=cardModel({ledger,transport:send,key,takeKey,gate,cancelSignal,prepareRequest,hashResponseId:Boolean(pilot),mark:pilot?.mark});
     const provider={capability:{schemaVersion:"0.1",entry:"luna-no-images",origin:"mock",
       verifiedAt:"2026-11-21T00:00:00Z",generate:"unknown",referenceEdit:"unknown",query:"unknown",cancel:"unknown",idempotency:"unknown"},
       async send(){imageSends++;throw Error("NO_IMAGE_PERMISSION");}};
@@ -88,6 +88,7 @@ export async function journey({live,ledger,key,takeKey,gate,cancelSignal,pilot})
         assert.equal(row.action,requestAction);assert.equal(fakeSends,live?0:1);
         assert.equal(row.resulting_revision,1);assert.equal(digest(row.narrative),digest(h.narrative));
         assert.equal(digest(h.narrative),ledger.snapshot().bodySha256);
+        pilot?.mark?.("history-committed");
         const saved=await sync();
         assert.equal(saved.applied,1);assert.equal(saved.revision,1);
         assert.ok(["ready","not-ready"].includes(saved.result.status));
@@ -100,6 +101,7 @@ export async function journey({live,ledger,key,takeKey,gate,cancelSignal,pilot})
         evidence={browser:browser.version(),node:process.version,actionPosts:forwarded,fakeSends,
           cardStatus:row.status,revision:row.revision,bodySha256:digest(h.narrative),source:events[0].source.evidence,
           ...(pilot?{scene:await pilot.inspectSaved(projection,h,events[0].source)}:{}),sourceMatchesPostgres:true,extraction:saved.result.status,imageTasks:images.tasks,imageAttempts:images.attempts,imageSends};
+        pilot?.mark?.("scene-reviewed");
       }finally{await browser.close();}
     },{assets:[]},{model,provider,extractor});
     return evidence;

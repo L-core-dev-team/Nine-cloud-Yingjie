@@ -6,12 +6,14 @@ import {randomUUID} from "node:crypto";
 import {createRequire} from "node:module";
 import {request} from "node:http";
 import {once} from "node:events";
-import {serve} from "../key-entry/server.mjs";
+import {serve as startServer} from "../key-entry/server.mjs";
+import {stageJournal} from "../key-entry/stages.mjs";
 import {preflight,priceDate,action,prepare,cardModel} from "../adapter.mjs";
 import {SingleApproval} from "../ledger.mjs";
 
 delete process.env.OPENAI_API_KEY;
 const fixture="synthetic-only-"+randomUUID(),dir=await mkdtemp(join(tmpdir(),"yj-ui-test-"));
+const serve=options=>startServer({journal:stageJournal(dir),...options});
 const {chromium}=createRequire(join(process.env.NINE_CLOUD_ROOT,"apps/api/package.json"))("playwright");
 const browser=await chromium.launch({executablePath:process.env.CHROME_PATH,headless:true});
 const servers=[],db=new SingleApproval(join(dir,"fixture.sqlite")),checks=[];

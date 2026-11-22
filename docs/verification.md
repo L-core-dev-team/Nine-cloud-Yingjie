@@ -2,7 +2,11 @@
 
 更新：2026-11-22。
 
-## YJ-P02-L4R 新任务准备时的源证据核对（非本机执行）
+## L4R 本机取证与离线验收
+
+**YJ-P02-L4R 已完成离线复现与修复。** 本机未找回原进程、真实账本或收据，原 L4 继续 UNKNOWN_STOP。旧页面在两条不同失败路径上给出相同提示；新页面区分服务端受理、发送前拒绝和送达未知。[取证报告与复跑](reports/YJ-P02-L4R-trigger-forensics-report.md)
+
+## 归档 · YJ-P02-L4R 新任务准备时的源证据核对（非本机执行）
 
 只读核对 L4 远端 HEAD `75270ad14746c77c50e1ebbd2fc012e5df0a0f58`、[点击后原记录](reports/evidence/YJ-P02-L4/post-trigger-review.json)、L4 运行报告和 `packages/luna-text/l4/pilot.mjs`、`packages/luna-text/key-entry/{server.mjs,entry.js}`、`journey.mjs` 与 `ledger.mjs`。确切记录为：用户报告已点最终执行、前端“会话已结束”、事后规范目录与账本/回执均未找到，真实 API 送达、费用和场景 UNKNOWN，核查补发 0。源码表明正常执行在真模型网络传输前应先创建目录/receipt 并写单次账本，因而**同一进程和 home 的缺失资料对未发送是强线索**，但目前尚未独立核对原 OS 用户与运行时路径，不能改判“真实 API 0”或成功。
 

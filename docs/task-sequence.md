@@ -2,7 +2,7 @@
 
 更新：2026-11-22。
 
-**YJ-P02-L4R 排障接续：** [L4 会话结束但丢失回执的只读取证和零网络页面修复任务书](task-briefs/YJ-P02-L4R-trigger-forensics.md)已上传独立分支，业务未执行。L4 仍为 `UNKNOWN_STOP`，真实送达/费用未知；**严禁重发与重置旧许可**。
+**YJ-P02-L4R 已完成离线复现与修复。** 本机未找回原进程、真实账本或收据，原 L4 继续 UNKNOWN_STOP。旧页面在两条不同失败路径上给出相同提示；新页面区分服务端受理、发送前拒绝和送达未知。[取证报告与复跑](reports/YJ-P02-L4R-trigger-forensics-report.md)
 
 **YJ-P02-L4 · UNKNOWN_STOP。** 本人报告已点击。原页面已结束，本机未找到真实回执与专用账本。实际用量、费用及最终画面状态未知，本次核查补发 0 次。[核查结论与历史离线验收](reports/YJ-P02-L4-luna-scene-pilot-report.md)
 

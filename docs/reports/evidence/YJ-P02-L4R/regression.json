@@ -1,0 +1,292 @@
+{
+  "contracts": {
+    "tests": 10,
+    "pass": 10,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "L3": {
+    "tests": 30,
+    "pass": 30,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "oldCompatibilityCases": 65,
+  "P01": {
+    "cases": [
+      "offline contract runner has no network permission",
+      "CardModel sends only the cleared action and unsupported prose abstains",
+      "absent, revoked, expired, wrong scope and incomplete approvals never reach fake",
+      "scope, current facts and explicit material rights gate generation and editing",
+      "two connections share slots and never exceed count or total reservations",
+      "acknowledged failure keeps reservation and count boundary; refusal stays distinct",
+      "unconfirmed image cannot be resent after closing and reopening the ledger"
+    ],
+    "tests": 7,
+    "pass": 7,
+    "fail": 0,
+    "skipped": 0
+  },
+  "L1Fake": {
+    "status": "OFFLINE_PASS",
+    "node": "v26.13.0",
+    "networkPermission": false,
+    "scenarios": [
+      {
+        "scenario": "completed",
+        "state": "ACKNOWLEDGED",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "401",
+        "state": "REJECTED_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "403",
+        "state": "REJECTED_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "429",
+        "state": "REJECTED_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "503",
+        "state": "UNKNOWN_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "redirect",
+        "state": "UNKNOWN_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "timeout",
+        "state": "UNKNOWN_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "bad-json",
+        "state": "UNKNOWN_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "wrong-model",
+        "state": "FAIL",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "wrong-tier",
+        "state": "FAIL",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "tool",
+        "state": "UNKNOWN_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "usage-missing",
+        "state": "UNKNOWN_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "incomplete",
+        "state": "UNKNOWN_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "unexpected-input-charge",
+        "state": "UNKNOWN_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "over-output-limit",
+        "state": "UNKNOWN_STOP",
+        "fakeSends": 1
+      }
+    ],
+    "concurrentProcesses": 2,
+    "possibleSendsAfterRace": 1,
+    "crashRestart": "APPROVAL_LOCKED",
+    "requestSha256": "e4199b370fa95e71c18cedd8c4e7c30965ada8ecdcc2978c473c5a3b0f61aad4",
+    "inputBound": 609,
+    "realTextCalls": 0,
+    "realImageCalls": 0
+  },
+  "L4Fake": {
+    "approvalId": "YJ-P02-L4-single-luna-scene",
+    "status": "OFFLINE_PASS",
+    "node": "v26.13.0",
+    "networkPermission": false,
+    "scenarios": [
+      {
+        "scenario": "completed",
+        "state": "ACKNOWLEDGED",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "401",
+        "state": "REJECTED_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "403",
+        "state": "REJECTED_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "429",
+        "state": "REJECTED_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "503",
+        "state": "UNKNOWN_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "redirect",
+        "state": "UNKNOWN_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "timeout",
+        "state": "UNKNOWN_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "bad-json",
+        "state": "UNKNOWN_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "wrong-model",
+        "state": "FAIL",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "wrong-tier",
+        "state": "FAIL",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "tool",
+        "state": "UNKNOWN_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "usage-missing",
+        "state": "UNKNOWN_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "incomplete",
+        "state": "UNKNOWN_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "unexpected-input-charge",
+        "state": "UNKNOWN_STOP",
+        "fakeSends": 1
+      },
+      {
+        "scenario": "over-output-limit",
+        "state": "UNKNOWN_STOP",
+        "fakeSends": 1
+      }
+    ],
+    "concurrentProcesses": 2,
+    "possibleSendsAfterRace": 1,
+    "crashRestart": "APPROVAL_LOCKED",
+    "requestSha256": "37c06b167d46be0774edc403ed18738517ffe7b676c738679da6c2d0f0eb0124",
+    "inputBound": 831,
+    "realTextCalls": 0,
+    "realImageCalls": 0
+  },
+  "legacyEntrySecurity": {
+    "status": "OFFLINE_PASS",
+    "browser": "158.0.8127.36",
+    "checks": [
+      "host-origin-nonce-content-type-rejected",
+      "invite-single-use",
+      "unprepared-start-denied",
+      "check-no-send-no-reservation",
+      "input-cleared-storage-empty",
+      "refresh-invalidates",
+      "back-invalidates",
+      "clear-close-expiry-heartbeat-loss-invalidates",
+      "ready-still-requires-same-origin-explicit-confirmation",
+      "explicit-double-click-single-fake-send",
+      "unknown-survives-new-session"
+    ],
+    "fakeSends": 1,
+    "externalBrowserRequests": 0,
+    "realTextCalls": 0,
+    "realImageCalls": 0
+  },
+  "originalCardFixture": {
+    "status": "completed",
+    "scene": "ready",
+    "imageSends": 0,
+    "stages": [
+      "ledger-not-sent",
+      "ledger-possible-sent",
+      "provider-response-seen",
+      "history-committed",
+      "scene-reviewed"
+    ]
+  },
+  "YJ13": [
+    {
+      "exit": 1,
+      "tests": {
+        "tests": 22,
+        "pass": 15,
+        "fail": 7,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        "✖ automatic first play from completed text through original CardSession and scoped image bytes",
+        "✖ original CardSession across two villages, ambiguity, full survey and isolated replays",
+        "✖ saved turns on original CardSession: narrative triggers, reviewed elements and hidden worldbook",
+        "✖ original card history, protected originals and append-only correction across processes",
+        "✖ lost feedback acknowledgement after media withdrawal, browser recovery and isolation",
+        "✖ ordinary CardSession → saved text → scene → PostgreSQL task → reviewed original → browser",
+        "✖ saved ordinary session, pinned global version, scoped grants and reviewed presets through Chrome",
+        "✖ failing tests:",
+        "✖ automatic first play from completed text through original CardSession and scoped image bytes",
+        "✖ original CardSession across two villages, ambiguity, full survey and isolated replays",
+        "✖ saved turns on original CardSession: narrative triggers, reviewed elements and hidden worldbook",
+        "✖ original card history, protected originals and append-only correction across processes",
+        "✖ lost feedback acknowledgement after media withdrawal, browser recovery and isolation",
+        "✖ ordinary CardSession → saved text → scene → PostgreSQL task → reviewed original → browser",
+        "✖ saved ordinary session, pinned global version, scoped grants and reviewed presets through Chrome"
+      ],
+      "elapsedMs": 28006
+    },
+    {
+      "exit": 0,
+      "tests": {
+        "tests": 22,
+        "pass": 22,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [],
+      "elapsedMs": 81087
+    }
+  ],
+  "modelLookups": 0,
+  "realTextCalls": 0,
+  "realImageCalls": 0,
+  "newCostUsd": 0
+}

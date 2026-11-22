@@ -1,6 +1,10 @@
 # 变更记录
 
-## 2026-11-22 YJ-P02-L4 UNKNOWN_STOP 证据复核与 L4R 排障任务准备
+## L4R 本机取证与离线验收
+
+**YJ-P02-L4R 已完成离线复现与修复。** 本机未找回原进程、真实账本或收据，原 L4 继续 UNKNOWN_STOP。旧页面在两条不同失败路径上给出相同提示；新页面区分服务端受理、发送前拒绝和送达未知。[取证报告与复跑](docs/reports/YJ-P02-L4R-trigger-forensics-report.md)
+
+## 归档 · 2026-11-22 YJ-P02-L4 UNKNOWN_STOP 证据复核与 L4R 排障任务准备
 
 - 源码核对原最终点击 `UNKNOWN_STOP` 的 GitHub 回执、标准账本/回执缺失及页面统一“会话已结束”错误处理。基于发送前账本顺序推断有可能是前发送失败，但原用户运行时机器/用户/路径没有独立确认，**不能宣称 OpenAI 0 送达或已扣费**。
 - 自 L4 核查提交新建 `codex/yj-p02-l4r-trigger-forensics`，上传[只读溯源与零网络页面状态修复完整任务书](docs/task-briefs/YJ-P02-L4R-trigger-forensics.md)，同步最新交接与任务序列。

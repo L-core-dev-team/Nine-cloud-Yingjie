@@ -1,0 +1,390 @@
+{
+  "status": "PASS",
+  "chrome": "158.0.8127.36",
+  "cases": [
+    {
+      "scenario": "old-lost-start",
+      "startRequestsForwarded": 0,
+      "executeEntered": 0,
+      "fakeSends": 0,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "old-server-gate",
+      "startRequestsForwarded": 1,
+      "executeEntered": 0,
+      "fakeSends": 0,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "lost-start",
+      "startRequestsForwarded": 0,
+      "executeEntered": 0,
+      "fakeSends": 0,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "server-gate",
+      "startRequestsForwarded": 1,
+      "executeEntered": 0,
+      "fakeSends": 0,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "mkdir",
+      "startRequestsForwarded": 1,
+      "executeEntered": 1,
+      "fakeSends": 0,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "receipt",
+      "startRequestsForwarded": 1,
+      "executeEntered": 1,
+      "fakeSends": 0,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "sqlite",
+      "startRequestsForwarded": 1,
+      "executeEntered": 1,
+      "fakeSends": 0,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "not-sent",
+      "startRequestsForwarded": 1,
+      "executeEntered": 1,
+      "fakeSends": 0,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "gate-after-accept",
+      "startRequestsForwarded": 1,
+      "executeEntered": 1,
+      "fakeSends": 0,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "disconnect-after-claim",
+      "startRequestsForwarded": 1,
+      "executeEntered": 1,
+      "fakeSends": 1,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "lost-provider",
+      "startRequestsForwarded": 1,
+      "executeEntered": 1,
+      "fakeSends": 1,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "lost-reply",
+      "startRequestsForwarded": 1,
+      "executeEntered": 1,
+      "fakeSends": 1,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "ack-no-history",
+      "startRequestsForwarded": 1,
+      "executeEntered": 1,
+      "fakeSends": 1,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "success",
+      "startRequestsForwarded": 1,
+      "executeEntered": 1,
+      "fakeSends": 1,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "pending-check",
+      "startRequestsForwarded": 0,
+      "executeEntered": 0,
+      "fakeSends": 0,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "check-before-close",
+      "startRequestsForwarded": 0,
+      "executeEntered": 0,
+      "fakeSends": 0,
+      "lookupCalls": 0
+    },
+    {
+      "scenario": "checked-close",
+      "startRequestsForwarded": 0,
+      "executeEntered": 0,
+      "fakeSends": 0,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "ping-after-finish",
+      "startRequestsForwarded": 1,
+      "executeEntered": 1,
+      "fakeSends": 1,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "check-401",
+      "startRequestsForwarded": 0,
+      "executeEntered": 0,
+      "fakeSends": 0,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "check-403",
+      "startRequestsForwarded": 0,
+      "executeEntered": 0,
+      "fakeSends": 0,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "check-429",
+      "startRequestsForwarded": 0,
+      "executeEntered": 0,
+      "fakeSends": 0,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "check-timeout",
+      "startRequestsForwarded": 0,
+      "executeEntered": 0,
+      "fakeSends": 0,
+      "lookupCalls": 1
+    },
+    {
+      "scenario": "check-wrong-model",
+      "startRequestsForwarded": 0,
+      "executeEntered": 0,
+      "fakeSends": 0,
+      "lookupCalls": 1
+    }
+  ],
+  "executionCases": [
+    {
+      "scenario": "lost-start",
+      "stages": [
+        "invite-claimed",
+        "preflight-ready"
+      ]
+    },
+    {
+      "scenario": "server-gate",
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "gate-denied",
+        "stop"
+      ]
+    },
+    {
+      "scenario": "mkdir",
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "start-accepted",
+        "receipt-write-failed",
+        "stop"
+      ]
+    },
+    {
+      "scenario": "receipt",
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "start-accepted",
+        "receipt-write-failed",
+        "stop"
+      ]
+    },
+    {
+      "scenario": "sqlite",
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "start-accepted",
+        "receipt-created",
+        "ledger-unavailable",
+        "stop"
+      ]
+    },
+    {
+      "scenario": "not-sent",
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "start-accepted",
+        "receipt-created",
+        "ledger-not-sent",
+        "stop"
+      ]
+    },
+    {
+      "scenario": "gate-after-accept",
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "start-accepted",
+        "gate-denied",
+        "stop"
+      ]
+    },
+    {
+      "scenario": "disconnect-after-claim",
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "start-accepted",
+        "receipt-created",
+        "ledger-not-sent",
+        "ledger-possible-sent",
+        "stop"
+      ]
+    },
+    {
+      "scenario": "lost-provider",
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "start-accepted",
+        "receipt-created",
+        "ledger-not-sent",
+        "ledger-possible-sent",
+        "stop"
+      ]
+    },
+    {
+      "scenario": "lost-reply",
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "start-accepted",
+        "receipt-created",
+        "ledger-not-sent",
+        "ledger-possible-sent",
+        "provider-response-seen",
+        "history-committed",
+        "scene-reviewed",
+        "stop"
+      ]
+    },
+    {
+      "scenario": "ack-no-history",
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "start-accepted",
+        "receipt-created",
+        "ledger-not-sent",
+        "ledger-possible-sent",
+        "provider-response-seen",
+        "stop"
+      ]
+    },
+    {
+      "scenario": "success",
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "start-accepted",
+        "receipt-created",
+        "ledger-not-sent",
+        "ledger-possible-sent",
+        "provider-response-seen",
+        "history-committed",
+        "scene-reviewed",
+        "stop"
+      ]
+    },
+    {
+      "scenario": "pending-check",
+      "stages": [
+        "invite-claimed",
+        "preflight-ready"
+      ]
+    },
+    {
+      "scenario": "check-before-close",
+      "stages": [
+        "invite-claimed"
+      ]
+    },
+    {
+      "scenario": "checked-close",
+      "stages": [
+        "invite-claimed",
+        "preflight-ready"
+      ]
+    },
+    {
+      "scenario": "ping-after-finish",
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "start-accepted",
+        "receipt-created",
+        "ledger-not-sent",
+        "ledger-possible-sent",
+        "provider-response-seen",
+        "history-committed",
+        "scene-reviewed",
+        "stop"
+      ]
+    },
+    {
+      "scenario": "check-401",
+      "stages": [
+        "invite-claimed",
+        "check-blocked"
+      ]
+    },
+    {
+      "scenario": "check-403",
+      "stages": [
+        "invite-claimed",
+        "check-blocked"
+      ]
+    },
+    {
+      "scenario": "check-429",
+      "stages": [
+        "invite-claimed",
+        "check-blocked"
+      ]
+    },
+    {
+      "scenario": "check-timeout",
+      "stages": [
+        "invite-claimed",
+        "check-blocked"
+      ]
+    },
+    {
+      "scenario": "check-wrong-model",
+      "stages": [
+        "invite-claimed",
+        "check-blocked"
+      ]
+    }
+  ],
+  "realModelQueries": 0,
+  "realTextCalls": 0,
+  "realImageCalls": 0,
+  "newCostUsd": 0
+}

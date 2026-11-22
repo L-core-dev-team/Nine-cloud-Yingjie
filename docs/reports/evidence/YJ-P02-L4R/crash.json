@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "beforeExit": [
+    "ledger-not-sent",
+    "ledger-possible-sent"
+  ],
+  "recovered": "possible-sent",
+  "secondClaim": "APPROVAL_LOCKED",
+  "cases": [
+    {
+      "kind": "lease",
+      "elapsedMs": 90001,
+      "starts": 0
+    },
+    {
+      "kind": "lifetime",
+      "elapsedMs": 900000,
+      "starts": 0
+    }
+  ]
+}

@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-**最新排障任务 YJ-P02-L4R：** 原 L4 页面最终点击后状态为 `UNKNOWN_STOP`，没有可核验的真实收据和 SQLite 账本。本轮只读 GitHub 源码后，已在独立分支准备[旧环境只读取证与安全页面可观测性修复任务书](docs/task-briefs/YJ-P02-L4R-trigger-forensics.md)。**L4R 业务尚未执行；禁止重新发送、索取 API Key 或复用旧批准。**
+**YJ-P02-L4R 已完成离线复现与修复。** 本机未找回原进程、真实账本或收据，原 L4 继续 UNKNOWN_STOP。旧页面在两条不同失败路径上给出相同提示；新页面区分服务端受理、发送前拒绝和送达未知。[取证报告与复跑](docs/reports/YJ-P02-L4R-trigger-forensics-report.md)
 
 **YJ-P02-L4 · UNKNOWN_STOP。** 本人报告已点击。原页面已结束，本机未找到真实回执与专用账本。实际用量、费用及最终画面状态未知，本次核查补发 0 次。[核查结论与历史离线验收](docs/reports/YJ-P02-L4-luna-scene-pilot-report.md)
 

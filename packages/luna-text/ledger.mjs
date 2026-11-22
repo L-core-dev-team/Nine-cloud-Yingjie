@@ -12,7 +12,8 @@ function binding(call,prepared,grant) {
     ceilingNanoUsd:grant?.ceilingNanoUsd??ceilingNanoUsd,reserveNanoUsd,...(grant?{grant}:{})});
 }
 export class SingleApproval {
-  constructor(file,grant=null) {
+  constructor(file,grant=null,mark=()=>{}) {
+    this.mark=mark;
     this.grant=grant;
     this.approval=grant?.approvalId??approval;
     this.db=new DatabaseSync(file);
@@ -24,12 +25,14 @@ export class SingleApproval {
     this.db.prepare("INSERT INTO pilot VALUES (?,?,'not-sent',NULL) ON CONFLICT(id) DO NOTHING").run(this.approval,b);
     const row=this.db.prepare("SELECT binding,state FROM pilot WHERE id=?").get(this.approval);
     if(row.binding!==b || row.state!=="not-sent") throw Error("APPROVAL_LOCKED");
+    this.mark("ledger-not-sent");
   }
   claim(call,prepared) {
     // One durable SQLite autocommit before transport. Every new action shares this approval.
     const result=this.db.prepare("UPDATE pilot SET state='possible-sent' WHERE id=? AND binding=? AND state='not-sent'")
       .run(this.approval,binding(call,prepared,this.grant));
     if(result.changes!==1) throw Error("APPROVAL_LOCKED");
+    this.mark("ledger-possible-sent");
   }
   finish(state,receipt) {
     if (!["ACKNOWLEDGED","UNKNOWN_STOP","REJECTED_STOP","FAIL"].includes(state)) throw Error("INVALID_OUTCOME");

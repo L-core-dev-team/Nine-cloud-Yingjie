@@ -2,7 +2,11 @@
 
 更新：2026-11-22。
 
-## 最新接续 · YJ-P02-L4R UNKNOWN_STOP 只读取证与页面修复（尚未执行）
+## L4R 本机取证与离线验收
+
+**YJ-P02-L4R 已完成离线复现与修复。** 本机未找回原进程、真实账本或收据，原 L4 继续 UNKNOWN_STOP。旧页面在两条不同失败路径上给出相同提示；新页面区分服务端受理、发送前拒绝和送达未知。[取证报告与复跑](reports/YJ-P02-L4R-trigger-forensics-report.md)
+
+## 归档 · 最新接续 · YJ-P02-L4R UNKNOWN_STOP 只读取证与页面修复（尚未执行）
 
 - GitHub 核对 `codex/yj-p02-l4-luna-scene-pilot@75270ad14746c77c50e1ebbd2fc012e5df0a0f58`、[点击后核查 JSON](reports/evidence/YJ-P02-L4/post-trigger-review.json)、[原 L4 报告](reports/YJ-P02-L4-luna-scene-pilot-report.md)及 `key-entry/entry.js`、`server.mjs`、`l4/pilot.mjs`、账本和 journey 源码。用户报告已点击，但事后未找到标准 L4 SQLite、receipt 或目录；OpenAI 实际送达、费用、文本与场景均为 UNKNOWN，补发 0 次。**本轮只是 GitHub 远端只读核对，没有访问用户 Windows 原进程或文件。**
 - 源码显示：L4 服务端应在真实调用前先创建目录/receipt，再在受信 ledger 写入 `not-sent` 和 `possible-sent`；如果搜索的确是原进程同一 home 且资料未移动，文件全部缺失强烈提示未进入发包阶段，**但不能因事后缺文件断言服务商未收到请求**。前端通用“会话已结束”提示掩盖了前发送拒绝与可能已发但断连两种不同状态。

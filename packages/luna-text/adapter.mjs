@@ -47,7 +47,7 @@ function account(usage,standardLuna) {
 
 // The live caller supplies the pinned upstream HTTPS transport and the server-only grant.
 // The upstream service alone commits the returned narrative.
-export function cardModel({ledger,transport,key,takeKey=()=>key,gate=()=>{},cancelSignal,prepareRequest=prepare,hashResponseId=false}) {
+export function cardModel({ledger,transport,key,takeKey=()=>key,gate=()=>{},cancelSignal,prepareRequest=prepare,hashResponseId=false,mark=()=>{}}) {
   return async (input, signal, call) => {
     const prepared=prepareRequest(input);
     gate(); signal.throwIfAborted();cancelSignal?.throwIfAborted();
@@ -58,7 +58,7 @@ export function cardModel({ledger,transport,key,takeKey=()=>key,gate=()=>{},canc
       const response=await transport(endpoint,{method:"POST",redirect:"error",credentials:"omit",
         headers:{"Content-Type":"application/json","Authorization":"Bearer "+takeKey()},
         signal:AbortSignal.any([signal,AbortSignal.timeout(45_000),...(cancelSignal?[cancelSignal]:[])]),body:prepared.body});
-      httpStatus=response.status;
+      httpStatus=response.status;mark("provider-response-seen");
       if ([400,401,403,404,422,429].includes(httpStatus)) phase="REJECTED_STOP";
       if (httpStatus===200) {
         const data=await response.json();
