@@ -110,7 +110,7 @@ export class ImageTasks {
       await db.query("INSERT INTO yingjie_image.attempt VALUES($1,$2,$3,$4,$5)",[id,taskId,(prior?.ordinal??0)+1,attempt,
         ref.ok?new Date(Date.now()+this.timeoutMs):null]);
       await db.query("UPDATE yingjie_image.task SET permit=$2 WHERE id=$1",[taskId,permit]);
-      return ref.ok?{attempt,plan:task.plan,referenceBytes:ref.bytes}:"not-sent";
+      return ref.ok?{attempt,plan:task.plan,referenceBytes:ref.bytes,permit,serial}:"not-sent";
     });
     if(typeof claim==="string")return claim;
     // From here the dispatch may already have reached a provider. Never replay on an ambiguous outcome.
@@ -141,9 +141,13 @@ export class ImageTasks {
             reason:"待审阅",basis:"provider-return"}});
       }else{
         if(!["unknown","failed","refused"].includes(response.state))throw Error("invalid-provider-outcome");
-        outcome={state:response.state,reason:response.state==="unknown"?"transport-unconfirmed":"provider-"+response.state};
+        const reason=["local-gate","LIVE_DISABLED","prior-reservation","http-400","http-401","http-403","http-422","http-429"].includes(response.reason)
+          ?response.reason:response.state==="unknown"?"transport-unconfirmed":"provider-"+response.state;
+        outcome={state:response.state,reason};
       }
-      const attempt=AttemptSchema.parse({...row.record,observedAt:now(),outcome});
+      const meta=response.state==="returned"?response.metadata:null;
+      const attempt=AttemptSchema.parse({...row.record,...(meta?{model:meta.model,usage:meta.usage,
+        providerRequestId:meta.providerRequestId,cost:null}:{}),observedAt:now(),outcome});
       if(asset) {
         const previous=await one(db,"SELECT record FROM yingjie_image.asset WHERE id=$1",[id]);
         const link=classifyResult(row.plan,attempt,asset,previous?.record);

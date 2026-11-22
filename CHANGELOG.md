@@ -1,6 +1,10 @@
 # 变更记录
 
-## 2026-11-22 YJ-ENV-01 / YJ-P02-I1 两线并行任务准备
+## I1 图片供应商离线交付
+
+**YJ-P02-I1 · IMAGE_ADAPTER_OFFLINE_PASS。** Images 首图与参考编辑已完成离线适配。协议、权限与响应检查 60/60，ImageTasks 与进程恢复 7/7。输出进入待审，真实发送关闭。本机原生 PG/Chrome 验收由 [Issue #1](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/issues/1) 跟踪。[报告与复跑](docs/reports/YJ-P02-I1-image-adapter-offline-report.md)
+
+## 归档 · 2026-11-22 YJ-ENV-01 / YJ-P02-I1 两线并行任务准备
 
 - 道主安排 Dot 独立处理 L5B 的 Windows `127.0.0.1` CONNECT EACCES；已为其准备独立 [ENV-01 任务书](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/blob/7d2badc6284174053ed3012766a79edd1346124f/docs/task-briefs/YJ-ENV-01-dot-loopback.md)，禁止绕过自动审批或关闭系统安全策略。
 - Codex 从同一固定 L5B 完成提交另建 `codex/yj-p02-i1-image-adapter-offline`，交付 [Images 生成/编辑离线协议适配完整任务书](docs/task-briefs/YJ-P02-I1-openai-image-offline.md)，直接复用 YJ-05 ImageTasks 与 YJ-02 旧图，先做无网假传输。

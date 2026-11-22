@@ -2,7 +2,11 @@
 
 更新：2026-11-22。
 
-## YJ-P02-I1 图片离线适配与 YJ-ENV-01 Dot 环境任务准备
+## I1 图片供应商离线交付
+
+**YJ-P02-I1 · IMAGE_ADAPTER_OFFLINE_PASS。** Images 首图与参考编辑已完成离线适配。协议、权限与响应检查 60/60，ImageTasks 与进程恢复 7/7。输出进入待审，真实发送关闭。本机原生 PG/Chrome 验收由 [Issue #1](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/issues/1) 跟踪。[报告与复跑](reports/YJ-P02-I1-image-adapter-offline-report.md)
+
+## 归档 · YJ-P02-I1 图片离线适配与 YJ-ENV-01 Dot 环境任务准备
 
 GitHub 只读核对 L5B 完成 SHA `6d9fa510cb6daa75e50eb9a4ebd4a277a8a70ec5` 的 TCP LISTEN PASS、同进程 CONNECT EACCES，以及 [L5B 原回执](reports/evidence/YJ-P02-L5B/loopback.json) 中的 7/23/11/22 项待测状态。源代码中 YJ-05 `ImageTasks` 已提供 PG task、attempt、参考图/资产、unknown 与待审机制；YJ-02 的 3 张真图属于 Codex image_gen 工具实验，**不是供应商 Images API 已接通**。根据 2026-11-22 官方 Images 文档，generations 与 edits 是分别的 API，候选 `gpt-image-2.6-sunburst`，实际项目权限、计费与真实输出 NOT_RUN。
 

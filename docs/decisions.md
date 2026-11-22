@@ -2,7 +2,11 @@
 
 更新：2026-11-22。
 
-## 并行阶段 YJ-P02-I1 图片适配与 YJ-ENV-01 Dot 环境处理（尚未执行）
+## I1 图片供应商离线交付
+
+**YJ-P02-I1 · IMAGE_ADAPTER_OFFLINE_PASS。** Images 首图与参考编辑已完成离线适配。协议、权限与响应检查 60/60，ImageTasks 与进程恢复 7/7。输出进入待审，真实发送关闭。本机原生 PG/Chrome 验收由 [Issue #1](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/issues/1) 跟踪。[报告与复跑](reports/YJ-P02-I1-image-adapter-offline-report.md)
+
+## 归档 · 并行阶段 YJ-P02-I1 图片适配与 YJ-ENV-01 Dot 环境处理（尚未执行）
 
 道主明确将已证实的本机 TCP EACCES 交给 Dot，并要求映界继续下一阶段；因此独立建立 Dot 环境任务书与 Codex Images API 离线适配任务书，从 L5B 固定 HEAD 并行展开。Codex 只开发 generate/edit 真实协议的可注入适配与离线授权/审图，不因 Dot 阻塞继续停摆；任何依赖本机 TCP 的 PG/Chrome 套件保留 ENV_BLOCKED。**没有新增真实 OpenAI 图像/文字 API 付费授权、参考 PNG 外发许可或图片模型账户访问确认**。L4 UNKNOWN_STOP、L5 PARTIAL 仍是各自真实状态。
 

@@ -2,7 +2,11 @@
 
 更新：2026-11-22。
 
-## 最新并行接续：Codex 图片适配 I1 / Dot 本机环境 ENV-01（仅任务书）
+## I1 图片供应商离线交付
+
+**YJ-P02-I1 · IMAGE_ADAPTER_OFFLINE_PASS。** Images 首图与参考编辑已完成离线适配。协议、权限与响应检查 60/60，ImageTasks 与进程恢复 7/7。输出进入待审，真实发送关闭。本机原生 PG/Chrome 验收由 [Issue #1](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/issues/1) 跟踪。[报告与复跑](reports/YJ-P02-I1-image-adapter-offline-report.md)
+
+## 归档 · 最新并行接续：Codex 图片适配 I1 / Dot 本机环境 ENV-01（仅任务书）
 
 - 已只读核对当前固定基线 `codex/yj-p02-l5b-loopback-closeout@6d9fa510cb6daa75e50eb9a4ebd4a277a8a70ec5`、L5B `ENV_BLOCKED` 最小探针，以及 YJ-02 工具级真图、YJ-05 ImageTasks、P01 供应商 fake、原 P02 OpenAI 适配任务书。**本轮未在 Windows/PG/Chrome 重跑任何测试。**
 - 从同一 L5B SHA 建立互不重叠分支：Codex `codex/yj-p02-i1-image-adapter-offline`（[Images 生图与参考编辑离线任务书](task-briefs/YJ-P02-I1-openai-image-offline.md)）；Dot `dot/yj-env-01-loopback-permission`（[最小本机 TCP/权限取证任务书](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/blob/7d2badc6284174053ed3012766a79edd1346124f/docs/task-briefs/YJ-ENV-01-dot-loopback.md)）。Dot 负责 EACCES 的合法环境诊断，Codex 不得重复调查，改为开发图片 generate/edit API 适配器、已审 PNG 参考、审图门禁、注入假传输及测试。

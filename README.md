@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-**并行新阶段 YJ-P02-I1：图片供应商适配（仅任务书，业务尚未执行）。** [OpenAI Images 首图/参考编辑的完整离线开发任务书](docs/task-briefs/YJ-P02-I1-openai-image-offline.md)已在独立 Codex 分支上传。直接复用 YJ-05 图片任务、PNG 原件及审阅，不等 Dot 的 loopback 修复就先编写 generate/edit 适配器和无网 fake 测试。候选 `gpt-image-2.6-sunburst` 只用于准备；**没有任何新的图片/文字 API 付费授权**。Dot 单独处理 [YJ-ENV-01](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/blob/7d2badc6284174053ed3012766a79edd1346124f/docs/task-briefs/YJ-ENV-01-dot-loopback.md)；双方不得互改分支。
+**YJ-P02-I1 · IMAGE_ADAPTER_OFFLINE_PASS。** Images 首图与参考编辑已完成离线适配。协议、权限与响应检查 60/60，ImageTasks 与进程恢复 7/7。输出进入待审，真实发送关闭。本机原生 PG/Chrome 验收由 [Issue #1](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/issues/1) 跟踪。[报告与复跑](docs/reports/YJ-P02-I1-image-adapter-offline-report.md)
 
 **YJ-P02-L5B · ENV_BLOCKED。** 当前 Windows 环境允许 Node 监听本机随机端口，连接同一端口时返回 `connect EACCES`。HTTP、原生 Chrome、临时 PG、L4R 与 YJ-13 本轮未运行；L5 维持 PARTIAL。[实测与脱敏回执](docs/reports/YJ-P02-L5B-loopback-closeout-report.md)
 

@@ -70,9 +70,12 @@ export async function demoPlan(tasks,ctx) {
 
 // Local fixture reviewer only. The original YJ-02 inspection applies to these exact three byte strings and facts.
 export async function reviewFixture(tasks,ctx,task) {
+  const entry=tasks.capability.entry;
+  if(!["yj02-local-png","p01-local-fake"].includes(entry) || tasks.capability.origin!=="mock")return;
   if(task.plan.reason==="演练待审")return;
   const row=(await tasks.pool.query(`SELECT a.record FROM yingjie_image.asset a JOIN yingjie_image.attempt t ON t.id=a.id
-    WHERE t.task=$1 AND a.scope=$2 AND a.record->'review'->>'status'='pending'`,[task.id,ctx.scope])).rows[0];
+    WHERE t.task=$1 AND a.scope=$2 AND a.record->'review'->>'status'='pending'
+      AND t.record->'capability'->>'entry'=$3 AND t.record->'capability'->>'origin'='mock'`,[task.id,ctx.scope,entry])).rows[0];
   if(!row)return;
   const a=row.record,verdict=assessFixture(a.sha256,a.target);
   if(verdict.status==="pending")return;
