@@ -1,0 +1,89 @@
+{
+  "task": "YJ-P02-L5B",
+  "base": "6d9fa510cb6daa75e50eb9a4ebd4a277a8a70ec5",
+  "execution": "original L5B worktree and managed Codex Windows shell",
+  "command": "node packages/luna-text/test/loopback-probe.mjs",
+  "probeInvocations": 1,
+  "probe": {
+    "runId": "315a9f29-9fae-4381-8cb1-8b38a5ec5d4a",
+    "utc": "2026-11-22T09:02:11.368Z",
+    "sourceSha256": "8b7022155c9fa967ee3c84105ee68dead386eedd39e7f558aefc4595676f4f80",
+    "platform": "win32",
+    "osRelease": "10.0.26200",
+    "node": "v26.13.0",
+    "nodePermissionModel": false,
+    "nodeNetPermission": null,
+    "preloadConfigured": false,
+    "target": "127.0.0.1",
+    "portSelection": "OS-assigned",
+    "observations": {
+      "tcpListen": {
+        "status": "PASS"
+      },
+      "tcpConnect": {
+        "status": "FAIL",
+        "code": "EACCES",
+        "syscall": "connect"
+      },
+      "httpListen": {
+        "status": "NOT_RUN"
+      },
+      "httpGet": {
+        "status": "NOT_RUN"
+      }
+    },
+    "status": "ENV_BLOCKED"
+  },
+  "exitCode": 1,
+  "dotComparison": {
+    "commit": "85d5020e66c1e631e255ca04de548bb28ac997b0",
+    "runId": "ab311912-748b-4b87-a8ba-f04baf3be277",
+    "identicalProbeSha256": true,
+    "conclusion": "ENVIRONMENT_DIFFERS",
+    "dotHttpStatus": 200
+  },
+  "remaining": {
+    "l5NativeChrome": {
+      "pass": 0,
+      "fail": 0,
+      "notRun": 7,
+      "modes": [
+        "complete",
+        "nonexclusive",
+        "lost",
+        "reject",
+        "expiry",
+        "disconnect",
+        "timeout"
+      ]
+    },
+    "l4rTargeted": {
+      "pass": 0,
+      "fail": 0,
+      "notRun": 23
+    },
+    "legacyInputSecurity": {
+      "pass": 0,
+      "fail": 0,
+      "notRun": 11
+    },
+    "l4rTriggerRecovery": "NOT_RUN",
+    "l4OriginalCardMock": "NOT_RUN",
+    "l5CardHistory": {
+      "status": "NOT_RUN",
+      "revision": null,
+      "narrativeSha256": null,
+      "projection": null
+    },
+    "yj13": {
+      "pass": 0,
+      "fail": 0,
+      "notRun": 22
+    }
+  },
+  "additionalNetworkPermissionRequested": false,
+  "realModelLookups": 0,
+  "realTextCalls": 0,
+  "realImageCalls": 0,
+  "newCostUsd": 0
+}

@@ -1,5 +1,11 @@
 # YJ-P02-L5B 本机回环验收
 
+## Dot 核查后的单次复跑 · 2026-11-22 17:02（北京时间）
+
+在原 L5B 工作树 `6d9fa510cb6daa75e50eb9a4ebd4a277a8a70ec5` 及其受管 Codex Windows 执行环境中运行原探针一次。源码 SHA-256 与前次 L5B、Dot 回执一致。TCP 监听成功，客户端连接同一临时端口仍返回 `connect EACCES`，探针退出码为 1，HTTP GET 未运行。Dot 在其会话中取得 HTTP 200，两份回执支持 `ENVIRONMENT_DIFFERS`；原 L5B 维持 **ENV_BLOCKED**。[本次脱敏回执](evidence/YJ-P02-L5B/post-dot-recheck.json) · [Dot 对照回执](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/blob/85d5020e66c1e631e255ca04de548bb28ac997b0/docs/reports/evidence/YJ-ENV-01/loopback.json)
+
+本次 L5 原生 Chrome 7 项、L4R 定向 23 项、旧输入安全 11 项、YJ-13 回归 22 项均为 NOT_RUN。没有启动临时 PostgreSQL，completed-history 修订、正文 SHA-256 与映界投影均未取得。收到 EACCES 后停止，没有第二次探针或权限变更。真实模型请求 0，新增费用 USD 0。
+
 2026-11-22 · **ENV_BLOCKED**。L5 保持 **PARTIAL**。在当前受管 Windows 上，Node 在 IPv4 回环随机端口成功监听，同一进程发起的首次 TCP 连接收到 `connect EACCES`。已按门禁停止。[脱敏运行回执](evidence/YJ-P02-L5B/loopback.json)
 
 | 步骤 | 本轮状态 | 观察 |
