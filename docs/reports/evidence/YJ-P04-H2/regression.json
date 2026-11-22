@@ -1,0 +1,167 @@
+{
+  "imageEligibility": {
+    "cmd": "node --permission --allow-fs-read=* --test-isolation=none --test-reporter=tap --test packages/first-play/test/trigger.test.mjs",
+    "exit": 0,
+    "result": "# tests 4\n# suites 0\n# pass 4\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 315.4475"
+  },
+  "l3": {
+    "cmd": "node --permission --allow-fs-read=* --test-isolation=none --test-reporter=tap --test packages/first-play/test/scene-evidence.test.mjs packages/first-play/test/initial-survey.test.mjs packages/first-play/test/continuity.test.mjs",
+    "exit": 0,
+    "result": "# tests 30\n# suites 0\n# pass 30\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 296.4888"
+  },
+  "contracts": {
+    "cmd": "node --permission --allow-fs-read=* --test-isolation=none --test-reporter=tap --test packages/contracts/test/*.test.mjs",
+    "exit": 0,
+    "result": "# tests 10\n# suites 0\n# pass 10\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 411.9073"
+  },
+  "l1": {
+    "cmd": "node packages/luna-text/test/check.mjs ../h2-reg-l1.json",
+    "exit": 0,
+    "result": {
+      "status": "OFFLINE_PASS",
+      "count": 15
+    }
+  },
+  "i1": {
+    "cmd": "node packages/openai-image/check.mjs ../h2-reg-i1.json",
+    "exit": 0,
+    "result": "IMAGE_ADAPTER_OFFLINE_PASS 60/60, 7/7"
+  },
+  "i2": {
+    "cmd": "node packages/openai-image/check-money.mjs ../h2-reg-i2.json",
+    "exit": 0,
+    "result": "I2 mock scenarios 40 passed; process race, forced exit and both reopen/lost-attempt paths passed"
+  },
+  "s1": {
+    "cmd": "node --permission --allow-fs-read=* packages/first-play/test/s1-measure.mjs",
+    "exit": 0,
+    "result": "{\"scores\":{\"v1\":{\"dev\":{\"correctAccept\":0,\"unnecessaryAbstain\":26,\"incorrectAccept\":0,\"correctAbstain\":44},\"accept\":{\"correctAccept\":0,\"unnecessaryAbstain\":10,\"incorrectAccept\":0,\"correctAbstain\":22}},\"v2\":{\"dev\":{\"correctAccept\":26,\"unnecessaryAbstain\":0,\"incorrectAccept\":0,\"correctAbstain\":44},\"accept\":{\"correctAccept\":10,\"unnecessaryAbstain\":0,\"incorrectAccept\":0,\"correctAbstain\":22}}},\"checks\":13,\"failures\":[],\"corpusSha256\":\"6a6e15a44cb8d6385e38d0e582b8814233fc7b15607f7e6940950b4034ffe249\"}"
+  },
+  "l4": {
+    "cmd": "node packages/luna-text/test/check.mjs ../h2-reg-l4.json --l4",
+    "exit": 0,
+    "result": {
+      "status": "OFFLINE_PASS",
+      "count": 15
+    }
+  },
+  "p01": {
+    "cmd": "node packages/provider-readiness/check.mjs ../h2-reg-p01.json",
+    "exit": 0,
+    "result": {
+      "status": "OFFLINE_PASS",
+      "count": 7
+    }
+  },
+  "h1": {
+    "cmd": "node --permission --allow-fs-read=* packages/highlights/evaluate.mjs",
+    "exit": 0,
+    "result": {
+      "groups": {
+        "dev": {
+          "turns": 30,
+          "truePositive": 8,
+          "trueNegative": 22,
+          "miss": 0,
+          "falsePositive": 0,
+          "wrongKind": 0,
+          "byKind": {
+            "ordinary": {
+              "total": 22,
+              "correct": 22
+            },
+            "turn": {
+              "total": 2,
+              "correct": 2
+            },
+            "battle": {
+              "total": 2,
+              "correct": 2
+            },
+            "quiet": {
+              "total": 2,
+              "correct": 2
+            },
+            "emotion": {
+              "total": 2,
+              "correct": 2
+            }
+          },
+          "top1Correct": 5,
+          "rankedStories": 5,
+          "orderedPairs": 4,
+          "expectedPairs": 4,
+          "duplicateDirectorKeys": 0,
+          "directorCandidates": 0,
+          "restatements": 0
+        },
+        "held": {
+          "turns": 36,
+          "truePositive": 7,
+          "trueNegative": 28,
+          "miss": 1,
+          "falsePositive": 0,
+          "wrongKind": 0,
+          "byKind": {
+            "ordinary": {
+              "total": 28,
+              "correct": 28
+            },
+            "quiet": {
+              "total": 4,
+              "correct": 3
+            },
+            "turn": {
+              "total": 1,
+              "correct": 1
+            },
+            "battle": {
+              "total": 1,
+              "correct": 1
+            },
+            "emotion": {
+              "total": 2,
+              "correct": 2
+            }
+          },
+          "top1Correct": 5,
+          "rankedStories": 6,
+          "orderedPairs": 2,
+          "expectedPairs": 2,
+          "duplicateDirectorKeys": 0,
+          "directorCandidates": 0,
+          "restatements": 1
+        }
+      },
+      "checks": 11,
+      "failures": [
+        {
+          "story": "渡船",
+          "revision": 3,
+          "expected": "quiet",
+          "actual": "ordinary",
+          "prose": "李禾把自己的名字从分成册上划去，船契落在船工掌心。自此渡船由船工共有。",
+          "abstention": null
+        }
+      ]
+    }
+  },
+  "s2": {
+    "cmd": "node --permission --allow-fs-read=* packages/first-play/test/s2-measure.mjs",
+    "exit": 0,
+    "result": "{\"count\":100,\"groups\":{\"dev\":{\"literalCorrectAccept\":55,\"literalCorrectAbstain\":16,\"literalWrongAccept\":0,\"literalUnnecessaryAbstain\":0,\"correctEligible\":33,\"correctReview\":8,\"correctConflict\":8,\"correctNotReady\":22,\"dangerousAllow\":0,\"unnecessaryBlock\":0,\"wrongVerdictOrReason\":0},\"held\":{\"literalCorrectAccept\":21,\"literalCorrectAbstain\":8,\"literalWrongAccept\":0,\"literalUnnecessaryAbstain\":0,\"correctEligible\":11,\"correctReview\":4,\"correctConflict\":2,\"correctNotReady\":12,\"dangerousAllow\":0,\"unnecessaryBlock\":0,\"wrongVerdictOrReason\":0}},\"errors\":[],\"hash\":\"ee1575bfb816524503507ec5284bcdc48e7a29f4138120975efe3428f2d18a8d\"}"
+  },
+  "slice": {
+    "cmd": "node packages/first-play/test/s2-story-slice.mjs",
+    "exit": 0,
+    "result": "slice passed 20 revisions, 2 fake sends"
+  },
+  "s3": {
+    "cmd": "node --permission --allow-fs-read=* packages/offline-play-preview/check.mjs",
+    "exit": 0,
+    "result": {
+      "turns": 20,
+      "checks": 16
+    }
+  }
+}

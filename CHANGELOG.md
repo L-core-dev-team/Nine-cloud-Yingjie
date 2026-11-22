@@ -1,5 +1,9 @@
 # 变更记录
 
+## 2026-11-22 · YJ-P04-H2 离线研究交付
+
+新增 `narrative-highlight/2`、`highlight-ranker/2` 与 `highlight-cadence/1` 的离线研究入口、实现前冻结的评价集和逐回合回执。YJ-P04-H2 为 **PARTIAL**。 生产默认入口沿用原版，H1 可直接回放。新增真实模型请求和费用均为 0。[运行报告与复跑方法](docs/reports/YJ-P04-H2-arc-payoff-cadence-report.md)
+
 ## 2026-11-22 H1 研究交付核验与 H2 长线高潮/出图时机任务准备
 
 - GitHub 独立核对 H1 `74ea580` 完成提交、锁定 14 条故事/66 修订、15/16 关键高潮、0/50 普通误报、10/11 top-1 与原三条中途错误；唯一最终漏判“渡船”权利变化未被掩盖，旧语料 Git blob 不变。
