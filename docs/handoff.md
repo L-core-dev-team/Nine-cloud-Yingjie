@@ -2,6 +2,12 @@
 
 更新：2026-11-22。
 
+## 最新接续：YJ-P02-L5 独立试点入口的零网络准备（仅任务书）
+
+- 已核对 `codex/yj-p02-l4r-trigger-forensics@d05c2355c32e0637aff4e2ce75a165ac7ac6769c` 的[取证/修复报告](reports/YJ-P02-L4R-trigger-forensics-report.md)、[原环境记录](reports/evidence/YJ-P02-L4R/historical-review.json)、[浏览器离线复现](reports/evidence/YJ-P02-L4R/browser.json)、[崩溃保留 possible-sent](reports/evidence/YJ-P02-L4R/crash.json)及阶段日志/入口源码。L4R 23 个定向模拟和既有禁网检查已按原回执通过；YJ-13 曾因本机测试隔离错误得 15/22，修复后 22/22。**本轮没有独立在用户 Windows/PG/Chrome 上重新运行测试**。
+- L4R 的代码把旧 L4 启动器停用，改善了页面状态及阶段记录，但原 L4 的请求是否送达、费用和场景仍 UNKNOWN_STOP。为避免重复使用旧批准，已从 L4R 最新完成 SHA 建立 `codex/yj-p02-l5-one-shot-recovery`，上传[完整 L5 独立试点零网络任务书](task-briefs/YJ-P02-L5-one-shot-recovery.md)。**本次仅完成任务书及文档交接，L5 新代码、测试和真实 API 请求均 NOT_RUN**。
+- L5 必须使用一个全新受信一次性授权和独立账本，把 L4R 的 `start-accepted`、receipt、possible-sent、history-committed 等阶段证据接入未来真正的发送通道；先用假 Key/回环 HTTP/PG/Chrome 做完。不得复制、重置或恢复 L1/L4 旧批准。**目前没有 L5 新的费用授权**，新真实文字、图片、模型 GET 查询均禁止；下一次付费试点需道主另行同意具体模型、合成数据、最多请求数及 USD 上限，并在受保护页面最终确认。
+
 ## L4R 本机取证与离线验收
 
 **YJ-P02-L4R 已完成离线复现与修复。** 本机未找回原进程、真实账本或收据，原 L4 继续 UNKNOWN_STOP。旧页面在两条不同失败路径上给出相同提示；新页面区分服务端受理、发送前拒绝和送达未知。[取证报告与复跑](reports/YJ-P02-L4R-trigger-forensics-report.md)

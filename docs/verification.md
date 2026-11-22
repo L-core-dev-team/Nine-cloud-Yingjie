@@ -2,6 +2,12 @@
 
 更新：2026-11-22。
 
+## GitHub 核对 L4R 与 L5 零网络任务准备（本轮）
+
+只读核对 `codex/yj-p02-l4r-trigger-forensics@d05c2355c32e0637aff4e2ce75a165ac7ac6769c`、[运行报告](reports/YJ-P02-L4R-trigger-forensics-report.md)、[historical-review](reports/evidence/YJ-P02-L4R/historical-review.json)、[Chrome/HTTP 测试](reports/evidence/YJ-P02-L4R/browser.json)、[断点防重](reports/evidence/YJ-P02-L4R/crash.json)，以及 `key-entry/server.mjs`、`entry.js`、`stages.mjs` 与停用的 `l4/launch.mjs`。L4R 原环境无法证明旧 L4 真正送达与否，其账单/场景为 UNKNOWN；23 定向测试及模拟防重的结果取自原执行记录，YJ-13 第一次 15/22（测试隔离误拦）随后 22/22。**本轮只在 GitHub 远端核对，并未独立执行 Windows 本地测试**。
+
+已创建独立[完整 L5 任务书](task-briefs/YJ-P02-L5-one-shot-recovery.md)与分支，L5 业务实现/禁网新测试 NOT_RUN，真实 API 文字/图片/模型查询新增 0 次。需要新一次明确的美元预算和请求范围授权才能在未来打开 L5 的真实发送；绝不恢复旧 L4 批准。
+
 ## L4R 本机取证与离线验收
 
 **YJ-P02-L4R 已完成离线复现与修复。** 本机未找回原进程、真实账本或收据，原 L4 继续 UNKNOWN_STOP。旧页面在两条不同失败路径上给出相同提示；新页面区分服务端受理、发送前拒绝和送达未知。[取证报告与复跑](reports/YJ-P02-L4R-trigger-forensics-report.md)

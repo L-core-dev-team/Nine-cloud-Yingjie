@@ -1,5 +1,11 @@
 # 变更记录
 
+## 2026-11-22 L4R 验收核对与 L5 独立试点准备
+
+- GitHub 核对 L4R 的 23 项定向假 Key 复现、页面分阶段审计、并发/中断防重和 YJ-13 首次 15/22 后 22/22 的实证范围；本轮未在 Windows 上独立重跑。
+- 旧 L4 一直 UNKNOWN_STOP，不知道是否真实发送/收费，已经停用。已新建 `codex/yj-p02-l5-one-shot-recovery` 并上传[完整 L5 零网络安全接续任务书](docs/task-briefs/YJ-P02-L5-one-shot-recovery.md)，同步交接与任务看板。
+- L5 业务代码与新测试尚未运行，未获新的真实文字调用授权，不读取或重置 L1/L4 任何账本；本次仅文档准备，不产生 API 请求与费用。
+
 ## L4R 本机取证与离线验收
 
 **YJ-P02-L4R 已完成离线复现与修复。** 本机未找回原进程、真实账本或收据，原 L4 继续 UNKNOWN_STOP。旧页面在两条不同失败路径上给出相同提示；新页面区分服务端受理、发送前拒绝和送达未知。[取证报告与复跑](docs/reports/YJ-P02-L4R-trigger-forensics-report.md)

@@ -2,6 +2,8 @@
 
 更新：2026-11-22。
 
+**YJ-P02-L5 仅任务准备：** [全新单次 Luna 试点入口、阶段日志和离线 Chrome/PG 验证任务书](task-briefs/YJ-P02-L5-one-shot-recovery.md)已上传。L4 原批准已停用，历史 UNKNOWN_STOP 不变；**L5 尚未获得新的真实 API 付费授权**，先实施完全禁网的安全入口和回归。
+
 **YJ-P02-L4R 已完成离线复现与修复。** 本机未找回原进程、真实账本或收据，原 L4 继续 UNKNOWN_STOP。旧页面在两条不同失败路径上给出相同提示；新页面区分服务端受理、发送前拒绝和送达未知。[取证报告与复跑](reports/YJ-P02-L4R-trigger-forensics-report.md)
 
 **YJ-P02-L4 · UNKNOWN_STOP。** 本人报告已点击。原页面已结束，本机未找到真实回执与专用账本。实际用量、费用及最终画面状态未知，本次核查补发 0 次。[核查结论与历史离线验收](reports/YJ-P02-L4-luna-scene-pilot-report.md)
@@ -79,7 +81,8 @@ YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。YJ
 | YJ-P02-L2 | 已完成 | 真实正文只读回放与局部事实审计；原、新均留空，新增真实请求 0。[报告](reports/YJ-P02-L2-live-text-extraction-report.md) |
 | YJ-P02-L3 | 待开始；任务书已上传 | [完成初始视觉场景的叙事证据/字段完整性契约，真实 API 为 0](task-briefs/YJ-P02-L3-scene-evidence-contract.md)，默认 /2 不变 |
 | YJ-P02-L4 | `UNKNOWN_STOP`，许可已停止使用 | [点击后核查](reports/YJ-P02-L4-luna-scene-pilot-report.md)：受信回执/账本未找到，真实送达/费用/画面仍未知，不补发 |
-| YJ-P02-L4R | 待开始，仅任务书 | [只读旧证据和本机零网络 UI 阶段可观测性修复](task-briefs/YJ-P02-L4R-trigger-forensics.md)；新增真实 API 调用 0 |
+| YJ-P02-L4R | 离线取证与修复完成；旧 L4 仍 UNKNOWN_STOP | [Chrome/HTTP 阶段记录修复、原环境核查与回归](reports/YJ-P02-L4R-trigger-forensics-report.md)；本轮真实请求 0 |
+| YJ-P02-L5 | 待开始；完整任务书已上传，新真实请求未获授权 | [在独立授权与账本下复用 L4R 可靠状态，并完成全禁网模拟](task-briefs/YJ-P02-L5-one-shot-recovery.md) |
 | YJ-M01 | 后续待开始 | 地图具体组织方式尚未确定 |
 
 ## 依赖说明
