@@ -1,5 +1,9 @@
 # 映界实施任务序列
 
+## 2026-11-22 · YJ-P04-H2R 质量强化结果
+
+**H2R_PARTIAL**。Gate A 至 Gate D 已执行。开发 22/25、预留 2/23，独立文体目标未达成，保留全部样本与历史错误。 生产默认沿用原版，本轮真实请求和费用均为零。[运行报告与回退](reports/YJ-P04-H2R-semantic-generalization-report.md)
+
 ## 2026-11-22 · 下一专项：YJ-P04-H2R（准备就绪 / NOT_RUN）
 
 已在 `codex/yj-p04-h2r-semantic-generalization` 上传[完整任务书](task-briefs/YJ-P04-H2R-semantic-generalization.md)，从已交付 H2 `c352f86` 接续。顺序为 **先审计和冻结独立语料 → 通用语义改进 → 一次性预留评估 → 全面离线回归**。H2 4 漏判与 12 个视觉证据不齐的案例不能通过硬编码、调金标或放宽 S2 审核“消灭”。**本轮新代码、冻结语料、执行测试均 NOT_RUN**；D1 镜头和 Q1 参考画质继续后置，API/生产许可未新增。

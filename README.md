@@ -1,5 +1,9 @@
 # 九霄 · 映界
 
+## 2026-11-22 · YJ-P04-H2R 质量强化结果
+
+**H2R_PARTIAL**。独立的 `narrative-highlight/2r` 已完成冻结评价。新预留组仅检出 2/23 个安静高潮，追加因果诊断有两项错误确证。 生产默认沿用原版，本轮真实请求和费用均为零。[运行报告与回退](docs/reports/YJ-P04-H2R-semantic-generalization-report.md)
+
 ## 当前接续｜YJ-P04-H2R 质量强化任务准备（NOT_RUN）
 
 已从 H2 `c352f86f7213c6012b7382fc36f5665f45684c93` 建立独立 `codex/yj-p04-h2r-semantic-generalization`，准备[完整 H2R 任务书](docs/task-briefs/YJ-P04-H2R-semantic-generalization.md)，要求先冻结独立新评价集，再补中文指代/权益结果/多线因果，并审计 12 项视觉候选的证据缺失。**本轮仅创建任务与接续文档，H2R 业务实现、语料冻结和新测试 NOT_RUN。** H2 原 `PARTIAL` 不改；不接生图、无新增 API 授权、生产默认不变。

@@ -1,5 +1,9 @@
 # 映界当前交接
 
+## 2026-11-22 · YJ-P04-H2R 质量强化结果
+
+**H2R_PARTIAL**。语料冻结 `94cf5be`，评分前实现冻结 `cb65382`。接续时先处理文书失效后的错误归因和临时挂名；预留组已经开启，不可再用作未见测试。 生产默认沿用原版，本轮真实请求和费用均为零。[运行报告与回退](reports/YJ-P04-H2R-semantic-generalization-report.md)
+
 ## 2026-11-22 · 最新接续：YJ-P04-H2R 质量强化准备
 
 H2 已提交且状态 **PARTIAL**，远端确认固定基线 `c352f86f7213c6012b7382fc36f5665f45684c93`。在独立分支 `codex/yj-p04-h2r-semantic-generalization` 准备 [H2R 完整任务书](task-briefs/YJ-P04-H2R-semantic-generalization.md)：先冻结新独立盲测语料，再研究通用中文指代、权益生效、长线因果与视觉资格分层。4 个历史漏判和 12 项未放行导演候选均须保留、逐例审计；证据不足不能为追分强行采纳。**本轮只上传任务与索引，H2R 代码、真实本机测试、真人盲评 NOT_RUN。** 原生 PG/Chrome ENV_BLOCKED，S3 浏览器 BROWSER_NOT_VERIFIED，真实图片 I2 LIVE_BLOCKED_COST_BOUND；旧授权不复用，main 不动。

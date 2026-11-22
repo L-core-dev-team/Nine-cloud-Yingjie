@@ -1,5 +1,9 @@
 # 变更记录
 
+## 2026-11-22 · YJ-P04-H2R 质量强化结果
+
+**H2R_PARTIAL**。交付 H2R 语义记忆、双轴评价集、原 12 项视觉审计、一次性预留评估与失败回执。付费门禁维持原状态。 生产默认沿用原版，本轮真实请求和费用均为零。[运行报告与回退](docs/reports/YJ-P04-H2R-semantic-generalization-report.md)
+
 ## 2026-11-22 · H2R 质量强化专项立项（仅文档）
 
 - 从 H2 完成提交 `c352f86` 派生独立 H2R 任务分支；创建[执行任务书](docs/task-briefs/YJ-P04-H2R-semantic-generalization.md)。
