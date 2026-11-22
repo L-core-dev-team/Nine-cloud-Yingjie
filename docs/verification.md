@@ -2,6 +2,12 @@
 
 更新：2026-11-22。
 
+## 本轮 I2 验收源证据核对与 P03-S1 离线任务书准备
+
+已从 GitHub 核对 I2 完成远端 SHA `146f782aab1dd90dc7118a53fb14e88faafed4cf`，读取 [I2 原报告](reports/YJ-P02-I2-image-money-gate-report.md)、[模拟 USD 预算及审计](reports/evidence/YJ-P02-I2/money.json)、[未来费用/授权清单](reports/YJ-P02-I2-approval-checklist.md) 和 `packages/image-tasks/index.mjs`、`packages/openai-image/{money.mjs,money-schema.sql}`。实际 I2 记录：40 个独立场景、跨进程/强退防重及兼容 148/148；SQLite FULL 同事务预算提交；生成/编辑两个 mock grant 分离；真实 API 0 次。**没有可证明的真实图片最坏费用上界，生产 PG/Chrome NOT_RUN，因此不能判为真钱已放行。** 这次仅阅读原回执，未在本机重跑。
+
+源码 `packages/first-play/scene-evidence.mjs` 的 /1 首回合只覆盖三个登记合成地点和严格句式，且一条自然同义叙事曾被弃判。已在独立分支上传 [YJ-P03-S1 泛化可信场景审计任务书](task-briefs/YJ-P03-S1-generalized-scene-evidence.md)，此时新 parser/语料/测试均 NOT_RUN，拟至少 90 条固定合成标注，负例错采必须为 0；保持 v2 replayOnly，不更改原默认 /2 和旧项目。真实 OpenAI 本轮模型/文字/图片请求 0、新增费用 0，原生 PG/Chrome 因 Issue #1 独立标 ENV_BLOCKED。
+
 ## 2026-11-22 I2 离线验收
 
 **YJ-P02-I2 · I2_GATE_OFFLINE_PASS。** 生成与参考编辑分别批准并从同一美元总额预留。40 个定向场景、跨进程竞争与崩溃恢复、148 项兼容回归通过。真实付款为 LIVE_BLOCKED_COST_BOUND。 [运行报告与回执](reports/YJ-P02-I2-image-money-gate-report.md)

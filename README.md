@@ -4,6 +4,8 @@
 
 ## 当前状态
 
+**下一阶段 YJ-P03-S1：多地点自然叙事场景证据（仅任务书已上传）。** [完整离线任务书](docs/task-briefs/YJ-P03-S1-generalized-scene-evidence.md)基于 I2 已通过源码准备分版本 replayOnly 的 `scene-evidence/2`，拓展受信地点注册、人物完整名单、视角/时段/光照识别及连续性；不改默认 /2、不伪造事实、不调用真实模型。**P03 业务实现和测试均未开始**，I2 钱额真实发送仍 `LIVE_BLOCKED_COST_BOUND`，回环 PG/Chrome 继续由 Issue #1 跟踪。
+
 **YJ-P02-I2 · I2_GATE_OFFLINE_PASS。** 生成与参考编辑分别批准并从同一美元总额预留。40 个定向场景、跨进程竞争与崩溃恢复、148 项兼容回归通过。真实付款为 LIVE_BLOCKED_COST_BOUND。 [运行报告与回执](docs/reports/YJ-P02-I2-image-money-gate-report.md)
 
 **YJ-P02-I1 · IMAGE_ADAPTER_OFFLINE_PASS。** Images 首图与参考编辑已完成离线适配。协议、权限与响应检查 60/60，ImageTasks 与进程恢复 7/7。输出进入待审，真实发送关闭。本机原生 PG/Chrome 验收由 [Issue #1](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/issues/1) 跟踪。[报告与复跑](docs/reports/YJ-P02-I1-image-adapter-offline-report.md)

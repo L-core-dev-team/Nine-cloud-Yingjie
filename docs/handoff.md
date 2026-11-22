@@ -2,6 +2,13 @@
 
 更新：2026-11-22。
 
+## 最新接续：YJ-P03-S1 多场景自然中文的可信提取（仅任务书）
+
+- 已只读核对 `codex/yj-p02-i2-image-monetary-gate@146f782aab1dd90dc7118a53fb14e88faafed4cf`、[I2 报告](reports/YJ-P02-I2-image-money-gate-report.md)、[40 项和跨进程模拟回执](reports/evidence/YJ-P02-I2/money.json)、[未来授权清单](reports/YJ-P02-I2-approval-checklist.md)、I2 ImageTasks/money 代码。I2 离线通过，但真实费用无法证明可强制最坏金额，故 `LIVE_BLOCKED_COST_BOUND`；原生 PG/Chrome 未验收。这次**未在用户 Windows 独立重测**。
+- 检查 `packages/first-play/scene-evidence.mjs` 发现 /1 replayOnly 仅用合成索引识别东村/西村青石酒馆与北城观星楼，人物称呼和结构是固定词表，其他自然中文多半弃判，观星楼后续连续性未覆盖。这限制了 I1/I2 图片适配真正可消费的场景范围。
+- 已从 I2 完成提交创建 `codex/yj-p03-s1-generic-scene-evidence` 并上传[完整 P03-S1 离线泛化任务书](task-briefs/YJ-P03-S1-generalized-scene-evidence.md)。**本轮仅任务书、交接与分支准备；新 v2 提取器、90 条语料和测试全部 NOT_RUN**。保持旧 /2 默认与 v1 原审计不可变，在独立 replayOnly 测试中引入受信地点注册、多地点同名判别、完整人物名单与跨句语境边界，再验证供图片提示构造使用。
+- 环境/费用仍独立：Issue #1 `127.0.0.1 EACCES`；旧 L4 `UNKNOWN_STOP`，L5 `PARTIAL`，I1 `IMAGE_ADAPTER_OFFLINE_PASS`，I2 `I2_GATE_OFFLINE_PASS / LIVE_BLOCKED_COST_BOUND`；本轮新增真实 OpenAI 请求和费用 0，不触碰两个 main。
+
 ## 当前交接 · 图片美元门禁
 
 **YJ-P02-I2 · I2_GATE_OFFLINE_PASS。** 生成与参考编辑分别批准并从同一美元总额预留。40 个定向场景、跨进程竞争与崩溃恢复、148 项兼容回归通过。真实付款为 LIVE_BLOCKED_COST_BOUND。 [运行报告与回执](reports/YJ-P02-I2-image-money-gate-report.md)

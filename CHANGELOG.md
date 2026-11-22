@@ -1,5 +1,11 @@
 # 变更记录
 
+## 2026-11-22 I2 验收及 P03-S1 多场景可信证据任务准备
+
+- GitHub 核对 I2 完成分支、40 项模拟货币门禁、强退防重和 148/148 兼容回归；确认真钱持续 `LIVE_BLOCKED_COST_BOUND`，原生 PG/Chrome 与真实模型仍 NOT_RUN。
+- 核实 `scene-evidence/1` 在三处合成地点及有限中文表达内可用，但不支持任意世界；从 I2 最新完成提交新建 `codex/yj-p03-s1-generic-scene-evidence`，上传 [完整 P03-S1 版本化场景泛化任务书](docs/task-briefs/YJ-P03-S1-generalized-scene-evidence.md)。
+- 本轮只改任务、交接与决策文档；新 parser/测试未执行，不更改旧默认 /2/审批/项目 main，新增 OpenAI 真实请求和费用 0。
+
 ## 2026-11-22 I2 离线验收
 
 **YJ-P02-I2 · I2_GATE_OFFLINE_PASS。** 生成与参考编辑分别批准并从同一美元总额预留。40 个定向场景、跨进程竞争与崩溃恢复、148 项兼容回归通过。真实付款为 LIVE_BLOCKED_COST_BOUND。 [运行报告与回执](docs/reports/YJ-P02-I2-image-money-gate-report.md)
