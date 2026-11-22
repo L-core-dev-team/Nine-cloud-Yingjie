@@ -22,6 +22,7 @@ export class OpenAIImageProvider {
     this.capability=this.offline?capability:{...capability,origin:"offline",verifiedAt:null,generate:"unknown",referenceEdit:"unknown"};
     Object.assign(this,{transport,credentialsProvider,resolve,authorizeOutbound,budgetGate,moneyGate,timeoutMs});
   }
+  buildFrame(claim,ctx){return buildFrame(claim,ctx);}
   send(claim){
     if(claim.plan?.action==="generate")return this.generate(claim);
     if(claim.plan?.action==="edit")return this.edit(claim);
@@ -51,7 +52,7 @@ export class OpenAIImageProvider {
       throw Error("invalid-claim");
     if(typeof this.transport!=="function" || await this.credentialsProvider()!==fixtureCredential)throw Error("fixture-only");
     const ctx=await this.resolve(claim,db);
-    const frame=buildFrame(claim,ctx),{binding,bindingSha256}=frame;
+    const frame=this.buildFrame(claim,ctx),{binding,bindingSha256}=frame;
     const controller=new AbortController();
     const request=imageRequest(frame,fixtureCredential,controller.signal);
     let finish;

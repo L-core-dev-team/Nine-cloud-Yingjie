@@ -1,0 +1,1528 @@
+{
+  "method": "visual-consistency/1",
+  "node": "v26.13.0",
+  "corpusSha256": "ee1575bfb816524503507ec5284bcdc48e7a29f4138120975efe3428f2d18a8d",
+  "fileHashes": {
+    "dev-1.jsonl": "fd632b9f3f38bb4a7f88b1001f232ee6369da868b234cfbe4a8df60c3b7b5628",
+    "dev-2.jsonl": "670756d26963a77a48cce10ebb5c8b843745d6a64703aab05a39f14443ae57f9",
+    "dev-3.jsonl": "a4e8970699f2cd4adc2ac9431f1b2be04bbdb653e64af6b5aa76381fd75f36d2",
+    "dev-4.jsonl": "15a3fb491a549a8d19e340e2164959a4c6b08163b43c329a5a5e5c52b1ca560c",
+    "dev-5.jsonl": "61178e3996a0ebeef9c62f9f0fec94eba9b1ca6d4a60dc884f5e2a8130c5a261",
+    "dev-6.jsonl": "1e88f974ae2aa0610d6bacbe8e2e6b9474118ca526e704842797664a721eff7c",
+    "held-1.jsonl": "f344341f3abf71b61d7aff1938b9174cf1f53cc936b41d282ec66a5fe15d3ea5",
+    "held-2.jsonl": "526579ebe8b64d06c1105aa54d3ef76245ef84ef37b4e872d3ded1f38fa1e06a",
+    "held-3.jsonl": "eed524457e0a0324af32ce746c4c22839a43f365ac7fb12d8d68d7c347c4eddb"
+  },
+  "count": 100,
+  "examples": [
+    {
+      "id": "A0",
+      "review": {
+        "method": "visual-consistency/1",
+        "fieldReady": true,
+        "imageEligible": true,
+        "verdict": "eligible",
+        "reason": "consistent",
+        "evidence": [
+          {
+            "revision": 1,
+            "sha256": "c0f78c92c98cf9a8d5dc4c2d89802028844413b586582d9b11bcdfcfca298d99",
+            "start": 0,
+            "end": 11,
+            "field": "place"
+          },
+          {
+            "revision": 1,
+            "sha256": "c0f78c92c98cf9a8d5dc4c2d89802028844413b586582d9b11bcdfcfca298d99",
+            "start": 12,
+            "end": 20,
+            "field": "viewpoint"
+          },
+          {
+            "revision": 1,
+            "sha256": "c0f78c92c98cf9a8d5dc4c2d89802028844413b586582d9b11bcdfcfca298d99",
+            "start": 12,
+            "end": 20,
+            "field": "perspective"
+          },
+          {
+            "revision": 1,
+            "sha256": "c0f78c92c98cf9a8d5dc4c2d89802028844413b586582d9b11bcdfcfca298d99",
+            "start": 21,
+            "end": 36,
+            "field": "people"
+          },
+          {
+            "revision": 1,
+            "sha256": "c0f78c92c98cf9a8d5dc4c2d89802028844413b586582d9b11bcdfcfca298d99",
+            "start": 37,
+            "end": 49,
+            "field": "features"
+          },
+          {
+            "revision": 1,
+            "sha256": "c0f78c92c98cf9a8d5dc4c2d89802028844413b586582d9b11bcdfcfca298d99",
+            "start": 50,
+            "end": 56,
+            "field": "timeOfDay"
+          },
+          {
+            "revision": 1,
+            "sha256": "c0f78c92c98cf9a8d5dc4c2d89802028844413b586582d9b11bcdfcfca298d99",
+            "start": 57,
+            "end": 63,
+            "field": "lighting"
+          }
+        ],
+        "revision": 1,
+        "narrativeSha256": "c0f78c92c98cf9a8d5dc4c2d89802028844413b586582d9b11bcdfcfca298d99",
+        "reviewSha256": "e721a21a01d5746ebd1ad55dee904071ba36404e8c4862c832b05d76f1bacdba"
+      }
+    },
+    {
+      "id": "A16",
+      "review": {
+        "method": "visual-consistency/1",
+        "fieldReady": true,
+        "imageEligible": true,
+        "verdict": "eligible",
+        "reason": "revealed-light-source",
+        "evidence": [
+          {
+            "revision": 2,
+            "sha256": "7d51c856bf5ae86e7784a72f9e0c08db6a604c1553e2991a3a466f4818fd4609",
+            "start": 0,
+            "end": 11,
+            "field": "place"
+          },
+          {
+            "revision": 2,
+            "sha256": "7d51c856bf5ae86e7784a72f9e0c08db6a604c1553e2991a3a466f4818fd4609",
+            "start": 12,
+            "end": 20,
+            "field": "viewpoint"
+          },
+          {
+            "revision": 2,
+            "sha256": "7d51c856bf5ae86e7784a72f9e0c08db6a604c1553e2991a3a466f4818fd4609",
+            "start": 12,
+            "end": 20,
+            "field": "perspective"
+          },
+          {
+            "revision": 2,
+            "sha256": "7d51c856bf5ae86e7784a72f9e0c08db6a604c1553e2991a3a466f4818fd4609",
+            "start": 21,
+            "end": 36,
+            "field": "people"
+          },
+          {
+            "revision": 2,
+            "sha256": "7d51c856bf5ae86e7784a72f9e0c08db6a604c1553e2991a3a466f4818fd4609",
+            "start": 37,
+            "end": 49,
+            "field": "features"
+          },
+          {
+            "revision": 2,
+            "sha256": "7d51c856bf5ae86e7784a72f9e0c08db6a604c1553e2991a3a466f4818fd4609",
+            "start": 50,
+            "end": 56,
+            "field": "timeOfDay"
+          },
+          {
+            "revision": 2,
+            "sha256": "7d51c856bf5ae86e7784a72f9e0c08db6a604c1553e2991a3a466f4818fd4609",
+            "start": 57,
+            "end": 63,
+            "field": "lighting"
+          },
+          {
+            "revision": 1,
+            "sha256": "9bb175ee0ca6c2bc90e8d1b2a3684d359840791596ece40957f7e868f12a028f",
+            "start": 0,
+            "end": 57,
+            "rule": "night-sun"
+          }
+        ],
+        "lightSource": {
+          "kind": "night-sun",
+          "feature": "竹屏"
+        },
+        "revision": 2,
+        "narrativeSha256": "7d51c856bf5ae86e7784a72f9e0c08db6a604c1553e2991a3a466f4818fd4609",
+        "reviewSha256": "c55f3f4feaf7b703416d75f7d30382956b2c0a05ceb4c463cba59254f8148c2d"
+      }
+    },
+    {
+      "id": "A20",
+      "review": {
+        "method": "visual-consistency/1",
+        "fieldReady": true,
+        "imageEligible": true,
+        "verdict": "eligible",
+        "reason": "revealed-light-source",
+        "evidence": [
+          {
+            "revision": 2,
+            "sha256": "e61da87af571f2f1ab9ebce650d97761fa2f43e6ed0dc4b3d06c05b2ca665254",
+            "start": 0,
+            "end": 11,
+            "field": "place"
+          },
+          {
+            "revision": 2,
+            "sha256": "e61da87af571f2f1ab9ebce650d97761fa2f43e6ed0dc4b3d06c05b2ca665254",
+            "start": 12,
+            "end": 20,
+            "field": "viewpoint"
+          },
+          {
+            "revision": 2,
+            "sha256": "e61da87af571f2f1ab9ebce650d97761fa2f43e6ed0dc4b3d06c05b2ca665254",
+            "start": 12,
+            "end": 20,
+            "field": "perspective"
+          },
+          {
+            "revision": 2,
+            "sha256": "e61da87af571f2f1ab9ebce650d97761fa2f43e6ed0dc4b3d06c05b2ca665254",
+            "start": 21,
+            "end": 33,
+            "field": "people"
+          },
+          {
+            "revision": 2,
+            "sha256": "e61da87af571f2f1ab9ebce650d97761fa2f43e6ed0dc4b3d06c05b2ca665254",
+            "start": 34,
+            "end": 46,
+            "field": "features"
+          },
+          {
+            "revision": 2,
+            "sha256": "e61da87af571f2f1ab9ebce650d97761fa2f43e6ed0dc4b3d06c05b2ca665254",
+            "start": 47,
+            "end": 53,
+            "field": "timeOfDay"
+          },
+          {
+            "revision": 2,
+            "sha256": "e61da87af571f2f1ab9ebce650d97761fa2f43e6ed0dc4b3d06c05b2ca665254",
+            "start": 54,
+            "end": 60,
+            "field": "lighting"
+          },
+          {
+            "revision": 1,
+            "sha256": "b3743c088d9b02427c658308b20192cdc56997b897cafec66d5c0f5f637e543a",
+            "start": 0,
+            "end": 57,
+            "rule": "noon-moon"
+          }
+        ],
+        "lightSource": {
+          "kind": "noon-moon",
+          "feature": "竹屏"
+        },
+        "revision": 2,
+        "narrativeSha256": "e61da87af571f2f1ab9ebce650d97761fa2f43e6ed0dc4b3d06c05b2ca665254",
+        "reviewSha256": "5ae7338efe66b0188a6831c93fdfba4c6b053e64e920de686d5beaed78fa218c"
+      }
+    },
+    {
+      "id": "B6",
+      "review": {
+        "method": "visual-consistency/1",
+        "fieldReady": true,
+        "imageEligible": false,
+        "verdict": "conflict",
+        "reason": "enclosed-daylight",
+        "evidence": [
+          {
+            "revision": 2,
+            "sha256": "42714a1915daf5f8c958e5806d9d2963524083f697e7410931e9fb5815664d64",
+            "start": 0,
+            "end": 11,
+            "field": "place"
+          },
+          {
+            "revision": 2,
+            "sha256": "42714a1915daf5f8c958e5806d9d2963524083f697e7410931e9fb5815664d64",
+            "start": 12,
+            "end": 21,
+            "field": "viewpoint"
+          },
+          {
+            "revision": 2,
+            "sha256": "42714a1915daf5f8c958e5806d9d2963524083f697e7410931e9fb5815664d64",
+            "start": 12,
+            "end": 21,
+            "field": "perspective"
+          },
+          {
+            "revision": 2,
+            "sha256": "42714a1915daf5f8c958e5806d9d2963524083f697e7410931e9fb5815664d64",
+            "start": 22,
+            "end": 37,
+            "field": "people"
+          },
+          {
+            "revision": 2,
+            "sha256": "42714a1915daf5f8c958e5806d9d2963524083f697e7410931e9fb5815664d64",
+            "start": 38,
+            "end": 50,
+            "field": "features"
+          },
+          {
+            "revision": 2,
+            "sha256": "42714a1915daf5f8c958e5806d9d2963524083f697e7410931e9fb5815664d64",
+            "start": 51,
+            "end": 57,
+            "field": "timeOfDay"
+          },
+          {
+            "revision": 2,
+            "sha256": "42714a1915daf5f8c958e5806d9d2963524083f697e7410931e9fb5815664d64",
+            "start": 58,
+            "end": 64,
+            "field": "lighting"
+          },
+          {
+            "revision": 1,
+            "sha256": "1dda23def97b2c88b814322a51b7fd61ccb4791e97c8222ded54df793b7a592d",
+            "start": 0,
+            "end": 58,
+            "rule": "sealed"
+          }
+        ],
+        "revision": 2,
+        "narrativeSha256": "42714a1915daf5f8c958e5806d9d2963524083f697e7410931e9fb5815664d64",
+        "reviewSha256": "0c0d6b743e1cca78b45504122087d74621e2f594bf6864843c59823de211be56"
+      }
+    },
+    {
+      "id": "B8",
+      "review": {
+        "method": "visual-consistency/1",
+        "fieldReady": true,
+        "imageEligible": false,
+        "verdict": "conflict",
+        "reason": "opposite-facing",
+        "evidence": [
+          {
+            "revision": 2,
+            "sha256": "5115866ae2fe5b8f01ab203d52182b7b540371d25511b0ecfedf8fce5c2728c3",
+            "start": 0,
+            "end": 11,
+            "field": "place"
+          },
+          {
+            "revision": 2,
+            "sha256": "5115866ae2fe5b8f01ab203d52182b7b540371d25511b0ecfedf8fce5c2728c3",
+            "start": 12,
+            "end": 20,
+            "field": "viewpoint"
+          },
+          {
+            "revision": 2,
+            "sha256": "5115866ae2fe5b8f01ab203d52182b7b540371d25511b0ecfedf8fce5c2728c3",
+            "start": 12,
+            "end": 20,
+            "field": "perspective"
+          },
+          {
+            "revision": 2,
+            "sha256": "5115866ae2fe5b8f01ab203d52182b7b540371d25511b0ecfedf8fce5c2728c3",
+            "start": 21,
+            "end": 36,
+            "field": "people"
+          },
+          {
+            "revision": 2,
+            "sha256": "5115866ae2fe5b8f01ab203d52182b7b540371d25511b0ecfedf8fce5c2728c3",
+            "start": 37,
+            "end": 49,
+            "field": "features"
+          },
+          {
+            "revision": 2,
+            "sha256": "5115866ae2fe5b8f01ab203d52182b7b540371d25511b0ecfedf8fce5c2728c3",
+            "start": 50,
+            "end": 56,
+            "field": "timeOfDay"
+          },
+          {
+            "revision": 2,
+            "sha256": "5115866ae2fe5b8f01ab203d52182b7b540371d25511b0ecfedf8fce5c2728c3",
+            "start": 57,
+            "end": 63,
+            "field": "lighting"
+          },
+          {
+            "revision": 1,
+            "sha256": "511716ae7bbfb9ec8f4421ca2b57ac4e43c05ad4ddf3408dc3a3db3db0077f66",
+            "start": 0,
+            "end": 57,
+            "rule": "north"
+          }
+        ],
+        "revision": 2,
+        "narrativeSha256": "5115866ae2fe5b8f01ab203d52182b7b540371d25511b0ecfedf8fce5c2728c3",
+        "reviewSha256": "330d3ae6fde538a0bfba329f1551ee52708210195b6d8bd28f901ec7288bb296"
+      }
+    },
+    {
+      "id": "C0a",
+      "review": {
+        "method": "visual-consistency/1",
+        "fieldReady": true,
+        "imageEligible": true,
+        "verdict": "eligible",
+        "reason": "consistent",
+        "evidence": [
+          {
+            "revision": 2,
+            "sha256": "adb65839e3c372759f59242519556688894c75c15d20b3fa5ff360ec771c6c6d",
+            "start": 0,
+            "end": 7,
+            "field": "place"
+          },
+          {
+            "field": "place",
+            "priorRevision": 1,
+            "sha256": "6b552907e917a956e0be5531a020ae77597aca39de124f44f4c6bdc3bf37ad54"
+          },
+          {
+            "revision": 2,
+            "sha256": "adb65839e3c372759f59242519556688894c75c15d20b3fa5ff360ec771c6c6d",
+            "start": 0,
+            "end": 7,
+            "field": "viewpoint"
+          },
+          {
+            "field": "viewpoint",
+            "priorRevision": 1,
+            "sha256": "6b552907e917a956e0be5531a020ae77597aca39de124f44f4c6bdc3bf37ad54"
+          },
+          {
+            "revision": 2,
+            "sha256": "adb65839e3c372759f59242519556688894c75c15d20b3fa5ff360ec771c6c6d",
+            "start": 0,
+            "end": 7,
+            "field": "perspective"
+          },
+          {
+            "field": "perspective",
+            "priorRevision": 1,
+            "sha256": "6b552907e917a956e0be5531a020ae77597aca39de124f44f4c6bdc3bf37ad54"
+          },
+          {
+            "revision": 2,
+            "sha256": "adb65839e3c372759f59242519556688894c75c15d20b3fa5ff360ec771c6c6d",
+            "start": 0,
+            "end": 7,
+            "field": "people"
+          },
+          {
+            "field": "people",
+            "priorRevision": 1,
+            "sha256": "6b552907e917a956e0be5531a020ae77597aca39de124f44f4c6bdc3bf37ad54"
+          },
+          {
+            "revision": 2,
+            "sha256": "adb65839e3c372759f59242519556688894c75c15d20b3fa5ff360ec771c6c6d",
+            "start": 0,
+            "end": 7,
+            "field": "features"
+          },
+          {
+            "field": "features",
+            "priorRevision": 1,
+            "sha256": "6b552907e917a956e0be5531a020ae77597aca39de124f44f4c6bdc3bf37ad54"
+          },
+          {
+            "revision": 2,
+            "sha256": "adb65839e3c372759f59242519556688894c75c15d20b3fa5ff360ec771c6c6d",
+            "start": 0,
+            "end": 7,
+            "field": "timeOfDay"
+          },
+          {
+            "field": "timeOfDay",
+            "priorRevision": 1,
+            "sha256": "6b552907e917a956e0be5531a020ae77597aca39de124f44f4c6bdc3bf37ad54"
+          },
+          {
+            "revision": 2,
+            "sha256": "adb65839e3c372759f59242519556688894c75c15d20b3fa5ff360ec771c6c6d",
+            "start": 0,
+            "end": 7,
+            "field": "lighting"
+          },
+          {
+            "field": "lighting",
+            "priorRevision": 1,
+            "sha256": "6b552907e917a956e0be5531a020ae77597aca39de124f44f4c6bdc3bf37ad54"
+          }
+        ],
+        "revision": 2,
+        "narrativeSha256": "adb65839e3c372759f59242519556688894c75c15d20b3fa5ff360ec771c6c6d",
+        "reviewSha256": "545879e899f3283bd849a19235ec99a91b184e31dc1cb82b854d9a5a0e0ba393"
+      }
+    }
+  ],
+  "extraChecks": [
+    "authenticated field offsets, revision and prior disclosure hash must match",
+    "lighting exception binds its emitter in the actual prompt and ends after the next survey",
+    "side view and unclassified current local constraint require inspection",
+    "same visual version cannot reuse a picture explained by a different emitter",
+    "explicit continuing light source must agree with the current survey"
+  ],
+  "humanReview": "INDEPENDENT_HUMAN_REVIEW_NOT_RUN",
+  "groups": {
+    "dev": {
+      "literalCorrectAccept": 55,
+      "literalCorrectAbstain": 16,
+      "literalWrongAccept": 0,
+      "literalUnnecessaryAbstain": 0,
+      "correctEligible": 33,
+      "correctReview": 8,
+      "correctConflict": 8,
+      "correctNotReady": 22,
+      "dangerousAllow": 0,
+      "unnecessaryBlock": 0,
+      "wrongVerdictOrReason": 0
+    },
+    "held": {
+      "literalCorrectAccept": 21,
+      "literalCorrectAbstain": 8,
+      "literalWrongAccept": 0,
+      "literalUnnecessaryAbstain": 0,
+      "correctEligible": 11,
+      "correctReview": 4,
+      "correctConflict": 2,
+      "correctNotReady": 12,
+      "dangerousAllow": 0,
+      "unnecessaryBlock": 0,
+      "wrongVerdictOrReason": 0
+    }
+  },
+  "regressions": [
+    {
+      "id": "P30",
+      "fieldReady": true,
+      "imageEligible": false,
+      "reason": "temporal-lighting-ambiguity"
+    },
+    {
+      "id": "P50",
+      "fieldReady": true,
+      "imageEligible": false,
+      "reason": "temporal-lighting-ambiguity"
+    }
+  ],
+  "errors": [],
+  "cases": [
+    {
+      "id": "A0",
+      "narrativeSha256": "c0f78c92c98cf9a8d5dc4c2d89802028844413b586582d9b11bcdfcfca298d99",
+      "reviewSha256": "e721a21a01d5746ebd1ad55dee904071ba36404e8c4862c832b05d76f1bacdba",
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "A1",
+      "narrativeSha256": "4e761173ee36005ea8af6917c3b986969aaed1b066a42751757827cb559e0318",
+      "reviewSha256": "362cbb84e5a115bb0e7a8af9c5b435dc9666382054e5fba676ea738a67a7dc2d",
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "A2",
+      "narrativeSha256": "958b992fd8c91dc36dce4c1d0c187ab1195f8c7b1a88f62324cd522a09cf6ca8",
+      "reviewSha256": "39ab174b4931a48ad4f175f6ae995c3b24d74be41af8d84495e39f70c897d7e1",
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "A4",
+      "narrativeSha256": "223cca8cc52e6d9ff8cf995a0bdc9e01cac04da89d2ec2bb68fbee1c76d39903",
+      "reviewSha256": "f28b75816633b13d5d494a34138cec132e0ed97e0c30c7f1cb150e0878cca199",
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "A5",
+      "narrativeSha256": "8e0b7f8b34f707df6d352302c58ed0fcd5e4c9f1318c8825a7590cc51618d87b",
+      "reviewSha256": "39aa91faa2eb8ba3f654276d444614580709058247ae704e792fea967b0b6c8b",
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "A6",
+      "narrativeSha256": "73798f7eacfcf4d66d86a1e6fb49070b3db100b07740921fd831611a06b511cb",
+      "reviewSha256": "2a5f4c26b8b3116722ad3c270d50e1fedb3527da0048a0f3aaab053ae4922344",
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "A8",
+      "narrativeSha256": "e0d9b59a5d1f984a026c0e513c80fcb6a328148c14c2dbfabe7091f6bbccc582",
+      "reviewSha256": "a9f743a89979f45aab697f4d7f7ec06ed77d7dcf02cc0064fede5b6cbf84b1cf",
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "A9",
+      "narrativeSha256": "2c3cddc6eaabbd058f9023789a564e9e1d9e13610ceb08b68bd81173fca00cef",
+      "reviewSha256": "31a44a74bf12bfd75ef1d7d1c62f7c89a6d739e8334f9800ad44f615519db995",
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "A10",
+      "narrativeSha256": "9ac6111f0e322390204d3c92587520f0cb789e7675821dd796180e54bb2db7d1",
+      "reviewSha256": "14d0dcd87d0062797bb013ca33af7896fb03bb8aca5848d38797875abbe3ec0f",
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "A12",
+      "narrativeSha256": "916d50158e7dc36f5ed785de2b6528e3d164977372e717ac7a44b9e01ebf50db",
+      "reviewSha256": "f6a290adf86a8f388b3ab288cb69c4431787b3519d2164c0b207555675c3e7d8",
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "A13",
+      "narrativeSha256": "fb523f691c0d38f76c0e2c3fc50afc21c020169ce7bde0173818866ea9eca8ef",
+      "reviewSha256": "c35b4c249f1d9b4ec2ffe8e1ea7564385a52bee2cc259de2eb74fd152298facd",
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "A14",
+      "narrativeSha256": "0da8134a887dd016b7ed2ebb21c12342a2bea1a5e595832a6a099b8acbc3a806",
+      "reviewSha256": "96fe7de1a3e3cf2cba9c081998d3df6b8eb043014e7e13a4000464eddbd48fcc",
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "A16",
+      "narrativeSha256": "7d51c856bf5ae86e7784a72f9e0c08db6a604c1553e2991a3a466f4818fd4609",
+      "reviewSha256": "c55f3f4feaf7b703416d75f7d30382956b2c0a05ceb4c463cba59254f8148c2d",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "revealed-light-source"
+    },
+    {
+      "id": "A17",
+      "narrativeSha256": "26ed171f01c6a7d20c107b87393d508af41e438e9babce4ebaf27ad7026eba51",
+      "reviewSha256": "a0db6e15dcd9107dde0e319f764d80b34b25a8dc370a30db9916f3788d7efaae",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "revealed-light-source"
+    },
+    {
+      "id": "A18",
+      "narrativeSha256": "0909ff871021d879c52d102c57f182859fb14f192eb03446b881bf355da8caba",
+      "reviewSha256": "2e67d7339c5b68e7b144cbb97c751c5c5cdc340006d4721cc2c36ed0ea5fe21b",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "revealed-light-source"
+    },
+    {
+      "id": "A20",
+      "narrativeSha256": "e61da87af571f2f1ab9ebce650d97761fa2f43e6ed0dc4b3d06c05b2ca665254",
+      "reviewSha256": "5ae7338efe66b0188a6831c93fdfba4c6b053e64e920de686d5beaed78fa218c",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "revealed-light-source"
+    },
+    {
+      "id": "A21",
+      "narrativeSha256": "2f1fa6d53123e246eed703bca79ca29041e75124c67fd6d5559bd7c80e670aab",
+      "reviewSha256": "095ef40343fd8d259fc2a786e99e360685d606ff21eadc691270dd5d88e362d7",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "revealed-light-source"
+    },
+    {
+      "id": "A22",
+      "narrativeSha256": "699348f07f0cc09ad02a99d0f47be9f7d90ee1b79a70457e423fe23c40811976",
+      "reviewSha256": "b7a9242aaeac34a43706da7ae8fa740a64a3de0a67ad4e5bfd1ff4c272442875",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "revealed-light-source"
+    },
+    {
+      "id": "A24",
+      "narrativeSha256": "4426dd2205861e8f43608704953b308df65899ba2b98ccccbb93329f09bba129",
+      "reviewSha256": "3b224653990b8b12037950d23b54f7570bb3288cde8ab13acc7ce27fc96eb7c8",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "A25",
+      "narrativeSha256": "5eaee68c2083a3b5f154148d45f577ed158401f01d7b1443ab63a7c0af4ec8ed",
+      "reviewSha256": "113175e5aa71bf480c10c584f481170547468a27fbc3761b7e6fcd18ed5a63e1",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "A26",
+      "narrativeSha256": "b985a54f45ebeed00affc2cffcca7abab0a22e91f554ab30be2f98a1acc406d3",
+      "reviewSha256": "732dee7b42f34a72fc8303678de067ad7d9c63309114cb87ebdf53cd486d3ce9",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "B0",
+      "narrativeSha256": "7d51c856bf5ae86e7784a72f9e0c08db6a604c1553e2991a3a466f4818fd4609",
+      "reviewSha256": "406a57d1f0426b04936d4e8fea0e67c991bac3e4fdfe47c6c450e21b9ae552aa",
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "needs-review",
+      "reason": "temporal-lighting-ambiguity"
+    },
+    {
+      "id": "B2",
+      "narrativeSha256": "0909ff871021d879c52d102c57f182859fb14f192eb03446b881bf355da8caba",
+      "reviewSha256": "92b39e3b4e5ad785189b5b9264e81b4be3b89e0c02af6b73cef9fe4a12928bd8",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "needs-review",
+      "reason": "temporal-lighting-ambiguity"
+    },
+    {
+      "id": "B3",
+      "narrativeSha256": "2bccd5515d22e6d9c7bdd89c3ce15b7c986b9716cf116581213cd76e6b030b0d",
+      "reviewSha256": "110388b504759b004b2ad7d8dc8e853a4fb4d402e51a711a07ac7e861fbe0744",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "needs-review",
+      "reason": "temporal-lighting-ambiguity"
+    },
+    {
+      "id": "B5",
+      "narrativeSha256": "ec49a3e6e1fdd18211501d708eafe5aa02bd601aca15ae981a229c2ee17d1e99",
+      "reviewSha256": "80a08151565c27d2f0a287dcbb3d8b75cb81929b0d5586748620b7ea6a9337e9",
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "needs-review",
+      "reason": "temporal-lighting-ambiguity"
+    },
+    {
+      "id": "B6",
+      "narrativeSha256": "42714a1915daf5f8c958e5806d9d2963524083f697e7410931e9fb5815664d64",
+      "reviewSha256": "0c0d6b743e1cca78b45504122087d74621e2f594bf6864843c59823de211be56",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "conflict",
+      "reason": "enclosed-daylight"
+    },
+    {
+      "id": "B8",
+      "narrativeSha256": "5115866ae2fe5b8f01ab203d52182b7b540371d25511b0ecfedf8fce5c2728c3",
+      "reviewSha256": "330d3ae6fde538a0bfba329f1551ee52708210195b6d8bd28f901ec7288bb296",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "conflict",
+      "reason": "opposite-facing"
+    },
+    {
+      "id": "B9",
+      "narrativeSha256": "4e761173ee36005ea8af6917c3b986969aaed1b066a42751757827cb559e0318",
+      "reviewSha256": "c6e0bdf06eed9522a71ee1ce71311c9cbd44c454d5598ccbe3063346aff6e175",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "conflict",
+      "reason": "out-of-view"
+    },
+    {
+      "id": "B11",
+      "narrativeSha256": "e085d9382bc8a8ab02f54700f91919a8129afcbd053c1276d98170c76d2a0a44",
+      "reviewSha256": "58adb7a67d19c5f225304020750736eb9937e67aade9f266a17c2b7c9838b33d",
+      "authenticatedFieldReady": false,
+      "revision": 1,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "B12",
+      "narrativeSha256": "88bf22f8b5b3ca95a6dd5d94df855191bfae5dfea2f141b8fa3abe780268e285",
+      "reviewSha256": "e663f26cea4ce022b6aeebf64314b38c9686e219e61d3edb032111728fe21e43",
+      "authenticatedFieldReady": false,
+      "revision": 1,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "B14",
+      "narrativeSha256": "1a43f5b6931440940f1831fd105a4dd262ddcaf08dd3ff4d653cbcc786d0c30a",
+      "reviewSha256": "6c68fb2fabb50018fcd23bdeedc94584e688e1b85ba1c6df8ac7226924d1c12a",
+      "authenticatedFieldReady": false,
+      "revision": 1,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "B15",
+      "narrativeSha256": "bc2a69d7f908e5cbe92e38c24d066f4105fcd693e385ed752c5910628245f3f4",
+      "reviewSha256": "b880e70a4edf0fa60016e5897ab94e06359d2a2e072a4173a70fd9d98e3694a0",
+      "authenticatedFieldReady": false,
+      "revision": 1,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "B17",
+      "narrativeSha256": "74f4d4fc4f35ff052dfd4c07b8d2e75ec5591f796d70920f3bb35ab7b938594c",
+      "reviewSha256": "d192dd60b11efcdafda5608030d9e612cb9610d2193b3a76dda4851334f9d230",
+      "authenticatedFieldReady": false,
+      "revision": 1,
+      "fieldReady": false,
+      "verdict": "conflict",
+      "reason": "contradictory-observation"
+    },
+    {
+      "id": "B18",
+      "narrativeSha256": "958b992fd8c91dc36dce4c1d0c187ab1195f8c7b1a88f62324cd522a09cf6ca8",
+      "reviewSha256": null,
+      "authenticatedFieldReady": false,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "not-ready",
+      "reason": "access-denied"
+    },
+    {
+      "id": "B20",
+      "narrativeSha256": "c0f78c92c98cf9a8d5dc4c2d89802028844413b586582d9b11bcdfcfca298d99",
+      "reviewSha256": null,
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "not-ready",
+      "reason": "reference-ineligible"
+    },
+    {
+      "id": "B21",
+      "narrativeSha256": "4e761173ee36005ea8af6917c3b986969aaed1b066a42751757827cb559e0318",
+      "reviewSha256": null,
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "not-ready",
+      "reason": "reference-ineligible"
+    },
+    {
+      "id": "B23",
+      "narrativeSha256": "bf4000ecaa84fec010cd3d5f080700d525ddc4e2d8a0405986a218128ab2bc7d",
+      "reviewSha256": null,
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "not-ready",
+      "reason": "reference-ineligible"
+    },
+    {
+      "id": "B24",
+      "narrativeSha256": "7c505559c97cc6cf31ea5e861210cdf5d57ee85d620370b6ec344adbf4322f54",
+      "reviewSha256": "0fe43a6d30f9b29b9c5aff3ce8a50f537ad6a2340bfb63c58d7fc950fa72b4ea",
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "needs-review",
+      "reason": "temporal-lighting-ambiguity"
+    },
+    {
+      "id": "B26",
+      "narrativeSha256": "5e1937adea1cc1698240300176e519e7f89b68ff7db5cb6d97dda4b13934cd5a",
+      "reviewSha256": "97b2526be917f24c9dac67c13faff6ffc5ded426027bbfe5a343f10a075c02ee",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "needs-review",
+      "reason": "temporal-lighting-ambiguity"
+    },
+    {
+      "id": "B27",
+      "narrativeSha256": "5c6b380f60dc2227b670d1ce82b289264b428ae7bfc45bdcaacc85d77fc63766",
+      "reviewSha256": "f39517e60e15dbdc7cc3d47142ecf94b8438f301520bed9c1a9b712d80b99aab",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "needs-review",
+      "reason": "temporal-lighting-ambiguity"
+    },
+    {
+      "id": "B29",
+      "narrativeSha256": "9941e1dc941615bfffe440c3a0dfd104e2db01e5e2e867bf2cc673962b3ffaa8",
+      "reviewSha256": "6565e4b6838144fc595ab0667655c466aeded0f98ef59886b57c950a78c76b15",
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "needs-review",
+      "reason": "temporal-lighting-ambiguity"
+    },
+    {
+      "id": "B30",
+      "narrativeSha256": "add8a6780740b739f69217a832fc5e723058eac5b3ff1f1b614f68725e8e5434",
+      "reviewSha256": "075c6f6630effab603df13bd86709314da91689a9a0b7d31140b073e38880bc9",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "conflict",
+      "reason": "enclosed-daylight"
+    },
+    {
+      "id": "B32",
+      "narrativeSha256": "63927edcfd54ad5414c00555412b3b06969bba791212124ec9cb4126586a1a26",
+      "reviewSha256": "d8900973e2be013649b50ec4b95b2ecc776087dfc0a013d39b12efd964ab4fcd",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "conflict",
+      "reason": "opposite-facing"
+    },
+    {
+      "id": "B33",
+      "narrativeSha256": "d0cddf192a49014b2acd2e42e6ba8e7482708b23807b5fcedb307955da34830a",
+      "reviewSha256": "85b5bbd88582bf862c00212f751f5299f1cbd141026ef7a4eac110ab8903b246",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "conflict",
+      "reason": "out-of-view"
+    },
+    {
+      "id": "B35",
+      "narrativeSha256": "c6243eb35eb8c850ce7648895dc5528d59b617ed491ce877d615d413243c18f4",
+      "reviewSha256": "a41ffe69bd543457c53b245a151ac798e3f584eb3adb232c07815ea275f6a186",
+      "authenticatedFieldReady": false,
+      "revision": 1,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "B36",
+      "narrativeSha256": "a957867cfbdeabadfff30c81593a22c67d0c801986e3c1fcd17985a04d2feb85",
+      "reviewSha256": "cf77a65d4d97f1c7738f0f7c14b063034933091828bde102b6a22a4c59fe1c7d",
+      "authenticatedFieldReady": false,
+      "revision": 1,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "B38",
+      "narrativeSha256": "5773abb56adec78e414cce6c8559534df0e73f63b54ee1b5d5526e4a2275b8bf",
+      "reviewSha256": "e5f0e6eb7df874e1c876ec8d6169158a168db906f54cde6d94887431285c2c63",
+      "authenticatedFieldReady": false,
+      "revision": 1,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "B39",
+      "narrativeSha256": "9a445fa41553d1beee7404f8e3cfc71ecb7c3b3e30ee7860f6a95cf86001edd3",
+      "reviewSha256": "77688d05aef72a8d300c5b8d1d718b88a3cb7034e8c4580efbc137b915d3fbbf",
+      "authenticatedFieldReady": false,
+      "revision": 1,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "B41",
+      "narrativeSha256": "1a0eba349ff3ea8848594492d62b2c16106b00127868d1c1b40ad50e5f16a3cf",
+      "reviewSha256": "f7c687cd3e6e213eb85e0ea0b7583a112469bf0017008f8cb00e893253761c95",
+      "authenticatedFieldReady": false,
+      "revision": 1,
+      "fieldReady": false,
+      "verdict": "conflict",
+      "reason": "contradictory-observation"
+    },
+    {
+      "id": "B42",
+      "narrativeSha256": "a12667beb5e95f667bebb0e9f908e2088795107710bcc9e6711c8bbfe01f6094",
+      "reviewSha256": null,
+      "authenticatedFieldReady": false,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "not-ready",
+      "reason": "access-denied"
+    },
+    {
+      "id": "B44",
+      "narrativeSha256": "acb7469cfd79d06aff9b09f855813e263d817004758ca7637e162ffd3c64255e",
+      "reviewSha256": null,
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "not-ready",
+      "reason": "reference-ineligible"
+    },
+    {
+      "id": "B45",
+      "narrativeSha256": "d0cddf192a49014b2acd2e42e6ba8e7482708b23807b5fcedb307955da34830a",
+      "reviewSha256": null,
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "not-ready",
+      "reason": "reference-ineligible"
+    },
+    {
+      "id": "B47",
+      "narrativeSha256": "2143f7e49cebca11951e347fc7de790c7a7eec65740dceeccee1aa2454ea8112",
+      "reviewSha256": null,
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "not-ready",
+      "reason": "reference-ineligible"
+    },
+    {
+      "id": "C0a",
+      "narrativeSha256": "adb65839e3c372759f59242519556688894c75c15d20b3fa5ff360ec771c6c6d",
+      "reviewSha256": "545879e899f3283bd849a19235ec99a91b184e31dc1cb82b854d9a5a0e0ba393",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "C0b",
+      "narrativeSha256": "107f15483d18f01f85f6386c79a08e3ca8c817a06b96b1c1541decd1634c9c7b",
+      "reviewSha256": "e34803c44e94aa33d44ae5a07ac19d14dbe53534e3f761203d52c7fb83a6cf4b",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "C0c",
+      "narrativeSha256": "6b552907e917a956e0be5531a020ae77597aca39de124f44f4c6bdc3bf37ad54",
+      "reviewSha256": "39cd7aa8f0f73404b381a62125748045f6cc085e104991ef696b009321289461",
+      "authenticatedFieldReady": true,
+      "revision": 3,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "C0d",
+      "narrativeSha256": "85e1bd73bf84b6616a197cd06774392b8573766a7ade90b8dd20088149a6419f",
+      "reviewSha256": "f625c299d53dba4c0375a440da21e107cd6657660e908465bf5599eeeaf549c8",
+      "authenticatedFieldReady": false,
+      "revision": 2,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "C0e",
+      "narrativeSha256": "d053978fe362f087e372e5702109e11316b3d15af232fbb0ebf3870c5d17f89e",
+      "reviewSha256": "a842cc45daec773ce1b6e748cdff3c5bb072e02c62e679ac3c1d9dbaf6f8c45e",
+      "authenticatedFieldReady": true,
+      "revision": 3,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "C0f",
+      "narrativeSha256": "6b736fa430f9b0dd4298085f3034ccab01d670e52e0f74eeaec4041e0b3a7de4",
+      "reviewSha256": "2c7773bee6ee4135bd4c32adc84fe8aea4daeda4b81bce8d188a882ea520e826",
+      "authenticatedFieldReady": false,
+      "revision": 2,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "C1a",
+      "narrativeSha256": "adb65839e3c372759f59242519556688894c75c15d20b3fa5ff360ec771c6c6d",
+      "reviewSha256": "22264266b8893ae0b19f2df1589f41c592559c9b2fa2929e75a83527c3326516",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "C1b",
+      "narrativeSha256": "029de121a0a457ce8c8088c0164b6082e2a7f3db7beea1924f2366d7130c35fe",
+      "reviewSha256": "08d434cbc3cbd04dd9f8bd585f2ab39f4acc306b4ada4b8c6607725d92a77940",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "C1c",
+      "narrativeSha256": "4e761173ee36005ea8af6917c3b986969aaed1b066a42751757827cb559e0318",
+      "reviewSha256": "d1a76a3ccb739cefc85ff845d563fee134774b2ce11a545c286b82bb34cdc43e",
+      "authenticatedFieldReady": true,
+      "revision": 3,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "C1d",
+      "narrativeSha256": "85e1bd73bf84b6616a197cd06774392b8573766a7ade90b8dd20088149a6419f",
+      "reviewSha256": "a71f91402995372f92ac6cecb8249829498b105c62841d241e4efe8673704029",
+      "authenticatedFieldReady": false,
+      "revision": 2,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "C1e",
+      "narrativeSha256": "c3172cd9bdbf98d4890ab8932b9d5e5f718bd1069aaf17586a1e71d1f72ce125",
+      "reviewSha256": "7779f70a7184f92602e9da4181780d01ea552721443a46aadfba985f78debea4",
+      "authenticatedFieldReady": true,
+      "revision": 3,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "C1f",
+      "narrativeSha256": "6b736fa430f9b0dd4298085f3034ccab01d670e52e0f74eeaec4041e0b3a7de4",
+      "reviewSha256": "6be83f557d7138ac5052c226fd72f22181b548700e46c673f90f4f786ac0ffcb",
+      "authenticatedFieldReady": false,
+      "revision": 2,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "C2a",
+      "narrativeSha256": "adb65839e3c372759f59242519556688894c75c15d20b3fa5ff360ec771c6c6d",
+      "reviewSha256": "50ad30a8c6cf8142d860deb1790f434bf7f803417428564d457db937bc8865ca",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "C2b",
+      "narrativeSha256": "040f486b9bdb365b3b1997e66e9fc10494022299d7b7a75c2f774fb81fb3315b",
+      "reviewSha256": "699683dd5d5227d0dc99ac615a6e36859002235edf219a3a15f9d3d81c766a6d",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "C2c",
+      "narrativeSha256": "42714a1915daf5f8c958e5806d9d2963524083f697e7410931e9fb5815664d64",
+      "reviewSha256": "1d2eb15a7cad4f307e65f9e030dc552877bb0a8f58421b9edf471f9015fb1f6d",
+      "authenticatedFieldReady": true,
+      "revision": 3,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "C2d",
+      "narrativeSha256": "85e1bd73bf84b6616a197cd06774392b8573766a7ade90b8dd20088149a6419f",
+      "reviewSha256": "ab2838f7e8f0c02c6da6e588c05c496479524ab42601ff07b26b9696e95a002c",
+      "authenticatedFieldReady": false,
+      "revision": 2,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "C2e",
+      "narrativeSha256": "5e53bf14e1f4153d4e3bfb66855d39cada37d4414feb531f66f7c230c7eea18d",
+      "reviewSha256": "e7a00a6f305fcda8a3a9f25cb25d994130c08007a337991ddb8f98aae44d8999",
+      "authenticatedFieldReady": true,
+      "revision": 3,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "C2f",
+      "narrativeSha256": "6b736fa430f9b0dd4298085f3034ccab01d670e52e0f74eeaec4041e0b3a7de4",
+      "reviewSha256": "cc7d7aceb213921f1f039524ec2aa4a56d200c0b18ca6f3cc330e0df28974b82",
+      "authenticatedFieldReady": false,
+      "revision": 2,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "A3",
+      "narrativeSha256": "bf4000ecaa84fec010cd3d5f080700d525ddc4e2d8a0405986a218128ab2bc7d",
+      "reviewSha256": "2a875bc1a3eb02eb5be0e26464b2437f55418a790a2d87578e3cd47b81901608",
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "A7",
+      "narrativeSha256": "dc6d7c69dd0f3a59b83bc5e7ac94640e4e12a8f385285db807599d200dcdef9d",
+      "reviewSha256": "1b15c7ffcbfa127ce19acd8a430add5ed5b466fc8ef718f6ec4cb48b3085f20f",
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "A11",
+      "narrativeSha256": "2777ee4b55eb4bd8f9d4a5d73914b5317193a914fe460f88bec3bdc9c052f0a1",
+      "reviewSha256": "0dc6a97528eac389e970a4baae84e0e1fce08a8100ae1a97f68791ef854051ad",
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "A15",
+      "narrativeSha256": "53b0165ceb08e1d5abf53a437294e1eaa847ee8891534d2119e379692d9bf741",
+      "reviewSha256": "a72d8d6a3903051ad94229f00ad3b621dd40335a58b96aef8f28dc8907498cb5",
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "A19",
+      "narrativeSha256": "1d9a8bd6d9c6579840691d45580d7fbde5a6bab92a2a4ce09e86bd292109555b",
+      "reviewSha256": "800637ec8f6b9c3482a809d5e846d020ea7ffe734bfcc81d645cd2fe1b611662",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "revealed-light-source"
+    },
+    {
+      "id": "A23",
+      "narrativeSha256": "a9bd08fca116ae58393d4c1d812a7b4ad7ed68810ff5072fab4d02dbc09de626",
+      "reviewSha256": "acaa9aa4cbfbd26fc0975230c8ca0d4ee559e1bd95665dee2e9e8409706b15d0",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "revealed-light-source"
+    },
+    {
+      "id": "A27",
+      "narrativeSha256": "02eee159cb60df8f2a1545e4f6dd407b73f1f7af6006bfb29bc59df77503bbea",
+      "reviewSha256": "ebaccd85037d91c37a8638ffd9e00d8704a1fb504987e41f4e21f7e34298ba5f",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "B1",
+      "narrativeSha256": "ec49a3e6e1fdd18211501d708eafe5aa02bd601aca15ae981a229c2ee17d1e99",
+      "reviewSha256": "4dfd3fa80ec9c8d7057b6381c8e6a17f3fec9861f3eb11a48c234439121b2d6d",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "needs-review",
+      "reason": "temporal-lighting-ambiguity"
+    },
+    {
+      "id": "B4",
+      "narrativeSha256": "7d51c856bf5ae86e7784a72f9e0c08db6a604c1553e2991a3a466f4818fd4609",
+      "reviewSha256": "6d2f43d9052f59b9e81b945b36823e7f5e82943c7dd17bdaf5cf648dcf622fe1",
+      "authenticatedFieldReady": true,
+      "revision": 3,
+      "fieldReady": true,
+      "verdict": "needs-review",
+      "reason": "temporal-lighting-ambiguity"
+    },
+    {
+      "id": "B7",
+      "narrativeSha256": "4a3b66cccf0a9f16e186a27be04cd0b54065d16015f2ca7254c14999b097a4a9",
+      "reviewSha256": "366deef4ad8690f8ac8f976823089a400e6c951321c84b3df7790182d41b69c4",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "conflict",
+      "reason": "outside-interior"
+    },
+    {
+      "id": "B10",
+      "narrativeSha256": "4bb5f87d27052b11218bf293582f8624e272b4fed6a604126d264bdbbc29659e",
+      "reviewSha256": "468a8ea3d2d758588ad8b004e106e0720373027b936618a677a4a97f91944c72",
+      "authenticatedFieldReady": false,
+      "revision": 1,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "B13",
+      "narrativeSha256": "8e072918b6f8908451956b93e2beeb1078003f9ba89f491e037b2066d6180ae2",
+      "reviewSha256": "e2972fff00682d692e0c883b537dabbc1c3bbd7c5dc5f3216090dbdb13bbdbae",
+      "authenticatedFieldReady": false,
+      "revision": 1,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "B16",
+      "narrativeSha256": "dfcfc7007e364f09cbd14fecc00325f3b4c85ba561c444aa86a8b2f509452e37",
+      "reviewSha256": "239bc57c9e30c03e455caff5d48ed937150282b4811aec7106f1301177edb3ef",
+      "authenticatedFieldReady": false,
+      "revision": 1,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "B19",
+      "narrativeSha256": "bf4000ecaa84fec010cd3d5f080700d525ddc4e2d8a0405986a218128ab2bc7d",
+      "reviewSha256": null,
+      "authenticatedFieldReady": false,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "not-ready",
+      "reason": "access-denied"
+    },
+    {
+      "id": "B22",
+      "narrativeSha256": "958b992fd8c91dc36dce4c1d0c187ab1195f8c7b1a88f62324cd522a09cf6ca8",
+      "reviewSha256": null,
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "not-ready",
+      "reason": "reference-ineligible"
+    },
+    {
+      "id": "B25",
+      "narrativeSha256": "9941e1dc941615bfffe440c3a0dfd104e2db01e5e2e867bf2cc673962b3ffaa8",
+      "reviewSha256": "ddd970378a503384e06f86e89d9c76b8f77f1c96640c1d9c82ebde7cb49238c1",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "needs-review",
+      "reason": "temporal-lighting-ambiguity"
+    },
+    {
+      "id": "B28",
+      "narrativeSha256": "7c505559c97cc6cf31ea5e861210cdf5d57ee85d620370b6ec344adbf4322f54",
+      "reviewSha256": "10f0dcc3a6c23ae2d67723f793b433b435651f1271df412639097ff724ce9cac",
+      "authenticatedFieldReady": true,
+      "revision": 3,
+      "fieldReady": true,
+      "verdict": "needs-review",
+      "reason": "temporal-lighting-ambiguity"
+    },
+    {
+      "id": "B31",
+      "narrativeSha256": "59441e05f6b088336dd3ce815213820b11051ca80c437deee7dcc81bfac99028",
+      "reviewSha256": "bea88039b16134ff3eb21d4e39fd053d4d57ebeb6c4f7535114c956a1fea424a",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "conflict",
+      "reason": "outside-interior"
+    },
+    {
+      "id": "B34",
+      "narrativeSha256": "d161370e3fce1ea53b250be4a2ca4107be08e407971d93111a019b1589094829",
+      "reviewSha256": "7483bad6d085250dde30959f7bac2523c6b7eb8ee2e80ebb85a209e450a6c704",
+      "authenticatedFieldReady": false,
+      "revision": 1,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "B37",
+      "narrativeSha256": "5b3bde9414e8a980acf1ceee7bf581c9ae700dabc11d4527a30fb968ad22a648",
+      "reviewSha256": "792adfacb0911c0bca42e64d265e49f5b82f59bf2e94fb54b5784eadec3b60d1",
+      "authenticatedFieldReady": false,
+      "revision": 1,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "B40",
+      "narrativeSha256": "f428ae7e41f100278ed7a9098c65ccc5e1c722747f22c81714065a7ed79514fa",
+      "reviewSha256": "aee6cd8e3ac395e2110a102b6e0ec82d3e3c909209384531cf9fa1a5f6faa8b4",
+      "authenticatedFieldReady": false,
+      "revision": 1,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "B43",
+      "narrativeSha256": "2143f7e49cebca11951e347fc7de790c7a7eec65740dceeccee1aa2454ea8112",
+      "reviewSha256": null,
+      "authenticatedFieldReady": false,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "not-ready",
+      "reason": "access-denied"
+    },
+    {
+      "id": "B46",
+      "narrativeSha256": "a12667beb5e95f667bebb0e9f908e2088795107710bcc9e6711c8bbfe01f6094",
+      "reviewSha256": null,
+      "authenticatedFieldReady": true,
+      "revision": 1,
+      "fieldReady": true,
+      "verdict": "not-ready",
+      "reason": "reference-ineligible"
+    },
+    {
+      "id": "C3a",
+      "narrativeSha256": "adb65839e3c372759f59242519556688894c75c15d20b3fa5ff360ec771c6c6d",
+      "reviewSha256": "004729701c39b7a9ae64873f8d2b673ec2a87504707f20b02b3aced224b661e1",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "C3b",
+      "narrativeSha256": "cee9624535c4da007eaaf4ca4f96f0aba2e2b7b23a1dcb8da9bee82dd0eb8465",
+      "reviewSha256": "adbbec290508f09ea2c9055a0ceb141e47fb34a32bfcb4ac65ce4302c2519bee",
+      "authenticatedFieldReady": true,
+      "revision": 2,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "C3c",
+      "narrativeSha256": "4ac4d6af378cb363ec6b25ecd71bf2b16eb0d608ab1903717ed106830189e108",
+      "reviewSha256": "62075d54d9c40ee068248ca23661a14e953452907a2c700ee3548188cda95f34",
+      "authenticatedFieldReady": true,
+      "revision": 3,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "C3d",
+      "narrativeSha256": "85e1bd73bf84b6616a197cd06774392b8573766a7ade90b8dd20088149a6419f",
+      "reviewSha256": "cf2806b9ad59be2c2b1969073f6f96ff5ff12a86576ea840940ec43f94a3788e",
+      "authenticatedFieldReady": false,
+      "revision": 2,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    },
+    {
+      "id": "C3e",
+      "narrativeSha256": "19eed5905d039e75cc12f25891848d65b42c7a39aa8a29ffc7cbef0b00226140",
+      "reviewSha256": "174e3f69ff092071f9567db0ed3417e306c052cf41aae6202aab0e846a38a37b",
+      "authenticatedFieldReady": true,
+      "revision": 3,
+      "fieldReady": true,
+      "verdict": "eligible",
+      "reason": "consistent"
+    },
+    {
+      "id": "C3f",
+      "narrativeSha256": "6b736fa430f9b0dd4298085f3034ccab01d670e52e0f74eeaec4041e0b3a7de4",
+      "reviewSha256": "31ae91be49d6ca9000a96b90a99c0573674ca7baea2a0939a456aa126a3cca95",
+      "authenticatedFieldReady": false,
+      "revision": 2,
+      "fieldReady": false,
+      "verdict": "not-ready",
+      "reason": "incomplete-evidence"
+    }
+  ],
+  "networkPermission": false
+}

@@ -43,16 +43,23 @@ export function visibleSurveyLines(scene,v,visibleTags) {
 }
 
 export function buildFrame(claim,ctx) {
+  return frameFromHistory(claim,ctx,replaySaved);
+}
+
+// Common renderer and reference verifier. Each versioned caller fixes its own authenticated
+// history reader; the normal provider never takes a replay implementation from the request.
+export function frameFromHistory(claim,ctx,readHistory,lightingExplanation=null) {
   const plan=DecisionSchema.parse(claim.plan), v=plan.target, s=v.source;
   if(!["generate","edit"].includes(plan.action) || s.kind!=="card-history") throw Error("no-image-operation");
   if(ctx?.authorized!==true || ctx.enabled!==true || ctx.scope!==cardScope(s.ownerId,s.sessionId) ||
     ctx.result?.status!=="ready" || ctx.revision!==s.revision || ctx.history?.length!==s.revision) throw Error("inactive-target");
-  const history=replaySaved(s.ownerId,s.sessionId,ctx.history);
+  const history=readHistory(s.ownerId,s.sessionId,ctx.history);
   const current=history.at(-1);
   if(current.status!=="ready" || !sameSnapshot(current.visual,v) || !sameSnapshot(ctx.result.visual,v) ||
     !isDeepStrictEqual(current.scene,ctx.result.scene)) throw Error("unconfirmed-visual");
   const scene=current.scene;
   const lines=visibleSurveyLines(scene,v,ctx.visibleTags??[]);
+  if(lightingExplanation)lines.push(lightingExplanation);
   let referenceBytes,reference=null;
   if(plan.action==="edit"){
     const asset=AssetSchema.parse(ctx.asset);
