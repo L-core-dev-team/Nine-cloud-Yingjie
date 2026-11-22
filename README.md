@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-**下一项 YJ-P02-L5B：只补齐 L5 原生 TCP 回环验收，尚未执行。** [L5B 定向环境与集成验收任务书](docs/task-briefs/YJ-P02-L5B-loopback-closeout.md)已提交独立分支。先定位 Windows 沙箱的 `127.0.0.1` 浏览器/PG 连接 `EACCES`；未得到执行环境明确许可时保持 `ENV_BLOCKED`，不绕过审批。**不触碰真实 OpenAI、旧 L1/L4 账本，L5 仍是 PARTIAL。**
+**YJ-P02-L5B · ENV_BLOCKED。** 当前 Windows 环境允许 Node 监听本机随机端口，连接同一端口时返回 `connect EACCES`。HTTP、原生 Chrome、临时 PG、L4R 与 YJ-13 本轮未运行；L5 维持 PARTIAL。[实测与脱敏回执](docs/reports/YJ-P02-L5B-loopback-closeout-report.md)
 
 **YJ-P02-L5 · PARTIAL。** 独立零预算账本、崩溃防重、12 项内存处理测试和 7 项真实 Chrome 页面测试已通过。Windows 沙箱阻止本机 TCP，原角色卡／PostgreSQL、L4R 与 YJ-13 整链路尚待验收。真实服务调用 0，L4 继续 UNKNOWN_STOP。[报告、回执与复跑](docs/reports/YJ-P02-L5-one-shot-recovery-report.md)
 

@@ -1,6 +1,10 @@
 # 变更记录
 
-## 2026-11-22 L5 PARTIAL 核查与 L5B 原生 loopback 验收任务准备
+## L5B 本机回环实测
+
+**YJ-P02-L5B · ENV_BLOCKED。** 当前 Windows 环境允许 Node 监听本机随机端口，连接同一端口时返回 `connect EACCES`。HTTP、原生 Chrome、临时 PG、L4R 与 YJ-13 本轮未运行；L5 维持 PARTIAL。[实测与脱敏回执](docs/reports/YJ-P02-L5B-loopback-closeout-report.md)
+
+## 归档 · 2026-11-22 L5 PARTIAL 核查与 L5B 原生 loopback 验收任务准备
 
 - 远端核对 L5 提交和脱敏证据：模型与持久防重模拟通过，内存 HTTP 12/12、Chrome 全拦截脚本 7/7；原生 Windows loopback 因 `ERR_NETWORK_ACCESS_DENIED`、PG `EACCES` 阻塞，L4R 23 和 YJ-13 22 项均未执行。
 - 从 L5 完成 HEAD 建立隔离 `codex/yj-p02-l5b-loopback-closeout`，上传[限定回环环境诊断和整链路补测任务书](docs/task-briefs/YJ-P02-L5B-loopback-closeout.md)，更新入口及台账。

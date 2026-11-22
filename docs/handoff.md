@@ -2,7 +2,11 @@
 
 更新：2026-11-22。
 
-## 最新接续 · L5B 本机回环权限与独立集成验收（任务准备，尚未执行）
+## L5B 本机回环实测
+
+**YJ-P02-L5B · ENV_BLOCKED。** 当前 Windows 环境允许 Node 监听本机随机端口，连接同一端口时返回 `connect EACCES`。HTTP、原生 Chrome、临时 PG、L4R 与 YJ-13 本轮未运行；L5 维持 PARTIAL。[实测与脱敏回执](reports/YJ-P02-L5B-loopback-closeout-report.md)
+
+## 归档 · L5B 本机回环权限与独立集成验收（任务准备，尚未执行）
 
 - 已只读核对 `codex/yj-p02-l5-one-shot-recovery@94c29a1b68bb7f56626f530d3c0b1e132f15f38a` 的[运行报告](reports/YJ-P02-L5-one-shot-recovery-report.md)、[测试统计](reports/evidence/YJ-P02-L5/regression.json)、[持久账本](reports/evidence/YJ-P02-L5/ledger.json)与[12 项内存 HTTP](reports/evidence/YJ-P02-L5/session.json)、[7 项模拟 Chrome](reports/evidence/YJ-P02-L5/chrome-ui.json)、源码。L5 当前 PARTIAL：真正 TCP Chrome 首次导航 `ERR_NETWORK_ACCESS_DENIED`，PG client `EACCES`；L4R 0/23 和 YJ-13 0/22 为未运行的环境阻塞，不是业务断言全失败。**本轮没有在用户 Windows 执行补测**。
 - 从 L5 完成提交新建独立分支 `codex/yj-p02-l5b-loopback-closeout`，上传[完整最小 TCP 诊断和剩余回归任务书](task-briefs/YJ-P02-L5B-loopback-closeout.md)。本轮只准备执行要求，L5B 新测试/代码均 NOT_RUN。

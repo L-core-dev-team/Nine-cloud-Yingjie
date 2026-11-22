@@ -2,7 +2,11 @@
 
 更新：2026-11-22。
 
-## 本轮只读核对 L5 PARTIAL 并准备 L5B（未在本机重测）
+## L5B 本机回环实测
+
+**YJ-P02-L5B · ENV_BLOCKED。** 当前 Windows 环境允许 Node 监听本机随机端口，连接同一端口时返回 `connect EACCES`。HTTP、原生 Chrome、临时 PG、L4R 与 YJ-13 本轮未运行；L5 维持 PARTIAL。[实测与脱敏回执](reports/YJ-P02-L5B-loopback-closeout-report.md)
+
+## 归档 · 只读核对 L5 PARTIAL 并准备 L5B（未在本机重测）
 
 GitHub 远端 L5 完成提交 `94c29a1b68bb7f56626f530d3c0b1e132f15f38a`，根据[原报告](reports/YJ-P02-L5-one-shot-recovery-report.md)与[原回归](reports/evidence/YJ-P02-L5/regression.json)：独立防重与崩溃保留、内存 HTTP 12/12、Chrome 全拦截页面 7/7、公共契约 10/10、L3 30/30、P01 7/7、L1/L4 各 15/15。原生 loopback Chrome 0/7（首次导航 ERR_NETWORK_ACCESS_DENIED），L4R 0/23、YJ-13 0/22（PG/HTTP EACCES），真实九霄 completed-history 修订与正文 SHA NOT_RUN。0/n 在此是未执行数量，不能当成真实断言全失败，也不能视为已通过。L5 原代码只暴露 mock-only rehearse/status，LIVE_DISABLED。
 

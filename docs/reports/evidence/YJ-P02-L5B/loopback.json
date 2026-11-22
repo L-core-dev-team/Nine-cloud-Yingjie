@@ -1,0 +1,88 @@
+{
+  "task": "YJ-P02-L5B",
+  "base": "6cb99b1654a1d6d1e1f84d920969e7454b8e02bb",
+  "upstream": "cd25360c7929e10f8b2b0fad342fedd943d4f323",
+  "probe": {
+    "runId": "9c0b9160-7859-4374-8f6a-39ed9e68d8f9",
+    "utc": "2026-11-22T08:21:52.219Z",
+    "sourceSha256": "8b7022155c9fa967ee3c84105ee68dead386eedd39e7f558aefc4595676f4f80",
+    "platform": "win32",
+    "osRelease": "10.0.26200",
+    "node": "v26.13.0",
+    "nodePermissionModel": false,
+    "nodeNetPermission": null,
+    "preloadConfigured": false,
+    "target": "127.0.0.1",
+    "portSelection": "OS-assigned",
+    "observations": {
+      "tcpListen": {
+        "status": "PASS"
+      },
+      "tcpConnect": {
+        "status": "FAIL",
+        "code": "EACCES",
+        "syscall": "connect"
+      },
+      "httpListen": {
+        "status": "NOT_RUN"
+      },
+      "httpGet": {
+        "status": "NOT_RUN"
+      }
+    },
+    "status": "ENV_BLOCKED"
+  },
+  "exitCode": 1,
+  "environment": {
+    "target": "current-managed-windows",
+    "chromeInstalled": "158.0.8127.36",
+    "pgServerAndTools": "18.4",
+    "pgNodeClient": "8.23.1",
+    "playwright": "1.63.0",
+    "automaticApprovalRejectionThisProbe": false,
+    "externalNetworkPermissionRequested": false
+  },
+  "remaining": {
+    "l5NativeChrome": {
+      "pass": 0,
+      "fail": 0,
+      "notRun": 7,
+      "modes": [
+        "complete",
+        "nonexclusive",
+        "lost",
+        "reject",
+        "expiry",
+        "disconnect",
+        "timeout"
+      ]
+    },
+    "l4rTargeted": {
+      "pass": 0,
+      "fail": 0,
+      "notRun": 23
+    },
+    "legacyInputSecurity": {
+      "pass": 0,
+      "fail": 0,
+      "notRun": 11
+    },
+    "l4rTriggerRecovery": "NOT_RUN",
+    "l4OriginalCardMock": "NOT_RUN",
+    "l5CardHistory": {
+      "status": "NOT_RUN",
+      "revision": null,
+      "narrativeSha256": null,
+      "projection": null
+    },
+    "yj13": {
+      "pass": 0,
+      "fail": 0,
+      "notRun": 22
+    }
+  },
+  "newRealModelLookups": 0,
+  "newRealTextCalls": 0,
+  "newRealImageCalls": 0,
+  "newCostUsd": 0
+}
