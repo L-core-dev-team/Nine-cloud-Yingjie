@@ -2,9 +2,11 @@
 
 更新：2026-11-22。
 
-## YJ-P03-S1 泛化场景证据的离线工程接续
+## S1 场景证据与来源边界
 
-道主要求映界在环境/付费阻塞期间继续项目开发；经 I2 验收后，优先处理 /1 固定酒馆/观星楼与限定中文句式的实际体验瓶颈。创建 [P03-S1 受信多地点提取任务书](task-briefs/YJ-P03-S1-generalized-scene-evidence.md)，提出版本化 `scene-evidence/2` replayOnly、受信地点身份、当前可见字段的 UTF-16 证据、角色完整名单和安全复访，不改原默认 /2、已完成正文或图像许可。**本阶段只是离线任务准备，不代表已确认通用中文自然语言理解，更不授权真实 OpenAI/图片 API 费用。**
+**YJ-P03-S1 · P03_S1_OFFLINE_PASS。** 六个登记地点、102 条预先标注回放，正确采纳 36 条、正确留空 66 条，错误采纳与不必要弃判均为 0。三个新地点已构造离线首图请求。 [运行报告、回执与复跑](reports/YJ-P03-S1-generalized-scene-evidence-report.md)
+
+D027 的实施范围为隔离回放。通用中文覆盖能力、生产启用与素材外发仍需独立验收与决定。
 
 ## I2 独立图片美元许可
 
@@ -88,7 +90,7 @@ L5 的内存与前端模拟已通过，但真正 127.0.0.1 Chrome/HTTP 和本机
 | D024 | YJ-P02-L5B 原生回环环境补验 | 仅任务准备，未授予绕过沙箱或公网访问 | 先检查最小 127.0.0.1 TCP，只有获准时执行 Chrome/PG/L4R/YJ-13；拒绝则 ENV_BLOCKED，新真实 API 调用仍禁止 |
 | D025 | 双轨推进：Dot 环境、Codex OpenAI Images 适配 | I1 已完成 67 项离线验收；Dot 同机异会话结果不足以修复原 Codex EACCES | I1 images generate/edit mock、原件与待审已验证，旧权限阻塞仍由 Issue #1 跟踪；真实 API 未批准 |
 | D026 | YJ-P02-I2 图像美元预算与持久发送前审查 | 离线已验收，真钱发送未授权 | I1 合成单位不得用作 USD；生成与编辑独立 grant，费用最坏上界必须可证；本地拒绝应在 sentAt 前；没有必要证据时保持 LIVE_BLOCKED |
-| D027 | P03-S1 场景事实识别泛化 | 已批准任务准备，业务尚未执行 | 在已保存 completed-history 上新建 replayOnly `scene-evidence/2`，受信地点注册和多样本审计；缺证据继续 not-ready；不改变默认 /2、I2 费用门禁或旧原件 |
+| D027 | P03-S1 场景事实识别泛化 | 隔离回放已验收，生产默认沿用旧版 | 在已保存 completed-history 上新建 replayOnly `scene-evidence/2`，受信地点注册和多样本审计；缺证据继续 not-ready；不改变默认 /2、I2 费用门禁或旧原件 |
 
 ## 明确否定与边界
 

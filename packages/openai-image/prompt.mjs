@@ -32,6 +32,16 @@ function sameSnapshot(a,b) {
   return a && b && sameVisual(a,b) && isDeepStrictEqual(a.source,b.source);
 }
 
+// Shared formatting only. Authorization and saved-history replay stay in the respective callers.
+export function visibleSurveyLines(scene,v,visibleTags) {
+  const visible=new Set([scene.name,scene.parentSceneId,...v.people,...v.features]);
+  const tags=visibleTags.filter(tag=>visible.has(tag)).sort();
+  const frame={地点:scene.name,所属地点:scene.parentSceneId,观察位置:v.viewpoint,观察视角:v.perspective,
+    在场总人数:v.people.length,完整名单:[...v.people].sort(),眼前结构:[...v.features].sort(),时段:v.timeOfDay,光照:v.lighting};
+  if(tags.length) frame.已揭示标签=[...new Set(tags)];
+  return ["绘制当前所见的一幅静态场景。人数和结构以所列事实为限，未揭示的人物、建筑与装饰留白。",JSON.stringify(frame)];
+}
+
 export function buildFrame(claim,ctx) {
   const plan=DecisionSchema.parse(claim.plan), v=plan.target, s=v.source;
   if(!["generate","edit"].includes(plan.action) || s.kind!=="card-history") throw Error("no-image-operation");
@@ -42,12 +52,7 @@ export function buildFrame(claim,ctx) {
   if(current.status!=="ready" || !sameSnapshot(current.visual,v) || !sameSnapshot(ctx.result.visual,v) ||
     !isDeepStrictEqual(current.scene,ctx.result.scene)) throw Error("unconfirmed-visual");
   const scene=current.scene;
-  const visible=new Set([scene.name,scene.parentSceneId,...v.people,...v.features]);
-  const tags=(ctx.visibleTags??[]).filter(tag=>visible.has(tag)).sort();
-  const frame={地点:scene.name,所属地点:scene.parentSceneId,观察位置:v.viewpoint,观察视角:v.perspective,
-    在场总人数:v.people.length,完整名单:[...v.people].sort(),眼前结构:[...v.features].sort(),时段:v.timeOfDay,光照:v.lighting};
-  if(tags.length) frame.已揭示标签=[...new Set(tags)];
-  const lines=["绘制当前所见的一幅静态场景。人数和结构以所列事实为限，未揭示的人物、建筑与装饰留白。",JSON.stringify(frame)];
+  const lines=visibleSurveyLines(scene,v,ctx.visibleTags??[]);
   let referenceBytes,reference=null;
   if(plan.action==="edit"){
     const asset=AssetSchema.parse(ctx.asset);

@@ -1,0 +1,848 @@
+[
+  {
+    "id": "P30",
+    "method": "scene-evidence/2",
+    "replayOnly": true,
+    "registryDigest": "da57b79a53eb3d3187dab8d1cc59eca9df917e5573134974eb1867d50b1a147d",
+    "revision": 1,
+    "narrativeSha256": "f9bff0af9009534aefc7921875b78f675d599080a5a54a7407019799dee63f9d",
+    "offsetUnit": "UTF-16",
+    "evidence": [
+      {
+        "start": 0,
+        "end": 10,
+        "rule": "registered-location",
+        "scope": "current",
+        "playerKnown": true
+      },
+      {
+        "start": 11,
+        "end": 22,
+        "rule": "player-view",
+        "scope": "current",
+        "playerKnown": true
+      },
+      {
+        "start": 23,
+        "end": 39,
+        "rule": "exclusive-roster",
+        "scope": "current",
+        "playerKnown": true
+      },
+      {
+        "start": 40,
+        "end": 54,
+        "rule": "observed-structures",
+        "scope": "current",
+        "playerKnown": true
+      },
+      {
+        "start": 55,
+        "end": 61,
+        "rule": "observed-time",
+        "scope": "current",
+        "playerKnown": true
+      },
+      {
+        "start": 62,
+        "end": 68,
+        "rule": "observed-light",
+        "scope": "current",
+        "playerKnown": true
+      }
+    ],
+    "blockers": [],
+    "status": "ready",
+    "fields": {
+      "place": {
+        "precision": "complete",
+        "spans": [
+          0
+        ],
+        "value": "pine-gate"
+      },
+      "viewpoint": {
+        "precision": "complete",
+        "spans": [
+          1
+        ],
+        "value": "山门前"
+      },
+      "perspective": {
+        "precision": "complete",
+        "spans": [
+          1
+        ],
+        "value": "玩家向南所见"
+      },
+      "people": {
+        "precision": "complete",
+        "spans": [
+          2
+        ],
+        "value": [
+          "守门人",
+          "林青"
+        ]
+      },
+      "features": {
+        "precision": "complete",
+        "spans": [
+          3
+        ],
+        "value": [
+          "牌楼",
+          "石柱"
+        ]
+      },
+      "timeOfDay": {
+        "precision": "complete",
+        "spans": [
+          4
+        ],
+        "value": "夜间"
+      },
+      "lighting": {
+        "precision": "complete",
+        "spans": [
+          5
+        ],
+        "value": "日光"
+      }
+    },
+    "scene": "pine-gate",
+    "version": "V1"
+  },
+  {
+    "id": "P41",
+    "method": "scene-evidence/2",
+    "replayOnly": true,
+    "registryDigest": "da57b79a53eb3d3187dab8d1cc59eca9df917e5573134974eb1867d50b1a147d",
+    "revision": 1,
+    "narrativeSha256": "4ed34622468beea0e55947ad240750ae43c2df2fa259e23421ef0ed973f57375",
+    "offsetUnit": "UTF-16",
+    "evidence": [
+      {
+        "start": 0,
+        "end": 9,
+        "rule": "registered-location",
+        "scope": "current",
+        "playerKnown": true
+      },
+      {
+        "start": 10,
+        "end": 18,
+        "rule": "player-view",
+        "scope": "current",
+        "playerKnown": true
+      },
+      {
+        "start": 19,
+        "end": 31,
+        "rule": "exclusive-roster",
+        "scope": "current",
+        "playerKnown": true
+      },
+      {
+        "start": 32,
+        "end": 44,
+        "rule": "observed-structures",
+        "scope": "current",
+        "playerKnown": true
+      },
+      {
+        "start": 45,
+        "end": 51,
+        "rule": "observed-time",
+        "scope": "current",
+        "playerKnown": true
+      },
+      {
+        "start": 52,
+        "end": 58,
+        "rule": "observed-light",
+        "scope": "current",
+        "playerKnown": true
+      }
+    ],
+    "blockers": [],
+    "status": "ready",
+    "fields": {
+      "place": {
+        "precision": "complete",
+        "spans": [
+          0
+        ],
+        "value": "bamboo-lodge"
+      },
+      "viewpoint": {
+        "precision": "complete",
+        "spans": [
+          1
+        ],
+        "value": "廊下"
+      },
+      "perspective": {
+        "precision": "complete",
+        "spans": [
+          1
+        ],
+        "value": "玩家向西所见"
+      },
+      "people": {
+        "precision": "complete",
+        "spans": [
+          2
+        ],
+        "value": [
+          "苏禾",
+          "药师"
+        ]
+      },
+      "features": {
+        "precision": "complete",
+        "spans": [
+          3
+        ],
+        "value": [
+          "木梯",
+          "竹屏"
+        ]
+      },
+      "timeOfDay": {
+        "precision": "complete",
+        "spans": [
+          4
+        ],
+        "value": "正午"
+      },
+      "lighting": {
+        "precision": "complete",
+        "spans": [
+          5
+        ],
+        "value": "月光"
+      }
+    },
+    "scene": "bamboo-lodge",
+    "version": "V1"
+  },
+  {
+    "id": "P52",
+    "method": "scene-evidence/2",
+    "replayOnly": true,
+    "registryDigest": "da57b79a53eb3d3187dab8d1cc59eca9df917e5573134974eb1867d50b1a147d",
+    "revision": 1,
+    "narrativeSha256": "85718f4fcd5563a60f1c97fc1d027575c58d2710cc3cdb24fa1e3b13a50d540b",
+    "offsetUnit": "UTF-16",
+    "evidence": [
+      {
+        "start": 0,
+        "end": 10,
+        "rule": "registered-location",
+        "scope": "current",
+        "playerKnown": true
+      },
+      {
+        "start": 11,
+        "end": 19,
+        "rule": "player-view",
+        "scope": "current",
+        "playerKnown": true
+      },
+      {
+        "start": 20,
+        "end": 32,
+        "rule": "exclusive-roster",
+        "scope": "current",
+        "playerKnown": true
+      },
+      {
+        "start": 33,
+        "end": 46,
+        "rule": "observed-structures",
+        "scope": "current",
+        "playerKnown": true
+      },
+      {
+        "start": 47,
+        "end": 52,
+        "rule": "observed-time",
+        "scope": "current",
+        "playerKnown": true
+      },
+      {
+        "start": 53,
+        "end": 61,
+        "rule": "observed-light",
+        "scope": "current",
+        "playerKnown": true
+      }
+    ],
+    "blockers": [],
+    "status": "ready",
+    "fields": {
+      "place": {
+        "precision": "complete",
+        "spans": [
+          0
+        ],
+        "value": "cloud-walk"
+      },
+      "viewpoint": {
+        "precision": "complete",
+        "spans": [
+          1
+        ],
+        "value": "桥头"
+      },
+      "perspective": {
+        "precision": "complete",
+        "spans": [
+          1
+        ],
+        "value": "玩家向南所见"
+      },
+      "people": {
+        "precision": "complete",
+        "spans": [
+          2
+        ],
+        "value": [
+          "引路人",
+          "顾明"
+        ]
+      },
+      "features": {
+        "precision": "complete",
+        "spans": [
+          3
+        ],
+        "value": [
+          "木栏",
+          "索桥"
+        ]
+      },
+      "timeOfDay": {
+        "precision": "complete",
+        "spans": [
+          4
+        ],
+        "value": "夜间"
+      },
+      "lighting": {
+        "precision": "complete",
+        "spans": [
+          5
+        ],
+        "value": "灯光"
+      }
+    },
+    "scene": "cloud-walk",
+    "version": "V1"
+  },
+  {
+    "id": "N07",
+    "method": "scene-evidence/2",
+    "replayOnly": true,
+    "registryDigest": "da57b79a53eb3d3187dab8d1cc59eca9df917e5573134974eb1867d50b1a147d",
+    "revision": 1,
+    "narrativeSha256": "324a1fe187ccea24dc8fd4b438f90f770474ddf4ba83ed9e8db7cdb1245dda60",
+    "offsetUnit": "UTF-16",
+    "evidence": [
+      {
+        "start": 0,
+        "end": 10,
+        "rule": "registered-location",
+        "scope": "current",
+        "playerKnown": false
+      },
+      {
+        "start": 11,
+        "end": 21,
+        "rule": "player-view",
+        "scope": "current",
+        "playerKnown": false
+      },
+      {
+        "start": 22,
+        "end": 32,
+        "rule": "nonexclusive-roster",
+        "scope": "current",
+        "playerKnown": false
+      },
+      {
+        "start": 33,
+        "end": 47,
+        "rule": "observed-structures",
+        "scope": "current",
+        "playerKnown": false
+      },
+      {
+        "start": 48,
+        "end": 54,
+        "rule": "observed-time",
+        "scope": "current",
+        "playerKnown": false
+      },
+      {
+        "start": 55,
+        "end": 61,
+        "rule": "observed-light",
+        "scope": "current",
+        "playerKnown": false
+      }
+    ],
+    "blockers": [
+      "incomplete:people"
+    ],
+    "status": "not-ready",
+    "fields": {
+      "place": {
+        "precision": "complete",
+        "spans": [
+          0
+        ],
+        "value": "west",
+        "admitted": false
+      },
+      "viewpoint": {
+        "precision": "complete",
+        "spans": [
+          1
+        ],
+        "value": "后门",
+        "admitted": false
+      },
+      "perspective": {
+        "precision": "complete",
+        "spans": [
+          1
+        ],
+        "value": "玩家向西所见",
+        "admitted": false
+      },
+      "people": {
+        "precision": "partial",
+        "spans": [
+          2
+        ],
+        "value": [
+          "林青",
+          "顾明"
+        ],
+        "admitted": false
+      },
+      "features": {
+        "precision": "complete",
+        "spans": [
+          3
+        ],
+        "value": [
+          "木柱",
+          "长桌"
+        ],
+        "admitted": false
+      },
+      "timeOfDay": {
+        "precision": "complete",
+        "spans": [
+          4
+        ],
+        "value": "正午",
+        "admitted": false
+      },
+      "lighting": {
+        "precision": "complete",
+        "spans": [
+          5
+        ],
+        "value": "灯光",
+        "admitted": false
+      }
+    },
+    "scene": null,
+    "version": null
+  },
+  {
+    "id": "N51",
+    "method": "scene-evidence/2",
+    "replayOnly": true,
+    "registryDigest": "da57b79a53eb3d3187dab8d1cc59eca9df917e5573134974eb1867d50b1a147d",
+    "revision": 1,
+    "narrativeSha256": "b113fcdbf6cca3f0f38a30765d7f3e002afddef3dfb31adb3974d1181c648604",
+    "offsetUnit": "UTF-16",
+    "evidence": [
+      {
+        "start": 0,
+        "end": 10,
+        "rule": "registered-location",
+        "scope": "current",
+        "playerKnown": false
+      },
+      {
+        "start": 11,
+        "end": 22,
+        "rule": "player-view",
+        "scope": "current",
+        "playerKnown": false
+      },
+      {
+        "start": 23,
+        "end": 39,
+        "rule": "exclusive-roster",
+        "scope": "current",
+        "playerKnown": false
+      },
+      {
+        "start": 40,
+        "end": 54,
+        "rule": "observed-structures",
+        "scope": "current",
+        "playerKnown": false
+      },
+      {
+        "start": 55,
+        "end": 61,
+        "rule": "observed-time",
+        "scope": "current",
+        "playerKnown": false
+      },
+      {
+        "start": 62,
+        "end": 68,
+        "rule": "observed-light",
+        "scope": "current",
+        "playerKnown": false
+      },
+      {
+        "start": 69,
+        "end": 74,
+        "rule": "observed-time",
+        "scope": "current",
+        "playerKnown": false
+      }
+    ],
+    "blockers": [
+      "conflict:timeOfDay",
+      "incomplete:timeOfDay"
+    ],
+    "status": "not-ready",
+    "fields": {
+      "place": {
+        "precision": "complete",
+        "spans": [
+          0
+        ],
+        "value": "pine-gate",
+        "admitted": false
+      },
+      "viewpoint": {
+        "precision": "complete",
+        "spans": [
+          1
+        ],
+        "value": "山门前",
+        "admitted": false
+      },
+      "perspective": {
+        "precision": "complete",
+        "spans": [
+          1
+        ],
+        "value": "玩家向南所见",
+        "admitted": false
+      },
+      "people": {
+        "precision": "complete",
+        "spans": [
+          2
+        ],
+        "value": [
+          "守门人",
+          "林青"
+        ],
+        "admitted": false
+      },
+      "features": {
+        "precision": "complete",
+        "spans": [
+          3
+        ],
+        "value": [
+          "牌楼",
+          "石柱"
+        ],
+        "admitted": false
+      },
+      "timeOfDay": {
+        "precision": "partial",
+        "spans": [
+          4,
+          6
+        ],
+        "value": "夜间",
+        "admitted": false
+      },
+      "lighting": {
+        "precision": "complete",
+        "spans": [
+          5
+        ],
+        "value": "日光",
+        "admitted": false
+      }
+    },
+    "scene": null,
+    "version": null
+  },
+  {
+    "id": "C3a",
+    "method": "scene-evidence/2",
+    "replayOnly": true,
+    "registryDigest": "da57b79a53eb3d3187dab8d1cc59eca9df917e5573134974eb1867d50b1a147d",
+    "revision": 2,
+    "narrativeSha256": "07da1021a3d39b1a2f8ce78c255c4f515f3065da8dfb9ceed3b05da093ecbec0",
+    "offsetUnit": "UTF-16",
+    "evidence": [
+      {
+        "start": 0,
+        "end": 21,
+        "rule": "member-arrival",
+        "scope": "current",
+        "playerKnown": true
+      },
+      {
+        "start": 22,
+        "end": 42,
+        "rule": "other-fields-confirmed",
+        "scope": "current",
+        "playerKnown": true
+      }
+    ],
+    "blockers": [],
+    "status": "ready",
+    "fields": {
+      "place": {
+        "precision": "complete",
+        "value": "pine-gate",
+        "spans": [
+          1
+        ],
+        "priorRevision": 1
+      },
+      "viewpoint": {
+        "precision": "complete",
+        "value": "山门前",
+        "spans": [
+          1
+        ],
+        "priorRevision": 1
+      },
+      "perspective": {
+        "precision": "complete",
+        "value": "玩家向南所见",
+        "spans": [
+          1
+        ],
+        "priorRevision": 1
+      },
+      "people": {
+        "precision": "complete",
+        "value": [
+          "守门人",
+          "林青",
+          "陆宁"
+        ],
+        "spans": [
+          0
+        ],
+        "priorRevision": 1
+      },
+      "features": {
+        "precision": "complete",
+        "value": [
+          "牌楼",
+          "石柱"
+        ],
+        "spans": [
+          1
+        ],
+        "priorRevision": 1
+      },
+      "timeOfDay": {
+        "precision": "complete",
+        "value": "夜间",
+        "spans": [
+          1
+        ],
+        "priorRevision": 1
+      },
+      "lighting": {
+        "precision": "complete",
+        "value": "日光",
+        "spans": [
+          1
+        ],
+        "priorRevision": 1
+      }
+    },
+    "scene": "pine-gate",
+    "version": "V2"
+  },
+  {
+    "id": "C3d",
+    "method": "scene-evidence/2",
+    "replayOnly": true,
+    "registryDigest": "da57b79a53eb3d3187dab8d1cc59eca9df917e5573134974eb1867d50b1a147d",
+    "revision": 3,
+    "narrativeSha256": "e2cfb1c6703348e893b23525076e966280861ff6f6f4452bef20c9fa47336c6b",
+    "offsetUnit": "UTF-16",
+    "evidence": [
+      {
+        "start": 0,
+        "end": 9,
+        "rule": "registered-location",
+        "scope": "current",
+        "playerKnown": true
+      },
+      {
+        "start": 10,
+        "end": 42,
+        "rule": "return-confirmation",
+        "scope": "current",
+        "playerKnown": true
+      }
+    ],
+    "blockers": [],
+    "status": "ready",
+    "fields": {
+      "place": {
+        "precision": "complete",
+        "spans": [
+          0
+        ],
+        "value": "pine-gate"
+      },
+      "viewpoint": {
+        "precision": "complete",
+        "value": "山门前",
+        "spans": [
+          1
+        ],
+        "priorRevision": 1
+      },
+      "perspective": {
+        "precision": "complete",
+        "value": "玩家向南所见",
+        "spans": [
+          1
+        ],
+        "priorRevision": 1
+      },
+      "people": {
+        "precision": "complete",
+        "value": [
+          "守门人",
+          "林青"
+        ],
+        "spans": [
+          1
+        ],
+        "priorRevision": 1
+      },
+      "features": {
+        "precision": "complete",
+        "value": [
+          "牌楼",
+          "石柱"
+        ],
+        "spans": [
+          1
+        ],
+        "priorRevision": 1
+      },
+      "timeOfDay": {
+        "precision": "complete",
+        "value": "夜间",
+        "spans": [
+          1
+        ],
+        "priorRevision": 1
+      },
+      "lighting": {
+        "precision": "complete",
+        "value": "日光",
+        "spans": [
+          1
+        ],
+        "priorRevision": 1
+      }
+    },
+    "scene": "pine-gate",
+    "version": "V1"
+  },
+  {
+    "id": "C3e",
+    "method": "scene-evidence/2",
+    "replayOnly": true,
+    "registryDigest": "da57b79a53eb3d3187dab8d1cc59eca9df917e5573134974eb1867d50b1a147d",
+    "revision": 3,
+    "narrativeSha256": "794cda60e611e9838390f5056abff9783e622828912b71196f2f6f9d767680fa",
+    "offsetUnit": "UTF-16",
+    "evidence": [
+      {
+        "start": 0,
+        "end": 10,
+        "rule": "registered-location",
+        "scope": "current",
+        "playerKnown": false
+      }
+    ],
+    "blockers": [
+      "incomplete:viewpoint",
+      "incomplete:perspective",
+      "incomplete:people",
+      "incomplete:features",
+      "incomplete:timeOfDay",
+      "incomplete:lighting"
+    ],
+    "status": "not-ready",
+    "fields": {
+      "place": {
+        "precision": "complete",
+        "spans": [
+          0
+        ],
+        "value": "pine-gate",
+        "admitted": false
+      },
+      "viewpoint": {
+        "precision": "unknown",
+        "spans": []
+      },
+      "perspective": {
+        "precision": "unknown",
+        "spans": []
+      },
+      "people": {
+        "precision": "unknown",
+        "spans": []
+      },
+      "features": {
+        "precision": "unknown",
+        "spans": []
+      },
+      "timeOfDay": {
+        "precision": "unknown",
+        "spans": []
+      },
+      "lighting": {
+        "precision": "unknown",
+        "spans": []
+      }
+    },
+    "scene": null,
+    "version": null
+  }
+]

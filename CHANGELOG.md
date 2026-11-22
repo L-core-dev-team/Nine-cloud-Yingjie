@@ -1,5 +1,9 @@
 # 变更记录
 
+## 2026-11-22 S1 场景证据离线验收
+
+**YJ-P03-S1 · P03_S1_OFFLINE_PASS。** 六个登记地点、102 条预先标注回放，正确采纳 36 条、正确留空 66 条，错误采纳与不必要弃判均为 0。三个新地点已构造离线首图请求。 [运行报告、回执与复跑](docs/reports/YJ-P03-S1-generalized-scene-evidence-report.md)
+
 ## 2026-11-22 I2 验收及 P03-S1 多场景可信证据任务准备
 
 - GitHub 核对 I2 完成分支、40 项模拟货币门禁、强退防重和 148/148 兼容回归；确认真钱持续 `LIVE_BLOCKED_COST_BOUND`，原生 PG/Chrome 与真实模型仍 NOT_RUN。

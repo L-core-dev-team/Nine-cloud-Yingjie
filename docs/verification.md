@@ -2,7 +2,11 @@
 
 更新：2026-11-22。
 
-## 本轮 I2 验收源证据核对与 P03-S1 离线任务书准备
+## 2026-11-22 S1 场景证据离线验收
+
+**YJ-P03-S1 · P03_S1_OFFLINE_PASS。** 六个登记地点、102 条预先标注回放，正确采纳 36 条、正确留空 66 条，错误采纳与不必要弃判均为 0。三个新地点已构造离线首图请求。 [运行报告、回执与复跑](reports/YJ-P03-S1-generalized-scene-evidence-report.md)
+
+## 归档 · I2 验收源证据核对与 P03-S1 离线任务书准备
 
 已从 GitHub 核对 I2 完成远端 SHA `146f782aab1dd90dc7118a53fb14e88faafed4cf`，读取 [I2 原报告](reports/YJ-P02-I2-image-money-gate-report.md)、[模拟 USD 预算及审计](reports/evidence/YJ-P02-I2/money.json)、[未来费用/授权清单](reports/YJ-P02-I2-approval-checklist.md) 和 `packages/image-tasks/index.mjs`、`packages/openai-image/{money.mjs,money-schema.sql}`。实际 I2 记录：40 个独立场景、跨进程/强退防重及兼容 148/148；SQLite FULL 同事务预算提交；生成/编辑两个 mock grant 分离；真实 API 0 次。**没有可证明的真实图片最坏费用上界，生产 PG/Chrome NOT_RUN，因此不能判为真钱已放行。** 这次仅阅读原回执，未在本机重跑。
 

@@ -1,0 +1,1108 @@
+{
+  "node": "v26.13.0",
+  "method": {
+    "method": "scene-evidence/2",
+    "replayOnly": true
+  },
+  "corpusSha256": "6a6e15a44cb8d6385e38d0e582b8814233fc7b15607f7e6940950b4034ffe249",
+  "registryDigest": "da57b79a53eb3d3187dab8d1cc59eca9df917e5573134974eb1867d50b1a147d",
+  "count": 102,
+  "scores": {
+    "v1": {
+      "dev": {
+        "correctAccept": 0,
+        "unnecessaryAbstain": 26,
+        "incorrectAccept": 0,
+        "correctAbstain": 44
+      },
+      "accept": {
+        "correctAccept": 0,
+        "unnecessaryAbstain": 10,
+        "incorrectAccept": 0,
+        "correctAbstain": 22
+      }
+    },
+    "v2": {
+      "dev": {
+        "correctAccept": 26,
+        "unnecessaryAbstain": 0,
+        "incorrectAccept": 0,
+        "correctAbstain": 44
+      },
+      "accept": {
+        "correctAccept": 10,
+        "unnecessaryAbstain": 0,
+        "incorrectAccept": 0,
+        "correctAbstain": 22
+      }
+    }
+  },
+  "checks": [
+    "new-scene preview from raw completed history uses the I1 visible-only formatter",
+    "every labelled incomplete revision is ineligible for an image preview",
+    "source, scope, method, registry, hash, revision and duplicate event mismatches fail closed",
+    "directory collisions abstain; aliases resolve to the same stable id",
+    "unknown hides prior visual until full survey; qualified homonyms stay separate",
+    "UTF-16 astral offset and raw surrounding whitespace",
+    "original builder still rejects a v2-only visual, I2 live release stays disabled",
+    "compatible partial roster and split viewpoint evidence; contradictory extra witness blocks",
+    "identity is injected, aliases and catalogue data cannot supply missing visual fields",
+    "active incomplete resurvey holds previous place; only full resurvey lifts the hold",
+    "a nonvisual conversation preserves only the uninterrupted active frame",
+    "three I1 request bodies encoded and decoded in memory without transport",
+    "existing frame planner skipped every non-ready result before asset or preset lookup"
+  ],
+  "failures": [],
+  "previews": [
+    {
+      "id": "P30",
+      "scene": "pine-gate",
+      "promptSha256": "5e0371d3795e4296f126810ba0e7f8b84a010941839cf265192982908a17584e",
+      "reference": null,
+      "constructed": 1,
+      "transmitted": 0
+    },
+    {
+      "id": "P41",
+      "scene": "bamboo-lodge",
+      "promptSha256": "f445b3e264840dc3c8ef80dc11ef24e1832e987222ca8aa8613bb586f561e650",
+      "reference": null,
+      "constructed": 1,
+      "transmitted": 0
+    },
+    {
+      "id": "P52",
+      "scene": "cloud-walk",
+      "promptSha256": "26fca2bd8bccb84c55454c00cc9771d4b3218726152f2b420272d6d5bd9d9294",
+      "reference": null,
+      "constructed": 1,
+      "transmitted": 0
+    }
+  ],
+  "details": [
+    {
+      "id": "P03",
+      "split": "accept",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "east",
+      "version": "V1"
+    },
+    {
+      "id": "P13",
+      "split": "accept",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "west",
+      "version": "V1"
+    },
+    {
+      "id": "P23",
+      "split": "accept",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "north-observatory",
+      "version": "V1"
+    },
+    {
+      "id": "P33",
+      "split": "accept",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "pine-gate",
+      "version": "V1"
+    },
+    {
+      "id": "P43",
+      "split": "accept",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "bamboo-lodge",
+      "version": "V1"
+    },
+    {
+      "id": "P53",
+      "split": "accept",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "cloud-walk",
+      "version": "V1"
+    },
+    {
+      "id": "N01",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "unresolved-clause",
+        "incomplete:viewpoint",
+        "incomplete:perspective"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N04",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "reported",
+        "incomplete:lighting"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N07",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "incomplete:people"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N10",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "unresolved-clause",
+        "incomplete:people"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N13",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "unresolved-clause",
+        "incomplete:people"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N16",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "invalid-complete-roster",
+        "incomplete:people"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N19",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "quotation",
+        "incomplete:people"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N22",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "planned-or-hypothetical",
+        "incomplete:viewpoint",
+        "incomplete:perspective"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N25",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "invalid-structure-list",
+        "incomplete:features"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N28",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "reported",
+        "incomplete:features"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N31",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "planned-or-hypothetical",
+        "incomplete:timeOfDay"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N34",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "quotation",
+        "incomplete:timeOfDay"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N37",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "unrevealed",
+        "incomplete:lighting"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N40",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "invalid-sentence-boundaries",
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N43",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "quotation"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N46",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "unrevealed"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N49",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "unknown-place",
+        "incomplete:place"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N52",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "conflict:lighting",
+        "incomplete:lighting"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N55",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "conflict:features",
+        "incomplete:features"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N58",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "incomplete:lighting"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "C5a",
+      "split": "accept",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "cloud-walk",
+      "version": "V2"
+    },
+    {
+      "id": "C5b",
+      "split": "accept",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "cloud-walk",
+      "version": "V3"
+    },
+    {
+      "id": "C5c",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "C5d",
+      "split": "accept",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "cloud-walk",
+      "version": "V1"
+    },
+    {
+      "id": "C5e",
+      "split": "accept",
+      "category": "correctAbstain",
+      "reason": [
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "C5f",
+      "split": "accept",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "cloud-walk",
+      "version": "V1"
+    },
+    {
+      "id": "P00",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "east",
+      "version": "V1"
+    },
+    {
+      "id": "P01",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "east",
+      "version": "V1"
+    },
+    {
+      "id": "P02",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "east",
+      "version": "V1"
+    },
+    {
+      "id": "P10",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "west",
+      "version": "V1"
+    },
+    {
+      "id": "P11",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "west",
+      "version": "V1"
+    },
+    {
+      "id": "P12",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "west",
+      "version": "V1"
+    },
+    {
+      "id": "P20",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "north-observatory",
+      "version": "V1"
+    },
+    {
+      "id": "P21",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "north-observatory",
+      "version": "V1"
+    },
+    {
+      "id": "P22",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "north-observatory",
+      "version": "V1"
+    },
+    {
+      "id": "P30",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "pine-gate",
+      "version": "V1"
+    },
+    {
+      "id": "P31",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "pine-gate",
+      "version": "V1"
+    },
+    {
+      "id": "P32",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "pine-gate",
+      "version": "V1"
+    },
+    {
+      "id": "P40",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "bamboo-lodge",
+      "version": "V1"
+    },
+    {
+      "id": "P41",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "bamboo-lodge",
+      "version": "V1"
+    },
+    {
+      "id": "P42",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "bamboo-lodge",
+      "version": "V1"
+    },
+    {
+      "id": "P50",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "cloud-walk",
+      "version": "V1"
+    },
+    {
+      "id": "P51",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "cloud-walk",
+      "version": "V1"
+    },
+    {
+      "id": "P52",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "cloud-walk",
+      "version": "V1"
+    },
+    {
+      "id": "N00",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "memory-or-dream",
+        "incomplete:place"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N02",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "unresolved-clause",
+        "incomplete:people"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N03",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "ambiguous-place",
+        "incomplete:place"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N05",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "unknown-place",
+        "incomplete:place"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N06",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "unknown-place",
+        "incomplete:place"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N08",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "invalid-complete-roster",
+        "incomplete:people"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N09",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "invalid-complete-roster",
+        "incomplete:people"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N11",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "unresolved-clause",
+        "incomplete:people"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N12",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "invalid-complete-roster",
+        "incomplete:people"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N14",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "unresolved-clause",
+        "incomplete:people"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N15",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "invalid-complete-roster",
+        "incomplete:people"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N17",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "unresolved-clause",
+        "incomplete:people"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N18",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "memory-or-dream",
+        "incomplete:people"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N20",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "reported",
+        "incomplete:viewpoint",
+        "incomplete:perspective"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N21",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "unresolved-clause",
+        "incomplete:viewpoint",
+        "incomplete:perspective"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N23",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "unresolved-clause",
+        "incomplete:viewpoint",
+        "incomplete:perspective"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N24",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "unresolved-clause",
+        "incomplete:viewpoint",
+        "incomplete:perspective"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N26",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "negated",
+        "incomplete:features"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N27",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "invalid-structure-list",
+        "incomplete:features"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N29",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "non-narrative",
+        "incomplete:features"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N30",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "planned-or-hypothetical",
+        "incomplete:features"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N32",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "question",
+        "incomplete:timeOfDay"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N33",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "memory-or-dream",
+        "incomplete:timeOfDay"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N35",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "negated",
+        "incomplete:timeOfDay"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N36",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "unresolved-clause",
+        "incomplete:lighting"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N38",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "planned-or-hypothetical",
+        "incomplete:lighting"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N39",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "memory-or-dream",
+        "incomplete:lighting"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N41",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "unresolved-clause"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N42",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "non-narrative"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N44",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "unresolved-clause"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N45",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "unresolved-clause"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N47",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "unresolved-clause"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N48",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "planned-or-hypothetical"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N50",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "unknown-place",
+        "incomplete:place"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N51",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "conflict:timeOfDay",
+        "incomplete:timeOfDay"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N53",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "conflict:viewpoint",
+        "conflict:perspective",
+        "incomplete:viewpoint",
+        "incomplete:perspective"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N54",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "conflict:people",
+        "incomplete:people"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N56",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "incomplete:people"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N57",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "incomplete:timeOfDay"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "N59",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "incomplete:viewpoint",
+        "incomplete:perspective"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "C3a",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "pine-gate",
+      "version": "V2"
+    },
+    {
+      "id": "C3b",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "pine-gate",
+      "version": "V3"
+    },
+    {
+      "id": "C3c",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "C3d",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "pine-gate",
+      "version": "V1"
+    },
+    {
+      "id": "C3e",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "C3f",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "pine-gate",
+      "version": "V1"
+    },
+    {
+      "id": "C4a",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "bamboo-lodge",
+      "version": "V2"
+    },
+    {
+      "id": "C4b",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "bamboo-lodge",
+      "version": "V3"
+    },
+    {
+      "id": "C4c",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "C4d",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "bamboo-lodge",
+      "version": "V1"
+    },
+    {
+      "id": "C4e",
+      "split": "dev",
+      "category": "correctAbstain",
+      "reason": [
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ],
+      "scene": null,
+      "version": null
+    },
+    {
+      "id": "C4f",
+      "split": "dev",
+      "category": "correctAccept",
+      "reason": [],
+      "scene": "bamboo-lodge",
+      "version": "V1"
+    }
+  ],
+  "networkPermission": false,
+  "modelQueries": 0,
+  "textCalls": 0,
+  "imageCalls": 0,
+  "costUsd": 0
+}

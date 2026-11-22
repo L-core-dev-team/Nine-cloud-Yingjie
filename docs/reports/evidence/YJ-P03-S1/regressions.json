@@ -1,0 +1,479 @@
+{
+  "base": "bd8cd747f2417a734eec4fb2d9044699c6f458e8",
+  "corpusLock": "60fe8ffb3b03b377e556164da0bc3b23ae530fc5",
+  "node": "v26.13.0",
+  "suites": {
+    "contracts": {
+      "command": "node --permission --allow-fs-read=* --test-isolation=none --test-reporter=tap --test packages/contracts/test/*.test.mjs",
+      "exitCode": 0,
+      "observations": {
+        "tests": 10,
+        "pass": 10,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      }
+    },
+    "l3": {
+      "command": "node --permission --allow-fs-read=* --test-isolation=none --test-reporter=tap --test packages/first-play/test/scene-evidence.test.mjs packages/first-play/test/initial-survey.test.mjs packages/first-play/test/continuity.test.mjs",
+      "exitCode": 0,
+      "observations": {
+        "tests": 30,
+        "pass": 30,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0,
+        "legacy": [
+          {
+            "method": "zh-visible-clause/1",
+            "batch": "reference",
+            "exact": 17,
+            "incorrectAccept": 0,
+            "abstain": 7,
+            "unnecessaryAbstain": 0,
+            "wrongAbstentionKind": 0
+          },
+          {
+            "method": "zh-visible-clause/1",
+            "batch": "prose",
+            "exact": 4,
+            "incorrectAccept": 0,
+            "abstain": 3,
+            "unnecessaryAbstain": 3,
+            "wrongAbstentionKind": 0
+          },
+          {
+            "method": "zh-visible-clause/1",
+            "batch": "continuity",
+            "exact": 2,
+            "incorrectAccept": 1,
+            "abstain": 31,
+            "unnecessaryAbstain": 14,
+            "wrongAbstentionKind": 8
+          },
+          {
+            "method": "zh-visible-clause/2",
+            "batch": "reference",
+            "exact": 16,
+            "incorrectAccept": 0,
+            "abstain": 8,
+            "unnecessaryAbstain": 1,
+            "wrongAbstentionKind": 1
+          },
+          {
+            "method": "zh-visible-clause/2",
+            "batch": "prose",
+            "exact": 7,
+            "incorrectAccept": 0,
+            "abstain": 0,
+            "unnecessaryAbstain": 0,
+            "wrongAbstentionKind": 0
+          },
+          {
+            "method": "zh-visible-clause/2",
+            "batch": "continuity",
+            "exact": 16,
+            "incorrectAccept": 0,
+            "abstain": 18,
+            "unnecessaryAbstain": 0,
+            "wrongAbstentionKind": 0
+          }
+        ]
+      }
+    },
+    "imageEligibility": {
+      "command": "node --permission --allow-fs-read=* --test-isolation=none --test-reporter=tap --test packages/first-play/test/trigger.test.mjs",
+      "exitCode": 0,
+      "observations": {
+        "tests": 4,
+        "pass": 4,
+        "fail": 0,
+        "skipped": 0,
+        "cancelled": 0
+      }
+    },
+    "p01": {
+      "command": "node packages/provider-readiness/check.mjs ../s1-p01.json",
+      "exitCode": 0,
+      "observations": {
+        "cases": [
+          "offline contract runner has no network permission",
+          "CardModel sends only the cleared action and unsupported prose abstains",
+          "absent, revoked, expired, wrong scope and incomplete approvals never reach fake",
+          "scope, current facts and explicit material rights gate generation and editing",
+          "two connections share slots and never exceed count or total reservations",
+          "acknowledged failure keeps reservation and count boundary; refusal stays distinct",
+          "unconfirmed image cannot be resent after closing and reopening the ledger"
+        ],
+        "tests": 7,
+        "pass": 7,
+        "fail": 0,
+        "skipped": 0
+      }
+    },
+    "l1": {
+      "command": "node packages/luna-text/test/check.mjs ../s1-l1.json",
+      "exitCode": 0,
+      "observations": {
+        "status": "OFFLINE_PASS",
+        "scenarios": [
+          {
+            "scenario": "completed",
+            "state": "ACKNOWLEDGED",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "401",
+            "state": "REJECTED_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "403",
+            "state": "REJECTED_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "429",
+            "state": "REJECTED_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "503",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "redirect",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "timeout",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "bad-json",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "wrong-model",
+            "state": "FAIL",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "wrong-tier",
+            "state": "FAIL",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "tool",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "usage-missing",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "incomplete",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "unexpected-input-charge",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "over-output-limit",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          }
+        ],
+        "concurrentProcesses": 2,
+        "crashRestart": "APPROVAL_LOCKED"
+      }
+    },
+    "l4": {
+      "command": "node packages/luna-text/test/check.mjs ../s1-l4.json --l4",
+      "exitCode": 0,
+      "observations": {
+        "status": "OFFLINE_PASS",
+        "scenarios": [
+          {
+            "scenario": "completed",
+            "state": "ACKNOWLEDGED",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "401",
+            "state": "REJECTED_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "403",
+            "state": "REJECTED_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "429",
+            "state": "REJECTED_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "503",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "redirect",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "timeout",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "bad-json",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "wrong-model",
+            "state": "FAIL",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "wrong-tier",
+            "state": "FAIL",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "tool",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "usage-missing",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "incomplete",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "unexpected-input-charge",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "over-output-limit",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          }
+        ],
+        "concurrentProcesses": 2,
+        "crashRestart": "APPROVAL_LOCKED"
+      }
+    },
+    "i1": {
+      "command": "node packages/openai-image/check.mjs ../s1-i1.json",
+      "exitCode": 0,
+      "observations": [
+        {
+          "name": "offline adapter",
+          "pass": 60,
+          "tests": 60,
+          "fail": 0,
+          "skipped": 0
+        },
+        {
+          "name": "ImageTasks and process recovery",
+          "pass": 7,
+          "tests": 7,
+          "fail": 0,
+          "skipped": 0
+        }
+      ]
+    },
+    "i2": {
+      "command": "node packages/openai-image/check-money.mjs ../s1-i2.json",
+      "exitCode": 0,
+      "observations": {
+        "cases": [
+          "official price snapshot has no enforceable upper bound",
+          "missing USD approval",
+          "changed model",
+          "changed size",
+          "changed quality",
+          "changed project",
+          "wrong currency",
+          "different scope",
+          "different prompt",
+          "different endpoint",
+          "future approval",
+          "expired approval",
+          "expired tariff version",
+          "official rates without hard bound",
+          "per-call cap too small",
+          "multiple calls",
+          "wrong operation",
+          "edit without PNG processing rights",
+          "unknown reference input cost",
+          "different original SHA",
+          "revoked grant",
+          "missing history",
+          "stale stream",
+          "revoked reference",
+          "failed attempt insert",
+          "generate committed PNG and review",
+          "edit committed PNG and review",
+          "evening committed PNG and review",
+          "separate edit grant cannot exceed aggregate budget",
+          "reviewed mock generation requires separate scoped edit approval",
+          "reissued UUID and changed session cannot reopen the operation slot",
+          "price proof expiry and explicit outbound purpose",
+          "HTTP 400 keeps full hold",
+          "HTTP 401 keeps full hold",
+          "HTTP 403 keeps full hold",
+          "HTTP 422 keeps full hold",
+          "HTTP 429 keeps full hold",
+          "HTTP 503 keeps full hold",
+          "failed original save preserves budget and cannot replay",
+          "late edit after revocation remains pending on original attempt"
+        ],
+        "processChecks": {
+          "race": [
+            {
+              "state": "already-claimed",
+              "calls": 0,
+              "holds": 1,
+              "microUsd": 4000,
+              "sentAtPresent": true,
+              "stages": [
+                "gate-checked",
+                "money-reserved",
+                "possible-sent",
+                "stop"
+              ]
+            },
+            {
+              "state": "unknown",
+              "calls": 1,
+              "holds": 1,
+              "microUsd": 4000,
+              "sentAtPresent": true,
+              "stages": [
+                "gate-checked",
+                "money-reserved",
+                "possible-sent",
+                "stop"
+              ]
+            }
+          ],
+          "raceReopen": {
+            "state": "already-claimed",
+            "calls": 0,
+            "holds": 1,
+            "microUsd": 4000,
+            "sentAtPresent": true,
+            "stages": [
+              "gate-checked",
+              "money-reserved",
+              "possible-sent",
+              "stop"
+            ]
+          },
+          "raceLostAttempt": {
+            "state": "not-sent",
+            "calls": 0,
+            "holds": 1,
+            "microUsd": 4000,
+            "sentAtPresent": false,
+            "stages": [
+              "gate-checked",
+              "stop"
+            ]
+          },
+          "crash": {
+            "exit": 73
+          },
+          "crashReopen": {
+            "state": "already-claimed",
+            "calls": 0,
+            "holds": 1,
+            "microUsd": 4000,
+            "sentAtPresent": true,
+            "stages": [
+              "gate-checked",
+              "money-reserved",
+              "possible-sent"
+            ]
+          },
+          "crashLostAttempt": {
+            "state": "not-sent",
+            "calls": 0,
+            "holds": 1,
+            "microUsd": 4000,
+            "sentAtPresent": false,
+            "stages": [
+              "gate-checked",
+              "stop"
+            ]
+          },
+          "sharedBudget": {
+            "totalMicroUsd": 7000,
+            "generate": {
+              "state": "unknown",
+              "calls": 1,
+              "holds": 1,
+              "microUsd": 4000,
+              "sentAtPresent": true,
+              "stages": [
+                "gate-checked",
+                "money-reserved",
+                "possible-sent",
+                "stop"
+              ]
+            },
+            "edit": {
+              "state": "not-sent",
+              "calls": 0,
+              "holds": 1,
+              "microUsd": 4000,
+              "sentAtPresent": false,
+              "stages": [
+                "gate-checked",
+                "stop"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "env": {
+    "issue": 1,
+    "status": "ENV_BLOCKED / NOT_RUN",
+    "suites": [
+      "native PostgreSQL and Chrome",
+      "YJ-13 (22)",
+      "L4R (23)",
+      "new ordinary-card loopback"
+    ],
+    "loopbackProbes": 0
+  },
+  "realUsage": {
+    "modelQueries": 0,
+    "textCalls": 0,
+    "imageCalls": 0,
+    "usd": 0
+  }
+}
