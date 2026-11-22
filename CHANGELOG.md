@@ -1,5 +1,11 @@
 # 变更记录
 
+## 2026-11-22 I1 完成证据核对与 I2 图片预算门禁任务准备
+
+- 经 GitHub 核对 I1 已完成离线适配：60/60 API 形状/权限/响应测试及 7/7 ImageTasks/原件/恢复测试；最终重复回执哈希一致，旧开发失败历史保留。真实图片与原生 PG/Chrome NOT_RUN，不能将 mock 原件冒充真实供应商输出。
+- 新建 `codex/yj-p02-i2-image-monetary-gate`，上传[独立图片 USD 授权、发送前状态与成本上界任务书](docs/task-briefs/YJ-P02-I2-image-money-gate.md)，同步项目交接/决策/验证/任务序列。
+- 本轮仅任务书，I2 代码和本机回归 NOT_RUN；旧 L1/L4 许可、L5 状态、Dot 环境 Issue、两个 main 不变；没有新真实 API 调用与收费。
+
 ## I1 图片供应商离线交付
 
 **YJ-P02-I1 · IMAGE_ADAPTER_OFFLINE_PASS。** Images 首图与参考编辑已完成离线适配。协议、权限与响应检查 60/60，ImageTasks 与进程恢复 7/7。输出进入待审，真实发送关闭。本机原生 PG/Chrome 验收由 [Issue #1](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/issues/1) 跟踪。[报告与复跑](docs/reports/YJ-P02-I1-image-adapter-offline-report.md)

@@ -4,6 +4,8 @@
 
 ## 当前状态
 
+**下一阶段 YJ-P02-I2：真实图片计费前的独立美元额度与持久发送门禁（仅任务书，业务未执行）。** [I2 完整离线任务书](docs/task-briefs/YJ-P02-I2-image-money-gate.md)从 I1 已验收 HEAD 接续，重点解决 generate/edit 分别授权、可证明的计费最坏上界，以及 ImageTasks 本地拒绝前不应误标 `sentAt`。**没有新付费 API 权限，也没有实际图像服务验收；PG/Chrome EACCES 仍为环境问题。**
+
 **YJ-P02-I1 · IMAGE_ADAPTER_OFFLINE_PASS。** Images 首图与参考编辑已完成离线适配。协议、权限与响应检查 60/60，ImageTasks 与进程恢复 7/7。输出进入待审，真实发送关闭。本机原生 PG/Chrome 验收由 [Issue #1](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/issues/1) 跟踪。[报告与复跑](docs/reports/YJ-P02-I1-image-adapter-offline-report.md)
 
 **YJ-P02-L5B · ENV_BLOCKED。** 当前 Windows 环境允许 Node 监听本机随机端口，连接同一端口时返回 `connect EACCES`。HTTP、原生 Chrome、临时 PG、L4R 与 YJ-13 本轮未运行；L5 维持 PARTIAL。[实测与脱敏回执](docs/reports/YJ-P02-L5B-loopback-closeout-report.md)

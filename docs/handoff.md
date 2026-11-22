@@ -2,6 +2,13 @@
 
 更新：2026-11-22。
 
+## 最新接续：YJ-P02-I2 图片真实费用门禁的离线准备（仅任务书）
+
+- GitHub 已核对 `codex/yj-p02-i1-image-adapter-offline@31af7814f5805046ca5dc9a89d25cf685821ae3a`、[I1 完整报告](reports/YJ-P02-I1-image-adapter-offline-report.md)、[67 项最终回执](reports/evidence/YJ-P02-I1/verified.json)、[带开发过程失败的回归](reports/evidence/YJ-P02-I1/regression.json)和 `packages/openai-image/` 实际源码。I1 已完成真 API 形状的 generate JSON / edit multipart、可知事实提示、reference 许可/原图 SHA、严格 PNG 校验和 ImageTasks 待审，**但全部使用 mock transport / 合成预算单位**；真实服务与原生 PG/Chrome NOT_RUN。
+- 基于 I1 完成 HEAD 建立 `codex/yj-p02-i2-image-monetary-gate` 并上传[独立 I2 完整任务书](task-briefs/YJ-P02-I2-image-money-gate.md)。本轮只上传文档与交接，**I2 代码、测试及真实 API 请求均未执行**。
+- I2 首先审计 ImageTasks 当前设置 `sentAt` 的时间点与 Provider 内外发授权检查的先后，修复“本地未发送却被当作可能已发”的证据语义；实施独立 USD 预算与真实审批前置条件、持久防重、生成/编辑分离授权及受信阶段审计。无法根据官方价格和可强制上限证明最坏金额时保持 `LIVE_BLOCKED_COST_BOUND`。不允许使用旧 L1/L4 许可或 P01 合成积分代替美元上限。
+- 图片开发继续与 [Issue #1](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/issues/1) 的 `127.0.0.1 connect EACCES` 环境排障解耦，依赖原生 PG/Chrome 的验证保留 ENV_BLOCKED；没有新增真钱图片或文字授权，模型查询、生成、编辑实际 0 次。
+
 ## I1 图片供应商离线交付
 
 **YJ-P02-I1 · IMAGE_ADAPTER_OFFLINE_PASS。** Images 首图与参考编辑已完成离线适配。协议、权限与响应检查 60/60，ImageTasks 与进程恢复 7/7。输出进入待审，真实发送关闭。本机原生 PG/Chrome 验收由 [Issue #1](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/issues/1) 跟踪。[报告与复跑](reports/YJ-P02-I1-image-adapter-offline-report.md)

@@ -2,6 +2,12 @@
 
 更新：2026-11-22。
 
+## I1 GitHub 完成证据核对与 I2 任务准备（本轮）
+
+只读核对远端 `codex/yj-p02-i1-image-adapter-offline@31af7814f5805046ca5dc9a89d25cf685821ae3a`、[I1 运行报告](reports/YJ-P02-I1-image-adapter-offline-report.md)、[协议与图片任务 60/60+7/7 脱敏回执](reports/evidence/YJ-P02-I1/verified.json)、[回归与首次失败记录](reports/evidence/YJ-P02-I1/regression.json)，及 Provider 协议/场景提示/PNG、ImageTasks 代码。I1 只在内存假传输和 SQLite 测试替身里得到 IMAGE_ADAPTER_OFFLINE_PASS：模型访问、供应商出图/参考编辑费用与原生 PG/Chrome NOT_RUN。图片和文字真实调用 0、费用 0（仅针对 I1 执行记录）。
+
+从 I1 完成提交独立创建[完整 I2 钱额门禁任务书](task-briefs/YJ-P02-I2-image-money-gate.md)，明确合成 P01 预算非美元、ImageTasks 与 Provider 发送前校验时序可能造成 sentAt 语义误导，以及在没有官方可强制 worst-case 成本证据时保持 LIVE_BLOCKED。**本轮只准备 GitHub 任务，不在本机执行 I2 代码/PG/Chrome，不发生任何新模型 GET、图片或文字调用。** L4 UNKNOWN_STOP 与 Issue #1 ENV_BLOCKED 均保持。
+
 ## I1 图片供应商离线交付
 
 **YJ-P02-I1 · IMAGE_ADAPTER_OFFLINE_PASS。** Images 首图与参考编辑已完成离线适配。协议、权限与响应检查 60/60，ImageTasks 与进程恢复 7/7。输出进入待审，真实发送关闭。本机原生 PG/Chrome 验收由 [Issue #1](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/issues/1) 跟踪。[报告与复跑](reports/YJ-P02-I1-image-adapter-offline-report.md)
