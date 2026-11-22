@@ -1,0 +1,72 @@
+{
+  "contracts": {
+    "tests": 10,
+    "pass": 10,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "L3": {
+    "tests": 30,
+    "pass": 30,
+    "fail": 0,
+    "skipped": 0,
+    "cancelled": 0
+  },
+  "v3CompatibilityCases": 65,
+  "P01": {
+    "cases": [
+      "offline contract runner has no network permission",
+      "CardModel sends only the cleared action and unsupported prose abstains",
+      "absent, revoked, expired, wrong scope and incomplete approvals never reach fake",
+      "scope, current facts and explicit material rights gate generation and editing",
+      "two connections share slots and never exceed count or total reservations",
+      "acknowledged failure keeps reservation and count boundary; refusal stays distinct",
+      "unconfirmed image cannot be resent after closing and reopening the ledger"
+    ],
+    "tests": 7,
+    "pass": 7,
+    "fail": 0,
+    "skipped": 0
+  },
+  "L1FakeScenarios": 15,
+  "originalUI": {
+    "status": "OFFLINE_PASS",
+    "browser": "158.0.8127.36",
+    "checks": [
+      "host-origin-nonce-content-type-rejected",
+      "invite-single-use",
+      "unprepared-start-denied",
+      "check-no-send-no-reservation",
+      "input-cleared-storage-empty",
+      "refresh-invalidates",
+      "back-invalidates",
+      "clear-close-expiry-heartbeat-loss-invalidates",
+      "ready-still-requires-same-origin-explicit-confirmation",
+      "explicit-double-click-single-fake-send",
+      "unknown-survives-new-session"
+    ],
+    "fakeSends": 1,
+    "externalBrowserRequests": 0,
+    "realTextCalls": 0,
+    "realImageCalls": 0
+  },
+  "YJ13": {
+    "head": "e52d0f1e2e4b07782cd809acd31357307168016e",
+    "exit": 0,
+    "signal": null,
+    "tests": {
+      "tests": 22,
+      "pass": 22,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "failures": [],
+    "elapsedMs": 87126
+  },
+  "realTextCalls": 0,
+  "realImageCalls": 0,
+  "newCostUsd": 0
+}

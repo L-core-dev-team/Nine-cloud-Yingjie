@@ -7,7 +7,13 @@ import {tmpdir} from "node:os";
 import {mkdtemp,rm,writeFile} from "node:fs/promises";
 import {fileURLToPath} from "node:url";
 import {SingleApproval} from "../ledger.mjs";
-import {action,cardModel,endpoint,priceDate,preflight,prepare} from "../adapter.mjs";
+import {cardModel,endpoint} from "../adapter.mjs";
+import * as l1 from "../adapter.mjs";
+import * as l4 from "../l4/request.mjs";
+const isL4=process.argv.includes("--l4");
+const {action,priceDate,prepare}=isL4?l4:l1;
+const preflight=isL4?(key,day,now)=>l4.preflight(Boolean(key),day===priceDate,now):l1.preflight;
+const openLedger=file=>new SingleApproval(file,isL4?l4.grant:null);
 import {reply} from "./fake.mjs";
 
 const script=fileURLToPath(import.meta.url);
@@ -17,7 +23,7 @@ const prepared=prepare(input);
 async function worker(mode,dir) {
   assert.equal(process.permission.has("net"),false);
   if(mode==="race"){
-    const db=new SingleApproval(join(dir,"race.sqlite"));
+    const db=openLedger(join(dir,"race.sqlite"));
     process.send("ready");
     await once(process,"message");
     let n=0;
@@ -32,10 +38,10 @@ async function worker(mode,dir) {
   assert.ok(preflight("fixture",priceDate,new Date(today.valueOf()+86400000)).includes("BUDGET_GATE_NOT_VERIFIED"));
   const observations=[];
   for(const scenario of ["completed","401","403","429","503","redirect","timeout","bad-json","wrong-model","wrong-tier","tool","usage-missing","incomplete","unexpected-input-charge","over-output-limit"]){
-    const file=join(dir,scenario+".sqlite"),db=new SingleApproval(file);
+    const file=join(dir,scenario+".sqlite"),db=openLedger(file);
     db.arm(call,prepared);
     let sent=0;
-    const model=cardModel({ledger:db,key:"local-placeholder",transport:async(url,init)=>{
+    const model=cardModel({ledger:db,prepareRequest:prepare,hashResponseId:isL4,key:"local-placeholder",transport:async(url,init)=>{
       sent++;assert.equal(url,endpoint);assert.equal(init.method,"POST");assert.equal(init.redirect,"error");
       assert.equal(init.credentials,"omit");assert.equal(init.headers.Authorization,"Bearer local-placeholder");
       assert.ok(!init.body.includes("PRIVATE_SENTINEL"));
@@ -52,7 +58,7 @@ async function worker(mode,dir) {
       if(scenario==="tool")data.output.push({type:"function_call"});
       if(scenario==="usage-missing")delete data.usage;
       if(scenario==="incomplete")data.status="incomplete";
-      if(scenario==="unexpected-input-charge")Object.assign(data.usage,{input_tokens:700,total_tokens:758});
+      if(scenario==="unexpected-input-charge")Object.assign(data.usage,{input_tokens:prepared.inputBound+1,total_tokens:prepared.inputBound+59});
       if(scenario==="over-output-limit")Object.assign(data.usage,{output_tokens:1201,total_tokens:1326});
       return Response.json(data);
     }});
@@ -66,16 +72,21 @@ async function worker(mode,dir) {
     else await assert.rejects(run(),new RegExp(state));
     await assert.rejects(run(),/APPROVAL_LOCKED/);assert.equal(sent,1);
     const snapshot=db.snapshot();assert.equal(snapshot.state,state);
+    if(isL4){
+      assert.equal(snapshot.approvalId,l4.approvalId);
+      assert.deepEqual(snapshot.grant,l4.grant);assert.equal(snapshot.responseId,undefined);
+      if(state==="ACKNOWLEDGED")assert.match(snapshot.responseIdHash,/^[a-f0-9]{64}$/);
+    }
     if(state==="FAIL"){assert.equal(snapshot.usage.inputTokens,125);assert.equal(snapshot.usage.estimatedNanoUsd,null);}
     db.close();
-    const reopened=new SingleApproval(file);
+    const reopened=openLedger(file);
     assert.throws(()=>reopened.arm({...call,key:randomUUID()},prepared),/APPROVAL_LOCKED/);
     reopened.close();observations.push({scenario,state,fakeSends:sent});
   }
   process.send(observations);
 }
 function child(mode,dir) {
-  const child=fork(script,[mode,dir],{execArgv:["--permission","--allow-fs-read=*","--allow-fs-write="+dir],
+  const child=fork(script,[mode,dir,...(isL4?["--l4"]:[])],{execArgv:["--permission","--allow-fs-read=*","--allow-fs-write="+dir],
     env:{SystemRoot:process.env.SystemRoot,PATH:process.env.PATH},stdio:["ignore","inherit","inherit","ipc"]});
   const done=once(child,"exit").then(([code])=>assert.equal(code,0));
   // Reject on premature exit so a broken worker cannot hang its parent.
@@ -88,16 +99,16 @@ if(process.send){
   const dir=await mkdtemp(join(tmpdir(),"luna-offline-"));
   try{
     const checks=child("suite",dir);const scenarios=await checks.message();await checks.done;
-    let db=new SingleApproval(join(dir,"race.sqlite"));db.arm(call,prepared);db.close();
+    let db=openLedger(join(dir,"race.sqlite"));db.arm(call,prepared);db.close();
     const racers=[child("race",dir),child("race",dir)];
     assert.deepEqual(await Promise.all(racers.map(r=>r.message())),["ready","ready"]);
     const counts=Promise.all(racers.map(r=>r.message()));
     racers.forEach(r=>r.child.send("go"));
     const wins=await counts;await Promise.all(racers.map(r=>r.done));assert.deepEqual(wins.sort(),[0,1]);
-    db=new SingleApproval(join(dir,"race.sqlite"));
+    db=openLedger(join(dir,"race.sqlite"));
     assert.equal(db.snapshot().state,"possible-sent");
     assert.throws(()=>db.claim(call,prepared),/APPROVAL_LOCKED/);db.close();
-    const report={status:"OFFLINE_PASS",node:process.version,networkPermission:false,scenarios,
+    const report={...(isL4?{approvalId:l4.approvalId}:{}),status:"OFFLINE_PASS",node:process.version,networkPermission:false,scenarios,
       concurrentProcesses:2,possibleSendsAfterRace:wins.reduce((a,b)=>a+b),crashRestart:"APPROVAL_LOCKED",
       requestSha256:prepared.requestSha256,inputBound:prepared.inputBound,realTextCalls:0,realImageCalls:0};
     if(process.argv[2])await writeFile(process.argv[2],JSON.stringify(report,null,2)+"\n",{flag:"wx"});

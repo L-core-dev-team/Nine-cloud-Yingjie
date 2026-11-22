@@ -47,9 +47,9 @@ function account(usage,standardLuna) {
 
 // The live caller supplies the pinned upstream HTTPS transport and the server-only grant.
 // The upstream service alone commits the returned narrative.
-export function cardModel({ledger,transport,key,takeKey=()=>key,gate=()=>{},cancelSignal}) {
+export function cardModel({ledger,transport,key,takeKey=()=>key,gate=()=>{},cancelSignal,prepareRequest=prepare,hashResponseId=false}) {
   return async (input, signal, call) => {
-    const prepared=prepare(input);
+    const prepared=prepareRequest(input);
     gate(); signal.throwIfAborted();cancelSignal?.throwIfAborted();
     ledger.claim(call,prepared);
     let phase="UNKNOWN_STOP", httpStatus=null, responseId=null, usage=null, narrative;
@@ -83,7 +83,7 @@ export function cardModel({ledger,transport,key,takeKey=()=>key,gate=()=>{},canc
         }
       }
     } catch { /* Preserve possible delivery and discard untrusted error bodies. */ }
-    ledger.finish(phase,{httpStatus,responseId,responseModel,responseTier,usage,bodySha256:narrative?digest(narrative):null});
+    ledger.finish(phase,{httpStatus,...(hashResponseId?{responseIdHash:responseId?digest(responseId):null}:{responseId}),responseModel,responseTier,usage,bodySha256:narrative?digest(narrative):null});
     if (phase!=="ACKNOWLEDGED") throw Error(phase);
     return narrative;
   };

@@ -1,0 +1,202 @@
+{
+  "status": "PREP_OFFLINE_PASS",
+  "grant": {
+    "approvalId": "YJ-P02-L4-single-luna-scene",
+    "priceDate": "2026-11-22",
+    "model": "gpt-6-luna",
+    "limit": 1,
+    "reserveNanoUsd": 100000000,
+    "ceilingNanoUsd": 807750,
+    "purpose": "synthetic-tavern-text",
+    "requestSha256": "37c06b167d46be0774edc403ed18738517ffe7b676c738679da6c2d0f0eb0124",
+    "expires": "2026-11-22T23:59:59.999+08:00"
+  },
+  "history": {
+    "browser": "158.0.8127.36",
+    "node": "v26.13.0",
+    "actionPosts": 1,
+    "fakeSends": 1,
+    "cardStatus": "completed",
+    "revision": 1,
+    "bodySha256": "2a8047d4a58b1067860b87bb34ea723333fb7482f0b18ff7fc9aae12c90761eb",
+    "source": "completed-history",
+    "scene": {
+      "method": "l4-scene-review/1",
+      "status": "ready",
+      "reason": null,
+      "blockers": [],
+      "conflicts": [],
+      "fields": {
+        "place": {
+          "precision": "complete",
+          "evidenceIndex": 0
+        },
+        "people": {
+          "precision": "complete",
+          "evidenceIndex": 2
+        },
+        "features": {
+          "precision": "complete",
+          "evidenceIndex": 3
+        },
+        "lighting": {
+          "precision": "complete",
+          "evidenceIndex": 5
+        },
+        "timeOfDay": {
+          "precision": "complete",
+          "evidenceIndex": 4
+        },
+        "viewpoint": {
+          "precision": "complete",
+          "evidenceIndex": 1
+        },
+        "perspective": {
+          "precision": "complete",
+          "evidenceIndex": 1
+        }
+      },
+      "evidence": [
+        {
+          "start": 0,
+          "length": 10,
+          "rule": "indexed-arrival",
+          "scope": "explicit-current",
+          "playerKnown": true,
+          "spanHash": "0177e4c8019193423e444ffee119aacdb896347807d6791af5b5ae94b76724f6"
+        },
+        {
+          "start": 11,
+          "length": 10,
+          "rule": "player-position-and-direction",
+          "scope": "explicit-current",
+          "playerKnown": true,
+          "spanHash": "bf9d6a370e320640a5199644438ac1380388955803a41e5b12456123e7bc4b3b"
+        },
+        {
+          "start": 22,
+          "length": 20,
+          "rule": "exclusive-roster",
+          "scope": "explicit-current",
+          "playerKnown": true,
+          "spanHash": "f19810209bd5c591e624829153c43d6151d72287a789eb85b18388f0119e9a08"
+        },
+        {
+          "start": 43,
+          "length": 14,
+          "rule": "visible-fixed-structures",
+          "scope": "explicit-current",
+          "playerKnown": true,
+          "spanHash": "f07eeb3eeb554ade3768d262a179f04d00e58e88707ef6822c104c2aee4d4ea6"
+        },
+        {
+          "start": 58,
+          "length": 6,
+          "rule": "explicit-time",
+          "scope": "explicit-current",
+          "playerKnown": true,
+          "spanHash": "145d464f71a6d493c61a8f164f75e8d3263e087cfde35327002f4c217f40d39c"
+        },
+        {
+          "start": 65,
+          "length": 6,
+          "rule": "observed-light",
+          "scope": "explicit-current",
+          "playerKnown": true,
+          "spanHash": "3f1e21f3d1b5dfa8c429914d041b169717b47e90db489c59423e36d26aafa919"
+        }
+      ],
+      "semanticReview": "all-bounded-claims-match"
+    },
+    "sourceMatchesPostgres": true,
+    "extraction": "ready",
+    "imageTasks": 0,
+    "imageAttempts": 0,
+    "imageSends": 0
+  },
+  "cases": [
+    {
+      "id": "complete",
+      "shouldAccept": true,
+      "status": "ready",
+      "conflicts": []
+    },
+    {
+      "id": "semicolon",
+      "shouldAccept": true,
+      "status": "ready",
+      "conflicts": []
+    },
+    {
+      "id": "order",
+      "shouldAccept": true,
+      "status": "ready",
+      "conflicts": []
+    },
+    {
+      "id": "natural-paraphrase",
+      "shouldAccept": true,
+      "status": "not-ready",
+      "conflicts": []
+    },
+    {
+      "id": "partial",
+      "shouldAccept": false,
+      "status": "not-ready",
+      "conflicts": []
+    },
+    {
+      "id": "dream",
+      "shouldAccept": false,
+      "status": "not-ready",
+      "conflicts": []
+    },
+    {
+      "id": "other-place",
+      "shouldAccept": false,
+      "status": "not-ready",
+      "conflicts": [
+        "place",
+        "viewpoint",
+        "perspective",
+        "people",
+        "features",
+        "timeOfDay",
+        "lighting"
+      ]
+    },
+    {
+      "id": "wrong-count",
+      "shouldAccept": false,
+      "status": "not-ready",
+      "conflicts": [
+        "people"
+      ]
+    },
+    {
+      "id": "wrong-direction",
+      "shouldAccept": false,
+      "status": "not-ready",
+      "conflicts": [
+        "perspective"
+      ]
+    }
+  ],
+  "falseAccept": 0,
+  "unnecessaryAbstain": 1,
+  "abstain": 6,
+  "ui": {
+    "lookups": 2,
+    "clicks": 1,
+    "modelCallsBeforeClick": 0
+  },
+  "fakeUsage": {
+    "inputTokens": 125,
+    "outputTokens": 58,
+    "reasoningTokens": 0,
+    "estimatedNanoUsd": 41500
+  },
+  "realTextCalls": 0,
+  "realImageCalls": 0,
+  "newCostUsd": 0
+}
