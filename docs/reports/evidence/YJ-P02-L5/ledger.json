@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "crashExit": 73,
+  "raceWins": [
+    0,
+    1
+  ],
+  "recovered": "POSSIBLE_SEND_UNCONFIRMED",
+  "timeoutSends": 1,
+  "secondClaims": 0,
+  "renewedScopeClaims": 0,
+  "realModelQueries": 0,
+  "realTextCalls": 0,
+  "realImageCalls": 0,
+  "newCostUsd": 0
+}

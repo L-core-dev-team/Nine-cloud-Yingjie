@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-**YJ-P02-L5 安全接续任务书已就绪，代码及测试尚未执行。** 基于 L4R 的新页面状态与分阶段回执，准备一个**全新且独立**的 Luna 合成酒馆文字试点入口。[L5 完整任务书](docs/task-briefs/YJ-P02-L5-one-shot-recovery.md)。旧 L4 永远按 `UNKNOWN_STOP` 停用；**L5 没有获得任何新 API 付费授权**，Codex 只能先完成零网络 mock、Chrome/PG 与防重复验证。
+**YJ-P02-L5 · PARTIAL。** 独立零预算账本、崩溃防重、12 项内存处理测试和 7 项真实 Chrome 页面测试已通过。Windows 沙箱阻止本机 TCP，原角色卡／PostgreSQL、L4R 与 YJ-13 整链路尚待验收。真实服务调用 0，L4 继续 UNKNOWN_STOP。[报告、回执与复跑](docs/reports/YJ-P02-L5-one-shot-recovery-report.md)
 
 **YJ-P02-L4R 已完成离线复现与修复。** 本机未找回原进程、真实账本或收据，原 L4 继续 UNKNOWN_STOP。旧页面在两条不同失败路径上给出相同提示；新页面区分服务端受理、发送前拒绝和送达未知。[取证报告与复跑](docs/reports/YJ-P02-L4R-trigger-forensics-report.md)
 

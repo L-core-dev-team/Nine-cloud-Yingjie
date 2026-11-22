@@ -2,7 +2,11 @@
 
 更新：2026-11-22。
 
-## L5 独立试点准备：真实费用尚未批准
+## L5 离线交付与剩余验收
+
+**YJ-P02-L5 · PARTIAL。** 独立零预算账本、崩溃防重、12 项内存处理测试和 7 项真实 Chrome 页面测试已通过。Windows 沙箱阻止本机 TCP，原角色卡／PostgreSQL、L4R 与 YJ-13 整链路尚待验收。真实服务调用 0，L4 继续 UNKNOWN_STOP。[报告、回执与复跑](reports/YJ-P02-L5-one-shot-recovery-report.md)
+
+## 归档 · L5 独立试点准备：真实费用尚未批准
 
 在 L4R 完成一次性入口的离线修复后，已准备 [YJ-P02-L5 安全单次试点任务书](task-briefs/YJ-P02-L5-one-shot-recovery.md)。本阶段只授权 Codex 继续零网络实施。**新的真实推理、模型 GET 和图片 API 均未获得 L5 授权**；再次真实文字测试需重新批准模型、合成素材、最多 1 次及独立 USD 预算。L1 已用尽，L4 UNKNOWN_STOP 停用，两者均不得重置或拿来解锁 L5。
 

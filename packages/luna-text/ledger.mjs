@@ -9,7 +9,7 @@ function binding(call,prepared,grant) {
       !ids.slice(1).every(x=>/^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/i.test(x))) throw Error("INVALID_SCOPE");
   return JSON.stringify({ownerHash:digest(ids[0]),sessionHash:digest(ids[1]),actionKeyHash:digest(ids[2]),
     requestSha256:prepared.requestSha256,model:modelId,maxOutputTokens:outputLimit,inputBound:prepared.inputBound,
-    ceilingNanoUsd:grant?.ceilingNanoUsd??ceilingNanoUsd,reserveNanoUsd,...(grant?{grant}:{})});
+    ceilingNanoUsd:grant?.ceilingNanoUsd??ceilingNanoUsd,reserveNanoUsd:grant?.reserveNanoUsd??reserveNanoUsd,...(grant?{grant}:{})});
 }
 export class SingleApproval {
   constructor(file,grant=null,mark=()=>{}) {

@@ -2,7 +2,11 @@
 
 更新：2026-11-22。
 
-## GitHub 核对 L4R 与 L5 零网络任务准备（本轮）
+## L5 离线交付与剩余验收
+
+**YJ-P02-L5 · PARTIAL。** 独立零预算账本、崩溃防重、12 项内存处理测试和 7 项真实 Chrome 页面测试已通过。Windows 沙箱阻止本机 TCP，原角色卡／PostgreSQL、L4R 与 YJ-13 整链路尚待验收。真实服务调用 0，L4 继续 UNKNOWN_STOP。[报告、回执与复跑](reports/YJ-P02-L5-one-shot-recovery-report.md)
+
+## 归档 · GitHub 核对 L4R 与 L5 零网络任务准备（本轮）
 
 只读核对 `codex/yj-p02-l4r-trigger-forensics@d05c2355c32e0637aff4e2ce75a165ac7ac6769c`、[运行报告](reports/YJ-P02-L4R-trigger-forensics-report.md)、[historical-review](reports/evidence/YJ-P02-L4R/historical-review.json)、[Chrome/HTTP 测试](reports/evidence/YJ-P02-L4R/browser.json)、[断点防重](reports/evidence/YJ-P02-L4R/crash.json)，以及 `key-entry/server.mjs`、`entry.js`、`stages.mjs` 与停用的 `l4/launch.mjs`。L4R 原环境无法证明旧 L4 真正送达与否，其账单/场景为 UNKNOWN；23 定向测试及模拟防重的结果取自原执行记录，YJ-13 第一次 15/22（测试隔离误拦）随后 22/22。**本轮只在 GitHub 远端核对，并未独立执行 Windows 本地测试**。
 

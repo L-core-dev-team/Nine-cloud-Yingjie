@@ -47,7 +47,7 @@ function account(usage,standardLuna) {
 
 // The live caller supplies the pinned upstream HTTPS transport and the server-only grant.
 // The upstream service alone commits the returned narrative.
-export function cardModel({ledger,transport,key,takeKey=()=>key,gate=()=>{},cancelSignal,prepareRequest=prepare,hashResponseId=false,mark=()=>{}}) {
+export function cardModel({ledger,transport,key,takeKey=()=>key,gate=()=>{},cancelSignal,prepareRequest=prepare,hashResponseId=false,estimateCharge=true,mark=()=>{}}) {
   return async (input, signal, call) => {
     const prepared=prepareRequest(input);
     gate(); signal.throwIfAborted();cancelSignal?.throwIfAborted();
@@ -67,7 +67,7 @@ export function cardModel({ledger,transport,key,takeKey=()=>key,gate=()=>{},canc
         if (typeof data.service_tier==="string") responseTier=data.service_tier==="default"?"default":"unexpected";
         if(responseModel==="unexpected" || responseTier==="unexpected") phase="FAIL";
         const standardLuna=responseModel===modelId && responseTier==="default";
-        usage=account(data.usage,standardLuna);
+        usage=account(data.usage,standardLuna && estimateCharge);
         const messages=data.output?.filter(item=>item.type==="message");
         // A reasoning item is metadata. No calls, extra modalities, refusals or partial text.
         if (standardLuna && responseId && usage && usage.inputTokens>0 && usage.inputTokens<=prepared.inputBound &&

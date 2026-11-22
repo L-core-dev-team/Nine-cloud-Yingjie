@@ -14,21 +14,23 @@ const headers={"Cache-Control":"no-store","Referrer-Policy":"no-referrer","X-Con
   "Content-Security-Policy":"default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; worker-src 'none'; object-src 'none'",
   "Permissions-Policy":"camera=(), microphone=(), geolocation=()"};
 // No access logger; deny unexpected destinations and authenticate before reading any bytes.
-export async function serve({inspect,execute,verifyModel,html,journal=stageJournal(),lifetimeMs=15*60_000,leaseMs=90_000,now=Date.now}) {
+export async function serve({inspect,execute,verifyModel,html,acceptSecret,beforeAccept,makeServer=createServer,retainAccepted=false,journal=stageJournal(),lifetimeMs=15*60_000,leaseMs=90_000,now=Date.now}) {
   const {mark,runHash}=journal;
   let invite=token(),session=null,secret=null,state="new",verified=false;
   const expiresAt=now()+lifetimeMs;
   let lastSeen=now(),origin,timer,modelVisible=false;
   const controller=new AbortController();
   function forget(){secret?.fill(0);secret=null;}
+  let accepted = false;
   function close(){
     if(state==="closed")return;
     if(state!=="running"){try{mark("stop");}catch{/* Cleanup still takes priority. */}}
-    state="closed";forget();invite=null;session=null;controller.abort();clearInterval(timer);
+    state="closed";invite=null;session=null;clearInterval(timer);
+    if (!retainAccepted || !accepted) { forget(); controller.abort(); }
     server.close();server.closeIdleConnections();
   }
   function expired(){return now()>=expiresAt || (session && now()-lastSeen>leaseMs);}
-  const server=createServer({maxHeaderSize:8192,requestTimeout:5000,headersTimeout:5000},async(req,res)=>{
+  const server=makeServer({maxHeaderSize:8192,requestTimeout:5000,headersTimeout:5000},async(req,res)=>{
     for(const [k,v] of Object.entries(headers))res.setHeader(k,v);
     res.setHeader("Connection","close");
     const json=(status,obj)=>{res.writeHead(status,{"Content-Type":"application/json"});res.end(JSON.stringify(obj));};
@@ -61,6 +63,7 @@ export async function serve({inspect,execute,verifyModel,html,journal=stageJourn
       if(req.url==="/check" && ["open","checked","ready"].includes(state)){
         if(n){
           if(secret || n<12 || body.some(b=>b<33 || b>126))return deny(400);
+          if(acceptSecret && !acceptSecret(body))return deny(400);
           secret=Buffer.from(body);
         }
         verified=req.headers["x-yj-project"]==="verified";
@@ -82,8 +85,10 @@ export async function serve({inspect,execute,verifyModel,html,journal=stageJourn
         if(reasons.length){
           mark("gate-denied");json(409,{status:"START_REJECTED_BEFORE_SEND"});close();return;
         }
+        try{beforeAccept?.();}catch{mark("gate-denied");json(409,{status:"START_REJECTED_BEFORE_SEND"});close();return;}
         state="running";
         try{mark("start-accepted");}catch{json(503,{status:"START_REJECTED_BEFORE_SEND"});close();return;}
+        accepted=true;
         res.writeHead(200,{"Content-Type":"application/json","X-YJ-Start":"accepted"});
         res.flushHeaders();
         res.on("close",()=>{if(!res.writableEnded)close();});
@@ -94,6 +99,7 @@ export async function serve({inspect,execute,verifyModel,html,journal=stageJourn
         catch{result={status:"POSSIBLE_SEND_UNCONFIRMED"};}
         finally{
           try{mark("stop");}catch{result={status:"POSSIBLE_SEND_UNCONFIRMED"};}
+          accepted=false;forget();controller.abort();
           if(!res.destroyed)res.end(JSON.stringify(result));
           close();
         }

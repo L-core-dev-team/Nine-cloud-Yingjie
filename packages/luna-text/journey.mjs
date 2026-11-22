@@ -28,9 +28,9 @@ export async function journey({live,ledger,key,takeKey,gate,cancelSignal,pilot})
       async (url,init,address)=>{
         assert.equal(url.href,endpoint);assert.equal(address,"1.2.3.4");
         assert.equal(init.body,prepareRequest({action:requestAction}).body);
-        fakeSends++;return Response.json(pilot?.fakeReply?.()??reply());
+        fakeSends++;return Response.json((await pilot?.fakeReply?.())??reply());
       });
-    const model=cardModel({ledger,transport:send,key,takeKey,gate,cancelSignal,prepareRequest,hashResponseId:Boolean(pilot),mark:pilot?.mark});
+    const model=cardModel({ledger,transport:send,key,takeKey,gate,cancelSignal,prepareRequest,hashResponseId:Boolean(pilot),estimateCharge:pilot?.estimateCharge??true,mark:pilot?.mark});
     const provider={capability:{schemaVersion:"0.1",entry:"luna-no-images",origin:"mock",
       verifiedAt:"2026-11-21T00:00:00Z",generate:"unknown",referenceEdit:"unknown",query:"unknown",cancel:"unknown",idempotency:"unknown"},
       async send(){imageSends++;throw Error("NO_IMAGE_PERMISSION");}};
@@ -92,6 +92,13 @@ export async function journey({live,ledger,key,takeKey,gate,cancelSignal,pilot})
         const saved=await sync();
         assert.equal(saved.applied,1);assert.equal(saved.revision,1);
         assert.ok(["ready","not-ready"].includes(saved.result.status));
+        let replayApplied;
+        if (pilot?.verifyReplay) {
+          const replay=await sync();
+          assert.equal(replay.revision,saved.revision);
+          assert.equal(replay.applied,0);
+          replayApplied=replay.applied;
+        }
         const events=(await projection.query("SELECT raw_text_hash,source FROM yingjie_scene.event")).rows;
         assert.equal(events.length,1);assert.equal(events[0].raw_text_hash,digest(h.narrative));
         assert.equal(events[0].source.evidence,"completed-history");assert.equal(events[0].source.key,bound.key);
@@ -100,7 +107,7 @@ export async function journey({live,ledger,key,takeKey,gate,cancelSignal,pilot})
         assert.deepEqual(images,{tasks:0,attempts:0});assert.equal(imageSends,0);
         evidence={browser:browser.version(),node:process.version,actionPosts:forwarded,fakeSends,
           cardStatus:row.status,revision:row.revision,bodySha256:digest(h.narrative),source:events[0].source.evidence,
-          ...(pilot?{scene:await pilot.inspectSaved(projection,h,events[0].source)}:{}),sourceMatchesPostgres:true,extraction:saved.result.status,imageTasks:images.tasks,imageAttempts:images.attempts,imageSends};
+          ...(pilot?{scene:await pilot.inspectSaved(projection,h,events[0].source)}:{}),...(pilot?.verifyReplay?{replayApplied}:{}),sourceMatchesPostgres:true,extraction:saved.result.status,imageTasks:images.tasks,imageAttempts:images.attempts,imageSends};
         pilot?.mark?.("scene-reviewed");
       }finally{await browser.close();}
     },{assets:[]},{model,provider,extractor});

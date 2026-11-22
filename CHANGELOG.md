@@ -1,6 +1,10 @@
 # 变更记录
 
-## 2026-11-22 L4R 验收核对与 L5 独立试点准备
+## L5 离线交付与剩余验收
+
+**YJ-P02-L5 · PARTIAL。** 独立零预算账本、崩溃防重、12 项内存处理测试和 7 项真实 Chrome 页面测试已通过。Windows 沙箱阻止本机 TCP，原角色卡／PostgreSQL、L4R 与 YJ-13 整链路尚待验收。真实服务调用 0，L4 继续 UNKNOWN_STOP。[报告、回执与复跑](docs/reports/YJ-P02-L5-one-shot-recovery-report.md)
+
+## 归档 · 2026-11-22 L4R 验收核对与 L5 独立试点准备
 
 - GitHub 核对 L4R 的 23 项定向假 Key 复现、页面分阶段审计、并发/中断防重和 YJ-13 首次 15/22 后 22/22 的实证范围；本轮未在 Windows 上独立重跑。
 - 旧 L4 一直 UNKNOWN_STOP，不知道是否真实发送/收费，已经停用。已新建 `codex/yj-p02-l5-one-shot-recovery` 并上传[完整 L5 零网络安全接续任务书](docs/task-briefs/YJ-P02-L5-one-shot-recovery.md)，同步交接与任务看板。

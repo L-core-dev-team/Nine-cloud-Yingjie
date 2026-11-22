@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "chrome": "158.0.8127.36",
+  "transport": "fully-intercepted browser document and synthetic fetch",
+  "results": [
+    {
+      "mode": "lost",
+      "acceptedHeaderSeen": false,
+      "finalLabel": "无法排除已发送",
+      "startClicksForwarded": 1
+    },
+    {
+      "mode": "rejected",
+      "acceptedHeaderSeen": false,
+      "finalLabel": "发送前被拒绝",
+      "startClicksForwarded": 1
+    },
+    {
+      "mode": "unknown",
+      "acceptedHeaderSeen": true,
+      "finalLabel": "无法排除已发送",
+      "startClicksForwarded": 1
+    },
+    {
+      "mode": "ack",
+      "acceptedHeaderSeen": true,
+      "finalLabel": "completed-history 尚未校验",
+      "startClicksForwarded": 1
+    },
+    {
+      "mode": "ready",
+      "acceptedHeaderSeen": true,
+      "finalLabel": "scene ready",
+      "startClicksForwarded": 1
+    },
+    {
+      "mode": "incomplete",
+      "acceptedHeaderSeen": true,
+      "finalLabel": "scene not-ready",
+      "startClicksForwarded": 1
+    },
+    {
+      "mode": "expired",
+      "acceptedHeaderSeen": false,
+      "finalLabel": "邀请已过期",
+      "startClicksForwarded": 1
+    }
+  ]
+}

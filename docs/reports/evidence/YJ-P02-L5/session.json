@@ -1,0 +1,309 @@
+{
+  "status": "PASS",
+  "http": "in-memory",
+  "history": "test-double",
+  "checks": [
+    {
+      "mode": "lost",
+      "sends": 0,
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "stop"
+      ],
+      "status": "NO_LOCAL_RECORD"
+    },
+    {
+      "mode": "reject",
+      "sends": 0,
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "gate-denied",
+        "stop"
+      ],
+      "status": "NO_LOCAL_RECORD"
+    },
+    {
+      "mode": "expiry",
+      "sends": 0,
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "stop"
+      ],
+      "status": "NO_LOCAL_RECORD"
+    },
+    {
+      "mode": "slow-disconnect",
+      "sends": 1,
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "start-accepted",
+        "receipt-created",
+        "start-received",
+        "ledger-not-sent",
+        "ledger-possible-sent",
+        "provider-response-seen",
+        "history-committed",
+        "scene-reviewed",
+        "stop"
+      ],
+      "status": "MOCK_HISTORY_VERIFIED",
+      "scene": "ready"
+    },
+    {
+      "mode": "slow-reply",
+      "sends": 1,
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "start-accepted",
+        "receipt-created",
+        "ledger-not-sent",
+        "ledger-possible-sent",
+        "start-received",
+        "provider-response-seen",
+        "history-committed",
+        "scene-reviewed",
+        "stop"
+      ],
+      "status": "MOCK_HISTORY_VERIFIED",
+      "scene": "ready"
+    },
+    {
+      "mode": "pagehide",
+      "sends": 1,
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "start-accepted",
+        "receipt-created",
+        "start-received",
+        "ledger-not-sent",
+        "ledger-possible-sent",
+        "provider-response-seen",
+        "history-committed",
+        "scene-reviewed",
+        "stop"
+      ],
+      "status": "MOCK_HISTORY_VERIFIED",
+      "scene": "ready"
+    },
+    {
+      "mode": "lease-after-accept",
+      "sends": 1,
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "start-accepted",
+        "receipt-created",
+        "start-received",
+        "ledger-not-sent",
+        "ledger-possible-sent",
+        "provider-response-seen",
+        "history-committed",
+        "scene-reviewed",
+        "stop"
+      ],
+      "status": "MOCK_HISTORY_VERIFIED",
+      "scene": "ready"
+    },
+    {
+      "mode": "unknown",
+      "sends": 1,
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "start-accepted",
+        "receipt-created",
+        "ledger-not-sent",
+        "ledger-possible-sent",
+        "stop"
+      ],
+      "status": "POSSIBLE_SEND_UNCONFIRMED"
+    },
+    {
+      "mode": "ack-no-history",
+      "sends": 1,
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "start-accepted",
+        "receipt-created",
+        "ledger-not-sent",
+        "ledger-possible-sent",
+        "provider-response-seen",
+        "stop"
+      ],
+      "status": "ACKNOWLEDGED_HISTORY_UNVERIFIED"
+    },
+    {
+      "mode": "scene-failure",
+      "sends": 1,
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "start-accepted",
+        "receipt-created",
+        "ledger-not-sent",
+        "ledger-possible-sent",
+        "provider-response-seen",
+        "history-committed",
+        "stop"
+      ],
+      "status": "HISTORY_COMMITTED_SCENE_UNVERIFIED"
+    },
+    {
+      "mode": "complete",
+      "sends": 1,
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "start-accepted",
+        "receipt-created",
+        "ledger-not-sent",
+        "ledger-possible-sent",
+        "provider-response-seen",
+        "history-committed",
+        "scene-reviewed",
+        "stop"
+      ],
+      "status": "MOCK_HISTORY_VERIFIED",
+      "scene": "ready"
+    },
+    {
+      "mode": "nonexclusive",
+      "sends": 1,
+      "stages": [
+        "invite-claimed",
+        "preflight-ready",
+        "start-received",
+        "start-accepted",
+        "receipt-created",
+        "ledger-not-sent",
+        "ledger-possible-sent",
+        "provider-response-seen",
+        "history-committed",
+        "scene-reviewed",
+        "stop"
+      ],
+      "status": "MOCK_HISTORY_VERIFIED",
+      "scene": "not-ready"
+    }
+  ],
+  "reviewed": [
+    {
+      "id": "complete",
+      "status": "ready",
+      "blockers": [],
+      "conflicts": []
+    },
+    {
+      "id": "nonexclusive",
+      "status": "not-ready",
+      "blockers": [
+        "incomplete:people"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "location",
+      "status": "not-ready",
+      "blockers": [
+        "scenario-conflict"
+      ],
+      "conflicts": [
+        "place",
+        "viewpoint",
+        "perspective",
+        "people",
+        "features",
+        "timeOfDay",
+        "lighting"
+      ]
+    },
+    {
+      "id": "viewpoint",
+      "status": "not-ready",
+      "blockers": [
+        "scenario-conflict"
+      ],
+      "conflicts": [
+        "perspective"
+      ]
+    },
+    {
+      "id": "old-image",
+      "status": "not-ready",
+      "blockers": [
+        "unverified-scope:unknown",
+        "arrival-after-observations",
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "self-report",
+      "status": "not-ready",
+      "blockers": [
+        "unverified-scope:unknown",
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "partial",
+      "status": "not-ready",
+      "blockers": [
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:timeOfDay"
+      ],
+      "conflicts": []
+    },
+    {
+      "id": "paraphrase",
+      "status": "not-ready",
+      "blockers": [
+        "unverified-scope:unknown",
+        "incomplete:place",
+        "incomplete:viewpoint",
+        "incomplete:perspective",
+        "incomplete:people",
+        "incomplete:features",
+        "incomplete:timeOfDay",
+        "incomplete:lighting"
+      ],
+      "conflicts": []
+    }
+  ],
+  "realModelQueries": 0,
+  "realTextCalls": 0,
+  "realImageCalls": 0,
+  "newCostUsd": 0
+}
