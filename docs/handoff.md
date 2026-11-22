@@ -2,7 +2,12 @@
 
 更新：2026-11-22。
 
-## YJ-P02-L4 接续：真实 Luna 自然场景试点的独立授权准备（仅任务书）
+## YJ-P02-L4 限定真实调用已获批准，安全实现与本人触发待执行
+
+- 道主已针对前一轮清晰提出的 L4 新请求答复“批准”：**仅 `gpt-6-luna`、开发自编合成酒馆文字、最多 1 次、总预算上限 USD $0.10、不得使用 Images API**。这是新的 L4 独立批准，不是使用已耗尽的 L1 额度。已更新[完整任务书](task-briefs/YJ-P02-L4-luna-scene-pilot.md)和决策 D021；仅为 GitHub 文档确认，**L4 业务实现/新真实 API 发送均未执行**。
+- Codex 可立即完成离线代码/防重/授权范围审核与回环联调，预检通过后提供受保护的可访问本机输入页面；输入/检查 Key 不产生付费调用，只有用户明确点击“执行本次唯一文字试点”后才可能发起真实请求。任何权限、费率、额度、时间、已用许可疑点均保持 LIVE_BLOCKED，不重复询问已经获批的同一范围。
+
+
 
 - 已核对 L3 完成分支 `codex/yj-p02-l3-scene-evidence-contract@7c5c68dbc27d20317c2668d19eb222f2a5010041`、[L3 报告](reports/YJ-P02-L3-scene-evidence-report.md)、[Chrome 32 回合与 23 个正确弃判](reports/evidence/YJ-P02-L3/browser.json)、[回归实绩](reports/evidence/YJ-P02-L3/regression.json)以及 `scene-evidence/1` 源码。L3 在固定地点词表和锚定中文句式下合成验证通过；首次完整回归为 21/22（原预设标签等待超时），随后两次 22/22，根因未证实。**本轮仅核对 GitHub 记录，未在用户 Windows/PG/Chrome 独立执行 L3 测试**。
 - 已从 L3 完成 SHA 新建 `codex/yj-p02-l4-luna-scene-pilot`，上传[完整 L4 受控真实叙事试点任务书](task-briefs/YJ-P02-L4-luna-scene-pilot.md)。本轮只创建任务书与交接，**L4 代码、离线测试和新的真实调用尚未进行**。

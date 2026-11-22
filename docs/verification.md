@@ -2,7 +2,11 @@
 
 更新：2026-11-22。
 
-## 本轮 GitHub 核查 L3 完成证据、L4 任务书准备
+## 本轮 GitHub 记录 L4 新批准（只改任务文档，未实发）
+
+道主对 L4 单次真实 Luna 文字、开发自编合成酒馆素材、USD $0.10 总预算上限明确答复“批准”。已在 L4 独立分支更新任务书、决策 D021 与交接。**本轮实际 OpenAI 文本/图片调用为 0，业务实现与新测试均 NOT_RUN**；须执行者通过零网络门禁及用户受保护界面本人明确点击后才可实发，旧 L1 许可/账本不变。
+
+## 归档 · GitHub 核查 L3 完成证据、L4 任务书准备
 
 核对远端 `codex/yj-p02-l3-scene-evidence-contract@7c5c68dbc27d20317c2668d19eb222f2a5010041`、[L3 报告](reports/YJ-P02-L3-scene-evidence-report.md)、[Browser JSON](reports/evidence/YJ-P02-L3/browser.json)、[Regression JSON](reports/evidence/YJ-P02-L3/regression.json)、`scene-evidence.mjs` 和提示模板。原九霄角色卡保存 32 个合成回合、三个不同场景可 ready、23 个缺少证据的首回合 not-ready，酒馆 V1 3→V2 5、离开隐藏后确认复访同 V2。契约 10/10，合并提取测试 30/30，P01 7/7、L1 15/15；YJ-13 首轮 21/22（预设标签超时），随后两次 22/22，原因仍待核查。以上均来自 L3 的原执行证据；**本轮没有在用户本机重新执行测试**。该规则仅覆盖有限地点与锚定句式，真实自然语言成功率 NOT_RUN。
 
