@@ -5,10 +5,12 @@ import { AssetSchema, AttemptSchema, CapabilitySchema, DecisionSchema, SceneSche
 import { cardScope } from "../scene-state/store.mjs";
 import { sha256 } from "./files.mjs";
 
+const gateReasons=new Set(["COST_BOUND_UNVERIFIED","invalid-image-approval","image-rights-or-spec","per-call-budget",
+  "missing-or-revoked-grant","image-binding-mismatch","saved-source-changed","batch-budget-exhausted","LIVE_DISABLED"]);
 const now = () => new Date().toISOString();
-async function transaction(pool, fn) {
+async function transaction(pool, fn, serializable=false) {
   const db=await pool.connect();
-  try { await db.query("BEGIN"); const result=await fn(db); await db.query("COMMIT"); return result; }
+  try { await db.query(serializable?"BEGIN ISOLATION LEVEL SERIALIZABLE":"BEGIN"); const result=await fn(db); await db.query("COMMIT"); return result; }
   catch(e) { await db.query("ROLLBACK"); throw e; } finally { db.release(); }
 }
 const one = async (db,sql,args) => (await db.query(sql,args)).rows[0];
@@ -103,21 +105,47 @@ export class ImageTasks {
       const capability=task.plan.action==="generate"?this.capability.generate:this.capability.referenceEdit;
       if(task.plan.action==="edit")await db.query("SELECT id FROM yingjie_image.asset WHERE scope=$1 AND id=$2 FOR SHARE",[ctx.scope,task.plan.reference.assetId]);
       const ref=capability==="supported"?await this.reference(db,ctx,task.plan):{ok:false,reason:"capability-unverified"};
-      const time=now(),id=randomUUID();
-      const attempt=AttemptSchema.parse({schemaVersion,attemptId:id,requestKey:task.request_key,capability:this.capability,
-        sentAt:ref.ok?time:null,observedAt:time,localWait:"active",outcome:ref.ok?{state:"waiting"}:{state:"not-sent",reason:ref.reason},
+      const id=randomUUID(),time=now(),gate=this.provider.moneyGate;
+      let attempt=AttemptSchema.parse({schemaVersion,attemptId:id,requestKey:task.request_key,capability:this.capability,
+        sentAt:null,observedAt:time,localWait:"active",outcome:{state:"not-sent",reason:"gate-pending"},
         model:null,seed:null,usage:null,cost:null,providerRequestId:null});
+      const input={attempt,plan:task.plan,referenceBytes:ref.bytes,permit,serial};
+      let transmit,denial=ref.ok?null:ref.reason;
+      await gate?.stage(db,id,"gate-checked");
+      if(!denial){
+        // A local rejection rolls back every change made by the transactional gate.
+        await db.query("SAVEPOINT image_preflight");
+        try{
+          if(this.provider.prepare){
+            transmit=await this.provider.prepare(input,db);
+            if(typeof transmit!=="function")throw Error("invalid-prepared-request");
+          }else if(this.capability.entry==="i1-openai-images-mock" || gate || this.capability.origin==="backend"){
+            throw Error("missing-pre-send-gate");
+          }
+        }catch(error){
+          await db.query("ROLLBACK TO SAVEPOINT image_preflight");
+          denial=gateReasons.has(error?.message)?error.message:"local-gate";
+        }
+        await db.query("RELEASE SAVEPOINT image_preflight");
+      }
+      const stamp=now();
+      attempt=AttemptSchema.parse({...attempt,sentAt:denial?null:stamp,observedAt:stamp,
+        outcome:denial?{state:"not-sent",reason:denial}:{state:"waiting"}});
       await db.query("INSERT INTO yingjie_image.attempt VALUES($1,$2,$3,$4,$5)",[id,taskId,(prior?.ordinal??0)+1,attempt,
-        ref.ok?new Date(Date.now()+this.timeoutMs):null]);
+        denial?null:new Date(Date.now()+this.timeoutMs)]);
       await db.query("UPDATE yingjie_image.task SET permit=$2 WHERE id=$1",[taskId,permit]);
-      return ref.ok?{attempt,plan:task.plan,referenceBytes:ref.bytes,permit,serial}:"not-sent";
-    });
+      if(denial){await gate?.stage(db,id,"stop");return "not-sent";}
+      return {...input,attempt,transmit};
+    },Boolean(this.provider.moneyGate));
     if(typeof claim==="string")return claim;
     // From here the dispatch may already have reached a provider. Never replay on an ambiguous outcome.
     let response;
-    try { response=await this.provider.send(claim); }
+    const id=claim.attempt.attemptId,gate=this.provider.moneyGate;
+    const onResponse=gate?()=>gate.stage(this.pool,id,"provider-response-seen"):undefined;
+    try { response=claim.transmit?await claim.transmit(onResponse):await this.provider.send(claim); }
     catch { response={state:"unknown",reason:"transport-unconfirmed"}; }
-    return this.receive(claim.attempt.attemptId,claim.attempt.requestKey,response);
+    try{return await this.receive(id,claim.attempt.requestKey,response);}
+    finally{await gate?.stage(this.pool,id,"stop");}
   }
   async recover() {
     return this.pool.query(`UPDATE yingjie_image.attempt SET record=jsonb_set(record,'{outcome}',
@@ -156,6 +184,8 @@ export class ImageTasks {
           await conflict(db,row.task,"result-conflict",outcome);return "result-conflict";
         }
         await db.query("INSERT INTO yingjie_image.asset VALUES($1,$2,$3,$4)",[id,row.scope,asset,info.size]);
+        await this.provider.moneyGate?.stage(db,id,"original-saved");
+        await this.provider.moneyGate?.stage(db,id,"pending-review");
       }else if(!["waiting","unknown"].includes(original)) {
         if(original===outcome.state)return "duplicate";
         await conflict(db,row.task,"result-conflict",outcome);return "result-conflict";

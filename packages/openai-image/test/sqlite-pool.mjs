@@ -4,17 +4,19 @@ import {readFileSync} from "node:fs";
 // Exercise ImageTasks itself against small relational tables. PostgreSQL locking/recovery semantics
 // are covered by its native suite, not by this single-connection dialect translation.
 export class TestPool {
-  db=new DatabaseSync(":memory:");
-  constructor(){
+  constructor(path=":memory:"){
+    this.db=new DatabaseSync(path);
+    this.db.exec("PRAGMA busy_timeout=5000; PRAGMA synchronous=FULL");
     const sql=readFileSync(new URL("../../image-tasks/schema.sql",import.meta.url),"utf8")
       .replace("CREATE SCHEMA IF NOT EXISTS yingjie_image;","").replaceAll("yingjie_image.","");
     this.db.exec(sql);
-    this.db.exec("CREATE TABLE event (scope text, revision integer, event_key text, raw_text_hash text)");
+    this.db.exec("CREATE TABLE IF NOT EXISTS event (scope text, revision integer, event_key text, raw_text_hash text)");
   }
   async connect(){return this;}
   release(){}
   async query(text,args=[]){
     const values=[];
+    if(text==="BEGIN" || text==="BEGIN ISOLATION LEVEL SERIALIZABLE")text="BEGIN IMMEDIATE";
     const sql=text.replaceAll("yingjie_image.","").replaceAll("yingjie_scene.","").replaceAll("::int","").replace(/ FOR (?:SHARE|UPDATE)(?: OF a)?/g,"")
       .replaceAll("now()","strftime('%Y-%m-%dT%H:%M:%fZ','now')")
       .replace("UPDATE attempt a SET","UPDATE attempt AS a SET")

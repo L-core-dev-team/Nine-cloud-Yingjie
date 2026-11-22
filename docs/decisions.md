@@ -2,9 +2,11 @@
 
 更新：2026-11-22。
 
-## YJ-P02-I2 图片货币授权与发送前门禁（下一阶段仅准备）
+## I2 独立图片美元许可
 
-在 I1 `IMAGE_ADAPTER_OFFLINE_PASS` 的 67 项假传输基础上，准备 [I2 独立美元预算与持久 pre-send 审查任务书](task-briefs/YJ-P02-I2-image-money-gate.md)。I1 的 P01 `Reservations` 使用合成单位，ImageTasks 提前记录 `sentAt` 与 Provider 后置素材/预算检查顺序需要受控纠正。生成和编辑应拥有不同的可审计批准，费用最坏上界不能仅用估测均价替代；不满足时 LIVE_BLOCKED。**目前仅决定开发零网络门禁，不批准新真实图片/文字 API 请求、美元费用或真实素材外发**。旧 L4 UNKNOWN_STOP、L5 PARTIAL、Issue #1 ENV_BLOCKED 不变。
+**YJ-P02-I2 · I2_GATE_OFFLINE_PASS。** 生成与参考编辑分别批准并从同一美元总额预留。40 个定向场景、跨进程竞争与崩溃恢复、148 项兼容回归通过。真实付款为 LIVE_BLOCKED_COST_BOUND。 [运行报告与回执](reports/YJ-P02-I2-image-money-gate-report.md)
+
+D026 保持零真实付款授权。即使未来批准预算，也须先证明该请求的全部可计费维度能被约束，逐步审查生成与编辑。
 
 ## I1 图片供应商离线交付
 
@@ -81,7 +83,7 @@ L5 的内存与前端模拟已通过，但真正 127.0.0.1 Chrome/HTTP 和本机
 | D023 | YJ-P02-L5 新独立单次文字试点准备 | 仅批准零网络开发；新实发未授权 | 为消化 L4R 的阶段修复，另建独立账本与受信 UI；可准备候选 Luna、1 次合成酒馆及 $0.10 建议预算，但必须取得道主下一次明确同意 |
 | D024 | YJ-P02-L5B 原生回环环境补验 | 仅任务准备，未授予绕过沙箱或公网访问 | 先检查最小 127.0.0.1 TCP，只有获准时执行 Chrome/PG/L4R/YJ-13；拒绝则 ENV_BLOCKED，新真实 API 调用仍禁止 |
 | D025 | 双轨推进：Dot 环境、Codex OpenAI Images 适配 | I1 已完成 67 项离线验收；Dot 同机异会话结果不足以修复原 Codex EACCES | I1 images generate/edit mock、原件与待审已验证，旧权限阻塞仍由 Issue #1 跟踪；真实 API 未批准 |
-| D026 | YJ-P02-I2 图像美元预算与持久发送前审查 | 仅工程任务准备，真钱发送未授权 | I1 合成单位不得用作 USD；生成与编辑独立 grant，费用最坏上界必须可证；本地拒绝应在 sentAt 前；没有必要证据时保持 LIVE_BLOCKED |
+| D026 | YJ-P02-I2 图像美元预算与持久发送前审查 | 离线已验收，真钱发送未授权 | I1 合成单位不得用作 USD；生成与编辑独立 grant，费用最坏上界必须可证；本地拒绝应在 sentAt 前；没有必要证据时保持 LIVE_BLOCKED |
 
 ## 明确否定与边界
 

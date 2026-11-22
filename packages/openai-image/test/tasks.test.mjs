@@ -30,7 +30,7 @@ function start(dir){
   const stopped=once(child,"exit").then(([exit])=>({exit}));
   const next=()=>Promise.race([once(child,"message",{signal:AbortSignal.timeout(10000)}).then(([m])=>m),stopped]);
   const ready=next().then(m=>assert.equal(m,"ready"));
-  return {child,ready,async send(payload){
+  return {child,ready,next,async send(payload){
     await ready;
     const result=next();child.send(payload);const message=await result;await stopped;return message;
   }};
@@ -49,11 +49,15 @@ async function setup(t,operation){
     assert.ok(path.startsWith(base));return Response.json(f.ctx.history.slice(Number(path.slice(base.length)),Number(path.slice(base.length))+1));
   };
   let sends=0;
-  const adapter={capability:f.provider.capability,async send(claim){
-    const ctx=await readImageContext({tasks,context:()=>f.ctx,request},claim);
-    const w=start(dir);
-    const m=await w.send({claim,ctx,grant:f.grant});assert.equal(m.networkPermission,false);sends+=m.calls;
-    return m.result;
+  const adapter={capability:f.provider.capability,async prepare(claim,db){
+    const ctx=await readImageContext({tasks,context:()=>f.ctx,request},claim,db);
+    const w=start(dir);await w.ready;
+    const prepared=w.next();w.child.send({claim,ctx,grant:f.grant,scenario:"prepare"});
+    assert.equal(await prepared,"prepared");
+    return async()=>{
+      const done=w.next();w.child.send("committed");const m=await done;
+      assert.equal(m.networkPermission,false);sends+=m.calls;return m.result;
+    };
   }};
   const tasks=new ImageTasks(pool,files,adapter),permit=randomUUID();
   await tasks.permit(f.ctx,permit,1,true);
@@ -98,9 +102,10 @@ test("ImageTasks.reference reads the reviewed YJ-02 original; late edit stays pr
   await pool.query("INSERT INTO attempt VALUES($1,$2,1,$3,NULL)",[asset.assetId,oldTask,{localWait:"active"}]);
   await pool.query("INSERT INTO asset VALUES($1,$2,$3,$4)",[asset.assetId,ctx.scope,asset,saved.size]);
   const id=await tasks.submit(ctx,permit,1,f.plan);
-  const originalSend=tasks.provider.send;
+  const originalPrepare=tasks.provider.prepare;
   const received=Promise.withResolvers(),release=Promise.withResolvers();
-  tasks.provider.send=async claim=>{const reply=await originalSend(claim);received.resolve();await release.promise;return reply;};
+  tasks.provider.prepare=async(...args)=>{const send=await originalPrepare(...args);
+    return async()=>{const reply=await send();received.resolve();await release.promise;return reply;};};
   const run=tasks.dispatch(()=>ctx,id,permit,1);
   await Promise.race([received.promise,run.then(v=>{throw Error("early dispatch "+v);})]);
   const next=fixture({operation:"evening",session:ctx.result.visual.source.sessionId,

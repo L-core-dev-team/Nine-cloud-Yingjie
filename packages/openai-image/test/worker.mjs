@@ -16,7 +16,14 @@ process.once("message",async({ctx,claim,grant,scenario})=>{
         const r=answer({usage:{input_tokens:3,output_tokens:6,total_tokens:9}});
         r.headers.set("x-request-id","req_mock");return r;
       }});
-    const result=await p.send(claim);
+    let result;
+    if(scenario==="prepare"){
+      const transmit=await p.prepare(claim,{}); // I1's separate synthetic-unit ledger only.
+      const command=new Promise(resolve=>process.once("message",resolve));
+      process.send("prepared");
+      if(await command!=="committed")throw Error("not-committed");
+      result=await transmit();
+    }else result=await p.send(claim);
     process.send({result,calls,networkPermission:process.permission.has("net")});
   }finally{ledger.close();process.disconnect();}
 });

@@ -2,7 +2,7 @@
 
 更新：2026-11-22。
 
-**YJ-P02-I2 下一阶段已准备：** [图片独立美元计费许可、发送前防重和参考图外发审批完整任务书](task-briefs/YJ-P02-I2-image-money-gate.md)从 I1 已验收提交分支建立。此阶段先做零网络代码与测试，**无任何真实 OpenAI 付款授权**；真实 PG/Chrome 仍由 [Issue #1](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/issues/1) 跟踪。
+**YJ-P02-I2 · I2_GATE_OFFLINE_PASS。** 生成与参考编辑分别批准并从同一美元总额预留。40 个定向场景、跨进程竞争与崩溃恢复、148 项兼容回归通过。真实付款为 LIVE_BLOCKED_COST_BOUND。 [运行报告与回执](reports/YJ-P02-I2-image-money-gate-report.md)
 
 **YJ-P02-I1 · IMAGE_ADAPTER_OFFLINE_PASS。** Images 首图与参考编辑已完成离线适配。协议、权限与响应检查 60/60，ImageTasks 与进程恢复 7/7。输出进入待审，真实发送关闭。本机原生 PG/Chrome 验收由 [Issue #1](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/issues/1) 跟踪。[报告与复跑](reports/YJ-P02-I1-image-adapter-offline-report.md)
 
@@ -89,7 +89,7 @@ YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。YJ
 | YJ-P02-L4 | `UNKNOWN_STOP`，许可已停止使用 | [点击后核查](reports/YJ-P02-L4-luna-scene-pilot-report.md)：受信回执/账本未找到，真实送达/费用/画面仍未知，不补发 |
 | YJ-P02-L4R | 离线取证与修复完成；旧 L4 仍 UNKNOWN_STOP | [Chrome/HTTP 阶段记录修复、原环境核查与回归](reports/YJ-P02-L4R-trigger-forensics-report.md)；本轮真实请求 0 |
 | YJ-P02-L5 | 进行中 · PARTIAL，原生回环验收受阻 | [在独立授权与账本下复用 L4R 可靠状态，并完成全禁网模拟](task-briefs/YJ-P02-L5-one-shot-recovery.md) |
-| YJ-P02-I2 | 待执行 · 仅任务书 | [真正 USD 授权、成本上界与持久 pre-send 门禁](task-briefs/YJ-P02-I2-image-money-gate.md)；真实 API 禁止 |
+| YJ-P02-I2 | I2_GATE_OFFLINE_PASS · LIVE_BLOCKED_COST_BOUND | [真正 USD 授权、成本上界与持久 pre-send 门禁](task-briefs/YJ-P02-I2-image-money-gate.md)；真实 API 禁止 |
 | YJ-P02-L5B | 环境阻塞 · ENV_BLOCKED | [在受许可的 loopback-only 环境完成本地 Chrome/PG/L4R/YJ-13 验收](task-briefs/YJ-P02-L5B-loopback-closeout.md)，不得提升公网权限或发真实 API |
 | YJ-ENV-01 · Dot | 待执行；任务书已上传 | [合法确认本机 EACCES 阻断与最小 localhost TCP 能力](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/blob/7d2badc6284174053ed3012766a79edd1346124f/docs/task-briefs/YJ-ENV-01-dot-loopback.md)；允许后移交 Codex 补 L5B |
 | YJ-P02-I1 · Codex | 离线完成 · IMAGE_ADAPTER_OFFLINE_PASS | [OpenAI Images 生成、编辑离线适配、参考版权许可、费用门禁与假 PNG 响应](task-briefs/YJ-P02-I1-openai-image-offline.md)；真实 API 仍禁止 |

@@ -2,7 +2,11 @@
 
 更新：2026-11-22。
 
-## I1 GitHub 完成证据核对与 I2 任务准备（本轮）
+## 2026-11-22 I2 离线验收
+
+**YJ-P02-I2 · I2_GATE_OFFLINE_PASS。** 生成与参考编辑分别批准并从同一美元总额预留。40 个定向场景、跨进程竞争与崩溃恢复、148 项兼容回归通过。真实付款为 LIVE_BLOCKED_COST_BOUND。 [运行报告与回执](reports/YJ-P02-I2-image-money-gate-report.md)
+
+## I1 GitHub 完成证据核对与 I2 任务准备（历史）
 
 只读核对远端 `codex/yj-p02-i1-image-adapter-offline@31af7814f5805046ca5dc9a89d25cf685821ae3a`、[I1 运行报告](reports/YJ-P02-I1-image-adapter-offline-report.md)、[协议与图片任务 60/60+7/7 脱敏回执](reports/evidence/YJ-P02-I1/verified.json)、[回归与首次失败记录](reports/evidence/YJ-P02-I1/regression.json)，及 Provider 协议/场景提示/PNG、ImageTasks 代码。I1 只在内存假传输和 SQLite 测试替身里得到 IMAGE_ADAPTER_OFFLINE_PASS：模型访问、供应商出图/参考编辑费用与原生 PG/Chrome NOT_RUN。图片和文字真实调用 0、费用 0（仅针对 I1 执行记录）。
 

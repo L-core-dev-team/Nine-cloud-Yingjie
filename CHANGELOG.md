@@ -1,5 +1,9 @@
 # 变更记录
 
+## 2026-11-22 I2 离线验收
+
+**YJ-P02-I2 · I2_GATE_OFFLINE_PASS。** 生成与参考编辑分别批准并从同一美元总额预留。40 个定向场景、跨进程竞争与崩溃恢复、148 项兼容回归通过。真实付款为 LIVE_BLOCKED_COST_BOUND。 [运行报告与回执](docs/reports/YJ-P02-I2-image-money-gate-report.md)
+
 ## 2026-11-22 I1 完成证据核对与 I2 图片预算门禁任务准备
 
 - 经 GitHub 核对 I1 已完成离线适配：60/60 API 形状/权限/响应测试及 7/7 ImageTasks/原件/恢复测试；最终重复回执哈希一致，旧开发失败历史保留。真实图片与原生 PG/Chrome NOT_RUN，不能将 mock 原件冒充真实供应商输出。
