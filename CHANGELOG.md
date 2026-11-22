@@ -1,5 +1,9 @@
 # 变更记录
 
+## 2026-11-22 S3 静态预览交付
+
+**YJ-P03-S3 · S3_PREVIEW_PARTIAL。** 已交付固定 20 回合离线试玩。打开 [index.html](packages/offline-play-preview/dist/index.html) 即可体验；携带 media 文件夹可查看独立的旧酒馆图册。20 回合与 16 项交互检查通过，当前 Windows 的原生浏览器在导航前退出，状态为 BROWSER_NOT_VERIFIED。[运行报告](docs/reports/YJ-P03-S3-offline-play-preview-report.md)
+
 ## 2026-11-22 S2 离线验收核查与 S3 用户可操作预览任务准备
 
 - GitHub 核实 S2 完成提交、100 条锁定语料的 44 eligible / 12 needs-review / 10 conflict / 34 not-ready，以及 20 修订的模拟生成/编辑、复用、迟到归属和拒审。真实 OpenAI/原生 PG/Chrome 均 NOT_RUN。

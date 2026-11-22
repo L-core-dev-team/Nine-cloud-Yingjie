@@ -1,0 +1,149 @@
+{
+  "method": "built HTML + classic script / Node DOM harness",
+  "networkPermission": false,
+  "htmlSha256": "bf62b94bb5538a11dc293c70dc6fff0452cbc6bfb38509d773fb0b32d9776fb8",
+  "fixtureSha256": "119cf3c203e1bf3a129aab852a874c7fcb071a54e6272b09ac3063ab7e5c2d40",
+  "sourceSha": "65ccd55cf5ebef6922a08eb48e9e8330799251b5b763a58b0a3fbc36f263a3fb",
+  "archiveOriginals": 3,
+  "turns": [
+    {
+      "revision": 1,
+      "state": "accepted",
+      "display": true,
+      "scene": "amber-tavern"
+    },
+    {
+      "revision": 2,
+      "state": "reuse",
+      "display": true,
+      "scene": "amber-tavern"
+    },
+    {
+      "revision": 3,
+      "state": "unknown",
+      "display": false,
+      "scene": null
+    },
+    {
+      "revision": 4,
+      "state": "unscheduled",
+      "display": false,
+      "scene": "reed"
+    },
+    {
+      "revision": 5,
+      "state": "hidden",
+      "display": false,
+      "scene": "reed"
+    },
+    {
+      "revision": 6,
+      "state": "hidden",
+      "display": false,
+      "scene": "reed"
+    },
+    {
+      "revision": 7,
+      "state": "reuse",
+      "display": true,
+      "scene": "amber-tavern"
+    },
+    {
+      "revision": 8,
+      "state": "unknown",
+      "display": false,
+      "scene": null
+    },
+    {
+      "revision": 9,
+      "state": "unknown",
+      "display": false,
+      "scene": null
+    },
+    {
+      "revision": 10,
+      "state": "reuse",
+      "display": true,
+      "scene": "amber-tavern"
+    },
+    {
+      "revision": 11,
+      "state": "unscheduled",
+      "display": false,
+      "scene": "amber-tavern"
+    },
+    {
+      "revision": 12,
+      "state": "waiting",
+      "display": false,
+      "scene": "amber-tavern"
+    },
+    {
+      "revision": 13,
+      "state": "unknown",
+      "display": false,
+      "scene": null
+    },
+    {
+      "revision": 14,
+      "state": "rejected",
+      "display": false,
+      "scene": "south-yard"
+    },
+    {
+      "revision": 15,
+      "state": "unscheduled",
+      "display": false,
+      "scene": "amber-tavern"
+    },
+    {
+      "revision": 16,
+      "state": "unscheduled",
+      "display": false,
+      "scene": "amber-tavern"
+    },
+    {
+      "revision": 17,
+      "state": "unscheduled",
+      "display": false,
+      "scene": "amber-tavern"
+    },
+    {
+      "revision": 18,
+      "state": "hidden",
+      "display": false,
+      "scene": "amber-tavern"
+    },
+    {
+      "revision": 19,
+      "state": "hidden",
+      "display": false,
+      "scene": "amber-tavern"
+    },
+    {
+      "revision": 20,
+      "state": "unscheduled",
+      "display": false,
+      "scene": "amber-tavern"
+    }
+  ],
+  "checks": [
+    "last next disabled, previous works",
+    "reset restores first and bounds",
+    "saved action and revision buttons jump",
+    "location filter restricts next/previous to that place",
+    "unknown location has no old image or roster",
+    "pending image stays hidden before acceptance",
+    "image off preserves text navigation, history and review",
+    "reuse has no new sends",
+    "edit without separate sending authorization shows no original",
+    "edit waits without revealing future history",
+    "late pending and rejected belong to original scene",
+    "rejected result cannot appear on revisit",
+    "unexplained lighting hides picture and fixed dialogue cannot revive it",
+    "corrupt mock shows placeholder",
+    "historical archive is separate; missing media stays blank",
+    "reset clears panels, filter, switch and recovers original"
+  ],
+  "externalRequests": 0
+}

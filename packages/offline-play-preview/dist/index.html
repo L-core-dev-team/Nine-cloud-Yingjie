@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' file: data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>九霄 · 映界｜离线试玩</title><style>.game-frame .game-workspace.card-session:has(.yj-panel) {
+  grid-template-columns:minmax(0,1.13fr) minmax(0,1fr); grid-template-rows:minmax(0,1fr); gap:18px;
+}
+.yj-panel { align-self:start; min-width:0; padding:clamp(12px,2vw,24px); border:1px solid #586459;
+  border-radius:12px; background:#182420; color:#f1e9d8; box-shadow:0 10px 28px #07120e26; }
+.yj-panel-head,.yj-figure figcaption { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.yj-panel-head { margin-bottom:16px; }
+.yj-mode,.yj-figure figcaption { font:500 12px/1.45 system-ui,sans-serif; color:#c7ccb9; }
+.yj-panel .yj-panel-head h2 { margin:4px 0 0; color:#f2e8d5; font:600 clamp(21px,2.5vw,34px)/1.2 "Songti SC","SimSun",serif; }
+.yj-panel button.yj-toggle { display:inline-flex; gap:8px; align-items:center; min-height:44px; padding:0 8px;
+  border:0; background:transparent; color:#f0ecdf; font:500 14px/1.3 system-ui,sans-serif; }
+.yj-toggle:focus-visible { outline:2px solid #f2ce82; outline-offset:2px; }
+.yj-track { display:inline-flex; width:34px; height:20px; align-items:center; border-radius:20px; background:#677068; padding:3px; box-sizing:border-box; }
+.yj-track::after { content:""; background:white; border-radius:50%; width:14px; height:14px; }
+.yj-toggle[aria-checked=true] .yj-track { background:#a7be93; justify-content:flex-end; }
+.yj-toggle[aria-checked=true] .yj-track::after { background:#203b30; }
+.yj-source {display:flex;align-items:center;gap:8px;margin-bottom:8px;font-size:13px;white-space:nowrap;}
+.yj-source select {width:auto;flex:1;min-width:0;max-width:100%;font:inherit;}
+.yj-history {flex:none; margin-top:8px;}
+.yj-history button {min-height:36px; max-width:100%; white-space:normal;}
+.yj-history-body {max-height:38dvh;overflow:auto;overscroll-behavior:contain;padding:4px 8px;overflow-wrap:anywhere;}
+.yj-history-body ol {list-style:none;margin:5px 0;padding:0;}
+.yj-history-body li button {text-align:left;width:100%;}
+.yj-history-body h3,.yj-history-body p {margin:6px 0;}
+.yj-history-body label,.yj-history-body img {display:block;max-width:100%;}
+.yj-history-body input,.yj-history-body select {box-sizing:border-box;width:100%;}
+.yj-history-body button:focus-visible {outline:2px solid #f2ce82;outline-offset:-2px;}
+.yj-figure { margin:0; }
+.yj-figure img,.yj-empty { box-sizing:border-box; display:block; width:100%; aspect-ratio:1672/941;
+  border-radius:5px; background:#101a17; object-fit:contain; }
+.yj-empty { display:grid; place-items:center; text-align:center; padding:12px; color:#d8dccf; }
+.yj-figure figcaption { padding-top:10px; }
+@media(min-width:721px) {
+  .yj-panel {align-self:stretch;display:flex;flex-direction:column;min-height:0;overflow:auto;}
+  .yj-panel-head,.yj-source {flex:none;}
+  .yj-figure {flex:1;min-height:100px;display:grid;grid-template-rows:minmax(0,1fr) auto;}
+  .yj-figure img,.yj-empty {height:100%;min-height:0;}
+}
+@media(max-width:720px) {
+  .game-frame .game-workspace.card-session:has(.yj-panel) { grid-template-columns:minmax(0,1fr); grid-template-rows:auto minmax(140px,1fr); gap:6px; overflow:auto; }
+  .yj-panel {padding:9px 12px;} .yj-panel-head {margin-bottom:6px;}
+  .yj-panel .yj-panel-head h2 {font-size:20px; margin:0;} .yj-figure figcaption {padding-top:4px;}
+  .yj-figure img,.yj-empty {max-height:22dvh; width:100%;} .yj-mode,.yj-figure figcaption {font-size:11px;}
+}
+
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none!important;
+}
+:root {
+  color-scheme: light;
+  --ink: #243d32;
+  --rule: #c8c8b4;
+  --paper: #f5f2e8;
+  --clay: #985037;
+  --serif: "Songti SC","STSong","SimSun",serif;
+}
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font: 15px/1.65 "Microsoft YaHei",system-ui,sans-serif;
+}
+header {
+  background: #193228;
+  color: #f8f1dc;
+  border-bottom: 4px solid #b38c58;
+}
+.mast,main {
+  max-width: 1176px;
+  margin: auto;
+  padding: 0 42px;
+}
+.mast {
+  display: flex;
+  align-items: center;
+  min-height: 72px;
+  gap: 12px;
+}
+.mast strong {
+  font: 600 24px var(--serif);
+  letter-spacing: .12em;
+}
+.mast i {
+  color: #d2b881;
+}
+.seal {
+  border: 1px solid #c9ae78;
+  padding: 0 4px;
+  font: 26px/1.25 var(--serif);
+  color: #e4d4b1;
+}
+.edition {
+  border-left: 1px solid #839384;
+  padding-left: 15px;
+  font-size: 12px;
+  color: #e2dfca;
+}
+nav {
+  margin-left: auto;
+  display: flex;
+  gap: 6px;
+}
+button,select,summary {
+  font: inherit;
+  cursor: pointer;
+}
+button,select {
+  min-height: 40px;
+  border: 1px solid var(--rule);
+  background: #faf8ef;
+  color: var(--ink);
+  border-radius: 4px;
+  padding: 5px 12px;
+}
+nav button {
+  background: transparent;
+  border: 1px solid transparent;
+  color: #dadfcd;
+  font-size: 14px;
+}
+nav button[aria-pressed=true] {
+  border-color: #748777;
+  color: white;
+}
+.notice {
+  padding: 14px 0;
+  color: #575d4d;
+  font-size: 12px;
+  border-bottom: 1px solid var(--rule);
+  letter-spacing: .035em;
+}
+.titleline,.sectionhead,.archiveNav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.titleline {
+  padding: 28px 0 25px;
+}
+.eyebrow,.folio span,.sectionhead>span {
+  font-size: 12px;
+  color: #5f6c59;
+}
+.eyebrow {
+  letter-spacing: .17em;
+}
+.eyebrow b {
+  color: #ad7950;
+  padding: 0 5px;
+}
+h1,h2,h3,p,figure,blockquote,dl,dd {
+  margin: 0;
+}
+h1 {
+  font: 600 clamp(32px,4vw,55px)/1.22 var(--serif);
+  letter-spacing: .05em;
+  margin: 6px 0;
+}
+h2 {
+  font: 600 22px/1.4 var(--serif);
+}
+.titleline p {
+  color: #5b6656;
+  font-size: 13px;
+}
+.folio strong {
+  font: italic 45px/1 Georgia,serif;
+  color: #8a6748;
+}
+.folio {
+  white-space: nowrap;
+}
+.spread {
+  display: grid;
+  grid-template-columns: minmax(0,1.08fr) minmax(0,1fr);
+  gap: 20px;
+}
+.reading,.timeline,details#history {
+  background: #fbf9f1;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+}
+.reading {
+  padding: 23px 25px;
+  min-width: 0;
+}
+.reading .sectionhead {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 12px;
+}
+blockquote {
+  border-left: 3px solid #9b694a;
+  padding-left: 16px;
+  margin: 20px 0;
+  font: 500 clamp(17px,1.6vw,21px)/1.85 var(--serif);
+  min-height: 3.8em;
+}
+dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px 18px;
+  border-top: 1px solid var(--rule);
+  padding: 14px 0;
+}
+.fact {
+  min-width: 0;
+}
+.fact dt {
+  font-size: 11px;
+  color: #68705e;
+}
+.fact dd {
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+details {
+  border-top: 1px solid var(--rule);
+}
+summary {
+  padding: 10px 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+#proof,#events {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+#proof p,#events p {
+  margin: 4px 0;
+}
+#history {
+  margin-top: 12px;
+  padding: 2px 16px;
+}
+#history summary span {
+  font-weight: 400;
+  margin-left: 6px;
+  color: #697261;
+}
+#events {
+  padding-bottom: 12px;
+}
+.yj-panel {
+  border-radius: 6px;
+  background: #1c342b;
+  box-shadow: none;
+  overflow: visible!important;
+  display: flex;
+  flex-direction: column;
+  padding: 19px 22px;
+}
+.yj-panel .yj-panel-head h2 {
+  font-size: 25px;
+}
+.yj-panel-head {
+  margin-bottom: 12px;
+}
+.yj-figure {
+  display: block;
+  flex: auto;
+}
+.yj-figure figcaption {
+  font-size: 12px;
+}
+.yj-panel #why {
+  font-size: 13px;
+  color: #ede9d5;
+  margin: 9px 0 0;
+}
+.yj-panel label {
+  font-size: 12px;
+  margin-top: 8px;
+}
+.yj-panel select {
+  font-size: 12px;
+  min-height: 30px;
+}
+#visualBox {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  min-height: 150px;
+  aspect-ratio: 2.55;
+  background: #152920;
+  border: 1px solid #556452;
+  border-radius: 3px;
+}
+.papergrid {
+  position: absolute;
+  inset: 0;
+  opacity: .63;
+  background: repeating-radial-gradient(ellipse at 105% 140%,transparent 0 12px,#506950 13px,transparent 14px 23px),repeating-radial-gradient(ellipse at -22% -38%,transparent 0 18px,#3f6049 19px,transparent 20px 28px);
+}
+#sample {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 1;
+}
+#plate {
+  position: relative;
+  text-align: center;
+  color: #ede5cc;
+  background: #1b3028ed;
+  padding: 10px 18px;
+  border: 1px solid #78856d;
+}
+#plateMark {
+  display: block;
+  font: 30px var(--serif);
+  color: #cbb587;
+}
+#plateLabel {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+#imgStatus {
+  color: #e4c895;
+}
+.timeline {
+  margin-top: 18px;
+  padding: 16px 22px;
+}
+.quiet {
+  background: transparent;
+  border: 0;
+  font-size: 13px;
+}
+.tools {
+  display: flex;
+  align-items: end;
+  gap: 14px;
+  margin-top: 10px;
+}
+label {
+  display: block;
+  font-size: 12px;
+}
+.tools select,.archiveNav select {
+  display: block;
+  width: 100%;
+  margin-top: 3px;
+}
+.tools .action {
+  flex: 1;
+  min-width: 0;
+}
+.arrows {
+  display: flex;
+  gap: 7px;
+}
+.arrows button {
+  font-size: 13px;
+}
+#next {
+  background: #264536;
+  color: #fff;
+  border-color: #264536;
+}
+button:disabled {
+  opacity: .42;
+  cursor: default;
+}
+#steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 15px;
+}
+#steps button {
+  min-width: 28px;
+  min-height: 29px;
+  padding: 0 4px;
+  font-size: 12px;
+  background: transparent;
+}
+#steps button[aria-current=step] {
+  background: #84543d;
+  border-color: #84543d;
+  color: white;
+}
+.archiveFigure {
+  background: #1b3027;
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+  border-radius: 5px;
+}
+.archiveFigure img {
+  display: block;
+  width: 100%;
+  height: min(52vh,480px);
+  object-fit: contain;
+}
+.archiveNav {
+  justify-content: start;
+  margin: 15px 0;
+  gap: 25px;
+}
+footer {
+  border-top: 1px solid var(--rule);
+  margin: 22px 0;
+  padding: 11px 0;
+  display: flex;
+  justify-content: space-between;
+  color: #65715e;
+  font-size: 11px;
+}
+button:focus-visible,summary:focus-visible,select:focus-visible {
+  outline: 3px solid #b67531;
+  outline-offset: 3px;
+}
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+@media(max-width:740px) {
+  .mast,main {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .mast {
+    min-height: 58px;
+    gap: 7px;
+  }
+  .mast strong {
+    font-size: 18px;
+  }
+  .edition {
+    display: none;
+  }
+  nav button {
+    font-size: 12px;
+    padding: 4px 7px;
+  }
+  .notice {
+    font-size: 11px;
+  }
+  .titleline {
+    padding: 19px 0 15px;
+  }
+  .folio strong {
+    font-size: 32px;
+  }
+  .spread {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .reading,.yj-panel,.timeline {
+    padding: 15px;
+  }
+  .yj-panel .yj-panel-head h2 {
+    font-size: 22px;
+  }
+  blockquote {
+    margin: 14px 0;
+    min-height: 0;
+  }
+  #visualBox {
+    min-height: 130px;
+  }
+  .tools {
+    display: grid;
+    grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr);
+    gap: 9px;
+  }
+  .arrows {
+    grid-column: 1/-1;
+  }
+  .arrows button {
+    flex: 1;
+    min-height: 44px;
+  }
+  #steps {
+    gap: 6px;
+  }
+  .archiveNav {
+    align-items: start;
+    flex-direction: column;
+  }
+  .archiveFigure img {
+    height: auto;
+  }
+  .folio span {
+    display: block;
+  }
+  .yj-figure img {
+    max-height: none;
+  }
+}
+</style></head>
+<body><header><div class="mast"><span class="seal" aria-hidden="true">映</span><strong>九霄 <i>·</i> 映界</strong><span class="edition">离线试玩</span>
+<nav aria-label="体验模式"><button id="storyTab" aria-pressed="true">剧情回放</button><button id="archiveTab" aria-pressed="false">旧图档案</button></nav></div></header>
+<main><div class="notice">固定合成数据离线演示 · 不是实时 AI 游戏 · 未发生付费 API 调用</div>
+<section id="story"><div class="titleline"><div><span class="eyebrow">场景手记 <b>/</b> 合成剧情</span><h1 id="placeTitle"></h1><p id="placeMeta"></p></div>
+<div class="folio"><strong id="folio"></strong><span> / 20 回合</span></div></div>
+<div class="spread"><article class="reading"><div class="sectionhead"><h2>剧情正文</h2><span id="timeTag"></span></div>
+<blockquote id="prose"></blockquote><dl id="facts"></dl>
+<details id="evidence"><summary>查看事实来源与判定</summary><div id="proof"></div></details></article>
+<section class="yj-panel"><div class="yj-panel-head"><div><span class="yj-mode">映界 · 本地模拟</span><h2>场景画面</h2></div><button class="yj-toggle" id="toggle" role="switch" aria-checked="true"><span class="yj-track"></span><span id="toggleText">生图已开</span></button></div>
+<figure class="yj-figure"><div id="visualBox"><div class="papergrid" aria-hidden="true"></div><img id="sample" hidden alt="空白 PNG 格式测试件，不是剧情实际出图"><div id="plate"><span id="plateMark" aria-hidden="true">映</span><strong id="plateLabel"></strong></div></div><figcaption><span id="imgStatus"></span><span id="imgOrigin"></span></figcaption></figure>
+<p id="why"></p><label id="phaseWrap" hidden>审阅回放 <select id="phase"><option value="final">审阅完成</option><option value="pending">收到原件 · 待审</option></select></label>
+</section></div>
+<section class="timeline"><div class="sectionhead"><h2>行程回放</h2><button id="reset" class="quiet">↺ 重置到首回合</button></div>
+<div class="tools"><label>地点筛选<select id="placeFilter"></select></label><label class="action">选择已保存行动<select id="turnSelect"></select></label><div class="arrows"><button id="prev">← 上一回合</button><button id="next">下一回合 →</button></div></div>
+<div id="steps" aria-label="回合索引"></div>
+</section><details id="history"><summary>图片历史与审阅记录 <span>只读</span></summary><div id="events"></div></details></section>
+<section id="archive" hidden><div class="titleline"><div><span class="eyebrow">旧图档案 <b>/</b> YJ-02</span><h1>酒馆旧影</h1><p>早期工具实验的已审原图，属于独立的固定酒馆剧情。</p></div></div>
+<figure class="archiveFigure"><img id="legacyImage" alt=""><p id="archiveError" hidden>旧图原件不可读，请核对同目录的 media 文件夹。</p></figure>
+<div class="archiveNav"><label>实验阶段<select id="archiveStage"></select></label><div><h2 id="archiveTitle"></h2><p id="archiveCaption"></p></div></div></section>
+<footer><span>九霄 · 映界</span><span>合成试玩记录　2026.11.22</span></footer><p id="announce" class="sr" aria-live="polite"></p></main>
+<script type="application/json" id="record">{"schemaVersion":"offline-preview/1","sourceCommit":"c5f75abf53d278a2f00e0ee9581bbc45ec224141","sourceSha":"65ccd55cf5ebef6922a08eb48e9e8330799251b5b763a58b0a3fbc36f263a3fb","turns":[{"revision":1,"narrativeSha256":"f49575418ea01b5c3351ecdc27257b5c955bd93ac4d8f8dd73e744b8d8a14007","scene":"amber-tavern","visualVersion":"V1","people":3,"fieldReady":true,"verdict":"eligible","reason":"consistent","plannerReason":"outside-local-provider","choice":"generate","displaySha256":"94b877e4fb0ed5581e85cb6d5ed9b01afe016092cf3a6f747a610988445e0ede","fakeSends":1,"text":"此时我身在琥洲的听雨酒馆。我在廊下朝北看去。殿中除沈安、宋明、药师再无旁人。我看清了这里的铜柱与长桌。此时是正午。日光照亮眼前。","fieldSources":{"place":{"spans":[[0,12]],"priorRevision":null},"viewpoint":{"spans":[[13,21]],"priorRevision":null},"perspective":{"spans":[[13,21]],"priorRevision":null},"people":{"spans":[[22,37]],"priorRevision":null},"features":{"spans":[[38,50]],"priorRevision":null},"timeOfDay":{"spans":[[51,56]],"priorRevision":null},"lighting":{"spans":[[57,63]],"priorRevision":null}},"action":"继续观察","name":"听雨酒馆","area":"琥洲","roster":["宋明","沈安","药师"],"features":["铜柱","长桌"],"time":"正午","light":"日光","position":"廊下","direction":"玩家向北所见"},{"revision":2,"narrativeSha256":"adb65839e3c372759f59242519556688894c75c15d20b3fa5ff360ec771c6c6d","scene":"amber-tavern","visualVersion":"V1","people":3,"fieldReady":true,"verdict":"eligible","reason":"consistent","plannerReason":"same-reviewed-visual","choice":"reuse","displaySha256":"94b877e4fb0ed5581e85cb6d5ed9b01afe016092cf3a6f747a610988445e0ede","fakeSends":0,"text":"你们谈了谈茶价。","fieldSources":{"place":{"spans":[],"priorRevision":1},"viewpoint":{"spans":[],"priorRevision":1},"perspective":{"spans":[],"priorRevision":1},"people":{"spans":[],"priorRevision":1},"features":{"spans":[],"priorRevision":1},"timeOfDay":{"spans":[],"priorRevision":1},"lighting":{"spans":[],"priorRevision":1}},"action":"继续观察","name":"听雨酒馆","area":"琥洲","roster":["宋明","沈安","药师"],"features":["铜柱","长桌"],"time":"正午","light":"日光","position":"廊下","direction":"玩家向北所见"},{"revision":3,"narrativeSha256":"1caf2c0cf3bc323b1557fa28eeb8185fcd1ccd53852e9e81b059bc434069f431","scene":null,"visualVersion":null,"people":null,"fieldReady":false,"verdict":"not-ready","reason":"incomplete-evidence","plannerReason":"not-ready","choice":"hide","displaySha256":null,"fakeSends":0,"text":"我离开了这里。","fieldSources":{},"action":"继续观察","name":null,"area":null,"roster":null,"features":null,"time":null,"light":null,"position":null,"direction":null},{"revision":4,"narrativeSha256":"61df77d25f9a2bbbe8447c69ece851e8e493f88f20423df9b723f30fb1c707c1","scene":"reed","visualVersion":"V1","people":2,"fieldReady":true,"verdict":"eligible","reason":"consistent","plannerReason":"outside-local-provider","choice":"generate","displaySha256":null,"fakeSends":0,"text":"此时我身在芦湾的听潮台。我在桥头朝西看去。眼前只有林青与顾宁两人。我看清了这里的木栏与石阶。此时是傍晚。灯光照亮眼前。","fieldSources":{"place":{"spans":[[0,11]],"priorRevision":null},"viewpoint":{"spans":[[12,20]],"priorRevision":null},"perspective":{"spans":[[12,20]],"priorRevision":null},"people":{"spans":[[21,32]],"priorRevision":null},"features":{"spans":[[33,45]],"priorRevision":null},"timeOfDay":{"spans":[[46,51]],"priorRevision":null},"lighting":{"spans":[[52,58]],"priorRevision":null}},"action":"继续观察","name":"听潮台","area":"芦湾","roster":["林青","顾宁"],"features":["木栏","石阶"],"time":"傍晚","light":"灯光","position":"桥头","direction":"玩家向西所见"},{"revision":5,"narrativeSha256":"981b55104fe54f3dea2f2fc9d1423205ef23454dbdabca885a2c0a257007558e","scene":"reed","visualVersion":"V2","people":2,"fieldReady":true,"verdict":"needs-review","reason":"temporal-lighting-ambiguity","plannerReason":"not-ready","choice":"hide","displaySha256":null,"fakeSends":0,"text":"此时我身在芦湾的听潮台。我在桥头朝西看去。眼前只有林青与顾宁两人。我看清了这里的木栏与石阶。此时是夜间。日光照亮眼前。","fieldSources":{"place":{"spans":[[0,11]],"priorRevision":null},"viewpoint":{"spans":[[12,20]],"priorRevision":null},"perspective":{"spans":[[12,20]],"priorRevision":null},"people":{"spans":[[21,32]],"priorRevision":null},"features":{"spans":[[33,45]],"priorRevision":null},"timeOfDay":{"spans":[[46,51]],"priorRevision":null},"lighting":{"spans":[[52,58]],"priorRevision":null}},"action":"继续观察","name":"听潮台","area":"芦湾","roster":["林青","顾宁"],"features":["木栏","石阶"],"time":"夜间","light":"日光","position":"桥头","direction":"玩家向西所见"},{"revision":6,"narrativeSha256":"adb65839e3c372759f59242519556688894c75c15d20b3fa5ff360ec771c6c6d","scene":"reed","visualVersion":"V2","people":2,"fieldReady":true,"verdict":"needs-review","reason":"temporal-lighting-ambiguity","plannerReason":"not-ready","choice":"hide","displaySha256":null,"fakeSends":0,"text":"你们谈了谈茶价。","fieldSources":{"place":{"spans":[],"priorRevision":5},"viewpoint":{"spans":[],"priorRevision":5},"perspective":{"spans":[],"priorRevision":5},"people":{"spans":[],"priorRevision":5},"features":{"spans":[],"priorRevision":5},"timeOfDay":{"spans":[],"priorRevision":5},"lighting":{"spans":[],"priorRevision":5}},"action":"继续观察","name":"听潮台","area":"芦湾","roster":["林青","顾宁"],"features":["木栏","石阶"],"time":"夜间","light":"日光","position":"桥头","direction":"玩家向西所见"},{"revision":7,"narrativeSha256":"4d9da66decf14dd81014c45b1c36a9abab23c5c382c78a74891fdb085d35fbe6","scene":"amber-tavern","visualVersion":"V1","people":3,"fieldReady":true,"verdict":"eligible","reason":"consistent","plannerReason":"same-reviewed-visual","choice":"reuse","displaySha256":"94b877e4fb0ed5581e85cb6d5ed9b01afe016092cf3a6f747a610988445e0ede","fakeSends":0,"text":"我回到琥洲的雨廊酒肆。我重新环顾，人物、结构、时段、光照、观察位置和朝向全与离开时相同。","fieldSources":{"place":{"spans":[[0,10]],"priorRevision":null},"viewpoint":{"spans":[[11,43]],"priorRevision":2},"perspective":{"spans":[[11,43]],"priorRevision":2},"people":{"spans":[[11,43]],"priorRevision":2},"features":{"spans":[[11,43]],"priorRevision":2},"timeOfDay":{"spans":[[11,43]],"priorRevision":2},"lighting":{"spans":[[11,43]],"priorRevision":2}},"action":"继续观察","name":"听雨酒馆","area":"琥洲","roster":["宋明","沈安","药师"],"features":["铜柱","长桌"],"time":"正午","light":"日光","position":"廊下","direction":"玩家向北所见"},{"revision":8,"narrativeSha256":"45d2629306fae32e76a560bce45120bc7634a4fcda43112b0b495d206838b0ff","scene":null,"visualVersion":null,"people":null,"fieldReady":false,"verdict":"not-ready","reason":"incomplete-evidence","plannerReason":"not-ready","choice":"hide","displaySha256":null,"fakeSends":0,"text":"雾起之后，谁还在已看不清。","fieldSources":{},"action":"继续观察","name":null,"area":null,"roster":null,"features":null,"time":null,"light":null,"position":null,"direction":null},{"revision":9,"narrativeSha256":"d255a6fc2d5379a5b5df0c07df1ccdfd44e10367565555a28343b1b5a96834c6","scene":null,"visualVersion":null,"people":null,"fieldReady":false,"verdict":"not-ready","reason":"incomplete-evidence","plannerReason":"not-ready","choice":"hide","displaySha256":null,"fakeSends":0,"text":"我回到琥洲的雨廊酒肆。","fieldSources":{},"action":"继续观察","name":null,"area":null,"roster":null,"features":null,"time":null,"light":null,"position":null,"direction":null},{"revision":10,"narrativeSha256":"f49575418ea01b5c3351ecdc27257b5c955bd93ac4d8f8dd73e744b8d8a14007","scene":"amber-tavern","visualVersion":"V1","people":3,"fieldReady":true,"verdict":"eligible","reason":"consistent","plannerReason":"same-reviewed-visual","choice":"reuse","displaySha256":"94b877e4fb0ed5581e85cb6d5ed9b01afe016092cf3a6f747a610988445e0ede","fakeSends":0,"text":"此时我身在琥洲的听雨酒馆。我在廊下朝北看去。殿中除沈安、宋明、药师再无旁人。我看清了这里的铜柱与长桌。此时是正午。日光照亮眼前。","fieldSources":{"place":{"spans":[[0,12]],"priorRevision":null},"viewpoint":{"spans":[[13,21]],"priorRevision":null},"perspective":{"spans":[[13,21]],"priorRevision":null},"people":{"spans":[[22,37]],"priorRevision":null},"features":{"spans":[[38,50]],"priorRevision":null},"timeOfDay":{"spans":[[51,56]],"priorRevision":null},"lighting":{"spans":[[57,63]],"priorRevision":null}},"action":"继续观察","name":"听雨酒馆","area":"琥洲","roster":["宋明","沈安","药师"],"features":["铜柱","长桌"],"time":"正午","light":"日光","position":"廊下","direction":"玩家向北所见"},{"revision":11,"narrativeSha256":"349cc1b355c13a7d373883b6f1b0e13398b74d584123e7a5ce133c77b1e4afc8","scene":"amber-tavern","visualVersion":"V2","people":4,"fieldReady":true,"verdict":"eligible","reason":"consistent","plannerReason":"outside-local-provider","choice":"edit","displaySha256":null,"fakeSends":0,"text":"林青走了进来，原来的人都还在，除此再无旁人。观察位置、朝向、结构、时段和光照均未改变。","fieldSources":{"place":{"spans":[[22,42]],"priorRevision":10},"viewpoint":{"spans":[[22,42]],"priorRevision":10},"perspective":{"spans":[[22,42]],"priorRevision":10},"people":{"spans":[[0,21]],"priorRevision":10},"features":{"spans":[[22,42]],"priorRevision":10},"timeOfDay":{"spans":[[22,42]],"priorRevision":10},"lighting":{"spans":[[22,42]],"priorRevision":10}},"action":"继续观察","name":"听雨酒馆","area":"琥洲","roster":["宋明","林青","沈安","药师"],"features":["铜柱","长桌"],"time":"正午","light":"日光","position":"廊下","direction":"玩家向北所见"},{"revision":12,"narrativeSha256":"7facc78eaddcf223816a28a35c2e53d59cf94097109786c0cc296c772f20a6e5","scene":"amber-tavern","visualVersion":"V3","people":5,"fieldReady":true,"verdict":"eligible","reason":"consistent","plannerReason":"outside-local-provider","choice":"edit","displaySha256":null,"generateGrantDeniedEdit":true,"fakeSends":1,"text":"顾宁走了进来，原来的人都还在，除此再无旁人。观察位置、朝向、结构、时段和光照均未改变。","fieldSources":{"place":{"spans":[[22,42]],"priorRevision":11},"viewpoint":{"spans":[[22,42]],"priorRevision":11},"perspective":{"spans":[[22,42]],"priorRevision":11},"people":{"spans":[[0,21]],"priorRevision":11},"features":{"spans":[[22,42]],"priorRevision":11},"timeOfDay":{"spans":[[22,42]],"priorRevision":11},"lighting":{"spans":[[22,42]],"priorRevision":11}},"action":"继续观察","name":"听雨酒馆","area":"琥洲","roster":["宋明","林青","沈安","药师","顾宁"],"features":["铜柱","长桌"],"time":"正午","light":"日光","position":"廊下","direction":"玩家向北所见"},{"revision":13,"narrativeSha256":"1caf2c0cf3bc323b1557fa28eeb8185fcd1ccd53852e9e81b059bc434069f431","scene":null,"visualVersion":null,"people":null,"fieldReady":false,"verdict":"not-ready","reason":"incomplete-evidence","plannerReason":"not-ready","choice":"hide","displaySha256":null,"fakeSends":0,"text":"我离开了这里。","fieldSources":{},"action":"继续观察","name":null,"area":null,"roster":null,"features":null,"time":null,"light":null,"position":null,"direction":null},{"revision":14,"narrativeSha256":"f940159a57864e9d8a5dcdc7263fe5ef7946159851cc214ca289e06751d1be9e","scene":"south-yard","visualVersion":"V1","people":2,"fieldReady":true,"verdict":"eligible","reason":"consistent","plannerReason":"outside-local-provider","choice":"generate","displaySha256":null,"lateOriginalRevision":12,"fakeSends":0,"text":"此时我身在沙洲的南星庭。我在栏边朝西看去。眼前只有林青与顾宁两人。我看清了这里的木栏与石阶。此时是傍晚。灯光照亮眼前。","fieldSources":{"place":{"spans":[[0,11]],"priorRevision":null},"viewpoint":{"spans":[[12,20]],"priorRevision":null},"perspective":{"spans":[[12,20]],"priorRevision":null},"people":{"spans":[[21,32]],"priorRevision":null},"features":{"spans":[[33,45]],"priorRevision":null},"timeOfDay":{"spans":[[46,51]],"priorRevision":null},"lighting":{"spans":[[52,58]],"priorRevision":null}},"action":"继续观察","name":"候星庭","area":"沙洲","roster":["林青","顾宁"],"features":["木栏","石阶"],"time":"傍晚","light":"灯光","position":"栏边","direction":"玩家向西所见"},{"revision":15,"narrativeSha256":"4d9da66decf14dd81014c45b1c36a9abab23c5c382c78a74891fdb085d35fbe6","scene":"amber-tavern","visualVersion":"V3","people":5,"fieldReady":true,"verdict":"eligible","reason":"consistent","plannerReason":"outside-local-provider","choice":"edit","displaySha256":null,"rejectedOriginalExcluded":true,"fakeSends":0,"text":"我回到琥洲的雨廊酒肆。我重新环顾，人物、结构、时段、光照、观察位置和朝向全与离开时相同。","fieldSources":{"place":{"spans":[[0,10]],"priorRevision":null},"viewpoint":{"spans":[[11,43]],"priorRevision":12},"perspective":{"spans":[[11,43]],"priorRevision":12},"people":{"spans":[[11,43]],"priorRevision":12},"features":{"spans":[[11,43]],"priorRevision":12},"timeOfDay":{"spans":[[11,43]],"priorRevision":12},"lighting":{"spans":[[11,43]],"priorRevision":12}},"action":"继续观察","name":"听雨酒馆","area":"琥洲","roster":["宋明","林青","沈安","药师","顾宁"],"features":["铜柱","长桌"],"time":"正午","light":"日光","position":"廊下","direction":"玩家向北所见"},{"revision":16,"narrativeSha256":"298909db7c60da8075704de0a5abc761db779f7d950fe45dd6ae2a43c697d8fb","scene":"amber-tavern","visualVersion":"V4","people":4,"fieldReady":true,"verdict":"eligible","reason":"consistent","plannerReason":"outside-local-provider","choice":"edit","displaySha256":null,"rejectedOriginalExcluded":true,"fakeSends":0,"text":"林青离开了这里，其余在场的人都没动，也没有新人到场。观察位置、朝向、结构、时段和光照均未改变。","fieldSources":{"place":{"spans":[[26,46]],"priorRevision":15},"viewpoint":{"spans":[[26,46]],"priorRevision":15},"perspective":{"spans":[[26,46]],"priorRevision":15},"people":{"spans":[[0,25]],"priorRevision":15},"features":{"spans":[[26,46]],"priorRevision":15},"timeOfDay":{"spans":[[26,46]],"priorRevision":15},"lighting":{"spans":[[26,46]],"priorRevision":15}},"action":"继续观察","name":"听雨酒馆","area":"琥洲","roster":["宋明","沈安","药师","顾宁"],"features":["铜柱","长桌"],"time":"正午","light":"日光","position":"廊下","direction":"玩家向北所见"},{"revision":17,"narrativeSha256":"9e74f4e1f39668f57f4f7cff265aaa0d9160ae8347917ac9db6740e4794e784d","scene":"amber-tavern","visualVersion":"V5","people":3,"fieldReady":true,"verdict":"eligible","reason":"consistent","plannerReason":"outside-local-provider","choice":"edit","displaySha256":null,"fakeSends":0,"text":"此时我身在琥洲的听雨酒馆。我在廊下朝北看去。殿中除沈安、宋明、药师再无旁人。我看清了这里的铜柱与长桌。此时是傍晚。灯光照亮眼前。","fieldSources":{"place":{"spans":[[0,12]],"priorRevision":null},"viewpoint":{"spans":[[13,21]],"priorRevision":null},"perspective":{"spans":[[13,21]],"priorRevision":null},"people":{"spans":[[22,37]],"priorRevision":null},"features":{"spans":[[38,50]],"priorRevision":null},"timeOfDay":{"spans":[[51,56]],"priorRevision":null},"lighting":{"spans":[[57,63]],"priorRevision":null}},"action":"继续观察","name":"听雨酒馆","area":"琥洲","roster":["宋明","沈安","药师"],"features":["铜柱","长桌"],"time":"傍晚","light":"灯光","position":"廊下","direction":"玩家向北所见"},{"revision":18,"narrativeSha256":"06a288745560621819a2adcf29a5cf143dacabf7a00f6980738ed4efe80576c7","scene":"amber-tavern","visualVersion":"V6","people":3,"fieldReady":true,"verdict":"needs-review","reason":"temporal-lighting-ambiguity","plannerReason":"not-ready","choice":"hide","displaySha256":null,"fakeSends":0,"text":"此时我身在琥洲的听雨酒馆。我在廊下朝北看去。殿中除沈安、宋明、药师再无旁人。我看清了这里的铜柱与长桌。此时是夜间。日光照亮眼前。","fieldSources":{"place":{"spans":[[0,12]],"priorRevision":null},"viewpoint":{"spans":[[13,21]],"priorRevision":null},"perspective":{"spans":[[13,21]],"priorRevision":null},"people":{"spans":[[22,37]],"priorRevision":null},"features":{"spans":[[38,50]],"priorRevision":null},"timeOfDay":{"spans":[[51,56]],"priorRevision":null},"lighting":{"spans":[[57,63]],"priorRevision":null}},"action":"继续观察","name":"听雨酒馆","area":"琥洲","roster":["宋明","沈安","药师"],"features":["铜柱","长桌"],"time":"夜间","light":"日光","position":"廊下","direction":"玩家向北所见"},{"revision":19,"narrativeSha256":"adb65839e3c372759f59242519556688894c75c15d20b3fa5ff360ec771c6c6d","scene":"amber-tavern","visualVersion":"V6","people":3,"fieldReady":true,"verdict":"needs-review","reason":"temporal-lighting-ambiguity","plannerReason":"not-ready","choice":"hide","displaySha256":null,"fakeSends":0,"text":"你们谈了谈茶价。","fieldSources":{"place":{"spans":[],"priorRevision":18},"viewpoint":{"spans":[],"priorRevision":18},"perspective":{"spans":[],"priorRevision":18},"people":{"spans":[],"priorRevision":18},"features":{"spans":[],"priorRevision":18},"timeOfDay":{"spans":[],"priorRevision":18},"lighting":{"spans":[],"priorRevision":18}},"action":"继续观察","name":"听雨酒馆","area":"琥洲","roster":["宋明","沈安","药师"],"features":["铜柱","长桌"],"time":"夜间","light":"日光","position":"廊下","direction":"玩家向北所见"},{"revision":20,"narrativeSha256":"f49575418ea01b5c3351ecdc27257b5c955bd93ac4d8f8dd73e744b8d8a14007","scene":"amber-tavern","visualVersion":"V7","people":3,"fieldReady":true,"verdict":"eligible","reason":"consistent","plannerReason":"outside-local-provider","choice":"edit","displaySha256":null,"fakeSends":0,"text":"此时我身在琥洲的听雨酒馆。我在廊下朝北看去。殿中除沈安、宋明、药师再无旁人。我看清了这里的铜柱与长桌。此时是正午。日光照亮眼前。","fieldSources":{"place":{"spans":[[0,12]],"priorRevision":null},"viewpoint":{"spans":[[13,21]],"priorRevision":null},"perspective":{"spans":[[13,21]],"priorRevision":null},"people":{"spans":[[22,37]],"priorRevision":null},"features":{"spans":[[38,50]],"priorRevision":null},"timeOfDay":{"spans":[[51,56]],"priorRevision":null},"lighting":{"spans":[[57,63]],"priorRevision":null}},"action":"继续观察","name":"听雨酒馆","area":"琥洲","roster":["宋明","沈安","药师"],"features":["铜柱","长桌"],"time":"正午","light":"日光","position":"廊下","direction":"玩家向北所见"}],"reviews":[{"attemptHash":"3d5b286564c43998997e49cc65286a8684e65c3e8df3549e4fa354d4ff051908","sourceRevision":1,"reviewedDuring":1,"sha256":"94b877e4fb0ed5581e85cb6d5ed9b01afe016092cf3a6f747a610988445e0ede","from":"pending","to":"accepted","operation":"generate","reference":null,"scene":"amber-tavern"},{"attemptHash":"3161b4212bdd7bd73bd5eec0a99943f742b458f659495d445ddb635c9dda0085","sourceRevision":12,"reviewedDuring":14,"sha256":"a6f8268a858030ffffa5e30d720a0497ce91836fee6726cace73c9c5521a13da","from":"pending","to":"rejected","operation":"edit","reference":"94b877e4fb0ed5581e85cb6d5ed9b01afe016092cf3a6f747a610988445e0ede","scene":"amber-tavern"}],"stages":[{"stage":"S0","text":"初次进入，掌柜、蓝衣客、赭衣客共三人。","id":"I0","reuse":false,"people":3},{"stage":"S1","text":"谈到远山，地点、光照和在场人均未改变。","id":"I0","reuse":true,"people":3},{"stage":"S2","text":"两位获救旅人已进店，原三人仍在。","id":"I1","reuse":false,"people":5},{"stage":"S3A","text":"离开后回来，同一酒馆与五人都未变化。","id":"I1","reuse":true,"people":5},{"stage":"S3B","text":"天色转晚，灯亮，五人仍在。","id":"I2","reuse":false,"people":5}],"mock":{"sha256":"94b877e4fb0ed5581e85cb6d5ed9b01afe016092cf3a6f747a610988445e0ede","url":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABgAAAANgAQAAAADCWZ47AAAAuElEQVR4nO3BMQEAAADCoPVPbQlPoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4G+LfgABiGm0SgAAAABJRU5ErkJggg=="}}</script><script>"use strict";
+const fixture = JSON.parse(document.getElementById("record").textContent);
+const byId = id => document.getElementById(id);
+const showText = (id, text) => { byId(id).textContent = text; };
+const options = (select, items) => select.replaceChildren(...items.map(([value, text]) => new Option(text, value)));
+const lines = (id, items) => byId(id).replaceChildren(...items.map(text => {
+    const p = document.createElement("p");
+    p.textContent = text;
+    return p;
+}));
+const { turns, reviews, stages } = fixture;
+const state = { revision: 1, filter: "*", enabled: true, phase: "final", broken: false };
+const labels = { eligible: "可入画", "needs-review": "需复核", conflict: "事实冲突", "not-ready": "证据不足" };
+const reasons = { consistent: "当前可见事实相互一致。", "temporal-lighting-ambiguity": "时段与光照的组合缺少当前剧情解释。", "incomplete-evidence": "当前调查不足以确认整幅画面。" };
+const choices = { generate: "生成候选", edit: "参考编辑候选", reuse: "复用", hide: "隐藏" };
+const unknownPlace = "地点待核实";
+const selected = () => turns[state.revision - 1];
+const filtered = () => turns.filter(t => state.filter === "*" || (t.scene ?? "?") === state.filter);
+const atReview = t => reviews.find(r => r.reviewedDuring === t.revision);
+function imageState(t) {
+    if (!state.enabled)
+        return ["disabled", "生图已关", "文字与历史记录仍可继续查看。"];
+    const event = atReview(t);
+    if (event && state.phase === "pending") {
+        return ["pending-review", "原件待审", "修订 " + event.sourceRevision + " 的模拟原件已返回，等待本次记录中的审阅。"];
+    }
+    if (t.displaySha256) {
+        const asset = reviews.find(r => r.sha256 === t.displaySha256 && r.scene === t.scene && r.reviewedDuring <= t.revision && r.to === "accepted");
+        if (!asset || asset.sha256 !== fixture.mock.sha256 || state.broken)
+            return ["file-missing", "原件不可用", "原件缺失、损坏或引用不符，已隐藏画面。"];
+        return [t.choice === "reuse" ? "reuse" : "accepted", t.choice === "reuse" ? "复用已审原件" : "模拟首图已接受",
+            t.choice === "reuse" ? "当前画面与首回合一致，读取同一格式测试件，本回合新增发送 0 次。" : "模拟生成 → 原件待审 → 已接受。空白 PNG 只验证格式，不描绘酒馆。"];
+    }
+    if (event?.to === "rejected")
+        return ["rejected", "迟到原件已拒审", "修订 " + event.sourceRevision + " 的酒馆编辑在本回合返回，归原请求。此地点没有已接受的对应画面。"];
+    if (t.choice === "hide")
+        return [t.fieldReady ? "hidden" : "unknown", t.fieldReady ? "旧图已隐藏" : "现场未确认 · 已隐藏", reasons[t.reason]];
+    if (t.fakeSends)
+        return ["waiting", "已记录模拟编辑", "参考来自修订 1 已接受的原件。这里回放发送时的状态，文字可继续。"];
+    return ["unscheduled", "暂无经审阅的对应画面", choices[t.choice] + "已记录，本回合未分派新请求。"];
+}
+function renderHistory(t) {
+    const entries = [];
+    for (const a of reviews) {
+        if (a.sourceRevision > t.revision)
+            continue;
+        const prefix = "修订 " + a.sourceRevision + " · " + turns[a.sourceRevision - 1].name + " · ";
+        entries.push(prefix + (a.operation === "edit" ? "模拟参考编辑（修订 1 已审原件）" : "模拟生成格式测试件"));
+        if (a.reviewedDuring <= t.revision) {
+            entries.push("修订 " + a.reviewedDuring + " 收到原件 · 待审" + (a.reviewedDuring > a.sourceRevision ? " · 迟到，归属修订 " + a.sourceRevision : ""));
+            if (a.reviewedDuring !== t.revision || state.phase === "final")
+                entries.push(prefix + (a.to === "accepted" ? "模拟审阅已接受" : "模拟审阅已拒绝，禁止展示及参考"));
+        }
+    }
+    lines("events", entries);
+}
+function render() {
+    const t = selected(), subset = filtered(), pos = subset.indexOf(t);
+    showText("placeTitle", t.name ?? unknownPlace);
+    showText("placeMeta", (t.area ?? "未定位") + "　/　" + (t.scene ?? "尚无可信地点身份"));
+    showText("folio", String(t.revision).padStart(2, "0"));
+    showText("timeTag", t.time ?? "时段未确认");
+    showText("prose", t.text);
+    const facts = [["在场人物", t.roster ? t.roster.length + " 人 · " + t.roster.join("、") : "完整名单未确认"], ["观察视角", t.position ? [t.position, t.direction].join(" · ") : "未确认"], ["场景结构", t.features?.join("、") ?? "未确认"], ["时段与光照", t.time ? t.time + " · " + t.light : "未确认"]];
+    byId("facts").replaceChildren(...facts.map(([label, value]) => {
+        const div = document.createElement("div"), dt = document.createElement("dt"), dd = document.createElement("dd");
+        div.className = "fact";
+        dt.textContent = label;
+        dd.textContent = value;
+        div.append(dt, dd);
+        return div;
+    }));
+    const names = { place: "地点", viewpoint: "位置", perspective: "朝向", people: "名单", features: "结构", timeOfDay: "时段", lighting: "光照" };
+    const sources = Object.entries(t.fieldSources).map(([key, field]) => {
+        const quotes = field.spans.map(([start, end]) => "「" + t.text.slice(start, end) + "」").join("、");
+        const inherited = field.priorRevision ? "核对自修订 " + field.priorRevision : "";
+        return names[key] + "　" + [quotes, inherited].filter(Boolean).join(" · ");
+    });
+    lines("proof", ["S2 已保存合成正文 · 修订 " + t.revision + " · 固定行动「" + t.action + "」",
+        "字面字段" + (t.fieldReady ? "完整" : "不足") + " · 图片资格 " + labels[t.verdict] + " (" + t.verdict + ") · " + (t.visualVersion ?? "无视觉版本"),
+        reasons[t.reason] + " 判定 " + t.reason, ...sources, "正文 SHA-256　" + t.narrativeSha256]);
+    const [code, title, why] = imageState(t), visible = ["accepted", "reuse"].includes(code);
+    byId("visualBox").dataset.state = code;
+    byId("sample").hidden = !visible;
+    if (visible && !byId("sample").hasAttribute("src"))
+        byId("sample").src = fixture.mock.url;
+    showText("plateLabel", visible ? "PNG 格式测试件 · 非剧情实际出图" : title);
+    showText("imgStatus", title);
+    showText("imgOrigin", visible ? "原件 · 修订 01" : (t.visualVersion ?? "无当前画面"));
+    showText("why", why);
+    byId("toggle").setAttribute("aria-checked", String(state.enabled));
+    showText("toggleText", state.enabled ? "生图已开" : "生图已关");
+    byId("phaseWrap").hidden = !atReview(t) || !state.enabled;
+    byId("phase").value = state.phase;
+    byId("prev").disabled = pos <= 0;
+    byId("next").disabled = pos === subset.length - 1;
+    options(byId("turnSelect"), subset.map(row => [row.revision, String(row.revision).padStart(2, "0") + " · " + row.action + " · " + row.text.slice(0, 12) + "…"]));
+    byId("turnSelect").value = String(t.revision);
+    byId("placeFilter").value = state.filter;
+    // Keep the active keyboard button when only the selected revision changes.
+    const steps = byId("steps");
+    if (steps.dataset.filter !== state.filter) {
+        steps.replaceChildren(...subset.map(row => {
+            const b = document.createElement("button");
+            b.textContent = String(row.revision).padStart(2, "0");
+            b.dataset.rev = row.revision;
+            b.setAttribute("aria-label", "修订 " + row.revision + "，" + (row.name ?? unknownPlace));
+            b.onclick = () => go(row.revision);
+            return b;
+        }));
+        steps.dataset.filter = state.filter;
+    }
+    for (const b of steps.children) {
+        if (+b.dataset.rev === t.revision)
+            b.setAttribute("aria-current", "step");
+        else
+            b.removeAttribute("aria-current");
+    }
+    renderHistory(t);
+    showText("announce", "第 " + t.revision + " 回合，" + (t.name ?? unknownPlace) + "，" + title);
+}
+function go(revision) { state.revision = revision; state.phase = "final"; render(); }
+function move(delta) { const rows = filtered(), next = rows[rows.indexOf(selected()) + delta]; if (next)
+    go(next.revision); }
+function archive() {
+    const s = stages[Number(byId("archiveStage").value)], img = byId("legacyImage");
+    byId("archiveError").hidden = true;
+    img.hidden = false;
+    img.alt = "YJ-02 已审旧图 " + s.id + "，" + s.people + " 人";
+    img.src = "media/" + s.id + ".png";
+    showText("archiveTitle", s.text);
+    showText("archiveCaption", s.id + " · " + s.people + " 人 · " + (s.reuse ? "复用旧原件" : "原工具实验已审原件") + " · 独立于本次 20 回合");
+}
+function mode(isArchive) {
+    byId("archive").hidden = !isArchive;
+    byId("story").hidden = isArchive;
+    byId("storyTab").setAttribute("aria-pressed", String(!isArchive));
+    byId("archiveTab").setAttribute("aria-pressed", String(isArchive));
+    if (isArchive)
+        archive();
+}
+options(byId("placeFilter"), [["*", "全部地点"], ...new Map(turns.filter(t => t.scene).map(t => [t.scene, t.area + " · " + t.name])), ["?", unknownPlace]]);
+options(byId("archiveStage"), stages.map((s, i) => [i, s.stage + " · " + s.id + (s.reuse ? " 复用" : "")]));
+byId("next").onclick = () => move(1);
+byId("prev").onclick = () => move(-1);
+byId("placeFilter").onchange = e => { state.filter = e.target.value; go(filtered()[0].revision); };
+byId("turnSelect").onchange = e => go(Number(e.target.value));
+byId("toggle").onclick = () => { state.enabled = !state.enabled; render(); };
+byId("phase").onchange = e => { state.phase = e.target.value; render(); };
+byId("reset").onclick = () => {
+    Object.assign(state, { filter: "*", enabled: true, broken: false });
+    byId("sample").removeAttribute("src");
+    byId("history").open = false;
+    byId("evidence").open = false;
+    go(1);
+};
+byId("sample").onerror = () => { state.broken = true; render(); };
+byId("legacyImage").onerror = () => { byId("legacyImage").hidden = true; byId("archiveError").hidden = false; };
+byId("storyTab").onclick = () => mode(false);
+byId("archiveTab").onclick = () => mode(true);
+byId("archiveStage").onchange = archive;
+byId("archiveStage").value = "0";
+render();
+</script></body></html>

@@ -4,7 +4,9 @@
 
 ## 当前状态
 
-**下一阶段 YJ-P03-S3：可直接打开的离线映界交互预览（仅任务书，代码尚未执行）。** [完整 S3 任务书](docs/task-briefs/YJ-P03-S3-offline-playable-preview.md)以 S2 已验证的 20 回合与原有 YJ-06 映界界面为基础，准备无 localhost / 无 PostgreSQL / 无 Key 的可点击固定剧情预览。源故事、图片原件、pending/拒审/复用状态严格区分真实工具旧样例与模拟测试，不冒充已接通九霄或 OpenAI API。**S3 前端产物、构建与浏览器测试均 NOT_RUN；真实图片费用仍 LIVE_BLOCKED_COST_BOUND，本机 TCP 仍受 Issue #1 阻塞。**
+**YJ-P03-S3 · S3_PREVIEW_PARTIAL。** 已交付固定 20 回合离线试玩。打开 [index.html](packages/offline-play-preview/dist/index.html) 即可体验；携带 media 文件夹可查看独立的旧酒馆图册。20 回合与 16 项交互检查通过，当前 Windows 的原生浏览器在导航前退出，状态为 BROWSER_NOT_VERIFIED。[运行报告](docs/reports/YJ-P03-S3-offline-play-preview-report.md)
+
+下载或检出本任务分支，解压后双击 `packages/offline-play-preview/dist/index.html`。开发者可在仓库根执行 `node packages/offline-play-preview/build.mjs` 重建。[构建条件与操作说明](packages/offline-play-preview/README.md)
 
 **YJ-P03-S2 · P03_S2_OFFLINE_PASS。** 100 条预锁定合成案例中，44 条可入画，12 条需复核，10 条冲突，34 条条件不足。危险放行和不必要阻断均为 0。20 个连续修订经过三个地点，模拟生成与编辑各一次，实际费用 USD 0。 [运行报告与复跑](docs/reports/YJ-P03-S2-scene-consistency-slice-report.md)
 

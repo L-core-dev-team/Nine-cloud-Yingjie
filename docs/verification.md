@@ -2,6 +2,10 @@
 
 更新：2026-11-22。
 
+## 2026-11-22 S3 静态预览交付
+
+**YJ-P03-S3 · S3_PREVIEW_PARTIAL。** 已交付固定 20 回合离线试玩。打开 [index.html](../packages/offline-play-preview/dist/index.html) 即可体验；携带 media 文件夹可查看独立的旧酒馆图册。20 回合与 16 项交互检查通过，当前 Windows 的原生浏览器在导航前退出，状态为 BROWSER_NOT_VERIFIED。[运行报告](../docs/reports/YJ-P03-S3-offline-play-preview-report.md)
+
 ## GitHub 核查 P03-S2 并准备可点击 S3 体验（本轮只读、非本机执行）
 
 从 GitHub 核实 S2 完成提交 `c5f75abf53d278a2f00e0ee9581bbc45ec224141`，[运行报告](reports/YJ-P03-S2-scene-consistency-slice-report.md)及 [100 项锁定测量](reports/evidence/YJ-P03-S2/measurement.json)、[20 回合/2 模拟发送/3 复用与拒审迟到](reports/evidence/YJ-P03-S2/story-slice.json)、[兼容回归](reports/evidence/YJ-P03-S2/regression.json)，读取 S2 源码和 YJ-06 既有 UI 组件。S2 报告的四类图片资格计数 44/12/10/34 合计 100，无危险放行或多余弃判；同一开发者合成标注，不能代表独立人类盲评。正常运行的 ImageTasks 和原件保存在 SQLite 替身环境，真实 PG/Chrome /九霄后端未通过。上轮禁真实服务 0 次新增费用 0。**本轮没有在 Windows 上重复运行测试。**

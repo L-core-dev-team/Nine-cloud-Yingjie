@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'self' file: data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>九霄 · 映界｜离线试玩</title><style>/* STYLES */</style></head>
+<body><header><div class="mast"><span class="seal" aria-hidden="true">映</span><strong>九霄 <i>·</i> 映界</strong><span class="edition">离线试玩</span>
+<nav aria-label="体验模式"><button id="storyTab" aria-pressed="true">剧情回放</button><button id="archiveTab" aria-pressed="false">旧图档案</button></nav></div></header>
+<main><div class="notice">固定合成数据离线演示 · 不是实时 AI 游戏 · 未发生付费 API 调用</div>
+<section id="story"><div class="titleline"><div><span class="eyebrow">场景手记 <b>/</b> 合成剧情</span><h1 id="placeTitle"></h1><p id="placeMeta"></p></div>
+<div class="folio"><strong id="folio"></strong><span> / 20 回合</span></div></div>
+<div class="spread"><article class="reading"><div class="sectionhead"><h2>剧情正文</h2><span id="timeTag"></span></div>
+<blockquote id="prose"></blockquote><dl id="facts"></dl>
+<details id="evidence"><summary>查看事实来源与判定</summary><div id="proof"></div></details></article>
+<section class="yj-panel"><div class="yj-panel-head"><div><span class="yj-mode">映界 · 本地模拟</span><h2>场景画面</h2></div><button class="yj-toggle" id="toggle" role="switch" aria-checked="true"><span class="yj-track"></span><span id="toggleText">生图已开</span></button></div>
+<figure class="yj-figure"><div id="visualBox"><div class="papergrid" aria-hidden="true"></div><img id="sample" hidden alt="空白 PNG 格式测试件，不是剧情实际出图"><div id="plate"><span id="plateMark" aria-hidden="true">映</span><strong id="plateLabel"></strong></div></div><figcaption><span id="imgStatus"></span><span id="imgOrigin"></span></figcaption></figure>
+<p id="why"></p><label id="phaseWrap" hidden>审阅回放 <select id="phase"><option value="final">审阅完成</option><option value="pending">收到原件 · 待审</option></select></label>
+</section></div>
+<section class="timeline"><div class="sectionhead"><h2>行程回放</h2><button id="reset" class="quiet">↺ 重置到首回合</button></div>
+<div class="tools"><label>地点筛选<select id="placeFilter"></select></label><label class="action">选择已保存行动<select id="turnSelect"></select></label><div class="arrows"><button id="prev">← 上一回合</button><button id="next">下一回合 →</button></div></div>
+<div id="steps" aria-label="回合索引"></div>
+</section><details id="history"><summary>图片历史与审阅记录 <span>只读</span></summary><div id="events"></div></details></section>
+<section id="archive" hidden><div class="titleline"><div><span class="eyebrow">旧图档案 <b>/</b> YJ-02</span><h1>酒馆旧影</h1><p>早期工具实验的已审原图，属于独立的固定酒馆剧情。</p></div></div>
+<figure class="archiveFigure"><img id="legacyImage" alt=""><p id="archiveError" hidden>旧图原件不可读，请核对同目录的 media 文件夹。</p></figure>
+<div class="archiveNav"><label>实验阶段<select id="archiveStage"></select></label><div><h2 id="archiveTitle"></h2><p id="archiveCaption"></p></div></div></section>
+<footer><span>九霄 · 映界</span><span>合成试玩记录　2026.11.22</span></footer><p id="announce" class="sr" aria-live="polite"></p></main>
+<script type="application/json" id="record">/* FIXTURE */</script><script>/* PLAYER */</script></body></html>

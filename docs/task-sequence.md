@@ -2,7 +2,7 @@
 
 更新：2026-11-22。
 
-**YJ-P03-S3 已准备：** [把 S2 的 20 回合、已有 UI 与图片状态导出为无需 localhost 的可点击静态离线预览](task-briefs/YJ-P03-S3-offline-playable-preview.md)。**仅任务书完成，真正页面/构建/交互验收尚未执行；不启用真实 API 或生产默认场景规则。** 本机 PG/Chrome 与全链路仍由环境 Issue #1 单独处理。
+**YJ-P03-S3 · S3_PREVIEW_PARTIAL。** 已交付固定 20 回合离线试玩。打开 [index.html](../packages/offline-play-preview/dist/index.html) 即可体验；携带 media 文件夹可查看独立的旧酒馆图册。20 回合与 16 项交互检查通过，当前 Windows 的原生浏览器在导航前退出，状态为 BROWSER_NOT_VERIFIED。[运行报告](../docs/reports/YJ-P03-S3-offline-play-preview-report.md)
 
 **YJ-P03-S2 · P03_S2_OFFLINE_PASS。** 100 条预锁定合成案例中，44 条可入画，12 条需复核，10 条冲突，34 条条件不足。危险放行和不必要阻断均为 0。20 个连续修订经过三个地点，模拟生成与编辑各一次，实际费用 USD 0。 [运行报告与复跑](reports/YJ-P03-S2-scene-consistency-slice-report.md)
 
@@ -98,7 +98,7 @@ YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。YJ
 | YJ-P02-I2 | I2_GATE_OFFLINE_PASS · LIVE_BLOCKED_COST_BOUND | [真正 USD 授权、成本上界与持久 pre-send 门禁](task-briefs/YJ-P02-I2-image-money-gate.md)；真实 API 禁止 |
 | YJ-P03-S1 | P03_S1_OFFLINE_PASS · replayOnly | [多地点自然中文、完整人物名单、受信地点注册及可追溯 scene-evidence/2 旁路](task-briefs/YJ-P03-S1-generalized-scene-evidence.md)，完全禁真实 API |
 | YJ-P03-S2 | P03_S2_OFFLINE_PASS | 100 条独立锁定语料与 20 回合模拟切片。原生 PG/Chrome 为 ENV_BLOCKED，真实图片为 LIVE_BLOCKED_COST_BOUND。 |
-| YJ-P03-S3 | 待执行 · 仅完整任务书已上传 | [无服务器静态交互预览，逐回合剧情/图片审核可见，固定素材不可冒充真实 API](task-briefs/YJ-P03-S3-offline-playable-preview.md)；不改变游戏后端或真钱状态 |
+| YJ-P03-S3 | S3_PREVIEW_PARTIAL | 已交付可双击静态文件、逐回合只读预览和旧图档案；原生浏览器与手机体验待验。 |
 | YJ-P02-L5B | 环境阻塞 · ENV_BLOCKED | [在受许可的 loopback-only 环境完成本地 Chrome/PG/L4R/YJ-13 验收](task-briefs/YJ-P02-L5B-loopback-closeout.md)，不得提升公网权限或发真实 API |
 | YJ-ENV-01 · Dot | 待执行；任务书已上传 | [合法确认本机 EACCES 阻断与最小 localhost TCP 能力](https://github.com/quakhiak34568-lang/Nine-cloud-Yingjie/blob/7d2badc6284174053ed3012766a79edd1346124f/docs/task-briefs/YJ-ENV-01-dot-loopback.md)；允许后移交 Codex 补 L5B |
 | YJ-P02-I1 · Codex | 离线完成 · IMAGE_ADAPTER_OFFLINE_PASS | [OpenAI Images 生成、编辑离线适配、参考版权许可、费用门禁与假 PNG 响应](task-briefs/YJ-P02-I1-openai-image-offline.md)；真实 API 仍禁止 |

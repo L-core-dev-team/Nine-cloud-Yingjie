@@ -1,0 +1,21 @@
+{
+  "entry": "dist/index.html",
+  "htmlSha256": "bf62b94bb5538a11dc293c70dc6fff0452cbc6bfb38509d773fb0b32d9776fb8",
+  "fixtureSha256": "119cf3c203e1bf3a129aab852a874c7fcb071a54e6272b09ac3063ab7e5c2d40",
+  "sourceSha": "65ccd55cf5ebef6922a08eb48e9e8330799251b5b763a58b0a3fbc36f263a3fb",
+  "turns": 20,
+  "media": {
+    "I0": "7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee",
+    "I1": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb",
+    "I2": "9feccc88e3814af79055bd71b43ec5757f4b8b8b3460787ef349ed3de4031b3f"
+  },
+  "byteIdenticalRebuild": true,
+  "networkPermissionDuringRebuild": false,
+  "files": {
+    "index.html": "bf62b94bb5538a11dc293c70dc6fff0452cbc6bfb38509d773fb0b32d9776fb8",
+    "media/I0.png": "7a70683b203dc817fd5567130ba53601f84b990d344eac971bd89faf9d10f4ee",
+    "media/I1.png": "004fabce7d1bacae36346e556db0d8017d0fde96e4e6ca99bc59c2a47c808aeb",
+    "media/I2.png": "9feccc88e3814af79055bd71b43ec5757f4b8b8b3460787ef349ed3de4031b3f"
+  },
+  "node": "v26.13.0"
+}

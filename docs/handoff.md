@@ -2,11 +2,11 @@
 
 更新：2026-11-22。
 
-## 最新接续：YJ-P03-S3 直接可操作的离线映界试玩预览（仅任务书）
+## S3 离线试玩交付
 
-- 已通过 GitHub 核对 S2 远端 `codex/yj-p03-s2-scene-consistency-slice@c5f75abf53d278a2f00e0ee9581bbc45ec224141`、[原报告](reports/YJ-P03-S2-scene-consistency-slice-report.md)、[100 个案例](reports/evidence/YJ-P03-S2/measurement.json)、[20 回合回执](reports/evidence/YJ-P03-S2/story-slice.json)、[兼容回归](reports/evidence/YJ-P03-S2/regression.json)和 S2 源文件。44 eligible、12 needs-review、10 conflict、34 not-ready，开发自编锁定语料中没有危险放行或多余弃判；20 回合真实运行了模拟生成/编辑各 1 次、复用 3 次、迟到图归原 request 和拒审隐藏。**本轮只有 GitHub 证据核查，未在用户机器上实际重跑代码。**
-- S2 是合成九霄 history、SQLite 与 PNG 格式测试件，缺少一份**能让道主直接打开、按回合操作的体验预览**；已有 `YingjiePanel` 与 `ImageHistory` 依赖受鉴权 HTTP/PG，原 `127.0.0.1` 仍 EACCES。为使产品进度更直观，从 S2 完成 SHA 建立 `codex/yj-p03-s3-offline-playable-preview`，上传[完整无服务器可交互预览任务书](task-briefs/YJ-P03-S3-offline-playable-preview.md)。**本轮仅任务书与交接；S3 页面、素材导出、测试和可打开产物均 NOT_RUN**。
-- S3 只读使用 S2 修订回执和项目已有的合法合成图；可逐回合检查场景、人数、图状态、历史、拒审与迟到。S2 mock PNG 不可标成剧情真图，YJ-02 旧真图只用于自己所属固定合成酒馆，不能错配新场景。浏览器 `file://` 打开若失败应如实部分通过，不绕过 TCP/自动审批。无自由 AI 输入、真实图片 API、真钱账本、数据库或外网部署。I2 `LIVE_BLOCKED_COST_BOUND`、原 L4 `UNKNOWN_STOP` 和 Issue #1 全保留。
+**YJ-P03-S3 · S3_PREVIEW_PARTIAL。** 已交付固定 20 回合离线试玩。打开 [index.html](../packages/offline-play-preview/dist/index.html) 即可体验；携带 media 文件夹可查看独立的旧酒馆图册。20 回合与 16 项交互检查通过，当前 Windows 的原生浏览器在导航前退出，状态为 BROWSER_NOT_VERIFIED。[运行报告](../docs/reports/YJ-P03-S3-offline-play-preview-report.md)
+
+道主可直接从文件资源管理器打开产物。线上请求 0 次，图像成本 USD 0；待补真实浏览器打开、键盘、两种视口与真人体验。
 
 ## S2 图片资格与离线连续试玩
 

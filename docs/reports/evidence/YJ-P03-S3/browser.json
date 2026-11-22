@@ -1,0 +1,24 @@
+{
+  "status": "BROWSER_NOT_VERIFIED",
+  "method": "same managed Windows session, local Chromium launch via Playwright pipe, chromiumSandbox:true",
+  "attempts": [
+    {
+      "browser": "Google Chrome",
+      "result": "LAUNCH_FAILED",
+      "diagnostic": "TransactNamedPipe 0x6D; crash server failed to launch, self-terminating",
+      "fileNavigation": "NOT_RUN"
+    },
+    {
+      "browser": "Microsoft Edge",
+      "result": "LAUNCH_FAILED",
+      "diagnostic": "TransactNamedPipe 0x6D; process exited before page creation",
+      "fileNavigation": "NOT_RUN"
+    }
+  ],
+  "desktop1280x800": "NOT_RUN",
+  "mobile390x844": "NOT_RUN",
+  "keyboard": "NOT_RUN",
+  "screenshots": 0,
+  "physicalPhone": "NOT_RUN",
+  "tcpProbes": 0
+}
