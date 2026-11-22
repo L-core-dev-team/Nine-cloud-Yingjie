@@ -1,0 +1,93 @@
+{
+  "sha256": "1c65286041ae74ccae956c08bdca02b3e91f9273411834c83adbd98071e23f98",
+  "utf16Length": 33,
+  "utf8Bytes": 99,
+  "revision": 1,
+  "history": "completed-history",
+  "bindingMatches": true,
+  "priorEvents": 0,
+  "priorPlaces": 0,
+  "priorCurrent": null,
+  "result": "not-ready",
+  "reason": "unsupported-clause",
+  "method": "zh-visible-clause/2",
+  "evidence": [
+    {
+      "start": 0,
+      "length": 17,
+      "rule": "unsupported"
+    }
+  ],
+  "observations": [
+    {
+      "type": "unknown",
+      "reason": "unsupported-clause"
+    }
+  ],
+  "sentences": [
+    {
+      "start": 0,
+      "length": 17
+    },
+    {
+      "start": 18,
+      "length": 14
+    }
+  ],
+  "storedAuditStateResultMatch": true,
+  "images": {
+    "tasks": 0,
+    "attempts": 0
+  },
+  "shadow": {
+    "method": "zh-visible-clause/3",
+    "replayOnly": true,
+    "reason": "incomplete-initial-survey",
+    "result": "not-ready",
+    "evidence": [
+      {
+        "rule": "observed-indoor-daylight",
+        "start": 0,
+        "length": 6
+      },
+      {
+        "rule": "visible-counter-and-windows",
+        "start": 7,
+        "length": 10
+      },
+      {
+        "rule": "observed-present-members",
+        "start": 18,
+        "length": 14
+      }
+    ],
+    "partialFields": [
+      {
+        "field": "lighting",
+        "valueCount": 1,
+        "evidenceIndex": 0
+      },
+      {
+        "field": "observedFeatures",
+        "valueCount": 2,
+        "evidenceIndex": 1
+      },
+      {
+        "field": "observedPeople",
+        "valueCount": 3,
+        "evidenceIndex": 2
+      }
+    ],
+    "duplicateSuppressed": true,
+    "images": {
+      "tasks": 0,
+      "attempts": 0
+    }
+  },
+  "originalClusterUnchanged": true,
+  "approvalFileUnchanged": true,
+  "approvalState": "ACKNOWLEDGED",
+  "newTextCalls": 0,
+  "newImageCalls": 0,
+  "newCostUsd": 0
+}

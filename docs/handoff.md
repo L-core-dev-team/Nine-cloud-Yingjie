@@ -1,8 +1,12 @@
 # 映界当前交接
 
-更新：2026-11-21。
+更新：2026-11-22。
 
-## YJ-P02-L2 当前接续：真实正文只读审计（尚未执行）
+## YJ-P02-L2 当前交付
+
+原件、原会话和投影已只读核对。正确留空，`/3` 的局部识别改进仅进入独立审计投影，默认宿主继续用 `/2`。保留原 L1 账本及停机集群。[报告与复跑](reports/YJ-P02-L2-live-text-extraction-report.md)
+
+## 归档 · L2 开工准备
 
 - 已只读核对 `codex/yj-p02-l1-key-entry-ui@7e714c01497b83b1de42069a47862a7d51c9f863` 的真实[脱敏回执](reports/evidence/YJ-P02-L1/live-result.json)、L1 运行报告和 `zh-visible-clause/2` 源码；本轮未在本机重跑或读取真实原正文。L1 只有 1 次 `gpt-6-luna` 真实文字请求、92 输入/39 输出 tokens、估算 $0.0000287，原完成修订 1 的正文 SHA 为 `1c65286041ae74ccae956c08bdca02b3e91f9273411834c83adbd98071e23f98`，提取 `not-ready`，图片调用 0。
 - 新建独立分支 `codex/yj-p02-l2-real-text-extraction`，上传[完整 YJ-P02-L2 执行任务书](task-briefs/YJ-P02-L2-live-text-extraction.md)。**本轮仅上传任务和交接，没有读取本地原文、修改提取器、执行新的测试或调用模型。**

@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-**下一步 YJ-P02-L2 只读诊断任务书已提交，业务测试尚未执行。** 从 L1 实际完成提交 `7e714c0` 独立建分支，要求使用已保存的 Luna 真实正文核实 SHA，再查 `not-ready` 是否源于事实不足或中文提取器漏判；仅在有确凿证据时做版本化、离线改进。[完整 L2 任务书](docs/task-briefs/YJ-P02-L2-live-text-extraction.md)。**L1 唯一真实调用许可已用尽，L2 不得发新文字/图片 API 请求。**
+**YJ-P02-L2 已完成。** 修订 1 的真实正文经 SHA 核对，原版弃判正确。隔离回放中的 `/3` 新增三类局部事实审计，仍保留 `not-ready`。本轮模型调用 0 次。[根因、回执与回退](docs/reports/YJ-P02-L2-live-text-extraction-report.md)
 
 **YJ-P02-L1 真实文字试点已通过。** 唯一一次 Luna 请求返回 HTTP 200，原角色卡保存修订 1，映界读回正文后判为 `not-ready`。图片调用为 0，单次许可已用完。[运行报告与真实回执](docs/reports/YJ-P02-L1-luna-text-smoke-report.md)
 

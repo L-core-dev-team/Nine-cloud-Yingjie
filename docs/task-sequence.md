@@ -1,8 +1,8 @@
 # 映界实施任务序列
 
-更新：2026-11-21。
+更新：2026-11-22。
 
-**YJ-P02-L2 接续入口：** [首次真实 Luna 正文的只读根因分析和离线提取修正任务书](task-briefs/YJ-P02-L2-live-text-extraction.md)已上传独立分支，**业务尚未执行**。L1 唯一真实调用已经完成且授权用尽，L2 绝不调用模型；先核对原保存正文 SHA，再判断正确 abstain 或有证据的提取器缺口。
+**YJ-P02-L2 已完成。** 真实修订 1 已核对，结论为 CORRECT_ABSTENTION；局部表达识别 EXTRACTOR_GAP_FIXED_OFFLINE。[报告](reports/YJ-P02-L2-live-text-extraction-report.md)
 
 **YJ-P02-L1 已完成，LUNA_ONE_CALL_PASS。** 一笔真实文字请求已保存并读回，原单次授权已用完。[报告](reports/YJ-P02-L1-luna-text-smoke-report.md)
 
@@ -70,7 +70,7 @@ YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。YJ
 | YJ-P01 | OFFLINE_PASS；LIVE_BLOCKED | [实现、实测、纠错独立身份提案与下一轮条件](reports/YJ-P01-real-service-readiness-report.md) |
 | YJ-P02 | 待开始；OpenAI 已选、完整任务书已上传 | [OpenAI API 受信 adapter、生成/编辑协议、PG 发送前门禁与授权试点条件](task-briefs/YJ-P02-openai-adapter.md)；真实调用 NOT_RUN |
 | YJ-P02-L1 | 已完成 | 真实文字 1 次，图片 0 次。估算 USD 0.0000287，正式账单待核。[运行报告](reports/YJ-P02-L1-luna-text-smoke-report.md) |
-| YJ-P02-L2 | 待开始；任务书已上传 | [真实 Luna 已保存正文只读分析、保守中文提取改善及离线回归](task-briefs/YJ-P02-L2-live-text-extraction.md)；本轮新增真实 API 调用 0 |
+| YJ-P02-L2 | 已完成 | 真实正文只读回放与局部事实审计；原、新均留空，新增真实请求 0。[报告](reports/YJ-P02-L2-live-text-extraction-report.md) |
 | YJ-M01 | 后续待开始 | 地图具体组织方式尚未确定 |
 
 ## 依赖说明

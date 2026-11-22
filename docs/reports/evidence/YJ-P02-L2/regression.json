@@ -1,0 +1,206 @@
+{
+  "contracts": {
+    "tests": 10,
+    "passCount": 10,
+    "fail": 0,
+    "skipped": 0
+  },
+  "corpus": [
+    {
+      "method": "zh-visible-clause/1",
+      "batch": "reference",
+      "exact": 17,
+      "incorrectAccept": 0,
+      "abstain": 7,
+      "unnecessaryAbstain": 0,
+      "wrongAbstentionKind": 0
+    },
+    {
+      "method": "zh-visible-clause/1",
+      "batch": "prose",
+      "exact": 4,
+      "incorrectAccept": 0,
+      "abstain": 3,
+      "unnecessaryAbstain": 3,
+      "wrongAbstentionKind": 0
+    },
+    {
+      "method": "zh-visible-clause/1",
+      "batch": "continuity",
+      "exact": 2,
+      "incorrectAccept": 1,
+      "abstain": 31,
+      "unnecessaryAbstain": 14,
+      "wrongAbstentionKind": 8
+    },
+    {
+      "method": "zh-visible-clause/2",
+      "batch": "reference",
+      "exact": 16,
+      "incorrectAccept": 0,
+      "abstain": 8,
+      "unnecessaryAbstain": 1,
+      "wrongAbstentionKind": 1
+    },
+    {
+      "method": "zh-visible-clause/2",
+      "batch": "prose",
+      "exact": 7,
+      "incorrectAccept": 0,
+      "abstain": 0,
+      "unnecessaryAbstain": 0,
+      "wrongAbstentionKind": 0
+    },
+    {
+      "method": "zh-visible-clause/2",
+      "batch": "continuity",
+      "exact": 16,
+      "incorrectAccept": 0,
+      "abstain": 18,
+      "unnecessaryAbstain": 0,
+      "wrongAbstentionKind": 0
+    }
+  ],
+  "casesComparedWithV2": 65,
+  "targetedSuite": {
+    "tests": 4,
+    "passCount": 4,
+    "fail": 0,
+    "skipped": 0
+  },
+  "yj13": [
+    {
+      "mode": "regression",
+      "head": "9fd2a523b97bd9ca7f442e464107882602a631d7",
+      "exit": 0,
+      "signal": null,
+      "error": null,
+      "elapsedMs": 92023,
+      "tests": {
+        "tests": 22,
+        "pass": 22,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": []
+    },
+    {
+      "mode": "regression",
+      "head": "9fd2a523b97bd9ca7f442e464107882602a631d7",
+      "exit": 0,
+      "signal": null,
+      "error": null,
+      "elapsedMs": 89923,
+      "tests": {
+        "tests": 22,
+        "pass": 22,
+        "fail": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": []
+    }
+  ],
+  "p01": {
+    "cases": [
+      "offline contract runner has no network permission",
+      "CardModel sends only the cleared action and unsupported prose abstains",
+      "absent, revoked, expired, wrong scope and incomplete approvals never reach fake",
+      "scope, current facts and explicit material rights gate generation and editing",
+      "two connections share slots and never exceed count or total reservations",
+      "acknowledged failure keeps reservation and count boundary; refusal stays distinct",
+      "unconfirmed image cannot be resent after closing and reopening the ledger"
+    ],
+    "tests": 7,
+    "pass": 7,
+    "fail": 0,
+    "skipped": 0
+  },
+  "l1Cases": [
+    {
+      "scenario": "completed",
+      "state": "ACKNOWLEDGED",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "401",
+      "state": "REJECTED_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "403",
+      "state": "REJECTED_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "429",
+      "state": "REJECTED_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "503",
+      "state": "UNKNOWN_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "redirect",
+      "state": "UNKNOWN_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "timeout",
+      "state": "UNKNOWN_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "bad-json",
+      "state": "UNKNOWN_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "wrong-model",
+      "state": "FAIL",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "wrong-tier",
+      "state": "FAIL",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "tool",
+      "state": "UNKNOWN_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "usage-missing",
+      "state": "UNKNOWN_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "incomplete",
+      "state": "UNKNOWN_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "unexpected-input-charge",
+      "state": "UNKNOWN_STOP",
+      "fakeSends": 1
+    },
+    {
+      "scenario": "over-output-limit",
+      "state": "UNKNOWN_STOP",
+      "fakeSends": 1
+    }
+  ],
+  "p01NetworkPermission": false,
+  "l1NetworkPermission": false,
+  "missingSourceCheck": "SOURCE_UNAVAILABLE",
+  "setupFailures": [
+    "MISSING_PG_CONTROLDATA_IN_SERVER_BIN",
+    "AMBIGUOUS_JOIN_COLUMN_42702"
+  ]
+}

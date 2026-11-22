@@ -1,8 +1,12 @@
 # 映界验证记录
 
-更新：2026-11-21。
+更新：2026-11-22。
 
-## YJ-P02-L2 开工准备：源证据核查，不是新执行结果
+## YJ-P02-L2 当次验证
+
+原 SHA 匹配，`/2` 与留存审计逐项一致；`/3` 记录局部事实，无可用画面。原目录与许可文件指纹一致。契约、既有 65 条语料、防重与浏览器回归见[报告](reports/YJ-P02-L2-live-text-extraction-report.md)。
+
+## 归档 · L2 开工准备
 
 已从 GitHub 核对 L1 完成分支 `7e714c01497b83b1de42069a47862a7d51c9f863`、[真实脱敏回执](reports/evidence/YJ-P02-L1/live-result.json)、运行报告、`packages/first-play/continuity.mjs` 和开发标注对照。真实 Luna 1 次、HTTP 200、L1 `ACKNOWLEDGED`、九霄 completed-history 修订 1、映界读回 SHA 相符但 `not-ready`，图片任务 0。原正文并未公开在 GitHub 回执中，**本轮尚未读取本地真实正文，故不能断言根因或证明 `/2` 有 bug**。
 
