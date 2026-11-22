@@ -1,5 +1,9 @@
 # 九霄 · 映界
 
+## 当前接续｜YJ-P04-H2R 质量强化任务准备（NOT_RUN）
+
+已从 H2 `c352f86f7213c6012b7382fc36f5665f45684c93` 建立独立 `codex/yj-p04-h2r-semantic-generalization`，准备[完整 H2R 任务书](docs/task-briefs/YJ-P04-H2R-semantic-generalization.md)，要求先冻结独立新评价集，再补中文指代/权益结果/多线因果，并审计 12 项视觉候选的证据缺失。**本轮仅创建任务与接续文档，H2R 业务实现、语料冻结和新测试 NOT_RUN。** H2 原 `PARTIAL` 不改；不接生图、无新增 API 授权、生产默认不变。
+
 ## 2026-11-22 · YJ-P04-H2 离线研究交付
 
 H2 已完成隔离回放研究，结论为 **PARTIAL**。原「渡船」已检出，新冻结集识别 46/50 个关键时刻，普通误报 0/268。12 个预期导演提议均因证据不足而保留文字。 生产默认入口沿用原版，H1 可直接回放。新增真实模型请求和费用均为 0。[运行报告与复跑方法](docs/reports/YJ-P04-H2-arc-payoff-cadence-report.md)

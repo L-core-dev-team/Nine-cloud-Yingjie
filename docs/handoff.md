@@ -1,5 +1,9 @@
 # 映界当前交接
 
+## 2026-11-22 · 最新接续：YJ-P04-H2R 质量强化准备
+
+H2 已提交且状态 **PARTIAL**，远端确认固定基线 `c352f86f7213c6012b7382fc36f5665f45684c93`。在独立分支 `codex/yj-p04-h2r-semantic-generalization` 准备 [H2R 完整任务书](task-briefs/YJ-P04-H2R-semantic-generalization.md)：先冻结新独立盲测语料，再研究通用中文指代、权益生效、长线因果与视觉资格分层。4 个历史漏判和 12 项未放行导演候选均须保留、逐例审计；证据不足不能为追分强行采纳。**本轮只上传任务与索引，H2R 代码、真实本机测试、真人盲评 NOT_RUN。** 原生 PG/Chrome ENV_BLOCKED，S3 浏览器 BROWSER_NOT_VERIFIED，真实图片 I2 LIVE_BLOCKED_COST_BOUND；旧授权不复用，main 不动。
+
 ## 2026-11-22 · YJ-P04-H2 离线研究交付
 
 H2 分支自 `ae4dfbc` 接续，先以 `6f8cc87` 冻结 318 修订，再实现 `narrative-highlight/2`。交接状态 **PARTIAL**。保留 4 个安静高潮漏判及 13 个时机差异；接续应先核实口语化权益指代及可获授权的明确地点证据。 生产默认入口沿用原版，H1 可直接回放。新增真实模型请求和费用均为 0。[运行报告与复跑方法](reports/YJ-P04-H2-arc-payoff-cadence-report.md)

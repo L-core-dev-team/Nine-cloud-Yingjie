@@ -1,5 +1,11 @@
 # 变更记录
 
+## 2026-11-22 · H2R 质量强化专项立项（仅文档）
+
+- 从 H2 完成提交 `c352f86` 派生独立 H2R 任务分支；创建[执行任务书](docs/task-briefs/YJ-P04-H2R-semantic-generalization.md)。
+- 明确语义确认/叙事重要性/视觉资格分层、旧四漏判和十二视觉候选保留、独立语料先冻结后改算法、严禁为刷分改金标或越权生图。
+- **本轮业务代码、模型训练、真实出图、回归执行均 NOT_RUN。** H2 `PARTIAL`，旧许可、I2 付费门禁、两个 main 均不变。
+
 ## 2026-11-22 · YJ-P04-H2 离线研究交付
 
 新增 `narrative-highlight/2`、`highlight-ranker/2` 与 `highlight-cadence/1` 的离线研究入口、实现前冻结的评价集和逐回合回执。YJ-P04-H2 为 **PARTIAL**。 生产默认入口沿用原版，H1 可直接回放。新增真实模型请求和费用均为 0。[运行报告与复跑方法](docs/reports/YJ-P04-H2-arc-payoff-cadence-report.md)
