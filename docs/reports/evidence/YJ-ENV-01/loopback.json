@@ -1,0 +1,46 @@
+{
+  "task": "YJ-ENV-01",
+  "baseline": "7d2badc6284174053ed3012766a79edd1346124f",
+  "conclusion": "ENVIRONMENT_DIFFERS",
+  "environment": {
+    "target": "managed Windows desktop",
+    "originalL5BSameSessionVerified": false,
+    "execution": "ordinary managed Dot shell; no escalation or policy change"
+  },
+  "probe": {
+    "runId": "ab311912-748b-4b87-a8ba-f04baf3be277",
+    "utc": "2026-11-22T08:49:08.065Z",
+    "sourceSha256": "8b7022155c9fa967ee3c84105ee68dead386eedd39e7f558aefc4595676f4f80",
+    "platform": "win32",
+    "osRelease": "10.0.26200",
+    "node": "v26.13.0",
+    "nodePermissionModel": false,
+    "nodeNetPermission": null,
+    "preloadConfigured": false,
+    "target": "127.0.0.1",
+    "portSelection": "OS-assigned",
+    "observations": {
+      "tcpListen": {
+        "status": "PASS"
+      },
+      "tcpConnect": {
+        "status": "PASS",
+        "peerPayloadVerified": true
+      },
+      "httpListen": {
+        "status": "PASS"
+      },
+      "httpGet": {
+        "status": "PASS",
+        "httpStatus": 200,
+        "bodyVerified": true
+      }
+    },
+    "status": "LOOPBACK_PASS"
+  },
+  "exitCode": 0,
+  "chrome": "NOT_RUN",
+  "temporaryPostgres": "NOT_RUN",
+  "modelRequests": 0,
+  "costUsd": 0
+}
