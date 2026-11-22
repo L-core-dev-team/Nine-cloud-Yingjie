@@ -2,6 +2,13 @@
 
 更新：2026-11-22。
 
+## YJ-P02-L4 接续：真实 Luna 自然场景试点的独立授权准备（仅任务书）
+
+- 已核对 L3 完成分支 `codex/yj-p02-l3-scene-evidence-contract@7c5c68dbc27d20317c2668d19eb222f2a5010041`、[L3 报告](reports/YJ-P02-L3-scene-evidence-report.md)、[Chrome 32 回合与 23 个正确弃判](reports/evidence/YJ-P02-L3/browser.json)、[回归实绩](reports/evidence/YJ-P02-L3/regression.json)以及 `scene-evidence/1` 源码。L3 在固定地点词表和锚定中文句式下合成验证通过；首次完整回归为 21/22（原预设标签等待超时），随后两次 22/22，根因未证实。**本轮仅核对 GitHub 记录，未在用户 Windows/PG/Chrome 独立执行 L3 测试**。
+- 已从 L3 完成 SHA 新建 `codex/yj-p02-l4-luna-scene-pilot`，上传[完整 L4 受控真实叙事试点任务书](task-briefs/YJ-P02-L4-luna-scene-pilot.md)。本轮只创建任务书与交接，**L4 代码、离线测试和新的真实调用尚未进行**。
+- L4 先在完全离线环境准备一个新的一次性 Luna 请求和故事模板回执；实际测量模型自然中文的场景完整度、模态/费用与真实请求，须道主**另行明确授权新的模型、次数、合成外发内容和美元预算**，并亲自在受保护入口执行。建议候选是 `gpt-6-luna`、1 次合成场景文字、上限建议 $0.10，均不代表已授权。
+- L1 账本 `~/.nine-cloud-yingjie/yj-p02-l1/approval.sqlite` 已用尽且不得重置；不能借旧许可再次发送或调用图片 API。L2 `/3` 与 L3 `scene-evidence/1` 均保持 replayOnly，正式宿主默认 `/2`。YJ-13/P01/L1/L2/L3 原成果及 main 不动。
+
 ## YJ-P02-L3 本机离线交付
 
 场景证据旁路和候选叙事模板已在独立工作区实现。Chrome 原角色卡通过后端保存了 32 个合成回合，三处地点可区分，23 个不合格首回合全部留空。第二个空投影库重建六个连续修订，结果和审计逐条一致。L1 实文与原账本本轮未访问。查看[报告、测试结果与回退](reports/YJ-P02-L3-scene-evidence-report.md)和[浏览器回执](reports/evidence/YJ-P02-L3/browser.json)。

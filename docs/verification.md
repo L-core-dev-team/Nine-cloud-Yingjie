@@ -2,6 +2,12 @@
 
 更新：2026-11-22。
 
+## 本轮 GitHub 核查 L3 完成证据、L4 任务书准备
+
+核对远端 `codex/yj-p02-l3-scene-evidence-contract@7c5c68dbc27d20317c2668d19eb222f2a5010041`、[L3 报告](reports/YJ-P02-L3-scene-evidence-report.md)、[Browser JSON](reports/evidence/YJ-P02-L3/browser.json)、[Regression JSON](reports/evidence/YJ-P02-L3/regression.json)、`scene-evidence.mjs` 和提示模板。原九霄角色卡保存 32 个合成回合、三个不同场景可 ready、23 个缺少证据的首回合 not-ready，酒馆 V1 3→V2 5、离开隐藏后确认复访同 V2。契约 10/10，合并提取测试 30/30，P01 7/7、L1 15/15；YJ-13 首轮 21/22（预设标签超时），随后两次 22/22，原因仍待核查。以上均来自 L3 的原执行证据；**本轮没有在用户本机重新执行测试**。该规则仅覆盖有限地点与锚定句式，真实自然语言成功率 NOT_RUN。
+
+在 L3 完成 SHA 上创建独立[完整 L4 任务书](task-briefs/YJ-P02-L4-luna-scene-pilot.md)，本轮只是 GitHub 文档准备。L4 适配代码、禁网测试与真实文字推理均 NOT_RUN；新授权尚未取得，新增真实 API 请求 0、费用 0。L1 单笔授权已 ACKNOWLEDGED，不能复用或重置。
+
 ## YJ-P02-L3 本机离线交付
 
 场景证据旁路和候选叙事模板已在独立工作区实现。Chrome 原角色卡通过后端保存了 32 个合成回合，三处地点可区分，23 个不合格首回合全部留空。第二个空投影库重建六个连续修订，结果和审计逐条一致。L1 实文与原账本本轮未访问。查看[报告、测试结果与回退](reports/YJ-P02-L3-scene-evidence-report.md)和[浏览器回执](reports/evidence/YJ-P02-L3/browser.json)。

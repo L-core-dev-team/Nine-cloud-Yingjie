@@ -2,6 +2,8 @@
 
 更新：2026-11-22。
 
+**下一步 YJ-P02-L4：** [Luna 自然场景真实试点的离线适配与新授权关口](task-briefs/YJ-P02-L4-luna-scene-pilot.md)已上传独立分支，**代码/测试/真实请求均未开始**。先准备安全门禁和完整回执，待道主另行批准新的一次文字请求、预算与合成数据范围，不能复用已用尽的 L1 许可。
+
 **YJ-P02-L3 已执行。** 新契约仅在隔离回放中使用。已验证首回合场景证据和后续酒馆连续性，真实服务和图片试点仍未运行。[结果、限制与回退](reports/YJ-P02-L3-scene-evidence-report.md)
 
 **YJ-P02-L2 已完成。** 真实修订 1 已核对，结论为 CORRECT_ABSTENTION；局部表达识别 EXTRACTOR_GAP_FIXED_OFFLINE。[报告](reports/YJ-P02-L2-live-text-extraction-report.md)
@@ -74,6 +76,7 @@ YJ-00 已获准启动，YJ-01 已完成本地 Node 合成文字运行基线。YJ
 | YJ-P02-L1 | 已完成 | 真实文字 1 次，图片 0 次。估算 USD 0.0000287，正式账单待核。[运行报告](reports/YJ-P02-L1-luna-text-smoke-report.md) |
 | YJ-P02-L2 | 已完成 | 真实正文只读回放与局部事实审计；原、新均留空，新增真实请求 0。[报告](reports/YJ-P02-L2-live-text-extraction-report.md) |
 | YJ-P02-L3 | 待开始；任务书已上传 | [完成初始视觉场景的叙事证据/字段完整性契约，真实 API 为 0](task-briefs/YJ-P02-L3-scene-evidence-contract.md)，默认 /2 不变 |
+| YJ-P02-L4 | 待开始；完整任务书已上传 | [新一次 Luna 真实场景叙事试点的禁网准备、独立一次性授权与后续门禁](task-briefs/YJ-P02-L4-luna-scene-pilot.md)；**真实请求未获新授权** |
 | YJ-M01 | 后续待开始 | 地图具体组织方式尚未确定 |
 
 ## 依赖说明
