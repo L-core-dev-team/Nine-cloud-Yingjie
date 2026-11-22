@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-**YJ-P02-L4 · PREP_OFFLINE_PASS。** 独立单次请求、持久防重、受保护输入页和原会话合成回环已验证。真实阶段由本人在本机页面最终触发。参见[试点报告与复跑](docs/reports/YJ-P02-L4-luna-scene-pilot-report.md)。
+**YJ-P02-L4 · UNKNOWN_STOP。** 本人报告已点击。原页面已结束，本机未找到真实回执与专用账本。实际用量、费用及最终画面状态未知，本次核查补发 0 次。[核查结论与历史离线验收](docs/reports/YJ-P02-L4-luna-scene-pilot-report.md)
 
 **YJ-P02-L3 场景证据契约已完成离线联调。** 原角色卡保存的完整调查可建立视觉状态，缺少地点、视角或完整名单时继续显示文字。默认宿主使用原提取器。参见[报告与复跑](docs/reports/YJ-P02-L3-scene-evidence-report.md)。
 

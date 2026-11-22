@@ -2,7 +2,7 @@
 
 更新：2026-11-22。
 
-**YJ-P02-L4 · PREP_OFFLINE_PASS。** 独立单次请求、持久防重、受保护输入页和原会话合成回环已验证。真实阶段由本人在本机页面最终触发。参见[试点报告与复跑](reports/YJ-P02-L4-luna-scene-pilot-report.md)。
+**YJ-P02-L4 · UNKNOWN_STOP。** 本人报告已点击。原页面已结束，本机未找到真实回执与专用账本。实际用量、费用及最终画面状态未知，本次核查补发 0 次。[核查结论与历史离线验收](reports/YJ-P02-L4-luna-scene-pilot-report.md)
 
 **YJ-P02-L3 已执行。** 新契约仅在隔离回放中使用。已验证首回合场景证据和后续酒馆连续性，真实服务和图片试点仍未运行。[结果、限制与回退](reports/YJ-P02-L3-scene-evidence-report.md)
 

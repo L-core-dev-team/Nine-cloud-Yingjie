@@ -1,5 +1,15 @@
 # YJ-P02-L4 · 单次 Luna 合成酒馆试点
 
+## 点击后的只读核查 · UNKNOWN_STOP
+
+2026-11-22 北京时间 13:10。用户报告已点击最终执行按钮。原页面显示“会话已结束。若已点击开始，请核对本机脱敏回执。”本机固定 L4 目录、其中的 SQLite 账本与真实回执均未找到。在可见的应用沙箱和工作区中也未找到对应副本。此次只读核查补发 **0 次**。
+
+真实请求是否抵达服务商、输入和输出 token、按量估算费用及账单金额均未知。未取得可关联的真实 completed-history 修订或场景投影，因此最终 ready/not-ready 未知。下方 831 和 1,200 是请求预算的输入和输出上界；离线回执里的用量和 ready 只属于合成回环。
+
+按 **UNKNOWN_STOP** 收口，证据状态为 **RECEIPT_UNAVAILABLE**。前者是此次核查的停止决定，原 SQLite 状态未知。当前批准对象停止使用；任何补充核对仅使用已有回执、会话或服务商记录。[点击后核查记录](evidence/YJ-P02-L4/post-trigger-review.json)
+
+## 点击前的离线验收
+
 2026-11-22（北京时间）。任务从 `e52d0f1e2e4b07782cd809acd31357307168016e` 接续。**PREP_OFFLINE_PASS**。本报告的离线验收时点，真实推理 0 次，图片请求 0 次，新增费用 USD 0。项目密钥可见性和真实写入权限属于不同检查，须由用户进入本机页后核实。付费阶段的用量、真实正文保存、提取和账单均为 **NOT_RUN**，以单独的真实执行回执为准。
 
 ## 批准范围与请求
@@ -41,4 +51,4 @@ node packages/luna-text/l4/offline.mjs new-l4-browser.json
 node packages/local-demo/check.mjs regression new-yj13.json
 ```
 
-用户在本机 Windows 终端执行 `node packages/luna-text/l4/launch.mjs --open` 可打开保护页面，保持终端开启。每次启动签发新的短期页面邀请，仍受同一份 L4 账本约束。最终点击后查看上述专用目录的 `receipt-*.json`。可核对响应标识摘要、用量、估算金额、原会话正文摘要、分字段证据的 UTF-16 位置及拒绝理由。响应可能送达但缺回执时按 UNKNOWN_STOP 保持锁定，已确认模型返回但缺数据库核验时单列 ACKNOWLEDGED_HISTORY_UNVERIFIED。停止 L4 入口即可退出试点，默认宿主和旧提取版本继续按原路径工作。
+以下为触发前的启动方式，本次批准对象已停止使用。用户在本机 Windows 终端执行 `node packages/luna-text/l4/launch.mjs --open` 可打开保护页面，保持终端开启。每次启动签发新的短期页面邀请，仍受同一份 L4 账本约束。最终点击后查看上述专用目录的 `receipt-*.json`。可核对响应标识摘要、用量、估算金额、原会话正文摘要、分字段证据的 UTF-16 位置及拒绝理由。响应可能送达但缺回执时按 UNKNOWN_STOP 保持锁定，已确认模型返回但缺数据库核验时单列 ACKNOWLEDGED_HISTORY_UNVERIFIED。停止 L4 入口即可退出试点，默认宿主和旧提取版本继续按原路径工作。
