@@ -1,5 +1,11 @@
 # 变更记录
 
+## 2026-11-22 S1 核验与 P03-S2 场景审查、离线连续试玩任务准备
+
+- GitHub 核对 S1 `6ed8d2b` 及源回执：102 个锁定合成案例，36 正确采纳、66 留空，0 错采/多余弃判；新版 `scene-evidence/2 replayOnly`，真实图片和原生 PG/Chrome 未运行，本轮并未重跑 Windows 测试。
+- 原语料 `P30` 夜间+日光、`P50` 正午+月光反映字面事实与画面语义自洽的独立验证需求，不修改已归档 S1 语料。自 S1 完成提交创建 `codex/yj-p03-s2-scene-consistency-slice`，上传[完整 S2 独立语料、视觉一致性与 15+ 修订模拟游玩任务书](docs/task-briefs/YJ-P03-S2-scene-consistency-slice.md)。
+- 本轮仅 GitHub 文档准备，S2 代码和样本尚未实施；没有任何新 OpenAI 实际请求/费用，I2 付费和 Issue #1 回环阻塞继续，两个 main、旧许可和旧投影不动。
+
 ## 2026-11-22 S1 场景证据离线验收
 
 **YJ-P03-S1 · P03_S1_OFFLINE_PASS。** 六个登记地点、102 条预先标注回放，正确采纳 36 条、正确留空 66 条，错误采纳与不必要弃判均为 0。三个新地点已构造离线首图请求。 [运行报告、回执与复跑](docs/reports/YJ-P03-S1-generalized-scene-evidence-report.md)

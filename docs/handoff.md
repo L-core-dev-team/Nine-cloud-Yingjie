@@ -2,6 +2,13 @@
 
 更新：2026-11-22。
 
+## 最新接续 · YJ-P03-S2 场景语义校验与连续试玩切片（仅任务书）
+
+- 已只读核对 S1 完成提交 `codex/yj-p03-s1-generic-scene-evidence@6ed8d2b220c0e138bb4c7be88ac897e5a9aca81c`、[S1 报告](reports/YJ-P03-S1-generalized-scene-evidence-report.md)、[102 条新旧对照](reports/evidence/YJ-P03-S1/measurement.json)、[UTF-16 字段审计](reports/evidence/YJ-P03-S1/fields.json)、[兼容回归](reports/evidence/YJ-P03-S1/regressions.json)、受信场景目录和 `scene-evidence/2` 源码。S1 的 36 正例采纳/66 负例弃判、零错误采纳和零多余弃判**限于该锁定合成集合**；开发与验收共用合成世界，未有外部盲评，生产默认仍为旧 /2。本轮只是 GitHub 源证据核查，**没有在原 Windows/PG/Chrome 重新执行测试**。
+- 发现一个须单列的画面资格风险：预锁定 S1 语料 `P30` 明示“夜间 + 日光”，`P50` 明示“正午 + 月光”。字面依据存在且符合原自编标签，但单凭字段各自成立，无法保证图像语义自洽；幻想世界存在受信、已揭示的例外时亦不能机械判错。**旧 S1 验收、语料和历史记录保持不动。**
+- 从 S1 完成 SHA 建立隔离 `codex/yj-p03-s2-scene-consistency-slice` 并提交[完整 S2 任务书](task-briefs/YJ-P03-S2-scene-consistency-slice.md)。S2 先锁定 80+ 全新跨字段反例及解释性例外，再增加独立 `visual-consistency/1` 图片资格门禁和 15+ 修订纯离线故事切片，覆盖 I1/I2 模拟图像 pending/审核/复用/edit/错图隐藏。**本轮仅准备任务与交接，S2 代码及新测试 NOT_RUN**。
+- 继续保持 I2 `LIVE_BLOCKED_COST_BOUND`、I1 `IMAGE_ADAPTER_OFFLINE_PASS`、L1 `ACKNOWLEDGED`、L4 `UNKNOWN_STOP`、L5 `PARTIAL` 及原生环境 Issue #1 `ENV_BLOCKED`。本轮无任何 OpenAI 模型查询、文字/图片生成或费用，不改两个 main 或旧权限账本。
+
 ## S1 隔离回放交接
 
 **YJ-P03-S1 · P03_S1_OFFLINE_PASS。** 六个登记地点、102 条预先标注回放，正确采纳 36 条、正确留空 66 条，错误采纳与不必要弃判均为 0。三个新地点已构造离线首图请求。 [运行报告、回执与复跑](reports/YJ-P03-S1-generalized-scene-evidence-report.md)

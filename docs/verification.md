@@ -2,6 +2,12 @@
 
 更新：2026-11-22。
 
+## 本轮 GitHub 核对 S1 并准备 S2（非本机测试）
+
+远端核实 `codex/yj-p03-s1-generic-scene-evidence@6ed8d2b220c0e138bb4c7be88ac897e5a9aca81c`，只读 S1 原报告、[测量](reports/evidence/YJ-P03-S1/measurement.json)、[字段证据](reports/evidence/YJ-P03-S1/fields.json)、[回归](reports/evidence/YJ-P03-S1/regressions.json)及规则/目录源码。原合成语料 SHA `6a6e15a44cb8d6385e38d0e582b8814233fc7b15607f7e6940950b4034ffe249`，六个地点，开发 70 与预留 32，共 36 正确采纳、66 正确弃判、无错误采纳或不必要弃判；预锁定 JSONL 与锁定提交中的 Git blob 相同。新规则为 `scene-evidence/2 replayOnly`；生成了三个 I1 内存请求但传输 0，PG/Chrome 未测。**本轮只是连接器读取，未在本机重复执行**。
+
+另从原锁定样本确认 `P30` 夜间/日光、`P50` 正午/月光同时被自编标签允许，显示逐字段可见不自动保证画面组合有解释。为免修改原 S1 测量，已创建[独立 S2 任务书](task-briefs/YJ-P03-S2-scene-consistency-slice.md)，计划先锁定 80+ 新评估样本，再做 `visual-consistency/1` 限定的入画资格和 15+ 修订全内存图片流程；可解释的特殊世界观现象可通过**已揭示证据**核验，而非一概判错。本次 S2 新实现/新测试 NOT_RUN，真正图片、收费和宿主 PG/Chrome 继续 NOT_RUN / ENV_BLOCKED。
+
 ## 2026-11-22 S1 场景证据离线验收
 
 **YJ-P03-S1 · P03_S1_OFFLINE_PASS。** 六个登记地点、102 条预先标注回放，正确采纳 36 条、正确留空 66 条，错误采纳与不必要弃判均为 0。三个新地点已构造离线首图请求。 [运行报告、回执与复跑](reports/YJ-P03-S1-generalized-scene-evidence-report.md)

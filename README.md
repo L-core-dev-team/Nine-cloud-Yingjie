@@ -4,6 +4,8 @@
 
 ## 当前状态
 
+**下一阶段 YJ-P03-S2：可见字段的跨语义一致性审查 + 零网络连续试玩切片（仅任务书，尚未实施）。** [S2 完整任务书](docs/task-briefs/YJ-P03-S2-scene-consistency-slice.md)从 S1 已验收提交接续。S1 102 条文本证据虽无误采，但夜间日光、正午月光等字面完整组合仍需要单独判断是否可安全入画；将以新锁定语料和 15+ 合成修订的模拟生成/审阅/复用/编辑/隐藏链验证。**不升级生产默认、不发真实模型、不使用旧图片或真钱许可；本机 PG/Chrome 环境阻塞仍由 Issue #1 跟踪。**
+
 **YJ-P03-S1 · P03_S1_OFFLINE_PASS。** 六个登记地点、102 条预先标注回放，正确采纳 36 条、正确留空 66 条，错误采纳与不必要弃判均为 0。三个新地点已构造离线首图请求。 [运行报告、回执与复跑](docs/reports/YJ-P03-S1-generalized-scene-evidence-report.md)
 
 **YJ-P02-I2 · I2_GATE_OFFLINE_PASS。** 生成与参考编辑分别批准并从同一美元总额预留。40 个定向场景、跨进程竞争与崩溃恢复、148 项兼容回归通过。真实付款为 LIVE_BLOCKED_COST_BOUND。 [运行报告与回执](docs/reports/YJ-P02-I2-image-money-gate-report.md)
