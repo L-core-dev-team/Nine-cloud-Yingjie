@@ -1,5 +1,9 @@
 # 映界验证记录
 
+## 2026-11-23 · H3-B2S 纯离线执行授权核验（不是实测验收）
+
+连接 GitHub 核查 `codex/yj-p04-h3b2s-narrative-scope` 原 HEAD `68a36a4484b36e21183556222c790bd243ef3c81` 与任务书内容一致。道主明确答复「批准」后，更新任务书、交接、决策、任务序列、首页和变更日志记录 Gate A–D 纯离线执行许可。**未运行 Windows Codex、未新增冻结样本、未修改业务代码、未运行 H3-B2S 防护或兼容测试；不能把文档提交记为工程 PASS。** 旧 H3-B2 最终 FAIL / 叙述梦境误确证和 1,533 前缀旧回执维持不变。真实模型 GET/文字/图片调用 0、额外 USD 0；I2 LIVE_BLOCKED_COST_BOUND、PG/Chrome ENV_BLOCKED、S3 BROWSER_NOT_VERIFIED 原样保持。
+
 ## 2026-11-23 · H3-B2S 任务书 GitHub 核验（非修复实测）
 
 只读核实 GitHub H3-B2 最终 SHA `a55d356e6f8ae3740007cf8e8080f2bb679369b5`，其[最终报告](reports/YJ-P04-H3B2-proposition-grounding-report.md)和[FAIL 验收](reports/evidence/YJ-P04-H3B2/acceptance.json)。复核[《雾散后》原冻结记录](../packages/highlights/test/h3b2/reserve-2.jsonl)：第 1 修订明确后续为梦境，第 3 修订误确证，第 4 修订醒来，第 7 修订真阳性。只读确认旧 `discourse.mjs` 需要两个范围关键词共同命中、旧 `replay.mjs` 的 quarantined 状态存在现实返回后错拒风险。已在独立分支上传[H3-B2S 任务书](task-briefs/YJ-P04-H3B2S-narrative-scope-safety.md)。**本轮没有运行任何 H3-B2S 测试，也未修改业务代码**；真实模型权限查询/文字/图片调用 0，新增费用 USD 0。原始 H3-B2 FAIL 和原生 PG/Chrome ENV_BLOCKED、S3 BROWSER_NOT_VERIFIED、I2 LIVE_BLOCKED_COST_BOUND 均不变。

@@ -3,7 +3,7 @@
 - 编制：2026-11-23（北京时间）。
 - 执行者：Codex；目标分支：`codex/yj-p04-h3b2s-narrative-scope`。
 - 固定接续：`codex/yj-p04-h3b2-proposition-grounding@a55d356e6f8ae3740007cf8e8080f2bb679369b5`。
-- **本轮授权状态：道主同意先编制并上传 H3-B2S 独立修复任务书。仅授权任务分支及文档准备；业务代码、冻结新样本和 Gate A–D 实际测试尚未启动（NOT_RUN），待另行明确开工。**
+- **最新授权状态（2026-11-23）：道主在 Codex 已完成只读计划及远端分支核对后明确回复「批准」，正式许可执行本任务书 Gate A–D 的纯离线修复、全新合成评估冻结、离线开发、测试、回归、审计与任务分支提交。**此前仅准备任务书的授权记录是历史阶段，不再阻止本轮按授权开工。**授权已生效不等于 Codex 已启动：截至本次文档提交，Gate A 和业务实现/运行回执仍 NOT_RUN。**
 - **最终质量优先：H3-B2 的 `FAIL` 及其硬门槛退出码 1、原始金标、两次预留开启、第一次红灯、后续兼容回执必须原样保留。不能把本任务书上传、旧案例复跑或变更词表当成修复成功。**
 - 产品边界：九霄生成权威剧情、角色行动结果、世界事实和叙事文风；映界仅读有权限且已保存的 `completed-history`，不得自行写故事、补世界书隐藏事实、根据玩家 action 推测结果、将图片反过来写成剧情。
 - 许可边界：不修改九霄或映界 `main`，不触碰万卡阁或生产默认；不接真实模型 GET/Responses/Images、不调用付费服务、不下载模型权重、不外发私人文本/图片、不输入 API Key、不用历史 L1/L4 许可、不绕过 I2 `LIVE_BLOCKED_COST_BOUND` 或 localhost 安全限制。PG/Chrome/自由角色卡维持 `ENV_BLOCKED/NOT_RUN`，S3 `BROWSER_NOT_VERIFIED`；不得把离线回归冒充实机验收。
@@ -110,4 +110,4 @@ real model GET/text/Image calls, USD cost, PG/Chrome:
 full report/evidence URLs, rollback and residual H3-C prerequisites:
 ```
 
-**本轮仅获准准备此任务书及交接记录；若道主之后批准开工，才可让 Codex 执行 Gate A–D 的纯离线实现和测试。无论何时，本任务均不授权真实模型、参考图外发、付费图片、生产部署或修改两项目 main。**
+**授权更新：H3-B2S Gate A–D 纯离线实施已于 2026-11-23 获道主正式批准。Codex 可按本任务书在独立任务分支启动冻结、实现、测试和提交；但本次写入的仅是开工授权，尚无任何 H3-B2S 测试 PASS 或完成回执。此许可不包含真实模型、参考图外发、付费图片、生产部署、H3-C/D1/Q1 或修改两项目 main。**

@@ -1,5 +1,9 @@
 # 映界当前交接
 
+## 2026-11-23 · H3-B2S Gate A–D 已获纯离线开工许可（尚未运行）
+
+道主在 Codex 完成任务书阅读、本地/远端状态只读核对后明确回复「批准」。据此更新[H3-B2S 任务书](task-briefs/YJ-P04-H3B2S-narrative-scope-safety.md)：允许 Codex 在 `codex/yj-p04-h3b2s-narrative-scope` 执行 Gate A 先冻结新作用域语料，Gate B 隔离叙述范围实现，Gate C 事实安全与现实真阳性双重验收，Gate D 全量回归、报告及提交。**此次仅将正式授权写入仓库；截至记录时 Codex 仍未由本聊天启动，Gate A 和 H3-B2S 新测试 NOT_RUN。** H3-B2 最终 FAIL 不变，现有《雾散后》公开样本不得冒充新盲测。不得碰两个 main、生产默认、I2 费用阻断，不授权真实模型、图片、外发素材、H3-C/D1/Q1。
+
 ## 2026-11-23 · 最新接续：YJ-P04-H3B2S 叙述范围安全修复任务书就绪
 
 H3-B2 已提交 `a55d356e6f8ae3740007cf8e8080f2bb679369b5`，质量结论仍为 **FAIL**。GitHub 核对《雾散后》第 1 修订范围声明、第 3 修订梦中误确证和第 7 修订现实真阳性，并定位 `discourse.mjs` 识别起止范围不完整及 `grounding/replay` 将 current 当可确证现实的风险。道主已同意**先准备[H3-B2S 任务书](task-briefs/YJ-P04-H3B2S-narrative-scope-safety.md)**，新分支 `codex/yj-p04-h3b2s-narrative-scope`。下一步必须先冻结全新叙述作用域评价，再独立实现、双重安全/召回验收，避免用词表或永久弃判刷分。**本轮未运行 H3-B2S 代码/测试，新的完整故事线语料 NOT_RUN。** 原 1,533 前缀和历史失败不可修改；无真实模型、生图、付费、生产或两个 main 写入权限。H3-C/D1 不开始。
