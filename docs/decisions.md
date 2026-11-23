@@ -1,5 +1,9 @@
 # 映界决策台账
 
+## 2026-11-23 · NATIVE-FACT-01 离线验收
+
+NATIVE-FACT-01 只采纳已提交成功的 move.arrived 及受信历史快照证明的顶层地点差异。缺历史状态或完整批次保持 UNVERIFIED；绕行单列为白名单外的有效规则事件。真实读取权限仍未验证。 [运行报告](reports/YJ-P04-NATIVE-FACT-01-report.md)
+
 ## 2026-11-23 · NATIVE-FACT-01 Gate A–D 正式离线执行授权
 
 道主已正式批准 `YJ-P04-NATIVE-FACT-01` 的 Gate A–D **纯离线合成开发与验收**。授权范围：新合成语料先冻结、本地受信假宿主、规则事件白名单适配器、四臂测量、旧安全兼容回归及专用分支交付。**本次仅授权登记，Codex 尚未由本聊天启动，Gate A–D 仍 NOT_RUN。** 历史状态 `R-1/R` 不能由旧收据加最新存档推断；缺证必须 `UNVERIFIED`。真实九霄受认证 reader 未验证，禁止真实账号/存档读取、真实模型或图片 API、付费、两个 main、生产及数据库修改。H3-B2/B2S FAIL 保留。 角色卡的可信叙述层级仍有 `UPSTREAM_AUTHORITY_GAP`，独立研究不能被记为真实上游验收。
