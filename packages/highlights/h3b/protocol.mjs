@@ -49,6 +49,9 @@ export function validateBatch(raw, view) {
         requireThat(c.spans.every((s,i)=>i===0 || s.revision!==c.spans[i-1].revision || s.start>=c.spans[i-1].end), "overlap");
         for (const [key,value] of Object.entries(c.entities))
             requireThat(roles.includes(key) && typeof value==="string" && value.length>0 && value.length<=40 && c.spans.some(s=>s.quote.includes(value)), "ungrounded-entity");
+        const anchorNames=Object.values(c.entities).filter(v=>c.spans.some(s=>s.revision===last.revision && s.quote.includes(v)));
+        for (const prior of c.spans.filter(s=>s.revision<last.revision))
+            requireThat(anchorNames.some(v=>prior.quote.includes(v)), "unbound-prior-context");
     }
     return batch.sort((a,b)=>a.id.localeCompare(b.id,"en"));
 }

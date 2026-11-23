@@ -1,5 +1,9 @@
 # 映界当前交接
 
+## 2026-11-23 · H3-B 离线实测交付
+
+H3-B 已交接。8 个同构签署案例恢复独立确证，渡船与梵钟仅进入文本待核。新预留组已开启，后续独立评审须另取材料。 真实模型调用及费用为零。[运行报告与回退](reports/YJ-P04-H3B-semantic-candidates-report.md)
+
 ## 2026-11-23 · 最新接续：YJ-P04-H3B 语义候选融合研究
 
 固定基线 `codex/yj-p04-h3a-causal-safety@69e3cc8c6f5b3d228a6b90c5ed68c9e4b5b577bb`；H3-A 离线因果安全 `PASS`，原 12+52 定向通过、941 前缀重放；公开旧集新增 10 项错拒、原 H2R 已开启预留组及所有历史错误不可删除。道主同意继续 H3-B，强调**质量优先**。在独立 `codex/yj-p04-h3b-semantic-candidates` 上传 [H3-B 完整任务书](task-briefs/YJ-P04-H3B-semantic-candidates-evidence-gate.md)；实施顺序先冻结独立语料与恶意候选输入，再构建不可信语义候选接口、H3-A 独立证据门禁衔接、逐前缀回归。**本轮只做分支和任务记录，代码实现/测试/独立盲评/真实模型均 NOT_RUN。** fake/oracle 通过仅代表接口能力，不能宣称泛化已证。不得请求真实模型、外发素材、生图、修改两个 main 或绕过 L4/I2/环境限制。

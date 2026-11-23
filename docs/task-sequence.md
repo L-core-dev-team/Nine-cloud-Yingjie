@@ -1,5 +1,9 @@
 # 映界实施任务序列
 
+## 2026-11-23 · H3-B 离线实测交付
+
+H3-B 已完成本轮离线执行，总体 H3B_PARTIAL。独立语义评价仍待单独授权。 真实模型调用及费用为零。[运行报告与回退](reports/YJ-P04-H3B-semantic-candidates-report.md)
+
 ## 2026-11-23 · YJ-P04-H3B：离线研究范围获准，任务书就绪（NOT_RUN）
 
 [H3-B 语义候选和证据门禁融合任务书](task-briefs/YJ-P04-H3B-semantic-candidates-evidence-gate.md)已在独立分支准备，从 H3-A `69e3cc8` 接续。阶段 Gate A 冻结新语料/错误候选；B 可注入本地候选协议与安全审核；C 分离候选发现/事实确认/视觉资格 A/B，不能把 oracle 当 NLP 结果；D 回放旧 941 前缀、定向因果和兼容回归。H3-B 当前仅任务准备，无算法或测试新回执。H3-C 独立新文风评价及模型授权、D1/Q1 暂不开始，生产与付费门禁不变。

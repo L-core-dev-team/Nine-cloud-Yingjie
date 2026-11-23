@@ -1,0 +1,26 @@
+{
+  "base": "4457504093310077f57b0c019fea910c2983989b",
+  "freeze": "a7c7e8402e4321dbad778e11a52f6e31f45f46c4",
+  "preHeldImplementation": "e6e14186ec2849bb2dd8f1e26cb20f47253536b3",
+  "firstHeldScoringUTC": "2026-11-23T10:37:34.8955899Z",
+  "independentReview": "INDEPENDENT_HUMAN_BLIND_REVIEW_NOT_RUN",
+  "postHeldChanges": "source and dependency validation, textual duplicate handling, tests and measurement; deterministic fixture and frozen labels unchanged",
+  "beforeAfter": {
+    "dev": {
+      "sameAllRows": true,
+      "rows": 432,
+      "arms": 4
+    },
+    "held": {
+      "sameAllRows": true,
+      "rows": 432,
+      "arms": 4
+    }
+  },
+  "firstSafety": "safety-first.json",
+  "basePublicFacts": "baseline.json",
+  "h3aGuardExit": 0,
+  "newGuardExit": 0,
+  "gateCExit": 0,
+  "gateDExit": 0
+}

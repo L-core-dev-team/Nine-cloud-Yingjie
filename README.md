@@ -1,5 +1,9 @@
 # 九霄 · 映界
 
+## 2026-11-23 · H3-B 离线实测交付
+
+H3-B 离线候选接口已完成。新预留组发现 4/21，安静高潮确证 0/9，总体 H3B_PARTIAL。 真实模型调用及费用为零。[运行报告与回退](docs/reports/YJ-P04-H3B-semantic-candidates-report.md)
+
 ## 2026-11-23 · YJ-P04-H3B 离线语义候选融合专项（任务启动准备 / NOT_RUN）
 
 道主已同意继续 H3-B 并要求质量优先。从 H3-A `69e3cc8c6f5b3d228a6b90c5ed68c9e4b5b577bb` 新建 `codex/yj-p04-h3b-semantic-candidates`，上传[完整 H3-B 任务书](docs/task-briefs/YJ-P04-H3B-semantic-candidates-evidence-gate.md)。本轮工作范围是**本地假语义候选接口与 H3-A 可信因果门禁融合**、先冻结新合成反事实再实施、分开报告候选能力与事实确认能力。**任务分支和文档已准备，H3-B 代码、实际测试、独立人工评价、真实模型均 NOT_RUN**；不改生产、两个 main、旧付费门禁，H3-A 离线因果安全 PASS 及其旧错拒记录保留。

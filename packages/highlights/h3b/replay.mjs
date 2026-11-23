@@ -27,7 +27,8 @@ function corroboration(c, facts) {
     const eq = {actor:"actor",recipient:"beneficiary",asset:"asset",account:"account"};
     const matches=facts.filter(f=>property(f) && f.review?.causalSupport==="supported" &&
         Object.entries(c.entities).every(([k,v])=>eq[k] && f.roles[eq[k]]===v) &&
-        f.evidence.every(e=>c.spans.some(s=>s.revision===e.revision && s.start<=e.start && s.end>=e.end)));
+        f.evidence.every(e=>c.spans.some(s=>s.revision===e.revision && s.start<=e.start && s.end>=e.end)) &&
+        c.spans.every(s=>f.evidence.some(e=>s.revision===e.revision && s.start<=e.start && s.end>=e.end)));
     return matches.length===1 ? matches[0].id : null;
 }
 export function replayHighlights3B(ctx, provider, timing) {
@@ -36,7 +37,7 @@ export function replayHighlights3B(ctx, provider, timing) {
     const base=replayHighlights3A(ctx); // validates the entire host envelope before any disclosure
     clock.causalMs+=performance.now()-tick;
     const byId=new Map(base.candidates.map(c=>[c.id,c])), rows=[], candidates=[], edges=[], rounds=[], inherited=[];
-    const reviewed=new Set(), previousIds=new Set();
+    const reviewed=new Set(), reviewedDispositions=new Set(), previousIds=new Set();
     let state=emptyLedger(), focus=null;
     for (const [i,original] of base.rounds.entries()) {
         tick=performance.now();
@@ -82,9 +83,18 @@ export function replayHighlights3B(ctx, provider, timing) {
             // Provider IDs, opinions and role names cannot mint a second proposal
             // for the same source moment. Identical restatements stay text-only.
             const key=hash(JSON.stringify([ctx.scope,anchor.quote]));
-            if (reviewed.has(key)) { duplicates.push(c.id); continue; }
-            reviewed.add(key);
             const fact=corroboration(c,current);
+            const sign=c.spans.findLast(s=>s.revision<i+1 && /签署|签了|舍弃了/u.test(s.quote));
+            const recipient=c.entities.account??c.entities.recipient;
+            // Rewording the same disposition and citing the same instrument is
+            // not a second moment. Independent instruments have separate anchors.
+            const disposition=c.type==="disposition" && sign && c.entities.asset && recipient
+                ? JSON.stringify([sign.sourceKey,sign.start,c.entities.asset,recipient]) : null;
+            if (reviewed.has(key) || disposition && reviewedDispositions.has(disposition) && !fact) {
+                duplicates.push(c.id); continue;
+            }
+            reviewed.add(key);
+            if (disposition) reviewedDispositions.add(disposition);
             suggestions.push({key,id:c.id,type:c.type,entities:c.entities,spans:c.spans,
                 learnedAt:i+1,disposition:fact?"linked-existing-fact":"text-review",fact,send:false});
         }
