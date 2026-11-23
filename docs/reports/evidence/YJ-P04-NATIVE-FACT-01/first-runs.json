@@ -1,0 +1,38 @@
+{
+  "setup": [
+    {
+      "operation": "prepare fixed public rules",
+      "exit": 1,
+      "error": "MODULE_NOT_FOUND: the installed TypeScript 7 distribution does not expose require(typescript) as a transpilation library",
+      "resolution": "Used the locally installed esbuild transformer on the pinned source tree; no dependency change or download."
+    },
+    {
+      "operation": "first real rule smoke",
+      "exit": 1,
+      "error": "ERR_MODULE_NOT_FOUND: forwarded prologue-v1-fixtures to a nonexistent source basename",
+      "resolution": "Matched upstream package export nlu/prologue-v1-nlu-fixtures.js."
+    },
+    {
+      "operation": "relative-path retry of transpiler and smoke",
+      "exit": 1,
+      "error": "relative compiler path resolved as a package, prior fixture alias still present",
+      "resolution": "Resolved CLI paths to absolute; prepared fresh output."
+    },
+    {
+      "operation": "fresh pinned prepare and world-arrival smoke",
+      "exit": 0
+    }
+  ],
+  "measurement": {
+    "firstDevExit": 0,
+    "firstDevFacts": [
+      18,
+      0,
+      0
+    ],
+    "firstDevAdverse": 54,
+    "firstSafetyExit": 0,
+    "firstSafetyCases": 19
+  },
+  "held": "not-opened-at-implementation-lock"
+}
