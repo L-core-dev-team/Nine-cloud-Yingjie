@@ -86,4 +86,4 @@ function measure(part){
     console.log(JSON.stringify({part,totals,results}));
 }
 const split=process.argv[2]?.replace(/^--split=/u,"");
-if(process.argv[2]?.startsWith("--split=")&&["dev","held"].includes(split)&&process.argv[1]?.endsWith("measure.mjs"))measure(split);
+if(process.argv[2]?.startsWith("--split=")&&["dev","held","reserve"].includes(split)&&process.argv[1]?.endsWith("measure.mjs"))measure(split);

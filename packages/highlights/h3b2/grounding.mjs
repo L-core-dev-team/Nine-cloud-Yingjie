@@ -31,11 +31,14 @@ function affected(q,text){
 export function challenge(q,text){
     return affected(q,text) && defect.test(text);
 }
-export function ground(q,view,old) {
+export function ground(q,history,old,scope) {
+    const view=history.slice(scope.since-1);
     const last=view.at(-1),now=sentences(last),text=last.text;
     const v={asOf:last.revision,sourceValid:true,entailment:"unresolved",outcomeEntailment:"unresolved",effective:"unresolved",cause:"unresolved",
         reason:"unrecognized-construction",support:[],against:[],antecedent:null,baseEvent:null};
     function hold(reason){return {...v,reason};}
+    if(scope.world!=="current")return hold("noncurrent-or-reported-discourse");
+    if(q.spans.some(e=>e.revision<scope.since))return hold("premise-from-another-discourse-epoch");
     function contrary(reason,refs){return {...v,entailment:"contradicted",outcomeEntailment:"contradicted",effective:"contradicted",reason,against:refs};}
     const names=[q.actor,q.other,q.item];
     if(!names.every(s=>roleName.test(s)&&!nonName.test(s)) || q.actor===q.other) return hold("roles-unbound");
@@ -61,7 +64,9 @@ export function ground(q,view,old) {
     if(q.kind==="ownership"){
         const match=old.facts.find(c=>c.review?.causalSupport==="supported"&&c.roles.right==="所有权"&&
             c.roles.actor===q.actor&&c.roles.beneficiary===q.other&&c.roles.asset===q.item);
-        if(!match || !match.evidence.every(e=>q.spans.some(s=>s.revision===e.revision&&s.start<=e.start&&s.end>=e.end)))return hold("property-transaction-not-supported");
+        const contains=(s,e)=>s.revision===e.revision&&s.start<=e.start&&s.end>=e.end;
+        if(!match || !match.evidence.every(e=>q.spans.some(s=>contains(s,e))) ||
+            !q.spans.every(s=>match.evidence.some(e=>contains(s,e))))return hold("property-transaction-not-supported");
         return {...v,entailment:"supported",outcomeEntailment:"supported",effective:"supported",cause:"supported",support:match.evidence,reason:"existing-property-transaction",baseEvent:match.id};
     }
     if(q.kind==="account" && text===q.actor+"把"+q.item+"全数汇入"+q.other+"，柜上出具了到账凭据。" && q.other.endsWith("公账") && covers(q,now))
