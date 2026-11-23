@@ -1,5 +1,11 @@
 # 变更记录
 
+## 2026-11-23 · YJ-P04-H3A 任务准备
+
+- 从 H2R 的 `e99fb10` 只读核验报告、`causal-audit.json` 两条失败和现有逐句状态提交代码；建立独立 `codex/yj-p04-h3a-causal-safety` 分支。
+- 上传[完整任务书](docs/task-briefs/YJ-P04-H3A-causal-safety.md)，要求整回合收集/冲突审核/事务性提交，区分登记事实、实际权益和因果归属；保留旧失败与回归、先冻结新对照再修改规则。
+- **本轮只修改文档**，新代码、真实离线测试、供应商/图片请求均 NOT_RUN；H2R PARTIAL、H3-B/H3-C/D1 待后续单独安排，旧付费门禁及两个 main 不变。
+
 ## 2026-11-22 · YJ-P04-H2R 质量强化结果
 
 **H2R_PARTIAL**。交付 H2R 语义记忆、双轴评价集、原 12 项视觉审计、一次性预留评估与失败回执。付费门禁维持原状态。 生产默认沿用原版，本轮真实请求和费用均为零。[运行报告与回退](docs/reports/YJ-P04-H2R-semantic-generalization-report.md)

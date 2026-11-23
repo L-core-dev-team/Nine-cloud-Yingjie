@@ -1,5 +1,9 @@
 # 九霄 · 映界
 
+## 2026-11-23 · YJ-P04-H3A 因果安全专项（仅任务书，NOT_RUN）
+
+从 H2R `e99fb10d51a96083cbc0087ced256201d088d074` 新建 `codex/yj-p04-h3a-causal-safety`，已准备[完整 H3-A 因果安全任务书](docs/task-briefs/YJ-P04-H3A-causal-safety.md)。首先解决冒签文书错误归因、诉讼临时挂名被当作产权转移的问题，执行范围限定未来获准的离线因果门禁与证据回放。本轮**只有任务书与交接索引**；H3-A 业务代码、冻结新语料、本机回归和真实模型请求均 **NOT_RUN**。H2R 仍为 PARTIAL，旧预留组不可再称作盲测，主分支与生产默认均不变。
+
 ## 2026-11-22 · YJ-P04-H2R 质量强化结果
 
 **H2R_PARTIAL**。独立的 `narrative-highlight/2r` 已完成冻结评价。新预留组仅检出 2/23 个安静高潮，追加因果诊断有两项错误确证。 生产默认沿用原版，本轮真实请求和费用均为零。[运行报告与回退](docs/reports/YJ-P04-H2R-semantic-generalization-report.md)
