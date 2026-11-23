@@ -1,5 +1,9 @@
 # 九霄 · 映界
 
+## 2026-11-23 · YJ-P04-SCOPE-CONTRACT-01｜调整为可信叙述层级契约审查（仅文档）
+
+H3-B2S **FAIL** 不变。《套戏》显示外层演出未识别可使内层推演结束后错误返回现实、发生虚构交付入账。道主同意**先调整架构**。从 H3-B2S 固定 SHA `c89021c0f5cff1fa37705c9e14b7f739d74bd102` 新建独立 `codex/yj-p04-scope-contract-01`，上传[完整设计任务书](docs/task-briefs/YJ-P04-SCOPE-CONTRACT-01.md)与[上游源码核查](docs/architecture/YJ-P04-SCOPE-CONTRACT-01-upstream-audit.md)。九霄当前角色卡 completed-history 可证明文本已保存，**不能证明每段属于现实**；原生规则 accepted turn 是另一条体系，尚无已证角色卡可信层级桥接。**本轮只准备架构文档，代码、真实服务、上游接口、数据库改造、测试均 NOT_RUN。** 两项目 main、生产默认及 I2 费用门禁不变。
+
 ## 2026-11-23 · H3-B2S 验收结果
 
 YJ-P04-H3B2S 离线验收为 **FAIL**。《雾散后》第 3、7 回合通过双向核验；《套戏》暴露演出层误归现实，公开反事实实际导致一次错误交付入账。 [运行报告与逐例证据](docs/reports/YJ-P04-H3B2S-narrative-scope-safety-report.md)

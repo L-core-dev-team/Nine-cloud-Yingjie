@@ -1,5 +1,9 @@
 # 映界验证记录
 
+## 2026-11-23 · SCOPE-CONTRACT-01 只读源码审查与文档准备（非工程验收）
+
+本次从 GitHub 获取 H3-B2S 远端 HEAD `c89021c0f5cff1fa37705c9e14b7f739d74bd102` 及原 FAIL 报告、`post-held.json`，并核查九霄 `L-core-dev-team/Nine-cloud` 远端 main `f1fe6ea561c5ef4d1ec670b7a406625ce5df774c` 的 `apps/api/src/card-import/{service.ts,router.ts,schema.sql,context.ts}`、`apps/web/src/card-import-client.ts`、`packages/contracts/src/{event.ts,turn.ts,decision.ts,save.ts,world.ts}`，以及映界 `fromCardHistory`。新[架构审计](architecture/YJ-P04-SCOPE-CONTRACT-01-upstream-audit.md)证实完成历史**保存文本**与**有权叙述世界层**之间仍有待解决的证据桥梁；没有执行九霄真机测试，也不能断言所有未检出的分支无相关接口。编制[任务书](task-briefs/YJ-P04-SCOPE-CONTRACT-01.md)及记录本身不等于已经实现可信 scope receipt。**本轮业务代码修改 0、实际测试 0、新模型/文字/图片 API 请求 0、费用 USD 0**；PG/Chrome ENV_BLOCKED、S3 BROWSER_NOT_VERIFIED、I2 LIVE_BLOCKED_COST_BOUND 维持原状态。历史 H3-B2S FAIL 和旧回执只读保留。
+
 ## 2026-11-23 · H3-B2S 验收结果
 
 H3-B2S 验收 **FAIL**。新预留组现实事实 TP/FP/FN 为 20/0/2，但四个非现实区间被归为现实；增补剧中承诺后实际错误入账一次。旧 H2R 两项红灯及 H3-B2 原 FAIL 已独立复现。 [运行报告与逐例证据](reports/YJ-P04-H3B2S-narrative-scope-safety-report.md)

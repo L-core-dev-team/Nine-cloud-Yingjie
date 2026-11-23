@@ -1,5 +1,9 @@
 # 映界实施任务序列
 
+## 2026-11-23 · YJ-P04-SCOPE-CONTRACT-01（架构审查优先，IMPLEMENTATION_NOT_RUN）
+
+道主已同意 H3-B2S FAIL 后转换方向，**不再继续靠正则词表修复高危现实层错采**。当前独立分支提交[可信叙述层级契约设计任务书](task-briefs/YJ-P04-SCOPE-CONTRACT-01.md)和[九霄固定上游代码审查](architecture/YJ-P04-SCOPE-CONTRACT-01-upstream-audit.md)。任务顺序：Gate A 固定上游真实可证接口和权限；B 定义提议/权威证明/世界事实分离的版本化契约；C 设计《套戏》《雾散后》、未闭合/嵌套/错父层及源权限的离线验证用例；D 上游方案与阻塞决策。**此次只准备文件，Gate B 的可运行 schema、上游接口、离线样本、API 调用及新测试未实施。** H3-C、视觉导演/画质、生产实现均后置且需单独许可。
+
 ## 2026-11-23 · H3-B2S 验收结果
 
 H3-B2S Gate A–D 已执行，结果 **FAIL**。研究分支交付范围回放、24 条故事、50 条不可信输入和 1,765 个前缀的核验。H3-C 尚未启动。 [运行报告与逐例证据](reports/YJ-P04-H3B2S-narrative-scope-safety-report.md)

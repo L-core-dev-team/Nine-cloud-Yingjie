@@ -1,5 +1,11 @@
 # 变更记录
 
+## 2026-11-23 · YJ-P04-SCOPE-CONTRACT-01 可信叙述层级契约架构调整
+
+- 独立核对上游 `L-core-dev-team/Nine-cloud@f1fe6ea561c5ef4d1ec670b7a406625ce5df774c` 的角色卡 completed history（key/action/narrative/revision）、群聊切段、native `DomainEvent/TurnReceipt`，以及映界 `fromCardHistory`，记录真实性与权威权限边界。
+- 从 H3-B2S FAIL 固定提交新建 `codex/yj-p04-scope-contract-01`，提交[任务书](docs/task-briefs/YJ-P04-SCOPE-CONTRACT-01.md)和[上游核查矩阵](docs/architecture/YJ-P04-SCOPE-CONTRACT-01-upstream-audit.md)。明确 `source-valid≠world-true`、`model proposal≠authority attestation`、`native rules≠card scope`。
+- **仅文档**：未改九霄/映界应用、contracts 生产 schema、DB、默认入口或两个 main；没有新离线测试、真实模型与图像调用，未启动 H3-C/D1/Q1，H3-B2/H3-B2S FAIL 均留存。
+
 ## 2026-11-23 · H3-B2S 验收结果
 
 新增 narrative-highlight/3b2s 隔离研究入口、冻结语料、四臂测量与逐前缀审计。公开《雾散后》已修复。新预留发现外层演出遗漏，最终门禁 **FAIL**。 [运行报告与逐例证据](docs/reports/YJ-P04-H3B2S-narrative-scope-safety-report.md)

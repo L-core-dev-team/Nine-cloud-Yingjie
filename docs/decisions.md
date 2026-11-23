@@ -1,5 +1,9 @@
 # 映界决策台账
 
+## 2026-11-23 · 从 H3-B2S FAIL 转为 SCOPE-CONTRACT-01 架构审查
+
+道主明确答复“可以，调整”，批准**先审查九霄现有可证叙述来源并设计最小可信 scope 契约**；本轮据此准备[架构任务书](task-briefs/YJ-P04-SCOPE-CONTRACT-01.md)、[源码依据](architecture/YJ-P04-SCOPE-CONTRACT-01-upstream-audit.md)和独立任务分支。确定的产品/工程原则：`completed-history` 可证明文字已保存但不是事实权威；未经独立核验的 `model-produced scope` 为提议；native `DomainEvent` 仅在已证规则约束范围内提供事实依据，不能凭存在就承认角色卡逐段 scope；证据缺失保持 `unknown/text-review`，不得假确证。**本轮不授权九霄/映界代码改造、付费模型、出图、用户素材外发、生产或 main 更新**；上游服务是否能签发权威 scope 仍待论证。H3-B2/H3-B2S `FAIL`、旧冻结和 I2 成本停止线不变；H3-C/D1/Q1 不启动。
+
 ## 2026-11-23 · H3-B2S 验收结果
 
 H3-B2S 保留隔离入口，决定维持 **FAIL**。《套戏》的原文与来源摘要有效，外层演出识别却有遗漏。真假判定必须覆盖所在叙述层及其父层。原文可信和字面签收均不足以解除这项门禁。 [运行报告与逐例证据](reports/YJ-P04-H3B2S-narrative-scope-safety-report.md)

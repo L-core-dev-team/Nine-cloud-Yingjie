@@ -1,5 +1,9 @@
 # 映界当前交接
 
+## 2026-11-23 · 最新接续：YJ-P04-SCOPE-CONTRACT-01 先做上游权威契约审查
+
+用户同意调整架构：**暂停继续添加叙述词表，先把来源有效、叙述层级权威、规则事件和图片资格分开**。H3-B2S `c89021c0f5cff1fa37705c9e14b7f739d74bd102` 仍为 **FAIL**，原《套戏》虚构现实交付入账 1 次，H3-B2 FAIL 与所有旧回执均保留。已静态核查九霄当前 `main@f1fe6ea561c5ef4d1ec670b7a406625ce5df774c`：卡会话历史 SELECT 仅含 `key/action/narrative/resulting_revision`，无已证权威叙述层；native accepted receipt 有规则事件但非相同卡会话的段落证明。专用分支 `codex/yj-p04-scope-contract-01` 已提交[完整架构任务书](task-briefs/YJ-P04-SCOPE-CONTRACT-01.md)与[固定源码依据](architecture/YJ-P04-SCOPE-CONTRACT-01-upstream-audit.md)。**此次只有架构文档，不代表可信回执已实现或上游同意改造，代码/回归/PG/Chrome 均 NOT_RUN。** 不再把 hash 或已保存正文当作叙事事实；下一步上游需明确权威来源与认证机制后才可以另行批准实现。两个 main、收费门禁与生产默认不变。
+
 ## 2026-11-23 · H3-B2S 验收结果
 
 H3-B2S 已完成 Gate A–D，门禁 **FAIL**。接手请先看《套戏》冻结原例与开封后反事实。原预留组现只适用于公开回归；继续研究需另行冻结未见故事。离线研究可回退至 H3-B/H3-A。 [运行报告与逐例证据](reports/YJ-P04-H3B2S-narrative-scope-safety-report.md)
