@@ -1,0 +1,14 @@
+{
+  "files": {
+    "reserve-1.jsonl": "5f27b48868cf3a09381cdf19d9fe4acde11b0bbe6b6141559eb27a8518007f18",
+    "reserve-2.jsonl": "ca0b6cbba618bbe25edf4ec626f57d11c1bf98cae77d817aed99cc6e537d4bac",
+    "reserve-3.jsonl": "5e979a40db087d14b917608356aafc9a6a0ff8041e2ba4a80aa6795dad911a00"
+  },
+  "stories": 12,
+  "revisions": 64,
+  "facts": 7,
+  "purpose": "additional untouched families of discourse, source transitions, current-world controls; same author, formal scoring once after locking repair and scorer",
+  "originalHeld": "PUBLIC_REGRESSION_AFTER_FIRST_FAILURE",
+  "redCommit": "3f793abb7f0fe13103088abd273ecd2aa8c76be1",
+  "independence": "INDEPENDENT_HUMAN_BLIND_REVIEW_NOT_RUN"
+}
