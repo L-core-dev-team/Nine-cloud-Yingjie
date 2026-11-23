@@ -1,0 +1,15 @@
+{
+  "base": "547c870f147ffafa96eedc6beda308c86624b43b",
+  "freeze": "5ad2235ee5bca72c8ed6cd23d75d26b15c8acfe1",
+  "implementation": "3f51b0459e9abf16fb2d50a2c301e387c62ee512",
+  "openedUTC": "2026-11-23T11:40:26.8309934Z",
+  "firstStatus": "FAIL",
+  "reason": "Two cross-revision nonactual discourse controls falsely confirmed a current event; first held has been retired to public regression.",
+  "checks": {
+    "measure --split=dev": 0,
+    "measure --split=held": 0,
+    "regression.py": 0,
+    "discourse-audit": 1
+  },
+  "report": "Preserve this commit and its original measurements before a second, separate freeze."
+}
