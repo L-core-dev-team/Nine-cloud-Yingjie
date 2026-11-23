@@ -1,0 +1,29 @@
+{
+  "files": {
+    "adverse.jsonl": "50405252d6a92590227b176b0fcf3c298433e11ad05a17211e9f42124d5f6cbf",
+    "dev-1.jsonl": "3276907ee82158b9b7ce2b67ad93acc43c0bd7eb926603e4eebdd6b996dd3562",
+    "dev-2.jsonl": "c7f980dda5723fb1540b95f07d85d2ce351047e3edb8b956125c502b4e9411bd",
+    "dev-3.jsonl": "3f951b752d8634c1072fc01603fd6f32f38e625423eece52a7618752a8c12a9e",
+    "dev-4.jsonl": "81d91ba9278d8f13f210176a1dfe7f582717e15c7e36871e8f4de1163b4258d9",
+    "held-1.jsonl": "297ea3f51a91b9bcf6e76b150525db8b497091dc7db9ea1aeb761a2d4b8f0e79",
+    "held-2.jsonl": "49ff7196144551422c7a4c13e9ebe63751e1deb0abbfd867ad7478c2dc3dc55d",
+    "held-3.jsonl": "4b2954e9e24c1fc3e410a9107d6ebe01d9f1934758da9ee992d6dac322e389d5",
+    "README.md": "aa157698ae1528d8df409a8c57a8d5cdb8337aea931ab2bef17d563de6f5c13f"
+  },
+  "groups": {
+    "dev": {
+      "stories": 16,
+      "revisions": 180,
+      "peaks": 18,
+      "long": 7
+    },
+    "held": {
+      "stories": 12,
+      "revisions": 132,
+      "peaks": 12,
+      "long": 5
+    }
+  },
+  "adverse": 43,
+  "independence": "INDEPENDENT_HUMAN_BLIND_REVIEW_NOT_RUN"
+}
