@@ -1,5 +1,9 @@
 # 九霄 · 映界
 
+## 2026-11-23 · NATIVE-FACT-01 Gate A–D 已授权，尚未执行
+
+道主已正式批准 `YJ-P04-NATIVE-FACT-01` 的 Gate A–D **纯离线合成开发与验收**。授权范围：新合成语料先冻结、本地受信假宿主、规则事件白名单适配器、四臂测量、旧安全兼容回归及专用分支交付。**本次仅授权登记，Codex 尚未由本聊天启动，Gate A–D 仍 NOT_RUN。** 历史状态 `R-1/R` 不能由旧收据加最新存档推断；缺证必须 `UNVERIFIED`。真实九霄受认证 reader 未验证，禁止真实账号/存档读取、真实模型或图片 API、付费、两个 main、生产及数据库修改。H3-B2/B2S FAIL 保留。
+
 ## 2026-11-23 · YJ-P04-NATIVE-FACT-01 原生规则事实白名单（仅任务准备）
 
 道主批准先准备[完整离线任务书](docs/task-briefs/YJ-P04-NATIVE-FACT-01.md)和[固定源码审查](docs/architecture/YJ-P04-NATIVE-FACT-01-whitelist-audit.md)，从 SCOPE-CONTRACT-01 `eae794fc834142b11cc2aa71ffa668881537cc11` 接续，独立分支 `codex/yj-p04-native-fact-01`。首选上游原生 `move.arrived` + 受信 RULES 回合收据 + `stateDelta.locationChange` + 前后 state 一致性校验。**注意同名 `move.arrived` 还可表示子区域移动，`locationId` 不变；绕行 `move.bypassed` 也是另一个可能到达的合法事件，本轮不是白名单正例。**角色卡仍是 C 待核边界；此处不是九霄角色卡逐段 scope 签发。**本轮仅文档，Gate A–D、业务代码、冻结新集和测试均 NOT_RUN。** H3-B2/H3-B2S FAIL、两个 main、生产默认与 I2 阻断保持。

@@ -1,5 +1,9 @@
 # 映界验证记录
 
+## 2026-11-23 · NATIVE-FACT-01 执行授权落盘（非工程测试）
+
+已核对 GitHub 原 HEAD `efbec1cc2b08abdd40c56ab637b6960fb16be983`，收到道主明确「批准」后更新任务书及项目索引。道主已正式批准 `YJ-P04-NATIVE-FACT-01` 的 Gate A–D **纯离线合成开发与验收**。授权范围：新合成语料先冻结、本地受信假宿主、规则事件白名单适配器、四臂测量、旧安全兼容回归及专用分支交付。**本次仅授权登记，Codex 尚未由本聊天启动，Gate A–D 仍 NOT_RUN。** 历史状态 `R-1/R` 不能由旧收据加最新存档推断；缺证必须 `UNVERIFIED`。真实九霄受认证 reader 未验证，禁止真实账号/存档读取、真实模型或图片 API、付费、两个 main、生产及数据库修改。H3-B2/B2S FAIL 保留。 **本次业务代码变更 0、运行测试 0、真实 API 请求 0，额外费用 USD 0。**
+
 ## 2026-11-23 · NATIVE-FACT-01 固定源码审查与任务书（非实测）
 
 GitHub 只读核查九霄 `L-core-dev-team/Nine-cloud main@f1fe6ea561c5ef4d1ec670b7a406625ce5df774c` 的 `packages/domain/src/prologue-v1-rules.ts`、`packages/contracts/src/{turn.ts,event.ts,state-delta.ts}`、`packages/domain/src/state-delta.ts`、`apps/api/src/services/{server-turn.ts,story-archive.ts}`。发现 `move.arrived` 可为跨地点，也可为同一 `locationId` 内的 sublocation 移动；`move.blocked` 是合法失败不产生新地点，`move.bypassed` 是本轮不纳入的另一合法到达类型。原生 accepted receipt 校验结构，真实受认证上游仓储读取和完整前后快照本轮未执行。已上传[任务书](task-briefs/YJ-P04-NATIVE-FACT-01.md)和[审查矩阵](architecture/YJ-P04-NATIVE-FACT-01-whitelist-audit.md)，未运行新 Codex、Node、PG、Chrome 或源代码测试。**本轮代码修改 0，模型/文字/图片 API 调用 0，新增 USD 0。** 原 H3-B2、H3-B2S FAIL 不改，PG/Chrome 和 S3 仅按原回执保持 NOT_RUN/BROWSER_NOT_VERIFIED，I2 LIVE_BLOCKED_COST_BOUND 不变。

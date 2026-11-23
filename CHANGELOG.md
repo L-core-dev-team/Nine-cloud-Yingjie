@@ -1,5 +1,10 @@
 # 变更记录
 
+## 2026-11-23 · NATIVE-FACT-01 Gate A–D 执行授权记录
+
+- 道主已正式批准 `YJ-P04-NATIVE-FACT-01` 的 Gate A–D **纯离线合成开发与验收**。授权范围：新合成语料先冻结、本地受信假宿主、规则事件白名单适配器、四臂测量、旧安全兼容回归及专用分支交付。**本次仅授权登记，Codex 尚未由本聊天启动，Gate A–D 仍 NOT_RUN。** 历史状态 `R-1/R` 不能由旧收据加最新存档推断；缺证必须 `UNVERIFIED`。真实九霄受认证 reader 未验证，禁止真实账号/存档读取、真实模型或图片 API、付费、两个 main、生产及数据库修改。H3-B2/B2S FAIL 保留。
+- 此提交仅更新任务书与交接文档，未更改业务代码或启动外部服务。
+
 ## 2026-11-23 · NATIVE-FACT-01 原生规则事件白名单试点任务书准备
 
 - 新建 `codex/yj-p04-native-fact-01`，上传[离线任务书](docs/task-briefs/YJ-P04-NATIVE-FACT-01.md)及[九霄固定源码审查](docs/architecture/YJ-P04-NATIVE-FACT-01-whitelist-audit.md)。固定上游 `L-core-dev-team/Nine-cloud main@f1fe6ea561c5ef4d1ec670b7a406625ce5df774c`。

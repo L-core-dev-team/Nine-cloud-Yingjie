@@ -1,5 +1,9 @@
 # 映界实施任务序列
 
+## 2026-11-23 · NATIVE-FACT-01 Gate A–D 获准纯离线实施
+
+道主已正式批准 `YJ-P04-NATIVE-FACT-01` 的 Gate A–D **纯离线合成开发与验收**。授权范围：新合成语料先冻结、本地受信假宿主、规则事件白名单适配器、四臂测量、旧安全兼容回归及专用分支交付。**本次仅授权登记，Codex 尚未由本聊天启动，Gate A–D 仍 NOT_RUN。** 历史状态 `R-1/R` 不能由旧收据加最新存档推断；缺证必须 `UNVERIFIED`。真实九霄受认证 reader 未验证，禁止真实账号/存档读取、真实模型或图片 API、付费、两个 main、生产及数据库修改。H3-B2/B2S FAIL 保留。 开工顺序仍为 Gate A 冻结 → B 独立实现 → C 同文正反测量 → D 完整兼容回归，冻结后不能通过调整金标制造通过结论。
+
 ## 2026-11-23 · 下一拟办 NATIVE-FACT-01（仅任务书，NOT_RUN）
 
 已为[原生 RULES 地点事实白名单](task-briefs/YJ-P04-NATIVE-FACT-01.md)建立新专用分支并完成[固定语义审查](architecture/YJ-P04-NATIVE-FACT-01-whitelist-audit.md)。建议下轮明确授权后开展 Gate A 先冻结 `move.arrived` 世界地点/子区域/`move.bypassed`/伪源正反对照，Gate B 受信宿主读回与版本化白名单离线适配器，Gate C 同文无事件、合法阻断、真已到达与篡改收据 A/B，Gate D 原 1,765+ 安全/兼容回归及可回退交付。**当前只有文档准备，Gate A–D 未运行**。角色卡 C 继续未知待核，A 逐段 scope 上游机制未实现；H3-B2/B2S FAIL、两个 main 与 I2 阻断不变。

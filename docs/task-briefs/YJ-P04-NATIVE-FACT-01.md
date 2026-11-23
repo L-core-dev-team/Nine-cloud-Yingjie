@@ -3,7 +3,7 @@
 - 编制：2026-11-23（北京时间）。
 - 推荐执行者：Codex；独立分支：`codex/yj-p04-native-fact-01`，固定规划基线 `codex/yj-p04-scope-contract-01@eae794fc834142b11cc2aa71ffa668881537cc11`。
 - 上游静态核查：`L-core-dev-team/Nine-cloud main@f1fe6ea561c5ef4d1ec670b7a406625ce5df774c`。
-- **授权状态：道主同意先编制 NATIVE-FACT-01 完整离线任务书。此轮只允许创建任务分支、补充固定源码审查与任务索引；业务代码、合成冻结样本、Gate A–D 实际测试与正式试点尚未获本轮开工授权，均为 NOT_RUN。**
+- **最新授权状态（2026-11-23，北京时间）：道主在 Codex 完成只读审查后明确回复「批准」，许可 Gate A–D 纯离线合成开发、冻结、测试、回归及专用分支提交。**此次登记不代表已实际执行，Gate A–D 在本提交时仍为 `NOT_RUN`。真实上游账号/历史状态读取、模型/图片 API、付费、生产和两个 main 写入均未授权。
 - 这是 **B（原生 RULES 事件白名单）最小研究试点**，并为 C（自由角色卡缺证只待核）设计隔离门禁；**不是 A（角色卡逐段权威 scope 回执）实现**。
 - 保留 H3-B2 `FAIL`、H3-B2S `FAIL`（《套戏》附加复现虚构现实入账 1 次），原始冻结语料/首次红灯/历史回归和 I2 `LIVE_BLOCKED_COST_BOUND`。不改九霄或映界 `main`、生产默认、数据库、角色卡生成链、万卡阁；不运行真实模型、Images、参考图编辑、付费外发、联网供应商、或 H3-C/D1/Q1。
 
@@ -48,7 +48,9 @@ TrustedNativeTurnInput [research-only]
   verifiedSourceHandle  // 只能由受信宿主只读适配器产生，不可由外部 JSON 自称
 ```
 
-开工前先证明/设计**来源真实性实现**：不能只运行 `TurnReceiptSchema.parse`、核对 SHA 或自己生成 `verified:true` 就声称已从服务器认证。研究入口可以用明确分层的**受信仓储假对象**模拟“宿主受认证读取”以验证逻辑，并给所有用例标 `SYNTHETIC_AUTHORITY_FIXTURE`；未完成真实 owner/save 访问控制的实际验证时，报告 `AUTHENTICATED_UPSTREAM_FETCH_NOT_VERIFIED`，**不得宣称生产接通**。不要求/不得读取真实玩家账号和私有存档。
+开工前先证明/设计**来源真实性实现**：不能只运行 `TurnReceiptSchema.parse`、核对 SHA 或自己生成 `verified:true` 就声称已从服务器认证。研究入口可以用明确分层的**受信仓储假对象**模拟“宿主受认证读取”以验证逻辑，并给所有用例标 `SYNTHETIC_AUTHORITY_FIXTURE`；未完成真实 owner/save 访问控制的实际验证时，报告 `UPSTREAM_AUTHENTICATED_READER_NOT_VERIFIED`，**不得宣称生产接通**。不要求/不得读取真实玩家账号和私有存档。
+
+**历史状态硬门槛：**九霄 `GET /api/games/:saveId/receipts/:key` 仅在宿主提供 `readReceipt` 时挂载，读回的外层 `revision` 是读取时的最新存档修订，不能代表该历史收据的 `resultingRevision`。`GET /api/games/:saveId` 的最新存档亦不能证明历史回合 `R` 的受信 `R-1/R` 状态对。研究假宿主可使用受信检查点和完整、按提交顺序的事件批次重放，核对 R-1/R 及目标状态；任何缺失前态、漏事件、后态不符或认证不足都必须 `UNVERIFIED`。真实上游仍为 `UPSTREAM_AUTHENTICATED_READER_NOT_VERIFIED`。
 
 针对任意一条可发布事实检查：
 1. 上游来源：`source=RULES`、已接受 `decision.status=accepted` 且成功 `outcome=success`；不采纳仅 `rejected`、`clarify`、`pending`、`legal_failure` 或 `MIGRATION` 作为这条事实。
@@ -62,7 +64,7 @@ TrustedNativeTurnInput [research-only]
 
 ## 3. Gate A｜先核对固定基线与冻结对照
 
-在道主下一轮另行许可真正开发后才能启动。先：
+本轮已获纯离线 Gate A–D 开工许可。Codex 实际开工前仍需核对分支 HEAD、独立工作树和权限边界；先执行 Gate A 冻结评价，再修改业务代码。
 - 核对本分支最新授权 HEAD、本地工作树、上游固定 SHA；区分上游源码静态检查、过往报告与当次真正运行。保持两个 main 只读。
 - 按**完整可信原生回合序列**准备合成冻结语料及质量协议，单独提交冻结文件与 hash，之后才能写适配器。
 - 建议 >= 30 条独立合成原生回合故事/状态路径、>= 200 修订，dev/held 按故事和规则路径隔离（held 至少 40%）、>= 20 个白名单世界地点真阳性、>= 40 个恶意/混淆负例、>= 12 组“正文说到达但规则没有确认”的同文不同事实对照。达到不了如实报告。**不要求过量编造新世界书场景。**
@@ -136,4 +138,4 @@ actual model GET/text/Images calls 0, USD 0, PG/Chrome:
 rollback, risks, next authorization needs:
 ```
 
-**本轮仅准备任务书及固定源码核查，没有批准任何新的工程实现、上游写入或真实网络/模型调用。**
+**最新授权已生效：Gate A–D 纯离线合成实施可以开始；本次 GitHub 登记不代表 Codex 已运行或通过验收。真实九霄账号/存档读取、真实模型和图片 API、付费、生产部署、上游代码/数据库、两个 main 写入及 H3-C/D1/Q1 均不在授权内。**

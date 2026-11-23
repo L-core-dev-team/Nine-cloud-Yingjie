@@ -1,5 +1,9 @@
 # 映界当前交接
 
+## 2026-11-23 · NATIVE-FACT-01 Gate A–D 已批准离线开工（执行 NOT_RUN）
+
+道主已正式批准 `YJ-P04-NATIVE-FACT-01` 的 Gate A–D **纯离线合成开发与验收**。授权范围：新合成语料先冻结、本地受信假宿主、规则事件白名单适配器、四臂测量、旧安全兼容回归及专用分支交付。**本次仅授权登记，Codex 尚未由本聊天启动，Gate A–D 仍 NOT_RUN。** 历史状态 `R-1/R` 不能由旧收据加最新存档推断；缺证必须 `UNVERIFIED`。真实九霄受认证 reader 未验证，禁止真实账号/存档读取、真实模型或图片 API、付费、两个 main、生产及数据库修改。H3-B2/B2S FAIL 保留。
+
 ## 2026-11-23 · 最新接续：YJ-P04-NATIVE-FACT-01 任务书准备完成
 
 基于 SCOPE-CONTRACT-01 审查状态 `DESIGN_READY / UPSTREAM_AUTHORITY_GAP`，道主同意先编制原生规则事实白名单的**完整离线任务书**。[NATIVE-FACT-01 任务书](task-briefs/YJ-P04-NATIVE-FACT-01.md)、[固定源码校核](architecture/YJ-P04-NATIVE-FACT-01-whitelist-audit.md)已上传独立 `codex/yj-p04-native-fact-01`，起点 SCOPE-CONTRACT-01 `eae794fc834142b11cc2aa71ffa668881537cc11`。上游代码证实 `move.arrived` 可是世界地点切换，也可是 `currentSublocationId` 变化、`locationId` 不变，故不能仅凭事件名写入世界地图事实；`move.bypassed` 可能到别处但不在本轮白名单。将按受信规则事件 + 完整 delta + 受信前后态制定 A–D 离线正反双向验收。**本轮仅任务文件和交接索引，代码与新冻结语料、实际测试都 NOT_RUN，后续执行需要单独开工许可。** 九霄/映界 main、生产、付费、角色卡 scope gap、H3-B2/B2S 历史 FAIL 原样保留。

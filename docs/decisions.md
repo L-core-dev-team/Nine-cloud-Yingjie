@@ -1,5 +1,9 @@
 # 映界决策台账
 
+## 2026-11-23 · NATIVE-FACT-01 Gate A–D 正式离线执行授权
+
+道主已正式批准 `YJ-P04-NATIVE-FACT-01` 的 Gate A–D **纯离线合成开发与验收**。授权范围：新合成语料先冻结、本地受信假宿主、规则事件白名单适配器、四臂测量、旧安全兼容回归及专用分支交付。**本次仅授权登记，Codex 尚未由本聊天启动，Gate A–D 仍 NOT_RUN。** 历史状态 `R-1/R` 不能由旧收据加最新存档推断；缺证必须 `UNVERIFIED`。真实九霄受认证 reader 未验证，禁止真实账号/存档读取、真实模型或图片 API、付费、两个 main、生产及数据库修改。H3-B2/B2S FAIL 保留。 角色卡的可信叙述层级仍有 `UPSTREAM_AUTHORITY_GAP`，独立研究不能被记为真实上游验收。
+
 ## 2026-11-23 · NATIVE-FACT-01 仅任务书准备获准
 
 道主同意先准备 NATIVE-FACT-01 最小离线任务书，按 SCOPE-CONTRACT-01 的 B + C 并行、A 暂缓推进。确定第一项研究目标是**九霄原生已裁定 `move.arrived` 的顶层地点变化**，必须同时符合受信 RULES accepted receipt、已授权 owner/save/root、正确规则版本、`stateDelta.locationChange` 与受信前后 `state.locationId` 一致。明确 `move.arrived` 也可能只改同地点子区域；`move.bypassed` 可能合法到达但不在本轮事件白名单，不能将未适配误说成“没发生”。自由角色卡仅有 completed narrative 的情况下仍只保留待核。已上传[任务书](task-briefs/YJ-P04-NATIVE-FACT-01.md)与[源码审查](architecture/YJ-P04-NATIVE-FACT-01-whitelist-audit.md)；**本轮同意不授权业务实现、真实上游 API 联测、付费请求、改两项目 main 或生产。** H3-B2/B2S FAIL 及过去冻结/红灯不改；H3-C、逐段 scope 和导演/出图另行授权。
