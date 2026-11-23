@@ -1,5 +1,9 @@
 # 九霄 · 映界
 
+## 2026-11-23 · H3-B2S 验收结果
+
+YJ-P04-H3B2S 离线验收为 **FAIL**。《雾散后》第 3、7 回合通过双向核验；《套戏》暴露演出层误归现实，公开反事实实际导致一次错误交付入账。 [运行报告与逐例证据](docs/reports/YJ-P04-H3B2S-narrative-scope-safety-report.md)
+
 ## 2026-11-23 · H3-B2S Gate A–D 纯离线执行已批准（NOT_RUN）
 
 道主已正式批准在独立 `codex/yj-p04-h3b2s-narrative-scope` 分支按[H3-B2S 任务书](docs/task-briefs/YJ-P04-H3B2S-narrative-scope-safety.md)开展离线新语料冻结、叙述范围核验、事实隔离与回归。验收仍需确保《雾散后》第 3 回合不能确认梦中交付、第 7 回合现实交付可被独立确证；不得抹除旧现实事实或沿用梦中前件。**本次只有授权记录，Codex 业务实现与测试尚未执行。** H3-B2 原 FAIL 不变，真实模型、图像、费用、生产入口和两项目 main 均无新许可。

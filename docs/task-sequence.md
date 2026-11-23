@@ -1,5 +1,9 @@
 # 映界实施任务序列
 
+## 2026-11-23 · H3-B2S 验收结果
+
+H3-B2S Gate A–D 已执行，结果 **FAIL**。研究分支交付范围回放、24 条故事、50 条不可信输入和 1,765 个前缀的核验。H3-C 尚未启动。 [运行报告与逐例证据](reports/YJ-P04-H3B2S-narrative-scope-safety-report.md)
+
 ## 2026-11-23 · H3-B2S Gate A–D 已批准离线开工（实测 NOT_RUN）
 
 道主明确批准 Codex 执行[H3-B2S 任务书](task-briefs/YJ-P04-H3B2S-narrative-scope-safety.md)限定的纯离线 Gate A → B → C → D，工作分支 `codex/yj-p04-h3b2s-narrative-scope`。首步冻结与旧集不同的独立叙述层正反样本，之后才实现作用域及因果核验，并保证《雾散后》第 3 修订不确证、第 7 修订正确确证，同时不破坏旧现实事实。**本次仅授权落盘，H3-B2S 代码与运行测试尚未开始。** H3-B2 FAIL 仍属历史有效结论；真实模型、出图、生产、两个 main、H3-C/D1/Q1 不在许可内。

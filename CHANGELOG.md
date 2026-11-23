@@ -1,5 +1,9 @@
 # 变更记录
 
+## 2026-11-23 · H3-B2S 验收结果
+
+新增 narrative-highlight/3b2s 隔离研究入口、冻结语料、四臂测量与逐前缀审计。公开《雾散后》已修复。新预留发现外层演出遗漏，最终门禁 **FAIL**。 [运行报告与逐例证据](docs/reports/YJ-P04-H3B2S-narrative-scope-safety-report.md)
+
 ## 2026-11-23 · H3-B2S Gate A–D 离线开工授权登记
 
 - 道主在 Codex 只读检查计划后正式批准执行[H3-B2S 完整任务书](docs/task-briefs/YJ-P04-H3B2S-narrative-scope-safety.md)的纯离线 Gate A–D；旧任务准备记录为历史授权阶段。

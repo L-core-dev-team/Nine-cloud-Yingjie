@@ -1,5 +1,9 @@
 # 映界验证记录
 
+## 2026-11-23 · H3-B2S 验收结果
+
+H3-B2S 验收 **FAIL**。新预留组现实事实 TP/FP/FN 为 20/0/2，但四个非现实区间被归为现实；增补剧中承诺后实际错误入账一次。旧 H2R 两项红灯及 H3-B2 原 FAIL 已独立复现。 [运行报告与逐例证据](reports/YJ-P04-H3B2S-narrative-scope-safety-report.md)
+
 ## 2026-11-23 · H3-B2S 纯离线执行授权核验（不是实测验收）
 
 连接 GitHub 核查 `codex/yj-p04-h3b2s-narrative-scope` 原 HEAD `68a36a4484b36e21183556222c790bd243ef3c81` 与任务书内容一致。道主明确答复「批准」后，更新任务书、交接、决策、任务序列、首页和变更日志记录 Gate A–D 纯离线执行许可。**未运行 Windows Codex、未新增冻结样本、未修改业务代码、未运行 H3-B2S 防护或兼容测试；不能把文档提交记为工程 PASS。** 旧 H3-B2 最终 FAIL / 叙述梦境误确证和 1,533 前缀旧回执维持不变。真实模型 GET/文字/图片调用 0、额外 USD 0；I2 LIVE_BLOCKED_COST_BOUND、PG/Chrome ENV_BLOCKED、S3 BROWSER_NOT_VERIFIED 原样保持。

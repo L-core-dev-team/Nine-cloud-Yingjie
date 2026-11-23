@@ -1,5 +1,9 @@
 # 映界当前交接
 
+## 2026-11-23 · H3-B2S 验收结果
+
+H3-B2S 已完成 Gate A–D，门禁 **FAIL**。接手请先看《套戏》冻结原例与开封后反事实。原预留组现只适用于公开回归；继续研究需另行冻结未见故事。离线研究可回退至 H3-B/H3-A。 [运行报告与逐例证据](reports/YJ-P04-H3B2S-narrative-scope-safety-report.md)
+
 ## 2026-11-23 · H3-B2S Gate A–D 已获纯离线开工许可（尚未运行）
 
 道主在 Codex 完成任务书阅读、本地/远端状态只读核对后明确回复「批准」。据此更新[H3-B2S 任务书](task-briefs/YJ-P04-H3B2S-narrative-scope-safety.md)：允许 Codex 在 `codex/yj-p04-h3b2s-narrative-scope` 执行 Gate A 先冻结新作用域语料，Gate B 隔离叙述范围实现，Gate C 事实安全与现实真阳性双重验收，Gate D 全量回归、报告及提交。**此次仅将正式授权写入仓库；截至记录时 Codex 仍未由本聊天启动，Gate A 和 H3-B2S 新测试 NOT_RUN。** H3-B2 最终 FAIL 不变，现有《雾散后》公开样本不得冒充新盲测。不得碰两个 main、生产默认、I2 费用阻断，不授权真实模型、图片、外发素材、H3-C/D1/Q1。
