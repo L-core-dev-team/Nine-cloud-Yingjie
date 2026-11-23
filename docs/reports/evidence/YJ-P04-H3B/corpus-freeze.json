@@ -1,0 +1,27 @@
+{
+  "files": {
+    "dev.jsonl": {
+      "sha256": "2babf5805374f0306fb008d03990aa2cbcb5d07bbd5bdb43b78d55c9367bdd5f",
+      "stories": 12,
+      "revisions": 108,
+      "discovery": 22,
+      "confirmation": 10,
+      "negative": 86
+    },
+    "held.jsonl": {
+      "sha256": "d70a5954929a237dd5efba17a961a48a539c671fb2e32bcfe2411ce0c003c562",
+      "stories": 12,
+      "revisions": 108,
+      "discovery": 21,
+      "confirmation": 9,
+      "negative": 87
+    },
+    "protocol.json": {
+      "sha256": "7094e1b0c6a2eb6a58ef6b189453a7c6056b14a71928b4981297a5c30ce857aa"
+    }
+  },
+  "split": "whole family of expression and causal mechanism; dev explicit disposition, held action/ellipsis and concrete downstream use",
+  "independence": "INDEPENDENT_HUMAN_BLIND_REVIEW_NOT_RUN",
+  "labels": "candidate worthy of textual review includes pending petitions; confirmation requires a completed material change; agency/nominal possession alone excluded; annotated roles required for role-level scores",
+  "ranking": "first active revision against ranked material outcomes, one annotated peak per positive story; cross-line ranking assessed on historical multi-peak stories"
+}

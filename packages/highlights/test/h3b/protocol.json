@@ -1,0 +1,134 @@
+[
+  {
+    "id": "wrong-quote",
+    "inputClass": "invalid-batch",
+    "expect": "no-new-authority",
+    "mutate": "wrong-quote"
+  },
+  {
+    "id": "wrong-sha",
+    "inputClass": "invalid-batch",
+    "expect": "no-new-authority",
+    "mutate": "wrong-sha"
+  },
+  {
+    "id": "wrong-source",
+    "inputClass": "invalid-batch",
+    "expect": "no-new-authority",
+    "mutate": "wrong-source"
+  },
+  {
+    "id": "cross-session",
+    "inputClass": "invalid-batch",
+    "expect": "no-new-authority",
+    "mutate": "cross-session"
+  },
+  {
+    "id": "cross-scope",
+    "inputClass": "invalid-batch",
+    "expect": "no-new-authority",
+    "mutate": "cross-scope"
+  },
+  {
+    "id": "future",
+    "inputClass": "invalid-batch",
+    "expect": "no-new-authority",
+    "mutate": "future"
+  },
+  {
+    "id": "overlap",
+    "inputClass": "invalid-batch",
+    "expect": "no-new-authority",
+    "mutate": "overlap"
+  },
+  {
+    "id": "truncated",
+    "inputClass": "invalid-batch",
+    "expect": "no-new-authority",
+    "mutate": "truncated"
+  },
+  {
+    "id": "same-name",
+    "inputClass": "untrusted-proposal",
+    "expect": "no-new-authority",
+    "mutate": "same-name"
+  },
+  {
+    "id": "fabricated-title",
+    "inputClass": "untrusted-proposal",
+    "expect": "no-new-authority",
+    "mutate": "fabricated-title"
+  },
+  {
+    "id": "dialogue-as-fact",
+    "inputClass": "untrusted-proposal",
+    "expect": "no-new-authority",
+    "mutate": "dialogue-as-fact"
+  },
+  {
+    "id": "opinion-as-ruling",
+    "inputClass": "untrusted-proposal",
+    "expect": "no-new-authority",
+    "mutate": "opinion-as-ruling"
+  },
+  {
+    "id": "duplicate-id",
+    "inputClass": "invalid-batch",
+    "expect": "no-new-authority",
+    "mutate": "duplicate-id"
+  },
+  {
+    "id": "duplicate-moment",
+    "inputClass": "untrusted-proposal",
+    "expect": "one-review",
+    "mutate": "duplicate-moment"
+  },
+  {
+    "id": "authoritative-field",
+    "inputClass": "invalid-batch",
+    "expect": "no-new-authority",
+    "mutate": "authoritative-field"
+  },
+  {
+    "id": "revocation",
+    "inputClass": "untrusted-proposal",
+    "expect": "respect-later-evidence",
+    "mutate": "revocation"
+  },
+  {
+    "id": "permission-change",
+    "inputClass": "untrusted-proposal",
+    "expect": "no-director",
+    "mutate": "permission-change"
+  },
+  {
+    "id": "mixed-invalid",
+    "inputClass": "invalid-batch",
+    "expect": "no-new-authority",
+    "mutate": "mixed-invalid"
+  },
+  {
+    "id": "reordered",
+    "inputClass": "untrusted-proposal",
+    "expect": "canonical-order",
+    "mutate": "reordered"
+  },
+  {
+    "id": "non-json",
+    "inputClass": "invalid-batch",
+    "expect": "no-new-authority",
+    "mutate": "non-json"
+  },
+  {
+    "id": "later-valid-ruling",
+    "inputClass": "untrusted-proposal",
+    "expect": "respect-later-evidence",
+    "mutate": "later-valid-ruling"
+  },
+  {
+    "id": "distinct-adjacent",
+    "inputClass": "untrusted-proposal",
+    "expect": "preserve-distinct",
+    "mutate": "distinct-adjacent"
+  }
+]
