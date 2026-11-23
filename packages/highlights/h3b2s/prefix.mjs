@@ -5,14 +5,17 @@ import {replayHighlights3B} from "../h3b/replay.mjs";
 import {suggestNarrativeCandidates} from "../h3b/fixture.mjs";
 import {stories} from "../h3b2/measure.mjs";
 import {corpus} from "./measure.mjs";
+import {inspectEdges} from "./edges.mjs";
 import {replayHighlights3B2S as replay} from "./replay.mjs";
 const read=f=>JSON.parse(readFileSync(f)),dir="packages/highlights/test/",evidence="docs/reports/evidence/";
 const counts={},problems=[],targeted=[],changed=[],publicMisses=[];
 const prior=new Map(read(evidence+"YJ-P04-H3B/baseline.json").prior.map(v=>[v.id,v.revision]));
-let checkedSpans=0,director=0,sends=0;
+let checkedSpans=0,checkedEdges=0,director=0,sends=0;
 function audit(group,id,texts,permissions){
     const cuts=contexts("scope-prefix-"+group+id,texts,permissions),full=replay(cuts.at(-1));
     const old=replayHighlights3B(cuts.at(-1),suggestNarrativeCandidates);
+    const lineage=inspectEdges(full,cuts.at(-1));checkedEdges+=lineage.count;
+    for(const issue of lineage.issues)problems.push({group,id,...issue});
     counts[group]=(counts[group]??0)+cuts.length;
     let sameTrace=true,sameRanks=true;
     for(const [i,ctx] of cuts.entries()){
@@ -64,5 +67,5 @@ if(!process.argv.includes("--targeted-only")){
     }
     for(const part of ["dev","held","reserve"])for(const s of stories(part))audit("h3b2-"+part,s.id,s.rows.map(r=>r.text));
 }
-console.log(JSON.stringify({counts,checkedSpans,problems,targeted,changed,publicMisses,director,sends}));
+console.log(JSON.stringify({counts,checkedSpans,checkedEdges,problems,targeted,changed,publicMisses,director,sends}));
 if(problems.length||changed.length||sends)process.exitCode=1;
