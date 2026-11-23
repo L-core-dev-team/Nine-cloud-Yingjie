@@ -1,5 +1,9 @@
 # 映界验证记录
 
+## 2026-11-23 · NATIVE-FACT-01 固定源码审查与任务书（非实测）
+
+GitHub 只读核查九霄 `L-core-dev-team/Nine-cloud main@f1fe6ea561c5ef4d1ec670b7a406625ce5df774c` 的 `packages/domain/src/prologue-v1-rules.ts`、`packages/contracts/src/{turn.ts,event.ts,state-delta.ts}`、`packages/domain/src/state-delta.ts`、`apps/api/src/services/{server-turn.ts,story-archive.ts}`。发现 `move.arrived` 可为跨地点，也可为同一 `locationId` 内的 sublocation 移动；`move.blocked` 是合法失败不产生新地点，`move.bypassed` 是本轮不纳入的另一合法到达类型。原生 accepted receipt 校验结构，真实受认证上游仓储读取和完整前后快照本轮未执行。已上传[任务书](task-briefs/YJ-P04-NATIVE-FACT-01.md)和[审查矩阵](architecture/YJ-P04-NATIVE-FACT-01-whitelist-audit.md)，未运行新 Codex、Node、PG、Chrome 或源代码测试。**本轮代码修改 0，模型/文字/图片 API 调用 0，新增 USD 0。** 原 H3-B2、H3-B2S FAIL 不改，PG/Chrome 和 S3 仅按原回执保持 NOT_RUN/BROWSER_NOT_VERIFIED，I2 LIVE_BLOCKED_COST_BOUND 不变。
+
 ## 2026-11-23 · SCOPE-CONTRACT-01 只读源码审查与文档准备（非工程验收）
 
 本次从 GitHub 获取 H3-B2S 远端 HEAD `c89021c0f5cff1fa37705c9e14b7f739d74bd102` 及原 FAIL 报告、`post-held.json`，并核查九霄 `L-core-dev-team/Nine-cloud` 远端 main `f1fe6ea561c5ef4d1ec670b7a406625ce5df774c` 的 `apps/api/src/card-import/{service.ts,router.ts,schema.sql,context.ts}`、`apps/web/src/card-import-client.ts`、`packages/contracts/src/{event.ts,turn.ts,decision.ts,save.ts,world.ts}`，以及映界 `fromCardHistory`。新[架构审计](architecture/YJ-P04-SCOPE-CONTRACT-01-upstream-audit.md)证实完成历史**保存文本**与**有权叙述世界层**之间仍有待解决的证据桥梁；没有执行九霄真机测试，也不能断言所有未检出的分支无相关接口。编制[任务书](task-briefs/YJ-P04-SCOPE-CONTRACT-01.md)及记录本身不等于已经实现可信 scope receipt。**本轮业务代码修改 0、实际测试 0、新模型/文字/图片 API 请求 0、费用 USD 0**；PG/Chrome ENV_BLOCKED、S3 BROWSER_NOT_VERIFIED、I2 LIVE_BLOCKED_COST_BOUND 维持原状态。历史 H3-B2S FAIL 和旧回执只读保留。

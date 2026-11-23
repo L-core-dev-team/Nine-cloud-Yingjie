@@ -1,5 +1,9 @@
 # 映界当前交接
 
+## 2026-11-23 · 最新接续：YJ-P04-NATIVE-FACT-01 任务书准备完成
+
+基于 SCOPE-CONTRACT-01 审查状态 `DESIGN_READY / UPSTREAM_AUTHORITY_GAP`，道主同意先编制原生规则事实白名单的**完整离线任务书**。[NATIVE-FACT-01 任务书](task-briefs/YJ-P04-NATIVE-FACT-01.md)、[固定源码校核](architecture/YJ-P04-NATIVE-FACT-01-whitelist-audit.md)已上传独立 `codex/yj-p04-native-fact-01`，起点 SCOPE-CONTRACT-01 `eae794fc834142b11cc2aa71ffa668881537cc11`。上游代码证实 `move.arrived` 可是世界地点切换，也可是 `currentSublocationId` 变化、`locationId` 不变，故不能仅凭事件名写入世界地图事实；`move.bypassed` 可能到别处但不在本轮白名单。将按受信规则事件 + 完整 delta + 受信前后态制定 A–D 离线正反双向验收。**本轮仅任务文件和交接索引，代码与新冻结语料、实际测试都 NOT_RUN，后续执行需要单独开工许可。** 九霄/映界 main、生产、付费、角色卡 scope gap、H3-B2/B2S 历史 FAIL 原样保留。
+
 ## 2026-11-23 · 最新接续：YJ-P04-SCOPE-CONTRACT-01 先做上游权威契约审查
 
 用户同意调整架构：**暂停继续添加叙述词表，先把来源有效、叙述层级权威、规则事件和图片资格分开**。H3-B2S `c89021c0f5cff1fa37705c9e14b7f739d74bd102` 仍为 **FAIL**，原《套戏》虚构现实交付入账 1 次，H3-B2 FAIL 与所有旧回执均保留。已静态核查九霄当前 `main@f1fe6ea561c5ef4d1ec670b7a406625ce5df774c`：卡会话历史 SELECT 仅含 `key/action/narrative/resulting_revision`，无已证权威叙述层；native accepted receipt 有规则事件但非相同卡会话的段落证明。专用分支 `codex/yj-p04-scope-contract-01` 已提交[完整架构任务书](task-briefs/YJ-P04-SCOPE-CONTRACT-01.md)与[固定源码依据](architecture/YJ-P04-SCOPE-CONTRACT-01-upstream-audit.md)。**此次只有架构文档，不代表可信回执已实现或上游同意改造，代码/回归/PG/Chrome 均 NOT_RUN。** 不再把 hash 或已保存正文当作叙事事实；下一步上游需明确权威来源与认证机制后才可以另行批准实现。两个 main、收费门禁与生产默认不变。

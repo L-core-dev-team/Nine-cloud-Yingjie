@@ -1,5 +1,9 @@
 # 映界决策台账
 
+## 2026-11-23 · NATIVE-FACT-01 仅任务书准备获准
+
+道主同意先准备 NATIVE-FACT-01 最小离线任务书，按 SCOPE-CONTRACT-01 的 B + C 并行、A 暂缓推进。确定第一项研究目标是**九霄原生已裁定 `move.arrived` 的顶层地点变化**，必须同时符合受信 RULES accepted receipt、已授权 owner/save/root、正确规则版本、`stateDelta.locationChange` 与受信前后 `state.locationId` 一致。明确 `move.arrived` 也可能只改同地点子区域；`move.bypassed` 可能合法到达但不在本轮事件白名单，不能将未适配误说成“没发生”。自由角色卡仅有 completed narrative 的情况下仍只保留待核。已上传[任务书](task-briefs/YJ-P04-NATIVE-FACT-01.md)与[源码审查](architecture/YJ-P04-NATIVE-FACT-01-whitelist-audit.md)；**本轮同意不授权业务实现、真实上游 API 联测、付费请求、改两项目 main 或生产。** H3-B2/B2S FAIL 及过去冻结/红灯不改；H3-C、逐段 scope 和导演/出图另行授权。
+
 ## 2026-11-23 · 从 H3-B2S FAIL 转为 SCOPE-CONTRACT-01 架构审查
 
 道主明确答复“可以，调整”，批准**先审查九霄现有可证叙述来源并设计最小可信 scope 契约**；本轮据此准备[架构任务书](task-briefs/YJ-P04-SCOPE-CONTRACT-01.md)、[源码依据](architecture/YJ-P04-SCOPE-CONTRACT-01-upstream-audit.md)和独立任务分支。确定的产品/工程原则：`completed-history` 可证明文字已保存但不是事实权威；未经独立核验的 `model-produced scope` 为提议；native `DomainEvent` 仅在已证规则约束范围内提供事实依据，不能凭存在就承认角色卡逐段 scope；证据缺失保持 `unknown/text-review`，不得假确证。**本轮不授权九霄/映界代码改造、付费模型、出图、用户素材外发、生产或 main 更新**；上游服务是否能签发权威 scope 仍待论证。H3-B2/H3-B2S `FAIL`、旧冻结和 I2 成本停止线不变；H3-C/D1/Q1 不启动。

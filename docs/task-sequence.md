@@ -1,5 +1,9 @@
 # 映界实施任务序列
 
+## 2026-11-23 · 下一拟办 NATIVE-FACT-01（仅任务书，NOT_RUN）
+
+已为[原生 RULES 地点事实白名单](task-briefs/YJ-P04-NATIVE-FACT-01.md)建立新专用分支并完成[固定语义审查](architecture/YJ-P04-NATIVE-FACT-01-whitelist-audit.md)。建议下轮明确授权后开展 Gate A 先冻结 `move.arrived` 世界地点/子区域/`move.bypassed`/伪源正反对照，Gate B 受信宿主读回与版本化白名单离线适配器，Gate C 同文无事件、合法阻断、真已到达与篡改收据 A/B，Gate D 原 1,765+ 安全/兼容回归及可回退交付。**当前只有文档准备，Gate A–D 未运行**。角色卡 C 继续未知待核，A 逐段 scope 上游机制未实现；H3-B2/B2S FAIL、两个 main 与 I2 阻断不变。
+
 ## 2026-11-23 · YJ-P04-SCOPE-CONTRACT-01（架构审查优先，IMPLEMENTATION_NOT_RUN）
 
 道主已同意 H3-B2S FAIL 后转换方向，**不再继续靠正则词表修复高危现实层错采**。当前独立分支提交[可信叙述层级契约设计任务书](task-briefs/YJ-P04-SCOPE-CONTRACT-01.md)和[九霄固定上游代码审查](architecture/YJ-P04-SCOPE-CONTRACT-01-upstream-audit.md)。任务顺序：Gate A 固定上游真实可证接口和权限；B 定义提议/权威证明/世界事实分离的版本化契约；C 设计《套戏》《雾散后》、未闭合/嵌套/错父层及源权限的离线验证用例；D 上游方案与阻塞决策。**此次只准备文件，Gate B 的可运行 schema、上游接口、离线样本、API 调用及新测试未实施。** H3-C、视觉导演/画质、生产实现均后置且需单独许可。

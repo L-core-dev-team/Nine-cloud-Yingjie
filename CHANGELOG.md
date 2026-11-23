@@ -1,5 +1,11 @@
 # 变更记录
 
+## 2026-11-23 · NATIVE-FACT-01 原生规则事件白名单试点任务书准备
+
+- 新建 `codex/yj-p04-native-fact-01`，上传[离线任务书](docs/task-briefs/YJ-P04-NATIVE-FACT-01.md)及[九霄固定源码审查](docs/architecture/YJ-P04-NATIVE-FACT-01-whitelist-audit.md)。固定上游 `L-core-dev-team/Nine-cloud main@f1fe6ea561c5ef4d1ec670b7a406625ce5df774c`。
+- 首版仅研究原生已接受 `move.arrived` 产生的**顶层地点变化**：必须独立核对授权身份、回合、RULES 事件、规则版本、delta 与受信前后状态；不把同地点 sublocation、`move.bypassed`、模型叙述当成同一种事实。继承 C：角色卡无可信 scope 时保留待核。
+- **本次仅文档，不代表适配器已运行或授权开工**；H3-B2/H3-B2S FAIL 不变，两个 main、生产、真实模型/图片/费用和 H3-C/D1/Q1 不动。
+
 ## 2026-11-23 · YJ-P04-SCOPE-CONTRACT-01 可信叙述层级契约架构调整
 
 - 独立核对上游 `L-core-dev-team/Nine-cloud@f1fe6ea561c5ef4d1ec670b7a406625ce5df774c` 的角色卡 completed history（key/action/narrative/revision）、群聊切段、native `DomainEvent/TurnReceipt`，以及映界 `fromCardHistory`，记录真实性与权威权限边界。
