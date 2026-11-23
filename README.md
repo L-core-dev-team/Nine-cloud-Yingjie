@@ -1,5 +1,9 @@
 # 九霄 · 映界
 
+## 2026-11-23 · YJ-P04-H3B2S 叙述作用域安全修复（任务准备 / NOT_RUN）
+
+H3-B2 最终状态 **FAIL**：第二批预留《雾散后》第 3 修订梦境交付被误判为现实，尽管第 7 修订才有独立现实兑现。已自固定 H3-B2 HEAD `a55d356e6f8ae3740007cf8e8080f2bb679369b5` 建立 `codex/yj-p04-h3b2s-narrative-scope`，上传[H3-B2S 完整任务书](docs/task-briefs/YJ-P04-H3B2S-narrative-scope-safety.md)。研究目标为可追溯的梦境/现实/转述/排演作用域、跨修订继承和恢复，禁止跨层借证；H3-A 事实安全与 S2/I1/I2 权限不变。**本轮只有文档与分支，业务代码、冻结新集、测试均 NOT_RUN。** 不修改两个 main、不切生产、不调用真实模型或出图 API。
+
 ## 2026-11-23 · H3-B2 离线验收结果
 
 H3-B2 离线核验最终 FAIL。新预留组正确确证 6 次、错误 1 次、漏判 1 次。 [报告及回退](docs/reports/YJ-P04-H3B2-proposition-grounding-report.md)

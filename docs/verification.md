@@ -1,5 +1,9 @@
 # 映界验证记录
 
+## 2026-11-23 · H3-B2S 任务书 GitHub 核验（非修复实测）
+
+只读核实 GitHub H3-B2 最终 SHA `a55d356e6f8ae3740007cf8e8080f2bb679369b5`，其[最终报告](reports/YJ-P04-H3B2-proposition-grounding-report.md)和[FAIL 验收](reports/evidence/YJ-P04-H3B2/acceptance.json)。复核[《雾散后》原冻结记录](../packages/highlights/test/h3b2/reserve-2.jsonl)：第 1 修订明确后续为梦境，第 3 修订误确证，第 4 修订醒来，第 7 修订真阳性。只读确认旧 `discourse.mjs` 需要两个范围关键词共同命中、旧 `replay.mjs` 的 quarantined 状态存在现实返回后错拒风险。已在独立分支上传[H3-B2S 任务书](task-briefs/YJ-P04-H3B2S-narrative-scope-safety.md)。**本轮没有运行任何 H3-B2S 测试，也未修改业务代码**；真实模型权限查询/文字/图片调用 0，新增费用 USD 0。原始 H3-B2 FAIL 和原生 PG/Chrome ENV_BLOCKED、S3 BROWSER_NOT_VERIFIED、I2 LIVE_BLOCKED_COST_BOUND 均不变。
+
 ## 2026-11-23 · H3-B2 离线验收结果
 
 最终重放 1,533 个前缀，旧兼容回归无新增失败；新预留仍有 1 项逻辑误确证，硬门槛 FAIL。 [报告及回退](reports/YJ-P04-H3B2-proposition-grounding-report.md)

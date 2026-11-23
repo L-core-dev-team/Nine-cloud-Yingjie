@@ -1,5 +1,11 @@
 # 变更记录
 
+## 2026-11-23 · H3-B2S 叙述作用域修复任务书准备
+
+- GitHub 核对 H3-B2 `a55d356`、最终 FAIL/exit 1、公开《雾散后》原文第 1/3/4/7 修订、`discourse.mjs` 范围识别和 `grounding.mjs` 事实确证路径；原两批预留已公开。
+- 新建 `codex/yj-p04-h3b2s-narrative-scope`，上传[完整独立修复任务书](docs/task-briefs/YJ-P04-H3B2S-narrative-scope-safety.md)：先锁新评价，再实现跨回合/段内世界层、无越层因果、可靠现实返回、全量离线回归与失败留档。
+- **此提交只为任务与索引，不含代码实现、实际新测试、模型或图像调用。** H3-B2 FAIL 不改；不碰原付费/主分支/生产，H3-C 与 D1/Q1 后置。
+
 ## 2026-11-23 · H3-B2 离线验收结果
 
 新增独立命题回放、两次冻结语料和分层回执。保留首轮红灯及修复后梦境误确证，验收退出 1。 [报告及回退](docs/reports/YJ-P04-H3B2-proposition-grounding-report.md)

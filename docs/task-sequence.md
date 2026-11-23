@@ -1,5 +1,9 @@
 # 映界实施任务序列
 
+## 2026-11-23 · 下一专项：YJ-P04-H3B2S（仅任务准备 / NOT_RUN）
+
+已基于 H3-B2 FAIL `a55d356` 建立独立分支、上传[叙述作用域安全修复任务书](task-briefs/YJ-P04-H3B2S-narrative-scope-safety.md)。建议执行 Gate A 先锁新独立故事/作用域标注，Gate B 建立跨修订和同修订真实/梦境/转述范围账本，Gate C 同文 A/B 双检误确证和现实真阳性，Gate D 完整回放旧 1,533 前缀及新增套件。**现阶段只是准备任务书，Gate A、业务开发和新测试尚未执行**。原 H3-B2 FAIL、生产入口及 I2 限额不变，后续 H3-C 需要单独授权。
+
 ## 2026-11-23 · H3-B2 离线验收结果
 
 H3-B2 Gate A–D 已执行并交付，最终质量门槛 FAIL。生产、H3-C、真实模型和图片试点均未启动。 [报告及回退](reports/YJ-P04-H3B2-proposition-grounding-report.md)

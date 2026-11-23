@@ -1,5 +1,9 @@
 # 映界当前交接
 
+## 2026-11-23 · 最新接续：YJ-P04-H3B2S 叙述范围安全修复任务书就绪
+
+H3-B2 已提交 `a55d356e6f8ae3740007cf8e8080f2bb679369b5`，质量结论仍为 **FAIL**。GitHub 核对《雾散后》第 1 修订范围声明、第 3 修订梦中误确证和第 7 修订现实真阳性，并定位 `discourse.mjs` 识别起止范围不完整及 `grounding/replay` 将 current 当可确证现实的风险。道主已同意**先准备[H3-B2S 任务书](task-briefs/YJ-P04-H3B2S-narrative-scope-safety.md)**，新分支 `codex/yj-p04-h3b2s-narrative-scope`。下一步必须先冻结全新叙述作用域评价，再独立实现、双重安全/召回验收，避免用词表或永久弃判刷分。**本轮未运行 H3-B2S 代码/测试，新的完整故事线语料 NOT_RUN。** 原 1,533 前缀和历史失败不可修改；无真实模型、生图、付费、生产或两个 main 写入权限。H3-C/D1 不开始。
+
 ## 2026-11-23 · H3-B2 离线验收结果
 
 H3-B2 已执行。状态 FAIL。《雾散后》第 3 回合仍在梦中，却被确认为现实交付。两次预留均已公开，后续独立评价须另取材料。 [报告及回退](reports/YJ-P04-H3B2-proposition-grounding-report.md)
