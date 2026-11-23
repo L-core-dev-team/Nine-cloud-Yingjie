@@ -1,5 +1,9 @@
 # 映界当前交接
 
+## 2026-11-23 · 最新接续：YJ-P04-H3B2 事实命题独立核验（任务书已准备）
+
+固定基线：`codex/yj-p04-h3b-semantic-candidates@4db0787f25fbd0a3a3c0f4a5a44681b7ecb28ce4`，H3-B 总结仍为 **H3B_PARTIAL**。当前开发/预留新集候选发现 15/22、4/21，事实确认 0/10、0/9；旧两组已经公开，不可再用作未见评估。道主同意先[准备完整 H3-B2 任务书](task-briefs/YJ-P04-H3B2-proposition-grounding.md)，在独立分支 `codex/yj-p04-h3b2-proposition-grounding` 研究语义命题与独立证据支持审查，保留 H3-A 的完整事务性因果安全；先冻结新合成评估，再讨论实现。**本轮仅文档提交，H3-B2 代码、冻结语料、Codex 测试、真实模型和人工盲评 NOT_RUN。** 不改两个 main，不切生产，不继承付费或外发素材权限，S3 浏览器和原生 PG/Chrome 阻塞状态不变。
+
 ## 2026-11-23 · H3-B 离线实测交付
 
 H3-B 已交接。8 个同构签署案例恢复独立确证，渡船与梵钟仅进入文本待核。新预留组已开启，后续独立评审须另取材料。 真实模型调用及费用为零。[运行报告与回退](reports/YJ-P04-H3B-semantic-candidates-report.md)
