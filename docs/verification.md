@@ -1,5 +1,9 @@
 # 映界验证记录
 
+## 2026-11-23 · H3-A 离线因果安全验收
+
+**H3A_OFFLINE_CAUSAL_SAFETY_PASS**。新 52 例的 20 次有效处置全部保留，最终错误确证 0。冒签与诉讼挂名的登记事实均独立保留，未据此确认权属。 生产默认入口沿用原版，新增真实模型费用为 USD 0。[运行报告与回退](reports/YJ-P04-H3A-causal-safety-report.md)
+
 ## 2026-11-23 · H3-A 仅任务书交付，非实现验收
 
 已通过 GitHub 核对 H2R HEAD `e99fb10d51a96083cbc0087ced256201d088d074`、原 H2R [报告](reports/YJ-P04-H2R-semantic-generalization-report.md)、[12 项旧因果回执](reports/evidence/YJ-P04-H2R/causal-audit.json)与现有语义状态代码；两条旧错误仍为历史 **FAIL**。从该完成提交建立 H3-A 独立分支并上传[任务书](task-briefs/YJ-P04-H3A-causal-safety.md)。本轮**未执行 H3-A 测试、未冻结新样本、未修改任何业务代码**；实际图片/文字模型 GET/调用 0，新增费用 USD 0。H2R PARTIAL、原生 PG/Chrome ENV_BLOCKED、S3 BROWSER_NOT_VERIFIED 和 I2 LIVE_BLOCKED_COST_BOUND 原样保持。

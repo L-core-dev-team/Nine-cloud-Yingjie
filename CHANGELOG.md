@@ -1,5 +1,9 @@
 # 变更记录
 
+## 2026-11-23 · H3-A 离线因果安全验收
+
+**H3A_OFFLINE_CAUSAL_SAFETY_PASS**。新增 narrative-highlight/3a 离线事务性审核入口、冻结语料及逐修订状态差异。原 H2R 仍为 PARTIAL。 生产默认入口沿用原版，新增真实模型费用为 USD 0。[运行报告与回退](docs/reports/YJ-P04-H3A-causal-safety-report.md)
+
 ## 2026-11-23 · YJ-P04-H3A 任务准备
 
 - 从 H2R 的 `e99fb10` 只读核验报告、`causal-audit.json` 两条失败和现有逐句状态提交代码；建立独立 `codex/yj-p04-h3a-causal-safety` 分支。

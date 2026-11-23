@@ -1,0 +1,1 @@
+[{"name":"unknown group of signers cannot bind to prior singleton","pass":false,"message":"AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 0\n"}]
