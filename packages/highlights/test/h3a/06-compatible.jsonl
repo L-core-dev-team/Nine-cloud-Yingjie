@@ -1,0 +1,10 @@
+{"id":"H3-43","label":"matching-deed","texts":["印坊属于冉池。","冉池签了把印坊赠给工坊的契书。","印坊的产权当日登记在工坊名下。"],"peaks":[3],"register":[3],"causeRevision":2,"spans":[[[0,6]],[[0,14]],[[0,14]]]}
+{"id":"H3-44","label":"unique-abbreviation","texts":["老药铺属于韩元。","韩元签了把药铺赠给义社的契书。","药铺的产权当日登记在义社名下。"],"peaks":[3],"register":[3],"causeRevision":2,"spans":[[[0,7]],[[0,14]],[[0,14]]]}
+{"id":"H3-45","label":"signed-and-handoff","texts":["西圩属于莫岚。","莫岚签了把西圩赠给水会的契书。西圩的产权当日登记在水会名下。"],"peaks":[2],"register":[2],"causeRevision":2,"spans":[[[0,6]],[[0,14],[15,29]]]}
+{"id":"H3-46","label":"explicit-beneficial-title","texts":["古栈属于阮茗。","阮茗签了把古栈赠给驿社的契书。","古栈的所有权从今日起正式归驿社。"],"peaks":[3],"register":[],"causeRevision":2,"spans":[[[0,6]],[[0,14]],[[0,15]]]}
+{"id":"H3-47","label":"bare-register","texts":["墨阁属于申陶。","墨阁的产权当日登记在藏楼名下。"],"peaks":[],"register":[2],"blockedAt":2,"spans":[[[0,6]],[[0,14]]]}
+{"id":"H3-48","label":"new-valid-deed","texts":["南苑属于唐禾。","唐禾签了把南苑赠给族学的契书。","赠契已作废。","唐禾签了把南苑赠给族学的契书。","南苑的产权当日登记在族学名下。"],"peaks":[5],"register":[5],"causeRevision":4,"spans":[[[0,6]],[[0,14]],[[0,5]],[[0,14]],[[0,14]]]}
+{"id":"H3-49","label":"two-assets-separate","texts":["秋圃属于越青。","越青签了把秋圃赠给山学的契书。","青塔属于巫澜。","巫澜签了把青塔赠给北院的契书。","青塔的赠契已作废。","秋圃的产权当日登记在山学名下。"],"peaks":[6],"register":[6],"causeRevision":2,"spans":[[[0,6]],[[0,14]],[[0,6]],[[0,14]],[[0,8]],[[0,14]]]}
+{"id":"H3-50","label":"unrelated-adjacent","texts":["旧竹院属于罗蓁。","罗蓁签了把旧竹院赠给育苗社的契书。","小磨的产权当日登记在茶会名下。","旧竹院的产权当日登记在育苗社名下。"],"peaks":[4],"register":[3,4],"causeRevision":2,"spans":[[[0,7]],[[0,16]],[[0,14]],[[0,16]]]}
+{"id":"H3-51","label":"survey-before-deed","texts":["印坊属于冉池。","冉池签了把印坊赠给工坊的契书。","印坊的产权当日登记在工坊名下。","墙上的油灯照着新漆的门环。"],"peaks":[3],"register":[3],"active":[3],"spans":[[[0,6]],[[0,14]],[[0,14]],[[0,12]]]}
+{"id":"H3-52","label":"one-account-stream","texts":["许箬独享窑费的收益。","许箬放弃了窑费的个人分红。","从今天起，每一笔窑费收入都直接进了义诊堂的公账。"],"peaks":[3],"register":[],"causeRevision":2,"account":true,"spans":[[[0,9]],[[0,12]],[[0,23]]]}
