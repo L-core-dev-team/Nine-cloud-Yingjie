@@ -37,4 +37,8 @@ def main():
     save('prefix-replay.json',prefix)
     save('safety.json',node('h3b2/safety'))
     save('benchmark.json',node('h3b2/bench'))
-if __name__=='__main__': main()
+if __name__=='__main__':
+    if '--repair' in sys.argv:
+        out=out/'repair'
+        out.mkdir(exist_ok=True)
+    main()

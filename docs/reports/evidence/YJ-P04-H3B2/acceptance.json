@@ -1,0 +1,31 @@
+{
+  "status": "FAIL",
+  "exit": 1,
+  "issues": [
+    "false-current-world-confirmation"
+  ],
+  "falseConfirmations": [
+    {
+      "split": "reserve",
+      "story": "雾散后",
+      "revision": 3,
+      "arm": "local",
+      "trace": "repair/reserve-case-05.json"
+    },
+    {
+      "split": "reserve",
+      "story": "雾散后",
+      "revision": 3,
+      "arm": "oracle",
+      "trace": "repair/reserve-case-05.json"
+    }
+  ],
+  "distinctFalseRevisions": 1,
+  "guardedEntry": "research replay only",
+  "semantic": "SEMANTIC_FACT_GROUNDING_NOT_VERIFIED",
+  "independentHuman": "INDEPENDENT_HUMAN_BLIND_REVIEW_NOT_RUN",
+  "realModelQueries": 0,
+  "realTextCalls": 0,
+  "realImageCalls": 0,
+  "usd": 0
+}

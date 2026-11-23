@@ -1,5 +1,9 @@
 # 映界实施任务序列
 
+## 2026-11-23 · H3-B2 离线验收结果
+
+H3-B2 Gate A–D 已执行并交付，最终质量门槛 FAIL。生产、H3-C、真实模型和图片试点均未启动。 [报告及回退](reports/YJ-P04-H3B2-proposition-grounding-report.md)
+
 ## 2026-11-23 · H3-B2 Gate A–D 获准执行（尚未实际开工）
 
 道主已批准 Codex 按[完整任务书](task-briefs/YJ-P04-H3B2-proposition-grounding.md)开展纯离线 Gate A → B → C → D；预计先冻结全新对照，再实现命题核验、一次性预留评价和完整历史回归。**本次仅记录授权，Gate A、代码、测试、实际回执依旧 NOT_RUN。** 不改变 H3-B PARTIAL、历史失败、生产默认或两项目 main。H3-C、真实模型和图片 API 仍须独立授权。

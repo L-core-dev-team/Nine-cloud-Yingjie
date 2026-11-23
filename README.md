@@ -1,5 +1,9 @@
 # 九霄 · 映界
 
+## 2026-11-23 · H3-B2 离线验收结果
+
+H3-B2 离线核验最终 FAIL。新预留组正确确证 6 次、错误 1 次、漏判 1 次。 [报告及回退](docs/reports/YJ-P04-H3B2-proposition-grounding-report.md)
+
 ## 2026-11-23 · YJ-P04-H3B2 语义事实命题核验任务书（NOT_RUN）
 
 已从 H3-B 交付 SHA `4db0787f25fbd0a3a3c0f4a5a44681b7ecb28ce4` 新建独立 `codex/yj-p04-h3b2-proposition-grounding`，并上传[H3-B2 完整任务书](docs/task-briefs/YJ-P04-H3B2-proposition-grounding.md)。本次由道主批准**准备任务书**，目标是把来源合法的潜在高潮与可独立证成的事件事实拆开，再由 H3-A 事务门禁确认；不能用 oracle 或正文引用命中率冒充有效因果理解。**本轮仅 GitHub 文档和独立分支，业务代码、冻结新评估集、运行测试、真实语义模型均 NOT_RUN。** H3-B 整体 PARTIAL、H3-A 定向安全 PASS 的历史结论不变，生产默认与两个 main 均不变。

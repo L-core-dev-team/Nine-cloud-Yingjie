@@ -7,13 +7,21 @@ data=root/'packages/highlights/test/h3b2'
 def save(name,obj):
     (out/(name+'.json')).write_bytes((json.dumps(obj,ensure_ascii=False,separators=(',',':'))+'\n').encode())
 def main():
+    global out
     ap=argparse.ArgumentParser()
     ap.add_argument('dev',type=Path);ap.add_argument('held',type=Path)
+    ap.add_argument('--reserve',type=Path)
     args=ap.parse_args()
     manifest=json.loads((out/'freeze.json').read_bytes())
+    partitions={'dev':args.dev,'held':args.held}
+    if args.reserve:
+        manifest['files'].update(json.loads((out/'reserve-freeze.json').read_bytes())['files'])
+        partitions['reserve']=args.reserve
+        out=out/'repair'
+        out.mkdir(exist_ok=True)
     for name,sha in manifest['files'].items():assert hashlib.sha256((data/name).read_bytes()).hexdigest()==sha
     all_metrics={}; ranking={}; details={}; failure_index={}; stats={}
-    for split,path in vars(args).items():
+    for split,path in partitions.items():
         raw=path.read_bytes();run=json.loads(raw)
         assert run['part']==split
         corpus=[(s,f.name) for f in sorted(data.glob(split+'-*.jsonl')) for s in map(json.loads,f.read_bytes().splitlines())]
@@ -44,5 +52,5 @@ def main():
         historical='regression.json retains expected red causalAudit exit 1, and compares immutable H3-A/H3-B error files',
         firstBuild={'diagnostic':'TS5033 creating absent packages/contracts/dist; wrapper continued to print file content so compiler exit was not captured','retry':'create local output directory and rerun identical permission-restricted tsc','retryExit':0},
         firstDev={'command':'node --permission --allow-fs-read=* packages/highlights/h3b2/measure.mjs dev','nodeExit':0,'readerExit':1,'diagnostic':'historical imported evaluate.mjs also printed a JSON document; ConvertFrom-Json rejected two documents','fix':'use --split=dev and guarded main; before opening held'},
-        firstSafety='safety-first.json',independentReview='INDEPENDENT_HUMAN_BLIND_REVIEW_NOT_RUN'))
+        firstSafety='../safety-first.json' if args.reserve else 'safety-first.json',independentReview='INDEPENDENT_HUMAN_BLIND_REVIEW_NOT_RUN'))
 if __name__=='__main__':main()

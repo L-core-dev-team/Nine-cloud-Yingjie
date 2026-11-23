@@ -1,5 +1,9 @@
 # 映界验证记录
 
+## 2026-11-23 · H3-B2 离线验收结果
+
+最终重放 1,533 个前缀，旧兼容回归无新增失败；新预留仍有 1 项逻辑误确证，硬门槛 FAIL。 [报告及回退](reports/YJ-P04-H3B2-proposition-grounding-report.md)
+
 ## 2026-11-23 · H3-B2 离线执行授权核验（不等于通过测试）
 
 通过连接的 GitHub 确认 H3-B2 分支 HEAD 为 `220efbb4eaef0d0e386b87637579f79e660bb585`、存在完整[任务书](task-briefs/YJ-P04-H3B2-proposition-grounding.md)，核对了原仅规划授权文本。收到道主明确“批准”后，已在同一独立分支更新任务书/交接/决策/任务序列，允许 Codex 执行 Gate A–D 纯离线任务。**当前未启动 Codex、未运行 H3-B2 新测试、未冻结新语料或修改业务代码，测试状态仍 NOT_RUN；**未获许可调用真实模型/图片、付费或修改 main。

@@ -1,0 +1,62 @@
+{
+  "base": "547c870f147ffafa96eedc6beda308c86624b43b",
+  "initialFreeze": "5ad2235ee5bca72c8ed6cd23d75d26b15c8acfe1",
+  "initialCodeAndScorer": "3f51b0459e9abf16fb2d50a2c301e387c62ee512",
+  "initialHeldOpenedUTC": "2026-11-23T11:40:26.8309934Z",
+  "firstEvaluationAndFailedControls": "3f793abb7f0fe13103088abd273ecd2aa8c76be1",
+  "freshHoldoutFreeze": "32c3e149875bbdfec44b5bf8f5fc69a6945a7be2",
+  "repairAndScorer": "0319cf6ac41555cfedd5bdfd443bcd1c058fd463",
+  "freshHoldoutOpenedUTC": "2026-11-23T11:46:47.6838746Z",
+  "latestEvidence": "repair/",
+  "finalGate": "acceptance.json",
+  "runs": [
+    [
+      "measure.mjs --split=dev",
+      0
+    ],
+    [
+      "measure.mjs --split=held",
+      0
+    ],
+    [
+      "regression.py",
+      0
+    ],
+    [
+      "discourse-audit.mjs (before repair)",
+      1
+    ],
+    [
+      "discourse-audit.mjs (after repair)",
+      0
+    ],
+    [
+      "scope-controls.mjs",
+      0
+    ],
+    [
+      "safety.mjs",
+      0
+    ],
+    [
+      "measure.mjs --split=dev (repair)",
+      0
+    ],
+    [
+      "measure.mjs --split=reserve (formal)",
+      0
+    ],
+    [
+      "measure.mjs --split=held (public repeat)",
+      0
+    ],
+    [
+      "regression.py --repair",
+      0
+    ],
+    [
+      "accept.py",
+      1
+    ]
+  ]
+}

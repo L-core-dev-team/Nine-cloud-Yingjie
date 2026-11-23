@@ -1,5 +1,9 @@
 # 映界当前交接
 
+## 2026-11-23 · H3-B2 离线验收结果
+
+H3-B2 已执行。状态 FAIL。《雾散后》第 3 回合仍在梦中，却被确认为现实交付。两次预留均已公开，后续独立评价须另取材料。 [报告及回退](reports/YJ-P04-H3B2-proposition-grounding-report.md)
+
 ## 2026-11-23 · H3-B2 Gate A–D 纯离线执行获准（工程仍待执行）
 
 道主在 Codex 已完成只读计划、明确确认 Gate A 尚未开始后，正式回复“批准”，授权 Codex 在 `codex/yj-p04-h3b2-proposition-grounding` 按 [H3-B2 任务书](task-briefs/YJ-P04-H3B2-proposition-grounding.md)执行 Gate A–D 的**纯离线**语料冻结、命题核验开发、因果安全测试、兼容回归及任务分支交付。**授权记录不是 Codex 启动或验收通过的证据：当前新业务代码、冻结语料和实测均 NOT_RUN。** 不继承 H3-C、真实模型、参考图外发、出图、费用、生产或修改两项目 main 的许可。旧 H3-B `H3B_PARTIAL` 与 H3-A 定向因果安全状态保持。

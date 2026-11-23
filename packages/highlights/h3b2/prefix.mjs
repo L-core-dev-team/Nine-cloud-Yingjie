@@ -7,14 +7,18 @@ import {replayHighlights3B2} from "./replay.mjs";
 import {stories} from "./measure.mjs";
 const read=f=>JSON.parse(readFileSync(f)),dir="packages/highlights/test/",h3a="docs/reports/evidence/YJ-P04-H3A/";
 const prior=new Map(read("docs/reports/evidence/YJ-P04-H3B/baseline.json").prior.map(r=>[r.id,r.revision]));
-const result={counts:{},historicalChanges:[],targeted:[],publicErrors:[],problems:[],checkedSpans:0,directorReviews:0,sends:0};
+const result={counts:{},quarantinedByGroup:{},historicalChanges:[],targeted:[],publicErrors:[],problems:[],checkedSpans:0,directorReviews:0,sends:0};
 function audit(group,id,texts,permissions){
     const cuts=contexts("prefix3b2-"+group+"-"+id,texts,permissions),full=replayHighlights3B2(cuts.at(-1));
     const legacy=replayHighlights3B(cuts.at(-1),suggestNarrativeCandidates);
     const sameTrace=full.rounds.every((r,i)=>JSON.stringify(r.transaction)===JSON.stringify(legacy.rounds[i].audit));
-    assert.ok(sameTrace);
     for(const [i,ctx] of cuts.entries()){
         const r=full.rounds[i],old=legacy.rounds[i],cut=replayHighlights3B2(ctx);
+        if(r.scope.quarantined){
+            result.quarantinedByGroup[group]=(result.quarantinedByGroup[group]??0)+1;
+            assert.deepEqual(r.transaction.changes,{});assert.equal(r.cadence.action,"text-only");
+            if(r.scope.world!=="current")assert.equal(r.candidateIds.length,0);
+        } else assert.deepEqual(r.transaction,old.audit);
         assert.deepEqual(cut.rounds,full.rounds.slice(0,i+1));
         assert.deepEqual(cut.events,full.events.filter(e=>e.learnedAt<=i+1));
         assert.deepEqual(cut.candidates,full.candidates.filter(e=>e.revision<=i+1));
@@ -59,4 +63,5 @@ for(const part of ["dev","held"]){
     for(const s of lines(dir+"h3b/"+part+".jsonl"))audit("h3b-"+part,s.id,s.rows.map(r=>r.text));
     for(const s of stories(part))audit("new-"+part,s.id,s.rows.map(r=>r.text));
 }
+for(const s of stories("reserve"))audit("new-reserve",s.id,s.rows.map(r=>r.text));
 console.log(JSON.stringify(result));if(result.sends||result.problems.length)process.exitCode=1;
