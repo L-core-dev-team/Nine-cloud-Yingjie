@@ -1,5 +1,9 @@
 # 映界验证记录
 
+## 2026-11-23 · H3-B2 离线执行授权核验（不等于通过测试）
+
+通过连接的 GitHub 确认 H3-B2 分支 HEAD 为 `220efbb4eaef0d0e386b87637579f79e660bb585`、存在完整[任务书](task-briefs/YJ-P04-H3B2-proposition-grounding.md)，核对了原仅规划授权文本。收到道主明确“批准”后，已在同一独立分支更新任务书/交接/决策/任务序列，允许 Codex 执行 Gate A–D 纯离线任务。**当前未启动 Codex、未运行 H3-B2 新测试、未冻结新语料或修改业务代码，测试状态仍 NOT_RUN；**未获许可调用真实模型/图片、付费或修改 main。
+
 ## 2026-11-23 · H3-B2 规划回执（非代码验收）
 
 本次通过 GitHub 只读核对 H3-B 分支 HEAD `4db0787f25fbd0a3a3c0f4a5a44681b7ecb28ce4`、[报告](reports/YJ-P04-H3B-semantic-candidates-report.md)、[候选 A/B](reports/evidence/YJ-P04-H3B/proposal-measurement.json)、[独立确认 0/19](reports/evidence/YJ-P04-H3B/causal-admission.json)与 `h3b/replay.mjs` / `h3b/protocol.mjs`。已基于该提交独立创建 H3-B2 分支并上传[任务书](task-briefs/YJ-P04-H3B2-proposition-grounding.md)。**本轮 H3-B2 业务代码、新冻结语料、实际运行、独立人工盲评均 NOT_RUN**；真实模型权限 GET、文字和图片 API 调用 0，新增 API 费用 USD 0。历史 H3-A/H3-B 测试只核查其报告，未在用户 Windows 上重新执行；原生 PG/Chrome ENV_BLOCKED、S3 BROWSER_NOT_VERIFIED、I2 LIVE_BLOCKED_COST_BOUND 原样保留。
