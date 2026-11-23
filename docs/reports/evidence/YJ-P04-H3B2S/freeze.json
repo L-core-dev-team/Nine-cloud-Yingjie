@@ -1,0 +1,28 @@
+{
+  "files": {
+    "dev-1.jsonl": "c7e5cf3dfde7ec53a8e64cba595bc01fc8cbcbda8d4ba25f1113950ff9896b25",
+    "dev-2.jsonl": "a7abb355d7470e3348e19d2744796d819fd660e24ea9c7bb4545871595373634",
+    "dev-3.jsonl": "31a94af6e07fc4f8b07404713936481d8811ddb6c31c8a4918ccd3989c6205ee",
+    "held-1.jsonl": "276c8e9584ac3de616ee373aa79026b04f3611ffa8a0371f2c484231d47e3cf7",
+    "held-2.jsonl": "ab4593c948b3d3167c8d3c481e1bcbb0a638136075274413e75d69e90d17cdf0",
+    "held-3.jsonl": "262ab95e7eb734e406c7591c32ccecf7541ec6077332f927bab4f65e56cc9051",
+    "hostile.jsonl": "d648e5a96526c152ca2e13f1b3577e27f1bd2c65a4227903b04c8b7a7bb2b539",
+    "README.md": "9ab4a8b1e167b8e9c9daa30b13b16645f0bd699ed43f30a51a4fc3e501926e49"
+  },
+  "groups": {
+    "dev": {
+      "stories": 12,
+      "revisions": 114,
+      "facts": 21,
+      "noncurrentOutcomes": 23
+    },
+    "held": {
+      "stories": 12,
+      "revisions": 118,
+      "facts": 22,
+      "noncurrentOutcomes": 23
+    }
+  },
+  "attackInputs": 50,
+  "manifestSha256": "be98e7b7916332779df11ccc47650c5e2569ee3407f66129cfd9a4e77f654577"
+}
