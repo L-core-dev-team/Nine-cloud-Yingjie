@@ -1,5 +1,9 @@
 # 九霄 · 映界
 
+## 2026-11-23 · YJ-P04-H3B 离线语义候选融合专项（任务启动准备 / NOT_RUN）
+
+道主已同意继续 H3-B 并要求质量优先。从 H3-A `69e3cc8c6f5b3d228a6b90c5ed68c9e4b5b577bb` 新建 `codex/yj-p04-h3b-semantic-candidates`，上传[完整 H3-B 任务书](docs/task-briefs/YJ-P04-H3B-semantic-candidates-evidence-gate.md)。本轮工作范围是**本地假语义候选接口与 H3-A 可信因果门禁融合**、先冻结新合成反事实再实施、分开报告候选能力与事实确认能力。**任务分支和文档已准备，H3-B 代码、实际测试、独立人工评价、真实模型均 NOT_RUN**；不改生产、两个 main、旧付费门禁，H3-A 离线因果安全 PASS 及其旧错拒记录保留。
+
 ## 2026-11-23 · H3-A 离线因果安全验收
 
 **H3A_OFFLINE_CAUSAL_SAFETY_PASS**。原 H2R 两类错误确证已在独立回放入口修复，52 个冻结对照通过。 生产默认入口沿用原版，新增真实模型费用为 USD 0。[运行报告与回退](docs/reports/YJ-P04-H3A-causal-safety-report.md)

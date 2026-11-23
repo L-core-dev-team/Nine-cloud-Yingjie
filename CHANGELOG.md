@@ -1,5 +1,11 @@
 # 变更记录
 
+## 2026-11-23 · H3-B 语义候选与因果安全融合任务立项
+
+- 核验 H3-A 完成提交 `69e3cc8`、941 前缀、12+52 因果安全与公开 10 项新增错拒；确认新 H3-B 基于该提交独立分支。
+- 上传 [H3-B 完整任务书](docs/task-briefs/YJ-P04-H3B-semantic-candidates-evidence-gate.md)。重点区分候选提出与权属/因果确认，保留整修订原子审查、S2 图像事实及 I1/I2 授权；必须先冻结并严格区分 fake/oracle 与真实 NLP 泛化测量。
+- 道主批准的仅为 H3-B 离线范围，**本轮创建分支和文档，新代码、新语料和本机运行尚未实施**。无真实模型 API、图片、私有素材外发或付费、无生产切换，两项目 main 不变。H3-C/D1/Q1 后置。
+
 ## 2026-11-23 · H3-A 离线因果安全验收
 
 **H3A_OFFLINE_CAUSAL_SAFETY_PASS**。新增 narrative-highlight/3a 离线事务性审核入口、冻结语料及逐修订状态差异。原 H2R 仍为 PARTIAL。 生产默认入口沿用原版，新增真实模型费用为 USD 0。[运行报告与回退](docs/reports/YJ-P04-H3A-causal-safety-report.md)

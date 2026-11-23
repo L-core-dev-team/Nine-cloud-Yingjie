@@ -1,5 +1,9 @@
 # 映界验证记录
 
+## 2026-11-23 · H3-B 质量任务仅文档准备，未实施
+
+通过 GitHub 核对 H3-A HEAD `69e3cc8c6f5b3d228a6b90c5ed68c9e4b5b577bb`、[因果安全验收报告](reports/YJ-P04-H3A-causal-safety-report.md)、旧公开错拒与 `h3a/replay.mjs`、`collect.mjs`、`transaction.mjs`。H3-A 原报告显示 12/12+52/52 安全、旧公开相对 H2R 10 项新增错拒，属**历史已有证据**，本轮没有重跑。道主同意 H3-B 质量专项；已建立独立任务分支、上传[完整任务书](task-briefs/YJ-P04-H3B-semantic-candidates-evidence-gate.md)。**H3-B 冻结新集、业务代码、实际回归、真实模型/人工盲评均 NOT_RUN**；实际 API 调用 0、额外 USD 0，PG/Chrome ENV_BLOCKED，I2 LIVE_BLOCKED_COST_BOUND，两个 main 未修改。
+
 ## 2026-11-23 · H3-A 离线因果安全验收
 
 **H3A_OFFLINE_CAUSAL_SAFETY_PASS**。新 52 例的 20 次有效处置全部保留，最终错误确证 0。冒签与诉讼挂名的登记事实均独立保留，未据此确认权属。 生产默认入口沿用原版，新增真实模型费用为 USD 0。[运行报告与回退](reports/YJ-P04-H3A-causal-safety-report.md)
