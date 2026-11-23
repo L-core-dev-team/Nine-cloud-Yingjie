@@ -1,0 +1,75 @@
+{
+  "base": "4d443d3ea95479afb291637c04898475ceea6663",
+  "branch": "codex/yj-p04-native-fact-01",
+  "freezeCommit": "0bf6efda367d346ded1571edaca28b0719939792",
+  "freezeSHA256": "d365137aa44217f230fee1818f70b43ca982b58b1a7c08a9e2e9a68811db6b6a",
+  "scorerCommit": "02ef19ba82505f8d6c49a38c2cc2d189e8c5a492",
+  "prepare": {
+    "command": "python -B packages/native-facts/test/prepare.py ../Nine-cloud ../native-rule-final",
+    "exit": 0,
+    "node": "v26.13.0",
+    "esbuild": "0.28.2",
+    "zod": "4.6.6",
+    "paymentUSD": 0,
+    "upstreamCommit": "f1fe6ea561c5ef4d1ec670b7a406625ce5df774c",
+    "ruleSourceBlob": "89f2093ec03d3b5d88f820d05c6900c0b34c2fec",
+    "eventLogBlob": "cf8ef8485e908ebf9c57957f8859fc6eb40787a6",
+    "pluginBlob": "845d537e7505bcf6bc4dcd342897479418619f87"
+  },
+  "runtime": [
+    {
+      "command": "node --permission --allow-fs-read=* packages/native-facts/test/guards.mjs ../native-rule-final",
+      "exit": 0,
+      "rawStdoutSHA256": "428c2745997916aba2906c66503b5b589b92a5433490f9240313d8022cdbe06b"
+    },
+    {
+      "command": "node --permission --allow-fs-read=* packages/native-facts/test/measure.mjs dev ../native-rule-final",
+      "exit": 0,
+      "rawStdoutSHA256": "bbe2bf3b75bae4c8529e5d80c24f7031167283b5de6a242d0ae1e13e32e75ff2"
+    },
+    {
+      "command": "node --permission --allow-fs-read=* packages/native-facts/test/measure.mjs held ../native-rule-final",
+      "exit": 0,
+      "rawStdoutSHA256": "ee6477377be31f9c769b4dde88671d84b5aa7f90f0f11e80a8516d19bdc4e3ce"
+    },
+    {
+      "command": "node --permission --allow-fs-read=* packages/native-facts/test/prefix.mjs ../native-rule-final",
+      "exit": 0,
+      "rawStdoutSHA256": "c4d57c61ba38c85cbf90045ca9ce43d770e8ac55221aff4230f93f38b7c6475f"
+    },
+    {
+      "command": "node --permission --allow-fs-read=* packages/native-facts/test/extra-controls.mjs ../native-rule-final",
+      "exit": 0,
+      "rawStdoutSHA256": "f5582dd86906e328cff0e4d52263d97aad060c8a09bf6ae76aadf2f7da592cbb"
+    },
+    {
+      "command": "node --permission --allow-fs-read=* packages/native-facts/test/examples.mjs ../native-rule-final",
+      "exit": 0,
+      "rawStdoutSHA256": "dea58458e52c9d2157186636a5851ecd464c39c36fd0af6949a30ba89133cc1b"
+    },
+    {
+      "command": "node --permission --allow-fs-read=* packages/native-facts/test/bench.mjs ../native-rule-final 20",
+      "exit": 0,
+      "rawStdoutSHA256": "ea0c73ec6b6a3f34ec86b2aabc84a6621e59ac19e9a292e1f70e779775303e07"
+    },
+    {
+      "command": "node --permission --allow-fs-read=* packages/native-facts/test/bench.mjs ../native-rule-final 100",
+      "exit": 0,
+      "rawStdoutSHA256": "9309adf13f4268acd70df7c74e9f623135ba6c29cfe938dcddf3f13c97657c83"
+    },
+    {
+      "command": "node --permission --allow-fs-read=* packages/native-facts/test/bench.mjs ../native-rule-final 300",
+      "exit": 0,
+      "rawStdoutSHA256": "6dbf6d30b0ca006a66f191c2e39e11174eaf6d03087d65e5e2388b46a7ec9531"
+    },
+    {
+      "command": "node --permission --allow-fs-read=* packages/native-facts/test/bench.mjs ../native-rule-final 1000",
+      "exit": 0,
+      "rawStdoutSHA256": "a21faf048c7662d5c5aae7554df028564e4752f86bb45f508b6792328a789e6e"
+    }
+  ],
+  "legacyDriverExit": 0,
+  "decisionCommand": "python -B packages/native-facts/test/accept.py",
+  "decisionExit": 0,
+  "heldScorePasses": 1
+}
