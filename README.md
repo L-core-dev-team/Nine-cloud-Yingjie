@@ -1,5 +1,11 @@
 # 九霄 · 映界
 
+## 2026-11-24 · YJ-P04-AI-SNAPSHOT-02R 场景语义最小修复（已批准 / NOT_RUN）
+
+道主已批准第一步的两条独立收尾线。此分支从 `df94c8225e8f49b8aca0f914efe889aa2e5724af` 接续。方向值受限标准化、部分可见的支持与限制证据分离、物件身份及可见状态与覆盖审核分离。B/D 原答回放，C1–C3 原文不变，最多 3 份新首答与 2 份独立 C2 遗漏审核；不扩大语料，不生图。原 AI-SNAPSHOT-02 FAIL 不变。
+
+[完整执行任务书](docs/task-briefs/YJ-P04-AI-SNAPSHOT-02R.md)。本次仅提交任务书与授权索引，实际实施、模型对话、补充编辑均尚未执行。现有 Luna API LIVE_BLOCKED、I2 LIVE_BLOCKED_COST_BOUND、H3-B2/B2S FAIL、自由角色卡权威缺口保留；项目 API 和额外 API 费用均为 0，不改生产、UI、PG、上游或两个 main。完成即汇报，不自动进入游戏闭环。另一线独立执行。
+
 AI-SNAPSHOT-02 已完成九次独立 Codex 对话。隐藏后能重建当前观察，方向同义表达仍会错拒，C2 遗漏的布帘状态被当作完整值接纳，按验收标准为 FAIL。[九帧实测与逐例回执](docs/reports/YJ-P04-AI-SNAPSHOT-02-report.md)。
 
 ## 2026-11-24 · AI-SNAPSHOT-02 与 VISUAL-CONTINUITY-01 并行（已批准 / NOT_RUN）
