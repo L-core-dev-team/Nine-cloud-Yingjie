@@ -1,5 +1,13 @@
 # 映界当前交接
 
+## 2026-11-24 · 最新接续：真实 AI 三组场景语义试点
+
+道主对 `YJ-P04-AI-SNAPSHOT-01` 小规模真实文字语义提取实验明确回复「批」。批准原听雨酒馆三帧＋两组未见三帧，共最多 9 次可能送达的真实文字请求（失败也计数），总费用硬上限 USD 0.20，图片 0。固定基线 SCENE-SNAPSHOT-01 `53a452d7a8661901b00b9a22482d5b9792761566` 的 0/3 就绪、0/24 正确和原始审计不改。转向真实 AI 提议语义候选、程序校验来源/连续性、独立评分及人审；不得把机械通过或模型自报当权威事实。先冻结合成输入/独立金标/提示/模型/报价、建独立持久金额账本、通过前置安全门禁，再按三组九槽单次顺序调用。仅获准合成语料和必要前缀可外发；缺确切权限/价格/最坏费用证明即停，未知请求不重试。
+
+[完整执行任务书](task-briefs/YJ-P04-AI-SNAPSHOT-01.md)。
+
+本次只提交任务书及授权记录；工程执行与真实模型请求仍 NOT_RUN，费用新增 0，Codex 可直接在批准范围内开工。不启动图片生成或模拟派发、真实玩家读取、UI、生产、上游修改或两个 main。旧 L1 ACKNOWLEDGED、L4 UNKNOWN_STOP、I2 LIVE_BLOCKED_COST_BOUND、H3-B2/H3-B2S FAIL、角色卡 UPSTREAM_AUTHORITY_GAP 与 B2/NATIVE-SCENE PARTIAL 保留；真实文字批准仅限新独立任务，不复用旧批准或扩大授权。
+
 ## 2026-11-24 · 听雨酒馆三帧实测
 
 结果为 `SCENE_SNAPSHOT_PARTIAL`。三帧就绪 0/3；首帧的三人名单仅为候选，第三帧排除了回忆，也未确认仍在场的两人。[三份文字输出](reports/evidence/YJ-P04-SCENE-SNAPSHOT-01/snapshots.txt) · [实际与预期对照](reports/YJ-P04-SCENE-SNAPSHOT-01-report.md)。
