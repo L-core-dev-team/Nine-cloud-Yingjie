@@ -1,0 +1,445 @@
+{
+  "fixture": "synthetic-card-history",
+  "networkAllowed": false,
+  "frames": [
+    {
+      "revision": 1,
+      "inputSha256": "9e7b0f660ff20bc25e605cdcbf7826ddd5f7ba754f19d98be35bd7faaf144152",
+      "result": {
+        "status": "not-ready",
+        "reason": "unresolved-clause"
+      },
+      "audit": {
+        "method": "scene-evidence/2",
+        "replayOnly": true,
+        "registryDigest": "4fe694a6b74391ec8e543eab5e4abb99f348c2e61b35dd846059d656707952d8",
+        "source": {
+          "schemaVersion": "0.1",
+          "kind": "card-history",
+          "ownerId": "s2-synthetic",
+          "sessionId": "00000000-0000-4000-a000-c10c199a0eb4",
+          "key": "00000000-0000-4000-b000-c0a2741d938d",
+          "revision": 1,
+          "evidence": "completed-history"
+        },
+        "revision": 1,
+        "narrativeSha256": "9e7b0f660ff20bc25e605cdcbf7826ddd5f7ba754f19d98be35bd7faaf144152",
+        "offsetUnit": "UTF-16",
+        "fields": {
+          "place": {
+            "precision": "unknown",
+            "spans": []
+          },
+          "viewpoint": {
+            "precision": "unknown",
+            "spans": []
+          },
+          "perspective": {
+            "precision": "unknown",
+            "spans": []
+          },
+          "people": {
+            "precision": "complete",
+            "spans": [
+              1
+            ],
+            "value": [
+              "林青",
+              "沈舟",
+              "苏禾"
+            ],
+            "admitted": false
+          },
+          "features": {
+            "precision": "unknown",
+            "spans": []
+          },
+          "timeOfDay": {
+            "precision": "unknown",
+            "spans": []
+          },
+          "lighting": {
+            "precision": "unknown",
+            "spans": []
+          }
+        },
+        "evidence": [
+          {
+            "start": 0,
+            "end": 19,
+            "rule": "excluded",
+            "scope": "unresolved-clause",
+            "playerKnown": false
+          },
+          {
+            "start": 20,
+            "end": 38,
+            "rule": "exclusive-roster",
+            "scope": "current",
+            "playerKnown": false
+          },
+          {
+            "start": 39,
+            "end": 55,
+            "rule": "excluded",
+            "scope": "unresolved-clause",
+            "playerKnown": false
+          },
+          {
+            "start": 56,
+            "end": 68,
+            "rule": "excluded",
+            "scope": "unresolved-clause",
+            "playerKnown": false
+          },
+          {
+            "start": 69,
+            "end": 75,
+            "rule": "excluded",
+            "scope": "unresolved-clause",
+            "playerKnown": false
+          }
+        ],
+        "blockers": [
+          "unresolved-clause",
+          "unresolved-clause",
+          "unresolved-clause",
+          "unresolved-clause",
+          "incomplete:place",
+          "incomplete:viewpoint",
+          "incomplete:perspective",
+          "incomplete:features",
+          "incomplete:timeOfDay",
+          "incomplete:lighting"
+        ],
+        "status": "not-ready"
+      },
+      "review": {
+        "method": "visual-consistency/1",
+        "fieldReady": false,
+        "imageEligible": false,
+        "verdict": "not-ready",
+        "reason": "incomplete-evidence",
+        "evidence": [
+          {
+            "revision": 1,
+            "sha256": "9e7b0f660ff20bc25e605cdcbf7826ddd5f7ba754f19d98be35bd7faaf144152",
+            "start": 0,
+            "end": 19
+          },
+          {
+            "revision": 1,
+            "sha256": "9e7b0f660ff20bc25e605cdcbf7826ddd5f7ba754f19d98be35bd7faaf144152",
+            "start": 20,
+            "end": 38
+          },
+          {
+            "revision": 1,
+            "sha256": "9e7b0f660ff20bc25e605cdcbf7826ddd5f7ba754f19d98be35bd7faaf144152",
+            "start": 39,
+            "end": 55
+          },
+          {
+            "revision": 1,
+            "sha256": "9e7b0f660ff20bc25e605cdcbf7826ddd5f7ba754f19d98be35bd7faaf144152",
+            "start": 56,
+            "end": 68
+          },
+          {
+            "revision": 1,
+            "sha256": "9e7b0f660ff20bc25e605cdcbf7826ddd5f7ba754f19d98be35bd7faaf144152",
+            "start": 69,
+            "end": 75
+          }
+        ],
+        "revision": 1,
+        "narrativeSha256": "9e7b0f660ff20bc25e605cdcbf7826ddd5f7ba754f19d98be35bd7faaf144152",
+        "reviewSha256": "dca3b1db2c06f82cb284d6ded5c8645f9dbe527b1ba9143b50856f722ee3f38e"
+      },
+      "snapshot": {
+        "place": null,
+        "sceneId": null,
+        "people": null,
+        "count": null,
+        "features": null,
+        "timeOfDay": null,
+        "lighting": null,
+        "viewpoint": null,
+        "perspective": null,
+        "visualVersion": null,
+        "change": null,
+        "imageEligible": false
+      }
+    },
+    {
+      "revision": 2,
+      "inputSha256": "c637fcfa00e65a300cfe7a800f4f777a49cea3618736e0dcb6c039556e9f0e37",
+      "result": {
+        "status": "not-ready",
+        "reason": "unresolved-clause"
+      },
+      "audit": {
+        "method": "scene-evidence/2",
+        "replayOnly": true,
+        "registryDigest": "4fe694a6b74391ec8e543eab5e4abb99f348c2e61b35dd846059d656707952d8",
+        "source": {
+          "schemaVersion": "0.1",
+          "kind": "card-history",
+          "ownerId": "s2-synthetic",
+          "sessionId": "00000000-0000-4000-a000-c10c199a0eb4",
+          "key": "00000000-0000-4000-b000-ae4c3f7e7ef9",
+          "revision": 2,
+          "evidence": "completed-history"
+        },
+        "revision": 2,
+        "narrativeSha256": "c637fcfa00e65a300cfe7a800f4f777a49cea3618736e0dcb6c039556e9f0e37",
+        "offsetUnit": "UTF-16",
+        "fields": {
+          "place": {
+            "precision": "unknown",
+            "spans": []
+          },
+          "viewpoint": {
+            "precision": "unknown",
+            "spans": []
+          },
+          "perspective": {
+            "precision": "unknown",
+            "spans": []
+          },
+          "people": {
+            "precision": "unknown",
+            "spans": []
+          },
+          "features": {
+            "precision": "unknown",
+            "spans": []
+          },
+          "timeOfDay": {
+            "precision": "unknown",
+            "spans": []
+          },
+          "lighting": {
+            "precision": "unknown",
+            "spans": []
+          }
+        },
+        "evidence": [
+          {
+            "start": 0,
+            "end": 28,
+            "rule": "excluded",
+            "scope": "unresolved-clause",
+            "playerKnown": false
+          },
+          {
+            "start": 29,
+            "end": 58,
+            "rule": "excluded",
+            "scope": "unresolved-clause",
+            "playerKnown": false
+          }
+        ],
+        "blockers": [
+          "unresolved-clause",
+          "unresolved-clause",
+          "incomplete:place",
+          "incomplete:viewpoint",
+          "incomplete:perspective",
+          "incomplete:people",
+          "incomplete:features",
+          "incomplete:timeOfDay",
+          "incomplete:lighting"
+        ],
+        "status": "not-ready"
+      },
+      "review": {
+        "method": "visual-consistency/1",
+        "fieldReady": false,
+        "imageEligible": false,
+        "verdict": "not-ready",
+        "reason": "incomplete-evidence",
+        "evidence": [
+          {
+            "revision": 2,
+            "sha256": "c637fcfa00e65a300cfe7a800f4f777a49cea3618736e0dcb6c039556e9f0e37",
+            "start": 0,
+            "end": 28
+          },
+          {
+            "revision": 2,
+            "sha256": "c637fcfa00e65a300cfe7a800f4f777a49cea3618736e0dcb6c039556e9f0e37",
+            "start": 29,
+            "end": 58
+          }
+        ],
+        "revision": 2,
+        "narrativeSha256": "c637fcfa00e65a300cfe7a800f4f777a49cea3618736e0dcb6c039556e9f0e37",
+        "reviewSha256": "cf5ad2fbad8d960bd8f824ec535acf4fb9be0db41b6979861eb1833087df29c7"
+      },
+      "snapshot": {
+        "place": null,
+        "sceneId": null,
+        "people": null,
+        "count": null,
+        "features": null,
+        "timeOfDay": null,
+        "lighting": null,
+        "viewpoint": null,
+        "perspective": null,
+        "visualVersion": null,
+        "change": null,
+        "imageEligible": false
+      }
+    },
+    {
+      "revision": 3,
+      "inputSha256": "052c165b5d27146a8d4334239501905f1c8ac98a17167453ae9decf89f179652",
+      "result": {
+        "status": "not-ready",
+        "reason": "memory-or-dream"
+      },
+      "audit": {
+        "method": "scene-evidence/2",
+        "replayOnly": true,
+        "registryDigest": "4fe694a6b74391ec8e543eab5e4abb99f348c2e61b35dd846059d656707952d8",
+        "source": {
+          "schemaVersion": "0.1",
+          "kind": "card-history",
+          "ownerId": "s2-synthetic",
+          "sessionId": "00000000-0000-4000-a000-c10c199a0eb4",
+          "key": "00000000-0000-4000-b000-ac7f7fb1d0da",
+          "revision": 3,
+          "evidence": "completed-history"
+        },
+        "revision": 3,
+        "narrativeSha256": "052c165b5d27146a8d4334239501905f1c8ac98a17167453ae9decf89f179652",
+        "offsetUnit": "UTF-16",
+        "fields": {
+          "place": {
+            "precision": "unknown",
+            "spans": []
+          },
+          "viewpoint": {
+            "precision": "unknown",
+            "spans": []
+          },
+          "perspective": {
+            "precision": "unknown",
+            "spans": []
+          },
+          "people": {
+            "precision": "unknown",
+            "spans": []
+          },
+          "features": {
+            "precision": "unknown",
+            "spans": []
+          },
+          "timeOfDay": {
+            "precision": "unknown",
+            "spans": []
+          },
+          "lighting": {
+            "precision": "unknown",
+            "spans": []
+          }
+        },
+        "evidence": [
+          {
+            "start": 0,
+            "end": 22,
+            "rule": "excluded",
+            "scope": "memory-or-dream",
+            "playerKnown": false
+          },
+          {
+            "start": 23,
+            "end": 28,
+            "rule": "excluded",
+            "scope": "unresolved-clause",
+            "playerKnown": false
+          },
+          {
+            "start": 29,
+            "end": 58,
+            "rule": "excluded",
+            "scope": "unresolved-clause",
+            "playerKnown": false
+          },
+          {
+            "start": 59,
+            "end": 80,
+            "rule": "excluded",
+            "scope": "unresolved-clause",
+            "playerKnown": false
+          }
+        ],
+        "blockers": [
+          "memory-or-dream",
+          "unresolved-clause",
+          "unresolved-clause",
+          "unresolved-clause",
+          "incomplete:place",
+          "incomplete:viewpoint",
+          "incomplete:perspective",
+          "incomplete:people",
+          "incomplete:features",
+          "incomplete:timeOfDay",
+          "incomplete:lighting"
+        ],
+        "status": "not-ready"
+      },
+      "review": {
+        "method": "visual-consistency/1",
+        "fieldReady": false,
+        "imageEligible": false,
+        "verdict": "not-ready",
+        "reason": "incomplete-evidence",
+        "evidence": [
+          {
+            "revision": 3,
+            "sha256": "052c165b5d27146a8d4334239501905f1c8ac98a17167453ae9decf89f179652",
+            "start": 0,
+            "end": 22
+          },
+          {
+            "revision": 3,
+            "sha256": "052c165b5d27146a8d4334239501905f1c8ac98a17167453ae9decf89f179652",
+            "start": 23,
+            "end": 28
+          },
+          {
+            "revision": 3,
+            "sha256": "052c165b5d27146a8d4334239501905f1c8ac98a17167453ae9decf89f179652",
+            "start": 29,
+            "end": 58
+          },
+          {
+            "revision": 3,
+            "sha256": "052c165b5d27146a8d4334239501905f1c8ac98a17167453ae9decf89f179652",
+            "start": 59,
+            "end": 80
+          }
+        ],
+        "revision": 3,
+        "narrativeSha256": "052c165b5d27146a8d4334239501905f1c8ac98a17167453ae9decf89f179652",
+        "reviewSha256": "8b190bd49c40fbef23ea57fd03569474c6b8745e32539ebcbd44ef5862de3231"
+      },
+      "snapshot": {
+        "place": null,
+        "sceneId": null,
+        "people": null,
+        "count": null,
+        "features": null,
+        "timeOfDay": null,
+        "lighting": null,
+        "viewpoint": null,
+        "perspective": null,
+        "visualVersion": null,
+        "change": null,
+        "imageEligible": false
+      }
+    }
+  ]
+}

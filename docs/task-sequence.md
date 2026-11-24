@@ -1,5 +1,9 @@
 # 映界实施任务序列
 
+## 2026-11-24 · 听雨酒馆三帧实测
+
+结果为 `SCENE_SNAPSHOT_PARTIAL`。三帧就绪 0/3；首帧的三人名单仅为候选，第三帧排除了回忆，也未确认仍在场的两人。[三份文字输出](reports/evidence/YJ-P04-SCENE-SNAPSHOT-01/snapshots.txt) · [实际与预期对照](reports/YJ-P04-SCENE-SNAPSHOT-01-report.md)。
+
 ## 2026-11-24 · 下一项 SCENE-SNAPSHOT-01（小型离线实验，直接执行）
 
 道主已明确批准 `YJ-P04-SCENE-SNAPSHOT-01` 小型纯离线文字实验，从 NATIVE-SCENE-01 `2357b1d217d7d68039033103b794825c06fc9b4d` 接续。固定同一听雨酒馆三段连续正文，林青、沈舟、苏禾三人 → 苏禾离场只剩两人 → 回忆三人但不污染当前。复用现有 S1/S2 的 scene-evidence/2、project、replay 与视觉审查。先冻结输入与独立金标，保留原文，实际运行后交付三份可读场景快照、证据和差异，不人工补字段、不改题硬编码拿 PASS。现有词表及回忆导致整段弃判的限制必须如实报告。
