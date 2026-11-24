@@ -1,5 +1,13 @@
 # 映界验证记录
 
+## 2026-11-24 · SCENE-SNAPSHOT-01 执行授权（尚未实测）
+
+道主已明确批准 `YJ-P04-SCENE-SNAPSHOT-01` 小型纯离线文字实验，从 NATIVE-SCENE-01 `2357b1d217d7d68039033103b794825c06fc9b4d` 接续。固定同一听雨酒馆三段连续正文，林青、沈舟、苏禾三人 → 苏禾离场只剩两人 → 回忆三人但不污染当前。复用现有 S1/S2 的 scene-evidence/2、project、replay 与视觉审查。先冻结输入与独立金标，保留原文，实际运行后交付三份可读场景快照、证据和差异，不人工补字段、不改题硬编码拿 PASS。现有词表及回忆导致整段弃判的限制必须如实报告。
+
+[执行任务书](task-briefs/YJ-P04-SCENE-SNAPSHOT-01.md)。
+
+本次仅登记任务书及授权，实际实验 NOT_RUN；Codex 可直接执行。无新 UI、PG、真实玩家、真实模型/图片 API、模拟图片派发、付费、上游写入或两个 main 修改。保留 NATIVE-FACT-01 PASS、B2 PARTIAL、NATIVE_SCENE_PREVIEW_PARTIAL/BROWSER_NOT_VERIFIED、H3-B2/H3-B2S FAIL、角色卡 UPSTREAM_AUTHORITY_GAP 和 I2 停止线；本例不能证明通用自由叙事能力。
+
 ## 2026-11-24 · 原生场景试玩已交付，实机浏览器验收待补
 
 双击 [原生场景试玩](../packages/native-scene/dist/index.html)，可在芦花渡和望气台之间回放 11 个节点。实际九霄认证和隔离 PostgreSQL 已验证当前地点与事后获知的历史行程。受管浏览器启动或本地文件导航受阻，最终为 `NATIVE_SCENE_PREVIEW_PARTIAL`。[运行报告](reports/YJ-P04-NATIVE-SCENE-01-report.md)。
