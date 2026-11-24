@@ -1,0 +1,379 @@
+{
+  "version": "native-scene-demo/1",
+  "source": "isolated-authenticated-PG",
+  "frames": [
+    {
+      "action": "create",
+      "version": "native-partial-scene/1",
+      "access": "authorized",
+      "revision": 0,
+      "current": {
+        "id": "loc_luhuadu",
+        "name": "芦花渡",
+        "source": "current-authorized-pg-snapshot",
+        "visual": {
+          "people": null,
+          "features": null,
+          "timeOfDay": null,
+          "lighting": null,
+          "viewpoint": null,
+          "perspective": null
+        }
+      },
+      "history": [],
+      "reason": null,
+      "sceneEligible": false,
+      "send": false,
+      "asset": null,
+      "snapshotSHA256": "879808c8503f1b2d37958b2e70cae009d4a6bcc043eaa50d897bfba80d6f798d"
+    },
+    {
+      "action": "move",
+      "version": "native-partial-scene/1",
+      "access": "authorized",
+      "revision": 1,
+      "current": {
+        "id": "loc_wangqitai",
+        "name": "望气台",
+        "source": "current-authorized-pg-snapshot",
+        "visual": {
+          "people": null,
+          "features": null,
+          "timeOfDay": null,
+          "lighting": null,
+          "viewpoint": null,
+          "perspective": null
+        }
+      },
+      "history": [],
+      "reason": null,
+      "sceneEligible": false,
+      "send": false,
+      "asset": null,
+      "snapshotSHA256": "c35de4e480395c7ebb918d380e60141e4b324de136181e0783210689af4f8fad"
+    },
+    {
+      "action": "blocked",
+      "version": "native-partial-scene/1",
+      "access": "authorized",
+      "revision": 2,
+      "current": {
+        "id": "loc_wangqitai",
+        "name": "望气台",
+        "source": "current-authorized-pg-snapshot",
+        "visual": {
+          "people": null,
+          "features": null,
+          "timeOfDay": null,
+          "lighting": null,
+          "viewpoint": null,
+          "perspective": null
+        }
+      },
+      "history": [],
+      "reason": "blocked",
+      "sceneEligible": false,
+      "send": false,
+      "asset": null,
+      "snapshotSHA256": "440827cd5b8ef3acf27937b29e155c88bceb2636b41edb15d6ed9af2ef42145b"
+    },
+    {
+      "action": "sub",
+      "version": "native-partial-scene/1",
+      "access": "authorized",
+      "revision": 3,
+      "current": {
+        "id": "loc_wangqitai",
+        "name": "望气台",
+        "source": "current-authorized-pg-snapshot",
+        "visual": {
+          "people": null,
+          "features": null,
+          "timeOfDay": null,
+          "lighting": null,
+          "viewpoint": null,
+          "perspective": null
+        }
+      },
+      "history": [],
+      "reason": "sublocation-change",
+      "sceneEligible": false,
+      "send": false,
+      "asset": null,
+      "snapshotSHA256": "9cd8ce210f41db0bdf651575c2a00092b7766f8a98ac003b2520951930b21103"
+    },
+    {
+      "action": "learn",
+      "version": "native-partial-scene/1",
+      "access": "authorized",
+      "revision": 3,
+      "current": {
+        "id": "loc_wangqitai",
+        "name": "望气台",
+        "source": "current-authorized-pg-snapshot",
+        "visual": {
+          "people": null,
+          "features": null,
+          "timeOfDay": null,
+          "lighting": null,
+          "viewpoint": null,
+          "perspective": null
+        }
+      },
+      "history": [
+        {
+          "id": "e99100685de024469ce340f08e5fbbf0e85a4d33f96ba099980ab59ad13f984f",
+          "revision": 1,
+          "from": {
+            "id": "loc_luhuadu",
+            "name": "芦花渡"
+          },
+          "to": {
+            "id": "loc_wangqitai",
+            "name": "望气台"
+          },
+          "learnedAt": "2026-11-24T09:42:29.885Z",
+          "learnedRevision": 3,
+          "observedThroughRevision": 3
+        }
+      ],
+      "reason": null,
+      "sceneEligible": false,
+      "send": false,
+      "asset": null,
+      "snapshotSHA256": "9cd8ce210f41db0bdf651575c2a00092b7766f8a98ac003b2520951930b21103"
+    },
+    {
+      "action": "back",
+      "version": "native-partial-scene/1",
+      "access": "authorized",
+      "revision": 4,
+      "current": {
+        "id": "loc_wangqitai",
+        "name": "望气台",
+        "source": "current-authorized-pg-snapshot",
+        "visual": {
+          "people": null,
+          "features": null,
+          "timeOfDay": null,
+          "lighting": null,
+          "viewpoint": null,
+          "perspective": null
+        }
+      },
+      "history": [
+        {
+          "id": "e99100685de024469ce340f08e5fbbf0e85a4d33f96ba099980ab59ad13f984f",
+          "revision": 1,
+          "from": {
+            "id": "loc_luhuadu",
+            "name": "芦花渡"
+          },
+          "to": {
+            "id": "loc_wangqitai",
+            "name": "望气台"
+          },
+          "learnedAt": "2026-11-24T09:42:29.885Z",
+          "learnedRevision": 3,
+          "observedThroughRevision": 3
+        }
+      ],
+      "reason": "sublocation-change",
+      "sceneEligible": false,
+      "send": false,
+      "asset": null,
+      "snapshotSHA256": "c2f2feb481d4387ae2e1c8918100fb03d066466729d3675c767828406dbb1710"
+    },
+    {
+      "action": "observe",
+      "version": "native-partial-scene/1",
+      "access": "authorized",
+      "revision": 5,
+      "current": {
+        "id": "loc_wangqitai",
+        "name": "望气台",
+        "source": "current-authorized-pg-snapshot",
+        "visual": {
+          "people": null,
+          "features": null,
+          "timeOfDay": null,
+          "lighting": null,
+          "viewpoint": null,
+          "perspective": null
+        }
+      },
+      "history": [
+        {
+          "id": "e99100685de024469ce340f08e5fbbf0e85a4d33f96ba099980ab59ad13f984f",
+          "revision": 1,
+          "from": {
+            "id": "loc_luhuadu",
+            "name": "芦花渡"
+          },
+          "to": {
+            "id": "loc_wangqitai",
+            "name": "望气台"
+          },
+          "learnedAt": "2026-11-24T09:42:29.885Z",
+          "learnedRevision": 3,
+          "observedThroughRevision": 3
+        }
+      ],
+      "reason": "other-rule-event",
+      "sceneEligible": false,
+      "send": false,
+      "asset": null,
+      "snapshotSHA256": "c1b35f82df0469249b375f8518bb0716fdec28e8b80a6fc3478051003a6eabd5"
+    },
+    {
+      "action": "bypass",
+      "version": "native-partial-scene/1",
+      "access": "authorized",
+      "revision": 6,
+      "current": {
+        "id": "loc_luhuadu",
+        "name": "芦花渡",
+        "source": "current-authorized-pg-snapshot",
+        "visual": {
+          "people": null,
+          "features": null,
+          "timeOfDay": null,
+          "lighting": null,
+          "viewpoint": null,
+          "perspective": null
+        }
+      },
+      "history": [
+        {
+          "id": "e99100685de024469ce340f08e5fbbf0e85a4d33f96ba099980ab59ad13f984f",
+          "revision": 1,
+          "from": {
+            "id": "loc_luhuadu",
+            "name": "芦花渡"
+          },
+          "to": {
+            "id": "loc_wangqitai",
+            "name": "望气台"
+          },
+          "learnedAt": "2026-11-24T09:42:29.885Z",
+          "learnedRevision": 3,
+          "observedThroughRevision": 3
+        }
+      ],
+      "reason": "OUT_OF_SCOPE_SUPPORTED_EVENT",
+      "sceneEligible": false,
+      "send": false,
+      "asset": null,
+      "snapshotSHA256": "b8972d3b5ef0be1466cb8e6f53de2dce0d14448de1589a4252b78d24addf25a3"
+    },
+    {
+      "action": "late",
+      "version": "native-partial-scene/1",
+      "access": "authorized",
+      "revision": 6,
+      "current": {
+        "id": "loc_luhuadu",
+        "name": "芦花渡",
+        "source": "current-authorized-pg-snapshot",
+        "visual": {
+          "people": null,
+          "features": null,
+          "timeOfDay": null,
+          "lighting": null,
+          "viewpoint": null,
+          "perspective": null
+        }
+      },
+      "history": [
+        {
+          "id": "e99100685de024469ce340f08e5fbbf0e85a4d33f96ba099980ab59ad13f984f",
+          "revision": 1,
+          "from": {
+            "id": "loc_luhuadu",
+            "name": "芦花渡"
+          },
+          "to": {
+            "id": "loc_wangqitai",
+            "name": "望气台"
+          },
+          "learnedAt": "2026-11-24T09:42:29.885Z",
+          "learnedRevision": 3,
+          "observedThroughRevision": 3
+        }
+      ],
+      "reason": null,
+      "sceneEligible": false,
+      "send": false,
+      "asset": null,
+      "snapshotSHA256": "b8972d3b5ef0be1466cb8e6f53de2dce0d14448de1589a4252b78d24addf25a3"
+    },
+    {
+      "action": "revisit",
+      "version": "native-partial-scene/1",
+      "access": "authorized",
+      "revision": 7,
+      "current": {
+        "id": "loc_wangqitai",
+        "name": "望气台",
+        "source": "current-authorized-pg-snapshot",
+        "visual": {
+          "people": null,
+          "features": null,
+          "timeOfDay": null,
+          "lighting": null,
+          "viewpoint": null,
+          "perspective": null
+        }
+      },
+      "history": [
+        {
+          "id": "e99100685de024469ce340f08e5fbbf0e85a4d33f96ba099980ab59ad13f984f",
+          "revision": 1,
+          "from": {
+            "id": "loc_luhuadu",
+            "name": "芦花渡"
+          },
+          "to": {
+            "id": "loc_wangqitai",
+            "name": "望气台"
+          },
+          "learnedAt": "2026-11-24T09:42:29.885Z",
+          "learnedRevision": 3,
+          "observedThroughRevision": 3
+        },
+        {
+          "id": "0ae962dc5eebd5222d08d079b9e9d61f85295781374a28cca92da97936883666",
+          "revision": 7,
+          "from": {
+            "id": "loc_luhuadu",
+            "name": "芦花渡"
+          },
+          "to": {
+            "id": "loc_wangqitai",
+            "name": "望气台"
+          },
+          "learnedAt": "2026-11-24T09:42:30.059Z",
+          "learnedRevision": 7,
+          "observedThroughRevision": 7
+        }
+      ],
+      "reason": null,
+      "sceneEligible": false,
+      "send": false,
+      "asset": null,
+      "snapshotSHA256": "9c89e878c19edfc6e947b6809b6d5094460e7f4100dac329d99e38ab6615a308"
+    },
+    {
+      "action": "closed",
+      "version": "native-partial-scene/1",
+      "access": "hidden",
+      "revision": null,
+      "current": null,
+      "history": [],
+      "sceneEligible": false,
+      "send": false,
+      "asset": null,
+      "snapshotSHA256": null
+    }
+  ]
+}

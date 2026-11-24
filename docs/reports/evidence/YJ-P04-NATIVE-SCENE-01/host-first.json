@@ -1,0 +1,95 @@
+{
+  "command": "python -B packages/native-reader-b2/test/launch.py ../Nine-cloud ../b2-upstream-final <local-PG-bin> native-scene",
+  "probe": {
+    "runId": "36890b22-d705-4ae2-bf6b-e36b39e829f5",
+    "utc": "2026-11-24T09:32:22.487Z",
+    "sourceSha256": "8b7022155c9fa967ee3c84105ee68dead386eedd39e7f558aefc4595676f4f80",
+    "platform": "win32",
+    "osRelease": "10.0.26200",
+    "node": "v26.13.0",
+    "nodePermissionModel": false,
+    "nodeNetPermission": null,
+    "preloadConfigured": false,
+    "target": "127.0.0.1",
+    "portSelection": "OS-assigned",
+    "observations": {
+      "tcpListen": {
+        "status": "PASS"
+      },
+      "tcpConnect": {
+        "status": "PASS",
+        "peerPayloadVerified": true
+      },
+      "httpListen": {
+        "status": "PASS"
+      },
+      "httpGet": {
+        "status": "PASS",
+        "httpStatus": 200,
+        "bodyVerified": true
+      }
+    },
+    "status": "LOOPBACK_PASS"
+  },
+  "captures": [
+    {
+      "revision": 0,
+      "count": 0,
+      "stateSHA256": "d938777a3385e83c2c633f09fd737fcef8437995a635a6e66f9278516da416d4",
+      "capturedAt": "2026-11-24T09:32:41.983Z"
+    },
+    {
+      "revision": 1,
+      "count": 1,
+      "stateSHA256": "795279b6ab8873a3972d82e5fb6ecb63b754d1a2342bb2e026c5a47f075c6fe9",
+      "capturedAt": "2026-11-24T09:32:42.026Z"
+    },
+    {
+      "revision": 2,
+      "count": 2,
+      "stateSHA256": "ebed3b315d2901378e78f784291b4f811bae5670855e431f4314e3cd67269cad",
+      "capturedAt": "2026-11-24T09:32:42.049Z"
+    },
+    {
+      "revision": 3,
+      "count": 3,
+      "stateSHA256": "8e6d2a3fe6c5555a69f4e0c8cd2ca52cf4474b3aff6099519f4c5552d9129197",
+      "capturedAt": "2026-11-24T09:32:42.079Z"
+    },
+    {
+      "revision": 4,
+      "count": 4,
+      "stateSHA256": "e932dec45b5181e65979fca874ac663d06b400e7c588cab5170aadb42fd544ef",
+      "capturedAt": "2026-11-24T09:33:43.100Z"
+    },
+    {
+      "revision": 5,
+      "count": 5,
+      "stateSHA256": "1089b32c4a37ebd662d19cced3d130205462fe3c2e29061a0519387bc163a5e5",
+      "capturedAt": "2026-11-24T09:33:43.132Z"
+    },
+    {
+      "revision": 6,
+      "count": 7,
+      "stateSHA256": "cf8f22f74b0b0ce16c26e618cde9b77a5aad8fc9906dbdcb112a517f06e75415",
+      "capturedAt": "2026-11-24T09:33:43.167Z"
+    },
+    {
+      "revision": 7,
+      "count": 8,
+      "stateSHA256": "5b92e39c5547e0a47e52fad1fdd930a17e7d2fc0ebca63fc973f06528d0d69e1",
+      "capturedAt": "2026-11-24T09:33:43.209Z"
+    }
+  ],
+  "checks": [
+    "R1 current from PG; first history learned at R3 after real reauthentication; duplicate adds zero",
+    "R6 independent snapshot after bypass; old R1 does not rewind it; R7 revisit retains identity",
+    "wrong owner, save, branch, future, request key, forged proof and dream text hidden",
+    "logout and account closure hide current and previously verified history"
+  ],
+  "pgConnections": 2,
+  "cleanup": {
+    "cleanup": "complete",
+    "dedicatedDirectoryRemoved": true
+  }
+}

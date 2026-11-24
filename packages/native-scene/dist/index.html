@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; connect-src 'none'; script-src 'sha256-doSPUjPGth0fcOsmiNGzYAzIfoSYxOM0E4OeMG8qTGE='; style-src 'unsafe-inline'; img-src 'none'; font-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>九霄 · 映界｜原生场景离线试玩</title><style>.game-frame .game-workspace.card-session:has(.yj-panel) {
+  grid-template-columns:minmax(0,1.13fr) minmax(0,1fr); grid-template-rows:minmax(0,1fr); gap:18px;
+}
+.yj-panel { align-self:start; min-width:0; padding:clamp(12px,2vw,24px); border:1px solid #586459;
+  border-radius:12px; background:#182420; color:#f1e9d8; box-shadow:0 10px 28px #07120e26; }
+.yj-panel-head,.yj-figure figcaption { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.yj-panel-head { margin-bottom:16px; }
+.yj-mode,.yj-figure figcaption { font:500 12px/1.45 system-ui,sans-serif; color:#c7ccb9; }
+.yj-panel .yj-panel-head h2 { margin:4px 0 0; color:#f2e8d5; font:600 clamp(21px,2.5vw,34px)/1.2 "Songti SC","SimSun",serif; }
+.yj-panel button.yj-toggle { display:inline-flex; gap:8px; align-items:center; min-height:44px; padding:0 8px;
+  border:0; background:transparent; color:#f0ecdf; font:500 14px/1.3 system-ui,sans-serif; }
+.yj-toggle:focus-visible { outline:2px solid #f2ce82; outline-offset:2px; }
+.yj-track { display:inline-flex; width:34px; height:20px; align-items:center; border-radius:20px; background:#677068; padding:3px; box-sizing:border-box; }
+.yj-track::after { content:""; background:white; border-radius:50%; width:14px; height:14px; }
+.yj-toggle[aria-checked=true] .yj-track { background:#a7be93; justify-content:flex-end; }
+.yj-toggle[aria-checked=true] .yj-track::after { background:#203b30; }
+.yj-source {display:flex;align-items:center;gap:8px;margin-bottom:8px;font-size:13px;white-space:nowrap;}
+.yj-source select {width:auto;flex:1;min-width:0;max-width:100%;font:inherit;}
+.yj-history {flex:none; margin-top:8px;}
+.yj-history button {min-height:36px; max-width:100%; white-space:normal;}
+.yj-history-body {max-height:38dvh;overflow:auto;overscroll-behavior:contain;padding:4px 8px;overflow-wrap:anywhere;}
+.yj-history-body ol {list-style:none;margin:5px 0;padding:0;}
+.yj-history-body li button {text-align:left;width:100%;}
+.yj-history-body h3,.yj-history-body p {margin:6px 0;}
+.yj-history-body label,.yj-history-body img {display:block;max-width:100%;}
+.yj-history-body input,.yj-history-body select {box-sizing:border-box;width:100%;}
+.yj-history-body button:focus-visible {outline:2px solid #f2ce82;outline-offset:-2px;}
+.yj-figure { margin:0; }
+.yj-figure img,.yj-empty { box-sizing:border-box; display:block; width:100%; aspect-ratio:1672/941;
+  border-radius:5px; background:#101a17; object-fit:contain; }
+.yj-empty { display:grid; place-items:center; text-align:center; padding:12px; color:#d8dccf; }
+.yj-figure figcaption { padding-top:10px; }
+@media(min-width:721px) {
+  .yj-panel {align-self:stretch;display:flex;flex-direction:column;min-height:0;overflow:auto;}
+  .yj-panel-head,.yj-source {flex:none;}
+  .yj-figure {flex:1;min-height:100px;display:grid;grid-template-rows:minmax(0,1fr) auto;}
+  .yj-figure img,.yj-empty {height:100%;min-height:0;}
+}
+@media(max-width:720px) {
+  .game-frame .game-workspace.card-session:has(.yj-panel) { grid-template-columns:minmax(0,1fr); grid-template-rows:auto minmax(140px,1fr); gap:6px; overflow:auto; }
+  .yj-panel {padding:9px 12px;} .yj-panel-head {margin-bottom:6px;}
+  .yj-panel .yj-panel-head h2 {font-size:20px; margin:0;} .yj-figure figcaption {padding-top:4px;}
+  .yj-figure img,.yj-empty {max-height:22dvh; width:100%;} .yj-mode,.yj-figure figcaption {font-size:11px;}
+}
+
+:root {
+    color-scheme:light;
+    --ink:#243632;
+    --muted:#536660;
+    --line:#d7d6c9;
+    --cream:#f5f3e9;
+    --paper:#fffdf5;
+    --red:#9c4b37;
+    --serif:"Songti SC","STSong","SimSun",serif;
+    font:16px/1.6 "Microsoft YaHei",system-ui,sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+}
+* {
+    box-sizing:border-box;
+}
+body {
+    margin:0;
+}
+button,summary {
+    font:inherit;
+    cursor:pointer;
+}
+button:focus-visible,summary:focus-visible {
+    outline:3px solid #be732b;
+    outline-offset:3px;
+}
+[hidden] {
+    display:none!important;
+}
+.mast {
+    border-bottom:1px solid var(--line);
+    background:#eeeee2;
+}
+.mast-inner,main {
+    width:min(1120px,92%);
+    margin:auto;
+}
+.mast-inner,.brand,.intro,.eyeline,.section-head,.controls,.plate-foot,footer {
+    display:flex;
+    align-items:center;
+}
+.mast-inner,.intro,.eyeline,.section-head,.plate-foot,footer {
+    justify-content:space-between;
+}
+.mast-inner {
+    height:67px;
+}
+.brand {
+    gap:12px;
+}
+.brand strong {
+    font:700 22px var(--serif);
+    letter-spacing:.1em;
+}
+.brand i {
+    color:var(--red);
+}
+.seal {
+    width:31px;
+    height:33px;
+    background:var(--red);
+    color:#fff8e5;
+    display:grid;
+    place-items:center;
+    font:700 21px var(--serif);
+    border-radius:4px;
+}
+.offline {
+    font-size:13px;
+    letter-spacing:.1em;
+}
+.offline b,.dot {
+    display:inline-block;
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#64816d;
+}
+.intro {
+    margin:32px 0 22px;
+    align-items:end;
+}
+.kicker,.caption,.eyeline,.section-head span,footer,.source-line {
+    font-size:13px;
+    color:var(--muted);
+}
+.kicker {
+    margin:0 0 3px;
+    letter-spacing:.12em;
+}
+.kicker span,.caption span {
+    margin:0 7px;
+    color:#a39982;
+}
+h1,h2,p {
+    margin:0;
+}
+h1 {
+    font:600 clamp(31px,4vw,47px)/1.4 var(--serif);
+    letter-spacing:.07em;
+}
+.caption {
+    padding-bottom:7px;
+}
+.spread {
+    display:grid;
+    grid-template-columns:1fr 1.13fr;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:12px;
+    overflow:hidden;
+}
+.reading {
+    padding:26px 34px;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+}
+.eyeline {
+    letter-spacing:.09em;
+}
+.eyeline span:last-child {
+    font:14px monospace;
+}
+.reading h2 {
+    font:600 clamp(38px,5vw,64px)/1.25 var(--serif);
+    margin:13px 0 7px;
+}
+.action {
+    font-weight:650;
+    font-size:17px;
+}
+.note {
+    font-size:14px;
+    color:var(--muted);
+    margin:6px 0 14px;
+    max-width:42ch;
+}
+.source-line {
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-top:auto;
+}
+.controls {
+    gap:10px;
+    margin-top:18px;
+    flex-wrap:wrap;
+}
+button {
+    border-radius:5px;
+    border:1px solid var(--line);
+    padding:8px 13px;
+    background:transparent;
+    color:var(--ink);
+    font-size:14px;
+    min-height:42px;
+}
+button.primary {
+    background:#2b4941;
+    color:#fffdf0;
+    border-color:#2b4941;
+}
+.plain {
+    border-color:transparent;
+    text-decoration:underline;
+    text-underline-offset:4px;
+}
+.controls button:disabled {
+    opacity:.4;
+    cursor:default;
+}
+.yj-panel.plate-panel {
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+    align-self:stretch;
+    padding:17px 22px;
+    background:#203f3b;
+    color:#f4e6c9;
+    display:flex;
+    flex-direction:column;
+}
+.yj-panel-head {
+    font-size:14px;
+    margin-bottom:10px;
+}
+.plate,.no-plate {
+    position:relative;
+    isolation:isolate;
+    min-height:180px;
+    flex:1;
+    border:1px solid #789687;
+    overflow:hidden;
+    color:#c0d0ad;
+    background:linear-gradient(105deg,#27413b,#436b5c);
+}
+.plate[data-id=loc_wangqitai] {
+    background:linear-gradient(105deg,#3d4044,#5a637b);
+    color:#e1c99d;
+    border-color:#a7977d;
+}
+.engraving {
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+.sky,.plate[data-id=loc_wangqitai] .water {
+    display:none;
+}
+.plate[data-id=loc_wangqitai] .sky {
+    display:block;
+}
+.plate-ink {
+    position:absolute;
+    inset:15px 24px;
+    display:flex;
+    align-items:start;
+    justify-content:center;
+    flex-direction:column;
+    color:#fff3d5;
+}
+.plate-ink strong {
+    font:500 69px/1.22 var(--serif);
+}
+.plate-ink small,.plate-ink span {
+    letter-spacing:.22em;
+    font-size:12px;
+}
+.plate-foot {
+    margin-top:13px;
+    font-size:13px;
+}
+.plate-foot span {
+    color:#d2d8c6;
+}
+.no-plate {
+    display:grid;
+    place-items:center;
+    text-align:center;
+    background:#2c4740;
+}
+.timeline,.lower {
+    margin-top:20px;
+}
+.timeline {
+    padding:18px 22px 20px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:9px;
+}
+.section-head h2,summary {
+    font:600 19px var(--serif);
+}
+.steps {
+    display:flex;
+    margin-top:15px;
+    gap:5px;
+}
+.step {
+    flex:1;
+    padding:5px 1px;
+    min-width:0;
+    border:0;
+    border-top:3px solid var(--line);
+    border-radius:0;
+    color:var(--muted);
+    font:14px/1.4 monospace;
+}
+.step.visited {
+    border-color:#738e7b;
+}
+.step[aria-current=step] {
+    background:#e9ece0;
+    border-color:var(--red);
+    color:#792e1c;
+    font-weight:bold;
+}
+.lower {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+.lower details {
+    min-width:0;
+    padding:15px 19px;
+    border-top:1px solid var(--line);
+}
+summary {
+    line-height:1.65;
+}
+summary span {
+    font:13px system-ui;
+    color:var(--muted);
+}
+#entries,#fields {
+    font-size:14px;
+    color:var(--muted);
+}
+#entries p,#fields p {
+    margin:9px 0;
+}
+.event {
+    border-left:2px solid var(--red);
+    padding-left:10px;
+}
+footer {
+    margin:25px 0 16px;
+    border-top:1px solid var(--line);
+    padding-top:10px;
+}
+@media(max-width:680px) {
+    .mast-inner {
+        height:53px;
+    }
+    .intro {
+        margin:20px 0 13px;
+        align-items:start;
+        flex-direction:column;
+    }
+    .caption {
+        padding:0;
+    }
+    .spread,.lower {
+        grid-template-columns:minmax(0,1fr);
+    }
+    .reading {
+        padding:17px 19px;
+    }
+    .reading h2 {
+        margin:6px 0;
+    }
+    .controls {
+        margin-top:10px;
+    }
+    .yj-panel.plate-panel {
+        padding:10px 15px;
+    }
+    .plate,.no-plate {
+        min-height:142px;
+    }
+    .timeline {
+        padding:12px;
+    }
+    .steps {
+        flex-wrap:wrap;
+    }
+    .step {
+        flex:1 0 13%;
+    }
+    .lower {
+        gap:2px;
+    }
+    .timeline,.lower {
+        margin-top:12px;
+    }
+    .note {
+        margin-bottom:8px;
+    }
+    .plate-ink strong {
+        font-size:48px;
+    }
+}
+
+.checksum{font:12px/1.6 monospace;overflow-wrap:anywhere}</style></head>
+<body><header class="mast"><div class="mast-inner"><div class="brand"><span class="seal" aria-hidden="true">映</span><strong>九霄 <i>·</i> 映界</strong></div><span class="offline"><b></b> 离线试玩</span></div></header>
+<main><div class="intro"><div><p class="kicker">九霄序章 <span>/</span> 场景回放</p><h1>原生场景手记</h1></div><p class="caption">合成测试记录 <span>·</span> 无真实生图</p></div>
+<section class="spread" aria-label="当前回合">
+<div class="reading"><div class="eyeline"><span>当前地点</span><span id="revision"></span></div>
+<h2 id="place" aria-live="polite"></h2><p id="action" class="action"></p><p id="note" class="note"></p>
+<div class="source-line"><span class="dot"></span><span id="source"></span></div>
+<nav class="controls" aria-label="回放控制"><button id="prev" aria-label="上一回合">← 上一回合</button><button id="next" class="primary">下一回合 →</button><button id="reset" class="plain">重置</button></nav>
+</div><section class="yj-panel plate-panel"><div class="yj-panel-head"><span>地点示意</span><button class="yj-toggle" id="toggle" role="switch" aria-checked="true">预览 <span class="yj-track"></span></button></div>
+<div id="plate" class="plate"><svg class="engraving" viewBox="0 0 540 205" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+<defs><pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0V22" fill="none" stroke="currentColor" stroke-opacity=".10"/></pattern>
+<g id="ripple"><ellipse cx="412" cy="104" rx="46" ry="30"/><ellipse cx="412" cy="104" rx="62" ry="42"/><ellipse cx="412" cy="104" rx="85" ry="55"/><ellipse cx="412" cy="104" rx="112" ry="67"/><ellipse cx="412" cy="104" rx="142" ry="81"/><ellipse cx="412" cy="104" rx="180" ry="100"/><ellipse cx="412" cy="104" rx="225" ry="124"/><ellipse cx="412" cy="104" rx="277" ry="148"/></g>
+<g id="radial"><path d="M260 101H539M403 0V205M285 -9L510 216M290 215L517 -12" stroke-dasharray="3 6"/><circle cx="403" cy="101" r="52"/><circle cx="403" cy="101" r="76"/><circle cx="403" cy="101" r="105"/><path d="m403 18 83 83-83 83-83-83z M403 51l50 50-50 50-50-50z"/></g></defs>
+<rect width="540" height="205" fill="url(#grid)"/><g fill="none" stroke="currentColor" stroke-width="1.2"><use class="water" href="#ripple"/><use class="sky" href="#radial"/></g></svg>
+<div class="plate-ink"><small>地点印记</small><strong id="glyph"></strong><span id="plate-name"></span></div></div>
+<div id="no-plate" class="no-plate" hidden></div><div class="plate-foot"><strong>画面待确认</strong><span>尚无已审场景图</span></div></section></section>
+<section class="timeline"><div class="section-head"><h2>回放时间线</h2><span id="counter"></span></div><div id="steps" class="steps" aria-label="选择回放节点"></div></section>
+<section class="lower"><details id="history" open><summary>已知行程 <span id="history-count"></span></summary><div id="entries"></div></details>
+<details id="evidence"><summary>查看证据与未知字段</summary><div id="fields"></div></details></section>
+<footer>九霄 · 映界 <span>原生场景离线试玩</span></footer></main>
+<script id="trace" type="application/json">{"version":"native-scene-demo/1","source":"isolated-authenticated-PG","frames":[{"action":"create","version":"native-partial-scene/1","access":"authorized","revision":0,"current":{"id":"loc_luhuadu","name":"芦花渡","source":"current-authorized-pg-snapshot","visual":{"people":null,"features":null,"timeOfDay":null,"lighting":null,"viewpoint":null,"perspective":null}},"history":[],"reason":null,"sceneEligible":false,"send":false,"asset":null,"snapshotSHA256":"879808c8503f1b2d37958b2e70cae009d4a6bcc043eaa50d897bfba80d6f798d"},{"action":"move","version":"native-partial-scene/1","access":"authorized","revision":1,"current":{"id":"loc_wangqitai","name":"望气台","source":"current-authorized-pg-snapshot","visual":{"people":null,"features":null,"timeOfDay":null,"lighting":null,"viewpoint":null,"perspective":null}},"history":[],"reason":null,"sceneEligible":false,"send":false,"asset":null,"snapshotSHA256":"c35de4e480395c7ebb918d380e60141e4b324de136181e0783210689af4f8fad"},{"action":"blocked","version":"native-partial-scene/1","access":"authorized","revision":2,"current":{"id":"loc_wangqitai","name":"望气台","source":"current-authorized-pg-snapshot","visual":{"people":null,"features":null,"timeOfDay":null,"lighting":null,"viewpoint":null,"perspective":null}},"history":[],"reason":"blocked","sceneEligible":false,"send":false,"asset":null,"snapshotSHA256":"440827cd5b8ef3acf27937b29e155c88bceb2636b41edb15d6ed9af2ef42145b"},{"action":"sub","version":"native-partial-scene/1","access":"authorized","revision":3,"current":{"id":"loc_wangqitai","name":"望气台","source":"current-authorized-pg-snapshot","visual":{"people":null,"features":null,"timeOfDay":null,"lighting":null,"viewpoint":null,"perspective":null}},"history":[],"reason":"sublocation-change","sceneEligible":false,"send":false,"asset":null,"snapshotSHA256":"9cd8ce210f41db0bdf651575c2a00092b7766f8a98ac003b2520951930b21103"},{"action":"learn","version":"native-partial-scene/1","access":"authorized","revision":3,"current":{"id":"loc_wangqitai","name":"望气台","source":"current-authorized-pg-snapshot","visual":{"people":null,"features":null,"timeOfDay":null,"lighting":null,"viewpoint":null,"perspective":null}},"history":[{"id":"e99100685de024469ce340f08e5fbbf0e85a4d33f96ba099980ab59ad13f984f","revision":1,"from":{"id":"loc_luhuadu","name":"芦花渡"},"to":{"id":"loc_wangqitai","name":"望气台"},"learnedAt":"2026-11-24T09:42:29.885Z","learnedRevision":3,"observedThroughRevision":3}],"reason":null,"sceneEligible":false,"send":false,"asset":null,"snapshotSHA256":"9cd8ce210f41db0bdf651575c2a00092b7766f8a98ac003b2520951930b21103"},{"action":"back","version":"native-partial-scene/1","access":"authorized","revision":4,"current":{"id":"loc_wangqitai","name":"望气台","source":"current-authorized-pg-snapshot","visual":{"people":null,"features":null,"timeOfDay":null,"lighting":null,"viewpoint":null,"perspective":null}},"history":[{"id":"e99100685de024469ce340f08e5fbbf0e85a4d33f96ba099980ab59ad13f984f","revision":1,"from":{"id":"loc_luhuadu","name":"芦花渡"},"to":{"id":"loc_wangqitai","name":"望气台"},"learnedAt":"2026-11-24T09:42:29.885Z","learnedRevision":3,"observedThroughRevision":3}],"reason":"sublocation-change","sceneEligible":false,"send":false,"asset":null,"snapshotSHA256":"c2f2feb481d4387ae2e1c8918100fb03d066466729d3675c767828406dbb1710"},{"action":"observe","version":"native-partial-scene/1","access":"authorized","revision":5,"current":{"id":"loc_wangqitai","name":"望气台","source":"current-authorized-pg-snapshot","visual":{"people":null,"features":null,"timeOfDay":null,"lighting":null,"viewpoint":null,"perspective":null}},"history":[{"id":"e99100685de024469ce340f08e5fbbf0e85a4d33f96ba099980ab59ad13f984f","revision":1,"from":{"id":"loc_luhuadu","name":"芦花渡"},"to":{"id":"loc_wangqitai","name":"望气台"},"learnedAt":"2026-11-24T09:42:29.885Z","learnedRevision":3,"observedThroughRevision":3}],"reason":"other-rule-event","sceneEligible":false,"send":false,"asset":null,"snapshotSHA256":"c1b35f82df0469249b375f8518bb0716fdec28e8b80a6fc3478051003a6eabd5"},{"action":"bypass","version":"native-partial-scene/1","access":"authorized","revision":6,"current":{"id":"loc_luhuadu","name":"芦花渡","source":"current-authorized-pg-snapshot","visual":{"people":null,"features":null,"timeOfDay":null,"lighting":null,"viewpoint":null,"perspective":null}},"history":[{"id":"e99100685de024469ce340f08e5fbbf0e85a4d33f96ba099980ab59ad13f984f","revision":1,"from":{"id":"loc_luhuadu","name":"芦花渡"},"to":{"id":"loc_wangqitai","name":"望气台"},"learnedAt":"2026-11-24T09:42:29.885Z","learnedRevision":3,"observedThroughRevision":3}],"reason":"OUT_OF_SCOPE_SUPPORTED_EVENT","sceneEligible":false,"send":false,"asset":null,"snapshotSHA256":"b8972d3b5ef0be1466cb8e6f53de2dce0d14448de1589a4252b78d24addf25a3"},{"action":"late","version":"native-partial-scene/1","access":"authorized","revision":6,"current":{"id":"loc_luhuadu","name":"芦花渡","source":"current-authorized-pg-snapshot","visual":{"people":null,"features":null,"timeOfDay":null,"lighting":null,"viewpoint":null,"perspective":null}},"history":[{"id":"e99100685de024469ce340f08e5fbbf0e85a4d33f96ba099980ab59ad13f984f","revision":1,"from":{"id":"loc_luhuadu","name":"芦花渡"},"to":{"id":"loc_wangqitai","name":"望气台"},"learnedAt":"2026-11-24T09:42:29.885Z","learnedRevision":3,"observedThroughRevision":3}],"reason":null,"sceneEligible":false,"send":false,"asset":null,"snapshotSHA256":"b8972d3b5ef0be1466cb8e6f53de2dce0d14448de1589a4252b78d24addf25a3"},{"action":"revisit","version":"native-partial-scene/1","access":"authorized","revision":7,"current":{"id":"loc_wangqitai","name":"望气台","source":"current-authorized-pg-snapshot","visual":{"people":null,"features":null,"timeOfDay":null,"lighting":null,"viewpoint":null,"perspective":null}},"history":[{"id":"e99100685de024469ce340f08e5fbbf0e85a4d33f96ba099980ab59ad13f984f","revision":1,"from":{"id":"loc_luhuadu","name":"芦花渡"},"to":{"id":"loc_wangqitai","name":"望气台"},"learnedAt":"2026-11-24T09:42:29.885Z","learnedRevision":3,"observedThroughRevision":3},{"id":"0ae962dc5eebd5222d08d079b9e9d61f85295781374a28cca92da97936883666","revision":7,"from":{"id":"loc_luhuadu","name":"芦花渡"},"to":{"id":"loc_wangqitai","name":"望气台"},"learnedAt":"2026-11-24T09:42:30.059Z","learnedRevision":7,"observedThroughRevision":7}],"reason":null,"sceneEligible":false,"send":false,"asset":null,"snapshotSHA256":"9c89e878c19edfc6e947b6809b6d5094460e7f4100dac329d99e38ab6615a308"},{"action":"closed","version":"native-partial-scene/1","access":"hidden","revision":null,"current":null,"history":[],"sceneEligible":false,"send":false,"asset":null,"snapshotSHA256":null}]}</script><script>"use strict";
+const frames=JSON.parse(document.querySelector("#trace").textContent).frames;
+const el=id=>document.getElementById(id);
+const copy=(id,text)=>{el(id).textContent=text;};
+const notes={
+    create:["建立序章存档","首次读取存档时，已能确认当前地点。"],
+    move:["从芦花渡前往望气台","当前快照已经更新。这一刻尚未单独核验 R1 的历史行程。"],
+    blocked:["返回芦花渡受阻","本次行动没有改变顶层地点，继续使用望气台的地点印记。"],
+    sub:["移至同地点的子区域","世界地点仍为望气台。具体视角尚未确认。"],
+    learn:["重新登录，查证早先的移动","在 R3 取得 R1 的行程证据。此前的回放节点仍保留当时所知。"],
+    back:["从子区域返回","活动范围改变，顶层地点仍为望气台。"],
+    observe:["完成一次调查","这一回合没有新增能用于画面的可见事实。"],
+    bypass:["从望气台绕行返回芦花渡","当前地点由新的存档快照确认。绕行本身没有列入已核验的常规到达记录。"],
+    late:["在芦花渡重读 R1","旧记录的目的地是望气台。当前地点仍由 R6 快照决定。"],
+    revisit:["从芦花渡再次到达望气台","复访沿用同一地点身份。这次移动在已知行程中另记一笔。"],
+    closed:["测试账号已关闭","读取权限已失效，当前地点和先前的行程证据均已隐藏。"]
+};
+let position=0, preview=true;
+function paragraph(parent,text,cls) {
+    const p=document.createElement("p");
+    p.textContent=text;
+    if(cls)p.className=cls;
+    parent.append(p);
+}
+const steps=frames.map((_,i)=>{
+    const button=document.createElement("button");
+    button.className="step";button.textContent=String(i+1).padStart(2,"0");
+    button.setAttribute("aria-label","跳到回放节点 "+(i+1));
+    button.onclick=()=>go(i);
+    el("steps").append(button);
+    return button;
+});
+function go(i) {position=Math.min(frames.length-1,Math.max(0,i));render();}
+function render(){
+    const f=frames[position],loc=f.current;
+    copy("place",loc?.name??"地点待确认");
+    copy("revision",f.revision===null?"权限已失效":"存档 R"+f.revision);
+    const [action,note]=notes[f.action];
+    copy("action",action);copy("note",note);
+    copy("source",loc?"受权存档快照 · R"+f.revision:"当前无可展示的受权快照");
+    el("plate").hidden=!preview||!loc;
+    el("plate").dataset.id=loc?.id??"";
+    copy("glyph",loc?.id==="loc_luhuadu"?"渡":loc?.id==="loc_wangqitai"?"台":"");
+    copy("plate-name",loc?.name??"");
+    el("no-plate").hidden=preview&&!!loc;
+    copy("no-plate",!loc?"位置证据已隐藏":"地点预览已关闭");
+    el("toggle").setAttribute("aria-checked",String(preview));
+    el("prev").disabled=position===0;el("next").disabled=position===frames.length-1;
+    copy("counter","节点 "+(position+1)+" / "+frames.length);
+    steps.forEach((button,i)=>{
+        button.classList.toggle("visited",i<position);
+        if(i===position)button.setAttribute("aria-current","step");else button.removeAttribute("aria-current");
+    });
+    el("entries").replaceChildren();
+    copy("history-count",f.history.length+" 笔");
+    if(!f.history.length)paragraph(el("entries"),loc?"此时尚无已核验的历史到达记录。":"行程已隐藏。");
+    for(const h of f.history){
+        paragraph(el("entries"),"历史 R"+h.revision+"　"+h.from.name+" → "+h.to.name+"　·　R"+h.learnedRevision+" 获证","event");
+    }
+    el("fields").replaceChildren();
+    if(loc){
+        paragraph(el("fields"),"当前位置来自本回放节点的 R"+f.revision+" 已提交快照。完整状态摘要见下。");
+        paragraph(el("fields"),f.snapshotSHA256,"checksum");
+        for(const h of f.history)paragraph(el("fields"),"历史 R"+h.revision+" · 核验截面 R"+h.observedThroughRevision+" · 首次获证 "+new Date(h.learnedAt).toISOString().replace("T"," ").replace("Z"," UTC"));
+        paragraph(el("fields"),"尚未确认：人物名单、场景结构、时间、光照、观察位置与朝向。地点印记只用于区分地点。");
+    }else paragraph(el("fields"),"此节点没有可披露的位置或视觉证据。");
+}
+el("next").onclick=()=>go(position+1);el("prev").onclick=()=>go(position-1);
+el("toggle").onclick=()=>{preview=!preview;render();};
+el("reset").onclick=()=>{preview=true;el("history").open=true;el("evidence").open=false;go(0);};
+document.addEventListener("keydown",event=>{
+    if(event.altKey||event.ctrlKey||event.metaKey)return;
+    if(event.key==="ArrowRight"||event.key==="ArrowLeft"){
+        event.preventDefault();go(position+(event.key==="ArrowRight"?1:-1));
+    }
+});
+render();
+</script></body></html>

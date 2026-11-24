@@ -11,7 +11,10 @@ import tempfile
 PIN = "f1fe6ea561c5ef4d1ec670b7a406625ce5df774c"
 root = Path(__file__).resolve().parents[3]
 def main():
-    upstream, runtime, pg_bin = map(lambda arg: Path(arg).resolve(), sys.argv[1:])
+    upstream, runtime, pg_bin = map(lambda arg: Path(arg).resolve(), sys.argv[1:4])
+    mode = sys.argv[4:]
+    if mode not in ([], ["native-scene"]):
+        raise ValueError("unknown B2 test mode")
     env = {k:v for k,v in os.environ.items() if k.upper() in {
         "PATH","SYSTEMROOT","WINDIR","COMSPEC","PATHEXT","TEMP","TMP","LANG","LOCALAPPDATA"}}
     env["NODE_ENV"] = "test"
@@ -46,7 +49,7 @@ def main():
             pw.unlink(missing_ok=True)
         tool([ctl,"-D",str(data),"-l",str(folder/"pg.log"),"-o",f"-h 127.0.0.1 -p {port}","-w","start"])
         started = True
-        result = subprocess.run(["node","packages/native-reader-b2/test/cluster-run.mjs",str(upstream),str(runtime)],
+        result = subprocess.run(["node","packages/native-reader-b2/test/cluster-run.mjs",str(upstream),str(runtime),*mode],
                                 cwd=root,env=env,input=json.dumps(dict(port=port,password=own,dataDirectory=str(data))).encode())
         return result.returncode
     finally:

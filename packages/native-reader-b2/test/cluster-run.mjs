@@ -62,16 +62,18 @@ async function run() {
     let appConnections=0;
     pool.on("connect",()=>{appConnections++;});
     try {
-        const report = await runHistoricalPositive(core,pool,"postgresql://127.0.0.1:"+port+"/"+name);
+        const suite = process.argv[4] === "native-scene"
+            ? (await import("../../native-scene/test/export.mjs")).runNativeScene : runHistoricalPositive;
+        const report = await suite(core,pool,"postgresql://127.0.0.1:"+port+"/"+name);
         console.log(JSON.stringify({...report,appConnections}));
-        if (!report.matrixComplete) process.exitCode=2;
+        if (suite === runHistoricalPositive && !report.matrixComplete) process.exitCode=2;
     } finally { await pool.end(); }
 }
 try { await run(); } catch(error) {
-    const frame=error.stack?.split("\n").find(line=>line.includes("/real-history.mjs:") || line.includes("/pg-boundary.mjs:"));
+    const frame=error.stack?.split("\n").find(line=>/\/(real-history|pg-boundary|export|host)\.mjs:/.test(line));
     const deniedRelation=/^permission denied for table ([a-z_]+)$/.exec(error.message)?.[1];
     console.error(JSON.stringify({status:"LOCAL_CHAIN_FAILED",errorClass:error.name,
         code:/^[A-Z0-9_]+$/.test(error.code)?error.code:null,deniedRelation,
-        testFrame:frame?.match(/(?:real-history|pg-boundary)\.mjs:\d+:\d+/)?.[0]}));
+        testFrame:frame?.match(/(?:real-history|pg-boundary|export|host)\.mjs:\d+:\d+/)?.[0]}));
     process.exitCode=1;
 }

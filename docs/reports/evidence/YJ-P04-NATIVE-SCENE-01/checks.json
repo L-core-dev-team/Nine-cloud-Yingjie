@@ -1,0 +1,350 @@
+{
+  "status": "NATIVE_SCENE_PREVIEW_PARTIAL",
+  "commands": [
+    {
+      "command": "node --permission --allow-fs-read=* packages/native-scene/test/offline.mjs",
+      "exit": 0,
+      "stdout": {
+        "suite": "offline-dom-and-boundaries",
+        "frames": 11,
+        "forwardAndReverse": true,
+        "isolatedKeyboardAndReset": true,
+        "cspScriptHash": true,
+        "frozenReceipts": 12,
+        "imageGate": "LIVE_BLOCKED_COST_BOUND",
+        "networkAllowed": false,
+        "browser": false
+      }
+    },
+    {
+      "command": "node --permission --allow-fs-read=* packages/native-reader-b2/test/verifier.mjs ../reader-b2-rules",
+      "exit": 0,
+      "stdout": {
+        "suite": "pure-verifier-only",
+        "checks": [
+          {
+            "turn": 1,
+            "expected": "world-location-change",
+            "passed": true
+          },
+          {
+            "turn": 2,
+            "expected": "sublocation-change",
+            "passed": true
+          },
+          {
+            "turn": 5,
+            "expected": "OUT_OF_SCOPE_SUPPORTED_EVENT",
+            "passed": true
+          },
+          {
+            "turn": 7,
+            "expected": "world-location-change",
+            "passed": true
+          },
+          {
+            "fault": "latest as R0",
+            "passed": true
+          },
+          {
+            "fault": "missing previous",
+            "passed": true
+          },
+          {
+            "fault": "missing after",
+            "passed": true
+          },
+          {
+            "fault": "removed tail",
+            "passed": true
+          },
+          {
+            "fault": "missing interior",
+            "passed": true
+          },
+          {
+            "fault": "swapped events",
+            "passed": true
+          },
+          {
+            "fault": "duplicate",
+            "passed": true
+          },
+          {
+            "fault": "bad chain",
+            "passed": true
+          },
+          {
+            "fault": "bad endpoint",
+            "passed": true
+          },
+          {
+            "fault": "receipt mismatch",
+            "passed": true
+          },
+          {
+            "fault": "wrong expected revision",
+            "passed": true
+          },
+          {
+            "fault": "wrong key",
+            "passed": true
+          },
+          {
+            "fault": "wrong branch",
+            "passed": true
+          },
+          {
+            "fault": "late state conflict",
+            "passed": true
+          },
+          {
+            "fault": "wrong scope",
+            "passed": true
+          },
+          {
+            "fault": "wrong rule version",
+            "passed": true
+          },
+          {
+            "fault": "DB timestamp not losslessly representable",
+            "passed": true
+          }
+        ],
+        "sessions": 0,
+        "postgres": false
+      }
+    },
+    {
+      "command": "node --permission --allow-fs-read=* packages/first-play/test/s2-measure.mjs",
+      "exit": 0,
+      "stdout": {
+        "count": 100,
+        "groups": {
+          "dev": {
+            "literalCorrectAccept": 55,
+            "literalCorrectAbstain": 16,
+            "literalWrongAccept": 0,
+            "literalUnnecessaryAbstain": 0,
+            "correctEligible": 33,
+            "correctReview": 8,
+            "correctConflict": 8,
+            "correctNotReady": 22,
+            "dangerousAllow": 0,
+            "unnecessaryBlock": 0,
+            "wrongVerdictOrReason": 0
+          },
+          "held": {
+            "literalCorrectAccept": 21,
+            "literalCorrectAbstain": 8,
+            "literalWrongAccept": 0,
+            "literalUnnecessaryAbstain": 0,
+            "correctEligible": 11,
+            "correctReview": 4,
+            "correctConflict": 2,
+            "correctNotReady": 12,
+            "dangerousAllow": 0,
+            "unnecessaryBlock": 0,
+            "wrongVerdictOrReason": 0
+          }
+        },
+        "errors": [],
+        "hash": "ee1575bfb816524503507ec5284bcdc48e7a29f4138120975efe3428f2d18a8d"
+      }
+    },
+    {
+      "command": "node --permission --allow-fs-read=* packages/offline-play-preview/check.mjs",
+      "exit": 0,
+      "stdout": {
+        "method": "built HTML + classic script / Node DOM harness",
+        "networkPermission": false,
+        "htmlSha256": "bf62b94bb5538a11dc293c70dc6fff0452cbc6bfb38509d773fb0b32d9776fb8",
+        "fixtureSha256": "119cf3c203e1bf3a129aab852a874c7fcb071a54e6272b09ac3063ab7e5c2d40",
+        "sourceSha": "65ccd55cf5ebef6922a08eb48e9e8330799251b5b763a58b0a3fbc36f263a3fb",
+        "archiveOriginals": 3,
+        "turns": [
+          {
+            "revision": 1,
+            "state": "accepted",
+            "display": true,
+            "scene": "amber-tavern"
+          },
+          {
+            "revision": 2,
+            "state": "reuse",
+            "display": true,
+            "scene": "amber-tavern"
+          },
+          {
+            "revision": 3,
+            "state": "unknown",
+            "display": false,
+            "scene": null
+          },
+          {
+            "revision": 4,
+            "state": "unscheduled",
+            "display": false,
+            "scene": "reed"
+          },
+          {
+            "revision": 5,
+            "state": "hidden",
+            "display": false,
+            "scene": "reed"
+          },
+          {
+            "revision": 6,
+            "state": "hidden",
+            "display": false,
+            "scene": "reed"
+          },
+          {
+            "revision": 7,
+            "state": "reuse",
+            "display": true,
+            "scene": "amber-tavern"
+          },
+          {
+            "revision": 8,
+            "state": "unknown",
+            "display": false,
+            "scene": null
+          },
+          {
+            "revision": 9,
+            "state": "unknown",
+            "display": false,
+            "scene": null
+          },
+          {
+            "revision": 10,
+            "state": "reuse",
+            "display": true,
+            "scene": "amber-tavern"
+          },
+          {
+            "revision": 11,
+            "state": "unscheduled",
+            "display": false,
+            "scene": "amber-tavern"
+          },
+          {
+            "revision": 12,
+            "state": "waiting",
+            "display": false,
+            "scene": "amber-tavern"
+          },
+          {
+            "revision": 13,
+            "state": "unknown",
+            "display": false,
+            "scene": null
+          },
+          {
+            "revision": 14,
+            "state": "rejected",
+            "display": false,
+            "scene": "south-yard"
+          },
+          {
+            "revision": 15,
+            "state": "unscheduled",
+            "display": false,
+            "scene": "amber-tavern"
+          },
+          {
+            "revision": 16,
+            "state": "unscheduled",
+            "display": false,
+            "scene": "amber-tavern"
+          },
+          {
+            "revision": 17,
+            "state": "unscheduled",
+            "display": false,
+            "scene": "amber-tavern"
+          },
+          {
+            "revision": 18,
+            "state": "hidden",
+            "display": false,
+            "scene": "amber-tavern"
+          },
+          {
+            "revision": 19,
+            "state": "hidden",
+            "display": false,
+            "scene": "amber-tavern"
+          },
+          {
+            "revision": 20,
+            "state": "unscheduled",
+            "display": false,
+            "scene": "amber-tavern"
+          }
+        ],
+        "checks": [
+          "last next disabled, previous works",
+          "reset restores first and bounds",
+          "saved action and revision buttons jump",
+          "location filter restricts next/previous to that place",
+          "unknown location has no old image or roster",
+          "pending image stays hidden before acceptance",
+          "image off preserves text navigation, history and review",
+          "reuse has no new sends",
+          "edit without separate sending authorization shows no original",
+          "edit waits without revealing future history",
+          "late pending and rejected belong to original scene",
+          "rejected result cannot appear on revisit",
+          "unexplained lighting hides picture and fixed dialogue cannot revive it",
+          "corrupt mock shows placeholder",
+          "historical archive is separate; missing media stays blank",
+          "reset clears panels, filter, switch and recovers original"
+        ],
+        "externalRequests": 0
+      }
+    },
+    {
+      "command": "node --permission --allow-fs-read=* packages/first-play/test/trigger.test.mjs",
+      "exit": 0,
+      "stdout": "✔ confirmed visual changes, no-op and unsupported emphasis (2.2937ms)\n✔ review, current display and reference use have separate verdicts (1.2904ms)\n✔ rumor, reported speech, dreams and unseen narrators cannot add a present character (5.3144ms)\n✔ provider capability cannot override authorization or a suppressed trigger (0.5909ms)\nℹ tests 4\nℹ suites 0\nℹ pass 4\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 15.8534"
+    }
+  ],
+  "browser": {
+    "status": "BROWSER_NOT_VERIFIED",
+    "command": "node packages/native-scene/test/browser.mjs ../native-scene-screens",
+    "playwright": "existing fixed local upstream dependency",
+    "sandbox": true,
+    "attempts": [
+      {
+        "executable": "Chrome",
+        "exit": 1,
+        "phase": "before-page",
+        "diagnostic": "TransactNamedPipe 0x6D; crash server failed to launch, self-terminating"
+      },
+      {
+        "executable": "Edge",
+        "exit": 1,
+        "phase": "before-page",
+        "diagnostic": "TransactNamedPipe 0x6D; browser process closed"
+      },
+      {
+        "interface": "Computer Use Chrome",
+        "diagnostic": "Browser is not available: chrome"
+      },
+      {
+        "interface": "Computer Use in-app browser",
+        "diagnostic": "Local file scheme blocked by browser URL policy"
+      }
+    ],
+    "desktop": "NOT_RUN",
+    "mobile390": "NOT_RUN",
+    "screenshotCount": 0,
+    "externalRequestsMeasuredInBrowser": null
+  },
+  "modelCalls": 0,
+  "imageTasks": 0,
+  "mockImageDispatches": 0,
+  "usd": 0
+}

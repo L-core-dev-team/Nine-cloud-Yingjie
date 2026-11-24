@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; connect-src 'none'; script-src 'sha256-PLAYER_HASH'; style-src 'unsafe-inline'; img-src 'none'; font-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>九霄 · 映界｜原生场景离线试玩</title><style>/* STYLES */</style></head>
+<body><header class="mast"><div class="mast-inner"><div class="brand"><span class="seal" aria-hidden="true">映</span><strong>九霄 <i>·</i> 映界</strong></div><span class="offline"><b></b> 离线试玩</span></div></header>
+<main><div class="intro"><div><p class="kicker">九霄序章 <span>/</span> 场景回放</p><h1>原生场景手记</h1></div><p class="caption">合成测试记录 <span>·</span> 无真实生图</p></div>
+<section class="spread" aria-label="当前回合">
+<div class="reading"><div class="eyeline"><span>当前地点</span><span id="revision"></span></div>
+<h2 id="place" aria-live="polite"></h2><p id="action" class="action"></p><p id="note" class="note"></p>
+<div class="source-line"><span class="dot"></span><span id="source"></span></div>
+<nav class="controls" aria-label="回放控制"><button id="prev" aria-label="上一回合">← 上一回合</button><button id="next" class="primary">下一回合 →</button><button id="reset" class="plain">重置</button></nav>
+</div><section class="yj-panel plate-panel"><div class="yj-panel-head"><span>地点示意</span><button class="yj-toggle" id="toggle" role="switch" aria-checked="true">预览 <span class="yj-track"></span></button></div>
+<div id="plate" class="plate"><svg class="engraving" viewBox="0 0 540 205" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+<defs><pattern id="grid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0V22" fill="none" stroke="currentColor" stroke-opacity=".10"/></pattern>
+<g id="ripple"><ellipse cx="412" cy="104" rx="46" ry="30"/><ellipse cx="412" cy="104" rx="62" ry="42"/><ellipse cx="412" cy="104" rx="85" ry="55"/><ellipse cx="412" cy="104" rx="112" ry="67"/><ellipse cx="412" cy="104" rx="142" ry="81"/><ellipse cx="412" cy="104" rx="180" ry="100"/><ellipse cx="412" cy="104" rx="225" ry="124"/><ellipse cx="412" cy="104" rx="277" ry="148"/></g>
+<g id="radial"><path d="M260 101H539M403 0V205M285 -9L510 216M290 215L517 -12" stroke-dasharray="3 6"/><circle cx="403" cy="101" r="52"/><circle cx="403" cy="101" r="76"/><circle cx="403" cy="101" r="105"/><path d="m403 18 83 83-83 83-83-83z M403 51l50 50-50 50-50-50z"/></g></defs>
+<rect width="540" height="205" fill="url(#grid)"/><g fill="none" stroke="currentColor" stroke-width="1.2"><use class="water" href="#ripple"/><use class="sky" href="#radial"/></g></svg>
+<div class="plate-ink"><small>地点印记</small><strong id="glyph"></strong><span id="plate-name"></span></div></div>
+<div id="no-plate" class="no-plate" hidden></div><div class="plate-foot"><strong>画面待确认</strong><span>尚无已审场景图</span></div></section></section>
+<section class="timeline"><div class="section-head"><h2>回放时间线</h2><span id="counter"></span></div><div id="steps" class="steps" aria-label="选择回放节点"></div></section>
+<section class="lower"><details id="history" open><summary>已知行程 <span id="history-count"></span></summary><div id="entries"></div></details>
+<details id="evidence"><summary>查看证据与未知字段</summary><div id="fields"></div></details></section>
+<footer>九霄 · 映界 <span>原生场景离线试玩</span></footer></main>
+<script id="trace" type="application/json">/* TRACE */</script><script>/* PLAYER */</script></body></html>

@@ -7,7 +7,7 @@ import {readFile} from "node:fs/promises";
 import {openLoopbackReader} from "./loopback-reader.mjs";
 import {measureDamagedReads} from "./pg-boundary.mjs";
 
-export async function runHistoricalPositive(core, pool, dedicatedURL) {
+export async function createTestGames(core, pool, dedicatedURL) {
     const svc = name => core.load("apps/api/dist/services/" + name + ".js");
     const {assertLocalCardDatabase} = await core.load("apps/api/dist/card-import/local-runtime.js");
     const databaseName = assertLocalCardDatabase(dedicatedURL,/^\/jiuxiao_test_b2_[0-9_]+$/).pathname.slice(1);
@@ -47,6 +47,11 @@ export async function runHistoricalPositive(core, pool, dedicatedURL) {
         assert.equal(result.status,"created");
         accounts.push({token,ownerId,result});
     }
+    return {svc,auth,accounts,games,turns,emails,mailbox,secret,login,databaseName};
+}
+
+export async function runHistoricalPositive(core, pool, dedicatedURL) {
+    const {svc,auth,accounts,games,turns,emails,mailbox,secret,login,databaseName}=await createTestGames(core,pool,dedicatedURL);
     const barriers = {};
     const reader = await makeLocalReader({pool,auth,core,created:accounts,databaseName,barriers});
     const http = await openLoopbackReader(reader);
