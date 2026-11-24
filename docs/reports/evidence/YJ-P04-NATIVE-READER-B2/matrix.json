@@ -1,0 +1,239 @@
+{
+  "version": 1,
+  "baseline": "7c68e538b32e9e8c8cb5581d09aaeb80145d944d",
+  "upstream": "f1fe6ea561c5ef4d1ec670b7a406625ce5df774c",
+  "semanticSha256": "8b938f92e0427ef03b44a7fe6cb90f8fb208e9ca7140a316dae187dfdd422006",
+  "rule": "prologue-v1-candidate-20261005",
+  "canon": "prologue-canon-candidate-20261005",
+  "memory": "p1-memory-policy-v1",
+  "source": "predeclared from pinned source and public regression paths",
+  "setup": [
+    "fresh loopback-only PG + applied ordinary migrations including 0013, exclude pending",
+    "two fresh reserved test identities; normal session/cookie; each normal create; read and bind R0 before action; no SQL seed",
+    "single writer per save, capture after every successful commit before next; close and re-auth A before querying older accepted turn",
+    "fixed plugin via loadTurnPlugin; no narrator, no key or external email"
+  ],
+  "worldPath": [
+    "move:loc_wangqitai",
+    "move:loc_luhuadu",
+    "move:loc_wangqitai"
+  ],
+  "boundaryPaths": [
+    "reuse native-facts public dev/held frozen intent sequences producing sublocation, blocked, bypass and multi-event batches",
+    "free_text ambiguous for clarify; rejected input via legitimate rules"
+  ],
+  "cases": [
+    [
+      "later-owner-read",
+      "A signs out, logs in again at R3, reads key of R1",
+      "CONFIRMED loc_luhuadu → loc_wangqitai with independent R0/R1, horizon >=3"
+    ],
+    [
+      "return",
+      "back to loc_luhuadu then move away again",
+      "distinct event identity for separate moves"
+    ],
+    [
+      "sublocation",
+      "same world / different sublocation",
+      "0 world facts"
+    ],
+    [
+      "blocked",
+      "legal_failure move.blocked",
+      "0 world facts"
+    ],
+    [
+      "bypass",
+      "legitimate move.bypassed",
+      "OUT_OF_SCOPE_SUPPORTED_EVENT"
+    ],
+    [
+      "noncommit",
+      "clarify/rejected",
+      "0 new revision and facts"
+    ],
+    [
+      "repeat",
+      "same key again with fresh authorization",
+      "added=0"
+    ],
+    [
+      "knowledge",
+      "ask as-of before proof learned",
+      "0 retroactive facts"
+    ],
+    [
+      "future",
+      "R > observed revision",
+      "UNVERIFIED or DENIED"
+    ],
+    [
+      "old receipt plus latest only",
+      "withdraw or alter named evidence at isolated verifier boundary",
+      "UNVERIFIED or DENIED, zero partial publication"
+    ],
+    [
+      "no R0",
+      "withdraw or alter named evidence at isolated verifier boundary",
+      "UNVERIFIED or DENIED, zero partial publication"
+    ],
+    [
+      "no R-1",
+      "withdraw or alter named evidence at isolated verifier boundary",
+      "UNVERIFIED or DENIED, zero partial publication"
+    ],
+    [
+      "no R",
+      "withdraw or alter named evidence at isolated verifier boundary",
+      "UNVERIFIED or DENIED, zero partial publication"
+    ],
+    [
+      "matching location only",
+      "withdraw or alter named evidence at isolated verifier boundary",
+      "UNVERIFIED or DENIED, zero partial publication"
+    ],
+    [
+      "unsupported rule",
+      "withdraw or alter named evidence at isolated verifier boundary",
+      "UNVERIFIED or DENIED, zero partial publication"
+    ],
+    [
+      "receipt/event mismatch",
+      "withdraw or alter named evidence at isolated verifier boundary",
+      "UNVERIFIED or DENIED, zero partial publication"
+    ],
+    [
+      "event missing interior",
+      "withdraw or alter named evidence at isolated verifier boundary",
+      "UNVERIFIED or DENIED, zero partial publication"
+    ],
+    [
+      "tail truncated with internally valid chain",
+      "withdraw or alter named evidence at isolated verifier boundary",
+      "UNVERIFIED or DENIED, zero partial publication"
+    ],
+    [
+      "event reorder",
+      "withdraw or alter named evidence at isolated verifier boundary",
+      "UNVERIFIED or DENIED, zero partial publication"
+    ],
+    [
+      "duplicate event",
+      "withdraw or alter named evidence at isolated verifier boundary",
+      "UNVERIFIED or DENIED, zero partial publication"
+    ],
+    [
+      "wrong anchor",
+      "withdraw or alter named evidence at isolated verifier boundary",
+      "UNVERIFIED or DENIED, zero partial publication"
+    ],
+    [
+      "wrong chain",
+      "withdraw or alter named evidence at isolated verifier boundary",
+      "UNVERIFIED or DENIED, zero partial publication"
+    ],
+    [
+      "full-state mismatch after valid first event",
+      "withdraw or alter named evidence at isolated verifier boundary",
+      "UNVERIFIED or DENIED, zero partial publication"
+    ],
+    [
+      "untrusted checkpoint supplied on wire",
+      "withdraw or alter named evidence at isolated verifier boundary",
+      "UNVERIFIED or DENIED, zero partial publication"
+    ],
+    [
+      "tampered late batch member",
+      "withdraw or alter named evidence at isolated verifier boundary",
+      "UNVERIFIED or DENIED, zero partial publication"
+    ],
+    [
+      "replay mismatch",
+      "withdraw or alter named evidence at isolated verifier boundary",
+      "UNVERIFIED or DENIED, zero partial publication"
+    ],
+    [
+      "unauthenticated",
+      "request under indicated identity/lifecycle condition",
+      "uniform no proof, no sensitive fields"
+    ],
+    [
+      "forged owner header",
+      "request under indicated identity/lifecycle condition",
+      "uniform no proof, no sensitive fields"
+    ],
+    [
+      "wrong session",
+      "request under indicated identity/lifecycle condition",
+      "uniform no proof, no sensitive fields"
+    ],
+    [
+      "A reads B",
+      "request under indicated identity/lifecycle condition",
+      "uniform no proof, no sensitive fields"
+    ],
+    [
+      "wrong save",
+      "request under indicated identity/lifecycle condition",
+      "uniform no proof, no sensitive fields"
+    ],
+    [
+      "wrong key",
+      "request under indicated identity/lifecycle condition",
+      "uniform no proof, no sensitive fields"
+    ],
+    [
+      "non-root",
+      "request under indicated identity/lifecycle condition",
+      "uniform no proof, no sensitive fields"
+    ],
+    [
+      "wrong target revision",
+      "request under indicated identity/lifecycle condition",
+      "uniform no proof, no sensitive fields"
+    ],
+    [
+      "logout then cache read",
+      "request under indicated identity/lifecycle condition",
+      "uniform no proof, no sensitive fields"
+    ],
+    [
+      "closed account",
+      "request under indicated identity/lifecycle condition",
+      "uniform no proof, no sensitive fields"
+    ],
+    [
+      "archived save",
+      "request under indicated identity/lifecycle condition",
+      "uniform no proof, no sensitive fields"
+    ],
+    [
+      "deleted save",
+      "request under indicated identity/lifecycle condition",
+      "uniform no proof, no sensitive fields"
+    ],
+    [
+      "revoke before final check",
+      "request under indicated identity/lifecycle condition",
+      "uniform no proof, no sensitive fields"
+    ],
+    [
+      "overlapping commit",
+      "barrier after first SELECT then normal write commits before batch read",
+      "split read shows different revisions; repeatable-read fixes one horizon or refuses"
+    ],
+    [
+      "revoke race",
+      "barrier before delivery, real revoke commits",
+      "delivery denied including cache"
+    ],
+    [
+      "projection",
+      "inspect response and outbound counters",
+      "only scoped location projection; sceneEligible/send false"
+    ]
+  ],
+  "pass": "nonzero real historical confirmation plus every mandatory control; no unauthorized fact, duplicate addition, retroactive claim or visual send",
+  "blocked": "mark unexecuted real cases NOT_RUN; validation faults cannot count as real service runs"
+}
