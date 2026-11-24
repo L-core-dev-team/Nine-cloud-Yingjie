@@ -1,5 +1,13 @@
 # 映界当前交接
 
+## 2026-11-24 · 最新接续：NATIVE-READER-B2 可直接开工
+
+道主审阅 NATIVE-READER-01 结论 `NATIVE_READER_DESIGN_READY / HISTORICAL_PROOF_GAP / UPSTREAM_AUTHENTICATED_READER_NOT_VERIFIED` 后明确回复「批准」，正式授权 `YJ-P04-NATIVE-READER-B2` 的本地隔离 Gate A–D 工程实施与真实联测。B2 从 `f2c4015e4295fd0a074d176e93d865a9802a6701` 接续，九霄固定 `f1fe6ea561c5ef4d1ec670b7a406625ce5df774c`；仅限两组合成账号/新存档、真实本地认证、实际固定 RULES、回环服务、专用 PG 测试库、测试宿主捕获/只读取证。正常创建 R0，每次提交后捕获真实数据库状态，后来重读旧 R，独立核对事件行、回执、完整历史 R-1/R、权限、撤权和并发。不得继续用假仓储代替真实联测。
+
+[完整执行任务书](task-briefs/YJ-P04-NATIVE-READER-B2.md)。
+
+本次提交只是任务书与正式授权登记，**尚未启动 Codex 本地工程、PG 或测试，Gate A–D 仍为 `NOT_RUN`。** Codex 可以直接执行，不必再等待同范围审批；环境/权限不满足须如实 BLOCKED。B3、上游核心/正式接口及生产 schema、真实玩家账号/存档、两个 main、真实模型/图片/外部邮件/付费、生产和 H3-C/D1/Q1 均未获授权。保留 NATIVE-FACT-01 合成 PASS、H3-B2/H3-B2S 历史 FAIL、角色卡 UPSTREAM_AUTHORITY_GAP 和 I2 停止线。
+
 ## 2026-11-24 · 最新接续：NATIVE-READER-01 历史读取任务准备
 
 道主已批准准备 NATIVE-READER-01 完整任务书及只读架构审查。基线 NATIVE-FACT-01 `5952a079ef7472f846a160954ca942df8fe69d71` 保持 `NATIVE_FACT_OFFLINE_RULE_ADAPTER_PASS`；九霄固定 `main@f1fe6ea561c5ef4d1ec670b7a406625ce5df774c`。已查明 owner/save 回执、持久化 turn_events、哈希链、replayEvents、当前快照和一致性只读事务可供复用，但真实历史 R-1/R 状态对尚未验证。优先 B1 复用可信历史 checkpoint；缺证时设计 B2 新隔离合成测试账号/存档的真实服务试点；必要时才提出 B3 最小上游证明扩展。**本轮仅任务准备及只读复核，不授权代码、上游修改、PG/Chrome、真实账号/存档/API、付费/生图、生产或两个 main。** `UPSTREAM_AUTHENTICATED_READER_NOT_VERIFIED`、自由角色卡 `UPSTREAM_AUTHORITY_GAP`、H3-B2/H3-B2S 历史 FAIL 和 I2 停止线保持。
