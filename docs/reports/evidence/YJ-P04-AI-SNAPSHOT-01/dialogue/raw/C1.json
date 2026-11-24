@@ -1,0 +1,15 @@
+{
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "claims": [
+    {"field":"place","status":"unknown","op":"unknown","values":null,"delta":[],"previous":null,"refs":[]},
+    {"field":"people","status":"partial","op":"set","values":["乔麦"],"delta":[],"previous":null,"refs":[{"group":"C","rev":1,"quote":"我却只看得见帘前的乔麦，帘后还有谁无从知道","layer":"current","visible":true}]},
+    {"field":"features","status":"complete","op":"set","values":["布帘","水桶"],"delta":[],"previous":null,"refs":[{"group":"C","rev":1,"quote":"眼前有布帘和水桶","layer":"current","visible":true}]},
+    {"field":"timeOfDay","status":"unknown","op":"unknown","values":null,"delta":[],"previous":null,"refs":[]},
+    {"field":"lighting","status":"complete","op":"set","values":["灯光"],"delta":[],"previous":null,"refs":[{"group":"C","rev":1,"quote":"屋里是灯光","layer":"current","visible":true}]},
+    {"field":"viewpoint","status":"complete","op":"set","values":["向西"],"delta":[],"previous":null,"refs":[{"group":"C","rev":1,"quote":"我倚南墙面西","layer":"current","visible":true}]},
+    {"field":"perspective","status":"complete","op":"set","values":["第一人称"],"delta":[],"previous":null,"refs":[{"group":"C","rev":1,"quote":"我却只看得见帘前的乔麦","layer":"current","visible":true}]}
+  ],
+  "exclusions": [
+    {"group":"C","rev":1,"quote":"隔帘有人说孟川也在盐井值房","layer":"reported","visible":false}
+  ]
+}

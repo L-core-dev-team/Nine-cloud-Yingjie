@@ -1,0 +1,13 @@
+{
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "claims": [
+    {"field":"place","status":"complete","op":"keep","values":["琥洲／听雨酒馆"],"delta":[],"previous":2,"refs":[{"group":"A","rev":3,"quote":"观察位置、朝向、布景、时段和光照都没有变化","layer":"current","visible":true}]},
+    {"field":"people","status":"complete","op":"keep","values":["林青","沈舟"],"delta":[],"previous":2,"refs":[{"group":"A","rev":3,"quote":"林青和沈舟仍在原处，苏禾没有回来，也没有新人进来","layer":"current","visible":true}]},
+    {"field":"features","status":"complete","op":"keep","values":["木桌","长凳","油灯"],"delta":[],"previous":2,"refs":[{"group":"A","rev":3,"quote":"观察位置、朝向、布景、时段和光照都没有变化","layer":"current","visible":true}]},
+    {"field":"timeOfDay","status":"complete","op":"keep","values":["傍晚"],"delta":[],"previous":2,"refs":[{"group":"A","rev":3,"quote":"观察位置、朝向、布景、时段和光照都没有变化","layer":"current","visible":true}]},
+    {"field":"lighting","status":"complete","op":"keep","values":["灯光"],"delta":[],"previous":2,"refs":[{"group":"A","rev":3,"quote":"观察位置、朝向、布景、时段和光照都没有变化","layer":"current","visible":true}]},
+    {"field":"viewpoint","status":"complete","op":"keep","values":["正门"],"delta":[],"previous":2,"refs":[{"group":"A","rev":3,"quote":"观察位置、朝向、布景、时段和光照都没有变化","layer":"current","visible":true}]},
+    {"field":"perspective","status":"complete","op":"keep","values":["向北"],"delta":[],"previous":2,"refs":[{"group":"A","rev":3,"quote":"观察位置、朝向、布景、时段和光照都没有变化","layer":"current","visible":true}]}
+  ],
+  "exclusions":[{"group":"A","rev":3,"quote":"我想起刚才苏禾还坐在桌旁，三人一起交谈的情形","layer":"past","visible":false}]
+}

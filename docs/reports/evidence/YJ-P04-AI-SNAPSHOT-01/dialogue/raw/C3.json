@@ -1,0 +1,69 @@
+{
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "claims": [
+    {
+      "field": "place",
+      "status": "complete",
+      "op": "keep",
+      "values": ["盐井值房"],
+      "delta": [],
+      "previous": 2,
+      "refs": [{"group":"C","rev":3,"quote":"我环顾整间值房","layer":"current","visible":true},{"group":"C","rev":3,"quote":"我仍倚南墙向西","layer":"current","visible":true}]
+    },
+    {
+      "field": "people",
+      "status": "complete",
+      "op": "remove",
+      "values": [],
+      "delta": ["乔麦"],
+      "previous": 2,
+      "refs": [{"group":"C","rev":3,"quote":"乔麦放下手，从我跟前跨出门槛。","layer":"current","visible":true},{"group":"C","rev":3,"quote":"我环顾整间值房，在场的除我以外再无一人。","layer":"current","visible":true}]
+    },
+    {
+      "field": "features",
+      "status": "complete",
+      "op": "set",
+      "values": ["挂到钩上的布帘","水桶"],
+      "delta": [],
+      "previous": null,
+      "refs": [{"group":"C","rev":3,"quote":"帘已经挂到钩上，里外都看得清","layer":"current","visible":true},{"group":"C","rev":3,"quote":"水桶、布帘和灯光都在","layer":"current","visible":true}]
+    },
+    {
+      "field": "timeOfDay",
+      "status": "unknown",
+      "op": "unknown",
+      "values": null,
+      "delta": [],
+      "previous": null,
+      "refs": [{"group":"C","rev":3,"quote":"时辰依然不明","layer":"current","visible":false}]
+    },
+    {
+      "field": "lighting",
+      "status": "complete",
+      "op": "keep",
+      "values": ["灯光"],
+      "delta": [],
+      "previous": 2,
+      "refs": [{"group":"C","rev":3,"quote":"水桶、布帘和灯光都在","layer":"current","visible":true}]
+    },
+    {
+      "field": "viewpoint",
+      "status": "complete",
+      "op": "keep",
+      "values": ["南墙边"],
+      "delta": [],
+      "previous": 2,
+      "refs": [{"group":"C","rev":3,"quote":"我仍倚南墙向西","layer":"current","visible":true}]
+    },
+    {
+      "field": "perspective",
+      "status": "complete",
+      "op": "keep",
+      "values": ["向西"],
+      "delta": [],
+      "previous": 2,
+      "refs": [{"group":"C","rev":3,"quote":"我仍倚南墙向西","layer":"current","visible":true}]
+    }
+  ],
+  "exclusions": []
+}

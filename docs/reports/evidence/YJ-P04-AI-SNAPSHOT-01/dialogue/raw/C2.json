@@ -1,0 +1,16 @@
+{
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "claims": [
+    {"field":"place","status":"complete","op":"keep","values":["盐井值房"],"delta":[],"previous":1,"refs":[{"group":"C","rev":2,"quote":"醒来仍在盐井值房南墙边","layer":"current","visible":true}]},
+    {"field":"people","status":"complete","op":"set","values":["乔麦"],"delta":[],"previous":null,"refs":[{"group":"C","rev":2,"quote":"乔麦正掀帘让我看清全部屋子，现在除了她没有别人","layer":"current","visible":true}]},
+    {"field":"features","status":"complete","op":"set","values":["好端端的水桶","正被掀起的布帘"],"delta":[],"previous":null,"refs":[{"group":"C","rev":2,"quote":"水桶好端端的，布帘还在","layer":"current","visible":true},{"group":"C","rev":2,"quote":"乔麦正掀帘","layer":"current","visible":true}]},
+    {"field":"timeOfDay","status":"unknown","op":"unknown","values":null,"delta":[],"previous":null,"refs":[{"group":"C","rev":2,"quote":"仍辨不出时辰","layer":"current","visible":false}]},
+    {"field":"lighting","status":"complete","op":"keep","values":["灯光"],"delta":[],"previous":1,"refs":[{"group":"C","rev":2,"quote":"灯光依旧","layer":"current","visible":true}]},
+    {"field":"viewpoint","status":"complete","op":"keep","values":["南墙边"],"delta":[],"previous":1,"refs":[{"group":"C","rev":2,"quote":"醒来仍在盐井值房南墙边","layer":"current","visible":true}]},
+    {"field":"perspective","status":"complete","op":"set","values":["向西"],"delta":[],"previous":null,"refs":[{"group":"C","rev":2,"quote":"向西看去","layer":"current","visible":true}]}
+  ],
+  "exclusions": [
+    {"group":"C","rev":2,"quote":"我梦见孟川推翻水桶","layer":"dream","visible":false},
+    {"group":"C","rev":1,"quote":"隔帘有人说孟川也在盐井值房","layer":"reported","visible":false}
+  ]
+}

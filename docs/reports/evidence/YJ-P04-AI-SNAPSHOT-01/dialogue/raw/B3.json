@@ -1,0 +1,13 @@
+{
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "claims": [
+    {"field":"place","status":"complete","op":"keep","values":["石渠装订室"],"delta":[],"previous":2,"refs":[{"group":"B","rev":3,"quote":"还在清早的装订室","layer":"current","visible":true}]},
+    {"field":"people","status":"complete","op":"keep","values":["杜衡","闻笛"],"delta":[],"previous":2,"refs":[{"group":"B","rev":3,"quote":"闻笛念了一遍页码","layer":"current","visible":true},{"group":"B","rev":3,"quote":"同伴、器具和刚才那层漫射天光，一样都没换","layer":"current","visible":true}]},
+    {"field":"features","status":"complete","op":"keep","values":["裁纸案","压书石"],"delta":[],"previous":2,"refs":[{"group":"B","rev":3,"quote":"同伴、器具和刚才那层漫射天光，一样都没换","layer":"current","visible":true}]},
+    {"field":"timeOfDay","status":"complete","op":"keep","values":["清早"],"delta":[],"previous":2,"refs":[{"group":"B","rev":3,"quote":"还在清早的装订室","layer":"current","visible":true}]},
+    {"field":"lighting","status":"complete","op":"keep","values":["漫射天光"],"delta":[],"previous":2,"refs":[{"group":"B","rev":3,"quote":"同伴、器具和刚才那层漫射天光，一样都没换","layer":"current","visible":true}]},
+    {"field":"viewpoint","status":"complete","op":"keep","values":["窗下"],"delta":[],"previous":2,"refs":[{"group":"B","rev":3,"quote":"我仍从窗下往东看","layer":"current","visible":true}]},
+    {"field":"perspective","status":"complete","op":"keep","values":["向东"],"delta":[],"previous":2,"refs":[{"group":"B","rev":3,"quote":"我仍从窗下往东看","layer":"current","visible":true}]}
+  ],
+  "exclusions":[]
+}

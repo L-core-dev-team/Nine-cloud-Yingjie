@@ -1,0 +1,13 @@
+{
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "claims": [
+    {"field":"place","status":"complete","op":"set","values":["琥洲／听雨酒馆"],"delta":[],"previous":null,"refs":[{"group":"A","rev":1,"quote":"我走进琥洲的听雨酒馆","layer":"current","visible":true}]},
+    {"field":"people","status":"complete","op":"set","values":["林青","沈舟","苏禾"],"delta":[],"previous":null,"refs":[{"group":"A","rev":1,"quote":"在场的只有林青、沈舟和苏禾","layer":"current","visible":true}]},
+    {"field":"features","status":"complete","op":"set","values":["木桌","长凳","油灯"],"delta":[],"previous":null,"refs":[{"group":"A","rev":1,"quote":"眼前的木桌、长凳和油灯都看得清楚","layer":"current","visible":true}]},
+    {"field":"timeOfDay","status":"complete","op":"set","values":["傍晚"],"delta":[],"previous":null,"refs":[{"group":"A","rev":1,"quote":"此时是傍晚","layer":"current","visible":true}]},
+    {"field":"lighting","status":"complete","op":"set","values":["灯光"],"delta":[],"previous":null,"refs":[{"group":"A","rev":1,"quote":"灯光照亮屋内","layer":"current","visible":true}]},
+    {"field":"viewpoint","status":"complete","op":"set","values":["正门"],"delta":[],"previous":null,"refs":[{"group":"A","rev":1,"quote":"站在正门","layer":"current","visible":true}]},
+    {"field":"perspective","status":"complete","op":"set","values":["向北"],"delta":[],"previous":null,"refs":[{"group":"A","rev":1,"quote":"向北望去","layer":"current","visible":true}]}
+  ],
+  "exclusions": []
+}

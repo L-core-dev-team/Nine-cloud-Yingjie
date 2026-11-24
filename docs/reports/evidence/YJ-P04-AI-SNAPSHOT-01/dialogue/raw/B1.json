@@ -1,0 +1,13 @@
+{
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "claims": [
+    {"field":"place","status":"complete","op":"set","values":["石渠装订室"],"delta":[],"previous":null,"refs":[{"group":"B","rev":1,"quote":"我在石渠装订室的窗下朝东坐着","layer":"current","visible":true}]},
+    {"field":"people","status":"complete","op":"set","values":["杜衡","闻笛"],"delta":[],"previous":null,"refs":[{"group":"B","rev":1,"quote":"整间屋已看遍，陪我校页的只有杜衡与闻笛","layer":"current","visible":true}]},
+    {"field":"features","status":"complete","op":"set","values":["裁纸案","压书石"],"delta":[],"previous":null,"refs":[{"group":"B","rev":1,"quote":"清早的日光落在裁纸案和压书石上","layer":"current","visible":true}]},
+    {"field":"timeOfDay","status":"complete","op":"set","values":["清早"],"delta":[],"previous":null,"refs":[{"group":"B","rev":1,"quote":"清早的日光","layer":"current","visible":true}]},
+    {"field":"lighting","status":"complete","op":"set","values":["日光"],"delta":[],"previous":null,"refs":[{"group":"B","rev":1,"quote":"日光落在裁纸案和压书石上","layer":"current","visible":true}]},
+    {"field":"viewpoint","status":"complete","op":"set","values":["向东"],"delta":[],"previous":null,"refs":[{"group":"B","rev":1,"quote":"窗下朝东坐着","layer":"current","visible":true}]},
+    {"field":"perspective","status":"complete","op":"set","values":["第一人称"],"delta":[],"previous":null,"refs":[{"group":"B","rev":1,"quote":"我在石渠装订室的窗下朝东坐着","layer":"current","visible":true}]}
+  ],
+  "exclusions": []
+}

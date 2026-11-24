@@ -1,0 +1,13 @@
+{
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "claims": [
+    {"field":"place","status":"complete","op":"keep","values":["琥洲／听雨酒馆"],"delta":[],"previous":1,"refs":[{"group":"A","rev":2,"quote":"苏禾起身走出了酒馆","layer":"current","visible":true},{"group":"A","rev":2,"quote":"我仍站在正门向北望去","layer":"current","visible":true}]},
+    {"field":"people","status":"complete","op":"remove","values":["林青","沈舟"],"delta":["苏禾"],"previous":1,"refs":[{"group":"A","rev":2,"quote":"苏禾起身走出了酒馆，林青和沈舟仍留在原处，没有其他人进来","layer":"current","visible":true}]},
+    {"field":"features","status":"complete","op":"keep","values":["木桌","长凳","油灯"],"delta":[],"previous":1,"refs":[{"group":"A","rev":2,"quote":"木桌、长凳、油灯、时段和光照均未改变","layer":"current","visible":true}]},
+    {"field":"timeOfDay","status":"complete","op":"keep","values":["傍晚"],"delta":[],"previous":1,"refs":[{"group":"A","rev":2,"quote":"时段和光照均未改变","layer":"current","visible":true}]},
+    {"field":"lighting","status":"complete","op":"keep","values":["灯光"],"delta":[],"previous":1,"refs":[{"group":"A","rev":2,"quote":"时段和光照均未改变","layer":"current","visible":true}]},
+    {"field":"viewpoint","status":"complete","op":"keep","values":["正门"],"delta":[],"previous":1,"refs":[{"group":"A","rev":2,"quote":"我仍站在正门向北望去","layer":"current","visible":true}]},
+    {"field":"perspective","status":"complete","op":"keep","values":["向北"],"delta":[],"previous":1,"refs":[{"group":"A","rev":2,"quote":"我仍站在正门向北望去","layer":"current","visible":true}]}
+  ],
+  "exclusions": []
+}
