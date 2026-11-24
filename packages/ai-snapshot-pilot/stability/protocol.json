@@ -1,0 +1,25 @@
+{
+  "protocol": "stability/1",
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "scope": "research-spring-01",
+  "audits": [
+    5,
+    8,
+    10,
+    13
+  ],
+  "instructions": "仅给当前修订的研究候选。阅读正文、可用前缀以及程序真实上一投影。上轮及历史均非当下权威。只用当前正文逐字唯一短引；不确定留空。不要推断未来。回复单个 JSON，包含 scope,rev,tag,fields,objects,limits,excluded,events。fields 七项中的六项是 place,viewpoint,perspective,timeOfDay,lighting,people（物件另列）。每项为 [值,操作,当前依据短引数组]。标量值为简短原文字词，方位可为如向东的明确物理方位；人物值为名字数组，不计观察者。操作 seen（当前完整观察），partial（仅人员名单部分），keep（与上轮完整值完全一致，有本轮明确延续和同一地点证据），unknown（值=null）；无依据未知可给空引文。完整名单用范围和身份引文，名单全未知不是空列表。place 表示地点专名，没有复述时允许有根据的 keep。过去、计划、角色对白中的推测及看不到的范围只放排除或限制，勿将整句混层。objects 每项 [身份名称,具体状态原文片段或null,含身份的当前原文短引,含状态及指称的当前原文短引或null,该状态句中指称或null]。可原样使用上轮已见状态但本轮只有明确同物状态延续时，用特殊字符串 @keep 作为状态，给具体同物延续引文和指称；无依据则具体状态未知。只记录重要可见物件，不为未出现者填属性。limits 为当下可见性限制的原文短引列表，excluded 为 [past/dream/reported/hypothetical/unknown,精确引文] 列表；不把当前视觉支持和排除混写。events 为 [change/new-knowledge/correction/commitment/payoff,精确当前引文] 列表，首次看清旧事实不能当作现实改变。只读题包，不查其他文件。",
+  "audit": "独立通读本轮和前缀，将首答和被采纳的当前投影与正文核对。检查人员/视野、物件及其当下状态、排除层、实际变化与获知、遗漏或矛盾。只输出 {\"scope\":题包scope,\"rev\":本轮,\"verdict\":\"covered 或 needs-review\",\"checked\":[\"精确当前短引\",...],\"findings\":[{\"field\":\"字段\",\"kind\":\"遗漏/矛盾/无据/不确定\",\"quote\":\"精确当前短引\",\"detail\":\"具体说明\"}]}。有疑义或漏项即待审，不替换首答。",
+  "safety": [
+    "duplicate",
+    "conflicting-key",
+    "gap",
+    "cross-scope",
+    "future-revision",
+    "future-quote",
+    "immutable-prefix",
+    "restart-r7",
+    "no-authoritative-output"
+  ],
+  "threshold": "十四个首答，四个风险节点审核；重大误采、错误精确人数、无据继承、跨地点污染或漏项被充分审核则 FAIL。安全但正例或恢复不达标 PARTIAL。仅在五类正例、零硬错误和恢复/幂等安全检查全部满足时有限 PASS。"
+}

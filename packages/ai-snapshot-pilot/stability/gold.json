@@ -1,0 +1,325 @@
+[
+  {
+    "revision": 1,
+    "place": "听泉堂",
+    "viewpoint": "门边",
+    "perspective": "向北",
+    "people": [
+      "岑苇",
+      "陆禾"
+    ],
+    "count": 2,
+    "objects": {
+      "水簿": "合拢",
+      "铜盆": "半盆水",
+      "方桌": null
+    },
+    "timeOfDay": "清晨",
+    "lighting": "天光",
+    "importance": "铺垫",
+    "event": "堂内建立观察基线；药圃缺水",
+    "visible": 1,
+    "advice": "new",
+    "causes": []
+  },
+  {
+    "revision": 2,
+    "place": "听泉堂",
+    "viewpoint": "门边",
+    "perspective": "向北",
+    "people": [
+      "岑苇",
+      "陆禾"
+    ],
+    "count": 2,
+    "objects": {
+      "水簿": "合拢",
+      "铜盆": "半盆水"
+    },
+    "timeOfDay": "清晨",
+    "lighting": "天光",
+    "importance": "待兑现",
+    "event": "许诺让水，尚未转移",
+    "visible": 0,
+    "advice": "reuse",
+    "causes": [
+      1
+    ]
+  },
+  {
+    "revision": 3,
+    "place": "听泉堂",
+    "viewpoint": "门边",
+    "perspective": "向北",
+    "people": [
+      "岑苇"
+    ],
+    "count": 1,
+    "objects": {
+      "水簿": "摊开",
+      "铜盆": null,
+      "方桌": null
+    },
+    "timeOfDay": null,
+    "lighting": null,
+    "importance": "普通",
+    "event": "陆禾离开；水簿翻开",
+    "visible": 1,
+    "advice": "edit",
+    "causes": [
+      2
+    ]
+  },
+  {
+    "revision": 4,
+    "place": "听泉堂",
+    "viewpoint": "门边",
+    "perspective": null,
+    "people": [
+      "岑苇",
+      "蒋绫"
+    ],
+    "count": 2,
+    "objects": {
+      "水簿": "掀动了一角"
+    },
+    "timeOfDay": null,
+    "lighting": null,
+    "importance": "铺垫",
+    "event": "蒋绫到场，风掀书页；消息待证",
+    "visible": 1,
+    "advice": "edit",
+    "causes": [
+      3
+    ]
+  },
+  {
+    "revision": 5,
+    "place": "听泉堂",
+    "viewpoint": null,
+    "perspective": null,
+    "people": [
+      "蒋绫"
+    ],
+    "count": null,
+    "objects": {
+      "铜盆": "只露出盆沿"
+    },
+    "timeOfDay": null,
+    "lighting": null,
+    "importance": "普通",
+    "event": "雾遮视线；旧碎盆不是现在",
+    "visible": 1,
+    "advice": "defer",
+    "causes": []
+  },
+  {
+    "revision": 6,
+    "place": "伏潮井",
+    "viewpoint": "井栏旁",
+    "perspective": null,
+    "people": [
+      "蒋绫"
+    ],
+    "count": 1,
+    "objects": {
+      "铜盆": "结着薄冰",
+      "石闸": "紧闭",
+      "井栏": null
+    },
+    "timeOfDay": null,
+    "lighting": "灰光",
+    "importance": "铺垫",
+    "event": "到井台，看见另一铜盆",
+    "visible": 1,
+    "advice": "new",
+    "causes": [
+      4
+    ]
+  },
+  {
+    "revision": 7,
+    "place": "伏潮井",
+    "viewpoint": "井栏旁",
+    "perspective": null,
+    "people": null,
+    "count": null,
+    "objects": {},
+    "timeOfDay": null,
+    "lighting": null,
+    "importance": "待兑现",
+    "event": "水汽遮挡，开闸仅设想",
+    "visible": 1,
+    "advice": "defer",
+    "causes": [
+      6
+    ]
+  },
+  {
+    "revision": 8,
+    "place": "伏潮井",
+    "viewpoint": "井栏旁",
+    "perspective": "向西",
+    "people": [
+      "蒋绫"
+    ],
+    "count": 1,
+    "objects": {
+      "铜盆": "薄冰仍完整",
+      "石闸": "紧闭"
+    },
+    "timeOfDay": null,
+    "lighting": "灰光",
+    "importance": "普通",
+    "event": "雾散重新看清，首次认出原朝向",
+    "visible": 1,
+    "advice": "defer",
+    "causes": [
+      7
+    ]
+  },
+  {
+    "revision": 9,
+    "place": "伏潮井",
+    "viewpoint": "井栏旁",
+    "perspective": "向西",
+    "people": [
+      "蒋绫"
+    ],
+    "count": 1,
+    "objects": {
+      "铜盆": "薄冰裂开",
+      "石闸": "升起"
+    },
+    "timeOfDay": "午",
+    "lighting": "日光",
+    "importance": "重要转折",
+    "event": "石闸升起，水脉复流",
+    "visible": 1,
+    "advice": "edit",
+    "causes": [
+      4,
+      6,
+      8
+    ]
+  },
+  {
+    "revision": 10,
+    "place": "听泉堂",
+    "viewpoint": "门边",
+    "perspective": "向北",
+    "people": [],
+    "count": 0,
+    "objects": {
+      "水簿": "合拢",
+      "铜盆": "空了",
+      "方桌": null
+    },
+    "timeOfDay": "傍晚",
+    "lighting": "斜阳",
+    "importance": "普通",
+    "event": "复访无人；重新观察堂中铜盆",
+    "visible": 1,
+    "advice": "new",
+    "causes": [
+      5,
+      9
+    ]
+  },
+  {
+    "revision": 11,
+    "place": "听泉堂",
+    "viewpoint": "门边",
+    "perspective": "向北",
+    "people": [],
+    "count": 0,
+    "objects": {
+      "铜盆": "空的",
+      "水簿": null,
+      "叶子": null
+    },
+    "timeOfDay": null,
+    "lighting": "斜阳",
+    "importance": "待兑现",
+    "event": "叶遮书页，承诺仍未兑现",
+    "visible": 1,
+    "advice": "defer",
+    "causes": [
+      2,
+      10
+    ]
+  },
+  {
+    "revision": 12,
+    "place": "听泉堂",
+    "viewpoint": null,
+    "perspective": null,
+    "people": [
+      "岑苇"
+    ],
+    "count": 1,
+    "objects": {
+      "水簿": "摊开",
+      "叶子": "取走"
+    },
+    "timeOfDay": null,
+    "lighting": null,
+    "importance": "待兑现",
+    "event": "岑苇进堂、取叶；未签字",
+    "visible": 1,
+    "advice": "edit",
+    "causes": [
+      2,
+      11
+    ]
+  },
+  {
+    "revision": 13,
+    "place": "听泉堂",
+    "viewpoint": null,
+    "perspective": null,
+    "people": [
+      "岑苇"
+    ],
+    "count": 1,
+    "objects": {
+      "水簿": "摊开",
+      "墨迹": "尚湿"
+    },
+    "timeOfDay": null,
+    "lighting": null,
+    "importance": "已兑现",
+    "event": "让水生效，药圃得到水份",
+    "visible": 1,
+    "advice": "text-only",
+    "causes": [
+      1,
+      2,
+      9,
+      12
+    ]
+  },
+  {
+    "revision": 14,
+    "place": "听泉堂",
+    "viewpoint": null,
+    "perspective": null,
+    "people": [
+      "岑苇"
+    ],
+    "count": 1,
+    "objects": {
+      "水簿": "摊开",
+      "墨迹": "干了"
+    },
+    "timeOfDay": null,
+    "lighting": null,
+    "importance": "普通",
+    "event": "墨干；看苗只是明日提议",
+    "visible": 1,
+    "advice": "text-only",
+    "causes": [
+      13
+    ]
+  }
+]
