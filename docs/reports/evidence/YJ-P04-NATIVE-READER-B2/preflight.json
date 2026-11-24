@@ -1,0 +1,137 @@
+{
+  "status": "NATIVE_READER_B2_ENV_BLOCKED",
+  "base": "7c68e538b32e9e8c8cb5581d09aaeb80145d944d",
+  "freeze": "997c7de3f9b6136396f261b413419f439cf59483",
+  "matrixSHA256": "061ac8d5cd695a657abca5ec525b3e5339266b137a7286341a2b2e5ad5230153",
+  "mainBefore": {
+    "yingjie": "62f3260fc391ea10349bd792c1c77875e76665c7",
+    "jiuxiao": "f1fe6ea561c5ef4d1ec670b7a406625ce5df774c"
+  },
+  "tools": {
+    "node": "v26.13.0",
+    "python": "3.14.7",
+    "git": "2.55.0.windows.3",
+    "initdb": "18.4",
+    "pg_ctl": "18.4",
+    "pg": "8.23.1",
+    "typescriptCompilerAPI": "6.0.2",
+    "zod": "4.6.6"
+  },
+  "firstEnvironmentalFailure": {
+    "command": "node packages/luna-text/test/loopback-probe.mjs",
+    "exit": 1,
+    "stdout": {
+      "runId": "b8687934-f9bd-4092-be17-0237768d85b0",
+      "utc": "2026-11-24T08:13:46.511Z",
+      "sourceSha256": "8b7022155c9fa967ee3c84105ee68dead386eedd39e7f558aefc4595676f4f80",
+      "platform": "win32",
+      "osRelease": "10.0.26200",
+      "node": "v26.13.0",
+      "nodePermissionModel": false,
+      "nodeNetPermission": null,
+      "preloadConfigured": false,
+      "target": "127.0.0.1",
+      "portSelection": "OS-assigned",
+      "observations": {
+        "tcpListen": {
+          "status": "PASS"
+        },
+        "tcpConnect": {
+          "status": "FAIL",
+          "code": "EACCES",
+          "syscall": "connect"
+        },
+        "httpListen": {
+          "status": "NOT_RUN"
+        },
+        "httpGet": {
+          "status": "NOT_RUN"
+        }
+      },
+      "status": "ENV_BLOCKED"
+    }
+  },
+  "ruleGate": {
+    "command": "$env:NODE_ENV='test'; node packages/native-reader-b2/test/rule-gate.mjs ../b2-upstream",
+    "exit": 0,
+    "stdout": [
+      {
+        "event": "p1_review_rule_semantics_approved_byte_drift",
+        "diagnostic": "P1_REVIEW_RULE_BYTE_DRIFT_SEMANTICS_MATCH",
+        "semanticSha256": "sha256:8b938f92e0427ef03b44a7fe6cb90f8fb208e9ca7140a316dae187dfdd422006",
+        "bundlePinMatches": false,
+        "pluginSourcePinMatches": false
+      },
+      {
+        "check": "official-nonproduction-loadTurnPlugin",
+        "approval": {
+          "scope": "p1-review-candidate-v1",
+          "bundleSha256": "sha256:468a26ad109c64c6cf2a7224b0e895fd7614241e15c5b468842295d91dcddbce",
+          "pluginSourceSha256": "sha256:94c57793bfde874469b81c1d97c914ab5591d628631564679f07d7e3aef83735",
+          "semanticSha256": "sha256:8b938f92e0427ef03b44a7fe6cb90f8fb208e9ca7140a316dae187dfdd422006",
+          "ruleVersion": "prologue-v1-candidate-20261005",
+          "canonVersion": "prologue-canon-candidate-20261005",
+          "actionRulesVersion": "p1-actions-a4b8fbf7e6120840",
+          "combatRulesVersion": "p1-combat-a4b8fbf7e6120840",
+          "memoryPolicyVersion": "p1-memory-policy-v1"
+        },
+        "database": false,
+        "sessions": 0
+      }
+    ]
+  },
+  "firstBuildImportFailure": {
+    "command": "$env:NODE_ENV='test'; node packages/native-reader-b2/test/imports.mjs ../b2-upstream",
+    "exit": 1,
+    "reason": "ERR_MODULE_NOT_FOUND: js-tiktoken imported by card-import/model-budget.js through the upstream local database guard",
+    "remedy": "copy the pinned locally installed tokenizer and its locked base64-js dependency into a fresh runtime; do not change the guard"
+  },
+  "importRerun": {
+    "command": "$env:NODE_ENV='test'; node packages/native-reader-b2/test/imports.mjs ../b2-upstream-final",
+    "exit": 0,
+    "stdout": [
+      {
+        "event": "p1_review_rule_semantics_approved_byte_drift",
+        "diagnostic": "P1_REVIEW_RULE_BYTE_DRIFT_SEMANTICS_MATCH",
+        "semanticSha256": "sha256:8b938f92e0427ef03b44a7fe6cb90f8fb208e9ca7140a316dae187dfdd422006",
+        "bundlePinMatches": false,
+        "pluginSourcePinMatches": false
+      },
+      {
+        "imports": [
+          "assertLocalCardDatabase",
+          "EmailAuthService",
+          "PostgresEmailAuthRepository",
+          "AuthoritativeGameService",
+          "PostgresCloudSaveRepository",
+          "createPostgresServerTurnRepository",
+          "ServerTurnService"
+        ],
+        "status": "MODULE_IMPORTS_ONLY",
+        "connections": 0
+      }
+    ]
+  },
+  "counts": {
+    "successfulLoopbackListen": 1,
+    "tcpConnectAttempts": 1,
+    "successfulTcpConnects": 0,
+    "httpRequests": 0,
+    "postgresStarts": 0,
+    "postgresTransactions": 0,
+    "realLocalTestIdentities": 0,
+    "successfulAuthenticatorSessions": 0,
+    "saveCreates": 0,
+    "pgRuleCommits": 0,
+    "realHistoricalProofs": 0,
+    "playerReads": 0,
+    "realMail": 0,
+    "realModelQueries": 0,
+    "textAPI": 0,
+    "imageAPI": 0,
+    "usd": 0
+  },
+  "dbSHA256": null,
+  "authenticatedReader": "UPSTREAM_AUTHENTICATED_READER_NOT_VERIFIED",
+  "cleanup": "probe closed the only listener; no database, session, credential, or test account created"
+}

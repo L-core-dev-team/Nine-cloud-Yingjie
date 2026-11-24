@@ -1,0 +1,216 @@
+{
+  "scope": "real B2 endpoint and authorized PG data",
+  "matrixCommit": "997c7de3f9b6136396f261b413419f439cf59483",
+  "rows": [
+    {
+      "name": "later-owner-read",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "return",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "sublocation",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "blocked",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "bypass",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "noncommit",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "repeat",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "knowledge",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "future",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "old receipt plus latest only",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "no R0",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "no R-1",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "no R",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "matching location only",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "unsupported rule",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "receipt/event mismatch",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "event missing interior",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "tail truncated with internally valid chain",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "event reorder",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "duplicate event",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "wrong anchor",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "wrong chain",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "full-state mismatch after valid first event",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "untrusted checkpoint supplied on wire",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "tampered late batch member",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "replay mismatch",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "unauthenticated",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "forged owner header",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "wrong session",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "A reads B",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "wrong save",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "wrong key",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "non-root",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "wrong target revision",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "logout then cache read",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "closed account",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "archived save",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "deleted save",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "revoke before final check",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "overlapping commit",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "revoke race",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    },
+    {
+      "name": "projection",
+      "status": "NOT_RUN",
+      "reason": "TCP_CONNECT_EACCES"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "workingDirectory": "task repository root",
+  "scope": "executed build, acceptance and audit commands; no DB URL or local identity in this receipt",
+  "commands": [
+    [
+      "node packages/luna-text/test/loopback-probe.mjs",
+      1,
+      "ENV_BLOCKED; single probe"
+    ],
+    [
+      "python -B packages/native-facts/test/prepare.py ../Nine-cloud ../reader-b2-rules",
+      0,
+      "pinned regression runtime"
+    ],
+    [
+      "python -B packages/native-reader-b2/test/prepare.py ../Nine-cloud packages/contracts/node_modules/typescript ../b2-upstream",
+      0,
+      "first B2 build"
+    ],
+    [
+      "$env:NODE_ENV='test'; node packages/native-reader-b2/test/rule-gate.mjs ../b2-upstream",
+      0,
+      "semantic approved with byte drift"
+    ],
+    [
+      "$env:NODE_ENV='test'; node packages/native-reader-b2/test/imports.mjs ../b2-upstream",
+      1,
+      "ERR_MODULE_NOT_FOUND js-tiktoken"
+    ],
+    [
+      "python -B packages/native-reader-b2/test/prepare.py ../Nine-cloud packages/contracts/node_modules/typescript ../b2-upstream-final",
+      0,
+      "rebuild with pinned offline transitive dependencies"
+    ],
+    [
+      "$env:NODE_ENV='test'; node packages/native-reader-b2/test/imports.mjs ../b2-upstream-final",
+      0,
+      "official loader and seven module exports"
+    ],
+    [
+      "node --permission --allow-fs-read=* packages/native-reader-b2/test/verifier.mjs ../reader-b2-rules",
+      0,
+      "20/20 first and after harness changes; 21/21 after timestamp precision guard"
+    ],
+    [
+      "node --permission --allow-fs-read=* --input-type=module -e \"import {loadRules,simulate} from './packages/native-facts/test/host.mjs'; const core=await loadRules('../reader-b2-rules');const turns=['loc_wangqitai','loc_luhuadu','loc_wangqitai','loc_luhuadu'].map(destinationId=>({intent:{kind:'move',payload:{destinationId}}}));const run=await simulate(core,{id:'matrix-path-preflight',owner:'unit-owner',save:'unit-save',turns});console.log(JSON.stringify(run.records.map(x=>[x.receipt.resultingRevision,x.receipt.decision.status,x.batch.map(y=>y.event.type)])))\"",
+      0,
+      "fixed rules only; first 3 actions produce R1 arrived, R2 blocked, R2 rejected. Fourth direct return is R3 blocked."
+    ],
+    [
+      "git diff --exit-code 5952a079ef7472f846a160954ca942df8fe69d71 -- packages/native-facts docs/reports/evidence/YJ-P04-NATIVE-FACT-01 docs/reports/evidence/YJ-P04-H3B2 docs/reports/evidence/YJ-P04-H3B2S",
+      0,
+      "unchanged old source and evidence"
+    ],
+    [
+      "pg_ctl --version; initdb --version",
+      0,
+      "local tool paths, both 18.4, no server"
+    ],
+    [
+      "node --check <each new .mjs>; python ast.parse(<each new .py>)",
+      0,
+      "syntax only"
+    ]
+  ],
+  "furtherCommands": [
+    "native-regression.json",
+    "legacy-regression.json",
+    "compatibility.json"
+  ],
+  "otherDiscoveryErrors": [
+    "Default PG install directory was absent; version probes succeeded using existing project tool directory.",
+    "One PowerShell brace-glob for multiple Markdown paths failed to parse. Reissued with explicit paths.",
+    "Two guessed upstream source filenames were absent. Used the actual pinned Git tree for postgres-email-auth.ts and migration journal tags.",
+    "A local Python JSON inspection using default system encoding failed; subsequent inspections used read_bytes()."
+  ],
+  "notRun": [
+    "python packages/native-reader-b2/test/launch.py ... (probe already failed; not repeated)",
+    "all real cases including auth, committed-state capture, SQL isolation and delivery races"
+  ]
+}

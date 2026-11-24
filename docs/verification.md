@@ -1,5 +1,9 @@
 # 映界验证记录
 
+## 2026-11-24 · B2 实测停在本机 TCP CONNECT
+
+**NATIVE_READER_B2_ENV_BLOCKED**。受管会话监听成功，连接返回 EACCES。实际认证与 PG 历史对账 0 次；42 项真实场景均未执行。固定规则通过官方非生产语义门禁，离线验证器 21/21，旧原生 298 个修订及 H3 的 1,765 个前缀已复跑。恢复条件为同一受管环境获准完成回环连接与 HTTP 200。[运行报告](reports/YJ-P04-NATIVE-READER-B2-report.md)
+
 ## 2026-11-24 · NATIVE-READER-B2 设计复核和实际执行授权（非运行验收）
 
 道主审阅 NATIVE-READER-01 结论 `NATIVE_READER_DESIGN_READY / HISTORICAL_PROOF_GAP / UPSTREAM_AUTHENTICATED_READER_NOT_VERIFIED` 后明确回复「批准」，正式授权 `YJ-P04-NATIVE-READER-B2` 的本地隔离 Gate A–D 工程实施与真实联测。B2 从 `f2c4015e4295fd0a074d176e93d865a9802a6701` 接续，九霄固定 `f1fe6ea561c5ef4d1ec670b7a406625ce5df774c`；仅限两组合成账号/新存档、真实本地认证、实际固定 RULES、回环服务、专用 PG 测试库、测试宿主捕获/只读取证。正常创建 R0，每次提交后捕获真实数据库状态，后来重读旧 R，独立核对事件行、回执、完整历史 R-1/R、权限、撤权和并发。不得继续用假仓储代替真实联测。

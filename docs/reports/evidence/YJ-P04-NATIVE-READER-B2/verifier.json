@@ -1,0 +1,97 @@
+{
+  "command": "node --permission --allow-fs-read=* packages/native-reader-b2/test/verifier.mjs ../reader-b2-rules",
+  "exit": 0,
+  "suite": "pure-verifier-only",
+  "checks": [
+    {
+      "turn": 1,
+      "expected": "world-location-change",
+      "passed": true
+    },
+    {
+      "turn": 2,
+      "expected": "sublocation-change",
+      "passed": true
+    },
+    {
+      "turn": 5,
+      "expected": "OUT_OF_SCOPE_SUPPORTED_EVENT",
+      "passed": true
+    },
+    {
+      "turn": 7,
+      "expected": "world-location-change",
+      "passed": true
+    },
+    {
+      "fault": "latest as R0",
+      "passed": true
+    },
+    {
+      "fault": "missing previous",
+      "passed": true
+    },
+    {
+      "fault": "missing after",
+      "passed": true
+    },
+    {
+      "fault": "removed tail",
+      "passed": true
+    },
+    {
+      "fault": "missing interior",
+      "passed": true
+    },
+    {
+      "fault": "swapped events",
+      "passed": true
+    },
+    {
+      "fault": "duplicate",
+      "passed": true
+    },
+    {
+      "fault": "bad chain",
+      "passed": true
+    },
+    {
+      "fault": "bad endpoint",
+      "passed": true
+    },
+    {
+      "fault": "receipt mismatch",
+      "passed": true
+    },
+    {
+      "fault": "wrong expected revision",
+      "passed": true
+    },
+    {
+      "fault": "wrong key",
+      "passed": true
+    },
+    {
+      "fault": "wrong branch",
+      "passed": true
+    },
+    {
+      "fault": "late state conflict",
+      "passed": true
+    },
+    {
+      "fault": "wrong scope",
+      "passed": true
+    },
+    {
+      "fault": "wrong rule version",
+      "passed": true
+    },
+    {
+      "fault": "DB timestamp not losslessly representable",
+      "passed": true
+    }
+  ],
+  "sessions": 0,
+  "postgres": false
+}
