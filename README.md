@@ -1,5 +1,13 @@
 # 九霄 · 映界
 
+## 2026-11-24 · AI-SNAPSHOT-02 与 VISUAL-CONTINUITY-01 并行（已批准 / NOT_RUN）
+
+道主同意两线并行。共同基线 AI-SNAPSHOT-01 对话实验 `e9217391eeb5c76d9fad960413be40562b170c89`（首答 9/9，投影 5/9；A 24/24、3→2→2 正确，B/C 继承中断）。语义线：明确物理位置/朝向字段，实际前帧候选输入，有证据重新观察和局部纠正恢复；冻结旧九答和新提示，旧 B/C 六回合 + 一个新三回合，最多 9 份新独立 Codex 对话首答。视觉线：以实际 A 投影候选为输入，只允许现有订阅图像工具 1 次初始生成、1 次该原件参考编辑（尝试含失败/未知），A3 同字节复用；先审首图再编辑，直接交两张实际图，不开发 UI。两个独立任务分支同基线并行，不互相等待。
+
+[语义修复任务书](docs/task-briefs/YJ-P04-AI-SNAPSHOT-02.md) · [连续画面试点任务书](docs/task-briefs/YJ-P04-VISUAL-CONTINUITY-01.md)。
+
+本次仅登记任务及授权，实际实施、模型对话及图像工具调用仍 NOT_RUN。只允许合成内容、现有订阅能力；项目 API 0、额外 API 费用 0，不开放付费端点、I2、生产或两个 main。旧 AI-SNAPSHOT-01 API LIVE_BLOCKED、I2 LIVE_BLOCKED_COST_BOUND、H3-B2/B2S FAIL、自由角色卡权威缺口和 B2/native scene PARTIAL 保留，模型/图片均为独立研究候选。
+
 ## 2026-11-24 · AI-SNAPSHOT-01 发送前核查
 
 本次 `LIVE_BLOCKED`。A/B/C 九槽已冻结，真实 POST 0、预留 USD 0。缺少本机凭据、项目 Standard 写入证据和可验证的完整费用上界。禁网流程测试 9 项通过。[三组实际状态与运行回执](docs/reports/YJ-P04-AI-SNAPSHOT-01-report.md)。
