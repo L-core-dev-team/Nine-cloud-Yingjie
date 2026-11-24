@@ -1,5 +1,11 @@
 # 九霄 · 映界
 
+## 2026-11-24 · NATIVE-READER-01 历史证据读取（设计审查 / NOT_RUN）
+
+道主已批准准备 NATIVE-READER-01 完整任务书及只读架构审查。基线 NATIVE-FACT-01 `5952a079ef7472f846a160954ca942df8fe69d71` 保持 `NATIVE_FACT_OFFLINE_RULE_ADAPTER_PASS`；九霄固定 `main@f1fe6ea561c5ef4d1ec670b7a406625ce5df774c`。已查明 owner/save 回执、持久化 turn_events、哈希链、replayEvents、当前快照和一致性只读事务可供复用，但真实历史 R-1/R 状态对尚未验证。优先 B1 复用可信历史 checkpoint；缺证时设计 B2 新隔离合成测试账号/存档的真实服务试点；必要时才提出 B3 最小上游证明扩展。**本轮仅任务准备及只读复核，不授权代码、上游修改、PG/Chrome、真实账号/存档/API、付费/生图、生产或两个 main。** `UPSTREAM_AUTHENTICATED_READER_NOT_VERIFIED`、自由角色卡 `UPSTREAM_AUTHORITY_GAP`、H3-B2/H3-B2S 历史 FAIL 和 I2 停止线保持。
+
+[任务书](docs/task-briefs/YJ-P04-NATIVE-READER-01.md) · [固定源码审查](docs/architecture/YJ-P04-NATIVE-READER-01-upstream-reader-audit.md)。当前 `NATIVE_READER_ARCHITECTURE_REVIEW_PENDING / IMPLEMENTATION_NOT_RUN`；未来真实试点先另获授权，不以增加假仓储测试替代实际读取验收。
+
 ## 2026-11-23 · NATIVE-FACT-01 离线验收
 
 NATIVE-FACT-01 已通过固定九霄规则与合成假宿主的离线验收。298 个修订中确认 60 个世界地点变化，错收、漏判均为 0。真实授权读取仍未验证。 [运行报告](docs/reports/YJ-P04-NATIVE-FACT-01-report.md)
