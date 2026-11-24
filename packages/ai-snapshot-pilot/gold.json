@@ -1,0 +1,127 @@
+{
+  "B": [
+    {
+      "place": "石渠装订室",
+      "people": [
+        "杜衡",
+        "闻笛"
+      ],
+      "count": 2,
+      "features": [
+        "裁纸案",
+        "压书石"
+      ],
+      "timeOfDay": "清早",
+      "lighting": "日光",
+      "viewpoint": "窗下",
+      "perspective": "向东",
+      "changed": null,
+      "excluded": [],
+      "partialPeople": []
+    },
+    {
+      "place": "石渠装订室",
+      "people": [
+        "杜衡",
+        "闻笛"
+      ],
+      "count": 2,
+      "features": [
+        "裁纸案",
+        "压书石"
+      ],
+      "timeOfDay": "清早",
+      "lighting": "漫射天光",
+      "viewpoint": "窗下",
+      "perspective": "向东",
+      "changed": [
+        "lighting"
+      ],
+      "excluded": [],
+      "partialPeople": []
+    },
+    {
+      "place": "石渠装订室",
+      "people": [
+        "杜衡",
+        "闻笛"
+      ],
+      "count": 2,
+      "features": [
+        "裁纸案",
+        "压书石"
+      ],
+      "timeOfDay": "清早",
+      "lighting": "漫射天光",
+      "viewpoint": "窗下",
+      "perspective": "向东",
+      "changed": [],
+      "excluded": [],
+      "partialPeople": []
+    }
+  ],
+  "C": [
+    {
+      "place": "盐井值房",
+      "people": null,
+      "count": null,
+      "features": [
+        "布帘",
+        "水桶"
+      ],
+      "timeOfDay": null,
+      "lighting": "灯光",
+      "viewpoint": "南墙",
+      "perspective": "向西",
+      "changed": null,
+      "excluded": [
+        "reported"
+      ],
+      "partialPeople": [
+        "乔麦"
+      ]
+    },
+    {
+      "place": "盐井值房",
+      "people": [
+        "乔麦"
+      ],
+      "count": 1,
+      "features": [
+        "掀起的布帘",
+        "水桶"
+      ],
+      "timeOfDay": null,
+      "lighting": "灯光",
+      "viewpoint": "南墙",
+      "perspective": "向西",
+      "changed": [
+        "features",
+        "people"
+      ],
+      "excluded": [
+        "dream"
+      ],
+      "partialPeople": []
+    },
+    {
+      "place": "盐井值房",
+      "people": [],
+      "count": 0,
+      "features": [
+        "挂在钩上的布帘",
+        "水桶"
+      ],
+      "timeOfDay": null,
+      "lighting": "灯光",
+      "viewpoint": "南墙",
+      "perspective": "向西",
+      "changed": [
+        "features",
+        "people"
+      ],
+      "excluded": [],
+      "partialPeople": []
+    }
+  ]
+}

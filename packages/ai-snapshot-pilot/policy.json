@@ -1,0 +1,24 @@
+{
+  "approval": "YJ-P04-AI-SNAPSHOT-01",
+  "asOf": "2026-11-24",
+  "expires": "2026-11-25T00:00:00+08:00",
+  "endpoint": "https://api.openai.com/v1/responses",
+  "model": "gpt-6-luna",
+  "tier": "default",
+  "maxSlots": 9,
+  "ceilingNanoUsd": 200000000,
+  "maxRequestBytes": 16000,
+  "plannedMaxInputTokens": 24000,
+  "maxOutputTokens": 3200,
+  "standardShortNanoPerToken": {
+    "input": 100,
+    "cached": 10,
+    "write30m": 125,
+    "write12h": 250,
+    "output": 500
+  },
+  "plannedReserveNanoUsd": 7600000,
+  "verifiedFramingBound": null,
+  "verifiedFailureBilling": null,
+  "projectWriteEvidence": null
+}
