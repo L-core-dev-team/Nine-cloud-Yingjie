@@ -1,0 +1,2696 @@
+{
+  "archived": {
+    "B1": {
+      "literalScore": {
+        "count": "correct",
+        "features": "correct",
+        "lighting": "correct",
+        "people": "correct",
+        "perspective": "correct",
+        "place": "correct",
+        "timeOfDay": "correct",
+        "viewpoint": "correct"
+      },
+      "originalLiteralScore": {
+        "count": "correct",
+        "features": "correct",
+        "lighting": "correct",
+        "people": "correct",
+        "perspective": "omitted",
+        "place": "correct",
+        "timeOfDay": "correct",
+        "viewpoint": "correct"
+      },
+      "originalProjectionStatus": "partial",
+      "projection": {
+        "candidateContentSha256": "32afd27a03ac4c4ba661fa617ff174331bb436b05652e4a19154a484ba3f6b95",
+        "changed": null,
+        "corrections": [],
+        "digest": "8069c80c13711ac07568910252c8d49e5f57fb3fd3a498e5757cbc92c2216e4f",
+        "excluded": [],
+        "facilityCoverage": "coverage-needs-review",
+        "fields": {
+          "features": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 30,
+                "group": "B",
+                "layer": "current",
+                "quote": "日光落在裁纸案和压书石上",
+                "rev": 1,
+                "sourceSha256": "9b00dddb227f26ce5218ac184a73670b8a82abe9dbe0a1c7bcd2aabedae2332a",
+                "start": 18,
+                "visible": true
+              }
+            ],
+            "scope": "legacy-values",
+            "status": "complete",
+            "value": [
+              "压书石",
+              "裁纸案"
+            ]
+          },
+          "lighting": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 31,
+                "group": "B",
+                "layer": "current",
+                "quote": "清早的日光落在裁纸案和压书石上。",
+                "rev": 1,
+                "sourceSha256": "9b00dddb227f26ce5218ac184a73670b8a82abe9dbe0a1c7bcd2aabedae2332a",
+                "start": 15,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "日光"
+          },
+          "people": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 51,
+                "group": "B",
+                "layer": "current",
+                "quote": "整间屋已看遍，陪我校页的只有杜衡与闻笛。",
+                "rev": 1,
+                "sourceSha256": "9b00dddb227f26ce5218ac184a73670b8a82abe9dbe0a1c7bcd2aabedae2332a",
+                "start": 31,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": [
+              "杜衡",
+              "闻笛"
+            ]
+          },
+          "perspective": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 14,
+                "group": "B",
+                "layer": "current",
+                "quote": "朝东坐着",
+                "rev": 1,
+                "sourceSha256": "9b00dddb227f26ce5218ac184a73670b8a82abe9dbe0a1c7bcd2aabedae2332a",
+                "start": 10,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "向东"
+          },
+          "place": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 7,
+                "group": "B",
+                "layer": "current",
+                "quote": "石渠装订室",
+                "rev": 1,
+                "sourceSha256": "9b00dddb227f26ce5218ac184a73670b8a82abe9dbe0a1c7bcd2aabedae2332a",
+                "start": 2,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "石渠装订室"
+          },
+          "timeOfDay": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 20,
+                "group": "B",
+                "layer": "current",
+                "quote": "清早的日光",
+                "rev": 1,
+                "sourceSha256": "9b00dddb227f26ce5218ac184a73670b8a82abe9dbe0a1c7bcd2aabedae2332a",
+                "start": 15,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "清早"
+          },
+          "viewpoint": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 15,
+                "group": "B",
+                "layer": "current",
+                "quote": "我在石渠装订室的窗下朝东坐着。",
+                "rev": 1,
+                "sourceSha256": "9b00dddb227f26ce5218ac184a73670b8a82abe9dbe0a1c7bcd2aabedae2332a",
+                "start": 0,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "窗下"
+          }
+        },
+        "group": "B",
+        "objectContinuity": [],
+        "objectStateObservations": {},
+        "objects": [],
+        "partial": {},
+        "revision": 1,
+        "sceneEligible": false,
+        "sceneId": "石渠装订室",
+        "send": false,
+        "status": "complete",
+        "storyChangeCandidates": [],
+        "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+        "values": {
+          "count": 2,
+          "features": [
+            "压书石",
+            "裁纸案"
+          ],
+          "lighting": "日光",
+          "people": [
+            "杜衡",
+            "闻笛"
+          ],
+          "perspective": "向东",
+          "place": "石渠装订室",
+          "timeOfDay": "清早",
+          "viewpoint": "窗下"
+        },
+        "visibilityLimits": []
+      },
+      "rawSha256": "9e946fb149b6e8073357aaaa3154683ff539d70d05d7318c7bcc8405e59fe477"
+    },
+    "B2": {
+      "literalScore": {
+        "count": "correct",
+        "features": "correct",
+        "lighting": "correct",
+        "people": "correct",
+        "perspective": "correct",
+        "place": "correct",
+        "timeOfDay": "correct",
+        "viewpoint": "correct"
+      },
+      "originalLiteralScore": {
+        "count": "correct",
+        "features": "correct",
+        "lighting": "correct",
+        "people": "correct",
+        "perspective": "omitted",
+        "place": "correct",
+        "timeOfDay": "correct",
+        "viewpoint": "correct"
+      },
+      "originalProjectionStatus": "partial",
+      "projection": {
+        "candidateContentSha256": "d48b6de07594185eb95aba1d60f71277d270c8c25a884ddde2cb74efdffcdcbb",
+        "changed": [
+          "lighting"
+        ],
+        "corrections": [],
+        "digest": "ea8f635cc4fd98a274034b5609d85215f21c2a1434609a94740333db39e3fd3a",
+        "excluded": [
+          {
+            "end": 16,
+            "group": "B",
+            "layer": "past",
+            "quote": "刚才直照案头的日光",
+            "rev": 2,
+            "sourceSha256": "e928950217afdda1fe7b554821e4bce4e43f312130f0e6cd5bab27976a669726",
+            "start": 7,
+            "visible": false
+          }
+        ],
+        "facilityCoverage": "coverage-needs-review",
+        "fields": {
+          "features": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 53,
+                "group": "B",
+                "layer": "current",
+                "quote": "那两件用具还是原来的样子",
+                "rev": 2,
+                "sourceSha256": "e928950217afdda1fe7b554821e4bce4e43f312130f0e6cd5bab27976a669726",
+                "start": 41,
+                "visible": true
+              }
+            ],
+            "scope": "legacy-values",
+            "status": "complete",
+            "value": [
+              "压书石",
+              "裁纸案"
+            ]
+          },
+          "lighting": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 23,
+                "group": "B",
+                "layer": "current",
+                "quote": "变成了漫射天光",
+                "rev": 2,
+                "sourceSha256": "e928950217afdda1fe7b554821e4bce4e43f312130f0e6cd5bab27976a669726",
+                "start": 16,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "漫射天光"
+          },
+          "people": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 33,
+                "group": "B",
+                "layer": "current",
+                "quote": "我们三个谁也没挪窝",
+                "rev": 2,
+                "sourceSha256": "e928950217afdda1fe7b554821e4bce4e43f312130f0e6cd5bab27976a669726",
+                "start": 24,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": [
+              "杜衡",
+              "闻笛"
+            ]
+          },
+          "perspective": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "reobserve",
+            "refs": [
+              {
+                "end": 40,
+                "group": "B",
+                "layer": "current",
+                "quote": "从窗下朝东看",
+                "rev": 2,
+                "sourceSha256": "e928950217afdda1fe7b554821e4bce4e43f312130f0e6cd5bab27976a669726",
+                "start": 34,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "向东"
+          },
+          "place": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 33,
+                "group": "B",
+                "layer": "current",
+                "quote": "我们三个谁也没挪窝",
+                "rev": 2,
+                "sourceSha256": "e928950217afdda1fe7b554821e4bce4e43f312130f0e6cd5bab27976a669726",
+                "start": 24,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "石渠装订室"
+          },
+          "timeOfDay": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 58,
+                "group": "B",
+                "layer": "current",
+                "quote": "仍是清早",
+                "rev": 2,
+                "sourceSha256": "e928950217afdda1fe7b554821e4bce4e43f312130f0e6cd5bab27976a669726",
+                "start": 54,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "清早"
+          },
+          "viewpoint": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 40,
+                "group": "B",
+                "layer": "current",
+                "quote": "从窗下朝东看",
+                "rev": 2,
+                "sourceSha256": "e928950217afdda1fe7b554821e4bce4e43f312130f0e6cd5bab27976a669726",
+                "start": 34,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "窗下"
+          }
+        },
+        "group": "B",
+        "objectContinuity": [],
+        "objectStateObservations": {},
+        "objects": [],
+        "partial": {},
+        "revision": 2,
+        "sceneEligible": false,
+        "sceneId": "石渠装订室",
+        "send": false,
+        "status": "complete",
+        "storyChangeCandidates": [
+          {
+            "field": "lighting",
+            "quote": "变成了漫射天光"
+          }
+        ],
+        "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+        "values": {
+          "count": 2,
+          "features": [
+            "压书石",
+            "裁纸案"
+          ],
+          "lighting": "漫射天光",
+          "people": [
+            "杜衡",
+            "闻笛"
+          ],
+          "perspective": "向东",
+          "place": "石渠装订室",
+          "timeOfDay": "清早",
+          "viewpoint": "窗下"
+        },
+        "visibilityLimits": []
+      },
+      "rawSha256": "2637f6df9647055434bada7e61a66f12052a5dac610a318cc98876038f5ad229"
+    },
+    "B3": {
+      "literalScore": {
+        "count": "correct",
+        "features": "correct",
+        "lighting": "correct",
+        "people": "correct",
+        "perspective": "correct",
+        "place": "correct",
+        "timeOfDay": "correct",
+        "viewpoint": "correct"
+      },
+      "originalLiteralScore": {
+        "count": "correct",
+        "features": "correct",
+        "lighting": "correct",
+        "people": "correct",
+        "perspective": "omitted",
+        "place": "correct",
+        "timeOfDay": "correct",
+        "viewpoint": "correct"
+      },
+      "originalProjectionStatus": "partial",
+      "projection": {
+        "candidateContentSha256": "22a8fd5c981bacc40821120736cdddd0963551d6a27b38bff8ab07e7297df5b7",
+        "changed": [],
+        "corrections": [],
+        "digest": "ea8f635cc4fd98a274034b5609d85215f21c2a1434609a94740333db39e3fd3a",
+        "excluded": [],
+        "facilityCoverage": "coverage-needs-review",
+        "fields": {
+          "features": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 47,
+                "group": "B",
+                "layer": "current",
+                "quote": "同伴、器具和刚才那层漫射天光，一样都没换",
+                "rev": 3,
+                "sourceSha256": "7d0b0b161145c802dd5f161b9b729ab8e381e9b8d2073854cb015579eb857ca7",
+                "start": 27,
+                "visible": true
+              }
+            ],
+            "scope": "legacy-values",
+            "status": "complete",
+            "value": [
+              "压书石",
+              "裁纸案"
+            ]
+          },
+          "lighting": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 47,
+                "group": "B",
+                "layer": "current",
+                "quote": "同伴、器具和刚才那层漫射天光，一样都没换",
+                "rev": 3,
+                "sourceSha256": "7d0b0b161145c802dd5f161b9b729ab8e381e9b8d2073854cb015579eb857ca7",
+                "start": 27,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "漫射天光"
+          },
+          "people": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 47,
+                "group": "B",
+                "layer": "current",
+                "quote": "同伴、器具和刚才那层漫射天光，一样都没换",
+                "rev": 3,
+                "sourceSha256": "7d0b0b161145c802dd5f161b9b729ab8e381e9b8d2073854cb015579eb857ca7",
+                "start": 27,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": [
+              "杜衡",
+              "闻笛"
+            ]
+          },
+          "perspective": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "reobserve",
+            "refs": [
+              {
+                "end": 26,
+                "group": "B",
+                "layer": "current",
+                "quote": "我仍从窗下往东看",
+                "rev": 3,
+                "sourceSha256": "7d0b0b161145c802dd5f161b9b729ab8e381e9b8d2073854cb015579eb857ca7",
+                "start": 18,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "向东"
+          },
+          "place": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 17,
+                "group": "B",
+                "layer": "current",
+                "quote": "还在清早的装订室",
+                "rev": 3,
+                "sourceSha256": "7d0b0b161145c802dd5f161b9b729ab8e381e9b8d2073854cb015579eb857ca7",
+                "start": 9,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "石渠装订室"
+          },
+          "timeOfDay": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 17,
+                "group": "B",
+                "layer": "current",
+                "quote": "还在清早的装订室",
+                "rev": 3,
+                "sourceSha256": "7d0b0b161145c802dd5f161b9b729ab8e381e9b8d2073854cb015579eb857ca7",
+                "start": 9,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "清早"
+          },
+          "viewpoint": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 26,
+                "group": "B",
+                "layer": "current",
+                "quote": "我仍从窗下往东看",
+                "rev": 3,
+                "sourceSha256": "7d0b0b161145c802dd5f161b9b729ab8e381e9b8d2073854cb015579eb857ca7",
+                "start": 18,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "窗下"
+          }
+        },
+        "group": "B",
+        "objectContinuity": [],
+        "objectStateObservations": {},
+        "objects": [],
+        "partial": {},
+        "revision": 3,
+        "sceneEligible": false,
+        "sceneId": "石渠装订室",
+        "send": false,
+        "status": "complete",
+        "storyChangeCandidates": [],
+        "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+        "values": {
+          "count": 2,
+          "features": [
+            "压书石",
+            "裁纸案"
+          ],
+          "lighting": "漫射天光",
+          "people": [
+            "杜衡",
+            "闻笛"
+          ],
+          "perspective": "向东",
+          "place": "石渠装订室",
+          "timeOfDay": "清早",
+          "viewpoint": "窗下"
+        },
+        "visibilityLimits": []
+      },
+      "rawSha256": "f5da3272a162a99e2ff8a907daf43ae145dfc48e634ae071d0b06d064b54b9cb"
+    },
+    "C1": {
+      "literalScore": {
+        "count": "correct-unknown",
+        "features": "correct",
+        "lighting": "correct",
+        "people": "correct-unknown",
+        "perspective": "correct",
+        "place": "omitted",
+        "timeOfDay": "correct-unknown",
+        "viewpoint": "correct"
+      },
+      "originalLiteralScore": null,
+      "originalProjectionStatus": "HIDDEN",
+      "projection": {
+        "candidateContentSha256": "07d58fc90206b3c4b5fcfa8adda603bef5de86479d095a7404aee2b87c99f2ab",
+        "changed": null,
+        "corrections": [],
+        "digest": "353783f2a8850c056583ceb514954b9243955e83d8000df24499aae2b9c9b761",
+        "excluded": [
+          {
+            "end": 13,
+            "group": "C",
+            "layer": "reported",
+            "quote": "隔帘有人说孟川也在盐井值房",
+            "rev": 1,
+            "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+            "start": 0,
+            "visible": false
+          },
+          {
+            "end": 35,
+            "group": "C",
+            "layer": "unknown",
+            "quote": "帘后还有谁无从知道",
+            "rev": 1,
+            "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+            "start": 26,
+            "visible": false
+          },
+          {
+            "end": 68,
+            "group": "C",
+            "layer": "unknown",
+            "quote": "看不出外头是什么时辰",
+            "rev": 1,
+            "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+            "start": 58,
+            "visible": false
+          }
+        ],
+        "facilityCoverage": "coverage-needs-review",
+        "fields": {
+          "features": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 51,
+                "group": "C",
+                "layer": "current",
+                "quote": "眼前有布帘和水桶",
+                "rev": 1,
+                "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+                "start": 43,
+                "visible": true
+              }
+            ],
+            "scope": "legacy-values",
+            "status": "complete",
+            "value": [
+              "布帘",
+              "水桶"
+            ]
+          },
+          "lighting": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 57,
+                "group": "C",
+                "layer": "current",
+                "quote": "屋里是灯光",
+                "rev": 1,
+                "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+                "start": 52,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "灯光"
+          },
+          "people": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 25,
+                "group": "C",
+                "layer": "current",
+                "quote": "我却只看得见帘前的乔麦",
+                "rev": 1,
+                "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+                "start": 14,
+                "visible": true
+              }
+            ],
+            "status": "partial",
+            "value": [
+              "乔麦"
+            ]
+          },
+          "perspective": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 42,
+                "group": "C",
+                "layer": "current",
+                "quote": "面西",
+                "rev": 1,
+                "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+                "start": 40,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "向西"
+          },
+          "place": {
+            "error": null,
+            "firstKnown": null,
+            "operation": "unknown",
+            "refs": [
+              {
+                "end": 13,
+                "group": "C",
+                "layer": "reported",
+                "quote": "隔帘有人说孟川也在盐井值房",
+                "rev": 1,
+                "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+                "start": 0,
+                "visible": false
+              }
+            ],
+            "status": "unknown",
+            "value": null
+          },
+          "timeOfDay": {
+            "error": null,
+            "firstKnown": null,
+            "operation": "unknown",
+            "refs": [
+              {
+                "end": 68,
+                "group": "C",
+                "layer": "unknown",
+                "quote": "看不出外头是什么时辰",
+                "rev": 1,
+                "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+                "start": 58,
+                "visible": false
+              }
+            ],
+            "status": "unknown",
+            "value": null
+          },
+          "viewpoint": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 40,
+                "group": "C",
+                "layer": "current",
+                "quote": "我倚南墙",
+                "rev": 1,
+                "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+                "start": 36,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "南墙"
+          }
+        },
+        "group": "C",
+        "objectContinuity": [],
+        "objectStateObservations": {},
+        "objects": [],
+        "partial": {
+          "people": [
+            "乔麦"
+          ]
+        },
+        "revision": 1,
+        "sceneEligible": false,
+        "sceneId": null,
+        "send": false,
+        "status": "partial",
+        "storyChangeCandidates": [],
+        "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+        "values": {
+          "count": null,
+          "features": [
+            "布帘",
+            "水桶"
+          ],
+          "lighting": "灯光",
+          "people": null,
+          "perspective": "向西",
+          "place": null,
+          "timeOfDay": null,
+          "viewpoint": "南墙"
+        },
+        "visibilityLimits": [
+          {
+            "end": 35,
+            "group": "C",
+            "layer": "unknown",
+            "quote": "帘后还有谁无从知道",
+            "rev": 1,
+            "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+            "start": 26,
+            "visible": false
+          }
+        ]
+      },
+      "rawSha256": "36ef99b9f7099f6aa1ccdc403138f8dbedc7848d6109dbd1c4ab4a53e7d2a287"
+    },
+    "C2": {
+      "beforeReview": "coverage-needs-review",
+      "literalScore": {
+        "count": "correct",
+        "features": "wrong",
+        "lighting": "correct",
+        "people": "correct",
+        "perspective": "correct",
+        "place": "correct",
+        "timeOfDay": "correct-unknown",
+        "viewpoint": "wrong"
+      },
+      "originalLiteralScore": {
+        "count": "correct",
+        "features": "wrong",
+        "lighting": "correct",
+        "people": "correct",
+        "perspective": "correct",
+        "place": "correct",
+        "timeOfDay": "correct-unknown",
+        "viewpoint": "wrong"
+      },
+      "originalProjectionStatus": "partial",
+      "projection": {
+        "candidateContentSha256": "8906987fba2c86b4d5115a68fb4f0cf6ba23512490d6354e45213e89bcb4006a",
+        "changed": [
+          "features",
+          "people",
+          "place",
+          "viewpoint"
+        ],
+        "corrections": [
+          {
+            "field": "place",
+            "reason": "newly-grounded"
+          },
+          {
+            "field": "people",
+            "reason": "reobserved"
+          },
+          {
+            "field": "features",
+            "reason": "reobserved"
+          },
+          {
+            "field": "lighting",
+            "reason": "reobserved"
+          },
+          {
+            "field": "viewpoint",
+            "reason": "reobserved"
+          },
+          {
+            "field": "perspective",
+            "reason": "reobserved"
+          }
+        ],
+        "digest": "52d646421abf4c6db5f3bd765c9dab8d284777966b3cb94c87878dfd9e37e79e",
+        "excluded": [
+          {
+            "end": 9,
+            "group": "C",
+            "layer": "dream",
+            "quote": "我梦见孟川推翻水桶",
+            "rev": 2,
+            "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+            "start": 0,
+            "visible": false
+          }
+        ],
+        "facilityCoverage": "coverage-needs-review",
+        "fields": {
+          "features": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "reobserve",
+            "refs": [
+              {
+                "end": 37,
+                "group": "C",
+                "layer": "current",
+                "quote": "水桶好端端的，布帘还在",
+                "rev": 2,
+                "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+                "start": 26,
+                "visible": true
+              }
+            ],
+            "scope": "legacy-values",
+            "status": "complete",
+            "value": [
+              "布帘",
+              "水桶好端端的"
+            ]
+          },
+          "lighting": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "reobserve",
+            "refs": [
+              {
+                "end": 42,
+                "group": "C",
+                "layer": "current",
+                "quote": "灯光依旧",
+                "rev": 2,
+                "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+                "start": 38,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "灯光"
+          },
+          "people": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "reobserve",
+            "refs": [
+              {
+                "end": 66,
+                "group": "C",
+                "layer": "current",
+                "quote": "乔麦正掀帘让我看清全部屋子，现在除了她没有别人",
+                "rev": 2,
+                "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+                "start": 43,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": [
+              "乔麦"
+            ]
+          },
+          "perspective": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "reobserve",
+            "refs": [
+              {
+                "end": 26,
+                "group": "C",
+                "layer": "current",
+                "quote": "向西看去",
+                "rev": 2,
+                "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+                "start": 22,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "向西"
+          },
+          "place": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "reobserve",
+            "refs": [
+              {
+                "end": 21,
+                "group": "C",
+                "layer": "current",
+                "quote": "醒来仍在盐井值房南墙边",
+                "rev": 2,
+                "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+                "start": 10,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "盐井值房"
+          },
+          "timeOfDay": {
+            "error": null,
+            "firstKnown": null,
+            "operation": "unknown",
+            "refs": [
+              {
+                "end": 73,
+                "group": "C",
+                "layer": "current",
+                "quote": "仍辨不出时辰",
+                "rev": 2,
+                "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+                "start": 67,
+                "visible": true
+              }
+            ],
+            "status": "unknown",
+            "value": null
+          },
+          "viewpoint": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "reobserve",
+            "refs": [
+              {
+                "end": 21,
+                "group": "C",
+                "layer": "current",
+                "quote": "醒来仍在盐井值房南墙边",
+                "rev": 2,
+                "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+                "start": 10,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "南墙边"
+          }
+        },
+        "group": "C",
+        "objectContinuity": [],
+        "objectStateObservations": {},
+        "objects": [],
+        "partial": {},
+        "revision": 2,
+        "sceneEligible": false,
+        "sceneId": "盐井值房",
+        "send": false,
+        "status": "partial",
+        "storyChangeCandidates": [],
+        "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+        "values": {
+          "count": 1,
+          "features": [
+            "布帘",
+            "水桶好端端的"
+          ],
+          "lighting": "灯光",
+          "people": [
+            "乔麦"
+          ],
+          "perspective": "向西",
+          "place": "盐井值房",
+          "timeOfDay": null,
+          "viewpoint": "南墙边"
+        },
+        "visibilityLimits": []
+      },
+      "rawSha256": "862f8cc90c78d99a4e972cb777ce0c01a3a2ea578f1d1a7612ce316cab20e1f5"
+    },
+    "D1": {
+      "literalScore": {
+        "count": "correct",
+        "features": "correct",
+        "lighting": "correct",
+        "people": "correct",
+        "perspective": "correct-unknown",
+        "place": "correct",
+        "timeOfDay": "correct-unknown",
+        "viewpoint": "correct"
+      },
+      "originalLiteralScore": {
+        "count": "correct",
+        "features": "correct",
+        "lighting": "correct",
+        "people": "correct",
+        "perspective": "correct-unknown",
+        "place": "correct",
+        "timeOfDay": "correct-unknown",
+        "viewpoint": "correct"
+      },
+      "originalProjectionStatus": "partial",
+      "projection": {
+        "candidateContentSha256": "bf02c7730c507d38076d372d66b214d9d82e89224100e116837f92b4ce1e5d45",
+        "changed": null,
+        "corrections": [],
+        "digest": "940d624cb9ebdbc28236ddba2891cde47adceaf24a1ac2e35e7c5a2ca0b61ea1",
+        "excluded": [],
+        "facilityCoverage": "coverage-needs-review",
+        "fields": {
+          "features": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 47,
+                "group": "D",
+                "layer": "current",
+                "quote": "我看见吊秤和砝码盒",
+                "rev": 1,
+                "sourceSha256": "aa8c3ae663efa5abb10cd8fa3a21b4fdaf9ab82a39c0c0d737f9400951c36315",
+                "start": 38,
+                "visible": true
+              }
+            ],
+            "scope": "legacy-values",
+            "status": "complete",
+            "value": [
+              "吊秤",
+              "砝码盒"
+            ]
+          },
+          "lighting": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 37,
+                "group": "D",
+                "layer": "current",
+                "quote": "灰白天光里",
+                "rev": 1,
+                "sourceSha256": "aa8c3ae663efa5abb10cd8fa3a21b4fdaf9ab82a39c0c0d737f9400951c36315",
+                "start": 32,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "灰白天光"
+          },
+          "people": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 60,
+                "group": "D",
+                "layer": "current",
+                "quote": "环顾亭内，除我外只有陶苇",
+                "rev": 1,
+                "sourceSha256": "aa8c3ae663efa5abb10cd8fa3a21b4fdaf9ab82a39c0c0d737f9400951c36315",
+                "start": 48,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": [
+              "陶苇"
+            ]
+          },
+          "perspective": {
+            "error": null,
+            "firstKnown": null,
+            "operation": "unknown",
+            "refs": [
+              {
+                "end": 24,
+                "group": "D",
+                "layer": "current",
+                "quote": "辨不出自己朝着哪一方",
+                "rev": 1,
+                "sourceSha256": "aa8c3ae663efa5abb10cd8fa3a21b4fdaf9ab82a39c0c0d737f9400951c36315",
+                "start": 14,
+                "visible": false
+              }
+            ],
+            "status": "unknown",
+            "value": null
+          },
+          "place": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 13,
+                "group": "D",
+                "layer": "current",
+                "quote": "我在桐湾验秤亭的秤台旁停下",
+                "rev": 1,
+                "sourceSha256": "aa8c3ae663efa5abb10cd8fa3a21b4fdaf9ab82a39c0c0d737f9400951c36315",
+                "start": 0,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "桐湾验秤亭"
+          },
+          "timeOfDay": {
+            "error": null,
+            "firstKnown": null,
+            "operation": "unknown",
+            "refs": [
+              {
+                "end": 31,
+                "group": "D",
+                "layer": "current",
+                "quote": "也看不出时辰",
+                "rev": 1,
+                "sourceSha256": "aa8c3ae663efa5abb10cd8fa3a21b4fdaf9ab82a39c0c0d737f9400951c36315",
+                "start": 25,
+                "visible": false
+              }
+            ],
+            "status": "unknown",
+            "value": null
+          },
+          "viewpoint": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 13,
+                "group": "D",
+                "layer": "current",
+                "quote": "我在桐湾验秤亭的秤台旁停下",
+                "rev": 1,
+                "sourceSha256": "aa8c3ae663efa5abb10cd8fa3a21b4fdaf9ab82a39c0c0d737f9400951c36315",
+                "start": 0,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "秤台旁"
+          }
+        },
+        "group": "D",
+        "objectContinuity": [],
+        "objectStateObservations": {},
+        "objects": [],
+        "partial": {},
+        "revision": 1,
+        "sceneEligible": false,
+        "sceneId": "桐湾验秤亭",
+        "send": false,
+        "status": "partial",
+        "storyChangeCandidates": [],
+        "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+        "values": {
+          "count": 1,
+          "features": [
+            "吊秤",
+            "砝码盒"
+          ],
+          "lighting": "灰白天光",
+          "people": [
+            "陶苇"
+          ],
+          "perspective": null,
+          "place": "桐湾验秤亭",
+          "timeOfDay": null,
+          "viewpoint": "秤台旁"
+        },
+        "visibilityLimits": []
+      },
+      "rawSha256": "f557ba3ab24369e3c2d530b99e1b042ee91acfa000e3f6d501a0f22426e3ac55"
+    },
+    "D2": {
+      "literalScore": {
+        "count": "correct",
+        "features": "correct",
+        "lighting": "correct",
+        "people": "correct",
+        "perspective": "correct",
+        "place": "correct",
+        "timeOfDay": "correct-unknown",
+        "viewpoint": "correct"
+      },
+      "originalLiteralScore": {
+        "count": "correct",
+        "features": "correct",
+        "lighting": "correct",
+        "people": "correct",
+        "perspective": "correct",
+        "place": "correct",
+        "timeOfDay": "correct-unknown",
+        "viewpoint": "correct"
+      },
+      "originalProjectionStatus": "partial",
+      "projection": {
+        "candidateContentSha256": "141309dd5d4736d8f83e589df67c605f8dd20e0f1a9bb14eb40f9efb92c695c6",
+        "changed": [
+          "perspective"
+        ],
+        "corrections": [
+          {
+            "field": "perspective",
+            "reason": "newly-grounded"
+          }
+        ],
+        "digest": "e741b539a1e95598bb256869c8a66d838ab334fb27a6e450d41a77ad39e4ce99",
+        "excluded": [
+          {
+            "end": 73,
+            "group": "D",
+            "layer": "unknown",
+            "quote": "仍不知时辰",
+            "rev": 2,
+            "sourceSha256": "bef87476b408e4a1cdc14c3fd679be19d73900afca4ffff6e0a493c68705aa26",
+            "start": 68,
+            "visible": false
+          }
+        ],
+        "facilityCoverage": "coverage-needs-review",
+        "fields": {
+          "features": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 53,
+                "group": "D",
+                "layer": "current",
+                "quote": "陶苇和我守着吊秤和砝码盒",
+                "rev": 2,
+                "sourceSha256": "bef87476b408e4a1cdc14c3fd679be19d73900afca4ffff6e0a493c68705aa26",
+                "start": 41,
+                "visible": true
+              }
+            ],
+            "scope": "legacy-values",
+            "status": "complete",
+            "value": [
+              "吊秤",
+              "砝码盒"
+            ]
+          },
+          "lighting": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 60,
+                "group": "D",
+                "layer": "current",
+                "quote": "灰白天光依旧",
+                "rev": 2,
+                "sourceSha256": "bef87476b408e4a1cdc14c3fd679be19d73900afca4ffff6e0a493c68705aa26",
+                "start": 54,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "灰白天光"
+          },
+          "people": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 53,
+                "group": "D",
+                "layer": "current",
+                "quote": "陶苇和我守着吊秤和砝码盒",
+                "rev": 2,
+                "sourceSha256": "bef87476b408e4a1cdc14c3fd679be19d73900afca4ffff6e0a493c68705aa26",
+                "start": 41,
+                "visible": true
+              },
+              {
+                "end": 67,
+                "group": "D",
+                "layer": "current",
+                "quote": "亭里没有旁人",
+                "rev": 2,
+                "sourceSha256": "bef87476b408e4a1cdc14c3fd679be19d73900afca4ffff6e0a493c68705aa26",
+                "start": 61,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": [
+              "陶苇"
+            ]
+          },
+          "perspective": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "reobserve",
+            "refs": [
+              {
+                "end": 40,
+                "group": "D",
+                "layer": "current",
+                "quote": "自己一直面向北，并没有转身",
+                "rev": 2,
+                "sourceSha256": "bef87476b408e4a1cdc14c3fd679be19d73900afca4ffff6e0a493c68705aa26",
+                "start": 27,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "向北"
+          },
+          "place": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 16,
+                "group": "D",
+                "layer": "current",
+                "quote": "仍在桐湾验秤亭的秤台旁",
+                "rev": 2,
+                "sourceSha256": "bef87476b408e4a1cdc14c3fd679be19d73900afca4ffff6e0a493c68705aa26",
+                "start": 5,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "桐湾验秤亭"
+          },
+          "timeOfDay": {
+            "error": null,
+            "firstKnown": null,
+            "operation": "unknown",
+            "refs": [
+              {
+                "end": 73,
+                "group": "D",
+                "layer": "unknown",
+                "quote": "仍不知时辰",
+                "rev": 2,
+                "sourceSha256": "bef87476b408e4a1cdc14c3fd679be19d73900afca4ffff6e0a493c68705aa26",
+                "start": 68,
+                "visible": false
+              }
+            ],
+            "status": "unknown",
+            "value": null
+          },
+          "viewpoint": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 16,
+                "group": "D",
+                "layer": "current",
+                "quote": "我没挪步，仍在桐湾验秤亭的秤台旁",
+                "rev": 2,
+                "sourceSha256": "bef87476b408e4a1cdc14c3fd679be19d73900afca4ffff6e0a493c68705aa26",
+                "start": 0,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "秤台旁"
+          }
+        },
+        "group": "D",
+        "objectContinuity": [],
+        "objectStateObservations": {},
+        "objects": [],
+        "partial": {},
+        "revision": 2,
+        "sceneEligible": false,
+        "sceneId": "桐湾验秤亭",
+        "send": false,
+        "status": "partial",
+        "storyChangeCandidates": [],
+        "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+        "values": {
+          "count": 1,
+          "features": [
+            "吊秤",
+            "砝码盒"
+          ],
+          "lighting": "灰白天光",
+          "people": [
+            "陶苇"
+          ],
+          "perspective": "向北",
+          "place": "桐湾验秤亭",
+          "timeOfDay": null,
+          "viewpoint": "秤台旁"
+        },
+        "visibilityLimits": []
+      },
+      "rawSha256": "c71160acfcd1158c72933c88467171a72f69e9f1712f8517498ed48eaeffc0dc"
+    },
+    "D3": {
+      "literalScore": {
+        "count": "correct",
+        "features": "correct",
+        "lighting": "correct",
+        "people": "correct",
+        "perspective": "correct",
+        "place": "correct",
+        "timeOfDay": "correct-unknown",
+        "viewpoint": "correct"
+      },
+      "originalLiteralScore": {
+        "count": "correct",
+        "features": "correct",
+        "lighting": "correct",
+        "people": "correct",
+        "perspective": "correct",
+        "place": "correct",
+        "timeOfDay": "correct-unknown",
+        "viewpoint": "correct"
+      },
+      "originalProjectionStatus": "partial",
+      "projection": {
+        "candidateContentSha256": "c14a5d4f910774a884dfb76158f6bfb24e569ed49ea6c37395f5baf2d3c8609e",
+        "changed": [],
+        "corrections": [],
+        "digest": "e741b539a1e95598bb256869c8a66d838ab334fb27a6e450d41a77ad39e4ce99",
+        "excluded": [
+          {
+            "end": 15,
+            "group": "D",
+            "layer": "past",
+            "quote": "我记起昨天秤台旁曾站着两位挑夫",
+            "rev": 3,
+            "sourceSha256": "e4602a74d60466b0a9f32acf8b2a1f3b908801ded494d591caf53ec71166532c",
+            "start": 0,
+            "visible": false
+          }
+        ],
+        "facilityCoverage": "coverage-needs-review",
+        "fields": {
+          "features": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 52,
+                "group": "D",
+                "layer": "current",
+                "quote": "吊秤和砝码盒都没挪动",
+                "rev": 3,
+                "sourceSha256": "e4602a74d60466b0a9f32acf8b2a1f3b908801ded494d591caf53ec71166532c",
+                "start": 42,
+                "visible": true
+              }
+            ],
+            "scope": "legacy-values",
+            "status": "complete",
+            "value": [
+              "吊秤",
+              "砝码盒"
+            ]
+          },
+          "lighting": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 61,
+                "group": "D",
+                "layer": "current",
+                "quote": "还是那片灰白天光",
+                "rev": 3,
+                "sourceSha256": "e4602a74d60466b0a9f32acf8b2a1f3b908801ded494d591caf53ec71166532c",
+                "start": 53,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "灰白天光"
+          },
+          "people": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 34,
+                "group": "D",
+                "layer": "current",
+                "quote": "陶苇就在眼前",
+                "rev": 3,
+                "sourceSha256": "e4602a74d60466b0a9f32acf8b2a1f3b908801ded494d591caf53ec71166532c",
+                "start": 28,
+                "visible": true
+              },
+              {
+                "end": 41,
+                "group": "D",
+                "layer": "current",
+                "quote": "亭里只有我们",
+                "rev": 3,
+                "sourceSha256": "e4602a74d60466b0a9f32acf8b2a1f3b908801ded494d591caf53ec71166532c",
+                "start": 35,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": [
+              "陶苇"
+            ]
+          },
+          "perspective": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 27,
+                "group": "D",
+                "layer": "current",
+                "quote": "仍向北望",
+                "rev": 3,
+                "sourceSha256": "e4602a74d60466b0a9f32acf8b2a1f3b908801ded494d591caf53ec71166532c",
+                "start": 23,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "向北"
+          },
+          "place": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 27,
+                "group": "D",
+                "layer": "current",
+                "quote": "眼下我在秤台旁仍向北望",
+                "rev": 3,
+                "sourceSha256": "e4602a74d60466b0a9f32acf8b2a1f3b908801ded494d591caf53ec71166532c",
+                "start": 16,
+                "visible": true
+              },
+              {
+                "end": 41,
+                "group": "D",
+                "layer": "current",
+                "quote": "亭里只有我们",
+                "rev": 3,
+                "sourceSha256": "e4602a74d60466b0a9f32acf8b2a1f3b908801ded494d591caf53ec71166532c",
+                "start": 35,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "桐湾验秤亭"
+          },
+          "timeOfDay": {
+            "error": null,
+            "firstKnown": null,
+            "operation": "unknown",
+            "refs": [
+              {
+                "end": 69,
+                "group": "D",
+                "layer": "current",
+                "quote": "时辰依然看不出",
+                "rev": 3,
+                "sourceSha256": "e4602a74d60466b0a9f32acf8b2a1f3b908801ded494d591caf53ec71166532c",
+                "start": 62,
+                "visible": false
+              }
+            ],
+            "status": "unknown",
+            "value": null
+          },
+          "viewpoint": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 27,
+                "group": "D",
+                "layer": "current",
+                "quote": "眼下我在秤台旁仍向北望",
+                "rev": 3,
+                "sourceSha256": "e4602a74d60466b0a9f32acf8b2a1f3b908801ded494d591caf53ec71166532c",
+                "start": 16,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "秤台旁"
+          }
+        },
+        "group": "D",
+        "objectContinuity": [],
+        "objectStateObservations": {},
+        "objects": [],
+        "partial": {},
+        "revision": 3,
+        "sceneEligible": false,
+        "sceneId": "桐湾验秤亭",
+        "send": false,
+        "status": "partial",
+        "storyChangeCandidates": [],
+        "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+        "values": {
+          "count": 1,
+          "features": [
+            "吊秤",
+            "砝码盒"
+          ],
+          "lighting": "灰白天光",
+          "people": [
+            "陶苇"
+          ],
+          "perspective": "向北",
+          "place": "桐湾验秤亭",
+          "timeOfDay": null,
+          "viewpoint": "秤台旁"
+        },
+        "visibilityLimits": []
+      },
+      "rawSha256": "866e2729d216f309dd19f90227b7a604a46ea10a69ba4de5c787d3d0541b3437"
+    }
+  },
+  "new": {
+    "C1": {
+      "literalScore": {
+        "count": "correct-unknown",
+        "features": "correct",
+        "lighting": "correct",
+        "people": "correct-unknown",
+        "perspective": "correct",
+        "place": "omitted",
+        "timeOfDay": "correct-unknown",
+        "viewpoint": "correct"
+      },
+      "packetSha256": "e8314d0152df6707484eef05da7c92277604cd3029d74992924b83197f24110c",
+      "projection": {
+        "candidateContentSha256": "c731d152de6aa3675dca5f4849e2e401d8314ba0a86cf755e02a3f233ea3fd01",
+        "changed": null,
+        "corrections": [],
+        "digest": "21fcaf273bf63d46635955a537adc89fb4795cbab1ac3dc3752cea266db6f6ae",
+        "excluded": [
+          {
+            "end": 13,
+            "group": "C",
+            "layer": "reported",
+            "quote": "隔帘有人说孟川也在盐井值房",
+            "rev": 1,
+            "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+            "start": 0,
+            "visible": false
+          },
+          {
+            "end": 35,
+            "group": "C",
+            "layer": "unknown",
+            "quote": "帘后还有谁无从知道",
+            "rev": 1,
+            "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+            "start": 26,
+            "visible": false
+          },
+          {
+            "end": 68,
+            "group": "C",
+            "layer": "unknown",
+            "quote": "看不出外头是什么时辰",
+            "rev": 1,
+            "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+            "start": 58,
+            "visible": false
+          }
+        ],
+        "facilityCoverage": "coverage-needs-review",
+        "fields": {
+          "features": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 51,
+                "group": "C",
+                "layer": "current",
+                "quote": "眼前有布帘和水桶",
+                "rev": 1,
+                "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+                "start": 43,
+                "visible": true
+              }
+            ],
+            "scope": "identity-list",
+            "status": "complete",
+            "value": [
+              "布帘",
+              "水桶"
+            ]
+          },
+          "lighting": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 57,
+                "group": "C",
+                "layer": "current",
+                "quote": "屋里是灯光",
+                "rev": 1,
+                "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+                "start": 52,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "灯光"
+          },
+          "people": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 25,
+                "group": "C",
+                "layer": "current",
+                "quote": "我却只看得见帘前的乔麦",
+                "rev": 1,
+                "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+                "start": 14,
+                "visible": true
+              }
+            ],
+            "status": "partial",
+            "value": [
+              "乔麦"
+            ]
+          },
+          "perspective": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 42,
+                "group": "C",
+                "layer": "current",
+                "quote": "面西",
+                "rev": 1,
+                "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+                "start": 40,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "向西"
+          },
+          "place": {
+            "error": null,
+            "firstKnown": null,
+            "operation": "unknown",
+            "refs": [
+              {
+                "end": 13,
+                "group": "C",
+                "layer": "reported",
+                "quote": "隔帘有人说孟川也在盐井值房",
+                "rev": 1,
+                "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+                "start": 0,
+                "visible": false
+              }
+            ],
+            "status": "unknown",
+            "value": null
+          },
+          "timeOfDay": {
+            "error": null,
+            "firstKnown": null,
+            "operation": "unknown",
+            "refs": [
+              {
+                "end": 68,
+                "group": "C",
+                "layer": "unknown",
+                "quote": "看不出外头是什么时辰",
+                "rev": 1,
+                "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+                "start": 58,
+                "visible": false
+              }
+            ],
+            "status": "unknown",
+            "value": null
+          },
+          "viewpoint": {
+            "error": null,
+            "firstKnown": 1,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 40,
+                "group": "C",
+                "layer": "current",
+                "quote": "我倚南墙",
+                "rev": 1,
+                "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+                "start": 36,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "南墙"
+          }
+        },
+        "group": "C",
+        "objectContinuity": [],
+        "objectStateObservations": {
+          "布帘": "specific-state-unobserved",
+          "水桶": "specific-state-unobserved"
+        },
+        "objects": [
+          {
+            "id": "布帘",
+            "identityEvidence": {
+              "end": 51,
+              "group": "C",
+              "layer": "current",
+              "quote": "眼前有布帘和水桶",
+              "rev": 1,
+              "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+              "start": 43,
+              "visible": true
+            },
+            "mention": null,
+            "state": null,
+            "stateEvidence": null,
+            "status": "state-unknown"
+          },
+          {
+            "id": "水桶",
+            "identityEvidence": {
+              "end": 51,
+              "group": "C",
+              "layer": "current",
+              "quote": "眼前有布帘和水桶",
+              "rev": 1,
+              "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+              "start": 43,
+              "visible": true
+            },
+            "mention": null,
+            "state": null,
+            "stateEvidence": null,
+            "status": "state-unknown"
+          }
+        ],
+        "partial": {
+          "people": [
+            "乔麦"
+          ]
+        },
+        "revision": 1,
+        "sceneEligible": false,
+        "sceneId": null,
+        "send": false,
+        "status": "partial",
+        "storyChangeCandidates": [],
+        "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+        "values": {
+          "count": null,
+          "features": [
+            "布帘",
+            "水桶"
+          ],
+          "lighting": "灯光",
+          "people": null,
+          "perspective": "向西",
+          "place": null,
+          "timeOfDay": null,
+          "viewpoint": "南墙"
+        },
+        "visibilityLimits": [
+          {
+            "end": 35,
+            "group": "C",
+            "layer": "unknown",
+            "quote": "帘后还有谁无从知道",
+            "rev": 1,
+            "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+            "start": 26,
+            "visible": false
+          }
+        ]
+      },
+      "rawSha256": "bab3b098b8cdf4eb11ec39a542665f22a57697143aa9355c729681c148dd7cf5"
+    },
+    "C2": {
+      "literalScore": {
+        "count": "correct",
+        "features": "wrong",
+        "lighting": "correct",
+        "people": "correct",
+        "perspective": "correct",
+        "place": "correct",
+        "timeOfDay": "correct-unknown",
+        "viewpoint": "wrong"
+      },
+      "packetSha256": "b48332622366e819e029b24eb8e86bbad7bb0bbba1146becffc7c42aef053de3",
+      "projection": {
+        "candidateContentSha256": "29e758b832b35775136551263cfa7b03802574cbe79569ba9135aade6c513569",
+        "changed": [
+          "people",
+          "place",
+          "viewpoint"
+        ],
+        "corrections": [
+          {
+            "field": "place",
+            "reason": "newly-grounded"
+          },
+          {
+            "field": "people",
+            "reason": "reobserved"
+          },
+          {
+            "field": "features",
+            "reason": "reobserved"
+          },
+          {
+            "field": "lighting",
+            "reason": "reobserved"
+          },
+          {
+            "field": "viewpoint",
+            "reason": "reobserved"
+          },
+          {
+            "field": "perspective",
+            "reason": "reobserved"
+          }
+        ],
+        "digest": "7dc7e9e4343d59f1fbfc185ba37c3fb4bce0921efd9848c575b3dfd5395d77a6",
+        "excluded": [
+          {
+            "end": 9,
+            "group": "C",
+            "layer": "dream",
+            "quote": "我梦见孟川推翻水桶",
+            "rev": 2,
+            "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+            "start": 0,
+            "visible": false
+          }
+        ],
+        "facilityCoverage": "model-reviewed-no-omission",
+        "fields": {
+          "features": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "reobserve",
+            "refs": [
+              {
+                "end": 32,
+                "group": "C",
+                "layer": "current",
+                "quote": "水桶好端端的",
+                "rev": 2,
+                "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+                "start": 26,
+                "visible": true
+              },
+              {
+                "end": 37,
+                "group": "C",
+                "layer": "current",
+                "quote": "布帘还在",
+                "rev": 2,
+                "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+                "start": 33,
+                "visible": true
+              },
+              {
+                "end": 48,
+                "group": "C",
+                "layer": "current",
+                "quote": "乔麦正掀帘",
+                "rev": 2,
+                "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+                "start": 43,
+                "visible": true
+              }
+            ],
+            "scope": "identity-list",
+            "status": "complete",
+            "value": [
+              "布帘",
+              "水桶"
+            ]
+          },
+          "lighting": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 42,
+                "group": "C",
+                "layer": "current",
+                "quote": "灯光依旧",
+                "rev": 2,
+                "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+                "start": 38,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "灯光"
+          },
+          "people": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "reobserve",
+            "refs": [
+              {
+                "end": 56,
+                "group": "C",
+                "layer": "current",
+                "quote": "乔麦正掀帘让我看清全部屋子",
+                "rev": 2,
+                "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+                "start": 43,
+                "visible": true
+              },
+              {
+                "end": 66,
+                "group": "C",
+                "layer": "current",
+                "quote": "现在除了她没有别人",
+                "rev": 2,
+                "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+                "start": 57,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": [
+              "乔麦"
+            ]
+          },
+          "perspective": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 26,
+                "group": "C",
+                "layer": "current",
+                "quote": "向西看去",
+                "rev": 2,
+                "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+                "start": 22,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "向西"
+          },
+          "place": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "reobserve",
+            "refs": [
+              {
+                "end": 21,
+                "group": "C",
+                "layer": "current",
+                "quote": "醒来仍在盐井值房南墙边",
+                "rev": 2,
+                "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+                "start": 10,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "盐井值房"
+          },
+          "timeOfDay": {
+            "error": null,
+            "firstKnown": null,
+            "operation": "unknown",
+            "refs": [
+              {
+                "end": 73,
+                "group": "C",
+                "layer": "unknown",
+                "quote": "仍辨不出时辰",
+                "rev": 2,
+                "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+                "start": 67,
+                "visible": false
+              }
+            ],
+            "status": "unknown",
+            "value": null
+          },
+          "viewpoint": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "set",
+            "refs": [
+              {
+                "end": 21,
+                "group": "C",
+                "layer": "current",
+                "quote": "醒来仍在盐井值房南墙边",
+                "rev": 2,
+                "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+                "start": 10,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "南墙边"
+          }
+        },
+        "group": "C",
+        "objectContinuity": [
+          {
+            "evidence": {
+              "end": 37,
+              "group": "C",
+              "layer": "current",
+              "quote": "布帘还在",
+              "rev": 2,
+              "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+              "start": 33,
+              "visible": true
+            },
+            "id": "布帘",
+            "previousRevision": 1
+          }
+        ],
+        "objectStateObservations": {
+          "布帘": "newly-observed-state",
+          "水桶": "newly-observed-state"
+        },
+        "objects": [
+          {
+            "id": "布帘",
+            "identityEvidence": {
+              "end": 37,
+              "group": "C",
+              "layer": "current",
+              "quote": "布帘还在",
+              "rev": 2,
+              "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+              "start": 33,
+              "visible": true
+            },
+            "mention": "帘",
+            "state": "正掀帘",
+            "stateEvidence": {
+              "end": 48,
+              "group": "C",
+              "layer": "current",
+              "quote": "乔麦正掀帘",
+              "rev": 2,
+              "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+              "start": 43,
+              "visible": true
+            },
+            "status": "observed"
+          },
+          {
+            "id": "水桶",
+            "identityEvidence": {
+              "end": 32,
+              "group": "C",
+              "layer": "current",
+              "quote": "水桶好端端的",
+              "rev": 2,
+              "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+              "start": 26,
+              "visible": true
+            },
+            "mention": "水桶",
+            "state": "好端端的",
+            "stateEvidence": {
+              "end": 32,
+              "group": "C",
+              "layer": "current",
+              "quote": "水桶好端端的",
+              "rev": 2,
+              "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+              "start": 26,
+              "visible": true
+            },
+            "status": "observed"
+          }
+        ],
+        "partial": {},
+        "revision": 2,
+        "sceneEligible": false,
+        "sceneId": "盐井值房",
+        "send": false,
+        "status": "partial",
+        "storyChangeCandidates": [],
+        "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+        "values": {
+          "count": 1,
+          "features": [
+            "布帘",
+            "水桶"
+          ],
+          "lighting": "灯光",
+          "people": [
+            "乔麦"
+          ],
+          "perspective": "向西",
+          "place": "盐井值房",
+          "timeOfDay": null,
+          "viewpoint": "南墙边"
+        },
+        "visibilityLimits": []
+      },
+      "rawSha256": "f15dcaf9a22f7cce3d84b3fec9f332c91788e12636711824408fb9879ded7ffe"
+    },
+    "C3": {
+      "literalScore": {
+        "count": "correct",
+        "features": "wrong",
+        "lighting": "correct",
+        "people": "correct",
+        "perspective": "correct",
+        "place": "correct",
+        "timeOfDay": "correct-unknown",
+        "viewpoint": "wrong"
+      },
+      "packetSha256": "e1cdfab069edb2d9a48e3b3711aa593f5040e468f75a51c2ceb7286e1524533b",
+      "projection": {
+        "candidateContentSha256": "912b470e3d51d942f40eb77be25e3273bd6e69c8f7399ec19550e6672d4433fd",
+        "changed": [
+          "people"
+        ],
+        "corrections": [],
+        "digest": "c0eaa8dde6de06b0f409feea87b50652d52ef949f7317b191cd830defecc8553",
+        "excluded": [
+          {
+            "end": 75,
+            "group": "C",
+            "layer": "unknown",
+            "quote": "时辰依然不明",
+            "rev": 3,
+            "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+            "start": 69,
+            "visible": false
+          }
+        ],
+        "facilityCoverage": "coverage-needs-review",
+        "fields": {
+          "features": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 68,
+                "group": "C",
+                "layer": "current",
+                "quote": "水桶、布帘和灯光都在",
+                "rev": 3,
+                "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+                "start": 58,
+                "visible": true
+              },
+              {
+                "end": 22,
+                "group": "C",
+                "layer": "current",
+                "quote": "帘已经挂到钩上",
+                "rev": 3,
+                "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+                "start": 15,
+                "visible": true
+              }
+            ],
+            "scope": "identity-list",
+            "status": "complete",
+            "value": [
+              "布帘",
+              "水桶"
+            ]
+          },
+          "lighting": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 68,
+                "group": "C",
+                "layer": "current",
+                "quote": "水桶、布帘和灯光都在",
+                "rev": 3,
+                "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+                "start": 58,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "灯光"
+          },
+          "people": {
+            "error": null,
+            "firstKnown": 3,
+            "operation": "remove",
+            "refs": [
+              {
+                "end": 14,
+                "group": "C",
+                "layer": "current",
+                "quote": "乔麦放下手，从我跟前跨出门槛",
+                "rev": 3,
+                "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+                "start": 0,
+                "visible": true
+              },
+              {
+                "end": 49,
+                "group": "C",
+                "layer": "current",
+                "quote": "在场的除我以外再无一人",
+                "rev": 3,
+                "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+                "start": 38,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": []
+          },
+          "perspective": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 57,
+                "group": "C",
+                "layer": "current",
+                "quote": "我仍倚南墙向西",
+                "rev": 3,
+                "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+                "start": 50,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "向西"
+          },
+          "place": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 37,
+                "group": "C",
+                "layer": "current",
+                "quote": "我环顾整间值房",
+                "rev": 3,
+                "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+                "start": 30,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "盐井值房"
+          },
+          "timeOfDay": {
+            "error": null,
+            "firstKnown": null,
+            "operation": "unknown",
+            "refs": [
+              {
+                "end": 75,
+                "group": "C",
+                "layer": "unknown",
+                "quote": "时辰依然不明",
+                "rev": 3,
+                "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+                "start": 69,
+                "visible": false
+              }
+            ],
+            "status": "unknown",
+            "value": null
+          },
+          "viewpoint": {
+            "error": null,
+            "firstKnown": 2,
+            "operation": "keep",
+            "refs": [
+              {
+                "end": 55,
+                "group": "C",
+                "layer": "current",
+                "quote": "我仍倚南墙",
+                "rev": 3,
+                "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+                "start": 50,
+                "visible": true
+              }
+            ],
+            "status": "complete",
+            "value": "南墙边"
+          }
+        },
+        "group": "C",
+        "objectContinuity": [
+          {
+            "evidence": {
+              "end": 68,
+              "group": "C",
+              "layer": "current",
+              "quote": "水桶、布帘和灯光都在",
+              "rev": 3,
+              "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+              "start": 58,
+              "visible": true
+            },
+            "id": "布帘",
+            "previousRevision": 2
+          },
+          {
+            "evidence": {
+              "end": 68,
+              "group": "C",
+              "layer": "current",
+              "quote": "水桶、布帘和灯光都在",
+              "rev": 3,
+              "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+              "start": 58,
+              "visible": true
+            },
+            "id": "水桶",
+            "previousRevision": 2
+          }
+        ],
+        "objectStateObservations": {
+          "布帘": "different-observed-state",
+          "水桶": "specific-state-unobserved"
+        },
+        "objects": [
+          {
+            "id": "布帘",
+            "identityEvidence": {
+              "end": 68,
+              "group": "C",
+              "layer": "current",
+              "quote": "水桶、布帘和灯光都在",
+              "rev": 3,
+              "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+              "start": 58,
+              "visible": true
+            },
+            "mention": "帘",
+            "state": "挂到钩上",
+            "stateEvidence": {
+              "end": 22,
+              "group": "C",
+              "layer": "current",
+              "quote": "帘已经挂到钩上",
+              "rev": 3,
+              "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+              "start": 15,
+              "visible": true
+            },
+            "status": "observed"
+          },
+          {
+            "id": "水桶",
+            "identityEvidence": {
+              "end": 68,
+              "group": "C",
+              "layer": "current",
+              "quote": "水桶、布帘和灯光都在",
+              "rev": 3,
+              "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+              "start": 58,
+              "visible": true
+            },
+            "mention": null,
+            "state": null,
+            "stateEvidence": null,
+            "status": "state-unknown"
+          }
+        ],
+        "partial": {},
+        "revision": 3,
+        "sceneEligible": false,
+        "sceneId": "盐井值房",
+        "send": false,
+        "status": "partial",
+        "storyChangeCandidates": [
+          {
+            "field": "people",
+            "quote": "乔麦放下手，从我跟前跨出门槛"
+          }
+        ],
+        "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+        "values": {
+          "count": 0,
+          "features": [
+            "布帘",
+            "水桶"
+          ],
+          "lighting": "灯光",
+          "people": [],
+          "perspective": "向西",
+          "place": "盐井值房",
+          "timeOfDay": null,
+          "viewpoint": "南墙边"
+        },
+        "visibilityLimits": []
+      },
+      "rawSha256": "870688244af92b990f596ad9b12123baade8fc3316f9fa0b47ae737acd1d182e"
+    }
+  },
+  "reviews": {
+    "review-new": {
+      "candidateSha256": "f15dcaf9a22f7cce3d84b3fec9f332c91788e12636711824408fb9879ded7ffe",
+      "coverage": "model-reviewed-no-omission",
+      "error": null,
+      "packetSha256": "4da2e8466a41fd6aadc99a7b62456ea25d3ecf80bf0195d94b47ca5e84868fe4",
+      "rawSha256": "745617ae1abaa81f4b10fedae14cc72bd5dac65e8ec57ef613cf4e2c7f99f760"
+    },
+    "review-old": {
+      "candidateSha256": "862f8cc90c78d99a4e972cb777ce0c01a3a2ea578f1d1a7612ce316cab20e1f5",
+      "coverage": "coverage-needs-review",
+      "error": null,
+      "packetSha256": "47fbaaac36c5d71662c7f4b014acacf946ac35464430fb4f73efbd379feecb0d",
+      "rawSha256": "335c6776f9f300312ded6e57a230fa392512949ff73312287571b1cbb5f49a7a"
+    }
+  }
+}

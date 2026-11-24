@@ -1,0 +1,23 @@
+{
+  "verdict": "needs-review",
+  "checked": [
+    {
+      "object": "水桶",
+      "quote": "水桶好端端的",
+      "registered": "水桶好端端的"
+    },
+    {
+      "object": "布帘",
+      "quote": "乔麦正掀帘让我看清全部屋子",
+      "registered": "布帘"
+    }
+  ],
+  "findings": [
+    {
+      "kind": "omitted",
+      "object": "布帘",
+      "quote": "乔麦正掀帘让我看清全部屋子",
+      "detail": "物件字段列出了布帘，引文也表明布帘还在，但漏记了乔麦正在掀起布帘这一可见动作。"
+    }
+  ]
+}

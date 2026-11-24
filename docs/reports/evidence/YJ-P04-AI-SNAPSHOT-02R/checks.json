@@ -1,0 +1,72 @@
+[
+  {
+    "command": [
+      "python",
+      "-B",
+      "packages/ai-snapshot-pilot/v2/run.py",
+      "legacy"
+    ],
+    "exit": 0,
+    "matchesArchivedOutput": true,
+    "archivedFileSha256": "502ecfdaab3b99c43aed54d992cd4254d69b273e68f95d6263745f9ec5c967f7"
+  },
+  {
+    "command": [
+      "python",
+      "-B",
+      "packages/ai-snapshot-pilot/v2/run.py",
+      "new"
+    ],
+    "exit": 0,
+    "matchesArchivedOutput": true,
+    "archivedFileSha256": "3b8e3b5d4b77e45f75d255ab01ce89123f80fdfff04802ef2e465b19a3aa65e0"
+  },
+  {
+    "command": [
+      "python",
+      "-B",
+      "packages/ai-snapshot-pilot/dialogue.py",
+      "docs/reports/evidence/YJ-P04-AI-SNAPSHOT-01/dialogue/raw"
+    ],
+    "exit": 0,
+    "matchesArchivedOutput": true,
+    "archivedFileSha256": "6b80c6efbe9cc26c060b9f0b09c237d1ec50335f73a156da17b286d7dcac5f4f"
+  },
+  {
+    "command": [
+      "python",
+      "-B",
+      "packages/ai-snapshot-pilot/v2/test_recovery.py"
+    ],
+    "exit": 0,
+    "output": "{\"crossScope\": \"HIDE\", \"directionAsPosition\": \"FIELD_UNKNOWN\", \"falseQuote\": \"HIDE\", \"future\": \"HIDE\", \"keepAfterMissing\": \"FIELD_UNKNOWN\", \"keepMismatch\": \"FIELD_UNKNOWN\", \"noEvidenceKeep\": \"FIELD_UNKNOWN\", \"noncurrent\": \"HIDE\", \"overlap\": \"HIDE\", \"repairAfterRejected\": \"ACCEPT\", \"unboundPlaceInheritance\": \"FIELD_UNKNOWN\", \"unknownReobserved\": \"ACCEPT\", \"unknownVsEmpty\": \"DISTINCT\", \"wrongDirection\": \"FIELD_UNKNOWN\"}\n"
+  },
+  {
+    "command": [
+      "python",
+      "-B",
+      "packages/ai-snapshot-pilot/test_pilot.py"
+    ],
+    "exit": 0,
+    "output": "test_budget_expiry_and_crash_reopen (__main__.PilotChecks.test_budget_expiry_and_crash_reopen) ... ok\ntest_configuration_and_amount_proof (__main__.PilotChecks.test_configuration_and_amount_proof) ... ok\ntest_failures_stop_whole_batch (__main__.PilotChecks.test_failures_stop_whole_batch) ... ok\ntest_grounding_and_projection (__main__.PilotChecks.test_grounding_and_projection) ... ok\ntest_nine_then_tenth_rejected (__main__.PilotChecks.test_nine_then_tenth_rejected) ... ok\ntest_only_fixed_text_requests (__main__.PilotChecks.test_only_fixed_text_requests) ... ok\ntest_partial_and_exhaustive_rosters_and_deltas (__main__.PilotChecks.test_partial_and_exhaustive_rosters_and_deltas) ... ok\ntest_raw_invalid_json_stops_and_preserves_first_reply (__main__.PilotChecks.test_raw_invalid_json_stops_and_preserves_first_reply) ... ok\ntest_two_connections_compete (__main__.PilotChecks.test_two_connections_compete) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.460s\n\nOK\n"
+  },
+  {
+    "command": [
+      "python",
+      "-B",
+      "packages/ai-snapshot-pilot/v2r/test_repair.py"
+    ],
+    "exit": 0,
+    "output": "test_current_object_evidence (__main__.Repair.test_current_object_evidence) ... ok\ntest_direction_vocabulary_and_subject (__main__.Repair.test_direction_vocabulary_and_subject) ... ok\ntest_independent_coverage (__main__.Repair.test_independent_coverage) ... ok\ntest_partial_roster (__main__.Repair.test_partial_roster) ... ok\ntest_recovery_and_state_expiry (__main__.Repair.test_recovery_and_state_expiry) ... ok\ntest_replay_b_and_d (__main__.Repair.test_replay_b_and_d) ... ok\ntest_scope_tampering (__main__.Repair.test_scope_tampering) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.087s\n\nOK\n"
+  },
+  {
+    "command": [
+      "node",
+      "--permission",
+      "--allow-fs-read=*",
+      "packages/first-play/test/trigger.test.mjs"
+    ],
+    "exit": 0,
+    "output": "✔ confirmed visual changes, no-op and unsupported emphasis (1.2348ms)\n✔ review, current display and reference use have separate verdicts (0.6189ms)\n✔ rumor, reported speech, dreams and unseen narrators cannot add a present character (3.8322ms)\n✔ provider capability cannot override authorization or a suppressed trigger (0.405ms)\nℹ tests 4\nℹ suites 0\nℹ pass 4\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 9.9259\n"
+  }
+]

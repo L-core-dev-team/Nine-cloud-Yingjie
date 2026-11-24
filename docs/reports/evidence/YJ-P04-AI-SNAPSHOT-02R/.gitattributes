@@ -1,0 +1,4 @@
+raw/*.json -text whitespace=cr-at-eol
+packets/*.json -text
+
+*.json -text
