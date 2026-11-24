@@ -1,0 +1,23 @@
+{
+  "scope": "research-spring-01",
+  "rev": 13,
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "fields": {
+    "place": ["听泉堂", "keep", ["我还在听泉堂"]],
+    "viewpoint": [null, "unknown", []],
+    "perspective": [null, "unknown", []],
+    "timeOfDay": [null, "unknown", []],
+    "lighting": [null, "unknown", []],
+    "people": [["岑苇"], "keep", ["我还在听泉堂", "除我仍只有岑苇"]]
+  },
+  "objects": [
+    ["水簿", "摊开在原处，墨迹尚湿", "水簿摊开在原处", "水簿摊开在原处，墨迹尚湿", "水簿"]
+  ],
+  "limits": [],
+  "excluded": [],
+  "events": [
+    ["commitment", "岑苇在水簿上签下自己的名字"],
+    ["payoff", "把她这一轮井水正式让给陆禾的药圃"],
+    ["change", "从这一刻起她自己再不能支用"]
+  ]
+}

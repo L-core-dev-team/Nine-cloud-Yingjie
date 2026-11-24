@@ -1,0 +1,23 @@
+{
+  "scope": "research-spring-01",
+  "rev": 3,
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "fields": {
+    "place": ["听泉堂", "seen", ["跨出听泉堂", "看遍堂内"]],
+    "viewpoint": ["门边", "seen", ["我在门边"]],
+    "perspective": ["向北", "seen", ["朝北看遍堂内"]],
+    "timeOfDay": [null, "unknown", []],
+    "lighting": [null, "unknown", []],
+    "people": [["岑苇"], "seen", ["看遍堂内", "身边只剩岑苇"]]
+  },
+  "objects": [
+    ["水簿", "摊开", "水簿摊开在方桌上", "水簿摊开在方桌上", "水簿"],
+    ["铜盆", null, "铜盆还在桌脚", null, null]
+  ],
+  "limits": [],
+  "excluded": [],
+  "events": [
+    ["change", "陆禾把水簿翻开"],
+    ["change", "随后跨出听泉堂去探井"]
+  ]
+}

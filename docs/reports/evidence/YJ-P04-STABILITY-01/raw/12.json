@@ -1,0 +1,24 @@
+{
+  "scope": "research-spring-01",
+  "rev": 12,
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "fields": {
+    "place": ["听泉堂", "seen", ["岑苇跨进听泉堂", "堂内除我只有她"]],
+    "viewpoint": [null, "unknown", []],
+    "perspective": [null, "unknown", []],
+    "timeOfDay": [null, "unknown", []],
+    "lighting": [null, "unknown", []],
+    "people": [["岑苇"], "seen", ["岑苇跨进听泉堂", "堂内除我只有她"]]
+  },
+  "objects": [
+    ["叶子", "取走", "她取走叶子", "她取走叶子", "叶子"],
+    ["水簿", "摊开", "水簿摊开", "水簿摊开", "水簿"]
+  ],
+  "limits": [],
+  "excluded": [],
+  "events": [
+    ["change", "岑苇跨进听泉堂"],
+    ["change", "她取走叶子"],
+    ["new-knowledge", "水簿摊开，写着两轮尚待分配的井水"]
+  ]
+}

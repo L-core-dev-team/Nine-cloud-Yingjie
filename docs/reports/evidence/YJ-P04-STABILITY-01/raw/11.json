@@ -1,0 +1,21 @@
+{
+  "scope": "research-spring-01",
+  "rev": 11,
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "fields": {
+    "place": ["听泉堂", "keep", ["我仍在听泉堂门边朝北等着"]],
+    "viewpoint": ["门边", "keep", ["我仍在听泉堂门边朝北等着"]],
+    "perspective": ["向北", "keep", ["我仍在听泉堂门边朝北等着"]],
+    "timeOfDay": [null, "unknown", []],
+    "lighting": ["斜阳", "seen", ["斜阳照着桌脚"]],
+    "people": [[], "keep", ["我仍在听泉堂门边朝北等着", "堂里一直没有旁人"]]
+  },
+  "objects": [
+    ["铜盆", "@keep", "铜盆还是空的", "铜盆还是空的", "铜盆"],
+    ["水簿", null, "水簿上压着一片叶子", null, null],
+    ["叶子", "水簿上", "水簿上压着一片叶子", "水簿上压着一片叶子", "叶子"]
+  ],
+  "limits": ["我看不清它底下的书页"],
+  "excluded": [["hypothetical", "要是岑苇不来，那句话也只能算一句话"]],
+  "events": []
+}

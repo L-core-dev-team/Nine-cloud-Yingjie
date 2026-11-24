@@ -1,0 +1,24 @@
+{
+  "scope": "research-spring-01",
+  "rev": 10,
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "fields": {
+    "place": ["听泉堂", "seen", ["我一个人回到听泉堂"]],
+    "viewpoint": ["门边", "seen", ["我在门边向北看遍全堂"]],
+    "perspective": ["向北", "seen", ["我在门边向北看遍全堂"]],
+    "timeOfDay": ["傍晚", "seen", ["已是傍晚"]],
+    "lighting": ["斜阳", "seen", ["西窗透进斜阳"]],
+    "people": [[], "seen", ["我在门边向北看遍全堂", "这会儿除我再无一人"]]
+  },
+  "objects": [
+    ["水簿", "合拢", "水簿合拢在方桌上", "水簿合拢在方桌上", "水簿"],
+    ["铜盆", "空了", "桌脚的铜盆空了", "桌脚的铜盆空了", "铜盆"]
+  ],
+  "limits": [],
+  "excluded": [["past", "井口那道白弧在我脑海里闪了一下"]],
+  "events": [
+    ["change", "我一个人回到听泉堂"],
+    ["change", "雾早已散净"],
+    ["change", "桌脚的铜盆空了"]
+  ]
+}

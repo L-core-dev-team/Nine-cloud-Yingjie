@@ -1,0 +1,82 @@
+{
+  "scope": "research-spring-01",
+  "rev": 4,
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "fields": {
+    "place": [
+      "听泉堂",
+      "seen",
+      [
+        "蒋绫迈进听泉堂",
+        "我在门边望遍全堂"
+      ]
+    ],
+    "viewpoint": [
+      "门边",
+      "seen",
+      [
+        "我在门边"
+      ]
+    ],
+    "perspective": [
+      null,
+      "unknown",
+      []
+    ],
+    "timeOfDay": [
+      null,
+      "unknown",
+      []
+    ],
+    "lighting": [
+      null,
+      "unknown",
+      []
+    ],
+    "people": [
+      [
+        "蒋绫",
+        "岑苇"
+      ],
+      "seen",
+      [
+        "望遍全堂",
+        "眼下只有蒋绫和岑苇"
+      ]
+    ]
+  },
+  "objects": [
+    [
+      "水簿",
+      "被风掀动了一角",
+      "水簿摊开的那页",
+      "水簿摊开的那页被风掀动了一角",
+      "水簿摊开的那页"
+    ]
+  ],
+  "limits": [],
+  "excluded": [
+    [
+      "reported",
+      "井脉回响的消息"
+    ],
+    [
+      "hypothetical",
+      "还不能保证一定来水"
+    ]
+  ],
+  "events": [
+    [
+      "change",
+      "一身湿衣的蒋绫迈进听泉堂"
+    ],
+    [
+      "new-knowledge",
+      "她带来井脉回响的消息"
+    ],
+    [
+      "change",
+      "水簿摊开的那页被风掀动了一角"
+    ]
+  ]
+}

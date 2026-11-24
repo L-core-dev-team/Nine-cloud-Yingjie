@@ -1,0 +1,23 @@
+{
+  "scope": "research-spring-01",
+  "rev": 8,
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "fields": {
+    "place": ["伏潮井", "seen", ["伏潮井的水汽散了"]],
+    "viewpoint": ["井栏旁", "seen", ["我在井栏旁"]],
+    "perspective": ["向西", "seen", ["才从北辰刻痕认出自己一直面向西，并没有转身"]],
+    "timeOfDay": [null, "unknown", []],
+    "lighting": ["灰光", "seen", ["灰光里连闸缝都看得真切"]],
+    "people": [["蒋绫"], "seen", ["看遍井台只有蒋绫"]]
+  },
+  "objects": [
+    ["铜盆", "薄冰仍完整", "铜盆里的薄冰仍完整", "铜盆里的薄冰仍完整", "铜盆"],
+    ["石闸", "紧闭", "石闸紧闭", "石闸紧闭", "石闸"]
+  ],
+  "limits": [],
+  "excluded": [],
+  "events": [
+    ["change", "伏潮井的水汽散了"],
+    ["new-knowledge", "才从北辰刻痕认出自己一直面向西，并没有转身"]
+  ]
+}

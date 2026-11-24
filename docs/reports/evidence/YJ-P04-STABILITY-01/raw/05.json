@@ -1,0 +1,17 @@
+{
+  "scope": "research-spring-01",
+  "rev": 5,
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "fields": {
+    "place": ["听泉堂", "seen", ["眼下仍在听泉堂"]],
+    "viewpoint": [null, "unknown", []],
+    "perspective": [null, "unknown", []],
+    "timeOfDay": [null, "unknown", []],
+    "lighting": [null, "unknown", []],
+    "people": [["蒋绫"], "partial", ["我只瞧见近处的蒋绫"]]
+  },
+  "objects": [["铜盆", "只露出盆沿", "铜盆只露出盆沿", "铜盆只露出盆沿", "铜盆"]],
+  "limits": ["远处还有谁看不清", "看不清盆底"],
+  "excluded": [["past", "我记起去年陆禾曾在听泉堂打碎铜盆"], ["past", "那声碎响只是记忆"]],
+  "events": [["change", "白雾从门缝扑上来"]]
+}

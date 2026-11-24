@@ -1,0 +1,20 @@
+{
+  "scope": "research-spring-01",
+  "rev": 6,
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "fields": {
+    "place": ["伏潮井", "seen", ["我和蒋绫到了伏潮井"]],
+    "viewpoint": ["井栏旁", "seen", ["我在井栏旁停步"]],
+    "perspective": [null, "unknown", []],
+    "timeOfDay": [null, "unknown", []],
+    "lighting": ["灰光", "seen", ["灰光罩着井栏"]],
+    "people": [["蒋绫"], "seen", ["井台尽收眼底", "除我只有蒋绫"]]
+  },
+  "objects": [
+    ["铜盆", "结着薄冰", "这里另有一只铜盆", "铜盆里结着薄冰", "铜盆"],
+    ["石闸", "紧闭", "石闸紧闭", "石闸紧闭", "石闸"]
+  ],
+  "limits": ["却辨不清时辰", "我辨不出方向"],
+  "excluded": [],
+  "events": [["change", "我和蒋绫到了伏潮井"]]
+}

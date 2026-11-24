@@ -1,0 +1,20 @@
+{
+  "scope": "research-spring-01",
+  "rev": 1,
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "fields": {
+    "place": ["听泉堂", "seen", ["我在听泉堂的门边"]],
+    "viewpoint": ["门边", "seen", ["我在听泉堂的门边"]],
+    "perspective": ["向北", "seen", ["向北望"]],
+    "timeOfDay": ["清晨", "seen", ["清晨"]],
+    "lighting": ["天光", "seen", ["窗里透进天光"]],
+    "people": [["岑苇", "陆禾"], "seen", ["满堂扫过", "除我只坐着岑苇和陆禾"]]
+  },
+  "objects": [
+    ["水簿", "合拢", "方桌上合拢的水簿", "合拢的水簿", "水簿"],
+    ["铜盆", "盛着半盆水", "桌脚的铜盆", "铜盆盛着半盆水", "铜盆"]
+  ],
+  "limits": [],
+  "excluded": [["hypothetical", "今年药圃若是分不到溪水，他娘留下的苗该怎么办"]],
+  "events": []
+}

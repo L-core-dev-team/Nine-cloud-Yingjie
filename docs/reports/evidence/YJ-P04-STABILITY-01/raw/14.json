@@ -1,0 +1,17 @@
+{
+  "scope": "research-spring-01",
+  "rev": 14,
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "fields": {
+    "place": ["听泉堂", "keep", ["我和岑苇仍在听泉堂"]],
+    "viewpoint": [null, "unknown", []],
+    "perspective": [null, "unknown", []],
+    "timeOfDay": [null, "unknown", []],
+    "lighting": [null, "unknown", []],
+    "people": [["岑苇"], "keep", ["我和岑苇仍在听泉堂", "堂门一直没再开", "堂内没有第三人"]]
+  },
+  "objects": [["水簿", "仍摊开", "水簿仍摊开", "水簿仍摊开", "水簿"]],
+  "limits": [],
+  "excluded": [["hypothetical", "明天要不要去看幼苗"]],
+  "events": [["change", "墨迹已经干了"]]
+}
