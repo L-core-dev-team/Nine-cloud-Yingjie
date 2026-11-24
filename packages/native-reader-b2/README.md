@@ -11,7 +11,7 @@ python -B packages/native-facts/test/prepare.py ../Nine-cloud ../b2-regression-n
 node --permission --allow-fs-read=* packages/native-reader-b2/test/verifier.mjs ../b2-regression-new
 ```
 
-在环境管理方允许本机 TCP 客户端后，从同一目录执行以下入口。最后一个参数指向本机 PostgreSQL 原生工具目录。入口先运行原始回环探针，遇到拒绝立即退出。本次实测停在 TCP CONNECT。后续命令是待实机验证的正例与部分对照驱动。
+在受管会话中经官方机制获准本机回环连接后，从同一目录运行下列命令。最后一个参数指向本机 PostgreSQL 原生工具目录。启动器会复查原探针，随后创建新集群。读证与知识截点使用仅在测试期间监听的本机 HTTP 端口；认证、存档创建及原生规则提交调用固定版本上游服务。退出 0 表示矩阵全部通过，退出 2 表示已运行但仍有上游依赖，失败断言退出 1。本次 40 项通过、2 项依赖，详见[逐例回执](../../docs/reports/evidence/YJ-P04-NATIVE-READER-B2/resume/final.json)。
 
 ```powershell
 python -B packages/native-reader-b2/test/launch.py ../Nine-cloud ../b2-runtime-new "C:/path/to/postgresql/bin"

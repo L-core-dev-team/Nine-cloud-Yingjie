@@ -50,18 +50,28 @@ async function run() {
         await client.query("GRANT SELECT,INSERT ON turn_requests,turn_events,npc_authorized_observation_outbox TO b2_app");
         await client.query("GRANT SELECT,INSERT ON npc_memory_observation_supersessions TO b2_app");
         await client.query("GRANT SELECT ON cloud_archive_trash TO b2_app");
+        await client.query("GRANT SELECT,INSERT,UPDATE ON account_operations TO b2_app");
+        await client.query("GRANT INSERT ON account_lifecycle_audit TO b2_app");
+        await client.query("GRANT DELETE ON auth_challenges TO b2_app");
         await client.query("COMMIT");
     } catch (error) {
         await client.query("ROLLBACK");
         throw error;
     } finally { client.release(); await setup.end(); }
     const pool = new Pool({...options,user:"b2_app",password:login,database:name});
+    let appConnections=0;
+    pool.on("connect",()=>{appConnections++;});
     try {
         const report = await runHistoricalPositive(core,pool,"postgresql://127.0.0.1:"+port+"/"+name);
-        console.log(JSON.stringify(report));
+        console.log(JSON.stringify({...report,appConnections}));
+        if (!report.matrixComplete) process.exitCode=2;
     } finally { await pool.end(); }
 }
 try { await run(); } catch(error) {
-    console.error(JSON.stringify({status:"LOCAL_CHAIN_FAILED",errorClass:error.name,code:/^[A-Z0-9_]+$/.test(error.code)?error.code:null}));
+    const frame=error.stack?.split("\n").find(line=>line.includes("/real-history.mjs:") || line.includes("/pg-boundary.mjs:"));
+    const deniedRelation=/^permission denied for table ([a-z_]+)$/.exec(error.message)?.[1];
+    console.error(JSON.stringify({status:"LOCAL_CHAIN_FAILED",errorClass:error.name,
+        code:/^[A-Z0-9_]+$/.test(error.code)?error.code:null,deniedRelation,
+        testFrame:frame?.match(/(?:real-history|pg-boundary)\.mjs:\d+:\d+/)?.[0]}));
     process.exitCode=1;
 }

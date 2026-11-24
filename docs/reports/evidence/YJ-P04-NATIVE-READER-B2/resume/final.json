@@ -1,0 +1,522 @@
+{
+  "command": "python -B packages/native-reader-b2/test/launch.py ../Nine-cloud ../b2-upstream-final <existing-local-PG-bin>",
+  "exit": 2,
+  "logSHA256": "aba5c7335871a0b498e28b9aea2fa7be2689077bbb0499ea762d3c315fd50515",
+  "probe": {
+    "runId": "74223e63-74eb-40f8-b502-4f9b8693acaf",
+    "utc": "2026-11-24T08:52:10.662Z",
+    "sourceSha256": "8b7022155c9fa967ee3c84105ee68dead386eedd39e7f558aefc4595676f4f80",
+    "platform": "win32",
+    "osRelease": "10.0.26200",
+    "node": "v26.13.0",
+    "nodePermissionModel": false,
+    "nodeNetPermission": null,
+    "preloadConfigured": false,
+    "target": "127.0.0.1",
+    "portSelection": "OS-assigned",
+    "observations": {
+      "tcpListen": {
+        "status": "PASS"
+      },
+      "tcpConnect": {
+        "status": "PASS",
+        "peerPayloadVerified": true
+      },
+      "httpListen": {
+        "status": "PASS"
+      },
+      "httpGet": {
+        "status": "PASS",
+        "httpStatus": 200,
+        "bodyVerified": true
+      }
+    },
+    "status": "LOOPBACK_PASS"
+  },
+  "result": {
+    "scope": "two-new-local-authenticated-saves",
+    "proof": {
+      "sceneEligible": false,
+      "send": false,
+      "added": 1,
+      "status": "CONFIRMED_NATIVE_LOCATION",
+      "source": "local-test-pg-history/1",
+      "observedThroughRevision": 3,
+      "evidenceLearnedAt": "2026-11-24T08:53:30.637Z",
+      "learnedThroughRevision": 3,
+      "targetRevision": 1,
+      "from": "loc_luhuadu",
+      "to": "loc_wangqitai"
+    },
+    "captures": [
+      {
+        "account": "A",
+        "revision": 0,
+        "count": 0,
+        "stateSHA256": "188db26299183400af1a10955f1eb9495c2ea3d8f34876ff03833cb170fcf7d8",
+        "capturedAt": "2026-11-24T08:52:29.546Z"
+      },
+      {
+        "account": "B",
+        "revision": 0,
+        "count": 0,
+        "stateSHA256": "f020b215f7ff3dffdff3f48ae99e73041638bf593b833ce824a4d8804cf2476f",
+        "capturedAt": "2026-11-24T08:52:29.551Z"
+      },
+      {
+        "account": "A",
+        "revision": 1,
+        "count": 1,
+        "stateSHA256": "e5d78dcf11aa168947efb4c12ab84e35e9f38cbb0c6bc5631a509e799d1ef95a",
+        "capturedAt": "2026-11-24T08:52:29.588Z"
+      },
+      {
+        "account": "A",
+        "revision": 2,
+        "count": 2,
+        "stateSHA256": "89ec89fcd9da95fb36c44eb3b9f0f13695e60ce4fedc88e2b9007f268edcbdad",
+        "capturedAt": "2026-11-24T08:52:29.625Z"
+      },
+      {
+        "account": "A",
+        "revision": 3,
+        "count": 3,
+        "stateSHA256": "f2c70b69aaf137a53b625309e21d53fa6b6f1992d4d701b1ec4d3f09b52d7721",
+        "capturedAt": "2026-11-24T08:52:29.672Z"
+      },
+      {
+        "account": "A",
+        "revision": 4,
+        "count": 4,
+        "stateSHA256": "6983462748cd155ce100fb316d815e63ab7f9cb47b28c11b9f1122d11ba46e6e",
+        "capturedAt": "2026-11-24T08:53:30.842Z"
+      },
+      {
+        "account": "A",
+        "revision": 5,
+        "count": 5,
+        "stateSHA256": "30ea86e40c33cbeaebf306d5b35445acb7d0fc6dc36a5c15a91a28b9922e5990",
+        "capturedAt": "2026-11-24T08:53:30.887Z"
+      },
+      {
+        "account": "A",
+        "revision": 6,
+        "count": 7,
+        "stateSHA256": "1620bcc3c514d51c62dc2819e0c54141c2ced5fc40522ef27d4103e6eff22a1f",
+        "capturedAt": "2026-11-24T08:53:30.910Z"
+      },
+      {
+        "account": "A",
+        "revision": 7,
+        "count": 8,
+        "stateSHA256": "dfab1e2d7b81d2a76865fff23b3a8782cfc5a7e7c02df9d5eafb2e4165a4be3c",
+        "capturedAt": "2026-11-24T08:53:30.938Z"
+      },
+      {
+        "account": "B",
+        "revision": 1,
+        "count": 1,
+        "stateSHA256": "20adc66e1363f0e4fd14f0ae5bc05d5399b6e1230147da3640b0b5b00214345d",
+        "capturedAt": "2026-11-24T08:53:31.310Z"
+      }
+    ],
+    "cases": [
+      {
+        "name": "later-owner-read",
+        "status": "PASS",
+        "proof": {
+          "sceneEligible": false,
+          "send": false,
+          "added": 1,
+          "status": "CONFIRMED_NATIVE_LOCATION",
+          "source": "local-test-pg-history/1",
+          "observedThroughRevision": 3,
+          "evidenceLearnedAt": "2026-11-24T08:53:30.637Z",
+          "learnedThroughRevision": 3,
+          "targetRevision": 1,
+          "from": "loc_luhuadu",
+          "to": "loc_wangqitai"
+        },
+        "matched": {
+          "before": "188db26299183400af1a10955f1eb9495c2ea3d8f34876ff03833cb170fcf7d8",
+          "after": "e5d78dcf11aa168947efb4c12ab84e35e9f38cbb0c6bc5631a509e799d1ef95a",
+          "rawReceipt": "83303984028c339c1b688ec870b3e722d587142773d4c11a763c90a7e0e83be1",
+          "end": "e2db47575108f1abc08c3b0057f3d092a19ffe5e1ccae7fe5e8ab489ed7a40b3",
+          "pgEventDigest": "e2db47575108f1abc08c3b0057f3d092a19ffe5e1ccae7fe5e8ab489ed7a40b3",
+          "eventIdSHA256": "e6b106d5219ee4cecb990f52a714e33f5cf79b9a8f5d95d95174040468f9ce70",
+          "settings": {
+            "isolation": "repeatable read",
+            "readonly": "on"
+          }
+        }
+      },
+      {
+        "name": "return",
+        "status": "PASS",
+        "firstEventSHA256": "e6b106d5219ee4cecb990f52a714e33f5cf79b9a8f5d95d95174040468f9ce70",
+        "revisitEventSHA256": "1416fc3c44333a24b00068b4b7c0f9336062900551a43d6404c95f1924476091",
+        "revision": 7,
+        "added": 1
+      },
+      {
+        "name": "sublocation",
+        "status": "PASS",
+        "reason": "sublocation-change",
+        "added": 0
+      },
+      {
+        "name": "blocked",
+        "status": "PASS",
+        "reason": "blocked",
+        "added": 0
+      },
+      {
+        "name": "bypass",
+        "status": "PASS",
+        "result": {
+          "sceneEligible": false,
+          "send": false,
+          "added": 0,
+          "status": "NO_WHITELIST_FACT",
+          "reason": "OUT_OF_SCOPE_SUPPORTED_EVENT"
+        }
+      },
+      {
+        "name": "noncommit",
+        "status": "PASS",
+        "decisions": [
+          "rejected",
+          "clarify"
+        ],
+        "dbRevision": 2,
+        "newFacts": 0
+      },
+      {
+        "name": "repeat",
+        "status": "PASS",
+        "added": 0,
+        "sameFirstLearnedAt": true
+      },
+      {
+        "name": "knowledge",
+        "status": "PASS",
+        "beforeLearning": "NO_KNOWN_FACT",
+        "pastAfterLearning": "NO_KNOWN_FACT",
+        "atLearnedRevision": "KNOWN_LOCATION"
+      },
+      {
+        "name": "future",
+        "status": "PASS",
+        "result": {
+          "sceneEligible": false,
+          "send": false,
+          "added": 0,
+          "status": "UNVERIFIED"
+        }
+      },
+      {
+        "name": "old receipt plus latest only",
+        "status": "PASS",
+        "layer": "authorized-pg-read/isolated-verifier-copy",
+        "readerStatus": "UNVERIFIED",
+        "added": 0,
+        "noLedgerEntry": true
+      },
+      {
+        "name": "no R0",
+        "status": "PASS",
+        "layer": "authorized-pg-read/isolated-verifier-copy",
+        "readerStatus": "UNVERIFIED",
+        "added": 0,
+        "noLedgerEntry": true
+      },
+      {
+        "name": "no R-1",
+        "status": "PASS",
+        "layer": "authorized-pg-read/isolated-verifier-copy",
+        "readerStatus": "UNVERIFIED",
+        "added": 0,
+        "noLedgerEntry": true
+      },
+      {
+        "name": "no R",
+        "status": "PASS",
+        "layer": "authorized-pg-read/isolated-verifier-copy",
+        "readerStatus": "UNVERIFIED",
+        "added": 0,
+        "noLedgerEntry": true
+      },
+      {
+        "name": "matching location only",
+        "status": "PASS",
+        "layer": "authorized-pg-read/isolated-verifier-copy",
+        "readerStatus": "UNVERIFIED",
+        "added": 0,
+        "noLedgerEntry": true
+      },
+      {
+        "name": "unsupported rule",
+        "status": "PASS",
+        "layer": "authorized-pg-read/isolated-verifier-copy",
+        "readerStatus": "UNVERIFIED",
+        "added": 0,
+        "noLedgerEntry": true
+      },
+      {
+        "name": "receipt/event mismatch",
+        "status": "PASS",
+        "layer": "authorized-pg-read/isolated-verifier-copy",
+        "readerStatus": "UNVERIFIED",
+        "added": 0,
+        "noLedgerEntry": true
+      },
+      {
+        "name": "event missing interior",
+        "status": "PASS",
+        "layer": "authorized-pg-read/isolated-verifier-copy",
+        "readerStatus": "UNVERIFIED",
+        "added": 0,
+        "noLedgerEntry": true
+      },
+      {
+        "name": "tail truncated with internally valid chain",
+        "status": "PASS",
+        "layer": "authorized-pg-read/isolated-verifier-copy",
+        "readerStatus": "UNVERIFIED",
+        "added": 0,
+        "noLedgerEntry": true
+      },
+      {
+        "name": "event reorder",
+        "status": "PASS",
+        "layer": "authorized-pg-read/isolated-verifier-copy",
+        "readerStatus": "UNVERIFIED",
+        "added": 0,
+        "noLedgerEntry": true
+      },
+      {
+        "name": "duplicate event",
+        "status": "PASS",
+        "layer": "authorized-pg-read/isolated-verifier-copy",
+        "readerStatus": "UNVERIFIED",
+        "added": 0,
+        "noLedgerEntry": true
+      },
+      {
+        "name": "wrong anchor",
+        "status": "PASS",
+        "layer": "authorized-pg-read/isolated-verifier-copy",
+        "readerStatus": "UNVERIFIED",
+        "added": 0,
+        "noLedgerEntry": true
+      },
+      {
+        "name": "wrong chain",
+        "status": "PASS",
+        "layer": "authorized-pg-read/isolated-verifier-copy",
+        "readerStatus": "UNVERIFIED",
+        "added": 0,
+        "noLedgerEntry": true
+      },
+      {
+        "name": "full-state mismatch after valid first event",
+        "status": "PASS",
+        "layer": "authorized-pg-read/isolated-verifier-copy",
+        "readerStatus": "UNVERIFIED",
+        "added": 0,
+        "noLedgerEntry": true
+      },
+      {
+        "name": "untrusted checkpoint supplied on wire",
+        "status": "PASS",
+        "result": {
+          "sceneEligible": false,
+          "send": false,
+          "added": 0,
+          "status": "DENIED"
+        }
+      },
+      {
+        "name": "tampered late batch member",
+        "status": "PASS",
+        "layer": "authorized-pg-read/isolated-verifier-copy",
+        "readerStatus": "UNVERIFIED",
+        "added": 0,
+        "noLedgerEntry": true
+      },
+      {
+        "name": "replay mismatch",
+        "status": "PASS",
+        "layer": "authorized-pg-read/isolated-verifier-copy",
+        "readerStatus": "UNVERIFIED",
+        "added": 0,
+        "noLedgerEntry": true
+      },
+      {
+        "name": "unauthenticated",
+        "status": "PASS",
+        "result": {
+          "sceneEligible": false,
+          "send": false,
+          "added": 0,
+          "status": "DENIED"
+        }
+      },
+      {
+        "name": "forged owner header",
+        "status": "PASS",
+        "result": {
+          "status": "DENIED",
+          "added": 0,
+          "send": false,
+          "sceneEligible": false
+        }
+      },
+      {
+        "name": "wrong session",
+        "status": "PASS",
+        "result": {
+          "sceneEligible": false,
+          "send": false,
+          "added": 0,
+          "status": "DENIED"
+        }
+      },
+      {
+        "name": "A reads B",
+        "status": "PASS",
+        "result": {
+          "sceneEligible": false,
+          "send": false,
+          "added": 0,
+          "status": "DENIED"
+        }
+      },
+      {
+        "name": "wrong save",
+        "status": "PASS",
+        "result": {
+          "sceneEligible": false,
+          "send": false,
+          "added": 0,
+          "status": "DENIED"
+        }
+      },
+      {
+        "name": "wrong key",
+        "status": "PASS",
+        "result": {
+          "sceneEligible": false,
+          "send": false,
+          "added": 0,
+          "status": "UNVERIFIED"
+        }
+      },
+      {
+        "name": "non-root",
+        "status": "PASS",
+        "result": {
+          "sceneEligible": false,
+          "send": false,
+          "added": 0,
+          "status": "DENIED"
+        }
+      },
+      {
+        "name": "wrong target revision",
+        "status": "PASS",
+        "result": {
+          "sceneEligible": false,
+          "send": false,
+          "added": 0,
+          "status": "UNVERIFIED"
+        }
+      },
+      {
+        "name": "logout then cache read",
+        "status": "PASS",
+        "proofAndCache": "DENIED"
+      },
+      {
+        "name": "closed account",
+        "status": "PASS",
+        "formerlyCached": true,
+        "normalClose": "account_closed",
+        "proofAndCache": "DENIED"
+      },
+      {
+        "name": "archived save",
+        "status": "UPSTREAM_DEPENDENCY",
+        "schemaVersion": 3,
+        "upstreamOperation": "CloudArchiveLifecycle.change/delete",
+        "actual": "not_found",
+        "postLifecycleRead": "NOT_RUN",
+        "dependency": "authorized native save lifecycle operation"
+      },
+      {
+        "name": "deleted save",
+        "status": "UPSTREAM_DEPENDENCY",
+        "schemaVersion": 3,
+        "upstreamOperation": "CloudArchiveLifecycle.change/delete",
+        "actual": "not_found",
+        "postLifecycleRead": "NOT_RUN",
+        "dependency": "authorized native save lifecycle operation"
+      },
+      {
+        "name": "revoke before final check",
+        "status": "PASS",
+        "result": "DENIED",
+        "committedBeforeDelivery": true
+      },
+      {
+        "name": "overlapping commit",
+        "status": "PASS",
+        "splitBefore": 3,
+        "splitAfter": 4,
+        "repeatableReadHorizon": 3
+      },
+      {
+        "name": "revoke race",
+        "status": "PASS",
+        "separateAccount": "B",
+        "readerPausedBeforeDelivery": true,
+        "concurrentLogoutCommitted": true,
+        "inFlightAndCache": "DENIED"
+      },
+      {
+        "name": "projection",
+        "status": "PASS",
+        "fieldNames": [
+          "sceneEligible",
+          "send",
+          "added",
+          "status",
+          "source",
+          "observedThroughRevision",
+          "evidenceLearnedAt",
+          "learnedThroughRevision",
+          "targetRevision",
+          "from",
+          "to"
+        ],
+        "sceneEligible": false,
+        "send": false,
+        "modelCalls": 0
+      }
+    ],
+    "httpReaderRequests": 67,
+    "acceptedPgTurns": 8,
+    "loginSessions": 4,
+    "matrixComplete": false,
+    "appConnections": 3
+  },
+  "caseStatusCounts": {
+    "PASS": 40,
+    "UPSTREAM_DEPENDENCY": 2
+  },
+  "cleanup": {
+    "cleanup": "complete",
+    "dedicatedDirectoryRemoved": true
+  },
+  "gradingIssue": null
+}

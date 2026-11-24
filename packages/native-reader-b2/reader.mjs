@@ -108,7 +108,16 @@ export async function makeLocalReader({pool, auth, core, created, databaseName, 
                   FROM turn_events e WHERE save_id=$1 AND after_revision <= $2 ORDER BY sequence`,[saveId,r])).rows;
                 const requests = (await client.query(`SELECT save_id,idempotency_key,expected_revision,result
                   FROM turn_requests WHERE save_id=$1 AND expected_revision<$2 AND result->'decision'->>'status'='accepted'`,[saveId,r])).rows;
-                return {...verifyPrefix(core,locator,scope.history,rows,requests), observedThroughRevision:first.revision};
+                const verified = verifyPrefix(core,locator,scope.history,rows,requests);
+                // Isolated diagnostic copy can veto this read, never supply a fact or
+                // modify the committed checkpoints. No hook is accepted on the wire.
+                if (barriers.checkCopy) {
+                    const copy = structuredClone({locator,history:scope.history,rows,requests});
+                    const settings = (await client.query("SELECT current_setting('transaction_isolation') AS isolation, current_setting('transaction_read_only') AS readonly")).rows[0];
+                    barriers.checkCopy(copy,settings);
+                    verifyPrefix(core,copy.locator,copy.history,copy.rows,copy.requests);
+                }
+                return {...verified, observedThroughRevision:first.revision};
             }); } catch { missing = true; }
             await barriers.beforeDelivery?.();
             // One fresh statement jointly tests this exact token, owner, account and save;
@@ -126,5 +135,20 @@ export async function makeLocalReader({pool, auth, core, created, databaseName, 
                 observedThroughRevision:result.observedThroughRevision,...scope.ledger.get(key)};
         } catch { return denied(); }
     }
-    return Object.freeze({capture,read});
+    async function knownAt(token,locator,asOf) {
+        if (!Number.isSafeInteger(asOf) || asOf < 0 || !locator ||
+            Object.keys(locator).sort().join(",") !== "branch,key,r,saveId" || locator.branch !== "root" ||
+            !Number.isSafeInteger(locator.r) || locator.r < 1 || typeof locator.key !== "string") return denied();
+        try {
+            const authority = await authorize(token,locator.saveId);
+            if (!authority) return denied();
+            const final = await visible(pool,authority.args);
+            if (!final || asOf > final.revision) return denied();
+            const record = authority.scope.ledger.get(locator.key);
+            if (!record || record.targetRevision !== locator.r || record.learnedThroughRevision > asOf)
+                return {...base,status:"NO_KNOWN_FACT"};
+            return {...base,status:"KNOWN_LOCATION",...record};
+        } catch { return denied(); }
+    }
+    return Object.freeze({capture,read,knownAt});
 }

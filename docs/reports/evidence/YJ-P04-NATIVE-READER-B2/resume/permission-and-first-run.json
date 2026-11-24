@@ -1,0 +1,154 @@
+{
+  "base": "c90394b07b8a7405e86c90ccf4389455c02594c8",
+  "priorEACCES": "../preflight.json",
+  "permission": {
+    "mechanism": "request_permissions",
+    "network": true,
+    "scope": "turn",
+    "testedDestination": "127.0.0.1"
+  },
+  "probe": {
+    "command": "node packages/luna-text/test/loopback-probe.mjs",
+    "exit": 0,
+    "stdout": {
+      "runId": "0734e295-b096-4b1d-af23-3df64ab36fd1",
+      "utc": "2026-11-24T08:44:12.220Z",
+      "sourceSha256": "8b7022155c9fa967ee3c84105ee68dead386eedd39e7f558aefc4595676f4f80",
+      "platform": "win32",
+      "osRelease": "10.0.26200",
+      "node": "v26.13.0",
+      "nodePermissionModel": false,
+      "nodeNetPermission": null,
+      "preloadConfigured": false,
+      "target": "127.0.0.1",
+      "portSelection": "OS-assigned",
+      "observations": {
+        "tcpListen": {
+          "status": "PASS"
+        },
+        "tcpConnect": {
+          "status": "PASS",
+          "peerPayloadVerified": true
+        },
+        "httpListen": {
+          "status": "PASS"
+        },
+        "httpGet": {
+          "status": "PASS",
+          "httpStatus": 200,
+          "bodyVerified": true
+        }
+      },
+      "status": "LOOPBACK_PASS"
+    }
+  },
+  "firstUnmodifiedLauncher": {
+    "command": "python -B packages/native-reader-b2/test/launch.py ../Nine-cloud ../b2-upstream-final <existing-local-PG-bin>",
+    "exit": 0,
+    "launcherProbe": {
+      "runId": "0d07e74e-c37d-412e-80c4-848672477a14",
+      "utc": "2026-11-24T08:44:23.309Z",
+      "sourceSha256": "8b7022155c9fa967ee3c84105ee68dead386eedd39e7f558aefc4595676f4f80",
+      "platform": "win32",
+      "osRelease": "10.0.26200",
+      "node": "v26.13.0",
+      "nodePermissionModel": false,
+      "nodeNetPermission": null,
+      "preloadConfigured": false,
+      "target": "127.0.0.1",
+      "portSelection": "OS-assigned",
+      "observations": {
+        "tcpListen": {
+          "status": "PASS"
+        },
+        "tcpConnect": {
+          "status": "PASS",
+          "peerPayloadVerified": true
+        },
+        "httpListen": {
+          "status": "PASS"
+        },
+        "httpGet": {
+          "status": "PASS",
+          "httpStatus": 200,
+          "bodyVerified": true
+        }
+      },
+      "status": "LOOPBACK_PASS"
+    },
+    "result": {
+      "proof": {
+        "sceneEligible": false,
+        "send": false,
+        "added": 1,
+        "status": "CONFIRMED_NATIVE_LOCATION",
+        "source": "local-test-pg-history/1",
+        "observedThroughRevision": 3,
+        "evidenceLearnedAt": "2026-11-24T08:45:44.526Z",
+        "learnedThroughRevision": 3,
+        "targetRevision": 1,
+        "from": "loc_luhuadu",
+        "to": "loc_wangqitai"
+      },
+      "captures": [
+        {
+          "revision": 0,
+          "count": 0,
+          "stateSHA256": "ae71f7d350b68ff312c8eddcb8b20a77d49abc94c310c86c18e99579464aa7a7",
+          "capturedAt": "2026-11-24T08:44:43.440Z"
+        },
+        {
+          "revision": 0,
+          "count": 0,
+          "stateSHA256": "8cd5239dcc743525142fed172fe44048231551d5c1801551a72bfb05ebf9fee5",
+          "capturedAt": "2026-11-24T08:44:43.444Z"
+        },
+        {
+          "revision": 1,
+          "count": 1,
+          "stateSHA256": "962127b2efecf09459d01c9630d69bf3b037216699530dc431c8c4ff27ba793f",
+          "capturedAt": "2026-11-24T08:44:43.480Z"
+        },
+        {
+          "revision": 2,
+          "count": 2,
+          "stateSHA256": "aef34e09efb1f98278109627b02aeb6a155f763056c1c4541065512a4947d1e5",
+          "capturedAt": "2026-11-24T08:44:43.496Z"
+        },
+        {
+          "revision": 3,
+          "count": 3,
+          "stateSHA256": "3d4cf42d5796eb85edad0e638d4d9eb30aa06a6ec7e027c62ae8919da208ddd0",
+          "capturedAt": "2026-11-24T08:44:43.518Z"
+        },
+        {
+          "revision": 4,
+          "count": 4,
+          "stateSHA256": "739ecab61eb4c5f6fb4b85cc28045594a61bb1f57dd6d85f5f81ed453b8085c9",
+          "capturedAt": "2026-11-24T08:45:44.679Z"
+        },
+        {
+          "revision": 5,
+          "count": 5,
+          "stateSHA256": "c45ba1de8b3451ba10be8184a280ccbe0e78a2bebc66171d16df63c04b071d1a",
+          "capturedAt": "2026-11-24T08:45:44.709Z"
+        },
+        {
+          "revision": 6,
+          "count": 7,
+          "stateSHA256": "b9af61c6e5f36e74302f2c6a1ed2d1156f2f46692787e0700c14db46bd0ad7e9",
+          "capturedAt": "2026-11-24T08:45:44.728Z"
+        },
+        {
+          "revision": 7,
+          "count": 8,
+          "stateSHA256": "5216a0fc70e3298e5116ff3a0d524f93d0d2f13864474a1944ba077b271824d3",
+          "capturedAt": "2026-11-24T08:45:44.752Z"
+        }
+      ],
+      "scope": "new-local-test-saves",
+      "matrixComplete": false
+    }
+  },
+  "cleanup": "launcher completed its finally block and exited 0"
+}

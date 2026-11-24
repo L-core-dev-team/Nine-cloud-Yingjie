@@ -1,0 +1,703 @@
+{
+  "commands": [
+    {
+      "name": "dev",
+      "command": [
+        "node",
+        "--permission",
+        "--allow-fs-read=*",
+        "packages/native-facts/test/measure.mjs",
+        "dev",
+        "../reader-b2-rules"
+      ],
+      "exit": 0,
+      "stdoutSHA256": "bbe2bf3b75bae4c8529e5d80c24f7031167283b5de6a242d0ae1e13e32e75ff2"
+    },
+    {
+      "name": "held",
+      "command": [
+        "node",
+        "--permission",
+        "--allow-fs-read=*",
+        "packages/native-facts/test/measure.mjs",
+        "held",
+        "../reader-b2-rules"
+      ],
+      "exit": 0,
+      "stdoutSHA256": "ee6477377be31f9c769b4dde88671d84b5aa7f90f0f11e80a8516d19bdc4e3ce"
+    },
+    {
+      "name": "prefix",
+      "command": [
+        "node",
+        "--permission",
+        "--allow-fs-read=*",
+        "packages/native-facts/test/prefix.mjs",
+        "../reader-b2-rules"
+      ],
+      "exit": 0,
+      "stdoutSHA256": "c4d57c61ba38c85cbf90045ca9ce43d770e8ac55221aff4230f93f38b7c6475f"
+    },
+    {
+      "name": "guards",
+      "command": [
+        "node",
+        "--permission",
+        "--allow-fs-read=*",
+        "packages/native-facts/test/guards.mjs",
+        "../reader-b2-rules"
+      ],
+      "exit": 0,
+      "stdoutSHA256": "428c2745997916aba2906c66503b5b589b92a5433490f9240313d8022cdbe06b"
+    },
+    {
+      "name": "extra",
+      "command": [
+        "node",
+        "--permission",
+        "--allow-fs-read=*",
+        "packages/native-facts/test/extra-controls.mjs",
+        "../reader-b2-rules"
+      ],
+      "exit": 0,
+      "stdoutSHA256": "f5582dd86906e328cff0e4d52263d97aad060c8a09bf6ae76aadf2f7da592cbb"
+    },
+    {
+      "name": "accept",
+      "command": [
+        "python",
+        "-B",
+        "packages/native-facts/test/accept.py"
+      ],
+      "exit": 0,
+      "stdoutSHA256": "abeacc803ec1bd8ca7abcb86d8fad139769e63a5c0aeb2f2fc2d7c8b84c01892"
+    },
+    {
+      "name": "legacy",
+      "command": [
+        "python",
+        "-B",
+        "packages/native-facts/test/regression.py",
+        "../b2-resume-reg/legacy"
+      ],
+      "exit": 0,
+      "stdoutSHA256": "dd4aa86cbc5e5a2754b6482a95303e85924ea263dba2f1de6abf93c761fe346a"
+    }
+  ],
+  "native": {
+    "dev": {
+      "part": "dev",
+      "totals": {
+        "trusted-native": {
+          "TP": 18,
+          "FP": 0,
+          "FN": 0,
+          "TN": 146,
+          "duplicates": 0,
+          "scene": 0,
+          "send": 0,
+          "precision": 1,
+          "recall": 1
+        },
+        "plain-prose": {
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 164,
+          "duplicates": 0,
+          "scene": 0,
+          "send": 0,
+          "precision": null,
+          "recall": null
+        },
+        "untrusted-wire": {
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 164,
+          "duplicates": 0,
+          "scene": 0,
+          "send": 0,
+          "precision": null,
+          "recall": null
+        },
+        "scope-layer-mixed": {
+          "TP": 18,
+          "FP": 0,
+          "FN": 0,
+          "TN": 146,
+          "duplicates": 0,
+          "scene": 0,
+          "send": 0,
+          "precision": 1,
+          "recall": 1
+        }
+      },
+      "attackCount": 54,
+      "failures": []
+    },
+    "held": {
+      "part": "held",
+      "totals": {
+        "trusted-native": {
+          "TP": 42,
+          "FP": 0,
+          "FN": 0,
+          "TN": 92,
+          "duplicates": 0,
+          "scene": 0,
+          "send": 0,
+          "precision": 1,
+          "recall": 1
+        },
+        "plain-prose": {
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 134,
+          "duplicates": 0,
+          "scene": 0,
+          "send": 0,
+          "precision": null,
+          "recall": null
+        },
+        "untrusted-wire": {
+          "TP": 0,
+          "FP": 0,
+          "FN": 0,
+          "TN": 134,
+          "duplicates": 0,
+          "scene": 0,
+          "send": 0,
+          "precision": null,
+          "recall": null
+        },
+        "scope-layer-mixed": {
+          "TP": 42,
+          "FP": 0,
+          "FN": 0,
+          "TN": 92,
+          "duplicates": 0,
+          "scene": 0,
+          "send": 0,
+          "precision": 1,
+          "recall": 1
+        }
+      },
+      "attackCount": 84,
+      "failures": []
+    }
+  },
+  "nativePrefixes": 298,
+  "futureDenied": 266,
+  "prefixCounts": {
+    "targeted": 229,
+    "public-h1": 66,
+    "public-h2": 318,
+    "public-h2r-dev": 157,
+    "public-h2r-held-public": 171,
+    "h3b-dev": 108,
+    "h3b2s-dev": 114,
+    "h3b-held": 108,
+    "h3b2s-held": 118,
+    "h3b2-dev": 180,
+    "h3b2-held": 132,
+    "h3b2-reserve": 64
+  },
+  "legacyCommands": [
+    {
+      "command": [
+        "python",
+        "-B",
+        "packages/highlights/h3b2s/compat.py",
+        "<temporary-output>"
+      ],
+      "exit": 0,
+      "expected": 0,
+      "elapsedMs": 22237.6,
+      "stdoutSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "node",
+        "--permission",
+        "--allow-fs-read=*",
+        "packages/highlights/h3b2s/prefix.mjs"
+      ],
+      "exit": 0,
+      "expected": 0,
+      "elapsedMs": 2689.2,
+      "stdoutSHA256": "5f22a8ce2e06b08a374ab196db05723366512fbb0e37be4f62d74e4fc28dd006"
+    },
+    {
+      "command": [
+        "node",
+        "--permission",
+        "--allow-fs-read=*",
+        "packages/highlights/h3b2s/safety.mjs"
+      ],
+      "exit": 0,
+      "expected": 0,
+      "elapsedMs": 494.0,
+      "stdoutSHA256": "706467ec189d6a547cb8c3416b7db14f29464c6a0781ae7ed4c8782a5572fbef"
+    },
+    {
+      "command": [
+        "node",
+        "--permission",
+        "--allow-fs-read=*",
+        "packages/highlights/h3b2/measure.mjs",
+        "--split=reserve"
+      ],
+      "exit": 0,
+      "expected": 0,
+      "elapsedMs": 462.1,
+      "stdoutSHA256": "b27ab352cd7b3a1b975044c5a6cdf23f6ec4b465bc778e2c345e963a95b9af0a"
+    },
+    {
+      "command": [
+        "node",
+        "--permission",
+        "--allow-fs-read=*",
+        "packages/highlights/h3b2s/diagnostic.mjs"
+      ],
+      "exit": 1,
+      "expected": 1,
+      "elapsedMs": 388.6,
+      "stdoutSHA256": "8b6ec449bb835e9ae2a9519edcaafd3edf2628a35fae4ce53dcb2afc06000218"
+    },
+    {
+      "command": [
+        "python",
+        "-B",
+        "packages/highlights/h3b2s/verify.py"
+      ],
+      "exit": 1,
+      "expected": 1,
+      "elapsedMs": 156.6,
+      "stdoutSHA256": "a32dbe2c9dbd1e525c843f69cf569d48377cdcb2388149aeeb446e920941cf9f"
+    }
+  ],
+  "legacyProblems": [],
+  "legacyScopeChecks": 59,
+  "oldReserve": [
+    6,
+    1,
+    1
+  ],
+  "historicalCounterexample": 1,
+  "compatibility": {
+    "imageEligibility": {
+      "command": "node --permission --allow-fs-read=* --test-isolation=none --test-reporter=tap --test packages/first-play/test/trigger.test.mjs",
+      "exit": 0
+    },
+    "l3": {
+      "command": "node --permission --allow-fs-read=* --test-isolation=none --test-reporter=tap --test packages/first-play/test/scene-evidence.test.mjs packages/first-play/test/initial-survey.test.mjs packages/first-play/test/continuity.test.mjs",
+      "exit": 0
+    },
+    "contracts": {
+      "command": "node --permission --allow-fs-read=* --test-isolation=none --test-reporter=tap --test packages/contracts/test/*.test.mjs",
+      "exit": 0
+    },
+    "l1": {
+      "command": "node packages/luna-text/test/check.mjs <temp>/l1.json",
+      "exit": 0,
+      "summary": {
+        "status": "OFFLINE_PASS",
+        "node": "v26.13.0",
+        "networkPermission": false,
+        "scenarios": [
+          {
+            "scenario": "completed",
+            "state": "ACKNOWLEDGED",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "401",
+            "state": "REJECTED_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "403",
+            "state": "REJECTED_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "429",
+            "state": "REJECTED_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "503",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "redirect",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "timeout",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "bad-json",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "wrong-model",
+            "state": "FAIL",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "wrong-tier",
+            "state": "FAIL",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "tool",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "usage-missing",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "incomplete",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "unexpected-input-charge",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "over-output-limit",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          }
+        ],
+        "concurrentProcesses": 2,
+        "possibleSendsAfterRace": 1,
+        "crashRestart": "APPROVAL_LOCKED",
+        "requestSha256": "e4199b370fa95e71c18cedd8c4e7c30965ada8ecdcc2978c473c5a3b0f61aad4",
+        "inputBound": 609,
+        "realTextCalls": 0,
+        "realImageCalls": 0
+      }
+    },
+    "i1": {
+      "command": "node packages/openai-image/check.mjs <temp>/i1.json",
+      "exit": 0
+    },
+    "i2": {
+      "command": "node packages/openai-image/check-money.mjs <temp>/i2.json",
+      "exit": 0
+    },
+    "s1": {
+      "command": "node --permission --allow-fs-read=* packages/first-play/test/s1-measure.mjs",
+      "exit": 0,
+      "summary": {
+        "scores": {
+          "v1": {
+            "dev": {
+              "correctAccept": 0,
+              "unnecessaryAbstain": 26,
+              "incorrectAccept": 0,
+              "correctAbstain": 44
+            },
+            "accept": {
+              "correctAccept": 0,
+              "unnecessaryAbstain": 10,
+              "incorrectAccept": 0,
+              "correctAbstain": 22
+            }
+          },
+          "v2": {
+            "dev": {
+              "correctAccept": 26,
+              "unnecessaryAbstain": 0,
+              "incorrectAccept": 0,
+              "correctAbstain": 44
+            },
+            "accept": {
+              "correctAccept": 10,
+              "unnecessaryAbstain": 0,
+              "incorrectAccept": 0,
+              "correctAbstain": 22
+            }
+          }
+        },
+        "checks": 13,
+        "failures": [],
+        "corpusSha256": "6a6e15a44cb8d6385e38d0e582b8814233fc7b15607f7e6940950b4034ffe249"
+      }
+    },
+    "l4": {
+      "command": "node packages/luna-text/test/check.mjs <temp>/l4.json --l4",
+      "exit": 0,
+      "summary": {
+        "approvalId": "YJ-P02-L4-single-luna-scene",
+        "status": "OFFLINE_PASS",
+        "node": "v26.13.0",
+        "networkPermission": false,
+        "scenarios": [
+          {
+            "scenario": "completed",
+            "state": "ACKNOWLEDGED",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "401",
+            "state": "REJECTED_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "403",
+            "state": "REJECTED_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "429",
+            "state": "REJECTED_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "503",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "redirect",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "timeout",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "bad-json",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "wrong-model",
+            "state": "FAIL",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "wrong-tier",
+            "state": "FAIL",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "tool",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "usage-missing",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "incomplete",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "unexpected-input-charge",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          },
+          {
+            "scenario": "over-output-limit",
+            "state": "UNKNOWN_STOP",
+            "fakeSends": 1
+          }
+        ],
+        "concurrentProcesses": 2,
+        "possibleSendsAfterRace": 1,
+        "crashRestart": "APPROVAL_LOCKED",
+        "requestSha256": "37c06b167d46be0774edc403ed18738517ffe7b676c738679da6c2d0f0eb0124",
+        "inputBound": 831,
+        "realTextCalls": 0,
+        "realImageCalls": 0
+      }
+    },
+    "p01": {
+      "command": "node packages/provider-readiness/check.mjs <temp>/p01.json",
+      "exit": 0,
+      "summary": {
+        "status": "OFFLINE_PASS",
+        "node": "v26.13.0",
+        "tests": {
+          "cases": [
+            "offline contract runner has no network permission",
+            "CardModel sends only the cleared action and unsupported prose abstains",
+            "absent, revoked, expired, wrong scope and incomplete approvals never reach fake",
+            "scope, current facts and explicit material rights gate generation and editing",
+            "two connections share slots and never exceed count or total reservations",
+            "acknowledged failure keeps reservation and count boundary; refusal stays distinct",
+            "unconfirmed image cannot be resent after closing and reopening the ledger"
+          ],
+          "tests": 7,
+          "pass": 7,
+          "fail": 0,
+          "skipped": 0
+        },
+        "restart": [
+          {
+            "phase": "loss",
+            "fakeSends": 1,
+            "reservations": [
+              {
+                "state": "unknown",
+                "calls": 1,
+                "reservedUnits": 4
+              }
+            ],
+            "networkPermission": false
+          },
+          {
+            "phase": "reopen",
+            "fakeSends": 0,
+            "reservations": [
+              {
+                "state": "unknown",
+                "calls": 1,
+                "reservedUnits": 4
+              }
+            ],
+            "networkPermission": false
+          }
+        ],
+        "networkPermission": false,
+        "liveTextCalls": 0,
+        "liveImageCalls": 0,
+        "execution": "in-process fake; no network capability in any child",
+        "cost": null,
+        "usage": null
+      }
+    },
+    "h1": {
+      "command": "node --permission --allow-fs-read=* packages/highlights/evaluate.mjs",
+      "exit": 0
+    },
+    "s2": {
+      "command": "node --permission --allow-fs-read=* packages/first-play/test/s2-measure.mjs",
+      "exit": 0,
+      "summary": {
+        "count": 100,
+        "groups": {
+          "dev": {
+            "literalCorrectAccept": 55,
+            "literalCorrectAbstain": 16,
+            "literalWrongAccept": 0,
+            "literalUnnecessaryAbstain": 0,
+            "correctEligible": 33,
+            "correctReview": 8,
+            "correctConflict": 8,
+            "correctNotReady": 22,
+            "dangerousAllow": 0,
+            "unnecessaryBlock": 0,
+            "wrongVerdictOrReason": 0
+          },
+          "held": {
+            "literalCorrectAccept": 21,
+            "literalCorrectAbstain": 8,
+            "literalWrongAccept": 0,
+            "literalUnnecessaryAbstain": 0,
+            "correctEligible": 11,
+            "correctReview": 4,
+            "correctConflict": 2,
+            "correctNotReady": 12,
+            "dangerousAllow": 0,
+            "unnecessaryBlock": 0,
+            "wrongVerdictOrReason": 0
+          }
+        },
+        "errors": [],
+        "hash": "ee1575bfb816524503507ec5284bcdc48e7a29f4138120975efe3428f2d18a8d"
+      }
+    },
+    "slice": {
+      "command": "node packages/first-play/test/s2-story-slice.mjs",
+      "exit": 0
+    },
+    "s3": {
+      "command": "node --permission --allow-fs-read=* packages/offline-play-preview/check.mjs",
+      "exit": 0,
+      "summary": {
+        "turns": 20,
+        "checks": 16
+      }
+    },
+    "h2": {
+      "command": "node --permission --allow-fs-read=* packages/highlights/v2/measure.mjs",
+      "exit": 0
+    },
+    "h2rGuards": {
+      "command": "node --permission --allow-fs-read=* packages/highlights/h2r/guards.mjs",
+      "exit": 0
+    },
+    "causalAudit": {
+      "command": "node --permission --allow-fs-read=* packages/highlights/h2r/causal-audit.mjs",
+      "exit": 1
+    },
+    "h2r-dev": {
+      "command": "node --permission --allow-fs-read=* packages/highlights/h2r/evaluate.mjs dev",
+      "exit": 0
+    },
+    "h2r-held": {
+      "command": "node --permission --allow-fs-read=* packages/highlights/h2r/evaluate.mjs held",
+      "exit": 0
+    },
+    "historicalH3B2Gate": {
+      "exit": 1
+    }
+  },
+  "oldAcceptance": {
+    "status": "NATIVE_FACT_OFFLINE_RULE_ADAPTER_PASS",
+    "issues": [],
+    "missing": [],
+    "authority": "SYNTHETIC_AUTHORITY_FIXTURE",
+    "actualUpstreamRead": "UPSTREAM_AUTHENTICATED_READER_NOT_VERIFIED",
+    "realSnapshotPair": "NOT_VERIFIED",
+    "cardScope": "UPSTREAM_AUTHORITY_GAP",
+    "realAccounts": 0,
+    "liveModelQueries": 0,
+    "liveText": 0,
+    "liveImages": 0,
+    "actualUSD": 0,
+    "nativePgChrome": "ENV_BLOCKED / NOT_RUN"
+  },
+  "oldEvidence": {
+    "YJ-P04-H3B2": {
+      "files": 115,
+      "tree": "547b355975fee41040fc2abc89f55d09d0918c15"
+    },
+    "YJ-P04-H3B2S": {
+      "files": 55,
+      "tree": "089a187ee01c43751e5042e3417035d1af063720"
+    },
+    "YJ-P04-NATIVE-FACT-01": {
+      "files": 52,
+      "tree": "ce821274f1cc1a00169c1c2b259e0860baf0d6cb"
+    }
+  },
+  "compatibilityAcceptance": {
+    "newCompatibilityFailures": [],
+    "preservedOriginalFailures": true
+  },
+  "oldPreflightSHA256": "8c8893c72444dbc227fcf96230e4292d0c4e34bf9ad627d1600d8418b04df09c",
+  "matrixSHA256": "061ac8d5cd695a657abca5ec525b3e5339266b137a7286341a2b2e5ad5230153"
+}

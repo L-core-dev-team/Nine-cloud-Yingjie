@@ -55,6 +55,7 @@ def main():
         # Delete only this invocation's newly created directory once the owned server is down.
         if not (data/"postmaster.pid").exists() and folder.parent == parent:
             shutil.rmtree(folder)
+            print(json.dumps(dict(cleanup="complete", dedicatedDirectoryRemoved=not folder.exists())),flush=True)
 
 if __name__ == "__main__":
     sys.exit(main())
