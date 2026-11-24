@@ -1,0 +1,35 @@
+{
+  "dateBeijing": "2026-11-24",
+  "model": "gpt-6-luna",
+  "standardTier": "default",
+  "modelPage": "https://developers.openai.com/api/docs/models/gpt-6-luna",
+  "standardTable": "https://developers.openai.com/api/docs/pricing?latest-pricing-expanded=true",
+  "responsesReference": "https://developers.openai.com/api/reference/resources/responses/methods/create",
+  "context": 1050000,
+  "modelMaxOutput": 128000,
+  "plannedMaxOutput": 3200,
+  "standardShortUsdPerMillion": {
+    "textInput": 0.1,
+    "cachedRead": 0.01,
+    "cacheWrite30m": 0.125,
+    "cacheWrite12h": 0.25,
+    "output": 0.5
+  },
+  "longContextThreshold": 272000,
+  "longContextMultipliers": {
+    "inputAndCache": 2,
+    "output": 1.5
+  },
+  "projectStandardWrite": "UNVERIFIED",
+  "safeKeyPresence": {
+    "Process": false,
+    "User": false,
+    "Machine": false
+  },
+  "approvedSource": "local process environment / previously approved nonpersistent owner input",
+  "modelQueryGET": 0,
+  "additionalTokenCountPOST": 0,
+  "proofOfAllInPerRequestBound": null,
+  "reason": "Serialized bytes are measured. The server-side encoded framing and all billable outcomes have no verified bound in this project's records. Planned rates and token ceilings are not a spend guarantee.",
+  "privateLedgerCreated": false
+}

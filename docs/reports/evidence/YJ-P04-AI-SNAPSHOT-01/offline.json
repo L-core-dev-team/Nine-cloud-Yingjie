@@ -1,0 +1,18 @@
+[
+  {
+    "command": "python -B packages/ai-snapshot-pilot/test_pilot.py",
+    "exit": 0,
+    "runtime": "fake, sockets denied",
+    "output": "test_budget_expiry_and_crash_reopen (__main__.PilotChecks.test_budget_expiry_and_crash_reopen) ... ok\r\ntest_configuration_and_amount_proof (__main__.PilotChecks.test_configuration_and_amount_proof) ... ok\r\ntest_failures_stop_whole_batch (__main__.PilotChecks.test_failures_stop_whole_batch) ... ok\r\ntest_grounding_and_projection (__main__.PilotChecks.test_grounding_and_projection) ... ok\r\ntest_nine_then_tenth_rejected (__main__.PilotChecks.test_nine_then_tenth_rejected) ... ok\r\ntest_only_fixed_text_requests (__main__.PilotChecks.test_only_fixed_text_requests) ... ok\r\ntest_partial_and_exhaustive_rosters_and_deltas (__main__.PilotChecks.test_partial_and_exhaustive_rosters_and_deltas) ... ok\r\ntest_raw_invalid_json_stops_and_preserves_first_reply (__main__.PilotChecks.test_raw_invalid_json_stops_and_preserves_first_reply) ... ok\r\ntest_two_connections_compete (__main__.PilotChecks.test_two_connections_compete) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 9 tests in 0.497s\r\n\r\nOK"
+  },
+  {
+    "command": "node --permission --allow-fs-read=* packages/first-play/test/s2-measure.mjs",
+    "exit": 0,
+    "output": "{\"count\":100,\"groups\":{\"dev\":{\"literalCorrectAccept\":55,\"literalCorrectAbstain\":16,\"literalWrongAccept\":0,\"literalUnnecessaryAbstain\":0,\"correctEligible\":33,\"correctReview\":8,\"correctConflict\":8,\"correctNotReady\":22,\"dangerousAllow\":0,\"unnecessaryBlock\":0,\"wrongVerdictOrReason\":0},\"held\":{\"literalCorrectAccept\":21,\"literalCorrectAbstain\":8,\"literalWrongAccept\":0,\"literalUnnecessaryAbstain\":0,\"correctEligible\":11,\"correctReview\":4,\"correctConflict\":2,\"correctNotReady\":12,\"dangerousAllow\":0,\"unnecessaryBlock\":0,\"wrongVerdictOrReason\":0}},\"errors\":[],\"hash\":\"ee1575bfb816524503507ec5284bcdc48e7a29f4138120975efe3428f2d18a8d\"}"
+  },
+  {
+    "command": "node --permission --allow-fs-read=* packages/first-play/test/trigger.test.mjs",
+    "exit": 0,
+    "output": "✔ confirmed visual changes, no-op and unsupported emphasis (1.3361ms)\n✔ review, current display and reference use have separate verdicts (0.6895ms)\n✔ rumor, reported speech, dreams and unseen narrators cannot add a present character (4.7802ms)\n✔ provider capability cannot override authorization or a suppressed trigger (0.4723ms)\nℹ tests 4\nℹ suites 0\nℹ pass 4\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 11.6462"
+  }
+]

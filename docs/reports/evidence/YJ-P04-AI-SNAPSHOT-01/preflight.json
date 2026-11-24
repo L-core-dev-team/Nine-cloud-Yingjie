@@ -1,0 +1,115 @@
+{
+  "batch": "YJ-P04-AI-SNAPSHOT-01",
+  "freezeDigest": "91f71f5d03ea3d09a9cf764562cd9096f48d3b7c993a9a9a2d3efd4a767ddd1a",
+  "status": "LIVE_BLOCKED",
+  "blockers": [
+    "API_KEY_NOT_CONFIGURED",
+    "PROJECT_STANDARD_WRITE_UNVERIFIED",
+    "ALL_IN_COST_BOUND_UNVERIFIED"
+  ],
+  "ledger": {
+    "exists": false,
+    "possibleSends": 0,
+    "reservedNanoUsd": 0
+  },
+  "frames": [
+    {
+      "slot": "A1",
+      "sourceSha256": "9e7b0f660ff20bc25e605cdcbf7826ddd5f7ba754f19d98be35bd7faaf144152",
+      "preparedRequestSha256": "e56290fd634c1e02414875d7a4a5e79cda91c0a050f7d99c39b93d33faa7bde8",
+      "requestBytes": 3482,
+      "status": "NOT_RUN",
+      "raw": null,
+      "projection": null,
+      "score": null
+    },
+    {
+      "slot": "A2",
+      "sourceSha256": "c637fcfa00e65a300cfe7a800f4f777a49cea3618736e0dcb6c039556e9f0e37",
+      "preparedRequestSha256": "bee4bbdfd876b21b3f8e5d24340fd260d88474bd9b03f29b60c259f77d19b088",
+      "requestBytes": 3690,
+      "status": "NOT_RUN",
+      "raw": null,
+      "projection": null,
+      "score": null
+    },
+    {
+      "slot": "A3",
+      "sourceSha256": "052c165b5d27146a8d4334239501905f1c8ac98a17167453ae9decf89f179652",
+      "preparedRequestSha256": "0cda8917ccdf2526d0bbfa9e6cfbf85efcb9fb19f26f6c74ebad1081f28c4be3",
+      "requestBytes": 3964,
+      "status": "NOT_RUN",
+      "raw": null,
+      "projection": null,
+      "score": null
+    },
+    {
+      "slot": "B1",
+      "sourceSha256": "9b00dddb227f26ce5218ac184a73670b8a82abe9dbe0a1c7bcd2aabedae2332a",
+      "preparedRequestSha256": "35aac25824fe1eaa5c5361f74d71ea5e64dc14bd9b88f83f0d20f71f1df213cd",
+      "requestBytes": 3407,
+      "status": "NOT_RUN",
+      "raw": null,
+      "projection": null,
+      "score": null
+    },
+    {
+      "slot": "B2",
+      "sourceSha256": "e928950217afdda1fe7b554821e4bce4e43f312130f0e6cd5bab27976a669726",
+      "preparedRequestSha256": "fea66cd86e0b11fb94e78b6801ea0398722ed57546935ba40c6d32d3106bb824",
+      "requestBytes": 3615,
+      "status": "NOT_RUN",
+      "raw": null,
+      "projection": null,
+      "score": null
+    },
+    {
+      "slot": "B3",
+      "sourceSha256": "7d0b0b161145c802dd5f161b9b729ab8e381e9b8d2073854cb015579eb857ca7",
+      "preparedRequestSha256": "99da998e7266bdb414778ac89dc56183ba4d0670a989b15cc4cda3dff309ce0c",
+      "requestBytes": 3790,
+      "status": "NOT_RUN",
+      "raw": null,
+      "projection": null,
+      "score": null
+    },
+    {
+      "slot": "C1",
+      "sourceSha256": "56c320f0f2561f63e458a5ba2a94115c481e2119e51968f2be7278770dab520c",
+      "preparedRequestSha256": "364b296350e147fe2ef1165928b614d1634ac92e4899bd704e1eb28b646c20c3",
+      "requestBytes": 3461,
+      "status": "NOT_RUN",
+      "raw": null,
+      "projection": null,
+      "score": null
+    },
+    {
+      "slot": "C2",
+      "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+      "preparedRequestSha256": "eb2d197d05e933db78bb6550aa3e2ca27b25e7bf38660f918e2f183dd4dc83bc",
+      "requestBytes": 3714,
+      "status": "NOT_RUN",
+      "raw": null,
+      "projection": null,
+      "score": null
+    },
+    {
+      "slot": "C3",
+      "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+      "preparedRequestSha256": "fe56baca07b24838d586287abfdd3d7b835e9d59d36fc0b46d801c3f67fb82bc",
+      "requestBytes": 3973,
+      "status": "NOT_RUN",
+      "raw": null,
+      "projection": null,
+      "score": null
+    }
+  ],
+  "thisRunPossibleSends": 0,
+  "success": 0,
+  "modelGET": 0,
+  "actualReturnedTokens": null,
+  "estimatedCostUsd": null,
+  "billingVerified": false,
+  "humanReview": "HUMAN_REVIEW_NOT_RUN",
+  "imageCalls": 0
+}
