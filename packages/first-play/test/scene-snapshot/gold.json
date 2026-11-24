@@ -1,0 +1,84 @@
+[
+  {
+    "revision": 1,
+    "place": "琥洲／听雨酒馆",
+    "people": [
+      "林青",
+      "沈舟",
+      "苏禾"
+    ],
+    "count": 3,
+    "features": [
+      "木桌",
+      "长凳",
+      "油灯"
+    ],
+    "timeOfDay": "傍晚",
+    "lighting": "灯光",
+    "viewpoint": "正门",
+    "perspective": "向北",
+    "change": "首帧",
+    "memory": null,
+    "unknown": [
+      "人物外观",
+      "年龄",
+      "衣色",
+      "家具数量",
+      "精确布局"
+    ]
+  },
+  {
+    "revision": 2,
+    "place": "琥洲／听雨酒馆",
+    "people": [
+      "林青",
+      "沈舟"
+    ],
+    "count": 2,
+    "features": [
+      "木桌",
+      "长凳",
+      "油灯"
+    ],
+    "timeOfDay": "傍晚",
+    "lighting": "灯光",
+    "viewpoint": "正门",
+    "perspective": "向北",
+    "change": "仅苏禾离场",
+    "memory": null,
+    "unknown": [
+      "人物外观",
+      "年龄",
+      "衣色",
+      "家具数量",
+      "精确布局"
+    ]
+  },
+  {
+    "revision": 3,
+    "place": "琥洲／听雨酒馆",
+    "people": [
+      "林青",
+      "沈舟"
+    ],
+    "count": 2,
+    "features": [
+      "木桌",
+      "长凳",
+      "油灯"
+    ],
+    "timeOfDay": "傍晚",
+    "lighting": "灯光",
+    "viewpoint": "正门",
+    "perspective": "向北",
+    "change": "无可见变化",
+    "memory": "过去三人交谈，不改变当前事实",
+    "unknown": [
+      "人物外观",
+      "年龄",
+      "衣色",
+      "家具数量",
+      "精确布局"
+    ]
+  }
+]
