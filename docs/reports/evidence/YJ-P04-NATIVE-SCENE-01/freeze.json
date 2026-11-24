@@ -1,0 +1,33 @@
+{
+  "base": "2713938a5ab4e03b32628a9bcb77b26b3654a265",
+  "upstream": "f1fe6ea561c5ef4d1ec670b7a406625ce5df774c",
+  "baseline": "B2 PARTIAL 40/42, native schema 3 archive/delete deferred",
+  "evidence": {
+    "docs/reports/evidence/YJ-P03-S2/story-slice.json": "65ccd55cf5ebef6922a08eb48e9e8330799251b5b763a58b0a3fbc36f263a3fb",
+    "docs/reports/evidence/YJ-P04-H3B2/acceptance.json": "f713a9c916d26cd24eac445bec6ecfe714b4efc4a56e752197b06f7759a6cb3e",
+    "docs/reports/evidence/YJ-P04-H3B2S/acceptance.json": "c36460e5b3dbf41be8328f3eb80197625bf6f85390498b807ed0b0795bd3bd9d",
+    "docs/reports/evidence/YJ-P04-NATIVE-FACT-01/acceptance.json": "672788c2028d04a6129f81ad227ba1812611e0431d6163be0c316db05a8b8486",
+    "docs/reports/evidence/YJ-P04-NATIVE-FACT-01/native-prefix.json": "c4d57c61ba38c85cbf90045ca9ce43d770e8ac55221aff4230f93f38b7c6475f",
+    "docs/reports/evidence/YJ-P04-NATIVE-READER-B2/matrix.json": "061ac8d5cd695a657abca5ec525b3e5339266b137a7286341a2b2e5ad5230153",
+    "docs/reports/evidence/YJ-P04-NATIVE-READER-B2/preflight.json": "8c8893c72444dbc227fcf96230e4292d0c4e34bf9ad627d1600d8418b04df09c",
+    "docs/reports/evidence/YJ-P04-NATIVE-READER-B2/resume/final.json": "8155a74759f64cb89672899e353ff00fc9fc4889e31162939829d89d0acd95c3",
+    "docs/reports/evidence/YJ-P04-NATIVE-READER-B2/resume/first-expanded.json": "c9f943f5bf0e2b08096aada50c4f88c9cb70995a4e4d16ebc45e5616daf37dc2",
+    "docs/reports/evidence/YJ-P02-I2/money.json": "f2807474b840963ebc38b2aed3146bfb3c49ed0449a0ca70cdfd2356c74e38b3",
+    "docs/reports/evidence/YJ-P03-S3/preview.json": "265427ca2b531ead1dbc60c64937b02d921718d918dcfc53d17b4fa1f6c49371",
+    "docs/reports/evidence/YJ-P03-S3/browser.json": "b2b503f35301a663a86b58824feb38bed872f139f3e90862bdcd9322abdf31a6"
+  },
+  "expected": [
+    "R0 authorized current loc_luhuadu; no journey",
+    "R1 current loc_wangqitai from PG; R1 arrival not learned yet",
+    "R2 blocked; same world place",
+    "R3 sublocation; same world place; relogin then learn R1 once",
+    "R4 return from sublocation; same world place",
+    "R5 inspect; no new world arrival",
+    "R6 bypass back to loc_luhuadu; snapshot proves current only; late R1 cannot roll back current",
+    "R7 revisit loc_wangqitai; same place id, separate R7 arrival",
+    "logout/closed/wrong owner/save/root/future/wire: no unauthorized display",
+    "six visual fields unknown, sceneEligible=false/send=false; no image dispatch",
+    "file:// desktop/390px keyboard/toggle/back/history/reset, no network"
+  ],
+  "source": "public regression, not blind"
+}
