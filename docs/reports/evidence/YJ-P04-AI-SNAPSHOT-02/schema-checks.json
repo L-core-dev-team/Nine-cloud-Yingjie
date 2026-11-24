@@ -1,0 +1,38 @@
+[
+  {
+    "slot": "B1",
+    "valid": true
+  },
+  {
+    "slot": "B2",
+    "valid": true
+  },
+  {
+    "slot": "B3",
+    "valid": true
+  },
+  {
+    "slot": "C1",
+    "valid": true
+  },
+  {
+    "slot": "C2",
+    "valid": true
+  },
+  {
+    "slot": "C3",
+    "valid": true
+  },
+  {
+    "slot": "D1",
+    "valid": true
+  },
+  {
+    "slot": "D2",
+    "valid": true
+  },
+  {
+    "slot": "D3",
+    "valid": true
+  }
+]

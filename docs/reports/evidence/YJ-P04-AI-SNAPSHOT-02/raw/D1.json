@@ -1,0 +1,15 @@
+{
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "group": "D",
+  "revision": 1,
+  "claims": [
+    {"field":"place","status":"complete","op":"set","values":["桐湾验秤亭"],"delta":[],"previous":null,"refs":[{"group":"D","rev":1,"quote":"我在桐湾验秤亭的秤台旁停下","layer":"current","visible":true}],"storyChangeQuote":null},
+    {"field":"people","status":"complete","op":"set","values":["陶苇"],"delta":[],"previous":null,"refs":[{"group":"D","rev":1,"quote":"环顾亭内，除我外只有陶苇","layer":"current","visible":true}],"storyChangeQuote":null},
+    {"field":"features","status":"complete","op":"set","values":["吊秤","砝码盒"],"delta":[],"previous":null,"refs":[{"group":"D","rev":1,"quote":"我看见吊秤和砝码盒","layer":"current","visible":true}],"storyChangeQuote":null},
+    {"field":"timeOfDay","status":"unknown","op":"unknown","values":null,"delta":[],"previous":null,"refs":[{"group":"D","rev":1,"quote":"也看不出时辰","layer":"current","visible":false}],"storyChangeQuote":null},
+    {"field":"lighting","status":"complete","op":"set","values":["灰白天光"],"delta":[],"previous":null,"refs":[{"group":"D","rev":1,"quote":"灰白天光里","layer":"current","visible":true}],"storyChangeQuote":null},
+    {"field":"viewpoint","status":"complete","op":"set","values":["秤台旁"],"delta":[],"previous":null,"refs":[{"group":"D","rev":1,"quote":"我在桐湾验秤亭的秤台旁停下","layer":"current","visible":true}],"storyChangeQuote":null},
+    {"field":"perspective","status":"unknown","op":"unknown","values":null,"delta":[],"previous":null,"refs":[{"group":"D","rev":1,"quote":"辨不出自己朝着哪一方","layer":"current","visible":false}],"storyChangeQuote":null}
+  ],
+  "exclusions": []
+}

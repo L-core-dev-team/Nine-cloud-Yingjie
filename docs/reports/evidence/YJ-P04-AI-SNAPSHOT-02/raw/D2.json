@@ -1,0 +1,162 @@
+{
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "group": "D",
+  "revision": 2,
+  "claims": [
+    {
+      "field": "place",
+      "status": "complete",
+      "op": "keep",
+      "values": [
+        "桐湾验秤亭"
+      ],
+      "delta": [],
+      "previous": 1,
+      "refs": [
+        {
+          "group": "D",
+          "rev": 2,
+          "quote": "仍在桐湾验秤亭的秤台旁",
+          "layer": "current",
+          "visible": true
+        }
+      ],
+      "storyChangeQuote": null
+    },
+    {
+      "field": "people",
+      "status": "complete",
+      "op": "keep",
+      "values": [
+        "陶苇"
+      ],
+      "delta": [],
+      "previous": 1,
+      "refs": [
+        {
+          "group": "D",
+          "rev": 2,
+          "quote": "陶苇和我守着吊秤和砝码盒",
+          "layer": "current",
+          "visible": true
+        },
+        {
+          "group": "D",
+          "rev": 2,
+          "quote": "亭里没有旁人",
+          "layer": "current",
+          "visible": true
+        }
+      ],
+      "storyChangeQuote": null
+    },
+    {
+      "field": "features",
+      "status": "complete",
+      "op": "keep",
+      "values": [
+        "吊秤",
+        "砝码盒"
+      ],
+      "delta": [],
+      "previous": 1,
+      "refs": [
+        {
+          "group": "D",
+          "rev": 2,
+          "quote": "陶苇和我守着吊秤和砝码盒",
+          "layer": "current",
+          "visible": true
+        }
+      ],
+      "storyChangeQuote": null
+    },
+    {
+      "field": "timeOfDay",
+      "status": "unknown",
+      "op": "unknown",
+      "values": null,
+      "delta": [],
+      "previous": null,
+      "refs": [
+        {
+          "group": "D",
+          "rev": 2,
+          "quote": "仍不知时辰",
+          "layer": "unknown",
+          "visible": false
+        }
+      ],
+      "storyChangeQuote": null
+    },
+    {
+      "field": "lighting",
+      "status": "complete",
+      "op": "keep",
+      "values": [
+        "灰白天光"
+      ],
+      "delta": [],
+      "previous": 1,
+      "refs": [
+        {
+          "group": "D",
+          "rev": 2,
+          "quote": "灰白天光依旧",
+          "layer": "current",
+          "visible": true
+        }
+      ],
+      "storyChangeQuote": null
+    },
+    {
+      "field": "viewpoint",
+      "status": "complete",
+      "op": "keep",
+      "values": [
+        "秤台旁"
+      ],
+      "delta": [],
+      "previous": 1,
+      "refs": [
+        {
+          "group": "D",
+          "rev": 2,
+          "quote": "我没挪步，仍在桐湾验秤亭的秤台旁",
+          "layer": "current",
+          "visible": true
+        }
+      ],
+      "storyChangeQuote": null
+    },
+    {
+      "field": "perspective",
+      "status": "complete",
+      "op": "reobserve",
+      "values": [
+        "向北"
+      ],
+      "delta": [],
+      "previous": null,
+      "refs": [
+        {
+          "group": "D",
+          "rev": 2,
+          "quote": "自己一直面向北，并没有转身",
+          "layer": "current",
+          "visible": true
+        }
+      ],
+      "storyChangeQuote": null
+    }
+  ],
+  "exclusions": [
+    {
+      "group": "D",
+      "rev": 2,
+      "quote": "仍不知时辰",
+      "layer": "unknown",
+      "visible": false
+    }
+  ]
+}

@@ -1,0 +1,1762 @@
+[
+  {
+    "slot": "B1",
+    "rawSha256": "9e946fb149b6e8073357aaaa3154683ff539d70d05d7318c7bcc8405e59fe477",
+    "view": {
+      "group": "B",
+      "revision": 1,
+      "status": "partial",
+      "fields": {
+        "place": {
+          "status": "complete",
+          "value": "\u77f3\u6e20\u88c5\u8ba2\u5ba4",
+          "firstKnown": 1,
+          "operation": "set",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 1,
+              "quote": "\u77f3\u6e20\u88c5\u8ba2\u5ba4",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "9b00dddb227f26ce5218ac184a73670b8a82abe9dbe0a1c7bcd2aabedae2332a",
+              "start": 2,
+              "end": 7
+            }
+          ],
+          "error": null
+        },
+        "people": {
+          "status": "complete",
+          "value": [
+            "\u675c\u8861",
+            "\u95fb\u7b1b"
+          ],
+          "firstKnown": 1,
+          "operation": "set",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 1,
+              "quote": "\u6574\u95f4\u5c4b\u5df2\u770b\u904d\uff0c\u966a\u6211\u6821\u9875\u7684\u53ea\u6709\u675c\u8861\u4e0e\u95fb\u7b1b\u3002",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "9b00dddb227f26ce5218ac184a73670b8a82abe9dbe0a1c7bcd2aabedae2332a",
+              "start": 31,
+              "end": 51
+            }
+          ],
+          "error": null
+        },
+        "features": {
+          "status": "complete",
+          "value": [
+            "\u538b\u4e66\u77f3",
+            "\u88c1\u7eb8\u6848"
+          ],
+          "firstKnown": 1,
+          "operation": "set",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 1,
+              "quote": "\u65e5\u5149\u843d\u5728\u88c1\u7eb8\u6848\u548c\u538b\u4e66\u77f3\u4e0a",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "9b00dddb227f26ce5218ac184a73670b8a82abe9dbe0a1c7bcd2aabedae2332a",
+              "start": 18,
+              "end": 30
+            }
+          ],
+          "error": null
+        },
+        "timeOfDay": {
+          "status": "complete",
+          "value": "\u6e05\u65e9",
+          "firstKnown": 1,
+          "operation": "set",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 1,
+              "quote": "\u6e05\u65e9\u7684\u65e5\u5149",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "9b00dddb227f26ce5218ac184a73670b8a82abe9dbe0a1c7bcd2aabedae2332a",
+              "start": 15,
+              "end": 20
+            }
+          ],
+          "error": null
+        },
+        "lighting": {
+          "status": "complete",
+          "value": "\u65e5\u5149",
+          "firstKnown": 1,
+          "operation": "set",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 1,
+              "quote": "\u6e05\u65e9\u7684\u65e5\u5149\u843d\u5728\u88c1\u7eb8\u6848\u548c\u538b\u4e66\u77f3\u4e0a\u3002",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "9b00dddb227f26ce5218ac184a73670b8a82abe9dbe0a1c7bcd2aabedae2332a",
+              "start": 15,
+              "end": 31
+            }
+          ],
+          "error": null
+        },
+        "viewpoint": {
+          "status": "complete",
+          "value": "\u7a97\u4e0b",
+          "firstKnown": 1,
+          "operation": "set",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 1,
+              "quote": "\u6211\u5728\u77f3\u6e20\u88c5\u8ba2\u5ba4\u7684\u7a97\u4e0b\u671d\u4e1c\u5750\u7740\u3002",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "9b00dddb227f26ce5218ac184a73670b8a82abe9dbe0a1c7bcd2aabedae2332a",
+              "start": 0,
+              "end": 15
+            }
+          ],
+          "error": null
+        },
+        "perspective": {
+          "status": "needs-review",
+          "value": null,
+          "firstKnown": null,
+          "operation": "set",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 1,
+              "quote": "\u671d\u4e1c\u5750\u7740",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "9b00dddb227f26ce5218ac184a73670b8a82abe9dbe0a1c7bcd2aabedae2332a",
+              "start": 10,
+              "end": 14
+            }
+          ],
+          "error": "NOT_PHYSICAL_DIRECTION"
+        }
+      },
+      "sceneId": "\u77f3\u6e20\u88c5\u8ba2\u5ba4",
+      "values": {
+        "place": "\u77f3\u6e20\u88c5\u8ba2\u5ba4",
+        "people": [
+          "\u675c\u8861",
+          "\u95fb\u7b1b"
+        ],
+        "features": [
+          "\u538b\u4e66\u77f3",
+          "\u88c1\u7eb8\u6848"
+        ],
+        "timeOfDay": "\u6e05\u65e9",
+        "lighting": "\u65e5\u5149",
+        "viewpoint": "\u7a97\u4e0b",
+        "perspective": null,
+        "count": 2
+      },
+      "partial": {},
+      "changed": null,
+      "corrections": [],
+      "storyChangeCandidates": [],
+      "excluded": [],
+      "digest": "9585b0cdd877dde419643a30ad72d86dbb3e5a90540be1592f9acce9fb409c8a",
+      "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+      "send": false,
+      "sceneEligible": false
+    },
+    "rawScore": {
+      "place": "correct",
+      "people": "correct",
+      "count": "correct",
+      "features": "correct",
+      "timeOfDay": "correct",
+      "lighting": "correct",
+      "viewpoint": "correct",
+      "perspective": "wrong"
+    },
+    "projectedScore": {
+      "place": "correct",
+      "people": "correct",
+      "count": "correct",
+      "features": "correct",
+      "timeOfDay": "correct",
+      "lighting": "correct",
+      "viewpoint": "correct",
+      "perspective": "omitted"
+    },
+    "packetSha256": "393a86bbb5485ec8c2a0836cbf4c8753434188e36d7a6a685eb235f62fa1ba37",
+    "partialRosterMatch": true,
+    "excludedLayersMatch": true,
+    "changedMatch": true
+  },
+  {
+    "slot": "B2",
+    "rawSha256": "2637f6df9647055434bada7e61a66f12052a5dac610a318cc98876038f5ad229",
+    "view": {
+      "group": "B",
+      "revision": 2,
+      "status": "partial",
+      "fields": {
+        "place": {
+          "status": "complete",
+          "value": "\u77f3\u6e20\u88c5\u8ba2\u5ba4",
+          "firstKnown": 1,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 2,
+              "quote": "\u6211\u4eec\u4e09\u4e2a\u8c01\u4e5f\u6ca1\u632a\u7a9d",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "e928950217afdda1fe7b554821e4bce4e43f312130f0e6cd5bab27976a669726",
+              "start": 24,
+              "end": 33
+            }
+          ],
+          "error": null
+        },
+        "people": {
+          "status": "complete",
+          "value": [
+            "\u675c\u8861",
+            "\u95fb\u7b1b"
+          ],
+          "firstKnown": 1,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 2,
+              "quote": "\u6211\u4eec\u4e09\u4e2a\u8c01\u4e5f\u6ca1\u632a\u7a9d",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "e928950217afdda1fe7b554821e4bce4e43f312130f0e6cd5bab27976a669726",
+              "start": 24,
+              "end": 33
+            }
+          ],
+          "error": null
+        },
+        "features": {
+          "status": "complete",
+          "value": [
+            "\u538b\u4e66\u77f3",
+            "\u88c1\u7eb8\u6848"
+          ],
+          "firstKnown": 1,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 2,
+              "quote": "\u90a3\u4e24\u4ef6\u7528\u5177\u8fd8\u662f\u539f\u6765\u7684\u6837\u5b50",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "e928950217afdda1fe7b554821e4bce4e43f312130f0e6cd5bab27976a669726",
+              "start": 41,
+              "end": 53
+            }
+          ],
+          "error": null
+        },
+        "timeOfDay": {
+          "status": "complete",
+          "value": "\u6e05\u65e9",
+          "firstKnown": 1,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 2,
+              "quote": "\u4ecd\u662f\u6e05\u65e9",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "e928950217afdda1fe7b554821e4bce4e43f312130f0e6cd5bab27976a669726",
+              "start": 54,
+              "end": 58
+            }
+          ],
+          "error": null
+        },
+        "lighting": {
+          "status": "complete",
+          "value": "\u6f2b\u5c04\u5929\u5149",
+          "firstKnown": 2,
+          "operation": "set",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 2,
+              "quote": "\u53d8\u6210\u4e86\u6f2b\u5c04\u5929\u5149",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "e928950217afdda1fe7b554821e4bce4e43f312130f0e6cd5bab27976a669726",
+              "start": 16,
+              "end": 23
+            }
+          ],
+          "error": null
+        },
+        "viewpoint": {
+          "status": "complete",
+          "value": "\u7a97\u4e0b",
+          "firstKnown": 1,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 2,
+              "quote": "\u4ece\u7a97\u4e0b\u671d\u4e1c\u770b",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "e928950217afdda1fe7b554821e4bce4e43f312130f0e6cd5bab27976a669726",
+              "start": 34,
+              "end": 40
+            }
+          ],
+          "error": null
+        },
+        "perspective": {
+          "status": "needs-review",
+          "value": null,
+          "firstKnown": null,
+          "operation": "reobserve",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 2,
+              "quote": "\u4ece\u7a97\u4e0b\u671d\u4e1c\u770b",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "e928950217afdda1fe7b554821e4bce4e43f312130f0e6cd5bab27976a669726",
+              "start": 34,
+              "end": 40
+            }
+          ],
+          "error": "NOT_PHYSICAL_DIRECTION"
+        }
+      },
+      "sceneId": "\u77f3\u6e20\u88c5\u8ba2\u5ba4",
+      "values": {
+        "place": "\u77f3\u6e20\u88c5\u8ba2\u5ba4",
+        "people": [
+          "\u675c\u8861",
+          "\u95fb\u7b1b"
+        ],
+        "features": [
+          "\u538b\u4e66\u77f3",
+          "\u88c1\u7eb8\u6848"
+        ],
+        "timeOfDay": "\u6e05\u65e9",
+        "lighting": "\u6f2b\u5c04\u5929\u5149",
+        "viewpoint": "\u7a97\u4e0b",
+        "perspective": null,
+        "count": 2
+      },
+      "partial": {},
+      "changed": [
+        "lighting"
+      ],
+      "corrections": [],
+      "storyChangeCandidates": [
+        {
+          "field": "lighting",
+          "quote": "\u53d8\u6210\u4e86\u6f2b\u5c04\u5929\u5149"
+        }
+      ],
+      "excluded": [
+        {
+          "group": "B",
+          "rev": 2,
+          "quote": "\u521a\u624d\u76f4\u7167\u6848\u5934\u7684\u65e5\u5149",
+          "layer": "past",
+          "visible": false,
+          "sourceSha256": "e928950217afdda1fe7b554821e4bce4e43f312130f0e6cd5bab27976a669726",
+          "start": 7,
+          "end": 16
+        }
+      ],
+      "digest": "eb8c046b7fd389c25c579f49c128a85bbe3affbeaf8104f839db2b30d03674be",
+      "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+      "send": false,
+      "sceneEligible": false
+    },
+    "rawScore": {
+      "place": "correct",
+      "people": "correct",
+      "count": "correct",
+      "features": "correct",
+      "timeOfDay": "correct",
+      "lighting": "correct",
+      "viewpoint": "correct",
+      "perspective": "wrong"
+    },
+    "projectedScore": {
+      "place": "correct",
+      "people": "correct",
+      "count": "correct",
+      "features": "correct",
+      "timeOfDay": "correct",
+      "lighting": "correct",
+      "viewpoint": "correct",
+      "perspective": "omitted"
+    },
+    "packetSha256": "dee7b8f8dbd297dfea1028b03cb123d810a2ec39978a59a0d23b84078ac30bd2",
+    "partialRosterMatch": true,
+    "excludedLayersMatch": false,
+    "changedMatch": true
+  },
+  {
+    "slot": "B3",
+    "rawSha256": "f5da3272a162a99e2ff8a907daf43ae145dfc48e634ae071d0b06d064b54b9cb",
+    "view": {
+      "group": "B",
+      "revision": 3,
+      "status": "partial",
+      "fields": {
+        "place": {
+          "status": "complete",
+          "value": "\u77f3\u6e20\u88c5\u8ba2\u5ba4",
+          "firstKnown": 1,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 3,
+              "quote": "\u8fd8\u5728\u6e05\u65e9\u7684\u88c5\u8ba2\u5ba4",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "7d0b0b161145c802dd5f161b9b729ab8e381e9b8d2073854cb015579eb857ca7",
+              "start": 9,
+              "end": 17
+            }
+          ],
+          "error": null
+        },
+        "people": {
+          "status": "complete",
+          "value": [
+            "\u675c\u8861",
+            "\u95fb\u7b1b"
+          ],
+          "firstKnown": 1,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 3,
+              "quote": "\u540c\u4f34\u3001\u5668\u5177\u548c\u521a\u624d\u90a3\u5c42\u6f2b\u5c04\u5929\u5149\uff0c\u4e00\u6837\u90fd\u6ca1\u6362",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "7d0b0b161145c802dd5f161b9b729ab8e381e9b8d2073854cb015579eb857ca7",
+              "start": 27,
+              "end": 47
+            }
+          ],
+          "error": null
+        },
+        "features": {
+          "status": "complete",
+          "value": [
+            "\u538b\u4e66\u77f3",
+            "\u88c1\u7eb8\u6848"
+          ],
+          "firstKnown": 1,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 3,
+              "quote": "\u540c\u4f34\u3001\u5668\u5177\u548c\u521a\u624d\u90a3\u5c42\u6f2b\u5c04\u5929\u5149\uff0c\u4e00\u6837\u90fd\u6ca1\u6362",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "7d0b0b161145c802dd5f161b9b729ab8e381e9b8d2073854cb015579eb857ca7",
+              "start": 27,
+              "end": 47
+            }
+          ],
+          "error": null
+        },
+        "timeOfDay": {
+          "status": "complete",
+          "value": "\u6e05\u65e9",
+          "firstKnown": 1,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 3,
+              "quote": "\u8fd8\u5728\u6e05\u65e9\u7684\u88c5\u8ba2\u5ba4",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "7d0b0b161145c802dd5f161b9b729ab8e381e9b8d2073854cb015579eb857ca7",
+              "start": 9,
+              "end": 17
+            }
+          ],
+          "error": null
+        },
+        "lighting": {
+          "status": "complete",
+          "value": "\u6f2b\u5c04\u5929\u5149",
+          "firstKnown": 2,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 3,
+              "quote": "\u540c\u4f34\u3001\u5668\u5177\u548c\u521a\u624d\u90a3\u5c42\u6f2b\u5c04\u5929\u5149\uff0c\u4e00\u6837\u90fd\u6ca1\u6362",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "7d0b0b161145c802dd5f161b9b729ab8e381e9b8d2073854cb015579eb857ca7",
+              "start": 27,
+              "end": 47
+            }
+          ],
+          "error": null
+        },
+        "viewpoint": {
+          "status": "complete",
+          "value": "\u7a97\u4e0b",
+          "firstKnown": 1,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 3,
+              "quote": "\u6211\u4ecd\u4ece\u7a97\u4e0b\u5f80\u4e1c\u770b",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "7d0b0b161145c802dd5f161b9b729ab8e381e9b8d2073854cb015579eb857ca7",
+              "start": 18,
+              "end": 26
+            }
+          ],
+          "error": null
+        },
+        "perspective": {
+          "status": "needs-review",
+          "value": null,
+          "firstKnown": null,
+          "operation": "reobserve",
+          "refs": [
+            {
+              "group": "B",
+              "rev": 3,
+              "quote": "\u6211\u4ecd\u4ece\u7a97\u4e0b\u5f80\u4e1c\u770b",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "7d0b0b161145c802dd5f161b9b729ab8e381e9b8d2073854cb015579eb857ca7",
+              "start": 18,
+              "end": 26
+            }
+          ],
+          "error": "NOT_PHYSICAL_DIRECTION"
+        }
+      },
+      "sceneId": "\u77f3\u6e20\u88c5\u8ba2\u5ba4",
+      "values": {
+        "place": "\u77f3\u6e20\u88c5\u8ba2\u5ba4",
+        "people": [
+          "\u675c\u8861",
+          "\u95fb\u7b1b"
+        ],
+        "features": [
+          "\u538b\u4e66\u77f3",
+          "\u88c1\u7eb8\u6848"
+        ],
+        "timeOfDay": "\u6e05\u65e9",
+        "lighting": "\u6f2b\u5c04\u5929\u5149",
+        "viewpoint": "\u7a97\u4e0b",
+        "perspective": null,
+        "count": 2
+      },
+      "partial": {},
+      "changed": [],
+      "corrections": [],
+      "storyChangeCandidates": [],
+      "excluded": [],
+      "digest": "eb8c046b7fd389c25c579f49c128a85bbe3affbeaf8104f839db2b30d03674be",
+      "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+      "send": false,
+      "sceneEligible": false
+    },
+    "rawScore": {
+      "place": "correct",
+      "people": "correct",
+      "count": "correct",
+      "features": "correct",
+      "timeOfDay": "correct",
+      "lighting": "correct",
+      "viewpoint": "correct",
+      "perspective": "wrong"
+    },
+    "projectedScore": {
+      "place": "correct",
+      "people": "correct",
+      "count": "correct",
+      "features": "correct",
+      "timeOfDay": "correct",
+      "lighting": "correct",
+      "viewpoint": "correct",
+      "perspective": "omitted"
+    },
+    "packetSha256": "53661a5c6403144a2c2fa69348636a53d5c4618e815fecebea096b7f86efe524",
+    "partialRosterMatch": true,
+    "excludedLayersMatch": true,
+    "changedMatch": true
+  },
+  {
+    "slot": "C1",
+    "rawSha256": "36ef99b9f7099f6aa1ccdc403138f8dbedc7848d6109dbd1c4ab4a53e7d2a287",
+    "view": {
+      "group": "C",
+      "revision": 1,
+      "status": "HIDDEN",
+      "error": "NONCURRENT_OR_HIDDEN",
+      "fields": {},
+      "sceneId": null,
+      "digest": null,
+      "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+      "send": false,
+      "sceneEligible": false
+    },
+    "rawScore": {
+      "place": "omitted",
+      "people": "correct-unknown",
+      "count": "correct-unknown",
+      "features": "correct",
+      "timeOfDay": "correct-unknown",
+      "lighting": "correct",
+      "viewpoint": "correct",
+      "perspective": "wrong"
+    },
+    "projectedScore": null,
+    "packetSha256": "b5f05b1c29aa8672d301ba1f9ec4b5251c968265c1334e7890ea0a4d90743bef"
+  },
+  {
+    "slot": "C2",
+    "rawSha256": "862f8cc90c78d99a4e972cb777ce0c01a3a2ea578f1d1a7612ce316cab20e1f5",
+    "view": {
+      "group": "C",
+      "revision": 2,
+      "status": "partial",
+      "fields": {
+        "place": {
+          "status": "complete",
+          "value": "\u76d0\u4e95\u503c\u623f",
+          "firstKnown": 2,
+          "operation": "reobserve",
+          "refs": [
+            {
+              "group": "C",
+              "rev": 2,
+              "quote": "\u9192\u6765\u4ecd\u5728\u76d0\u4e95\u503c\u623f\u5357\u5899\u8fb9",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+              "start": 10,
+              "end": 21
+            }
+          ],
+          "error": null
+        },
+        "people": {
+          "status": "complete",
+          "value": [
+            "\u4e54\u9ea6"
+          ],
+          "firstKnown": 2,
+          "operation": "reobserve",
+          "refs": [
+            {
+              "group": "C",
+              "rev": 2,
+              "quote": "\u4e54\u9ea6\u6b63\u6380\u5e18\u8ba9\u6211\u770b\u6e05\u5168\u90e8\u5c4b\u5b50\uff0c\u73b0\u5728\u9664\u4e86\u5979\u6ca1\u6709\u522b\u4eba",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+              "start": 43,
+              "end": 66
+            }
+          ],
+          "error": null
+        },
+        "features": {
+          "status": "complete",
+          "value": [
+            "\u5e03\u5e18",
+            "\u6c34\u6876\u597d\u7aef\u7aef\u7684"
+          ],
+          "firstKnown": 2,
+          "operation": "reobserve",
+          "refs": [
+            {
+              "group": "C",
+              "rev": 2,
+              "quote": "\u6c34\u6876\u597d\u7aef\u7aef\u7684\uff0c\u5e03\u5e18\u8fd8\u5728",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+              "start": 26,
+              "end": 37
+            }
+          ],
+          "error": null
+        },
+        "timeOfDay": {
+          "status": "unknown",
+          "value": null,
+          "firstKnown": null,
+          "operation": "unknown",
+          "refs": [
+            {
+              "group": "C",
+              "rev": 2,
+              "quote": "\u4ecd\u8fa8\u4e0d\u51fa\u65f6\u8fb0",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+              "start": 67,
+              "end": 73
+            }
+          ],
+          "error": null
+        },
+        "lighting": {
+          "status": "complete",
+          "value": "\u706f\u5149",
+          "firstKnown": 2,
+          "operation": "reobserve",
+          "refs": [
+            {
+              "group": "C",
+              "rev": 2,
+              "quote": "\u706f\u5149\u4f9d\u65e7",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+              "start": 38,
+              "end": 42
+            }
+          ],
+          "error": null
+        },
+        "viewpoint": {
+          "status": "complete",
+          "value": "\u5357\u5899\u8fb9",
+          "firstKnown": 2,
+          "operation": "reobserve",
+          "refs": [
+            {
+              "group": "C",
+              "rev": 2,
+              "quote": "\u9192\u6765\u4ecd\u5728\u76d0\u4e95\u503c\u623f\u5357\u5899\u8fb9",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+              "start": 10,
+              "end": 21
+            }
+          ],
+          "error": null
+        },
+        "perspective": {
+          "status": "complete",
+          "value": "\u5411\u897f",
+          "firstKnown": 2,
+          "operation": "reobserve",
+          "refs": [
+            {
+              "group": "C",
+              "rev": 2,
+              "quote": "\u5411\u897f\u770b\u53bb",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+              "start": 22,
+              "end": 26
+            }
+          ],
+          "error": null
+        }
+      },
+      "sceneId": "\u76d0\u4e95\u503c\u623f",
+      "values": {
+        "place": "\u76d0\u4e95\u503c\u623f",
+        "people": [
+          "\u4e54\u9ea6"
+        ],
+        "features": [
+          "\u5e03\u5e18",
+          "\u6c34\u6876\u597d\u7aef\u7aef\u7684"
+        ],
+        "timeOfDay": null,
+        "lighting": "\u706f\u5149",
+        "viewpoint": "\u5357\u5899\u8fb9",
+        "perspective": "\u5411\u897f",
+        "count": 1
+      },
+      "partial": {},
+      "changed": null,
+      "corrections": [
+        {
+          "field": "place",
+          "reason": "newly-grounded"
+        },
+        {
+          "field": "people",
+          "reason": "newly-grounded"
+        },
+        {
+          "field": "features",
+          "reason": "newly-grounded"
+        },
+        {
+          "field": "lighting",
+          "reason": "newly-grounded"
+        },
+        {
+          "field": "viewpoint",
+          "reason": "newly-grounded"
+        },
+        {
+          "field": "perspective",
+          "reason": "newly-grounded"
+        }
+      ],
+      "storyChangeCandidates": [],
+      "excluded": [
+        {
+          "group": "C",
+          "rev": 2,
+          "quote": "\u6211\u68a6\u89c1\u5b5f\u5ddd\u63a8\u7ffb\u6c34\u6876",
+          "layer": "dream",
+          "visible": false,
+          "sourceSha256": "8f44747e49eea5a9d184c2f971a3e747392b285b97e31f9023f0965422738a42",
+          "start": 0,
+          "end": 9
+        }
+      ],
+      "digest": "557bd7b9a60c5792840bd929124f4a7bc9061b1164c3bc1a214a2171c16e0d47",
+      "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+      "send": false,
+      "sceneEligible": false
+    },
+    "rawScore": {
+      "place": "correct",
+      "people": "correct",
+      "count": "correct",
+      "features": "wrong",
+      "timeOfDay": "correct-unknown",
+      "lighting": "correct",
+      "viewpoint": "wrong",
+      "perspective": "correct"
+    },
+    "projectedScore": {
+      "place": "correct",
+      "people": "correct",
+      "count": "correct",
+      "features": "wrong",
+      "timeOfDay": "correct-unknown",
+      "lighting": "correct",
+      "viewpoint": "wrong",
+      "perspective": "correct"
+    },
+    "packetSha256": "d75116e1ba2cafe96e22476a0ea78d3817b28b7ffbff58298b95ae6f3924209e",
+    "partialRosterMatch": true,
+    "excludedLayersMatch": true,
+    "changedMatch": false
+  },
+  {
+    "slot": "C3",
+    "rawSha256": "10d6ad477d75697cd1ae68de192b1456e47fe752322b68c8d59fad4aa438c1f2",
+    "view": {
+      "group": "C",
+      "revision": 3,
+      "status": "partial",
+      "fields": {
+        "place": {
+          "status": "complete",
+          "value": "\u76d0\u4e95\u503c\u623f",
+          "firstKnown": 2,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "C",
+              "rev": 3,
+              "quote": "\u6211\u73af\u987e\u6574\u95f4\u503c\u623f",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+              "start": 30,
+              "end": 37
+            }
+          ],
+          "error": null
+        },
+        "people": {
+          "status": "complete",
+          "value": [],
+          "firstKnown": 3,
+          "operation": "remove",
+          "refs": [
+            {
+              "group": "C",
+              "rev": 3,
+              "quote": "\u4e54\u9ea6\u653e\u4e0b\u624b\uff0c\u4ece\u6211\u8ddf\u524d\u8de8\u51fa\u95e8\u69db",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+              "start": 0,
+              "end": 14
+            },
+            {
+              "group": "C",
+              "rev": 3,
+              "quote": "\u5728\u573a\u7684\u9664\u6211\u4ee5\u5916\u518d\u65e0\u4e00\u4eba",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+              "start": 38,
+              "end": 49
+            }
+          ],
+          "error": null
+        },
+        "features": {
+          "status": "needs-review",
+          "value": null,
+          "firstKnown": null,
+          "operation": "set",
+          "refs": [
+            {
+              "group": "C",
+              "rev": 3,
+              "quote": "\u5e18\u5df2\u7ecf\u6302\u5230\u94a9\u4e0a",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+              "start": 15,
+              "end": 22
+            },
+            {
+              "group": "C",
+              "rev": 3,
+              "quote": "\u6c34\u6876\u3001\u5e03\u5e18\u548c\u706f\u5149\u90fd\u5728",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+              "start": 58,
+              "end": 68
+            }
+          ],
+          "error": "NO_DIRECT_VALUE_ANCHOR"
+        },
+        "timeOfDay": {
+          "status": "unknown",
+          "value": null,
+          "firstKnown": null,
+          "operation": "unknown",
+          "refs": [
+            {
+              "group": "C",
+              "rev": 3,
+              "quote": "\u65f6\u8fb0\u4f9d\u7136\u4e0d\u660e",
+              "layer": "unknown",
+              "visible": false,
+              "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+              "start": 69,
+              "end": 75
+            }
+          ],
+          "error": null
+        },
+        "lighting": {
+          "status": "complete",
+          "value": "\u706f\u5149",
+          "firstKnown": 2,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "C",
+              "rev": 3,
+              "quote": "\u6c34\u6876\u3001\u5e03\u5e18\u548c\u706f\u5149\u90fd\u5728",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+              "start": 58,
+              "end": 68
+            }
+          ],
+          "error": null
+        },
+        "viewpoint": {
+          "status": "complete",
+          "value": "\u5357\u5899\u8fb9",
+          "firstKnown": 2,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "C",
+              "rev": 3,
+              "quote": "\u6211\u4ecd\u501a\u5357\u5899",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+              "start": 50,
+              "end": 55
+            }
+          ],
+          "error": null
+        },
+        "perspective": {
+          "status": "complete",
+          "value": "\u5411\u897f",
+          "firstKnown": 2,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "C",
+              "rev": 3,
+              "quote": "\u6211\u4ecd\u501a\u5357\u5899\u5411\u897f",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+              "start": 50,
+              "end": 57
+            }
+          ],
+          "error": null
+        }
+      },
+      "sceneId": "\u76d0\u4e95\u503c\u623f",
+      "values": {
+        "place": "\u76d0\u4e95\u503c\u623f",
+        "people": [],
+        "features": null,
+        "timeOfDay": null,
+        "lighting": "\u706f\u5149",
+        "viewpoint": "\u5357\u5899\u8fb9",
+        "perspective": "\u5411\u897f",
+        "count": 0
+      },
+      "partial": {},
+      "changed": [
+        "features",
+        "people"
+      ],
+      "corrections": [],
+      "storyChangeCandidates": [
+        {
+          "field": "people",
+          "quote": "\u4e54\u9ea6\u653e\u4e0b\u624b\uff0c\u4ece\u6211\u8ddf\u524d\u8de8\u51fa\u95e8\u69db"
+        }
+      ],
+      "excluded": [
+        {
+          "group": "C",
+          "rev": 3,
+          "quote": "\u65f6\u8fb0\u4f9d\u7136\u4e0d\u660e",
+          "layer": "unknown",
+          "visible": false,
+          "sourceSha256": "b4267b86885fb994991027739c29bbc7e1dae1ffc081ef9fc0e81ff02f80c8f9",
+          "start": 69,
+          "end": 75
+        }
+      ],
+      "digest": "6d4506c52e84f0ca33111ffbbdf179d7492cb27eee5d39b7575e7911b3e985a1",
+      "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+      "send": false,
+      "sceneEligible": false
+    },
+    "rawScore": {
+      "place": "correct",
+      "people": "correct",
+      "count": "correct",
+      "features": "wrong",
+      "timeOfDay": "correct-unknown",
+      "lighting": "correct",
+      "viewpoint": "wrong",
+      "perspective": "correct"
+    },
+    "projectedScore": {
+      "place": "correct",
+      "people": "correct",
+      "count": "correct",
+      "features": "omitted",
+      "timeOfDay": "correct-unknown",
+      "lighting": "correct",
+      "viewpoint": "wrong",
+      "perspective": "correct"
+    },
+    "packetSha256": "1481e49ef6f4aaac07d534251e3287db58d78e9bed554ae78540ecd57a2f349d",
+    "partialRosterMatch": true,
+    "excludedLayersMatch": false,
+    "changedMatch": true
+  },
+  {
+    "slot": "D1",
+    "rawSha256": "f557ba3ab24369e3c2d530b99e1b042ee91acfa000e3f6d501a0f22426e3ac55",
+    "view": {
+      "group": "D",
+      "revision": 1,
+      "status": "partial",
+      "fields": {
+        "place": {
+          "status": "complete",
+          "value": "\u6850\u6e7e\u9a8c\u79e4\u4ead",
+          "firstKnown": 1,
+          "operation": "set",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 1,
+              "quote": "\u6211\u5728\u6850\u6e7e\u9a8c\u79e4\u4ead\u7684\u79e4\u53f0\u65c1\u505c\u4e0b",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "aa8c3ae663efa5abb10cd8fa3a21b4fdaf9ab82a39c0c0d737f9400951c36315",
+              "start": 0,
+              "end": 13
+            }
+          ],
+          "error": null
+        },
+        "people": {
+          "status": "complete",
+          "value": [
+            "\u9676\u82c7"
+          ],
+          "firstKnown": 1,
+          "operation": "set",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 1,
+              "quote": "\u73af\u987e\u4ead\u5185\uff0c\u9664\u6211\u5916\u53ea\u6709\u9676\u82c7",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "aa8c3ae663efa5abb10cd8fa3a21b4fdaf9ab82a39c0c0d737f9400951c36315",
+              "start": 48,
+              "end": 60
+            }
+          ],
+          "error": null
+        },
+        "features": {
+          "status": "complete",
+          "value": [
+            "\u540a\u79e4",
+            "\u781d\u7801\u76d2"
+          ],
+          "firstKnown": 1,
+          "operation": "set",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 1,
+              "quote": "\u6211\u770b\u89c1\u540a\u79e4\u548c\u781d\u7801\u76d2",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "aa8c3ae663efa5abb10cd8fa3a21b4fdaf9ab82a39c0c0d737f9400951c36315",
+              "start": 38,
+              "end": 47
+            }
+          ],
+          "error": null
+        },
+        "timeOfDay": {
+          "status": "unknown",
+          "value": null,
+          "firstKnown": null,
+          "operation": "unknown",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 1,
+              "quote": "\u4e5f\u770b\u4e0d\u51fa\u65f6\u8fb0",
+              "layer": "current",
+              "visible": false,
+              "sourceSha256": "aa8c3ae663efa5abb10cd8fa3a21b4fdaf9ab82a39c0c0d737f9400951c36315",
+              "start": 25,
+              "end": 31
+            }
+          ],
+          "error": null
+        },
+        "lighting": {
+          "status": "complete",
+          "value": "\u7070\u767d\u5929\u5149",
+          "firstKnown": 1,
+          "operation": "set",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 1,
+              "quote": "\u7070\u767d\u5929\u5149\u91cc",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "aa8c3ae663efa5abb10cd8fa3a21b4fdaf9ab82a39c0c0d737f9400951c36315",
+              "start": 32,
+              "end": 37
+            }
+          ],
+          "error": null
+        },
+        "viewpoint": {
+          "status": "complete",
+          "value": "\u79e4\u53f0\u65c1",
+          "firstKnown": 1,
+          "operation": "set",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 1,
+              "quote": "\u6211\u5728\u6850\u6e7e\u9a8c\u79e4\u4ead\u7684\u79e4\u53f0\u65c1\u505c\u4e0b",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "aa8c3ae663efa5abb10cd8fa3a21b4fdaf9ab82a39c0c0d737f9400951c36315",
+              "start": 0,
+              "end": 13
+            }
+          ],
+          "error": null
+        },
+        "perspective": {
+          "status": "unknown",
+          "value": null,
+          "firstKnown": null,
+          "operation": "unknown",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 1,
+              "quote": "\u8fa8\u4e0d\u51fa\u81ea\u5df1\u671d\u7740\u54ea\u4e00\u65b9",
+              "layer": "current",
+              "visible": false,
+              "sourceSha256": "aa8c3ae663efa5abb10cd8fa3a21b4fdaf9ab82a39c0c0d737f9400951c36315",
+              "start": 14,
+              "end": 24
+            }
+          ],
+          "error": null
+        }
+      },
+      "sceneId": "\u6850\u6e7e\u9a8c\u79e4\u4ead",
+      "values": {
+        "place": "\u6850\u6e7e\u9a8c\u79e4\u4ead",
+        "people": [
+          "\u9676\u82c7"
+        ],
+        "features": [
+          "\u540a\u79e4",
+          "\u781d\u7801\u76d2"
+        ],
+        "timeOfDay": null,
+        "lighting": "\u7070\u767d\u5929\u5149",
+        "viewpoint": "\u79e4\u53f0\u65c1",
+        "perspective": null,
+        "count": 1
+      },
+      "partial": {},
+      "changed": null,
+      "corrections": [],
+      "storyChangeCandidates": [],
+      "excluded": [],
+      "digest": "c1d4fb5f2c5cd599d1a30ab8ad86240c36714f16f2cd09a3d5bea1b87db181b5",
+      "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+      "send": false,
+      "sceneEligible": false
+    },
+    "rawScore": {
+      "place": "correct",
+      "people": "correct",
+      "count": "correct",
+      "features": "correct",
+      "timeOfDay": "correct-unknown",
+      "lighting": "correct",
+      "viewpoint": "correct",
+      "perspective": "correct-unknown"
+    },
+    "projectedScore": {
+      "place": "correct",
+      "people": "correct",
+      "count": "correct",
+      "features": "correct",
+      "timeOfDay": "correct-unknown",
+      "lighting": "correct",
+      "viewpoint": "correct",
+      "perspective": "correct-unknown"
+    },
+    "packetSha256": "3f81bc35545354086399225dbdf87f763d5f54d711233550e9b55e7d973b7a66",
+    "partialRosterMatch": true,
+    "excludedLayersMatch": true,
+    "changedMatch": true
+  },
+  {
+    "slot": "D2",
+    "rawSha256": "c71160acfcd1158c72933c88467171a72f69e9f1712f8517498ed48eaeffc0dc",
+    "view": {
+      "group": "D",
+      "revision": 2,
+      "status": "partial",
+      "fields": {
+        "place": {
+          "status": "complete",
+          "value": "\u6850\u6e7e\u9a8c\u79e4\u4ead",
+          "firstKnown": 1,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 2,
+              "quote": "\u4ecd\u5728\u6850\u6e7e\u9a8c\u79e4\u4ead\u7684\u79e4\u53f0\u65c1",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "bef87476b408e4a1cdc14c3fd679be19d73900afca4ffff6e0a493c68705aa26",
+              "start": 5,
+              "end": 16
+            }
+          ],
+          "error": null
+        },
+        "people": {
+          "status": "complete",
+          "value": [
+            "\u9676\u82c7"
+          ],
+          "firstKnown": 1,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 2,
+              "quote": "\u9676\u82c7\u548c\u6211\u5b88\u7740\u540a\u79e4\u548c\u781d\u7801\u76d2",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "bef87476b408e4a1cdc14c3fd679be19d73900afca4ffff6e0a493c68705aa26",
+              "start": 41,
+              "end": 53
+            },
+            {
+              "group": "D",
+              "rev": 2,
+              "quote": "\u4ead\u91cc\u6ca1\u6709\u65c1\u4eba",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "bef87476b408e4a1cdc14c3fd679be19d73900afca4ffff6e0a493c68705aa26",
+              "start": 61,
+              "end": 67
+            }
+          ],
+          "error": null
+        },
+        "features": {
+          "status": "complete",
+          "value": [
+            "\u540a\u79e4",
+            "\u781d\u7801\u76d2"
+          ],
+          "firstKnown": 1,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 2,
+              "quote": "\u9676\u82c7\u548c\u6211\u5b88\u7740\u540a\u79e4\u548c\u781d\u7801\u76d2",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "bef87476b408e4a1cdc14c3fd679be19d73900afca4ffff6e0a493c68705aa26",
+              "start": 41,
+              "end": 53
+            }
+          ],
+          "error": null
+        },
+        "timeOfDay": {
+          "status": "unknown",
+          "value": null,
+          "firstKnown": null,
+          "operation": "unknown",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 2,
+              "quote": "\u4ecd\u4e0d\u77e5\u65f6\u8fb0",
+              "layer": "unknown",
+              "visible": false,
+              "sourceSha256": "bef87476b408e4a1cdc14c3fd679be19d73900afca4ffff6e0a493c68705aa26",
+              "start": 68,
+              "end": 73
+            }
+          ],
+          "error": null
+        },
+        "lighting": {
+          "status": "complete",
+          "value": "\u7070\u767d\u5929\u5149",
+          "firstKnown": 1,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 2,
+              "quote": "\u7070\u767d\u5929\u5149\u4f9d\u65e7",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "bef87476b408e4a1cdc14c3fd679be19d73900afca4ffff6e0a493c68705aa26",
+              "start": 54,
+              "end": 60
+            }
+          ],
+          "error": null
+        },
+        "viewpoint": {
+          "status": "complete",
+          "value": "\u79e4\u53f0\u65c1",
+          "firstKnown": 1,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 2,
+              "quote": "\u6211\u6ca1\u632a\u6b65\uff0c\u4ecd\u5728\u6850\u6e7e\u9a8c\u79e4\u4ead\u7684\u79e4\u53f0\u65c1",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "bef87476b408e4a1cdc14c3fd679be19d73900afca4ffff6e0a493c68705aa26",
+              "start": 0,
+              "end": 16
+            }
+          ],
+          "error": null
+        },
+        "perspective": {
+          "status": "complete",
+          "value": "\u5411\u5317",
+          "firstKnown": 2,
+          "operation": "reobserve",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 2,
+              "quote": "\u81ea\u5df1\u4e00\u76f4\u9762\u5411\u5317\uff0c\u5e76\u6ca1\u6709\u8f6c\u8eab",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "bef87476b408e4a1cdc14c3fd679be19d73900afca4ffff6e0a493c68705aa26",
+              "start": 27,
+              "end": 40
+            }
+          ],
+          "error": null
+        }
+      },
+      "sceneId": "\u6850\u6e7e\u9a8c\u79e4\u4ead",
+      "values": {
+        "place": "\u6850\u6e7e\u9a8c\u79e4\u4ead",
+        "people": [
+          "\u9676\u82c7"
+        ],
+        "features": [
+          "\u540a\u79e4",
+          "\u781d\u7801\u76d2"
+        ],
+        "timeOfDay": null,
+        "lighting": "\u7070\u767d\u5929\u5149",
+        "viewpoint": "\u79e4\u53f0\u65c1",
+        "perspective": "\u5411\u5317",
+        "count": 1
+      },
+      "partial": {},
+      "changed": [
+        "perspective"
+      ],
+      "corrections": [
+        {
+          "field": "perspective",
+          "reason": "newly-grounded"
+        }
+      ],
+      "storyChangeCandidates": [],
+      "excluded": [
+        {
+          "group": "D",
+          "rev": 2,
+          "quote": "\u4ecd\u4e0d\u77e5\u65f6\u8fb0",
+          "layer": "unknown",
+          "visible": false,
+          "sourceSha256": "bef87476b408e4a1cdc14c3fd679be19d73900afca4ffff6e0a493c68705aa26",
+          "start": 68,
+          "end": 73
+        }
+      ],
+      "digest": "21201cde3c8ba9147b82b1abeb051afeb1b7c41c37ea78a03646356b81bc1937",
+      "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+      "send": false,
+      "sceneEligible": false
+    },
+    "rawScore": {
+      "place": "correct",
+      "people": "correct",
+      "count": "correct",
+      "features": "correct",
+      "timeOfDay": "correct-unknown",
+      "lighting": "correct",
+      "viewpoint": "correct",
+      "perspective": "correct"
+    },
+    "projectedScore": {
+      "place": "correct",
+      "people": "correct",
+      "count": "correct",
+      "features": "correct",
+      "timeOfDay": "correct-unknown",
+      "lighting": "correct",
+      "viewpoint": "correct",
+      "perspective": "correct"
+    },
+    "packetSha256": "da6cc202d5d1c1f5bdc2f2462de7b352a42de3e6e15282a5c1612ab360cab400",
+    "partialRosterMatch": true,
+    "excludedLayersMatch": false,
+    "changedMatch": true
+  },
+  {
+    "slot": "D3",
+    "rawSha256": "866e2729d216f309dd19f90227b7a604a46ea10a69ba4de5c787d3d0541b3437",
+    "view": {
+      "group": "D",
+      "revision": 3,
+      "status": "partial",
+      "fields": {
+        "place": {
+          "status": "complete",
+          "value": "\u6850\u6e7e\u9a8c\u79e4\u4ead",
+          "firstKnown": 1,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 3,
+              "quote": "\u773c\u4e0b\u6211\u5728\u79e4\u53f0\u65c1\u4ecd\u5411\u5317\u671b",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "e4602a74d60466b0a9f32acf8b2a1f3b908801ded494d591caf53ec71166532c",
+              "start": 16,
+              "end": 27
+            },
+            {
+              "group": "D",
+              "rev": 3,
+              "quote": "\u4ead\u91cc\u53ea\u6709\u6211\u4eec",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "e4602a74d60466b0a9f32acf8b2a1f3b908801ded494d591caf53ec71166532c",
+              "start": 35,
+              "end": 41
+            }
+          ],
+          "error": null
+        },
+        "people": {
+          "status": "complete",
+          "value": [
+            "\u9676\u82c7"
+          ],
+          "firstKnown": 1,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 3,
+              "quote": "\u9676\u82c7\u5c31\u5728\u773c\u524d",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "e4602a74d60466b0a9f32acf8b2a1f3b908801ded494d591caf53ec71166532c",
+              "start": 28,
+              "end": 34
+            },
+            {
+              "group": "D",
+              "rev": 3,
+              "quote": "\u4ead\u91cc\u53ea\u6709\u6211\u4eec",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "e4602a74d60466b0a9f32acf8b2a1f3b908801ded494d591caf53ec71166532c",
+              "start": 35,
+              "end": 41
+            }
+          ],
+          "error": null
+        },
+        "features": {
+          "status": "complete",
+          "value": [
+            "\u540a\u79e4",
+            "\u781d\u7801\u76d2"
+          ],
+          "firstKnown": 1,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 3,
+              "quote": "\u540a\u79e4\u548c\u781d\u7801\u76d2\u90fd\u6ca1\u632a\u52a8",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "e4602a74d60466b0a9f32acf8b2a1f3b908801ded494d591caf53ec71166532c",
+              "start": 42,
+              "end": 52
+            }
+          ],
+          "error": null
+        },
+        "timeOfDay": {
+          "status": "unknown",
+          "value": null,
+          "firstKnown": null,
+          "operation": "unknown",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 3,
+              "quote": "\u65f6\u8fb0\u4f9d\u7136\u770b\u4e0d\u51fa",
+              "layer": "current",
+              "visible": false,
+              "sourceSha256": "e4602a74d60466b0a9f32acf8b2a1f3b908801ded494d591caf53ec71166532c",
+              "start": 62,
+              "end": 69
+            }
+          ],
+          "error": null
+        },
+        "lighting": {
+          "status": "complete",
+          "value": "\u7070\u767d\u5929\u5149",
+          "firstKnown": 1,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 3,
+              "quote": "\u8fd8\u662f\u90a3\u7247\u7070\u767d\u5929\u5149",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "e4602a74d60466b0a9f32acf8b2a1f3b908801ded494d591caf53ec71166532c",
+              "start": 53,
+              "end": 61
+            }
+          ],
+          "error": null
+        },
+        "viewpoint": {
+          "status": "complete",
+          "value": "\u79e4\u53f0\u65c1",
+          "firstKnown": 1,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 3,
+              "quote": "\u773c\u4e0b\u6211\u5728\u79e4\u53f0\u65c1\u4ecd\u5411\u5317\u671b",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "e4602a74d60466b0a9f32acf8b2a1f3b908801ded494d591caf53ec71166532c",
+              "start": 16,
+              "end": 27
+            }
+          ],
+          "error": null
+        },
+        "perspective": {
+          "status": "complete",
+          "value": "\u5411\u5317",
+          "firstKnown": 2,
+          "operation": "keep",
+          "refs": [
+            {
+              "group": "D",
+              "rev": 3,
+              "quote": "\u4ecd\u5411\u5317\u671b",
+              "layer": "current",
+              "visible": true,
+              "sourceSha256": "e4602a74d60466b0a9f32acf8b2a1f3b908801ded494d591caf53ec71166532c",
+              "start": 23,
+              "end": 27
+            }
+          ],
+          "error": null
+        }
+      },
+      "sceneId": "\u6850\u6e7e\u9a8c\u79e4\u4ead",
+      "values": {
+        "place": "\u6850\u6e7e\u9a8c\u79e4\u4ead",
+        "people": [
+          "\u9676\u82c7"
+        ],
+        "features": [
+          "\u540a\u79e4",
+          "\u781d\u7801\u76d2"
+        ],
+        "timeOfDay": null,
+        "lighting": "\u7070\u767d\u5929\u5149",
+        "viewpoint": "\u79e4\u53f0\u65c1",
+        "perspective": "\u5411\u5317",
+        "count": 1
+      },
+      "partial": {},
+      "changed": [],
+      "corrections": [],
+      "storyChangeCandidates": [],
+      "excluded": [
+        {
+          "group": "D",
+          "rev": 3,
+          "quote": "\u6211\u8bb0\u8d77\u6628\u5929\u79e4\u53f0\u65c1\u66fe\u7ad9\u7740\u4e24\u4f4d\u6311\u592b",
+          "layer": "past",
+          "visible": false,
+          "sourceSha256": "e4602a74d60466b0a9f32acf8b2a1f3b908801ded494d591caf53ec71166532c",
+          "start": 0,
+          "end": 15
+        }
+      ],
+      "digest": "21201cde3c8ba9147b82b1abeb051afeb1b7c41c37ea78a03646356b81bc1937",
+      "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+      "send": false,
+      "sceneEligible": false
+    },
+    "rawScore": {
+      "place": "correct",
+      "people": "correct",
+      "count": "correct",
+      "features": "correct",
+      "timeOfDay": "correct-unknown",
+      "lighting": "correct",
+      "viewpoint": "correct",
+      "perspective": "correct"
+    },
+    "projectedScore": {
+      "place": "correct",
+      "people": "correct",
+      "count": "correct",
+      "features": "correct",
+      "timeOfDay": "correct-unknown",
+      "lighting": "correct",
+      "viewpoint": "correct",
+      "perspective": "correct"
+    },
+    "packetSha256": "a7420b74c3d058b30615efdbf2e18e134533fc3630113d205e6d99c7a279ed06",
+    "partialRosterMatch": true,
+    "excludedLayersMatch": true,
+    "changedMatch": true
+  }
+]

@@ -1,0 +1,84 @@
+{
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "group": "C",
+  "revision": 3,
+  "claims": [
+    {
+      "field": "place",
+      "status": "complete",
+      "op": "keep",
+      "values": ["盐井值房"],
+      "delta": [],
+      "previous": 2,
+      "refs": [{"group":"C","rev":3,"quote":"我环顾整间值房","layer":"current","visible":true}],
+      "storyChangeQuote": null
+    },
+    {
+      "field": "people",
+      "status": "complete",
+      "op": "remove",
+      "values": [],
+      "delta": ["乔麦"],
+      "previous": 2,
+      "refs": [
+        {"group":"C","rev":3,"quote":"乔麦放下手，从我跟前跨出门槛","layer":"current","visible":true},
+        {"group":"C","rev":3,"quote":"在场的除我以外再无一人","layer":"current","visible":true}
+      ],
+      "storyChangeQuote": "乔麦放下手，从我跟前跨出门槛"
+    },
+    {
+      "field": "features",
+      "status": "complete",
+      "op": "set",
+      "values": ["布帘挂到钩上","水桶"],
+      "delta": [],
+      "previous": null,
+      "refs": [
+        {"group":"C","rev":3,"quote":"帘已经挂到钩上","layer":"current","visible":true},
+        {"group":"C","rev":3,"quote":"水桶、布帘和灯光都在","layer":"current","visible":true}
+      ],
+      "storyChangeQuote": "帘已经挂到钩上"
+    },
+    {
+      "field": "timeOfDay",
+      "status": "unknown",
+      "op": "unknown",
+      "values": null,
+      "delta": [],
+      "previous": null,
+      "refs": [{"group":"C","rev":3,"quote":"时辰依然不明","layer":"unknown","visible":false}],
+      "storyChangeQuote": null
+    },
+    {
+      "field": "lighting",
+      "status": "complete",
+      "op": "keep",
+      "values": ["灯光"],
+      "delta": [],
+      "previous": 2,
+      "refs": [{"group":"C","rev":3,"quote":"水桶、布帘和灯光都在","layer":"current","visible":true}],
+      "storyChangeQuote": null
+    },
+    {
+      "field": "viewpoint",
+      "status": "complete",
+      "op": "keep",
+      "values": ["南墙边"],
+      "delta": [],
+      "previous": 2,
+      "refs": [{"group":"C","rev":3,"quote":"我仍倚南墙","layer":"current","visible":true}],
+      "storyChangeQuote": null
+    },
+    {
+      "field": "perspective",
+      "status": "complete",
+      "op": "keep",
+      "values": ["向西"],
+      "delta": [],
+      "previous": 2,
+      "refs": [{"group":"C","rev":3,"quote":"我仍倚南墙向西","layer":"current","visible":true}],
+      "storyChangeQuote": null
+    }
+  ],
+  "exclusions": [{"group":"C","rev":3,"quote":"时辰依然不明","layer":"unknown","visible":false}]
+}

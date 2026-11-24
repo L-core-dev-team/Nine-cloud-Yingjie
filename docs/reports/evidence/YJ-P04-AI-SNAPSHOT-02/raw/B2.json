@@ -1,0 +1,36 @@
+{
+  "tag": "AI_SCENE_PROPOSAL / RESEARCH_ONLY",
+  "group": "B",
+  "revision": 2,
+  "claims": [
+    {
+      "field": "place", "status": "complete", "op": "keep", "values": ["石渠装订室"], "delta": [], "previous": 1,
+      "refs": [{"group": "B", "rev": 2, "quote": "我们三个谁也没挪窝", "layer": "current", "visible": true}], "storyChangeQuote": null
+    },
+    {
+      "field": "people", "status": "complete", "op": "keep", "values": ["杜衡", "闻笛"], "delta": [], "previous": 1,
+      "refs": [{"group": "B", "rev": 2, "quote": "我们三个谁也没挪窝", "layer": "current", "visible": true}], "storyChangeQuote": null
+    },
+    {
+      "field": "features", "status": "complete", "op": "keep", "values": ["压书石", "裁纸案"], "delta": [], "previous": 1,
+      "refs": [{"group": "B", "rev": 2, "quote": "那两件用具还是原来的样子", "layer": "current", "visible": true}], "storyChangeQuote": null
+    },
+    {
+      "field": "timeOfDay", "status": "complete", "op": "keep", "values": ["清早"], "delta": [], "previous": 1,
+      "refs": [{"group": "B", "rev": 2, "quote": "仍是清早", "layer": "current", "visible": true}], "storyChangeQuote": null
+    },
+    {
+      "field": "lighting", "status": "complete", "op": "set", "values": ["漫射天光"], "delta": [], "previous": null,
+      "refs": [{"group": "B", "rev": 2, "quote": "变成了漫射天光", "layer": "current", "visible": true}], "storyChangeQuote": "变成了漫射天光"
+    },
+    {
+      "field": "viewpoint", "status": "complete", "op": "keep", "values": ["窗下"], "delta": [], "previous": 1,
+      "refs": [{"group": "B", "rev": 2, "quote": "从窗下朝东看", "layer": "current", "visible": true}], "storyChangeQuote": null
+    },
+    {
+      "field": "perspective", "status": "complete", "op": "reobserve", "values": ["朝东"], "delta": [], "previous": null,
+      "refs": [{"group": "B", "rev": 2, "quote": "从窗下朝东看", "layer": "current", "visible": true}], "storyChangeQuote": null
+    }
+  ],
+  "exclusions": [{"group": "B", "rev": 2, "quote": "刚才直照案头的日光", "layer": "past", "visible": false}]
+}
