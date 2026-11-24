@@ -1,0 +1,32 @@
+{
+  "version": "scene-dialogue/2",
+  "fieldScoring": "Use frozen score.compare on eight raw and projected values; exact scalar and sorted arrays. Unknown roster count is null. Hidden frames are not scored as eight correct unknowns.",
+  "realGroups": [
+    "B",
+    "C",
+    "D"
+  ],
+  "oldReplay": [
+    "A",
+    "B",
+    "C"
+  ],
+  "scoreStoryChanges": "List source-quoted changes separately from projected differences and reobservations. D2 newly known facing is not a turn.",
+  "judgment": "No post-hoc equivalence credit. Flag wrong accepted values, including semantic/scope errors, separately from exact-string mismatch; independent human review NOT_RUN.",
+  "directed": {
+    "wrongDirection": "FIELD_UNKNOWN",
+    "directionAsPosition": "FIELD_UNKNOWN",
+    "keepMismatch": "FIELD_UNKNOWN",
+    "unknownReobserved": "ACCEPT",
+    "keepAfterMissing": "FIELD_UNKNOWN",
+    "crossScope": "HIDE",
+    "future": "HIDE",
+    "falseQuote": "HIDE",
+    "noncurrent": "HIDE",
+    "unknownVsEmpty": "DISTINCT",
+    "repairAfterRejected": "ACCEPT",
+    "unboundPlaceInheritance": "FIELD_UNKNOWN",
+    "noEvidenceKeep": "FIELD_UNKNOWN",
+    "overlap": "HIDE"
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "type": "object",
+  "properties": {
+    "tag": {
+      "type": "string",
+      "enum": [
+        "AI_SCENE_PROPOSAL / RESEARCH_ONLY"
+      ]
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string",
+            "enum": [
+              "place",
+              "people",
+              "features",
+              "timeOfDay",
+              "lighting",
+              "viewpoint",
+              "perspective"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "complete",
+              "partial",
+              "unknown"
+            ]
+          },
+          "op": {
+            "type": "string",
+            "enum": [
+              "set",
+              "keep",
+              "add",
+              "remove",
+              "unknown",
+              "reobserve"
+            ]
+          },
+          "values": {
+            "anyOf": [
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "delta": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "previous": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "refs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "group": {
+                  "type": "string",
+                  "enum": [
+                    "A",
+                    "B",
+                    "C",
+                    "D"
+                  ]
+                },
+                "rev": {
+                  "type": "integer"
+                },
+                "quote": {
+                  "type": "string"
+                },
+                "layer": {
+                  "type": "string",
+                  "enum": [
+                    "current",
+                    "past",
+                    "dream",
+                    "hypothetical",
+                    "reported",
+                    "unknown"
+                  ]
+                },
+                "visible": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "group",
+                "rev",
+                "quote",
+                "layer",
+                "visible"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "storyChangeQuote": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "field",
+          "status",
+          "op",
+          "values",
+          "delta",
+          "previous",
+          "refs",
+          "storyChangeQuote"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "group": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ]
+          },
+          "rev": {
+            "type": "integer"
+          },
+          "quote": {
+            "type": "string"
+          },
+          "layer": {
+            "type": "string",
+            "enum": [
+              "current",
+              "past",
+              "dream",
+              "hypothetical",
+              "reported",
+              "unknown"
+            ]
+          },
+          "visible": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "group",
+          "rev",
+          "quote",
+          "layer",
+          "visible"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "group": {
+      "enum": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "type": "string"
+    },
+    "revision": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "tag",
+    "claims",
+    "exclusions",
+    "group",
+    "revision"
+  ],
+  "additionalProperties": false
+}

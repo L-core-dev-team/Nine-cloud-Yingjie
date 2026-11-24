@@ -1,0 +1,63 @@
+[
+  {
+    "place": "桐湾验秤亭",
+    "people": [
+      "陶苇"
+    ],
+    "count": 1,
+    "features": [
+      "吊秤",
+      "砝码盒"
+    ],
+    "timeOfDay": null,
+    "lighting": "灰白天光",
+    "viewpoint": "秤台旁",
+    "perspective": null,
+    "changed": null,
+    "storyChanges": [],
+    "excluded": [],
+    "partialPeople": []
+  },
+  {
+    "place": "桐湾验秤亭",
+    "people": [
+      "陶苇"
+    ],
+    "count": 1,
+    "features": [
+      "吊秤",
+      "砝码盒"
+    ],
+    "timeOfDay": null,
+    "lighting": "灰白天光",
+    "viewpoint": "秤台旁",
+    "perspective": "向北",
+    "changed": [
+      "perspective"
+    ],
+    "storyChanges": [],
+    "excluded": [],
+    "partialPeople": []
+  },
+  {
+    "place": "桐湾验秤亭",
+    "people": [
+      "陶苇"
+    ],
+    "count": 1,
+    "features": [
+      "吊秤",
+      "砝码盒"
+    ],
+    "timeOfDay": null,
+    "lighting": "灰白天光",
+    "viewpoint": "秤台旁",
+    "perspective": "向北",
+    "changed": [],
+    "storyChanges": [],
+    "excluded": [
+      "past"
+    ],
+    "partialPeople": []
+  }
+]
