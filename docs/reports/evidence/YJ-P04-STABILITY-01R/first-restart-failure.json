@@ -1,0 +1,21 @@
+{
+  "command": "python -B packages/ai-snapshot-pilot/stability-repair/verify.py --capture",
+  "exit": 1,
+  "failedComparison": "rows==other.repaired() and early==rows[:7] and len(rows)==14",
+  "followUp": {
+    "firstDifferentRevision": 3,
+    "continuousChain": "1674a65dfc46160a40bc2added5cbd5d011bd1d65f52955cdde551ae53b53d88",
+    "interruptedChain": "930c281231446ed00e9c20738b50a57791d452d34ddc98d27290ca8a739ff35c",
+    "field": "expressibility.unknownAttributes",
+    "subject": "铜盆",
+    "continuousOrder": [
+      "contents",
+      "arrangement"
+    ],
+    "interruptedOrder": [
+      "arrangement",
+      "contents"
+    ]
+  },
+  "fix": "Sort the union of attribute keys before serializing per-object availability."
+}
