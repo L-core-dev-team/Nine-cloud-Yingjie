@@ -1,0 +1,208 @@
+{
+  "browser": "158.0.8127.38",
+  "results": [
+    {
+      "revision": 5,
+      "action": "loc_wangqitai",
+      "h": {
+        "scope": "a1bbcb3749ea7fd89eaf8d0145d63b804234fd0203f9596a7cd79b2b5ee760f1",
+        "ownerHash": "101475a058f59ba9b4573952c473fe19660f49226bc3a61cb0a8697196e95ab7",
+        "saveHash": "147fdc4d2390019459fde05c6ab73d0c2dc28a3cc6854bfd313e6f7d872c0c10",
+        "branch": "root",
+        "revision": 5,
+        "requestKey": "cd497894-b878-46e3-81da-bccfc7f21dc5",
+        "action": "前往望气台",
+        "text": "你到了望气台。\n从望气台往南看。\n压在山脊上的那片白，不是云。",
+        "bodySha": "97dc995a0bcdc5178d62a03e7482c49d0bc291bdcd727a591c2b749767da052d",
+        "receiptSha": "800dc4f2a5de9533ee95d4754ccfa07f5edd4accb33e0e3674c73ed6f4bbc4dd",
+        "canonicalReceiptSha": "9765ee70d792f38388bdd2877a5a30a66f2c6c817d03179b791cbe1e0bf2062b",
+        "source": "deterministic",
+        "recovery": "returned",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005",
+        "events": [
+          "move.arrived"
+        ],
+        "native": {
+          "location": "loc_wangqitai",
+          "place": "望气台",
+          "sub": null,
+          "quest": {
+            "status": "completed",
+            "rewardClaimed": true
+          },
+          "known": [
+            "loc_luhuadu",
+            "loc_wangqitai",
+            "loc_zheguiping"
+          ],
+          "revision": 5
+        },
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "frame": {
+        "key": "28cec1cb94309bfd845c1e526a8deec58a911992b95976733da4110c644eb5de",
+        "title": "望气台南望",
+        "basis": "当回合正文与原生行动相符",
+        "asset": "I03",
+        "sha": "77979c8002976334ea57c71a82d59737d435be51dbba1acbec688ff6163c1cd9"
+      },
+      "decoded": {
+        "sha": "77979c8002976334ea57c71a82d59737d435be51dbba1acbec688ff6163c1cd9",
+        "width": 1536,
+        "height": 1024,
+        "paintWidth": 601.546875
+      },
+      "injectedImageFailure": "browser GET 404; text and next action available"
+    },
+    {
+      "revision": 6,
+      "action": "loc_luhuadu",
+      "h": {
+        "scope": "a1bbcb3749ea7fd89eaf8d0145d63b804234fd0203f9596a7cd79b2b5ee760f1",
+        "ownerHash": "101475a058f59ba9b4573952c473fe19660f49226bc3a61cb0a8697196e95ab7",
+        "saveHash": "147fdc4d2390019459fde05c6ab73d0c2dc28a3cc6854bfd313e6f7d872c0c10",
+        "branch": "root",
+        "revision": 6,
+        "requestKey": "bb01a956-92e8-4eff-8d71-c429f65d9383",
+        "action": "前往芦花渡",
+        "text": "你到了芦花渡。",
+        "bodySha": "004843db259a752c0323489860d770a6d06a329891b4b14e82733fc9e26a8b00",
+        "receiptSha": "ba17c03552540a3e118f79f64a8f693f573957916a3869ca5b6cfb040812616e",
+        "canonicalReceiptSha": "7df2c8c92aa508e0ed840eac3b11bc6a2e8ca0a63e3dab9e84ff1436e8891cfd",
+        "source": "deterministic",
+        "recovery": "returned",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005",
+        "events": [
+          "move.arrived"
+        ],
+        "native": {
+          "location": "loc_luhuadu",
+          "place": "芦花渡",
+          "sub": null,
+          "quest": {
+            "status": "completed",
+            "rewardClaimed": true
+          },
+          "known": [
+            "loc_luhuadu",
+            "loc_wangqitai",
+            "loc_zheguiping"
+          ],
+          "revision": 6
+        },
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "frame": null,
+      "lateCurrentStatus": 409,
+      "readbackAfterFailedAssertion": true
+    },
+    {
+      "revision": 7,
+      "action": "chat",
+      "h": {
+        "scope": "a1bbcb3749ea7fd89eaf8d0145d63b804234fd0203f9596a7cd79b2b5ee760f1",
+        "ownerHash": "101475a058f59ba9b4573952c473fe19660f49226bc3a61cb0a8697196e95ab7",
+        "saveHash": "147fdc4d2390019459fde05c6ab73d0c2dc28a3cc6854bfd313e6f7d872c0c10",
+        "branch": "root",
+        "revision": 7,
+        "requestKey": "c0da57fc-490d-47d4-a249-a4a3293668f8",
+        "action": "与岑九闲谈",
+        "text": "嗯。芦花今年开得晚。",
+        "bodySha": "e78f03db10dc49830239a3833d6ab6635f5e45a3f222148a2fdaa651195f7547",
+        "receiptSha": "845a85e141e53a14076914934f2c3546b4f589aee4435c97e5d0afb9b478101d",
+        "canonicalReceiptSha": "d7146ccecee0d25c12516eec395c8418276ca6f1a44cf651516ca1ba691a3d42",
+        "source": "deterministic",
+        "recovery": "returned",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005",
+        "events": [
+          "talk.occurred"
+        ],
+        "native": {
+          "location": "loc_luhuadu",
+          "place": "芦花渡",
+          "sub": null,
+          "quest": {
+            "status": "completed",
+            "rewardClaimed": true
+          },
+          "known": [
+            "loc_luhuadu",
+            "loc_wangqitai",
+            "loc_zheguiping"
+          ],
+          "revision": 7
+        },
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "frame": null
+    },
+    {
+      "revision": 8,
+      "action": "loc_wangqitai",
+      "h": {
+        "scope": "a1bbcb3749ea7fd89eaf8d0145d63b804234fd0203f9596a7cd79b2b5ee760f1",
+        "ownerHash": "101475a058f59ba9b4573952c473fe19660f49226bc3a61cb0a8697196e95ab7",
+        "saveHash": "147fdc4d2390019459fde05c6ab73d0c2dc28a3cc6854bfd313e6f7d872c0c10",
+        "branch": "root",
+        "revision": 8,
+        "requestKey": "3469b8a8-e0b7-4fcc-ac2e-08e2b6b0cec3",
+        "action": "前往望气台",
+        "text": "你到了望气台。\n从望气台往南看。\n压在山脊上的那片白，不是云。",
+        "bodySha": "97dc995a0bcdc5178d62a03e7482c49d0bc291bdcd727a591c2b749767da052d",
+        "receiptSha": "22a6579a2523ab94de53a9e204a021492228fc2b2ead5dcfcb5568c59df3a05f",
+        "canonicalReceiptSha": "a96f0383fc8cce2187b6f81742862011f8d713a146fcd2b9a9e4f705db34df86",
+        "source": "deterministic",
+        "recovery": "returned",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005",
+        "events": [
+          "move.arrived"
+        ],
+        "native": {
+          "location": "loc_wangqitai",
+          "place": "望气台",
+          "sub": null,
+          "quest": {
+            "status": "completed",
+            "rewardClaimed": true
+          },
+          "known": [
+            "loc_luhuadu",
+            "loc_wangqitai",
+            "loc_zheguiping"
+          ],
+          "revision": 8
+        },
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "frame": {
+        "key": "64aa8925b2de8d0585ed13421ee1406d2b0503dc9b3bda71d947a337bff6511d",
+        "title": "望气台南望",
+        "basis": "当回合正文与原生行动相符",
+        "asset": "I03",
+        "sha": "77979c8002976334ea57c71a82d59737d435be51dbba1acbec688ff6163c1cd9"
+      },
+      "decoded": {
+        "sha": "77979c8002976334ea57c71a82d59737d435be51dbba1acbec688ff6163c1cd9",
+        "width": 1536,
+        "height": 1024,
+        "paintWidth": 601.546875
+      }
+    }
+  ]
+}

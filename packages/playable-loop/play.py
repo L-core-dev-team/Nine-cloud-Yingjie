@@ -7,11 +7,11 @@ import sys
 from session import BASE,HERE
 
 def main(mode):
-    if mode not in ("reader","demo"):raise ValueError("unknown play mode")
+    if mode not in ("reader","demo","visual-reader","visual-demo"):raise ValueError("unknown play mode")
     cmd=[sys.executable,"-B",str(HERE/"session.py")]
     if (BASE/mode/"p05-owned").is_file():
         subprocess.run(cmd+["resume",mode],check=True)
-    elif mode=="reader":
+    elif mode in ("reader","visual-reader"):
         paths={}
         if (BASE/"demo/private.json").is_file():
             local=json.loads((BASE/"demo/private.json").read_bytes())

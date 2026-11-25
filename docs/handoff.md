@@ -1,5 +1,10 @@
 # 映界当前交接
 
+## 原生图文试玩已完成 · P05_VISUAL_PLAYABLE_PASS
+
+个人入口停在第零回合，验收档停在第八回合。图像随仓库交付，宿主与 PostgreSQL 仍由本机独立启动器管理。 [图文实测报告](reports/YJ-P05-VISUAL-LOOP-01-report.md)
+
+
 ## 2026-11-25 · 当前执行入口：P05-VISUAL-LOOP-01
 
 按 [原生图文试玩任务书](task-briefs/YJ-P05-VISUAL-LOOP-01.md) 开工，分支 `codex/yj-p05-visual-loop-01`，工程基线 `39e0acb53b5f08650acc6df0c8dd84b4f7a161d5`。道主已同意先接图文实机，UI 精细对齐后置；此次准备提交为 NOT_RUN，无需重复等待同范围许可。

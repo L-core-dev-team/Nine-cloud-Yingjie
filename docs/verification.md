@@ -1,5 +1,10 @@
 # 映界验证记录
 
+## 原生图文试玩已完成 · P05_VISUAL_PLAYABLE_PASS
+
+实测 Chrome 八回合，三图实际解码，重访复用同字节。新档 8/8 规范化回执与正文对账，9 条事件一致。迟到检查首次失败及修复均有记录。 [图文实测报告](reports/YJ-P05-VISUAL-LOOP-01-report.md)
+
+
 ## 2026-11-25 · P05-VISUAL-LOOP-01 授权登记（图文实测 NOT_RUN）
 
 本次准备 [原生图文试玩任务书](task-briefs/YJ-P05-VISUAL-LOOP-01.md) 与五份索引。从 GitHub 只读核对 P05 `39e0acb53b5f08650acc6df0c8dd84b4f7a161d5` 报告、启动说明、原生宿主/侧车/玩家入口和既有图片契约。准备阶段没有重跑 Windows、创建图片或验证本地工作树。

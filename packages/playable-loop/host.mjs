@@ -9,6 +9,8 @@ import {digest} from "../native-facts/admission.mjs";
 
 const dir=process.argv[2],cfg=JSON.parse(readFileSync(join(dir,"private.json")));
 const store=openStore(dir),db=store.db,n=await openNative(cfg,dir,store);
+const visualMode=["visual-demo","visual-reader"].some(name=>readFileSync(join(dir,"p05-owned"),"utf8")==="P05/1:"+name);
+const pictures=visualMode?await import("./visual/pictures.mjs"):null;
 const ticket=randomBytes(32).toString("hex"),base="http://127.0.0.1:"+cfg.httpPort;
 const scopeOf=(owner,save)=>hash([owner,save.saveId,"root"]);
 let busy=false;
@@ -23,7 +25,9 @@ function record(owner,save,row,receipt,text,recovery){
   delete entry.native.actions;
   db.exec("BEGIN IMMEDIATE");
   try{db.prepare("UPDATE action SET record=? WHERE k=? AND record IS NULL").run(JSON.stringify(entry),row.k);
-    prepareState(store,entry);db.exec("COMMIT")}catch(e){db.exec("ROLLBACK");throw e}
+    if(pictures)pictures.bindPicture(store,entry,bound);
+    else prepareState(store,entry);
+    db.exec("COMMIT")}catch(e){db.exec("ROLLBACK");throw e}
   return entry;
 }
 async function recover(owner,save,scope){
@@ -42,6 +46,11 @@ const srv=createServer(async(req,res)=>{
     if(req.headers.host!==new URL(base).host)failure(403,"host");
     if(req.method==="GET"&&req.url==="/health")return reply(200,"P05","text/plain");
     const files={"/":["page.html","text/html"],"/player.js":["player.js","text/javascript"],"/style.css":["style.css","text/css"]};
+    if(pictures){
+      files["/"]=["visual/page.html","text/html"];
+      files["/visual-player.js"]=["visual/display.js","text/javascript"];
+      files["/paper.css"]=["visual/paper.css","text/css"];
+    }
     if(req.method==="GET"&&Object.hasOwn(files,req.url)){const [path,type]=files[req.url];return reply(200,readFileSync(new URL(path,import.meta.url)),type)}
     if(req.method==="POST"&&req.headers.origin!==base)failure(403,"origin");
     if(req.method==="POST"&&req.url==="/enter"){
@@ -54,9 +63,26 @@ const srv=createServer(async(req,res)=>{
     if(req.method==="POST"&&req.url==="/logout"){await n.auth.logout(token);return reply(200,{ok:true})}
     const owner=who.ownerId,save=await n.saveFor(owner),scope=scopeOf(owner,save);
     if(!busy)await recover(owner,save,scope);
+    if(pictures && req.url.startsWith("/pictures/")){
+      if(req.method==="POST" && req.url==="/pictures/preference"){
+        const input=await body(req); if(input.scope!==scope)failure(403,"存档不符");
+        pictures.setEnabled(store,scope,input.enabled);return reply(200,{ok:true});
+      }
+      const m=/^\/pictures\/(current|history)\/([1-8])\/([0-9a-f]{64})$/.exec(req.url);
+      if(!m)failure(404,"无适用画面");
+      // Read the POST body before checking the current save, including delayed acknowledgements.
+      const outcome=req.method==="POST"?(await body(req)).outcome:null;
+      const live=publicState(await n.saveFor(owner),n.labels);
+      const row=pictures.target(store,scope,live,m[1],Number(m[2]),m[3]);
+      if(req.method==="GET")return reply(200,pictures.reviewedBytes(row.asset),"image/png");
+      if(req.method==="POST")return reply(200,pictures.recordDisplay(store,row,m[1],outcome));
+      failure(405,"方法不适用");
+    }
     if(req.method==="GET"&&req.url==="/game"){
       const current=publicState(save,n.labels);
-      return reply(200,{scope,current,history:store.history(scope),slots:db.prepare("SELECT rev,kind,status,result FROM slot WHERE scope=? ORDER BY rev,kind").all(scope).map(x=>({...x,result:x.result&&JSON.parse(x.result)})),...blocked});
+      const history=store.history(scope);
+      const visual=pictures?{enabled:pictures.enabled(store,scope),frames:Object.fromEntries(history.map(h=>[h.revision,pictures.describe(store,scope,h.revision)]))}:undefined;
+      return reply(200,{scope,current,history,visual,slots:db.prepare("SELECT rev,kind,status,result FROM slot WHERE scope=? ORDER BY rev,kind").all(scope).map(x=>({...x,result:x.result&&JSON.parse(x.result)})),...blocked});
     }
     if(req.method!=="POST"||req.url!=="/act")failure(404,"not found");
     const input=await body(req);

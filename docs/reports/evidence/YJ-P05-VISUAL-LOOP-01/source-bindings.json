@@ -1,0 +1,70 @@
+{
+  "sourceCommit": "39e0acb53b5f08650acc6df0c8dd84b4f7a161d5",
+  "purpose": "旧局制作依据。新局逐回合展示归属另见 presentations.json。",
+  "inputs": [
+    {
+      "asset": "I01",
+      "revision": 1,
+      "text": "渡槽淤了半尺，水发黄。\n船吃水太深，蹭着淤泥靠不上岸。\n岸边踩倒的芦花没人扶。",
+      "bodySha": "c06f6b269e42447996df098e63ee34479c9e1e1f34ee0f97e3c6c64ba9b77e8a",
+      "events": [
+        "observe.result"
+      ],
+      "place": "loc_luhuadu",
+      "sub": null,
+      "inputs": [
+        {
+          "file": "state01.json",
+          "sha": "0db5fd18c5861e4cd807f072bb871421aaee91bae7398e287228a9221dd5f42c"
+        },
+        {
+          "file": "timing01.json",
+          "sha": "94401e1984a4e88997e0cc204f51493b13d697376e2c79146ce69fc5dec862fe"
+        }
+      ]
+    },
+    {
+      "asset": "I02",
+      "revision": 3,
+      "text": "鸦群炸开，又落回石头上。\n石堆松了一层。\n石堆散了。渡槽口露出一段黑黢黢的水面。\n远处有桨声。一下，又一下。",
+      "bodySha": "5da3f3f41b458096dc48c251e446176722b0682b07b105befe6b0e40cf0b1427",
+      "events": [
+        "combat.resolved",
+        "quest.completed"
+      ],
+      "place": "loc_luhuadu",
+      "sub": "subloc_ferry_berm",
+      "inputs": [
+        {
+          "file": "state03.json",
+          "sha": "3ab9fcd319cbe04e8d2978153313d4c341b81782d296b1c94502b53c7efd6f94"
+        },
+        {
+          "file": "timing03.json",
+          "sha": "b9fc48c131787f788f4298549188a2032cef1dcddb2df245518296d4886e2847"
+        }
+      ]
+    },
+    {
+      "asset": "I03",
+      "revision": 5,
+      "text": "你到了望气台。\n从望气台往南看。\n压在山脊上的那片白，不是云。",
+      "bodySha": "97dc995a0bcdc5178d62a03e7482c49d0bc291bdcd727a591c2b749767da052d",
+      "events": [
+        "move.arrived"
+      ],
+      "place": "loc_wangqitai",
+      "sub": null,
+      "inputs": [
+        {
+          "file": "state05.json",
+          "sha": "d79b9c294c7a12111931e91dfcb943c70ec5526644e4857f7fc2fe73d6396944"
+        },
+        {
+          "file": "timing05.json",
+          "sha": "15bde41b69e4d9794e2f8daecac9b680445d1f6ea5ea2ac93dc1bb2ed2f569f9"
+        }
+      ]
+    }
+  ]
+}

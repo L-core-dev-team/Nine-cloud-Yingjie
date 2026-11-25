@@ -1,0 +1,157 @@
+{
+  "version": "p05-native-art/1",
+  "upstream": "f1fe6ea561c5ef4d1ec670b7a406625ce5df774c",
+  "rules": "prologue-v1-candidate-20261005",
+  "canon": "prologue-canon-candidate-20261005",
+  "scope": [
+    "visual-demo",
+    "visual-reader"
+  ],
+  "assets": {
+    "I01": {
+      "sha256": "30c1aa4a8ed9b37d2c5e7da7e506b7b785024d5ce2488fc29b99aa726f0bddf3",
+      "format": "png",
+      "width": 1536,
+      "height": 1024,
+      "review": "accepted",
+      "title": "渡口淤水",
+      "sourceRevision": 1,
+      "reference": null
+    },
+    "I02": {
+      "sha256": "882b457d551db2e8ff8957e9a6aad4fd180b48e6c496bc2f97e684a81c2f74a9",
+      "format": "png",
+      "width": 1536,
+      "height": 1024,
+      "review": "accepted",
+      "title": "清障后的渡槽口",
+      "sourceRevision": 3,
+      "reference": null
+    },
+    "I03": {
+      "sha256": "77979c8002976334ea57c71a82d59737d435be51dbba1acbec688ff6163c1cd9",
+      "format": "png",
+      "width": 1536,
+      "height": 1024,
+      "review": "accepted",
+      "title": "望气台南望",
+      "sourceRevision": 5,
+      "reference": null
+    }
+  },
+  "route": [
+    {
+      "label": "察看渡口",
+      "body": "c06f6b269e42447996df098e63ee34479c9e1e1f34ee0f97e3c6c64ba9b77e8a",
+      "location": "loc_luhuadu",
+      "sub": null,
+      "events": [
+        "observe.result"
+      ],
+      "quest": {
+        "status": "unavailable",
+        "rewardClaimed": false
+      },
+      "id": "scan"
+    },
+    {
+      "label": "走到渡口作业位",
+      "body": "004843db259a752c0323489860d770a6d06a329891b4b14e82733fc9e26a8b00",
+      "location": "loc_luhuadu",
+      "sub": "subloc_ferry_berm",
+      "events": [
+        "move.arrived"
+      ],
+      "quest": {
+        "status": "unavailable",
+        "rewardClaimed": false
+      },
+      "id": "berm"
+    },
+    {
+      "label": "赶走灰羽鸦",
+      "body": "5da3f3f41b458096dc48c251e446176722b0682b07b105befe6b0e40cf0b1427",
+      "location": "loc_luhuadu",
+      "sub": "subloc_ferry_berm",
+      "events": [
+        "combat.resolved",
+        "quest.completed"
+      ],
+      "quest": {
+        "status": "completed",
+        "rewardClaimed": false
+      },
+      "id": "combat:npc_shuiyuya"
+    },
+    {
+      "label": "领取任务奖励",
+      "body": "5b8636bb8a21f1ca2e587b42d619a7941f60b622b9d0f6e1e751e04043942751",
+      "location": "loc_luhuadu",
+      "sub": "subloc_ferry_berm",
+      "events": [
+        "quest.reward_claimed"
+      ],
+      "quest": {
+        "status": "completed",
+        "rewardClaimed": true
+      },
+      "id": "quest:claim"
+    },
+    {
+      "label": "前往望气台",
+      "body": "97dc995a0bcdc5178d62a03e7482c49d0bc291bdcd727a591c2b749767da052d",
+      "location": "loc_wangqitai",
+      "sub": null,
+      "events": [
+        "move.arrived"
+      ],
+      "quest": {
+        "status": "completed",
+        "rewardClaimed": true
+      },
+      "id": "loc_wangqitai"
+    },
+    {
+      "label": "前往芦花渡",
+      "body": "004843db259a752c0323489860d770a6d06a329891b4b14e82733fc9e26a8b00",
+      "location": "loc_luhuadu",
+      "sub": null,
+      "events": [
+        "move.arrived"
+      ],
+      "quest": {
+        "status": "completed",
+        "rewardClaimed": true
+      },
+      "id": "loc_luhuadu"
+    },
+    {
+      "label": "与岑九闲谈",
+      "body": "e78f03db10dc49830239a3833d6ab6635f5e45a3f222148a2fdaa651195f7547",
+      "location": "loc_luhuadu",
+      "sub": null,
+      "events": [
+        "talk.occurred"
+      ],
+      "quest": {
+        "status": "completed",
+        "rewardClaimed": true
+      },
+      "id": "chat"
+    },
+    {
+      "label": "前往望气台",
+      "body": "97dc995a0bcdc5178d62a03e7482c49d0bc291bdcd727a591c2b749767da052d",
+      "location": "loc_wangqitai",
+      "sub": null,
+      "events": [
+        "move.arrived"
+      ],
+      "quest": {
+        "status": "completed",
+        "rewardClaimed": true
+      },
+      "id": "loc_wangqitai"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "base": "1250560c448b290f0e853f62ba77771b23dda1a5",
+  "workingDirectory": "repository root",
+  "commands": [
+    [
+      "git fetch origin codex/yj-p05-visual-loop-01",
+      1,
+      "受管代理拒绝连接"
+    ],
+    [
+      "git fetch origin codex/yj-p05-visual-loop-01",
+      0,
+      "正式权限机制"
+    ],
+    [
+      "python -B packages/playable-loop/session.py start visual-demo --upstream ../Nine-cloud --runtime ../b2-upstream-final --pg-bin <local-pg-bin>",
+      0
+    ],
+    [
+      "node packages/playable-loop/visual/browser-test.mjs first",
+      0
+    ],
+    [
+      "python -B packages/playable-loop/session.py stop visual-demo",
+      0
+    ],
+    [
+      "python -B packages/playable-loop/session.py resume visual-demo",
+      0
+    ],
+    [
+      "node packages/playable-loop/visual/browser-test.mjs resume",
+      1,
+      "已提交 R5/R6；R6 的旧图请求命中浏览器本地 404 注入"
+    ],
+    [
+      "node packages/playable-loop/visual/browser-test.mjs continue-r6",
+      0,
+      "只读对账 R6 并提交 R7/R8"
+    ],
+    [
+      "node packages/playable-loop/visual/browser-test.mjs readback",
+      0
+    ],
+    [
+      "node packages/playable-loop/native-check.mjs visual-demo",
+      0,
+      "native-readback.jsonl 两行，固定语义批准摘要和 PG 回执"
+    ],
+    [
+      "Play-P05-Visual.cmd",
+      0,
+      "创建独立档"
+    ],
+    [
+      "node packages/playable-loop/visual/browser-test.mjs reader",
+      0
+    ],
+    [
+      "node packages/playable-loop/visual/controls.mjs",
+      0
+    ],
+    [
+      "node packages/playable-loop/verify-export.mjs",
+      0
+    ],
+    [
+      "node packages/playable-loop/checks.mjs",
+      0
+    ],
+    [
+      "python -B packages/playable-loop/visual/export-visual.py",
+      0
+    ],
+    [
+      "Review-P05-Visual.cmd",
+      0
+    ],
+    [
+      "node packages/playable-loop/visual/browser-test.mjs reader",
+      0,
+      "关图、刷新、恢复开关；零行动"
+    ],
+    [
+      "Play-P05-Visual.cmd",
+      0,
+      "再次打开同档"
+    ]
+  ],
+  "exportNote": "辅助汇总最初按单 JSON 读取原生标准输出报 Extra data；按 JSONL 逐行并显式指定 UTF-8 后核对成功。原始两行保留。"
+}

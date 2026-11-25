@@ -1,5 +1,10 @@
 # 九霄 · 映界
 
+## 原生图文试玩已完成 · P05_VISUAL_PLAYABLE_PASS
+
+Windows 双击 [Play-P05-Visual.cmd](packages/playable-loop/Play-P05-Visual.cmd) 开始个人图文短局，或打开 [验收回看](packages/playable-loop/Review-P05-Visual.cmd)。 [图文实测报告](docs/reports/YJ-P05-VISUAL-LOOP-01-report.md)
+
+
 ## 2026-11-25 · 原生图文试玩（已批准 / NOT_RUN）
 
 道主同意先玩起来，UI 颗粒度与精细对齐后置。下一任务为 [YJ-P05-VISUAL-LOOP-01](docs/task-briefs/YJ-P05-VISUAL-LOOP-01.md)，从已验收 P05 `39e0acb53b5f08650acc6df0c8dd84b4f7a161d5` 接续，分支 `codex/yj-p05-visual-loop-01`。

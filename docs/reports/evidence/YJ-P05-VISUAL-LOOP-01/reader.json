@@ -1,0 +1,16 @@
+{
+  "scope": "9a656834e921c46699804ec859633e095f6466f822793a18363e5cf43cf95794",
+  "revision": 0,
+  "available": [
+    "scan",
+    "berm",
+    "chat",
+    "loc_wangqitai",
+    "acquire:src_ferry_shore"
+  ],
+  "foreignStatus": 404,
+  "disabledActionsAvailable": true,
+  "disabledSurvivesReload": true,
+  "restoredEnabled": true,
+  "browser": "158.0.8127.38"
+}

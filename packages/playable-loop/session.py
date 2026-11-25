@@ -39,7 +39,7 @@ def pg(cfg,d,*args):
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("command",choices=["start","resume","stop","cleanup","open","entry"])
-    ap.add_argument("instance",choices=["demo","rehearsal","reader"])
+    ap.add_argument("instance",choices=["demo","rehearsal","reader","visual-reader","visual-demo"])
     ap.add_argument("--upstream",type=Path);ap.add_argument("--runtime",type=Path);ap.add_argument("--pg-bin",type=Path)
     a=ap.parse_args()
     d=BASE/a.instance

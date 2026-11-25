@@ -1,0 +1,9 @@
+{
+  "phase": "resume",
+  "afterAcceptedRevision": 6,
+  "exit": 1,
+  "expected": 409,
+  "observed": 404,
+  "cause": "The R5 injected browser GET 404 route was still installed during the R6 stale-current check.",
+  "repair": "Remove only that browser interception before testing the actual host. Continue bounded acceptance from the already saved R6; do not repeat actions."
+}

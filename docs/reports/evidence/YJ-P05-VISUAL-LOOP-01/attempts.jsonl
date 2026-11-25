@@ -1,0 +1,7 @@
+{"event":"prepared","at":"2026-11-25T14:32:30.595Z","main":["I01","I02","I03"],"correction":1,"provider":"built-in imagegen","quotaCost":null,"requestId":null}
+{"at":"2026-11-25T14:32:33.928Z","id":"I01","event":"reserved"}
+{"at":"2026-11-25T14:34:25.577Z","id":"I01","event":"returned-reviewed","sha256":"30c1aa4a8ed9b37d2c5e7da7e506b7b785024d5ce2488fc29b99aa726f0bddf3","review":"接受。右上船身贴着黄泥水，左下芦花横伏；近景看不出整船、全岸或人数。木钉、纹理为表现选择。","reference":null}
+{"at":"2026-11-25T14:34:26.596Z","id":"I02","event":"reserved","reference":null,"reason":"作业位改变；旧图缺少石堆构图，独立生成。"}
+{"at":"2026-11-25T14:36:37.643Z","id":"I02","event":"returned-reviewed","sha256":"882b457d551db2e8ff8957e9a6aad4fd180b48e6c496bc2f97e684a81c2f74a9","review":"接受。左右散石之间可看见狭小暗水，声音未画成船或人。边角少量芦穗属绘画点缀，其朝向、花期、石形和河道远端不登记为剧情。","reference":null}
+{"at":"2026-11-25T14:36:38.639Z","id":"I03","event":"reserved"}
+{"at":"2026-11-25T14:38:06.008Z","id":"I03","event":"returned-reviewed","sha256":"77979c8002976334ea57c71a82d59737d435be51dbba1acbec688ff6163c1cd9","review":"接受。远脊中央一小片灰白贴住脊线，没有可辨识的屋顶、动物、雪峰或浮云；大片留白为纸色。近景树石与谷地笔触不作为通行路线或新事实。","reference":null}

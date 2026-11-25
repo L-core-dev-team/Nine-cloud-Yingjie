@@ -1,0 +1,216 @@
+{
+  "browser": "158.0.8127.38",
+  "results": [
+    {
+      "revision": 1,
+      "action": "scan",
+      "h": {
+        "scope": "a1bbcb3749ea7fd89eaf8d0145d63b804234fd0203f9596a7cd79b2b5ee760f1",
+        "ownerHash": "101475a058f59ba9b4573952c473fe19660f49226bc3a61cb0a8697196e95ab7",
+        "saveHash": "147fdc4d2390019459fde05c6ab73d0c2dc28a3cc6854bfd313e6f7d872c0c10",
+        "branch": "root",
+        "revision": 1,
+        "requestKey": "02f1711c-6349-4bb2-8a1b-1dd4e75bb8ba",
+        "action": "察看渡口",
+        "text": "渡槽淤了半尺，水发黄。\n船吃水太深，蹭着淤泥靠不上岸。\n岸边踩倒的芦花没人扶。",
+        "bodySha": "c06f6b269e42447996df098e63ee34479c9e1e1f34ee0f97e3c6c64ba9b77e8a",
+        "receiptSha": "ec70c5d459fd4213eb0447e1bd0db7b2481e7694cd228c7b60ba1af465e78c37",
+        "canonicalReceiptSha": "1d46f583fc9e2a48179fc08d2b794f1a30d8fd22a52c78928a6b5436bdeae1ca",
+        "source": "deterministic",
+        "recovery": "returned",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005",
+        "events": [
+          "observe.result"
+        ],
+        "native": {
+          "location": "loc_luhuadu",
+          "place": "芦花渡",
+          "sub": null,
+          "quest": {
+            "status": "unavailable",
+            "rewardClaimed": false
+          },
+          "known": [
+            "loc_luhuadu",
+            "loc_wangqitai"
+          ],
+          "revision": 1
+        },
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "frame": {
+        "key": "7ef0dcbaa5258c19ab3322addc6c7e89677c9857c60856f2dd87c193dad0aeed",
+        "title": "渡口淤水",
+        "basis": "当回合正文与原生行动相符",
+        "asset": "I01",
+        "sha": "30c1aa4a8ed9b37d2c5e7da7e506b7b785024d5ce2488fc29b99aa726f0bddf3"
+      },
+      "decoded": {
+        "sha": "30c1aa4a8ed9b37d2c5e7da7e506b7b785024d5ce2488fc29b99aa726f0bddf3",
+        "width": 1536,
+        "height": 1024,
+        "paintWidth": 601.546875
+      },
+      "futureStatus": 404
+    },
+    {
+      "revision": 2,
+      "action": "berm",
+      "h": {
+        "scope": "a1bbcb3749ea7fd89eaf8d0145d63b804234fd0203f9596a7cd79b2b5ee760f1",
+        "ownerHash": "101475a058f59ba9b4573952c473fe19660f49226bc3a61cb0a8697196e95ab7",
+        "saveHash": "147fdc4d2390019459fde05c6ab73d0c2dc28a3cc6854bfd313e6f7d872c0c10",
+        "branch": "root",
+        "revision": 2,
+        "requestKey": "07d41bf1-3b38-431b-9b0e-7464bd656121",
+        "action": "走到渡口作业位",
+        "text": "你到了芦花渡。",
+        "bodySha": "004843db259a752c0323489860d770a6d06a329891b4b14e82733fc9e26a8b00",
+        "receiptSha": "761bed1f6516819f069f1f7929a115743f4e34708354ac78f202007a08643a8b",
+        "canonicalReceiptSha": "e505bb61bc41b40d5df6cfedfd9e1748c0711d7d45587096f12ad0437e616160",
+        "source": "deterministic",
+        "recovery": "returned",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005",
+        "events": [
+          "move.arrived"
+        ],
+        "native": {
+          "location": "loc_luhuadu",
+          "place": "芦花渡",
+          "sub": "subloc_ferry_berm",
+          "quest": {
+            "status": "unavailable",
+            "rewardClaimed": false
+          },
+          "known": [
+            "loc_luhuadu",
+            "loc_wangqitai"
+          ],
+          "revision": 2
+        },
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "frame": null
+    },
+    {
+      "revision": 3,
+      "action": "combat:npc_shuiyuya",
+      "h": {
+        "scope": "a1bbcb3749ea7fd89eaf8d0145d63b804234fd0203f9596a7cd79b2b5ee760f1",
+        "ownerHash": "101475a058f59ba9b4573952c473fe19660f49226bc3a61cb0a8697196e95ab7",
+        "saveHash": "147fdc4d2390019459fde05c6ab73d0c2dc28a3cc6854bfd313e6f7d872c0c10",
+        "branch": "root",
+        "revision": 3,
+        "requestKey": "ea2a33a0-6dd1-4e01-8d3f-93c2b5a86e22",
+        "action": "赶走灰羽鸦",
+        "text": "鸦群炸开，又落回石头上。\n石堆松了一层。\n石堆散了。渡槽口露出一段黑黢黢的水面。\n远处有桨声。一下，又一下。",
+        "bodySha": "5da3f3f41b458096dc48c251e446176722b0682b07b105befe6b0e40cf0b1427",
+        "receiptSha": "ac6833c2619198f0824537c5cfad855b868f9ca94ed346fdf40ed46e7833973a",
+        "canonicalReceiptSha": "328198994343dfd7f01f727d600b8353a756743460709ee45ec0f6a46d8d9b4a",
+        "source": "deterministic",
+        "recovery": "returned",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005",
+        "events": [
+          "combat.resolved",
+          "quest.completed"
+        ],
+        "native": {
+          "location": "loc_luhuadu",
+          "place": "芦花渡",
+          "sub": "subloc_ferry_berm",
+          "quest": {
+            "status": "completed",
+            "rewardClaimed": false
+          },
+          "known": [
+            "loc_luhuadu",
+            "loc_wangqitai"
+          ],
+          "revision": 3
+        },
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "frame": {
+        "key": "10c64a1c0b4d50b4f0be937955dcf6de383e3eda2bc261fc67549c4e6bc6f70e",
+        "title": "清障后的渡槽口",
+        "basis": "当回合正文与原生行动相符",
+        "asset": "I02",
+        "sha": "882b457d551db2e8ff8957e9a6aad4fd180b48e6c496bc2f97e684a81c2f74a9"
+      },
+      "decoded": {
+        "sha": "882b457d551db2e8ff8957e9a6aad4fd180b48e6c496bc2f97e684a81c2f74a9",
+        "width": 1536,
+        "height": 1024,
+        "paintWidth": 601.546875
+      }
+    },
+    {
+      "revision": 4,
+      "action": "quest:claim",
+      "h": {
+        "scope": "a1bbcb3749ea7fd89eaf8d0145d63b804234fd0203f9596a7cd79b2b5ee760f1",
+        "ownerHash": "101475a058f59ba9b4573952c473fe19660f49226bc3a61cb0a8697196e95ab7",
+        "saveHash": "147fdc4d2390019459fde05c6ab73d0c2dc28a3cc6854bfd313e6f7d872c0c10",
+        "branch": "root",
+        "revision": 4,
+        "requestKey": "3f024cb5-c9b4-4c44-a3ba-0c2df0e85e21",
+        "action": "领取任务奖励",
+        "text": "任务奖励已领取，折桂坪已解锁。",
+        "bodySha": "5b8636bb8a21f1ca2e587b42d619a7941f60b622b9d0f6e1e751e04043942751",
+        "receiptSha": "6625a23d1ba8f2e24eaf4d2783cf31cd23a86d31779728f3842411abe355993a",
+        "canonicalReceiptSha": "c4015639a1af7aedc204e0799ad206ccc088c9eb99735e0716b52e250dd03d25",
+        "source": "deterministic",
+        "recovery": "returned",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005",
+        "events": [
+          "quest.reward_claimed"
+        ],
+        "native": {
+          "location": "loc_luhuadu",
+          "place": "芦花渡",
+          "sub": "subloc_ferry_berm",
+          "quest": {
+            "status": "completed",
+            "rewardClaimed": true
+          },
+          "known": [
+            "loc_luhuadu",
+            "loc_wangqitai",
+            "loc_zheguiping"
+          ],
+          "revision": 4
+        },
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "frame": {
+        "key": "4236c50441d1a382658ab6b1eee6949112c46e0f9b643626fee962cec4c0f4d8",
+        "title": "清障后的渡槽口",
+        "basis": "上次所见",
+        "asset": "I02",
+        "sha": "882b457d551db2e8ff8957e9a6aad4fd180b48e6c496bc2f97e684a81c2f74a9"
+      },
+      "decoded": {
+        "sha": "882b457d551db2e8ff8957e9a6aad4fd180b48e6c496bc2f97e684a81c2f74a9",
+        "width": 1536,
+        "height": 1024,
+        "paintWidth": 601.546875
+      }
+    }
+  ]
+}

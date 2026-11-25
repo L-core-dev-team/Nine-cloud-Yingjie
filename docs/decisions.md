@@ -1,5 +1,10 @@
 # 映界决策台账
 
+## 原生图文试玩已完成 · P05_VISUAL_PLAYABLE_PASS
+
+固定路线使用按本局真实行动和正文匹配的已审预置图；古风笔触与构图不进入剧情权威事实。玩家档与验收档分开，运行时派图为零。 [图文实测报告](reports/YJ-P05-VISUAL-LOOP-01-report.md)
+
+
 ## 2026-11-25 · 先交付原生图文试玩，UI 精细对齐后置
 
 道主表示后续再对齐 UI 颗粒度，当前先玩起来并要求任务书。按 [YJ-P05-VISUAL-LOOP-01](task-briefs/YJ-P05-VISUAL-LOOP-01.md) 从已完成 P05 `39e0acb53b5f08650acc6df0c8dd84b4f7a161d5` 准备独立分支 `codex/yj-p05-visual-loop-01`。正文、规则、奖励和存档继续取九霄原生实现，不增加自创剧情。
