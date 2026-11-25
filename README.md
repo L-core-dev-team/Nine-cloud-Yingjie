@@ -1,5 +1,14 @@
 # 九霄 · 映界
 
+## 2026-11-25 · 试玩后继续修整（已批准 / NOT_RUN）
+
+道主已亲自走过图文短局，并批准继续修整。当前 [YJ-P05-VISUAL-REPAIR-01](docs/task-briefs/YJ-P05-VISUAL-REPAIR-01.md) 从 `2ae4c1f09df86f8fdba27855f3711fe63fb276f5` 接续，分支 `codex/yj-p05-visual-repair-01`。
+
+本轮让三张既有图片按当前原生证据适配，解除绝对回合与整条路线前缀依赖；已有个人图文档可以越过第八回合继续。旧档先做一致性备份、同档升级，只读核对，不替道主提交下一行动。正式测试采用三个独立档，共最多 16 个 accepted 回合，包含开局先去望气台、插入闲谈、复访及清障后旧观察文本冲突。
+
+正文、规则及三张原件沿用；新增实验文字首答/独审、图片生成编辑、项目 API 和运行时派发均 0。旧 v1 PASS 和历史记录保留，UI 精细对齐后置。此次仅任务书与五份索引，修复、升级和新路线实测 NOT_RUN；用户已试玩不等于逐图满意度或手机验收已通过。
+
+
 ## 原生图文试玩已完成 · P05_VISUAL_PLAYABLE_PASS
 
 Windows 双击 [Play-P05-Visual.cmd](packages/playable-loop/Play-P05-Visual.cmd) 开始个人图文短局，或打开 [验收回看](packages/playable-loop/Review-P05-Visual.cmd)。 [图文实测报告](docs/reports/YJ-P05-VISUAL-LOOP-01-report.md)
