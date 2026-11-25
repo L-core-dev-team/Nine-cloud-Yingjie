@@ -1,0 +1,157 @@
+{
+  "archiveReplay": {
+    "command": "node packages/playable-loop/verify-export.mjs",
+    "exit": 0,
+    "result": {
+      "authenticatedFormalTurns": 8,
+      "archivedReplies": 16,
+      "mechanicalAccepted": 16,
+      "unknownClaims": 19,
+      "restoredAfter": [
+        1,
+        4
+      ],
+      "separateRehearsalTurns": 8,
+      "modelCallsInReplay": 0
+    }
+  },
+  "structuralControls": {
+    "command": "node packages/playable-loop/checks.mjs",
+    "exit": 0,
+    "result": {
+      "type": "synthetic mechanical controls",
+      "checks": [
+        "canonical receipt digest survives nested property ordering",
+        "reserved slot cannot be dispatched twice",
+        "late R1 import leaves R2 packet, predecessor status and current place unchanged",
+        "raw import is immutable",
+        "forged claim rejected",
+        "foreign scope rejected",
+        "future revision rejected",
+        "asset authorization rejected",
+        "partial and unknown preserved for distinct targets"
+      ],
+      "dispatchAttempted": false
+    }
+  },
+  "readbackBrowser": {
+    "exit": 0,
+    "checked": "readback",
+    "revision": 8,
+    "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+    "bodyHashes": [
+      "c06f6b269e42447996df098e63ee34479c9e1e1f34ee0f97e3c6c64ba9b77e8a",
+      "004843db259a752c0323489860d770a6d06a329891b4b14e82733fc9e26a8b00",
+      "5da3f3f41b458096dc48c251e446176722b0682b07b105befe6b0e40cf0b1427",
+      "5b8636bb8a21f1ca2e587b42d619a7941f60b622b9d0f6e1e751e04043942751",
+      "97dc995a0bcdc5178d62a03e7482c49d0bc291bdcd727a591c2b749767da052d",
+      "004843db259a752c0323489860d770a6d06a329891b4b14e82733fc9e26a8b00",
+      "e78f03db10dc49830239a3833d6ab6635f5e45a3f222148a2fdaa651195f7547",
+      "97dc995a0bcdc5178d62a03e7482c49d0bc291bdcd727a591c2b749767da052d"
+    ],
+    "reward": {
+      "status": "completed",
+      "rewardClaimed": true
+    },
+    "slots": [
+      [
+        1,
+        "state",
+        "returned"
+      ],
+      [
+        1,
+        "timing",
+        "returned"
+      ],
+      [
+        2,
+        "state",
+        "returned"
+      ],
+      [
+        2,
+        "timing",
+        "returned"
+      ],
+      [
+        3,
+        "state",
+        "returned"
+      ],
+      [
+        3,
+        "timing",
+        "returned"
+      ],
+      [
+        4,
+        "state",
+        "returned"
+      ],
+      [
+        4,
+        "timing",
+        "returned"
+      ],
+      [
+        5,
+        "state",
+        "returned"
+      ],
+      [
+        5,
+        "timing",
+        "returned"
+      ],
+      [
+        6,
+        "state",
+        "returned"
+      ],
+      [
+        6,
+        "timing",
+        "returned"
+      ],
+      [
+        7,
+        "state",
+        "returned"
+      ],
+      [
+        7,
+        "timing",
+        "returned"
+      ],
+      [
+        8,
+        "state",
+        "returned"
+      ],
+      [
+        8,
+        "timing",
+        "returned"
+      ]
+    ],
+    "browser": "158.0.8127.38"
+  },
+  "nativeAudit": {
+    "firstExit": 1,
+    "secondExit": 0,
+    "source": "native-ledger-check.json"
+  },
+  "formalSeparateRehearsal": 0,
+  "modelBudget": {
+    "candidateCap": 16,
+    "firstResponses": 16,
+    "retries": 0,
+    "independentReview": 0,
+    "unknown": 0,
+    "failedDelivery": 0
+  },
+  "actualAction": "blocked",
+  "sceneEligible": false,
+  "send": false
+}

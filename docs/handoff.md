@@ -1,5 +1,9 @@
 # 映界当前交接
 
+## P05 本地八回合已实测 · P05_PLAYABLE_RELAY_PASS
+
+原生八回合已用浏览器完成，R4 领奖后已恢复同一档。CODEX_RELAY 实收状态与时机各 8 份，3 次建议更新、5 次保留文字。R3 对听觉的误标与原回执序列化摘要的限制另列，独立审核及图片派发为 0。 [试玩入口、证据与限制](reports/YJ-P05-PLAYABLE-LOOP-01-report.md)
+
 ## 2026-11-25 · 当前执行入口：P05-PLAYABLE-LOOP-01
 
 按 [原生短局接线任务书](task-briefs/YJ-P05-PLAYABLE-LOOP-01.md) 开工，分支 `codex/yj-p05-playable-loop-01`，基线 `d75f4ceeea71947cf71ed719513493a38d2b259f`。道主已同意该有限方向，Windows Codex 可在任务书范围内实施，无需重复询问同范围许可；此次准备提交的工程状态仍为 NOT_RUN。

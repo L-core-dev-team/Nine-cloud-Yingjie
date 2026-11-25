@@ -1,0 +1,12 @@
+{
+  "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+  "revision": 6,
+  "claims": [
+    {"entity":"你","attribute":"抵达地点","value":"芦花渡","status":"visible","quote":"你到了芦花渡。"},
+    {"entity":"芦花渡","attribute":"其他在场人物","value":null,"status":"unknown","quote":""},
+    {"entity":"你","attribute":"当前观察方向","value":null,"status":"unknown","quote":""},
+    {"entity":"石堆","attribute":"返回时的状态","value":null,"status":"unknown","quote":""},
+    {"entity":"渡槽口水面","attribute":"返回时的可见范围","value":null,"status":"unknown","quote":""},
+    {"entity":"桨声","attribute":"返回时是否仍能听见","value":null,"status":"unknown","quote":""}
+  ]
+}

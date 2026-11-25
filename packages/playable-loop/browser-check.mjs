@@ -35,5 +35,33 @@ try{
  g=await game();
  if(g.history.length){await page.locator('[data-rev="1"]').click();assert.match(await page.locator("#where").textContent(),/历史/);await page.locator("#current").click();assert.equal((await game()).current.revision,g.current.revision)}
  if(out){mkdirSync(out,{recursive:true});await page.screenshot({path:join(out,instance+"-r"+g.current.revision+".png")})}
+ if(operation==="readback"){
+   for(const rev of [3,4,7,8]){
+     await page.locator('[data-rev="'+rev+'"]').click();
+     const h=g.history.find(e=>e.revision===rev),analysis=g.slots.find(e=>e.rev===rev&&e.kind==="timing")?.result;
+     assert.equal(await page.locator("#text").textContent(),h.text);
+     assert.match(await page.locator("#where").textContent(),/历史/);
+     if(analysis?.valid)assert.ok((await page.locator("#analysis").textContent()).includes(analysis.reason));
+     if(out&&rev===3)await page.screenshot({path:join(out,"history-r3-reviewed.png")});
+   }
+   await page.locator("#current").click();assert.match(await page.locator("#where").textContent(),/当前/);
+ }
+ if(operation==="boundaries"){
+   const before=await game(),h=before.history[0];
+   const post=(path,params)=>page.evaluate(async([url,body])=>{
+     const r=await fetch(url,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});
+     return {status:r.status,body:await r.json()};
+   },[path,params]);
+   const input={scope:before.scope,revision:0,id:"scan",key:h.requestKey};
+   const same=await post("/act",input);assert.equal(same.body.duplicate,true);
+   const conflict=await post("/act",{...input,id:"berm"});assert.equal(conflict.status,409);
+   const stale=await post("/act",{...input,key:crypto.randomUUID()});assert.equal(stale.status,409);
+   const foreign=await post("/act",{...input,scope:"other"});assert.equal(foreign.status,400);
+   const after=await game();assert.deepEqual(after,before);
+   await page.locator("#logout").click();await page.waitForFunction(()=>document.querySelector("#where")?.textContent==="会话未打开");
+   const denied=await page.evaluate(async()=>(await fetch("/game")).status);assert.equal(denied,401);
+   console.log(JSON.stringify({same,conflict:conflict.status,stale:stale.status,foreign:foreign.status,logout:denied,
+     historyAndRewardUnchanged:true,untouchedPreparedStateSlots:before.slots.filter(s=>s.status==="prepared").length}));
+ }
  console.log(JSON.stringify({checked:operation,revision:g.current.revision,scope:g.scope,bodyHashes:g.history.map(h=>h.bodySha),reward:g.current.quest,slots:g.slots.map(s=>[s.rev,s.kind,s.status]),browser:browser.version()}));
 }finally{await browser.close()}

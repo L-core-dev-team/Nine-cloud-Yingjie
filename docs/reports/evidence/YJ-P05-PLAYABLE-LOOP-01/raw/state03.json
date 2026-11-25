@@ -1,0 +1,18 @@
+{
+  "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+  "revision": 3,
+  "claims": [
+    {"entity":"鸦群","attribute":"动静","value":"先惊散，又落回石头上","status":"change","quote":"鸦群炸开，又落回石头上"},
+    {"entity":"鸦群","attribute":"落脚处","value":"石头上","status":"visible","quote":"又落回石头上"},
+    {"entity":"石堆","attribute":"散开前的变化","value":"先松了一层","status":"change","quote":"石堆松了一层"},
+    {"entity":"石堆","attribute":"当前状态","value":"已散开","status":"visible","quote":"石堆散了"},
+    {"entity":"渡槽口","attribute":"石堆散开后的变化","value":"露出一段水面","status":"consequence","quote":"石堆散了。渡槽口露出一段黑黢黢的水面"},
+    {"entity":"渡槽口水面","attribute":"可见范围","value":"露出一段","status":"partial","quote":"渡槽口露出一段黑黢黢的水面"},
+    {"entity":"露出的水面","attribute":"颜色","value":"黑黢黢","status":"visible","quote":"黑黢黢的水面"},
+    {"entity":"桨声","attribute":"声源远近","value":"远处","status":"visible","quote":"远处有桨声"},
+    {"entity":"桨声","attribute":"节奏","value":"一下，又一下","status":"visible","quote":"一下，又一下"},
+    {"entity":"远处动静","attribute":"感知范围","value":"只听到桨声","status":"limit","quote":"远处有桨声。一下，又一下。"},
+    {"entity":"划桨者","attribute":"身份","value":null,"status":"unknown","quote":""},
+    {"entity":"桨声来源","attribute":"是否为先前靠不上岸的船","value":null,"status":"unknown","quote":""}
+  ]
+}

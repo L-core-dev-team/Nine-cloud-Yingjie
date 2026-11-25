@@ -1,0 +1,19 @@
+{
+  "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+  "revision": 5,
+  "importance": "medium",
+  "visual": "clear",
+  "intent": "update",
+  "reason": "抵达望气台后，视线第一次转向南面的山脊。此处值得停一拍，让人看见那片白，同时保留它的来历。",
+  "focus": [
+    {"claimId": "9d3a36c51002de5393c7f537", "quote": "从望气台往南看"},
+    {"claimId": "f3da4f38d2fc6d931ada6740", "quote": "压在山脊上的那片白"}
+  ],
+  "withoutReference": "new",
+  "withReference": "edit",
+  "conditions": [
+    "从“你”所在的望气台向南取景。抵达和南望写在同一轮，两者相隔多久未知。",
+    "只表现白色块面压在山脊上的位置关系。正文已排除云，白色块面的材质、轮廓细节和其他在场人物均未知。",
+    "若有视向相符的山脊参考，可据其调整白色块面的位置和细节。当前没有已确认的参考。"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "localCommit": "c673d0ce39310672cc5a64574b88608f57b99a0b",
+  "publishedCommit": "6e5b388f6eb6fb519f37bb9028bd640d42a99b17",
+  "tree": "ffd3d4ec1d2b0e254806fbda7a0105fb8d544856",
+  "commitDate": "2026-11-25T20:11:02+08:00",
+  "firstDelivery": "2026-11-25T12:14:01.118Z",
+  "order": [
+    "separate rehearsal completed",
+    "sixteen-slot protocol and route committed locally",
+    "same tree published and verified",
+    "formal R1 saved and host reopened",
+    "first state slot delivered"
+  ],
+  "sha256": {
+    "relay.mjs": "061c8b935b1d7620f98109b065b745a9381923ddda82da6c2a42a3b39d28cf6e",
+    "acceptance.md": "8c60fe75ea3e1a6376652a629e406e4eb627d916ba9bfd586f1c134d77e138b1",
+    "browser-check.mjs": "4b063e21bd2c5f6158c244a5ca1d652d39184af1381b9da1a7431bbb588bfc33",
+    "host.mjs": "34e4d190b1633f9823f17a3bc31e957b00ff258a90ba8d7833b851179dca8dd3",
+    "native.mjs": "00008ef3e9e495fec9be7d746fd3cf26db531c0ddc282458ea898dc30b75d317",
+    "data.mjs": "d55422bf54fc2bb1fd9f50f64a15cd54e885e19a5777cfdc4d417d08159e9005"
+  }
+}

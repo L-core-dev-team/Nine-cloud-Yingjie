@@ -1,0 +1,365 @@
+{
+  "instance": "rehearsal",
+  "rounds": [
+    {
+      "scope": "aeb01f38cc7e360eea66c3a13c9489975828ba1ea923b77890deb1fe8484e9c8",
+      "ownerHash": "b6e204793dae5ab787353f86a14bb8154d3645612b7faef1f5c74741ae9ce894",
+      "saveHash": "e89749292a221e691fd68e9b0dd0cee0c97242242ab2e872bd33ee5a32e6d08c",
+      "branch": "root",
+      "revision": 1,
+      "requestKey": "c9cdf732-1a18-495c-92c7-1aa2e09828eb",
+      "action": "察看渡口",
+      "text": "渡槽淤了半尺，水发黄。\n船吃水太深，蹭着淤泥靠不上岸。\n岸边踩倒的芦花没人扶。",
+      "bodySha": "c06f6b269e42447996df098e63ee34479c9e1e1f34ee0f97e3c6c64ba9b77e8a",
+      "receiptSha": "6a1c3a8afd45f81a14396a3f3da5407b6649ab39384ab6a363093672cfc07764",
+      "source": "deterministic",
+      "recovery": "returned",
+      "ruleVersion": "prologue-v1-candidate-20261005",
+      "canonVersion": "prologue-canon-candidate-20261005",
+      "events": [
+        "observe.result"
+      ],
+      "native": {
+        "location": "loc_luhuadu",
+        "place": "芦花渡",
+        "sub": null,
+        "quest": {
+          "status": "unavailable",
+          "rewardClaimed": false
+        },
+        "known": [
+          "loc_luhuadu",
+          "loc_wangqitai"
+        ],
+        "revision": 1
+      },
+      "sceneEligible": false,
+      "send": false,
+      "actualAction": "blocked",
+      "dispatchAttempted": false
+    },
+    {
+      "scope": "aeb01f38cc7e360eea66c3a13c9489975828ba1ea923b77890deb1fe8484e9c8",
+      "ownerHash": "b6e204793dae5ab787353f86a14bb8154d3645612b7faef1f5c74741ae9ce894",
+      "saveHash": "e89749292a221e691fd68e9b0dd0cee0c97242242ab2e872bd33ee5a32e6d08c",
+      "branch": "root",
+      "revision": 2,
+      "requestKey": "7d3fe2b2-1465-4d66-a40b-c36b2282869c",
+      "action": "走到渡口作业位",
+      "text": "你到了芦花渡。",
+      "bodySha": "004843db259a752c0323489860d770a6d06a329891b4b14e82733fc9e26a8b00",
+      "receiptSha": "d4ac32c4620543926d48a9d9890f9f9aba03604770d34c52d3f457152283cc71",
+      "source": "deterministic",
+      "recovery": "returned",
+      "ruleVersion": "prologue-v1-candidate-20261005",
+      "canonVersion": "prologue-canon-candidate-20261005",
+      "events": [
+        "move.arrived"
+      ],
+      "native": {
+        "location": "loc_luhuadu",
+        "place": "芦花渡",
+        "sub": "subloc_ferry_berm",
+        "quest": {
+          "status": "unavailable",
+          "rewardClaimed": false
+        },
+        "known": [
+          "loc_luhuadu",
+          "loc_wangqitai"
+        ],
+        "revision": 2
+      },
+      "sceneEligible": false,
+      "send": false,
+      "actualAction": "blocked",
+      "dispatchAttempted": false
+    },
+    {
+      "scope": "aeb01f38cc7e360eea66c3a13c9489975828ba1ea923b77890deb1fe8484e9c8",
+      "ownerHash": "b6e204793dae5ab787353f86a14bb8154d3645612b7faef1f5c74741ae9ce894",
+      "saveHash": "e89749292a221e691fd68e9b0dd0cee0c97242242ab2e872bd33ee5a32e6d08c",
+      "branch": "root",
+      "revision": 3,
+      "requestKey": "8f19cd74-0f9e-4e0d-945f-2a49b38ffe8b",
+      "action": "赶走灰羽鸦",
+      "text": "鸦群炸开，又落回石头上。\n石堆松了一层。\n石堆散了。渡槽口露出一段黑黢黢的水面。\n远处有桨声。一下，又一下。",
+      "bodySha": "5da3f3f41b458096dc48c251e446176722b0682b07b105befe6b0e40cf0b1427",
+      "receiptSha": "2d709779d39436e7e6c8ace113eec88ac8a1656317e580e862c2eabfbdde6672",
+      "source": "deterministic",
+      "recovery": "returned",
+      "ruleVersion": "prologue-v1-candidate-20261005",
+      "canonVersion": "prologue-canon-candidate-20261005",
+      "events": [
+        "combat.resolved",
+        "quest.completed"
+      ],
+      "native": {
+        "location": "loc_luhuadu",
+        "place": "芦花渡",
+        "sub": "subloc_ferry_berm",
+        "quest": {
+          "status": "completed",
+          "rewardClaimed": false
+        },
+        "known": [
+          "loc_luhuadu",
+          "loc_wangqitai"
+        ],
+        "revision": 3
+      },
+      "sceneEligible": false,
+      "send": false,
+      "actualAction": "blocked",
+      "dispatchAttempted": false
+    },
+    {
+      "scope": "aeb01f38cc7e360eea66c3a13c9489975828ba1ea923b77890deb1fe8484e9c8",
+      "ownerHash": "b6e204793dae5ab787353f86a14bb8154d3645612b7faef1f5c74741ae9ce894",
+      "saveHash": "e89749292a221e691fd68e9b0dd0cee0c97242242ab2e872bd33ee5a32e6d08c",
+      "branch": "root",
+      "revision": 4,
+      "requestKey": "7c56940c-c152-404e-9a93-633643e592ef",
+      "action": "领取任务奖励",
+      "text": "任务奖励已领取，折桂坪已解锁。",
+      "bodySha": "5b8636bb8a21f1ca2e587b42d619a7941f60b622b9d0f6e1e751e04043942751",
+      "receiptSha": "8ef0bbf37f7b622f0b205a0e28f06f5c1445a36589b4ffed9925f5ee3964db6a",
+      "source": "deterministic",
+      "recovery": "returned",
+      "ruleVersion": "prologue-v1-candidate-20261005",
+      "canonVersion": "prologue-canon-candidate-20261005",
+      "events": [
+        "quest.reward_claimed"
+      ],
+      "native": {
+        "location": "loc_luhuadu",
+        "place": "芦花渡",
+        "sub": "subloc_ferry_berm",
+        "quest": {
+          "status": "completed",
+          "rewardClaimed": true
+        },
+        "known": [
+          "loc_luhuadu",
+          "loc_wangqitai",
+          "loc_zheguiping"
+        ],
+        "revision": 4
+      },
+      "sceneEligible": false,
+      "send": false,
+      "actualAction": "blocked",
+      "dispatchAttempted": false
+    },
+    {
+      "scope": "aeb01f38cc7e360eea66c3a13c9489975828ba1ea923b77890deb1fe8484e9c8",
+      "ownerHash": "b6e204793dae5ab787353f86a14bb8154d3645612b7faef1f5c74741ae9ce894",
+      "saveHash": "e89749292a221e691fd68e9b0dd0cee0c97242242ab2e872bd33ee5a32e6d08c",
+      "branch": "root",
+      "revision": 5,
+      "requestKey": "8de2fbd2-b57d-4cf3-ad5f-76f0717e5101",
+      "action": "前往望气台",
+      "text": "你到了望气台。\n从望气台往南看。\n压在山脊上的那片白，不是云。",
+      "bodySha": "97dc995a0bcdc5178d62a03e7482c49d0bc291bdcd727a591c2b749767da052d",
+      "receiptSha": "c631dd66547624175e4380b7476388942faa0dd067a019cf39478205eebecd0d",
+      "source": "deterministic",
+      "recovery": "returned",
+      "ruleVersion": "prologue-v1-candidate-20261005",
+      "canonVersion": "prologue-canon-candidate-20261005",
+      "events": [
+        "move.arrived"
+      ],
+      "native": {
+        "location": "loc_wangqitai",
+        "place": "望气台",
+        "sub": null,
+        "quest": {
+          "status": "completed",
+          "rewardClaimed": true
+        },
+        "known": [
+          "loc_luhuadu",
+          "loc_wangqitai",
+          "loc_zheguiping"
+        ],
+        "revision": 5
+      },
+      "sceneEligible": false,
+      "send": false,
+      "actualAction": "blocked",
+      "dispatchAttempted": false
+    },
+    {
+      "scope": "aeb01f38cc7e360eea66c3a13c9489975828ba1ea923b77890deb1fe8484e9c8",
+      "ownerHash": "b6e204793dae5ab787353f86a14bb8154d3645612b7faef1f5c74741ae9ce894",
+      "saveHash": "e89749292a221e691fd68e9b0dd0cee0c97242242ab2e872bd33ee5a32e6d08c",
+      "branch": "root",
+      "revision": 6,
+      "requestKey": "1d4f45f2-1656-4d9d-8472-8c495c4683a4",
+      "action": "前往芦花渡",
+      "text": "你到了芦花渡。",
+      "bodySha": "004843db259a752c0323489860d770a6d06a329891b4b14e82733fc9e26a8b00",
+      "receiptSha": "e242e936ee6da0792f720e511ead250e3295082f8920d427c88e05135dfa5a8b",
+      "source": "deterministic",
+      "recovery": "returned",
+      "ruleVersion": "prologue-v1-candidate-20261005",
+      "canonVersion": "prologue-canon-candidate-20261005",
+      "events": [
+        "move.arrived"
+      ],
+      "native": {
+        "location": "loc_luhuadu",
+        "place": "芦花渡",
+        "sub": null,
+        "quest": {
+          "status": "completed",
+          "rewardClaimed": true
+        },
+        "known": [
+          "loc_luhuadu",
+          "loc_wangqitai",
+          "loc_zheguiping"
+        ],
+        "revision": 6
+      },
+      "sceneEligible": false,
+      "send": false,
+      "actualAction": "blocked",
+      "dispatchAttempted": false
+    },
+    {
+      "scope": "aeb01f38cc7e360eea66c3a13c9489975828ba1ea923b77890deb1fe8484e9c8",
+      "ownerHash": "b6e204793dae5ab787353f86a14bb8154d3645612b7faef1f5c74741ae9ce894",
+      "saveHash": "e89749292a221e691fd68e9b0dd0cee0c97242242ab2e872bd33ee5a32e6d08c",
+      "branch": "root",
+      "revision": 7,
+      "requestKey": "1e802c8f-4908-4e6b-871a-3fdb9c386d2f",
+      "action": "与岑九闲谈",
+      "text": "嗯。芦花今年开得晚。",
+      "bodySha": "e78f03db10dc49830239a3833d6ab6635f5e45a3f222148a2fdaa651195f7547",
+      "receiptSha": "373ca78c6ef7b03192621c99e44e2e2ca8160b49c36bf9d3f49d2d77750177b4",
+      "source": "deterministic",
+      "recovery": "returned",
+      "ruleVersion": "prologue-v1-candidate-20261005",
+      "canonVersion": "prologue-canon-candidate-20261005",
+      "events": [
+        "talk.occurred"
+      ],
+      "native": {
+        "location": "loc_luhuadu",
+        "place": "芦花渡",
+        "sub": null,
+        "quest": {
+          "status": "completed",
+          "rewardClaimed": true
+        },
+        "known": [
+          "loc_luhuadu",
+          "loc_wangqitai",
+          "loc_zheguiping"
+        ],
+        "revision": 7
+      },
+      "sceneEligible": false,
+      "send": false,
+      "actualAction": "blocked",
+      "dispatchAttempted": false
+    },
+    {
+      "scope": "aeb01f38cc7e360eea66c3a13c9489975828ba1ea923b77890deb1fe8484e9c8",
+      "ownerHash": "b6e204793dae5ab787353f86a14bb8154d3645612b7faef1f5c74741ae9ce894",
+      "saveHash": "e89749292a221e691fd68e9b0dd0cee0c97242242ab2e872bd33ee5a32e6d08c",
+      "branch": "root",
+      "revision": 8,
+      "requestKey": "d254eed2-528e-462e-831e-7557621f96bc",
+      "action": "前往望气台",
+      "text": "你到了望气台。\n从望气台往南看。\n压在山脊上的那片白，不是云。",
+      "bodySha": "97dc995a0bcdc5178d62a03e7482c49d0bc291bdcd727a591c2b749767da052d",
+      "receiptSha": "e7c94ed4152ed82366ed2b47aa51cabaacf99121ca4d7ebfec5b9cac0d44d363",
+      "source": "deterministic",
+      "recovery": "returned",
+      "ruleVersion": "prologue-v1-candidate-20261005",
+      "canonVersion": "prologue-canon-candidate-20261005",
+      "events": [
+        "move.arrived"
+      ],
+      "native": {
+        "location": "loc_wangqitai",
+        "place": "望气台",
+        "sub": null,
+        "quest": {
+          "status": "completed",
+          "rewardClaimed": true
+        },
+        "known": [
+          "loc_luhuadu",
+          "loc_wangqitai",
+          "loc_zheguiping"
+        ],
+        "revision": 8
+      },
+      "sceneEligible": false,
+      "send": false,
+      "actualAction": "blocked",
+      "dispatchAttempted": false
+    }
+  ],
+  "slots": [
+    {
+      "revision": 1,
+      "kind": "state",
+      "status": "prepared",
+      "packetSha": "9b20fba93812dc7e26f0e8e1ccbd762c1767b26a034a5894d201006904752ad4",
+      "result": null
+    },
+    {
+      "revision": 2,
+      "kind": "state",
+      "status": "prepared",
+      "packetSha": "ad649333a5d05ff19654c86fb1825887325075ae239786dd05769d2d0d0bb59a",
+      "result": null
+    },
+    {
+      "revision": 3,
+      "kind": "state",
+      "status": "prepared",
+      "packetSha": "a56ce3e5f25ba3cd3a2514d13d3db992f3963a65dca12e50aa6811d45cc3d383",
+      "result": null
+    },
+    {
+      "revision": 4,
+      "kind": "state",
+      "status": "prepared",
+      "packetSha": "aaf3a9501d3b53680a82d0644f2d2f8eaeeb8c34eae72db375b23137036f6a2c",
+      "result": null
+    },
+    {
+      "revision": 5,
+      "kind": "state",
+      "status": "prepared",
+      "packetSha": "e02d5c6d22061fa4d838e5005ab44a608c05452685607b23ef1c52871aa14142",
+      "result": null
+    },
+    {
+      "revision": 6,
+      "kind": "state",
+      "status": "prepared",
+      "packetSha": "478cc3d3307406d8a5bb013544fc0eec6bd058d8c6e432cefba59266f99e9ade",
+      "result": null
+    },
+    {
+      "revision": 7,
+      "kind": "state",
+      "status": "prepared",
+      "packetSha": "80cbc276f24897963fc863bc52f6a24138349df317b3e627efa0800f967441b4",
+      "result": null
+    },
+    {
+      "revision": 8,
+      "kind": "state",
+      "status": "prepared",
+      "packetSha": "9310396a10bc60d1e953bd27aabc716d2f40511fdbf75eb3f7ec76d0ef9e4fe8",
+      "result": null
+    }
+  ]
+}

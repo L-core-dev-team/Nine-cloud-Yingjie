@@ -1,0 +1,15 @@
+{
+  "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+  "revision": 8,
+  "importance": "low",
+  "visual": "clear",
+  "intent": "text-only",
+  "reason": "你重返望气台，向南看见的仍是第5轮写过的山脊与白影。白影究竟是什么仍未知，这次回望用文字带过即可。",
+  "focus": [
+    {"claimId": "32f1c41d46dac1918cc64a3a", "quote": "从望气台往南看"},
+    {"claimId": "e6ce7dffa6617e322d3a6099", "quote": "压在山脊上的那片白"}
+  ],
+  "withoutReference": "text-only",
+  "withReference": "text-only",
+  "conditions": ["等你看见白影的轮廓发生变化，或从新视角辨出更多细节，再考虑配图。"]
+}

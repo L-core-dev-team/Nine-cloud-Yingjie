@@ -1,0 +1,108 @@
+{
+  "first": {
+    "exit": 1,
+    "revision": 1,
+    "assertion": "serialized PG receipt bytes versus original return digest",
+    "expected": "2ed9a8361f80259df3a90bb9d272b0d2a9789a915a0caf9f5f1d95894849ae08",
+    "actual": "3e7c69e8a2cc5a010e5ca0bd354d396d7571e91a5a154c2c08b24ea40bb1eb91"
+  },
+  "readback": {
+    "authenticatedReceipts": [
+      {
+        "revision": 1,
+        "originalReturnSha": "2ed9a8361f80259df3a90bb9d272b0d2a9789a915a0caf9f5f1d95894849ae08",
+        "rereadHash": "3e7c69e8a2cc5a010e5ca0bd354d396d7571e91a5a154c2c08b24ea40bb1eb91",
+        "byteDigestMatches": false,
+        "canonicalPgReceiptSha": "d95b14a0b67793ca8628fa6bb323fc2391d7396dd3e99c1d036598da2210db43",
+        "canonicalAtOriginalSubmission": null,
+        "matchedIndependentEvents": 1,
+        "matchedBodySha": "c06f6b269e42447996df098e63ee34479c9e1e1f34ee0f97e3c6c64ba9b77e8a"
+      },
+      {
+        "revision": 2,
+        "originalReturnSha": "d381af879f0af4f6f4e3ca5a49dd2a45695046791954eba5f8e06035daaf704d",
+        "rereadHash": "3f5eae44c106b28d05f59b0e143392c8db5e362f313c794842ec518f55124e90",
+        "byteDigestMatches": false,
+        "canonicalPgReceiptSha": "b43dc26129edef0aa22588e513949df2c5140a30d28c50600d31bf2266028e20",
+        "canonicalAtOriginalSubmission": null,
+        "matchedIndependentEvents": 1,
+        "matchedBodySha": "004843db259a752c0323489860d770a6d06a329891b4b14e82733fc9e26a8b00"
+      },
+      {
+        "revision": 3,
+        "originalReturnSha": "e5db7240a8a0b18edd0fa1e1db8695e9370cdcd62027c24d24f94dd8a756b07d",
+        "rereadHash": "1f8fc1c776075ea58b84b82b5b69b621b071543953de8271c7986959e392381c",
+        "byteDigestMatches": false,
+        "canonicalPgReceiptSha": "ae194597c31ea81ac1995c4e7e4f0776ca272c74833741cdf355cc53e6cfc8c0",
+        "canonicalAtOriginalSubmission": null,
+        "matchedIndependentEvents": 2,
+        "matchedBodySha": "5da3f3f41b458096dc48c251e446176722b0682b07b105befe6b0e40cf0b1427"
+      },
+      {
+        "revision": 4,
+        "originalReturnSha": "5ac3a02c47929fc424e5c8541f9518cab1aa2a8ef4964b4dedc23a6d9d88eb3a",
+        "rereadHash": "48b344e651dd2c3a8b4e772649d7026fcb150343f0f057bfe004ced849169749",
+        "byteDigestMatches": false,
+        "canonicalPgReceiptSha": "f57036daa22cb7bfead4dd3d5e5b4d26a692e61d5a143a7b3d10bc012e801326",
+        "canonicalAtOriginalSubmission": null,
+        "matchedIndependentEvents": 1,
+        "matchedBodySha": "5b8636bb8a21f1ca2e587b42d619a7941f60b622b9d0f6e1e751e04043942751"
+      },
+      {
+        "revision": 5,
+        "originalReturnSha": "e3a167eb9ebf51e8ec6682a0feb0656c52cdc194cdcb858486f1ce9b9335d665",
+        "rereadHash": "7b0e88ada8b33f96127c572ce0fb40bac2497635fa67a542e624d499f4451929",
+        "byteDigestMatches": false,
+        "canonicalPgReceiptSha": "fb783190594fb9e4bcac6cb4107804895977868f8f367fcc0d777a038183a323",
+        "canonicalAtOriginalSubmission": null,
+        "matchedIndependentEvents": 1,
+        "matchedBodySha": "97dc995a0bcdc5178d62a03e7482c49d0bc291bdcd727a591c2b749767da052d",
+        "from": "loc_luhuadu",
+        "subBefore": "subloc_ferry_berm",
+        "to": "loc_wangqitai",
+        "subAfter": null
+      },
+      {
+        "revision": 6,
+        "originalReturnSha": "87259b0f2d5285262ed2e0c353c06163d49c9526048eef9b33c21afbf6419234",
+        "rereadHash": "9d3dcb8b83df8ecc882fcfdfd3d5241395a7130f78dfb0fe2427d6502648a697",
+        "byteDigestMatches": false,
+        "canonicalPgReceiptSha": "97162eaf798c5a94c9450a90ccb81681dab2783cb7c2587ac3639bf9e159ebdc",
+        "canonicalAtOriginalSubmission": null,
+        "matchedIndependentEvents": 1,
+        "matchedBodySha": "004843db259a752c0323489860d770a6d06a329891b4b14e82733fc9e26a8b00"
+      },
+      {
+        "revision": 7,
+        "originalReturnSha": "41de85010e66cfd02003d727efd21227c0ccada7c399bd5be6a685f0ed016f09",
+        "rereadHash": "f76812111b51e971b7ea2a9223a8c64f208e753ad9cc49e818a3624717aa15d1",
+        "byteDigestMatches": false,
+        "canonicalPgReceiptSha": "3a9988b0b94463cf7d73976a85e6c9eefa12ae5a2e5af52f2de330faf9979cc9",
+        "canonicalAtOriginalSubmission": null,
+        "matchedIndependentEvents": 1,
+        "matchedBodySha": "e78f03db10dc49830239a3833d6ab6635f5e45a3f222148a2fdaa651195f7547"
+      },
+      {
+        "revision": 8,
+        "originalReturnSha": "babe968563b5141b1fed443265b96601bfd94e4520d9d6a996abac74e1ffe750",
+        "rereadHash": "5209de3b2deec58a03cad2080d51e41097c167315b16800ad4c61ef7601662e2",
+        "byteDigestMatches": false,
+        "canonicalPgReceiptSha": "bce40095b337ce557c89a95f65f1507453a103140be4817ef2919269a27976d8",
+        "canonicalAtOriginalSubmission": null,
+        "matchedIndependentEvents": 1,
+        "matchedBodySha": "97dc995a0bcdc5178d62a03e7482c49d0bc291bdcd727a591c2b749767da052d",
+        "reconstructedCurrentBodySha": "97dc995a0bcdc5178d62a03e7482c49d0bc291bdcd727a591c2b749767da052d"
+      }
+    ],
+    "live": {
+      "place": "望气台",
+      "sub": null,
+      "revision": 8,
+      "quest": {
+        "status": "completed",
+        "rewardClaimed": true
+      }
+    },
+    "executeCalls": 0
+  }
+}

@@ -1,0 +1,1658 @@
+{
+  "instance": "demo",
+  "rounds": [
+    {
+      "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+      "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+      "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+      "branch": "root",
+      "revision": 1,
+      "requestKey": "2f89369a-3d4d-4584-aaf8-18ea472e9f59",
+      "action": "察看渡口",
+      "text": "渡槽淤了半尺，水发黄。\n船吃水太深，蹭着淤泥靠不上岸。\n岸边踩倒的芦花没人扶。",
+      "bodySha": "c06f6b269e42447996df098e63ee34479c9e1e1f34ee0f97e3c6c64ba9b77e8a",
+      "receiptSha": "2ed9a8361f80259df3a90bb9d272b0d2a9789a915a0caf9f5f1d95894849ae08",
+      "source": "deterministic",
+      "recovery": "returned",
+      "ruleVersion": "prologue-v1-candidate-20261005",
+      "canonVersion": "prologue-canon-candidate-20261005",
+      "events": [
+        "observe.result"
+      ],
+      "native": {
+        "location": "loc_luhuadu",
+        "place": "芦花渡",
+        "sub": null,
+        "quest": {
+          "status": "unavailable",
+          "rewardClaimed": false
+        },
+        "known": [
+          "loc_luhuadu",
+          "loc_wangqitai"
+        ],
+        "revision": 1
+      },
+      "sceneEligible": false,
+      "send": false,
+      "actualAction": "blocked",
+      "dispatchAttempted": false
+    },
+    {
+      "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+      "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+      "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+      "branch": "root",
+      "revision": 2,
+      "requestKey": "b53dd174-9897-4ac6-b367-1b69f87402e9",
+      "action": "走到渡口作业位",
+      "text": "你到了芦花渡。",
+      "bodySha": "004843db259a752c0323489860d770a6d06a329891b4b14e82733fc9e26a8b00",
+      "receiptSha": "d381af879f0af4f6f4e3ca5a49dd2a45695046791954eba5f8e06035daaf704d",
+      "source": "deterministic",
+      "recovery": "returned",
+      "ruleVersion": "prologue-v1-candidate-20261005",
+      "canonVersion": "prologue-canon-candidate-20261005",
+      "events": [
+        "move.arrived"
+      ],
+      "native": {
+        "location": "loc_luhuadu",
+        "place": "芦花渡",
+        "sub": "subloc_ferry_berm",
+        "quest": {
+          "status": "unavailable",
+          "rewardClaimed": false
+        },
+        "known": [
+          "loc_luhuadu",
+          "loc_wangqitai"
+        ],
+        "revision": 2
+      },
+      "sceneEligible": false,
+      "send": false,
+      "actualAction": "blocked",
+      "dispatchAttempted": false
+    },
+    {
+      "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+      "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+      "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+      "branch": "root",
+      "revision": 3,
+      "requestKey": "3359e9ff-481e-42b9-87d0-b967bf5533e8",
+      "action": "赶走灰羽鸦",
+      "text": "鸦群炸开，又落回石头上。\n石堆松了一层。\n石堆散了。渡槽口露出一段黑黢黢的水面。\n远处有桨声。一下，又一下。",
+      "bodySha": "5da3f3f41b458096dc48c251e446176722b0682b07b105befe6b0e40cf0b1427",
+      "receiptSha": "e5db7240a8a0b18edd0fa1e1db8695e9370cdcd62027c24d24f94dd8a756b07d",
+      "source": "deterministic",
+      "recovery": "returned",
+      "ruleVersion": "prologue-v1-candidate-20261005",
+      "canonVersion": "prologue-canon-candidate-20261005",
+      "events": [
+        "combat.resolved",
+        "quest.completed"
+      ],
+      "native": {
+        "location": "loc_luhuadu",
+        "place": "芦花渡",
+        "sub": "subloc_ferry_berm",
+        "quest": {
+          "status": "completed",
+          "rewardClaimed": false
+        },
+        "known": [
+          "loc_luhuadu",
+          "loc_wangqitai"
+        ],
+        "revision": 3
+      },
+      "sceneEligible": false,
+      "send": false,
+      "actualAction": "blocked",
+      "dispatchAttempted": false
+    },
+    {
+      "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+      "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+      "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+      "branch": "root",
+      "revision": 4,
+      "requestKey": "156d38a1-2118-46ff-964e-5c0c826972b3",
+      "action": "领取任务奖励",
+      "text": "任务奖励已领取，折桂坪已解锁。",
+      "bodySha": "5b8636bb8a21f1ca2e587b42d619a7941f60b622b9d0f6e1e751e04043942751",
+      "receiptSha": "5ac3a02c47929fc424e5c8541f9518cab1aa2a8ef4964b4dedc23a6d9d88eb3a",
+      "source": "deterministic",
+      "recovery": "returned",
+      "ruleVersion": "prologue-v1-candidate-20261005",
+      "canonVersion": "prologue-canon-candidate-20261005",
+      "events": [
+        "quest.reward_claimed"
+      ],
+      "native": {
+        "location": "loc_luhuadu",
+        "place": "芦花渡",
+        "sub": "subloc_ferry_berm",
+        "quest": {
+          "status": "completed",
+          "rewardClaimed": true
+        },
+        "known": [
+          "loc_luhuadu",
+          "loc_wangqitai",
+          "loc_zheguiping"
+        ],
+        "revision": 4
+      },
+      "sceneEligible": false,
+      "send": false,
+      "actualAction": "blocked",
+      "dispatchAttempted": false
+    },
+    {
+      "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+      "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+      "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+      "branch": "root",
+      "revision": 5,
+      "requestKey": "f5b3dc2d-f002-4495-ac7f-f3e956eaf691",
+      "action": "前往望气台",
+      "text": "你到了望气台。\n从望气台往南看。\n压在山脊上的那片白，不是云。",
+      "bodySha": "97dc995a0bcdc5178d62a03e7482c49d0bc291bdcd727a591c2b749767da052d",
+      "receiptSha": "e3a167eb9ebf51e8ec6682a0feb0656c52cdc194cdcb858486f1ce9b9335d665",
+      "source": "deterministic",
+      "recovery": "returned",
+      "ruleVersion": "prologue-v1-candidate-20261005",
+      "canonVersion": "prologue-canon-candidate-20261005",
+      "events": [
+        "move.arrived"
+      ],
+      "native": {
+        "location": "loc_wangqitai",
+        "place": "望气台",
+        "sub": null,
+        "quest": {
+          "status": "completed",
+          "rewardClaimed": true
+        },
+        "known": [
+          "loc_luhuadu",
+          "loc_wangqitai",
+          "loc_zheguiping"
+        ],
+        "revision": 5
+      },
+      "sceneEligible": false,
+      "send": false,
+      "actualAction": "blocked",
+      "dispatchAttempted": false
+    },
+    {
+      "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+      "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+      "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+      "branch": "root",
+      "revision": 6,
+      "requestKey": "b1c58f75-bfb4-4921-abbf-a8906acaea8b",
+      "action": "前往芦花渡",
+      "text": "你到了芦花渡。",
+      "bodySha": "004843db259a752c0323489860d770a6d06a329891b4b14e82733fc9e26a8b00",
+      "receiptSha": "87259b0f2d5285262ed2e0c353c06163d49c9526048eef9b33c21afbf6419234",
+      "source": "deterministic",
+      "recovery": "returned",
+      "ruleVersion": "prologue-v1-candidate-20261005",
+      "canonVersion": "prologue-canon-candidate-20261005",
+      "events": [
+        "move.arrived"
+      ],
+      "native": {
+        "location": "loc_luhuadu",
+        "place": "芦花渡",
+        "sub": null,
+        "quest": {
+          "status": "completed",
+          "rewardClaimed": true
+        },
+        "known": [
+          "loc_luhuadu",
+          "loc_wangqitai",
+          "loc_zheguiping"
+        ],
+        "revision": 6
+      },
+      "sceneEligible": false,
+      "send": false,
+      "actualAction": "blocked",
+      "dispatchAttempted": false
+    },
+    {
+      "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+      "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+      "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+      "branch": "root",
+      "revision": 7,
+      "requestKey": "15cdf1d4-e54e-4c02-b980-5069396058b1",
+      "action": "与岑九闲谈",
+      "text": "嗯。芦花今年开得晚。",
+      "bodySha": "e78f03db10dc49830239a3833d6ab6635f5e45a3f222148a2fdaa651195f7547",
+      "receiptSha": "41de85010e66cfd02003d727efd21227c0ccada7c399bd5be6a685f0ed016f09",
+      "source": "deterministic",
+      "recovery": "returned",
+      "ruleVersion": "prologue-v1-candidate-20261005",
+      "canonVersion": "prologue-canon-candidate-20261005",
+      "events": [
+        "talk.occurred"
+      ],
+      "native": {
+        "location": "loc_luhuadu",
+        "place": "芦花渡",
+        "sub": null,
+        "quest": {
+          "status": "completed",
+          "rewardClaimed": true
+        },
+        "known": [
+          "loc_luhuadu",
+          "loc_wangqitai",
+          "loc_zheguiping"
+        ],
+        "revision": 7
+      },
+      "sceneEligible": false,
+      "send": false,
+      "actualAction": "blocked",
+      "dispatchAttempted": false
+    },
+    {
+      "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+      "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+      "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+      "branch": "root",
+      "revision": 8,
+      "requestKey": "27b161cf-87fe-4b0c-b7e7-71c2ea042eb3",
+      "action": "前往望气台",
+      "text": "你到了望气台。\n从望气台往南看。\n压在山脊上的那片白，不是云。",
+      "bodySha": "97dc995a0bcdc5178d62a03e7482c49d0bc291bdcd727a591c2b749767da052d",
+      "receiptSha": "babe968563b5141b1fed443265b96601bfd94e4520d9d6a996abac74e1ffe750",
+      "source": "deterministic",
+      "recovery": "returned",
+      "ruleVersion": "prologue-v1-candidate-20261005",
+      "canonVersion": "prologue-canon-candidate-20261005",
+      "events": [
+        "move.arrived"
+      ],
+      "native": {
+        "location": "loc_wangqitai",
+        "place": "望气台",
+        "sub": null,
+        "quest": {
+          "status": "completed",
+          "rewardClaimed": true
+        },
+        "known": [
+          "loc_luhuadu",
+          "loc_wangqitai",
+          "loc_zheguiping"
+        ],
+        "revision": 8
+      },
+      "sceneEligible": false,
+      "send": false,
+      "actualAction": "blocked",
+      "dispatchAttempted": false
+    }
+  ],
+  "slots": [
+    {
+      "revision": 1,
+      "kind": "state",
+      "status": "returned",
+      "packetSha": "0f80e60f2b61a9a3d229d7cdf3a184f26ac6c31bb7c3c36cca7e3e2238830f3a",
+      "result": {
+        "valid": true,
+        "claims": [
+          {
+            "entity": "渡槽",
+            "attribute": "淤积厚度",
+            "value": "半尺",
+            "status": "visible",
+            "quote": "渡槽淤了半尺",
+            "origin": "model-candidate",
+            "claimId": "7586408de784cbd0b52e8884",
+            "start": 0,
+            "end": 6
+          },
+          {
+            "entity": "水",
+            "attribute": "颜色",
+            "value": "发黄",
+            "status": "visible",
+            "quote": "水发黄",
+            "origin": "model-candidate",
+            "claimId": "1de60ece0badec255e336b5a",
+            "start": 7,
+            "end": 10
+          },
+          {
+            "entity": "船",
+            "attribute": "吃水",
+            "value": "太深",
+            "status": "visible",
+            "quote": "船吃水太深",
+            "origin": "model-candidate",
+            "claimId": "9a6dc2facd585f1a2d1e2c9c",
+            "start": 12,
+            "end": 17
+          },
+          {
+            "entity": "船",
+            "attribute": "与淤泥接触",
+            "value": "蹭着淤泥",
+            "status": "visible",
+            "quote": "蹭着淤泥",
+            "origin": "model-candidate",
+            "claimId": "8fb040be2c9e260c20d6e45c",
+            "start": 18,
+            "end": 22
+          },
+          {
+            "entity": "船",
+            "attribute": "靠岸结果",
+            "value": "靠不上岸",
+            "status": "consequence",
+            "quote": "船吃水太深，蹭着淤泥靠不上岸",
+            "origin": "model-candidate",
+            "claimId": "39e8ede902133329543090da",
+            "start": 12,
+            "end": 26
+          },
+          {
+            "entity": "岸边芦花",
+            "attribute": "状态",
+            "value": "被踩倒",
+            "status": "visible",
+            "quote": "岸边踩倒的芦花",
+            "origin": "model-candidate",
+            "claimId": "243dccf893537eb6dd5519a5",
+            "start": 28,
+            "end": 35
+          },
+          {
+            "entity": "岸边芦花",
+            "attribute": "扶起者",
+            "value": "无人扶",
+            "status": "absent",
+            "quote": "踩倒的芦花没人扶",
+            "origin": "model-candidate",
+            "claimId": "14bbb83a95f96d7bfcdb5cf2",
+            "start": 30,
+            "end": 38
+          },
+          {
+            "entity": "岸边",
+            "attribute": "有谁在场",
+            "value": null,
+            "status": "unknown",
+            "quote": "",
+            "origin": "model-candidate",
+            "claimId": "9a05744b02e8b11ca1a1db2f",
+            "start": null,
+            "end": null
+          },
+          {
+            "entity": "岸边芦花",
+            "attribute": "踩倒者",
+            "value": null,
+            "status": "unknown",
+            "quote": "",
+            "origin": "model-candidate",
+            "claimId": "ad0f657871a12751179f2f7b",
+            "start": null,
+            "end": null
+          }
+        ],
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "sourceBinding": {
+        "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+        "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+        "branch": "root",
+        "revision": 1,
+        "requestKey": "2f89369a-3d4d-4584-aaf8-18ea472e9f59",
+        "receiptSha": "2ed9a8361f80259df3a90bb9d272b0d2a9789a915a0caf9f5f1d95894849ae08",
+        "bodySha": "c06f6b269e42447996df098e63ee34479c9e1e1f34ee0f97e3c6c64ba9b77e8a",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005"
+      },
+      "rawSha": "0db5fd18c5861e4cd807f072bb871421aaee91bae7398e287228a9221dd5f42c",
+      "resultSha": "2a632e33185c0910dc6bae40130ab81eeff9146aa7998b4b097faf75ce7412bc",
+      "trace": {
+        "slot": "state01",
+        "attempt": 1,
+        "packetSha": "0f80e60f2b61a9a3d229d7cdf3a184f26ac6c31bb7c3c36cca7e3e2238830f3a",
+        "rawSha": "0db5fd18c5861e4cd807f072bb871421aaee91bae7398e287228a9221dd5f42c",
+        "deliveryRecorded": "2026-11-25T12:14:01.118Z",
+        "firstReturn": "2026-11-25T12:14:16.728Z",
+        "fork": "none",
+        "toolCalls": 1,
+        "observedOnlyPacketRead": true,
+        "inheritedUserHistory": false
+      }
+    },
+    {
+      "revision": 1,
+      "kind": "timing",
+      "status": "returned",
+      "packetSha": "27f6b21ee1f68116cf90a6dd74eb4ece9119779f98a0da0cdb11023a1b37e087",
+      "result": {
+        "valid": true,
+        "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+        "revision": 1,
+        "importance": "medium",
+        "visual": "clear",
+        "intent": "update",
+        "reason": "开场一幅就能交代船为何挨不着岸。倒伏的芦花可带入岸边景物，踩倒它的人和岸上有谁仍未知，无需另起一拍。",
+        "focus": [
+          {
+            "claimId": "7586408de784cbd0b52e8884",
+            "quote": "渡槽淤了半尺"
+          },
+          {
+            "claimId": "1de60ece0badec255e336b5a",
+            "quote": "水发黄"
+          },
+          {
+            "claimId": "9a6dc2facd585f1a2d1e2c9c",
+            "quote": "船吃水太深"
+          },
+          {
+            "claimId": "8fb040be2c9e260c20d6e45c",
+            "quote": "蹭着淤泥"
+          },
+          {
+            "claimId": "243dccf893537eb6dd5519a5",
+            "quote": "岸边踩倒的芦花"
+          }
+        ],
+        "withoutReference": "new",
+        "withReference": "edit",
+        "conditions": [
+          "本轮实际未派图。若后续允许配图，用一幅交代船、淤泥与岸的相对位置。",
+          "若有适用的渡口底图，按本轮水色、船的吃水和芦花状态调整。",
+          "芦花只画倒伏后的状态，不据此补画踩踏过程或断定岸上无人。"
+        ],
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "sourceBinding": {
+        "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+        "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+        "branch": "root",
+        "revision": 1,
+        "requestKey": "2f89369a-3d4d-4584-aaf8-18ea472e9f59",
+        "receiptSha": "2ed9a8361f80259df3a90bb9d272b0d2a9789a915a0caf9f5f1d95894849ae08",
+        "bodySha": "c06f6b269e42447996df098e63ee34479c9e1e1f34ee0f97e3c6c64ba9b77e8a",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005"
+      },
+      "rawSha": "94401e1984a4e88997e0cc204f51493b13d697376e2c79146ce69fc5dec862fe",
+      "resultSha": "8ffa4de8568d877609fbb56f851b801d097ff1c76af52eb33f21ec405f00f4ec",
+      "trace": {
+        "slot": "timing01",
+        "attempt": 1,
+        "packetSha": "27f6b21ee1f68116cf90a6dd74eb4ece9119779f98a0da0cdb11023a1b37e087",
+        "rawSha": "94401e1984a4e88997e0cc204f51493b13d697376e2c79146ce69fc5dec862fe",
+        "deliveryRecorded": "2026-11-25T12:14:37.745Z",
+        "firstReturn": "2026-11-25T12:14:50.743Z",
+        "fork": "none",
+        "toolCalls": 1,
+        "observedOnlyPacketRead": true,
+        "inheritedUserHistory": false
+      }
+    },
+    {
+      "revision": 2,
+      "kind": "state",
+      "status": "returned",
+      "packetSha": "501108c8c1cdc19e62a71fb18bd575be56b50f978b072282bb307b843f25e9e6",
+      "result": {
+        "valid": true,
+        "claims": [
+          {
+            "entity": "你",
+            "attribute": "抵达地点",
+            "value": "芦花渡",
+            "status": "visible",
+            "quote": "你到了芦花渡",
+            "origin": "model-candidate",
+            "claimId": "337da43935bb8602f4c42907",
+            "start": 0,
+            "end": 6
+          },
+          {
+            "entity": "芦花渡",
+            "attribute": "其他在场人物",
+            "value": null,
+            "status": "unknown",
+            "quote": "",
+            "origin": "model-candidate",
+            "claimId": "0b267efb936a0fbb511a6260",
+            "start": null,
+            "end": null
+          },
+          {
+            "entity": "你",
+            "attribute": "抵达时所见",
+            "value": null,
+            "status": "unknown",
+            "quote": "",
+            "origin": "model-candidate",
+            "claimId": "658276394fdc49a16590c928",
+            "start": null,
+            "end": null
+          }
+        ],
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "sourceBinding": {
+        "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+        "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+        "branch": "root",
+        "revision": 2,
+        "requestKey": "b53dd174-9897-4ac6-b367-1b69f87402e9",
+        "receiptSha": "d381af879f0af4f6f4e3ca5a49dd2a45695046791954eba5f8e06035daaf704d",
+        "bodySha": "004843db259a752c0323489860d770a6d06a329891b4b14e82733fc9e26a8b00",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005"
+      },
+      "rawSha": "f258b894fa559bcd2c1b5aebbd3201ffb7e9b68d723d3e6319d67c595cf87645",
+      "resultSha": "1b6c5aea9005665d07e964e537d66dfbfaf7e705a02cfc6d420fe1ab705b470a",
+      "trace": {
+        "slot": "state02",
+        "attempt": 1,
+        "packetSha": "501108c8c1cdc19e62a71fb18bd575be56b50f978b072282bb307b843f25e9e6",
+        "rawSha": "f258b894fa559bcd2c1b5aebbd3201ffb7e9b68d723d3e6319d67c595cf87645",
+        "deliveryRecorded": "2026-11-25T12:15:09.479Z",
+        "firstReturn": "2026-11-25T12:15:17.478Z",
+        "fork": "none",
+        "toolCalls": 1,
+        "observedOnlyPacketRead": true,
+        "inheritedUserHistory": false
+      }
+    },
+    {
+      "revision": 2,
+      "kind": "timing",
+      "status": "returned",
+      "packetSha": "d50dbb4c43b7da16cc24e5621059ff2067972b022537017a8318b01a6cb22f79",
+      "result": {
+        "valid": true,
+        "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+        "revision": 2,
+        "importance": "low",
+        "visual": "small",
+        "intent": "text-only",
+        "reason": "这一句把你带到前文已交代的渡口。你抵达时看见什么、岸边还有谁都未知，用文字接住这一步就够了。",
+        "focus": [
+          {
+            "claimId": "337da43935bb8602f4c42907",
+            "quote": "你到了芦花渡"
+          }
+        ],
+        "withoutReference": "text-only",
+        "withReference": "text-only",
+        "conditions": [
+          "上一轮渡口图未派发，本轮无需补画。",
+          "等正文交代你站在哪里、从那里能看见什么，再判断是否需要新画面。"
+        ],
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "sourceBinding": {
+        "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+        "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+        "branch": "root",
+        "revision": 2,
+        "requestKey": "b53dd174-9897-4ac6-b367-1b69f87402e9",
+        "receiptSha": "d381af879f0af4f6f4e3ca5a49dd2a45695046791954eba5f8e06035daaf704d",
+        "bodySha": "004843db259a752c0323489860d770a6d06a329891b4b14e82733fc9e26a8b00",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005"
+      },
+      "rawSha": "181a5f3df7927ceaba00c686269bd10b67bc450b0a4628fa89dfe1bd1d9e2b98",
+      "resultSha": "39c3cc4f135e3c9d5a51c5a08a0eef31bfa4f8f7892788d8fdacba12b6fbfe6f",
+      "trace": {
+        "slot": "timing02",
+        "attempt": 1,
+        "packetSha": "d50dbb4c43b7da16cc24e5621059ff2067972b022537017a8318b01a6cb22f79",
+        "rawSha": "181a5f3df7927ceaba00c686269bd10b67bc450b0a4628fa89dfe1bd1d9e2b98",
+        "deliveryRecorded": "2026-11-25T12:15:47.162Z",
+        "firstReturn": "2026-11-25T12:15:56.950Z",
+        "fork": "none",
+        "toolCalls": 1,
+        "observedOnlyPacketRead": true,
+        "inheritedUserHistory": false
+      }
+    },
+    {
+      "revision": 3,
+      "kind": "state",
+      "status": "returned",
+      "packetSha": "918501edc68fba4d679cc604c86305f4b57c841e2d624040b8126e23cadb5873",
+      "result": {
+        "valid": true,
+        "claims": [
+          {
+            "entity": "鸦群",
+            "attribute": "动静",
+            "value": "先惊散，又落回石头上",
+            "status": "change",
+            "quote": "鸦群炸开，又落回石头上",
+            "origin": "model-candidate",
+            "claimId": "a0b17c1a5a23c05c37e9ca52",
+            "start": 0,
+            "end": 11
+          },
+          {
+            "entity": "鸦群",
+            "attribute": "落脚处",
+            "value": "石头上",
+            "status": "visible",
+            "quote": "又落回石头上",
+            "origin": "model-candidate",
+            "claimId": "3fa730ffdf7c546b26c56c88",
+            "start": 5,
+            "end": 11
+          },
+          {
+            "entity": "石堆",
+            "attribute": "散开前的变化",
+            "value": "先松了一层",
+            "status": "change",
+            "quote": "石堆松了一层",
+            "origin": "model-candidate",
+            "claimId": "e91a4423d11594d980cce861",
+            "start": 13,
+            "end": 19
+          },
+          {
+            "entity": "石堆",
+            "attribute": "当前状态",
+            "value": "已散开",
+            "status": "visible",
+            "quote": "石堆散了",
+            "origin": "model-candidate",
+            "claimId": "5d8d5b144148429942ef1078",
+            "start": 21,
+            "end": 25
+          },
+          {
+            "entity": "渡槽口",
+            "attribute": "石堆散开后的变化",
+            "value": "露出一段水面",
+            "status": "consequence",
+            "quote": "石堆散了。渡槽口露出一段黑黢黢的水面",
+            "origin": "model-candidate",
+            "claimId": "1f296ab2f96f78cbdf82e10f",
+            "start": 21,
+            "end": 39
+          },
+          {
+            "entity": "渡槽口水面",
+            "attribute": "可见范围",
+            "value": "露出一段",
+            "status": "partial",
+            "quote": "渡槽口露出一段黑黢黢的水面",
+            "origin": "model-candidate",
+            "claimId": "b8926005bc3cd5a8cb3915e8",
+            "start": 26,
+            "end": 39
+          },
+          {
+            "entity": "露出的水面",
+            "attribute": "颜色",
+            "value": "黑黢黢",
+            "status": "visible",
+            "quote": "黑黢黢的水面",
+            "origin": "model-candidate",
+            "claimId": "76071f6033e57ef6f249ee92",
+            "start": 33,
+            "end": 39
+          },
+          {
+            "entity": "桨声",
+            "attribute": "声源远近",
+            "value": "远处",
+            "status": "visible",
+            "quote": "远处有桨声",
+            "origin": "model-candidate",
+            "claimId": "18a98681c65ded3edb2f5113",
+            "start": 41,
+            "end": 46
+          },
+          {
+            "entity": "桨声",
+            "attribute": "节奏",
+            "value": "一下，又一下",
+            "status": "visible",
+            "quote": "一下，又一下",
+            "origin": "model-candidate",
+            "claimId": "6538762d6db7db8142e06bbf",
+            "start": 47,
+            "end": 53
+          },
+          {
+            "entity": "远处动静",
+            "attribute": "感知范围",
+            "value": "只听到桨声",
+            "status": "limit",
+            "quote": "远处有桨声。一下，又一下。",
+            "origin": "model-candidate",
+            "claimId": "a66f2e07b230ce6d4b5147d4",
+            "start": 41,
+            "end": 54
+          },
+          {
+            "entity": "划桨者",
+            "attribute": "身份",
+            "value": null,
+            "status": "unknown",
+            "quote": "",
+            "origin": "model-candidate",
+            "claimId": "62b23c039f46944170ac129c",
+            "start": null,
+            "end": null
+          },
+          {
+            "entity": "桨声来源",
+            "attribute": "是否为先前靠不上岸的船",
+            "value": null,
+            "status": "unknown",
+            "quote": "",
+            "origin": "model-candidate",
+            "claimId": "e67e00992a2fc743b50efaa7",
+            "start": null,
+            "end": null
+          }
+        ],
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "sourceBinding": {
+        "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+        "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+        "branch": "root",
+        "revision": 3,
+        "requestKey": "3359e9ff-481e-42b9-87d0-b967bf5533e8",
+        "receiptSha": "e5db7240a8a0b18edd0fa1e1db8695e9370cdcd62027c24d24f94dd8a756b07d",
+        "bodySha": "5da3f3f41b458096dc48c251e446176722b0682b07b105befe6b0e40cf0b1427",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005"
+      },
+      "rawSha": "3ab9fcd319cbe04e8d2978153313d4c341b81782d296b1c94502b53c7efd6f94",
+      "resultSha": "b3a52a68742e00437c265b8a7c30f8db2284f9afe21900d3c248da1988f5e4f9",
+      "trace": {
+        "slot": "state03",
+        "attempt": 1,
+        "packetSha": "918501edc68fba4d679cc604c86305f4b57c841e2d624040b8126e23cadb5873",
+        "rawSha": "3ab9fcd319cbe04e8d2978153313d4c341b81782d296b1c94502b53c7efd6f94",
+        "deliveryRecorded": "2026-11-25T12:16:15.333Z",
+        "firstReturn": "2026-11-25T12:16:28.781Z",
+        "fork": "none",
+        "toolCalls": 1,
+        "observedOnlyPacketRead": true,
+        "inheritedUserHistory": false
+      }
+    },
+    {
+      "revision": 3,
+      "kind": "timing",
+      "status": "returned",
+      "packetSha": "4777d2a7839349df29d17785291f88b7d578b29c5b1e77126b091bc485e8e11d",
+      "result": {
+        "valid": true,
+        "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+        "revision": 3,
+        "importance": "high",
+        "visual": "clear",
+        "intent": "update",
+        "reason": "石堆散开后，渡槽口第一次露出一段黑水，值得在这里停一拍。随后用两下桨声把注意力引向远处，声源仍未知。",
+        "focus": [
+          {
+            "claimId": "5d8d5b144148429942ef1078",
+            "quote": "石堆散了"
+          },
+          {
+            "claimId": "b8926005bc3cd5a8cb3915e8",
+            "quote": "渡槽口露出一段黑黢黢的水面"
+          }
+        ],
+        "withoutReference": "new",
+        "withReference": "edit",
+        "conditions": [
+          "取石堆散开后的局部，只画渡槽口露出的那段水面，水下深浅和整条渡槽是否通航都未知。",
+          "鸦群落回石头与石堆散开分句叙述，两者是否恰好同步未知。人物站位和视线也未交代。",
+          "桨声留给文字，远处的船和划桨者均未被看见，也无法确认声音来自先前靠不上岸的船。",
+          "若有适用的渡槽口旧图，沿用其岸形，编辑石堆与新露出的水面。"
+        ],
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "sourceBinding": {
+        "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+        "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+        "branch": "root",
+        "revision": 3,
+        "requestKey": "3359e9ff-481e-42b9-87d0-b967bf5533e8",
+        "receiptSha": "e5db7240a8a0b18edd0fa1e1db8695e9370cdcd62027c24d24f94dd8a756b07d",
+        "bodySha": "5da3f3f41b458096dc48c251e446176722b0682b07b105befe6b0e40cf0b1427",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005"
+      },
+      "rawSha": "b9fc48c131787f788f4298549188a2032cef1dcddb2df245518296d4886e2847",
+      "resultSha": "85877980c45bd8f7b8b64d1c339104ec44824b95a00a2ea134d34782bcd4a371",
+      "trace": {
+        "slot": "timing03",
+        "attempt": 1,
+        "packetSha": "4777d2a7839349df29d17785291f88b7d578b29c5b1e77126b091bc485e8e11d",
+        "rawSha": "b9fc48c131787f788f4298549188a2032cef1dcddb2df245518296d4886e2847",
+        "deliveryRecorded": "2026-11-25T12:16:46.120Z",
+        "firstReturn": "2026-11-25T12:16:58.306Z",
+        "fork": "none",
+        "toolCalls": 1,
+        "observedOnlyPacketRead": true,
+        "inheritedUserHistory": false
+      }
+    },
+    {
+      "revision": 4,
+      "kind": "state",
+      "status": "returned",
+      "packetSha": "a7cdb6432ec69afc4cda897589f336bc30f309548256ad938189928085c24344",
+      "result": {
+        "valid": true,
+        "claims": [
+          {
+            "entity": "任务奖励",
+            "attribute": "领取状态",
+            "value": "已领取",
+            "status": "consequence",
+            "quote": "任务奖励已领取",
+            "origin": "model-candidate",
+            "claimId": "31160ad8a62456fa51586e18",
+            "start": 0,
+            "end": 7
+          },
+          {
+            "entity": "折桂坪",
+            "attribute": "解锁状态",
+            "value": "已解锁",
+            "status": "consequence",
+            "quote": "折桂坪已解锁",
+            "origin": "model-candidate",
+            "claimId": "319c9ee91f9bfd94dfd3178f",
+            "start": 8,
+            "end": 14
+          },
+          {
+            "entity": "折桂坪",
+            "attribute": "场景所见",
+            "value": null,
+            "status": "unknown",
+            "quote": "",
+            "origin": "model-candidate",
+            "claimId": "1b046430cb26293ec6416cc8",
+            "start": null,
+            "end": null
+          },
+          {
+            "entity": "折桂坪",
+            "attribute": "在场人物",
+            "value": null,
+            "status": "unknown",
+            "quote": "",
+            "origin": "model-candidate",
+            "claimId": "5d842d829cc679bffb8a1979",
+            "start": null,
+            "end": null
+          }
+        ],
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "sourceBinding": {
+        "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+        "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+        "branch": "root",
+        "revision": 4,
+        "requestKey": "156d38a1-2118-46ff-964e-5c0c826972b3",
+        "receiptSha": "5ac3a02c47929fc424e5c8541f9518cab1aa2a8ef4964b4dedc23a6d9d88eb3a",
+        "bodySha": "5b8636bb8a21f1ca2e587b42d619a7941f60b622b9d0f6e1e751e04043942751",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005"
+      },
+      "rawSha": "1a38d056f8efdb69cfe66a8739280be6e324f2de60f534f12d790c021459ee55",
+      "resultSha": "49ac3f4180ff91e7bafe17d3c1e09909b06d6a68cd16ac33ed7c02eb2d9e3933",
+      "trace": {
+        "slot": "state04",
+        "attempt": 1,
+        "packetSha": "a7cdb6432ec69afc4cda897589f336bc30f309548256ad938189928085c24344",
+        "rawSha": "1a38d056f8efdb69cfe66a8739280be6e324f2de60f534f12d790c021459ee55",
+        "deliveryRecorded": "2026-11-25T12:17:10.600Z",
+        "firstReturn": "2026-11-25T12:17:18.210Z",
+        "fork": "none",
+        "toolCalls": 1,
+        "observedOnlyPacketRead": true,
+        "inheritedUserHistory": false
+      }
+    },
+    {
+      "revision": 4,
+      "kind": "timing",
+      "status": "returned",
+      "packetSha": "a40211cb8b13dba9a0f3c5d317e44a6da49ec78a6e25543bad9eef60860129f9",
+      "result": {
+        "valid": true,
+        "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+        "revision": 4,
+        "importance": "high",
+        "visual": "none",
+        "intent": "text-only",
+        "reason": "领奖和解锁都影响后续行动，用这一句收束即可。当前位置仍是芦花渡，折桂坪的景象和在场人物均未知。",
+        "focus": [],
+        "withoutReference": "text-only",
+        "withReference": "text-only",
+        "conditions": [
+          "领奖与解锁在同轮得到确认，发生的确切时刻未知。",
+          "本轮没有新增可见景物。上一轮的渡槽口画面虽未发出，本轮也无需补画。"
+        ],
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "sourceBinding": {
+        "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+        "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+        "branch": "root",
+        "revision": 4,
+        "requestKey": "156d38a1-2118-46ff-964e-5c0c826972b3",
+        "receiptSha": "5ac3a02c47929fc424e5c8541f9518cab1aa2a8ef4964b4dedc23a6d9d88eb3a",
+        "bodySha": "5b8636bb8a21f1ca2e587b42d619a7941f60b622b9d0f6e1e751e04043942751",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005"
+      },
+      "rawSha": "a77885c08ffbf4967fdf8f57e9485d23e3212c3a2a56e9a6bc52c078891bf71a",
+      "resultSha": "21f6262d1a68cdaaa699c9dfe7259ee9e064da59b8200aee82cd2a6392690872",
+      "trace": {
+        "slot": "timing04",
+        "attempt": 1,
+        "packetSha": "a40211cb8b13dba9a0f3c5d317e44a6da49ec78a6e25543bad9eef60860129f9",
+        "rawSha": "a77885c08ffbf4967fdf8f57e9485d23e3212c3a2a56e9a6bc52c078891bf71a",
+        "deliveryRecorded": "2026-11-25T12:17:42.292Z",
+        "firstReturn": "2026-11-25T12:17:50.801Z",
+        "fork": "none",
+        "toolCalls": 1,
+        "observedOnlyPacketRead": true,
+        "inheritedUserHistory": false
+      }
+    },
+    {
+      "revision": 5,
+      "kind": "state",
+      "status": "returned",
+      "packetSha": "6a9dfc6e3ecee53d6f63b0ed284c1bce11655590229e71f0ba0f51d5b7c7ab29",
+      "result": {
+        "valid": true,
+        "claims": [
+          {
+            "entity": "你",
+            "attribute": "抵达地点",
+            "value": "望气台",
+            "status": "visible",
+            "quote": "你到了望气台",
+            "origin": "model-candidate",
+            "claimId": "f557e73d86d0b1f5eba9101f",
+            "start": 0,
+            "end": 6
+          },
+          {
+            "entity": "你",
+            "attribute": "观察方向",
+            "value": "从望气台往南看",
+            "status": "visible",
+            "quote": "从望气台往南看",
+            "origin": "model-candidate",
+            "claimId": "9d3a36c51002de5393c7f537",
+            "start": 8,
+            "end": 15
+          },
+          {
+            "entity": "那片白",
+            "attribute": "位置",
+            "value": "压在山脊上",
+            "status": "visible",
+            "quote": "压在山脊上的那片白",
+            "origin": "model-candidate",
+            "claimId": "f3da4f38d2fc6d931ada6740",
+            "start": 17,
+            "end": 26
+          },
+          {
+            "entity": "那片白",
+            "attribute": "颜色",
+            "value": "白色",
+            "status": "visible",
+            "quote": "那片白",
+            "origin": "model-candidate",
+            "claimId": "32abcaf5b950bd97ff1a0835",
+            "start": 23,
+            "end": 26
+          },
+          {
+            "entity": "那片白",
+            "attribute": "已排除的身份",
+            "value": "云",
+            "status": "limit",
+            "quote": "不是云",
+            "origin": "model-candidate",
+            "claimId": "e5c58a6032e5c412a1d418d1",
+            "start": 27,
+            "end": 30
+          },
+          {
+            "entity": "那片白",
+            "attribute": "具体是什么",
+            "value": null,
+            "status": "unknown",
+            "quote": "",
+            "origin": "model-candidate",
+            "claimId": "6508361532a362125da54a2f",
+            "start": null,
+            "end": null
+          },
+          {
+            "entity": "望气台",
+            "attribute": "其他在场人物",
+            "value": null,
+            "status": "unknown",
+            "quote": "",
+            "origin": "model-candidate",
+            "claimId": "819f838089b3c352ea7dfa9b",
+            "start": null,
+            "end": null
+          }
+        ],
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "sourceBinding": {
+        "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+        "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+        "branch": "root",
+        "revision": 5,
+        "requestKey": "f5b3dc2d-f002-4495-ac7f-f3e956eaf691",
+        "receiptSha": "e3a167eb9ebf51e8ec6682a0feb0656c52cdc194cdcb858486f1ce9b9335d665",
+        "bodySha": "97dc995a0bcdc5178d62a03e7482c49d0bc291bdcd727a591c2b749767da052d",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005"
+      },
+      "rawSha": "d79b9c294c7a12111931e91dfcb943c70ec5526644e4857f7fc2fe73d6396944",
+      "resultSha": "e057086feeabde02f792d9334175b898ee4f389d3c50e881b9cab7461bb23485",
+      "trace": {
+        "slot": "state05",
+        "attempt": 1,
+        "packetSha": "6a9dfc6e3ecee53d6f63b0ed284c1bce11655590229e71f0ba0f51d5b7c7ab29",
+        "rawSha": "d79b9c294c7a12111931e91dfcb943c70ec5526644e4857f7fc2fe73d6396944",
+        "deliveryRecorded": "2026-11-25T12:18:34.636Z",
+        "firstReturn": "2026-11-25T12:18:45.728Z",
+        "fork": "none",
+        "toolCalls": 1,
+        "observedOnlyPacketRead": true,
+        "inheritedUserHistory": false
+      }
+    },
+    {
+      "revision": 5,
+      "kind": "timing",
+      "status": "returned",
+      "packetSha": "58aa24f2bf4f93090670059cf422c74bfecd5266c5d9645a8ca2b7dcabc28dbf",
+      "result": {
+        "valid": true,
+        "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+        "revision": 5,
+        "importance": "medium",
+        "visual": "clear",
+        "intent": "update",
+        "reason": "抵达望气台后，视线第一次转向南面的山脊。此处值得停一拍，让人看见那片白，同时保留它的来历。",
+        "focus": [
+          {
+            "claimId": "9d3a36c51002de5393c7f537",
+            "quote": "从望气台往南看"
+          },
+          {
+            "claimId": "f3da4f38d2fc6d931ada6740",
+            "quote": "压在山脊上的那片白"
+          }
+        ],
+        "withoutReference": "new",
+        "withReference": "edit",
+        "conditions": [
+          "从“你”所在的望气台向南取景。抵达和南望写在同一轮，两者相隔多久未知。",
+          "只表现白色块面压在山脊上的位置关系。正文已排除云，白色块面的材质、轮廓细节和其他在场人物均未知。",
+          "若有视向相符的山脊参考，可据其调整白色块面的位置和细节。当前没有已确认的参考。"
+        ],
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "sourceBinding": {
+        "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+        "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+        "branch": "root",
+        "revision": 5,
+        "requestKey": "f5b3dc2d-f002-4495-ac7f-f3e956eaf691",
+        "receiptSha": "e3a167eb9ebf51e8ec6682a0feb0656c52cdc194cdcb858486f1ce9b9335d665",
+        "bodySha": "97dc995a0bcdc5178d62a03e7482c49d0bc291bdcd727a591c2b749767da052d",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005"
+      },
+      "rawSha": "15bde41b69e4d9794e2f8daecac9b680445d1f6ea5ea2ac93dc1bb2ed2f569f9",
+      "resultSha": "63412248ac409eb848d01bf9c400a0ea6c8a52beca86e60fe13981986a14ddcf",
+      "trace": {
+        "slot": "timing05",
+        "attempt": 1,
+        "packetSha": "58aa24f2bf4f93090670059cf422c74bfecd5266c5d9645a8ca2b7dcabc28dbf",
+        "rawSha": "15bde41b69e4d9794e2f8daecac9b680445d1f6ea5ea2ac93dc1bb2ed2f569f9",
+        "deliveryRecorded": "2026-11-25T12:19:05.228Z",
+        "firstReturn": "2026-11-25T12:19:40.585Z",
+        "fork": "none",
+        "toolCalls": 1,
+        "observedOnlyPacketRead": true,
+        "inheritedUserHistory": false
+      }
+    },
+    {
+      "revision": 6,
+      "kind": "state",
+      "status": "returned",
+      "packetSha": "b08b7ce1cbd0813e9a44e34718481ce72712ab998d240b5387d67888bb3a726d",
+      "result": {
+        "valid": true,
+        "claims": [
+          {
+            "entity": "你",
+            "attribute": "抵达地点",
+            "value": "芦花渡",
+            "status": "visible",
+            "quote": "你到了芦花渡。",
+            "origin": "model-candidate",
+            "claimId": "ffc7209eea66c0df653a07bd",
+            "start": 0,
+            "end": 7
+          },
+          {
+            "entity": "芦花渡",
+            "attribute": "其他在场人物",
+            "value": null,
+            "status": "unknown",
+            "quote": "",
+            "origin": "model-candidate",
+            "claimId": "66e78bdde22c0e647f044800",
+            "start": null,
+            "end": null
+          },
+          {
+            "entity": "你",
+            "attribute": "当前观察方向",
+            "value": null,
+            "status": "unknown",
+            "quote": "",
+            "origin": "model-candidate",
+            "claimId": "254b868fc8559c7467e17ff6",
+            "start": null,
+            "end": null
+          },
+          {
+            "entity": "石堆",
+            "attribute": "返回时的状态",
+            "value": null,
+            "status": "unknown",
+            "quote": "",
+            "origin": "model-candidate",
+            "claimId": "1fea27ce8f69a55e443ed983",
+            "start": null,
+            "end": null
+          },
+          {
+            "entity": "渡槽口水面",
+            "attribute": "返回时的可见范围",
+            "value": null,
+            "status": "unknown",
+            "quote": "",
+            "origin": "model-candidate",
+            "claimId": "e1b3c6a7a49447aed3689432",
+            "start": null,
+            "end": null
+          },
+          {
+            "entity": "桨声",
+            "attribute": "返回时是否仍能听见",
+            "value": null,
+            "status": "unknown",
+            "quote": "",
+            "origin": "model-candidate",
+            "claimId": "56d48bc1918b0897a15f09cb",
+            "start": null,
+            "end": null
+          }
+        ],
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "sourceBinding": {
+        "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+        "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+        "branch": "root",
+        "revision": 6,
+        "requestKey": "b1c58f75-bfb4-4921-abbf-a8906acaea8b",
+        "receiptSha": "87259b0f2d5285262ed2e0c353c06163d49c9526048eef9b33c21afbf6419234",
+        "bodySha": "004843db259a752c0323489860d770a6d06a329891b4b14e82733fc9e26a8b00",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005"
+      },
+      "rawSha": "89b041e5bac509a9bbf29ec867372ba24199759cf3ae7560ba2ad5d03b4cddbc",
+      "resultSha": "76e0094da6dc6c44701fe7e06b207d926174e7a033b85407f8fbb31e9c2aa725",
+      "trace": {
+        "slot": "state06",
+        "attempt": 1,
+        "packetSha": "b08b7ce1cbd0813e9a44e34718481ce72712ab998d240b5387d67888bb3a726d",
+        "rawSha": "89b041e5bac509a9bbf29ec867372ba24199759cf3ae7560ba2ad5d03b4cddbc",
+        "deliveryRecorded": "2026-11-25T12:19:58.635Z",
+        "firstReturn": "2026-11-25T12:20:10.507Z",
+        "fork": "none",
+        "toolCalls": 1,
+        "observedOnlyPacketRead": true,
+        "inheritedUserHistory": false
+      }
+    },
+    {
+      "revision": 6,
+      "kind": "timing",
+      "status": "returned",
+      "packetSha": "4dcc9b27e2ea4e53ad87d5c5c5a010e0f8bf9ca7e8465c5243d3c4cb7f97b009",
+      "result": {
+        "valid": true,
+        "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+        "revision": 6,
+        "importance": "low",
+        "visual": "none",
+        "intent": "text-only",
+        "reason": "一句抵达提示就能交代你从望气台回到熟悉的渡口。你往哪儿看、此刻能看见什么都还未知，叙事可直接往下走。",
+        "focus": [
+          {
+            "claimId": "ffc7209eea66c0df653a07bd",
+            "quote": "你到了芦花渡。"
+          }
+        ],
+        "withoutReference": "text-only",
+        "withReference": "text-only",
+        "conditions": [
+          "石堆散开、水面露出和桨声都属于先前一轮。等正文写出返回后的所见所闻，再判断是否值得更新画面。",
+          "上轮望气台的配图建议受阻，这次返回渡口无需补画。"
+        ],
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "sourceBinding": {
+        "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+        "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+        "branch": "root",
+        "revision": 6,
+        "requestKey": "b1c58f75-bfb4-4921-abbf-a8906acaea8b",
+        "receiptSha": "87259b0f2d5285262ed2e0c353c06163d49c9526048eef9b33c21afbf6419234",
+        "bodySha": "004843db259a752c0323489860d770a6d06a329891b4b14e82733fc9e26a8b00",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005"
+      },
+      "rawSha": "d2efbeb5a51c013dcece676f3bc3f836e73b86b097adbda17ef093471a38eaea",
+      "resultSha": "3ef243f09790b2f27f997115ef9e1c69f6c1057bbc778b8d93085bb8cd4f2e7a",
+      "trace": {
+        "slot": "timing06",
+        "attempt": 1,
+        "packetSha": "4dcc9b27e2ea4e53ad87d5c5c5a010e0f8bf9ca7e8465c5243d3c4cb7f97b009",
+        "rawSha": "d2efbeb5a51c013dcece676f3bc3f836e73b86b097adbda17ef093471a38eaea",
+        "deliveryRecorded": "2026-11-25T12:20:38.233Z",
+        "firstReturn": "2026-11-25T12:20:48.365Z",
+        "fork": "none",
+        "toolCalls": 1,
+        "observedOnlyPacketRead": true,
+        "inheritedUserHistory": false
+      }
+    },
+    {
+      "revision": 7,
+      "kind": "state",
+      "status": "returned",
+      "packetSha": "bca9599e3ccae1094907d2a46c13c035e72df5ca8c10302aa21bd77abdb3bae4",
+      "result": {
+        "valid": true,
+        "claims": [
+          {
+            "entity": "芦花",
+            "attribute": "今年的花期",
+            "value": "据说开得晚",
+            "status": "reported",
+            "quote": "芦花今年开得晚",
+            "origin": "model-candidate",
+            "claimId": "11a37f917fe316f6da156a55",
+            "start": 2,
+            "end": 9
+          },
+          {
+            "entity": "说话者",
+            "attribute": "身份",
+            "value": null,
+            "status": "unknown",
+            "quote": "",
+            "origin": "model-candidate",
+            "claimId": "b77d78ad0e515e57ae51ded7",
+            "start": null,
+            "end": null
+          },
+          {
+            "entity": "说话者",
+            "attribute": "是否进入视野",
+            "value": null,
+            "status": "unknown",
+            "quote": "",
+            "origin": "model-candidate",
+            "claimId": "812111c5ad1fcc4fc7dec6cb",
+            "start": null,
+            "end": null
+          },
+          {
+            "entity": "芦花",
+            "attribute": "眼前的开放情况",
+            "value": null,
+            "status": "unknown",
+            "quote": "",
+            "origin": "model-candidate",
+            "claimId": "7e68e63403e279f764442633",
+            "start": null,
+            "end": null
+          }
+        ],
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "sourceBinding": {
+        "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+        "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+        "branch": "root",
+        "revision": 7,
+        "requestKey": "15cdf1d4-e54e-4c02-b980-5069396058b1",
+        "receiptSha": "41de85010e66cfd02003d727efd21227c0ccada7c399bd5be6a685f0ed016f09",
+        "bodySha": "e78f03db10dc49830239a3833d6ab6635f5e45a3f222148a2fdaa651195f7547",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005"
+      },
+      "rawSha": "72c089067e222aa4268beb28f1788d011d62135157bfca3862dad77f3404153c",
+      "resultSha": "deb85ada894082569bfda90970dfa9be057fd4f2f198f66396f5ce4486be4c13",
+      "trace": {
+        "slot": "state07",
+        "attempt": 1,
+        "packetSha": "bca9599e3ccae1094907d2a46c13c035e72df5ca8c10302aa21bd77abdb3bae4",
+        "rawSha": "72c089067e222aa4268beb28f1788d011d62135157bfca3862dad77f3404153c",
+        "deliveryRecorded": "2026-11-25T12:21:10.486Z",
+        "firstReturn": "2026-11-25T12:21:22.211Z",
+        "fork": "none",
+        "toolCalls": 1,
+        "observedOnlyPacketRead": true,
+        "inheritedUserHistory": false
+      }
+    },
+    {
+      "revision": 7,
+      "kind": "timing",
+      "status": "returned",
+      "packetSha": "43a73272e817857a142e2059eb3a2333be665e77c0516a7a71b6c170e1fd91a0",
+      "result": {
+        "valid": true,
+        "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+        "revision": 7,
+        "importance": "low",
+        "visual": "none",
+        "intent": "text-only",
+        "reason": "这句闲谈只提到今年花期偏晚。你是否看见说话的人、眼前的芦花开到什么程度都未知，让这句话自然落下即可。",
+        "focus": [],
+        "withoutReference": "text-only",
+        "withReference": "text-only",
+        "conditions": [
+          "等正文写出你实际看见的花况或说话者的动作，再判断是否配图。"
+        ],
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "sourceBinding": {
+        "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+        "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+        "branch": "root",
+        "revision": 7,
+        "requestKey": "15cdf1d4-e54e-4c02-b980-5069396058b1",
+        "receiptSha": "41de85010e66cfd02003d727efd21227c0ccada7c399bd5be6a685f0ed016f09",
+        "bodySha": "e78f03db10dc49830239a3833d6ab6635f5e45a3f222148a2fdaa651195f7547",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005"
+      },
+      "rawSha": "6fa247e0a35b1a117d43c10bdf0b6963749f6b3b26ce84c33348eed54925bcdf",
+      "resultSha": "4ce009dc5a455a786b4f006b925a56cbb5ef611cc1b4705a1879e961c060001c",
+      "trace": {
+        "slot": "timing07",
+        "attempt": 1,
+        "packetSha": "43a73272e817857a142e2059eb3a2333be665e77c0516a7a71b6c170e1fd91a0",
+        "rawSha": "6fa247e0a35b1a117d43c10bdf0b6963749f6b3b26ce84c33348eed54925bcdf",
+        "deliveryRecorded": "2026-11-25T12:21:57.441Z",
+        "firstReturn": "2026-11-25T12:22:05.519Z",
+        "fork": "none",
+        "toolCalls": 1,
+        "observedOnlyPacketRead": true,
+        "inheritedUserHistory": false
+      }
+    },
+    {
+      "revision": 8,
+      "kind": "state",
+      "status": "returned",
+      "packetSha": "bb6044b5a4c632f2818bed38833b104cf92c6d0b52a74cd7d68f93af0b36f3a7",
+      "result": {
+        "valid": true,
+        "claims": [
+          {
+            "entity": "你",
+            "attribute": "抵达地点",
+            "value": "望气台",
+            "status": "visible",
+            "quote": "你到了望气台",
+            "origin": "model-candidate",
+            "claimId": "59e11f4ac1a915c1141b290e",
+            "start": 0,
+            "end": 6
+          },
+          {
+            "entity": "你",
+            "attribute": "观察方向",
+            "value": "从望气台往南看",
+            "status": "visible",
+            "quote": "从望气台往南看",
+            "origin": "model-candidate",
+            "claimId": "32f1c41d46dac1918cc64a3a",
+            "start": 8,
+            "end": 15
+          },
+          {
+            "entity": "那片白",
+            "attribute": "位置",
+            "value": "压在山脊上",
+            "status": "visible",
+            "quote": "压在山脊上的那片白",
+            "origin": "model-candidate",
+            "claimId": "e6ce7dffa6617e322d3a6099",
+            "start": 17,
+            "end": 26
+          },
+          {
+            "entity": "那片白",
+            "attribute": "颜色",
+            "value": "白色",
+            "status": "visible",
+            "quote": "那片白",
+            "origin": "model-candidate",
+            "claimId": "2dd444642c340a9cd8141442",
+            "start": 23,
+            "end": 26
+          },
+          {
+            "entity": "那片白",
+            "attribute": "已排除的身份",
+            "value": "云",
+            "status": "limit",
+            "quote": "不是云",
+            "origin": "model-candidate",
+            "claimId": "4a7d7a54722a24831a82241e",
+            "start": 27,
+            "end": 30
+          },
+          {
+            "entity": "那片白",
+            "attribute": "具体是什么",
+            "value": null,
+            "status": "unknown",
+            "quote": "",
+            "origin": "model-candidate",
+            "claimId": "918b70941fb2a62c45998143",
+            "start": null,
+            "end": null
+          }
+        ],
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "sourceBinding": {
+        "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+        "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+        "branch": "root",
+        "revision": 8,
+        "requestKey": "27b161cf-87fe-4b0c-b7e7-71c2ea042eb3",
+        "receiptSha": "babe968563b5141b1fed443265b96601bfd94e4520d9d6a996abac74e1ffe750",
+        "bodySha": "97dc995a0bcdc5178d62a03e7482c49d0bc291bdcd727a591c2b749767da052d",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005"
+      },
+      "rawSha": "676f47a081ca3fa56e93dbd76a7f2dfdec54a446f10393a57778959c0934cb40",
+      "resultSha": "d686da47ff7361188a13f420f55feece98efe9899fd211926a462ac6e3095e95",
+      "trace": {
+        "slot": "state08",
+        "attempt": 1,
+        "packetSha": "bb6044b5a4c632f2818bed38833b104cf92c6d0b52a74cd7d68f93af0b36f3a7",
+        "rawSha": "676f47a081ca3fa56e93dbd76a7f2dfdec54a446f10393a57778959c0934cb40",
+        "deliveryRecorded": "2026-11-25T12:22:26.997Z",
+        "firstReturn": "2026-11-25T12:22:37.375Z",
+        "fork": "none",
+        "toolCalls": 1,
+        "observedOnlyPacketRead": true,
+        "inheritedUserHistory": false
+      }
+    },
+    {
+      "revision": 8,
+      "kind": "timing",
+      "status": "returned",
+      "packetSha": "cd885674a0f3fc91f3c692945237a36e910be096a46193d5d79b41d7cc97b4c6",
+      "result": {
+        "valid": true,
+        "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+        "revision": 8,
+        "importance": "low",
+        "visual": "clear",
+        "intent": "text-only",
+        "reason": "你重返望气台，向南看见的仍是第5轮写过的山脊与白影。白影究竟是什么仍未知，这次回望用文字带过即可。",
+        "focus": [
+          {
+            "claimId": "32f1c41d46dac1918cc64a3a",
+            "quote": "从望气台往南看"
+          },
+          {
+            "claimId": "e6ce7dffa6617e322d3a6099",
+            "quote": "压在山脊上的那片白"
+          }
+        ],
+        "withoutReference": "text-only",
+        "withReference": "text-only",
+        "conditions": [
+          "等你看见白影的轮廓发生变化，或从新视角辨出更多细节，再考虑配图。"
+        ],
+        "sceneEligible": false,
+        "send": false,
+        "actualAction": "blocked",
+        "dispatchAttempted": false
+      },
+      "sourceBinding": {
+        "ownerHash": "e6b9211cec80824b722649728f817319afeb606878a76fe907743018a0bb6825",
+        "saveHash": "37e3cac5ff5917db5d573a675052bc4fee96698a5807d51d5f1398bbca0b26f3",
+        "branch": "root",
+        "revision": 8,
+        "requestKey": "27b161cf-87fe-4b0c-b7e7-71c2ea042eb3",
+        "receiptSha": "babe968563b5141b1fed443265b96601bfd94e4520d9d6a996abac74e1ffe750",
+        "bodySha": "97dc995a0bcdc5178d62a03e7482c49d0bc291bdcd727a591c2b749767da052d",
+        "ruleVersion": "prologue-v1-candidate-20261005",
+        "canonVersion": "prologue-canon-candidate-20261005"
+      },
+      "rawSha": "8b98f2989573ce326655049f75ced956d29467b0f4615252ed811951210ca30d",
+      "resultSha": "e7cd25cc92d7b1c8da9ab108b4dbf9ef3f2f7f630a8ba737a273f8ea95983491",
+      "trace": {
+        "slot": "timing08",
+        "attempt": 1,
+        "packetSha": "cd885674a0f3fc91f3c692945237a36e910be096a46193d5d79b41d7cc97b4c6",
+        "rawSha": "8b98f2989573ce326655049f75ced956d29467b0f4615252ed811951210ca30d",
+        "deliveryRecorded": "2026-11-25T12:23:00.644Z",
+        "firstReturn": "2026-11-25T12:23:13.516Z",
+        "fork": "none",
+        "toolCalls": 1,
+        "observedOnlyPacketRead": true,
+        "inheritedUserHistory": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+  "revision": 5,
+  "claims": [
+    {"entity":"你","attribute":"抵达地点","value":"望气台","status":"visible","quote":"你到了望气台"},
+    {"entity":"你","attribute":"观察方向","value":"从望气台往南看","status":"visible","quote":"从望气台往南看"},
+    {"entity":"那片白","attribute":"位置","value":"压在山脊上","status":"visible","quote":"压在山脊上的那片白"},
+    {"entity":"那片白","attribute":"颜色","value":"白色","status":"visible","quote":"那片白"},
+    {"entity":"那片白","attribute":"已排除的身份","value":"云","status":"limit","quote":"不是云"},
+    {"entity":"那片白","attribute":"具体是什么","value":null,"status":"unknown","quote":""},
+    {"entity":"望气台","attribute":"其他在场人物","value":null,"status":"unknown","quote":""}
+  ]
+}

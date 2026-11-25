@@ -1,0 +1,12 @@
+{
+  "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+  "revision": 7,
+  "importance": "low",
+  "visual": "none",
+  "intent": "text-only",
+  "reason": "这句闲谈只提到今年花期偏晚。你是否看见说话的人、眼前的芦花开到什么程度都未知，让这句话自然落下即可。",
+  "focus": [],
+  "withoutReference": "text-only",
+  "withReference": "text-only",
+  "conditions": ["等正文写出你实际看见的花况或说话者的动作，再判断是否配图。"]
+}

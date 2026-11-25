@@ -1,0 +1,22 @@
+{
+  "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+  "revision": 1,
+  "importance": "medium",
+  "visual": "clear",
+  "intent": "update",
+  "reason": "开场一幅就能交代船为何挨不着岸。倒伏的芦花可带入岸边景物，踩倒它的人和岸上有谁仍未知，无需另起一拍。",
+  "focus": [
+    {"claimId": "7586408de784cbd0b52e8884", "quote": "渡槽淤了半尺"},
+    {"claimId": "1de60ece0badec255e336b5a", "quote": "水发黄"},
+    {"claimId": "9a6dc2facd585f1a2d1e2c9c", "quote": "船吃水太深"},
+    {"claimId": "8fb040be2c9e260c20d6e45c", "quote": "蹭着淤泥"},
+    {"claimId": "243dccf893537eb6dd5519a5", "quote": "岸边踩倒的芦花"}
+  ],
+  "withoutReference": "new",
+  "withReference": "edit",
+  "conditions": [
+    "本轮实际未派图。若后续允许配图，用一幅交代船、淤泥与岸的相对位置。",
+    "若有适用的渡口底图，按本轮水色、船的吃水和芦花状态调整。",
+    "芦花只画倒伏后的状态，不据此补画踩踏过程或断定岸上无人。"
+  ]
+}

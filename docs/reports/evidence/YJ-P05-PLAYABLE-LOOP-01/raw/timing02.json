@@ -1,0 +1,20 @@
+{
+  "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+  "revision": 2,
+  "importance": "low",
+  "visual": "small",
+  "intent": "text-only",
+  "reason": "这一句把你带到前文已交代的渡口。你抵达时看见什么、岸边还有谁都未知，用文字接住这一步就够了。",
+  "focus": [
+    {
+      "claimId": "337da43935bb8602f4c42907",
+      "quote": "你到了芦花渡"
+    }
+  ],
+  "withoutReference": "text-only",
+  "withReference": "text-only",
+  "conditions": [
+    "上一轮渡口图未派发，本轮无需补画。",
+    "等正文交代你站在哪里、从那里能看见什么，再判断是否需要新画面。"
+  ]
+}

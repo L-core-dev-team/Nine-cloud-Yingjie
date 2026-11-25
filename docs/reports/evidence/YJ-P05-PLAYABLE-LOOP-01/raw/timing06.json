@@ -1,0 +1,20 @@
+{
+  "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+  "revision": 6,
+  "importance": "low",
+  "visual": "none",
+  "intent": "text-only",
+  "reason": "一句抵达提示就能交代你从望气台回到熟悉的渡口。你往哪儿看、此刻能看见什么都还未知，叙事可直接往下走。",
+  "focus": [
+    {
+      "claimId": "ffc7209eea66c0df653a07bd",
+      "quote": "你到了芦花渡。"
+    }
+  ],
+  "withoutReference": "text-only",
+  "withReference": "text-only",
+  "conditions": [
+    "石堆散开、水面露出和桨声都属于先前一轮。等正文写出返回后的所见所闻，再判断是否值得更新画面。",
+    "上轮望气台的配图建议受阻，这次返回渡口无需补画。"
+  ]
+}

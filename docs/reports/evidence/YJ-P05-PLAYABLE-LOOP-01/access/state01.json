@@ -1,0 +1,1 @@
+{"slot": "state01", "attempt": 1, "packetSha": "0f80e60f2b61a9a3d229d7cdf3a184f26ac6c31bb7c3c36cca7e3e2238830f3a", "rawSha": "0db5fd18c5861e4cd807f072bb871421aaee91bae7398e287228a9221dd5f42c", "deliveryRecorded": "2026-11-25T12:14:01.118Z", "firstReturn": "2026-11-25T12:14:16.728Z", "fork": "none", "toolCalls": 1, "observedOnlyPacketRead": true, "inheritedUserHistory": false}

@@ -5,7 +5,7 @@ import {randomUUID} from "node:crypto";
 import {loadB2Rules} from "../native-reader-b2/runtime.mjs";
 
 const pin="f1fe6ea561c5ef4d1ec670b7a406625ce5df774c";
-export async function openNative(config,folder,store) {
+export async function openNative(config,folder,store,{provision=true}={}) {
   const {Pool}=createRequire(resolve(config.upstream,"package.json"))("pg");
   const options={host:"127.0.0.1",port:config.pgPort,database:"postgres",user:"p05_admin",password:config.admin};
   const admin=new Pool(options);
@@ -13,6 +13,7 @@ export async function openNative(config,folder,store) {
     const row=(await admin.query("SELECT current_setting('data_directory') d,current_user u,host(inet_server_addr()) h")).rows[0];
     if(relative(resolve(folder,"pgdata"),row.d)||row.u!=="p05_admin"||row.h!=="127.0.0.1")throw Error("cluster mismatch");
     if(!(await admin.query("SELECT 1 FROM pg_roles WHERE rolname='p05_app'")).rowCount){
+      if(!provision)throw Error("existing initialized cluster required");
       const c=await admin.connect();
       try {
         await c.query("BEGIN");

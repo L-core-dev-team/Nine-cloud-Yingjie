@@ -1,0 +1,80 @@
+{
+  "initialProbe": {
+    "utc": "2026-11-25T12:04:49.396Z",
+    "runId": "6ab06444-71ee-40f8-a7f2-c68a39064a3f",
+    "status": "ENV_BLOCKED",
+    "tcpListen": "PASS",
+    "tcpConnect": "EACCES",
+    "httpGet": "NOT_RUN"
+  },
+  "approvedProbe": {
+    "runId": "993ca38b-6742-49f4-8eb7-8f16b0176a0c",
+    "utc": "2026-11-25T12:05:03.424Z",
+    "sourceSha256": "8b7022155c9fa967ee3c84105ee68dead386eedd39e7f558aefc4595676f4f80",
+    "platform": "win32",
+    "osRelease": "10.0.26200",
+    "node": "v26.13.0",
+    "nodePermissionModel": false,
+    "nodeNetPermission": null,
+    "preloadConfigured": false,
+    "target": "127.0.0.1",
+    "portSelection": "OS-assigned",
+    "observations": {
+      "tcpListen": {
+        "status": "PASS"
+      },
+      "tcpConnect": {
+        "status": "PASS",
+        "peerPayloadVerified": true
+      },
+      "httpListen": {
+        "status": "PASS"
+      },
+      "httpGet": {
+        "status": "PASS",
+        "httpStatus": 200,
+        "bodyVerified": true
+      }
+    },
+    "status": "LOOPBACK_PASS"
+  },
+  "rehearsal": {
+    "separateInstance": true,
+    "accepted": 8,
+    "modelAttempts": 0
+  },
+  "actualBrowserBoundaries": {
+    "same": {
+      "status": 200,
+      "body": {
+        "revision": 1,
+        "duplicate": true
+      }
+    },
+    "conflict": 409,
+    "stale": 409,
+    "foreign": 400,
+    "logout": 401,
+    "historyAndRewardUnchanged": true,
+    "untouchedPreparedStateSlots": 8
+  },
+  "operatorIncidents": [
+    {
+      "stage": "R1 dedicated host resume",
+      "effect": "PG and host restarted; launcher stdout/stderr pipe retained by Windows descendant after command finished. Operator stopped without reserving a slot.",
+      "recovery": "Switched operator subcommand capture to private regular files; rechecked same live save."
+    },
+    {
+      "stage": "recovery evidence comparison",
+      "exit": 1,
+      "reason": "Python tuple compared with JSON list",
+      "effect": "Before and after persisted JSON identical; R1 action not repeated; no slot reserved.",
+      "recovery": "Compare uniform arrays and verify existing immutable snapshots."
+    }
+  ],
+  "paidApiUSD": 0,
+  "projectModelRequests": 0,
+  "imageToolRequests": 0,
+  "dispatchReal": 0,
+  "dispatchMock": 0
+}

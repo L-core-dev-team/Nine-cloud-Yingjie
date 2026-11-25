@@ -1,0 +1,30 @@
+{
+  "commands": [
+    "python -B packages/playable-loop/session.py stop rehearsal",
+    "python -B packages/playable-loop/session.py stop demo",
+    "python -B packages/playable-loop/session.py resume demo",
+    "node packages/playable-loop/browser-check.mjs demo readback 0 0"
+  ],
+  "exitCodes": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "finalHostLocal": true,
+  "actualReadback": {
+    "revision": 8,
+    "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+    "rewardClaimed": true,
+    "returnedSlots": 16,
+    "historyPagesChecked": [
+      3,
+      4,
+      7,
+      8
+    ],
+    "browser": "158.0.8127.38"
+  },
+  "newGameActionsDuringCheck": 0,
+  "newModelRequestsDuringCheck": 0
+}

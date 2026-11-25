@@ -8,17 +8,20 @@ function button(text,fn){const b=document.createElement("button");b.textContent=
 function render(){
  const rev=selected??game.current.revision,entry=game.history.find(h=>h.revision===rev),past=selected!==null;
  el("where").textContent=(past?"历史 · ":"当前 · ")+(rev?"第 "+rev+" 回合":"初至渡口");
- el("title").textContent=entry?.native.place??game.current.place;
- el("text").textContent=entry?.text??"请选择行动，开始这段行程。";
+ const place=past?entry?.native:game.current;
+ el("title").textContent=place?.place??"地点待核";
+ if(place?.sub==="subloc_ferry_berm")el("where").textContent+=" · 渡口作业位";
+ el("text").textContent=entry?.text??(rev?"本回合正文待恢复。":"请选择行动，开始这段行程。");
  const slots=game.slots.filter(s=>s.rev===rev),timing=slots.find(s=>s.kind==="timing"),state=slots.find(s=>s.kind==="state");
  el("analysis").textContent=timing?.result?.valid?({update:"建议更新画面",defer:"建议等一等","text-only":"建议保留文字","needs-review":"时机待核"}[timing.result.intent]+" · "+timing.result.reason):rev?(timing?.result?"时机判断待核":"分析待回传 · 可继续行动"):"";
- el("diag").textContent=JSON.stringify({地点来源:"原生当前存档或当轮记录",正文来源:entry?.source,状态:state?.result??"待回传",时机:timing?.result??"待回传",参考图:"无",send:false},null,2);
+ el("diag").textContent=JSON.stringify({地点来源:past?"历史回合记录":"已认证原生当前存档",地点:place?.place,子区域:place?.sub,奖励已领:place?.quest?.rewardClaimed,正文来源:entry?.source,状态:state?.result??"待回传",时机:timing?.result??"待回传",参考图:"无",send:false},null,2);
  el("current").hidden=!past;el("choices").replaceChildren();el("history").replaceChildren();
  if(!past && game.current.revision<8)for(const c of game.current.actions){const b=button(c.label,async()=>{
    if(locked)return;locked=true;b.disabled=true;try{const scope=game.scope,r=game.current.revision;
    const k=scope+"-"+r+"-"+c.id;const key=sessionStorage.getItem(k)??crypto.randomUUID();sessionStorage.setItem(k,key);
    await request("/act",{scope,revision:r,id:c.id,key});el("msg").textContent="";await refresh()}finally{locked=false;b.disabled=false}
  });b.dataset.action=c.id;el("choices").append(b)}
+ if(!past && game.current.revision===8)el("choices").textContent="八回合已完成，可以回看沿途记录。";
  for(const h of game.history){const b=button("R"+h.revision+" "+h.action,async()=>{selected=h.revision;render()});b.dataset.rev=h.revision;b.setAttribute("aria-current",String(rev===h.revision));el("history").append(b)}
 }
 async function refresh(){game=await request("/game");render()}

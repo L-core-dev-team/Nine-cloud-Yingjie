@@ -1,5 +1,9 @@
 # 映界决策台账
 
+## P05 本地八回合已实测 · P05_PLAYABLE_RELAY_PASS
+
+原生八回合已用浏览器完成，R4 领奖后已恢复同一档。CODEX_RELAY 实收状态与时机各 8 份，3 次建议更新、5 次保留文字。R3 对听觉的误标与原回执序列化摘要的限制另列，独立审核及图片派发为 0。 [试玩入口、证据与限制](reports/YJ-P05-PLAYABLE-LOOP-01-report.md)
+
 ## 2026-11-25 · 批准进入 P05 的有限短局集成
 
 道主在 TIMING-01R 核验结案后回复「keyi」，同意按行动提交、已保存正文、场景候选、时机建议和中断恢复准备下一任务书并推进小范围集成。[任务书](task-briefs/YJ-P05-PLAYABLE-LOOP-01.md) 位于独立分支 `codex/yj-p05-playable-loop-01`，基线 `d75f4ceeea71947cf71ed719513493a38d2b259f`。

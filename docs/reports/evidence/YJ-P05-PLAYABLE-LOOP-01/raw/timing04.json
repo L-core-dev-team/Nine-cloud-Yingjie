@@ -1,0 +1,15 @@
+{
+  "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+  "revision": 4,
+  "importance": "high",
+  "visual": "none",
+  "intent": "text-only",
+  "reason": "领奖和解锁都影响后续行动，用这一句收束即可。当前位置仍是芦花渡，折桂坪的景象和在场人物均未知。",
+  "focus": [],
+  "withoutReference": "text-only",
+  "withReference": "text-only",
+  "conditions": [
+    "领奖与解锁在同轮得到确认，发生的确切时刻未知。",
+    "本轮没有新增可见景物。上一轮的渡槽口画面虽未发出，本轮也无需补画。"
+  ]
+}

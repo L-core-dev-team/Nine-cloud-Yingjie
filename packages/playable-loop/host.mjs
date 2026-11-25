@@ -5,6 +5,7 @@ import {join} from "node:path";
 import {openNative,publicState} from "./native.mjs";
 import {openStore,hash,blocked} from "./data.mjs";
 import {prepareState} from "./relay.mjs";
+import {digest} from "../native-facts/admission.mjs";
 
 const dir=process.argv[2],cfg=JSON.parse(readFileSync(join(dir,"private.json")));
 const store=openStore(dir),db=store.db,n=await openNative(cfg,dir,store);
@@ -16,7 +17,7 @@ function record(owner,save,row,receipt,text,recovery){
   if(!text?.trim()||receipt.decision.status!=="accepted"||receipt.saveId!==save.saveId||receipt.resultingRevision!==row.expected+1||receipt.idempotencyKey!==row.k)throw Error("receipt binding");
   const bound=JSON.parse(row.body);
   const entry={scope:row.scope,ownerHash:hash(owner),saveHash:hash(save.saveId),branch:"root",revision:receipt.resultingRevision,
-    requestKey:row.k,action:bound.label,text,bodySha:hash(text),receiptSha:hash(receipt),source:"deterministic",recovery,
+    requestKey:row.k,action:bound.label,text,bodySha:hash(text),receiptSha:hash(receipt),canonicalReceiptSha:digest(receipt),source:"deterministic",recovery,
     ruleVersion:save.ruleVersion,canonVersion:save.canonVersion,events:receipt.decision.events.map(e=>e.type),
     native:publicState(save,n.labels),...blocked};
   delete entry.native.actions;

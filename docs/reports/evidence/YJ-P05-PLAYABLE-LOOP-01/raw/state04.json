@@ -1,0 +1,10 @@
+{
+  "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+  "revision": 4,
+  "claims": [
+    {"entity":"任务奖励","attribute":"领取状态","value":"已领取","status":"consequence","quote":"任务奖励已领取"},
+    {"entity":"折桂坪","attribute":"解锁状态","value":"已解锁","status":"consequence","quote":"折桂坪已解锁"},
+    {"entity":"折桂坪","attribute":"场景所见","value":null,"status":"unknown","quote":""},
+    {"entity":"折桂坪","attribute":"在场人物","value":null,"status":"unknown","quote":""}
+  ]
+}

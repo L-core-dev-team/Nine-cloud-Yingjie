@@ -1,0 +1,10 @@
+{
+  "scope": "be1e1abdc3a8fc00618b58e1220b09f6cc150f626be5eaac9eabb54064cabe78",
+  "revision": 7,
+  "claims": [
+    {"entity":"芦花","attribute":"今年的花期","value":"据说开得晚","status":"reported","quote":"芦花今年开得晚"},
+    {"entity":"说话者","attribute":"身份","value":null,"status":"unknown","quote":""},
+    {"entity":"说话者","attribute":"是否进入视野","value":null,"status":"unknown","quote":""},
+    {"entity":"芦花","attribute":"眼前的开放情况","value":null,"status":"unknown","quote":""}
+  ]
+}

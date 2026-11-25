@@ -1,5 +1,9 @@
 # 九霄 · 映界
 
+## P05 本地八回合已实测 · P05_PLAYABLE_RELAY_PASS
+
+原生八回合已用浏览器完成，R4 领奖后已恢复同一档。CODEX_RELAY 实收状态与时机各 8 份，3 次建议更新、5 次保留文字。R3 对听觉的误标与原回执序列化摘要的限制另列，独立审核及图片派发为 0。 [试玩入口、证据与限制](docs/reports/YJ-P05-PLAYABLE-LOOP-01-report.md)
+
 ## 2026-11-25 · P05 原生短局接线（已批准 / NOT_RUN）
 
 道主同意进入 [YJ-P05-PLAYABLE-LOOP-01](docs/task-briefs/YJ-P05-PLAYABLE-LOOP-01.md)。从 TIMING-01R `d75f4ceeea71947cf71ed719513493a38d2b259f` 接续，分支 `codex/yj-p05-playable-loop-01`。本轮接通真实原生行动、确定性正文保存、场景候选、时机建议与同局重启；目标八回合，实际游玩芦花渡/望气台，清障与领奖分别观察可见变化和安静后果。

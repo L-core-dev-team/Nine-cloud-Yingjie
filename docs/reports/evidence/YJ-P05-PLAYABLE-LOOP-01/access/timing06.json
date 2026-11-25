@@ -1,0 +1,1 @@
+{"slot": "timing06", "attempt": 1, "packetSha": "4dcc9b27e2ea4e53ad87d5c5c5a010e0f8bf9ca7e8465c5243d3c4cb7f97b009", "rawSha": "d2efbeb5a51c013dcece676f3bc3f836e73b86b097adbda17ef093471a38eaea", "deliveryRecorded": "2026-11-25T12:20:38.233Z", "firstReturn": "2026-11-25T12:20:48.365Z", "fork": "none", "toolCalls": 1, "observedOnlyPacketRead": true, "inheritedUserHistory": false}
