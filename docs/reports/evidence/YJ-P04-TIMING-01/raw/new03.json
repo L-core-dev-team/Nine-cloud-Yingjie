@@ -1,0 +1,69 @@
+{
+  "scope": "research-cliff-01",
+  "revision": 3,
+  "narrativeImportance": {
+    "value": "low",
+    "reason": "三声敲击再次响起，延续了等待和悬念。守壁的人仍未看见声源，雨滴落到指节也没有带来关于壁后的新线索。"
+  },
+  "visualValue": {
+    "value": "small",
+    "reason": "指节上的一滴水可以让漫长的等待有一个可见的细节。静帧只能留住水滴滑到指节的一刻，正文还能交代等待了多久、敲击如何再次响起。"
+  },
+  "visualReliability": {
+    "value": "sufficient-for-focus",
+    "limits": [
+      "正文直接给出了季沅袖边的水滴及其落点，只支持这个局部特写。",
+      "敲击只有听觉证据，壁后被石面遮挡。"
+    ]
+  },
+  "timingIntent": "text-only",
+  "cadenceReason": "上一轮的原始建议是用文字承载责任归属的转折，该建议未通过校验，执行受阻。本轮仍在原处等待，单为一滴水另起画面，会把读者的注意力从随后又响起的三声敲击上移开。",
+  "conditionalPresentation": {
+    "withoutReference": "text-only",
+    "withSuitableReference": "text-only",
+    "requiredReferenceConditions": [
+      "若考虑复用，须核实参考图来源和展示授权，并确认图中人物是季沅、水滴已到指节，构图没有揭示壁后。",
+      "若考虑编辑，须另行核实修改授权，并确认参考图中季沅的袖边和指节可见，能据本轮正文定位水滴。"
+    ]
+  },
+  "focus": [
+    "季沅指节上的一滴雨水"
+  ],
+  "excludedFromImage": [
+    "壁后空间、敲击者及敲击动作",
+    "旧时被困者的形象",
+    "由一滴雨水推断出的当前雨势"
+  ],
+  "evidence": [
+    {
+      "rev": 3,
+      "quote": "季沅袖边一滴雨水滑到了指节上",
+      "use": "focus"
+    },
+    {
+      "rev": 3,
+      "quote": "等了许久",
+      "use": "narrative"
+    },
+    {
+      "rev": 3,
+      "quote": "我还守着原先那块石面，敲击又响了三声。",
+      "use": "narrative"
+    },
+    {
+      "rev": 3,
+      "quote": "这一次依旧只听得见，往壁后望去什么也看不到。",
+      "use": "limit"
+    },
+    {
+      "rev": 2,
+      "quote": "云笙当面销了对师妹的处分，又明说从此案卷只记季沅一人担责。",
+      "use": "history"
+    },
+    {
+      "rev": 1,
+      "quote": "云笙说旧时有人困在壁里也这样敲",
+      "use": "history"
+    }
+  ]
+}

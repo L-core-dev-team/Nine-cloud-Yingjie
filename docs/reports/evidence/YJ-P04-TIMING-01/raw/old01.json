@@ -1,0 +1,49 @@
+{
+  "scope": "research-spring-01",
+  "revision": 1,
+  "narrativeImportance": {
+    "value": "medium",
+    "reason": "陆禾的问话点明分水为何牵动他：药圃里有母亲留下的苗。此刻发生的是他开口询问，分水结果仍未知。"
+  },
+  "visualValue": {
+    "value": "clear",
+    "reason": "从门边望入，一幅开场画面就能让读者看清堂里坐着谁，以及水簿在桌上、铜盆在桌脚的上下关系。陆禾为何担心药苗，可以留给他的问话。"
+  },
+  "visualReliability": {
+    "value": "sufficient-for-focus",
+    "limits": [
+      "正文确认两人坐在堂内，未交代各自座次、外貌或表情。",
+      "门边视点、朝向和桌边物件有直接描述，听泉堂的完整布局仍未知。"
+    ]
+  },
+  "timingIntent": "update",
+  "cadenceReason": "这是首轮，没有上一条建议可供比较。此刻随叙述者从门边扫视全堂提出开场画面，可以自然接到陆禾的问话。",
+  "conditionalPresentation": {
+    "withoutReference": "new",
+    "withSuitableReference": "reuse",
+    "requiredReferenceConditions": [
+      "须先核实参考图来源、用于本场景的资格，以及复用和展示所需的授权。",
+      "须核对原图已符合清晨从听泉堂门边向北看的视点，堂内可见岑苇和陆禾二人坐着。",
+      "须确认原图保留窗光、桌上合拢的水簿和桌脚盛半盆水的铜盆，且没有把分水结果或药苗状况画成既成事实。"
+    ]
+  },
+  "focus": [
+    "清晨从听泉堂门边向北看的视角",
+    "窗里透进的天光照着方桌上合拢的水簿",
+    "桌脚的铜盆里盛着半盆水",
+    "堂内坐着岑苇和陆禾"
+  ],
+  "excludedFromImage": [
+    "药圃、溪水和母亲留下的苗，仅在陆禾的问话中被提及。",
+    "分水结果、苗的当前状况和合拢水簿的内页内容。"
+  ],
+  "evidence": [
+    {"rev": 1, "quote": "清晨，我在听泉堂的门边向北望。", "use": "focus"},
+    {"rev": 1, "quote": "窗里透进天光，照着方桌上合拢的水簿", "use": "focus"},
+    {"rev": 1, "quote": "桌脚的铜盆盛着半盆水", "use": "focus"},
+    {"rev": 1, "quote": "满堂扫过，除我只坐着岑苇和陆禾。", "use": "focus"},
+    {"rev": 1, "quote": "陆禾问，今年药圃若是分不到溪水，他娘留下的苗该怎么办。", "use": "narrative"},
+    {"rev": 1, "quote": "若是分不到溪水", "use": "limit"},
+    {"rev": 1, "quote": "合拢的水簿", "use": "limit"}
+  ]
+}

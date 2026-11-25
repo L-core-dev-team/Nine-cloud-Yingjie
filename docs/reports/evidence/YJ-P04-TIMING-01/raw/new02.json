@@ -1,0 +1,50 @@
+{
+  "scope": "research-cliff-01",
+  "revision": 2,
+  "narrativeImportance": {
+    "value": "high",
+    "reason": "季沅此刻认下六年前误报的责任，云笙当面撤销了师妹的处分，并明确此后案卷只记季沅一人担责。师妹的处分和案卷的责任归属都在这一轮有了定论。"
+  },
+  "visualValue": {
+    "value": "small",
+    "reason": "静帧能突出三人听完裁定后仍在原地的片刻。谁获撤处分、谁独自担责，要靠云笙的话才能说清；壁上光纹也没有提供新的视觉线索。"
+  },
+  "visualReliability": {
+    "value": "sufficient-for-focus",
+    "limits": [
+      "正文足以确认三人留在壁前和光纹未变，未交代各人的神情、手势或光纹的具体形状。",
+      "云笙说明了此后的案卷归责，正文未写现场有案卷，也未写有人当场落笔。"
+    ]
+  },
+  "timingIntent": "text-only",
+  "cadenceReason": "上轮已就石壁场景提出出图建议，执行受阻。本轮仍是同三人守在原处，适宜让季沅的一个“好”字收住裁定，不必为相同的可见场面再提一次出图。",
+  "conditionalPresentation": {
+    "withoutReference": "text-only",
+    "withSuitableReference": "text-only",
+    "requiredReferenceConditions": [
+      "若另行考虑复用或编辑，须先确认参考图实际存在、来源可核，并具备相应用途的使用或编辑授权。",
+      "须核对参考图与本轮的三人身份、壁前位置及光纹连续性；若需编辑，改动须有本轮可见事实支持。"
+    ]
+  },
+  "focus": [
+    "三人仍守在石壁前，谁也没挪步",
+    "石壁上保持原样的光纹"
+  ],
+  "excludedFromImage": [
+    "六年前误报险讯的经过",
+    "师妹在场或得知处分撤销后的反应",
+    "现场改写案卷、销毁处分文书等动作",
+    "壁后敲击的来源或被困者"
+  ],
+  "evidence": [
+    {"rev": 2, "quote": "我们仍守在石壁前", "use": "focus"},
+    {"rev": 2, "quote": "三个人都没挪步", "use": "focus"},
+    {"rev": 2, "quote": "壁上的光纹也没有变", "use": "focus"},
+    {"rev": 2, "quote": "季沅把六年前报错险讯的责任认在自己名下", "use": "narrative"},
+    {"rev": 2, "quote": "云笙当面销了对师妹的处分", "use": "narrative"},
+    {"rev": 2, "quote": "又明说从此案卷只记季沅一人担责", "use": "narrative"},
+    {"rev": 2, "quote": "季沅只答了一个好字", "use": "narrative"},
+    {"rev": 1, "quote": "栖霞壁下只站着我、云笙和季沅", "use": "history"},
+    {"rev": 1, "quote": "分不出那是人声还是空腔的回响", "use": "limit"}
+  ]
+}

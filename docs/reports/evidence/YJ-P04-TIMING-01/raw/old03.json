@@ -1,0 +1,50 @@
+{
+  "scope": "research-spring-01",
+  "revision": 3,
+  "narrativeImportance": {
+    "value": "medium",
+    "reason": "陆禾翻开水簿，离堂去探井。药圃能否分到水仍未揭晓，岑苇让出一轮水的承诺仍有条件。"
+  },
+  "visualValue": {
+    "value": "clear",
+    "reason": "取陆禾离堂后的一刻，从门边一眼就能看清堂内只余岑苇、方桌上的水簿已经摊开。桌脚的铜盆给前后场景提供了共同的位置参照。"
+  },
+  "visualReliability": {
+    "value": "sufficient-for-focus",
+    "limits": [
+      "叙述者朝北看遍堂内，足以确定视野里只余岑苇。她在堂内的精确位置、姿态和表情未交代。",
+      "本轮确认了水簿的开合和铜盆的位置，未交代簿页内容、盆内水位或当前光线。"
+    ]
+  },
+  "timingIntent": "update",
+  "cadenceReason": "上轮建议用文字承载岑苇的条件承诺，当时三人都没动地方。本轮陆禾翻簿、离堂，在同一观察位置留下两处可见变化，适合在动作结束后提出画面。",
+  "conditionalPresentation": {
+    "withoutReference": "new",
+    "withSuitableReference": "edit",
+    "requiredReferenceConditions": [
+      "须先核实参考图的来源、使用资格及编辑和预定展示所需授权。",
+      "参考图须对应同一听泉堂，能匹配门边朝北的视角、岑苇的身份以及方桌和铜盆的位置。",
+      "若参考图表现前一轮，编辑时须移除已离堂的陆禾，把桌上水簿改为摊开，并能避开盆内水位、簿页文字等未经当轮确认的细节。"
+    ]
+  },
+  "focus": [
+    "从听泉堂门边朝北望，堂内视野中只余岑苇。",
+    "方桌上的水簿摊开。",
+    "铜盆仍在桌脚。"
+  ],
+  "excludedFromImage": [
+    "已经离堂的陆禾、堂外探井的经过和结果",
+    "井脉复流、溪水分配或岑苇兑现承诺",
+    "盆内水位、簿页上的具体记录、沿用上轮的晨光效果"
+  ],
+  "evidence": [
+    {"rev": 3, "quote": "我在门边朝北看遍堂内，身边只剩岑苇。", "use": "focus"},
+    {"rev": 3, "quote": "水簿摊开在方桌上", "use": "focus"},
+    {"rev": 3, "quote": "铜盆还在桌脚", "use": "focus"},
+    {"rev": 3, "quote": "陆禾把水簿翻开，随后跨出听泉堂去探井。", "use": "narrative"},
+    {"rev": 2, "quote": "若井脉复流，她愿把自己的一轮水让给药圃。", "use": "limit"},
+    {"rev": 2, "quote": "我们三个没动地方，天光还照着原样摆放的水簿和铜盆", "use": "history"},
+    {"rev": 1, "quote": "合拢的水簿", "use": "history"},
+    {"rev": 1, "quote": "桌脚的铜盆盛着半盆水", "use": "history"}
+  ]
+}

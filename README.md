@@ -1,5 +1,9 @@
 # 九霄 · 映界
 
+## 2026-11-25 · TIMING-01 实测 PARTIAL
+
+二十份时机首答、四份独立审核已收齐。开闸与显露声源建议更新，让水和撤处分主要用文字。开场和雾堂两处更新建议超出冻结集合，引文使用、参考条件及机械错拒另列。二十回合均执行阻断，派发 0。 [实测判断、分歧与恢复回执](docs/reports/YJ-P04-TIMING-01-report.md)
+
 ## 2026-11-25 · TIMING-01 出图时机专项（已批准 / NOT_RUN）
 
 STABILITY-01R 已在 `55c43d6fd880a3619bf6eada0ad920d9d9a7a6cf` 完成限定回放：基本字段 98/98、14/14 个前缀恢复一致，原 STABILITY-01 语义 FAIL 保留。[修复结果](docs/reports/YJ-P04-STABILITY-01R-report.md)

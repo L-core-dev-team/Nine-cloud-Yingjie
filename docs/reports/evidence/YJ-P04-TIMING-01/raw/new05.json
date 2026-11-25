@@ -1,0 +1,65 @@
+{
+  "scope": "research-cliff-01",
+  "revision": 5,
+  "narrativeImportance": {
+    "value": "low",
+    "reason": "云笙反复计数，写出了众人在风轮前停留的时长。本轮没有给出计数的结果或新的发现。"
+  },
+  "visualValue": {
+    "value": "small",
+    "reason": "一幅静帧能让人看见云笙拨开发梢的瞬间。这个动作很轻，文字里的“一圈又一圈”更能传达这段等待有多久。"
+  },
+  "visualReliability": {
+    "value": "sufficient-for-focus",
+    "limits": [
+      "正文明确写出拨开发梢的动作，未交代用哪只手、神情或人物站位。",
+      "单幅画面只能截取一瞬，无法直接呈现计数持续了几圈。"
+    ]
+  },
+  "timingIntent": "text-only",
+  "cadenceReason": "上一轮建议在石壁翻开、风轮首次完整显露时出图，执行状态为受阻。本轮风轮仍在原处，石壁与瓷片河也没有再变，文字足以承接这段停留。上轮受阻本身不构成本轮补图的理由。",
+  "conditionalPresentation": {
+    "withoutReference": "text-only",
+    "withSuitableReference": "reuse",
+    "requiredReferenceConditions": [
+      "若需保留场景画面，须先确认参考图确实可用、来源可核且已获复用授权。",
+      "须核对参考图对应石壁翻开后的同一场景，倒悬的白瓷风轮及画面中可见的石壁、瓷片河均与本轮相符。",
+      "若将参考图作为拨开发梢这一瞬间的插图，还须核对云笙的动作吻合。"
+    ]
+  },
+  "focus": [
+    "云笙拨开垂下的发梢"
+  ],
+  "excludedFromImage": [
+    "未经交代的计数结果或发现",
+    "再次翻开的石壁或发生变化的瓷片河",
+    "对云笙心情的推断"
+  ],
+  "evidence": [
+    {
+      "rev": 5,
+      "quote": "只把垂下的发梢拨开",
+      "use": "focus"
+    },
+    {
+      "rev": 5,
+      "quote": "云笙数了一圈又一圈",
+      "use": "narrative"
+    },
+    {
+      "rev": 5,
+      "quote": "白瓷风轮仍倒悬在原处，石槌照旧敲着。",
+      "use": "limit"
+    },
+    {
+      "rev": 5,
+      "quote": "石壁与瓷片河没有再变",
+      "use": "limit"
+    },
+    {
+      "rev": 4,
+      "quote": "一架倒悬的白瓷风轮整个露出来",
+      "use": "history"
+    }
+  ]
+}

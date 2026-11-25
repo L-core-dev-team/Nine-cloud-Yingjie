@@ -1,0 +1,48 @@
+{
+  "scope": "research-cliff-01",
+  "revision": 1,
+  "narrativeImportance": {
+    "value": "medium",
+    "reason": "壁后反复响起三声，引得叙述者贴耳辨听。云笙提起旧事，给响声添了一种解释，声源仍然未明。"
+  },
+  "visualValue": {
+    "value": "clear",
+    "reason": "一幅开场画面能让读者同时看清暮光下的石面、壁下的三人，以及其中一人贴耳倾听的姿势。响声的次数和间隔由文字交代。"
+  },
+  "visualReliability": {
+    "value": "sufficient-for-focus",
+    "limits": [
+      "正文只交代三人都在壁下，云笙和季沅的具体站位与动作未明。",
+      "叙述者听见响声，视线只及壁外。壁内构造、是否有人以及发声方式均未得到确认。"
+    ]
+  },
+  "timingIntent": "update",
+  "cadenceReason": "这是首轮，尚无上一条建议。可在叙述者贴耳时提出开场画面，让这个动作同时交代人物与石壁的关系，并把声源的悬念留给文字。",
+  "conditionalPresentation": {
+    "withoutReference": "new",
+    "withSuitableReference": "reuse",
+    "requiredReferenceConditions": [
+      "复用前须确认参考图来源、复用授权及其对本次用途的适用性。",
+      "参考图须已呈现暮光扫过栖霞壁、壁下仅有三人且叙述者贴耳倾听，人物身份和场景须与本轮一致。",
+      "画面须保持壁外视角，不得显露壁内人物、构造或确定的声源。"
+    ]
+  },
+  "focus": [
+    "栖霞壁下的叙述者、云笙和季沅",
+    "扫过整片石面的暮光",
+    "叙述者贴耳倾听的姿势"
+  ],
+  "excludedFromImage": [
+    "云笙讲述的旧时受困者",
+    "壁后正在敲击的人、可见的空腔或任何确定的声源",
+    "暗示三声响动来自特定位置的图形标记"
+  ],
+  "evidence": [
+    {"rev": 1, "quote": "栖霞壁下只站着我、云笙和季沅", "use": "focus"},
+    {"rev": 1, "quote": "暮光扫过整片石面", "use": "focus"},
+    {"rev": 1, "quote": "我贴耳听了半晌", "use": "focus"},
+    {"rev": 1, "quote": "壁后隔一阵便响三声", "use": "narrative"},
+    {"rev": 1, "quote": "云笙说旧时有人困在壁里也这样敲", "use": "history"},
+    {"rev": 1, "quote": "分不出那是人声还是空腔的回响", "use": "limit"}
+  ]
+}

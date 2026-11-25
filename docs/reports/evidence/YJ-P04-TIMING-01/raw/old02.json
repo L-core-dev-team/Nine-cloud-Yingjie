@@ -1,0 +1,52 @@
+{
+  "scope": "research-spring-01",
+  "revision": 2,
+  "narrativeImportance": {
+    "value": "high",
+    "reason": "岑苇首次回应了陆禾对药苗缺水的担忧。她说清了让水的条件、份额和受益方，这句话会影响读者对后续分水的理解。"
+  },
+  "visualValue": {
+    "value": "small",
+    "reason": "静帧可以交代陆禾在听、堂内陈设如前。岑苇愿意让出多少水、在什么条件下让水，都要通过她的原话才能知道。"
+  },
+  "visualReliability": {
+    "value": "sufficient-for-focus",
+    "limits": [
+      "本轮确认水簿和铜盆的位置照旧。水簿的开合、盆中水量仅在上轮得到确认。",
+      "“陆禾只听着”支持听者身份，无法据此确定他的表情、手势或态度。"
+    ]
+  },
+  "timingIntent": "text-only",
+  "cadenceReason": "上轮已建议用画面交代听泉堂，执行受阻。本轮仍沿用门边的视点，三人位置和物件摆放均有明文承接。此时直接接上岑苇的话，能让读者把注意力放在“若井脉复流”这一条件上。",
+  "conditionalPresentation": {
+    "withoutReference": "text-only",
+    "withSuitableReference": "reuse",
+    "requiredReferenceConditions": [
+      "须有来源可核验、获准用于当前展示的参考图。",
+      "复用前须核对听泉堂清晨的天光、门边向北的视角、人物位置以及水簿和铜盆的摆放。",
+      "画幅若清楚呈现簿页开合或盆内水量，须另有本轮依据，或能通过获准的裁切避开这些细节。"
+    ]
+  },
+  "focus": [
+    "陆禾听岑苇说话",
+    "天光照着原处的水簿和铜盆"
+  ],
+  "excludedFromImage": [
+    "井脉已经复流、药圃正在受水或岑苇已经交出一轮水",
+    "陆禾以动作或表情表示同意",
+    "水簿当前的开合和铜盆当前的水量",
+    "仅凭余音推定的钟或敲钟人"
+  ],
+  "evidence": [
+    {"rev": 1, "quote": "今年药圃若是分不到溪水，他娘留下的苗该怎么办", "use": "history"},
+    {"rev": 2, "quote": "岑苇说，若井脉复流，她愿把自己的一轮水让给药圃。", "use": "narrative"},
+    {"rev": 2, "quote": "岑苇说", "use": "focus"},
+    {"rev": 2, "quote": "陆禾只听着。", "use": "focus"},
+    {"rev": 2, "quote": "天光还照着原样摆放的水簿和铜盆", "use": "focus"},
+    {"rev": 2, "quote": "我仍守着堂门原来的位置和朝向。", "use": "limit"},
+    {"rev": 2, "quote": "我们三个没动地方", "use": "limit"},
+    {"rev": 1, "quote": "合拢的水簿", "use": "history"},
+    {"rev": 1, "quote": "铜盆盛着半盆水", "use": "history"},
+    {"rev": 2, "quote": "晨钟的余音还没散", "use": "limit"}
+  ]
+}

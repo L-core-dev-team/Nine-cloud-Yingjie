@@ -1,0 +1,57 @@
+{
+  "scope": "research-spring-01",
+  "revision": 6,
+  "narrativeImportance": {
+    "value": "high",
+    "reason": "叙述者和蒋绫抵达伏潮井，终于能亲眼查看此前只有消息传回的井台。盆中薄冰与紧闭的石闸是到场时所见，井脉是否复流仍无定论。"
+  },
+  "visualValue": {
+    "value": "clear",
+    "reason": "从井栏旁取景，读者能同时看见井台上的蒋绫、另一只铜盆中的薄冰和紧闭的石闸，也能分清井边的盆与上一轮雾中只露盆沿的堂内铜盆。"
+  },
+  "visualReliability": {
+    "value": "sufficient-for-focus",
+    "limits": [
+      "井台可见范围和在场人物有直接描述，具体时辰与观察朝向未定。",
+      "本轮只确认薄冰和石闸的当前状态，结冰、关闸的过程及二者的成因均未知。"
+    ]
+  },
+  "timingIntent": "update",
+  "cadenceReason": "第5轮曾建议画雾中的听泉堂，执行受阻。本轮人物已抵达另一地点，视野从仅能辨清近处扩展到整个井台，冰面和闸门也首次可见。即使相邻两轮都提出画面，此处仍值得为转场单独取景。",
+  "conditionalPresentation": {
+    "withoutReference": "new",
+    "withSuitableReference": "edit",
+    "requiredReferenceConditions": [
+      "须先核实参考图来源、使用资格、编辑授权，以及拟展示时所需的授权。",
+      "底图须能确认是伏潮井，支持从井栏旁看井台，并能保留已核实的地点和人物特征。",
+      "编辑后须对应当前的灰光、蒋绫、井边另置的冰盆和紧闭石闸，且不引入其他人物、确定朝向或时刻。"
+    ]
+  },
+  "focus": [
+    "从伏潮井井栏旁望见井台，视野中只有蒋绫一人",
+    "井边另有一只铜盆，盆里结着薄冰",
+    "紧闭的石闸",
+    "罩着井栏的灰光"
+  ],
+  "excludedFromImage": [
+    "听泉堂里的水簿、桌脚铜盆及去年打碎铜盆的回忆",
+    "岑苇、陆禾或井台上的其他人物",
+    "确切时辰、暮色、带有明确方位的景物标记",
+    "冰正在形成、石闸正在关闭、井脉复流或药圃得到让水"
+  ],
+  "evidence": [
+    {"rev":6,"quote":"我和蒋绫到了伏潮井","use":"focus"},
+    {"rev":6,"quote":"我在井栏旁停步","use":"focus"},
+    {"rev":6,"quote":"井台尽收眼底，除我只有蒋绫。","use":"focus"},
+    {"rev":6,"quote":"这里另有一只铜盆，铜盆里结着薄冰","use":"focus"},
+    {"rev":6,"quote":"石闸紧闭","use":"focus"},
+    {"rev":6,"quote":"灰光罩着井栏","use":"focus"},
+    {"rev":6,"quote":"暮色未至，却辨不清时辰","use":"limit"},
+    {"rev":6,"quote":"我辨不出方向","use":"limit"},
+    {"rev":6,"quote":"走出雾气，我和蒋绫到了伏潮井。","use":"narrative"},
+    {"rev":5,"quote":"我只瞧见近处的蒋绫，远处还有谁看不清","use":"history"},
+    {"rev":5,"quote":"铜盆只露出盆沿，看不清盆底","use":"history"},
+    {"rev":4,"quote":"她带来井脉回响的消息，却说还不能保证一定来水。","use":"history"},
+    {"rev":2,"quote":"若井脉复流，她愿把自己的一轮水让给药圃。","use":"history"}
+  ]
+}

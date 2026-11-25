@@ -1,0 +1,51 @@
+{
+  "scope": "research-spring-01",
+  "revision": 12,
+  "narrativeImportance": {
+    "value": "high",
+    "reason": "岑苇曾说井脉复流就愿把自己的一轮水让给药圃。如今她亲自到场，叙述者首次看清簿上有两轮水尚待分配。她停手未签，药圃能否分到水仍悬而未决。"
+  },
+  "visualValue": {
+    "value": "clear",
+    "reason": "把岑苇停住的手和摊开的水簿放在同一局部画面里，读者能同时看到待分配的记录，以及她在签字前停住的那一刻。"
+  },
+  "visualReliability": {
+    "value": "sufficient-for-focus",
+    "limits": [
+      "正文足以确定纸面内容和手的位置，未交代纸页版式、手势细节或书写工具。",
+      "叶子已取走，去向未明。上轮书页受遮挡，水簿何时由合拢变为摊开、由谁翻开均无法确定。",
+      "本轮未确认视角朝向、光线或铜盆状态，宜将构图收在手与纸面。"
+    ]
+  },
+  "timingIntent": "update",
+  "cadenceReason": "上轮建议只用文字，叙述者独自等候，叶下的书页也看不清。本轮岑苇到场并取走叶子，纸上待分配的两轮水与她停住的手首次能在同一画面里呈现，值得在此停一拍。",
+  "conditionalPresentation": {
+    "withoutReference": "new",
+    "withSuitableReference": "edit",
+    "requiredReferenceConditions": [
+      "先核实参考图来源、使用资格和编辑授权。",
+      "参考图须与听泉堂水簿的场景相容，并能裁到手与纸面；若露出人物可辨认的特征，还须核对岑苇的身份一致性。",
+      "编辑后须能准确呈现摊开的水簿、待分配的两轮水和停在纸上的手，叶子不再遮页，画面不能暗示已经签字或完成让水。"
+    ]
+  },
+  "focus": [
+    "摊开的水簿上记着两轮尚待分配的井水",
+    "岑苇停在纸上的手"
+  ],
+  "excludedFromImage": [
+    "岑苇签字、药圃得水或两轮水已有归属",
+    "岑苇翻开水簿的动作、取走后叶子的位置",
+    "伏潮井的水弧、上轮的斜阳与铜盆状态"
+  ],
+  "evidence": [
+    {"rev": 12, "quote": "水簿摊开，写着两轮尚待分配的井水", "use": "focus"},
+    {"rev": 12, "quote": "她的手停在纸上", "use": "focus"},
+    {"rev": 12, "quote": "并没有签字", "use": "limit"},
+    {"rev": 12, "quote": "岑苇跨进听泉堂，走到我眼前。堂内除我只有她。", "use": "narrative"},
+    {"rev": 12, "quote": "她取走叶子", "use": "narrative"},
+    {"rev": 11, "quote": "水簿上压着一片叶子，我看不清它底下的书页。", "use": "limit"},
+    {"rev": 10, "quote": "水簿合拢在方桌上", "use": "history"},
+    {"rev": 9, "quote": "水脉从闸下冲成一道白弧", "use": "history"},
+    {"rev": 2, "quote": "岑苇说，若井脉复流，她愿把自己的一轮水让给药圃。", "use": "history"}
+  ]
+}

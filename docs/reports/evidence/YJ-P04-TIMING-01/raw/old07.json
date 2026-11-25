@@ -1,0 +1,46 @@
+{
+  "scope": "research-spring-01",
+  "revision": 7,
+  "narrativeImportance": {
+    "value": "medium",
+    "reason": "叙述者守在井栏旁等回声，水汽使他连同伴是否还在都无法确认。山脚可能听见闸响的猜想给等待添了悬念，开闸和响动都尚未得到证实。"
+  },
+  "visualValue": {
+    "value": "small",
+    "reason": "一帧近景能让读者看出视野缩到了多窄。本段的悬念在于接下来会听见什么，单幅画面能补充的信息有限。"
+  },
+  "visualReliability": {
+    "value": "partial",
+    "limits": [
+      "本轮只看得清脚边几寸井台，井栏旁是叙述者的位置，不能据此补画井台全貌。",
+      "蒋绫是否仍在无法判断。石闸和盆中薄冰的状态只在上轮得到确认，本轮的光照、时辰和朝向也无从确定。"
+    ]
+  },
+  "timingIntent": "defer",
+  "cadenceReason": "第6轮初到伏潮井，井台尽收眼底，当时的更新建议执行受阻。本轮叙述者没有挪步，视野却已收窄。此处让读者随他等回声，待有新的可见变化再考虑出图。",
+  "conditionalPresentation": {
+    "withoutReference": "defer",
+    "withSuitableReference": "defer",
+    "requiredReferenceConditions": [
+      "若后续编辑，须先核实参考图来源、编辑授权及其与伏潮井井栏旁视点的对应关系，并能裁切或遮去本轮看不清的人物和物件。",
+      "若直接复用，须核实复用授权，且原图自身就符合本轮仅脚边几寸井台可见的范围。"
+    ]
+  },
+  "focus": [
+    "水汽中仅可见的脚边几寸井台"
+  ],
+  "excludedFromImage": [
+    "蒋绫的身影或她已经离开的结论",
+    "石闸当前的开闭状态、井台铜盆和盆内薄冰",
+    "山脚听见响动、石闸自行开启或回声已经传来的情景",
+    "井台远景、具体时辰、定向光线"
+  ],
+  "evidence": [
+    {"rev": 7, "quote": "水汽把井台遮得只剩我脚边几寸", "use": "focus"},
+    {"rev": 7, "quote": "连蒋绫是不是还在都看不明", "use": "limit"},
+    {"rev": 7, "quote": "若那石闸自己开了，山脚恐怕先听见响动", "use": "narrative"},
+    {"rev": 7, "quote": "我没挪步，拄在井栏旁等回声", "use": "narrative"},
+    {"rev": 6, "quote": "井台尽收眼底，除我只有蒋绫", "use": "history"},
+    {"rev": 6, "quote": "铜盆里结着薄冰；石闸紧闭", "use": "history"}
+  ]
+}

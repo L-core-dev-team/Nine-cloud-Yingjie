@@ -1,0 +1,55 @@
+{
+  "scope": "research-spring-01",
+  "revision": 10,
+  "narrativeImportance": {
+    "value": "medium",
+    "reason": "叙述者独自回堂，第一次确认先前摊开的水簿如今合拢、原有半盆水的堂内铜盆如今已空。这些结果给井脉复流后的段落收尾，分水承诺是否兑现仍无交代。"
+  },
+  "visualValue": {
+    "value": "clear",
+    "reason": "从门边看去，一幅静景能同时交代堂内无人、桌面上的合簿和桌脚的空盆。西窗的斜阳让读者看出，叙述者回到熟悉位置时已经过了半日。"
+  },
+  "visualReliability": {
+    "value": "sufficient-for-focus",
+    "limits": [
+      "本轮能确认水簿与铜盆的现状。谁合了簿、盆里的水怎样离开、这些变化具体发生于何时，都无直接观察。",
+      "井口白弧只在回忆中闪现。堂内铜盆与井台铜盆各有出处。"
+    ]
+  },
+  "timingIntent": "update",
+  "cadenceReason": "第9轮曾建议表现正午井口放水，执行受阻。本轮由井边的动势转到傍晚无人应答的空堂，地点、时刻与视线一并改变，值得用一幅安静的回堂全景作段落收束。",
+  "conditionalPresentation": {
+    "withoutReference": "new",
+    "withSuitableReference": "edit",
+    "requiredReferenceConditions": [
+      "须先确认参考图来源、使用资格及编辑授权。",
+      "底图须确为听泉堂，门边向北的视角、方桌与桌脚铜盆的位置同正文相容。",
+      "须能移除旧人物和雾气，准确呈现合簿、空盆及西窗傍晚斜阳，并在使用前核对编辑结果。"
+    ]
+  },
+  "focus": [
+    "在听泉堂门边向北看去，雾已散净，堂内没有其他人",
+    "方桌上合拢的水簿",
+    "桌脚的空铜盆",
+    "傍晚从西窗照入的斜阳"
+  ],
+  "excludedFromImage": [
+    "记忆中的井口白弧、井闸及井台上冰裂的另一只铜盆",
+    "早先在堂的人物、雾气和被风掀起的簿页",
+    "合簿、倒水或履行让水承诺的过程"
+  ],
+  "evidence": [
+    {"rev": 10, "quote": "我一个人回到听泉堂，雾早已散净。", "use": "focus"},
+    {"rev": 10, "quote": "我在门边向北看遍全堂，这会儿除我再无一人。", "use": "focus"},
+    {"rev": 10, "quote": "水簿合拢在方桌上", "use": "focus"},
+    {"rev": 10, "quote": "桌脚的铜盆空了", "use": "focus"},
+    {"rev": 10, "quote": "西窗透进斜阳，已是傍晚。", "use": "focus"},
+    {"rev": 10, "quote": "井口那道白弧在我脑海里闪了一下。", "use": "limit"},
+    {"rev": 1, "quote": "桌脚的铜盆盛着半盆水", "use": "history"},
+    {"rev": 4, "quote": "水簿摊开的那页被风掀动了一角。", "use": "history"},
+    {"rev": 6, "quote": "这里另有一只铜盆", "use": "history"},
+    {"rev": 9, "quote": "午钟响过，伏潮井下传来长鸣。", "use": "history"},
+    {"rev": 9, "quote": "水脉从闸下冲成一道白弧", "use": "history"},
+    {"rev": 2, "quote": "若井脉复流，她愿把自己的一轮水让给药圃。", "use": "history"}
+  ]
+}

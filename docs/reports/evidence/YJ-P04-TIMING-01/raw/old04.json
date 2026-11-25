@@ -1,0 +1,49 @@
+{
+  "scope": "research-spring-01",
+  "revision": 4,
+  "narrativeImportance": {
+    "value": "high",
+    "reason": "蒋绫带回井脉有回响的消息，陆禾关心的药圃用水有了新线索。岑苇让出一轮水的承诺以井脉复流为条件，这一条件仍待证实。"
+  },
+  "visualValue": {
+    "value": "clear",
+    "reason": "从门边看湿衣的蒋绫迈进堂内，能一眼辨出带消息的人和仍在场的岑苇。摊开的水簿有一角被风掀起，也给这一刻提供了具体的画面细节。"
+  },
+  "visualReliability": {
+    "value": "sufficient-for-focus",
+    "limits": [
+      "本轮交代了观察位置、在场人物、蒋绫的湿衣和水簿的页角。具体朝向、光照、两人站位及水簿与门的距离都缺少本轮依据。",
+      "衣服为何湿、井下发生了什么，均无法从堂内所见判断。"
+    ]
+  },
+  "timingIntent": "update",
+  "cadenceReason": "上轮建议更新，执行受阻。上轮的动作是陆禾翻开水簿后出堂，这一轮换成湿衣的蒋绫进堂，人物和动作都有新意，值得提出新的画面。来水仍有变数，可由她的话交代。",
+  "conditionalPresentation": {
+    "withoutReference": "new",
+    "withSuitableReference": "edit",
+    "requiredReferenceConditions": [
+      "须先取得可核验来源、具备本次使用资格并获准编辑与展示的参考图。",
+      "底图须适合从听泉堂门边取景，并能保留有依据的岑苇和摊开的水簿。须能调整人物构成、蒋绫的入堂动作与湿衣、被风掀起的页角，并裁去本轮无法核实的细节。"
+    ]
+  },
+  "focus": [
+    "一身湿衣的蒋绫迈进听泉堂",
+    "从门边望去，堂内可见蒋绫和岑苇",
+    "摊开水簿的一角被风掀起"
+  ],
+  "excludedFromImage": [
+    "井下回响、井脉复流或溪水流入药圃",
+    "岑苇兑现让水承诺、陆禾在井边的行动",
+    "蒋绫湿衣的成因、此前的天光和铜盆水量"
+  ],
+  "evidence": [
+    {"rev": 4, "quote": "一身湿衣的蒋绫迈进听泉堂", "use": "focus"},
+    {"rev": 4, "quote": "我在门边望遍全堂，眼下只有蒋绫和岑苇", "use": "focus"},
+    {"rev": 4, "quote": "水簿摊开的那页被风掀动了一角", "use": "focus"},
+    {"rev": 4, "quote": "她带来井脉回响的消息", "use": "narrative"},
+    {"rev": 4, "quote": "还不能保证一定来水", "use": "limit"},
+    {"rev": 3, "quote": "陆禾把水簿翻开，随后跨出听泉堂去探井", "use": "history"},
+    {"rev": 2, "quote": "若井脉复流，她愿把自己的一轮水让给药圃", "use": "history"},
+    {"rev": 1, "quote": "陆禾问，今年药圃若是分不到溪水，他娘留下的苗该怎么办", "use": "history"}
+  ]
+}

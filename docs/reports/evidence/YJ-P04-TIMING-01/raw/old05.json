@@ -1,0 +1,53 @@
+{
+  "scope": "research-spring-01",
+  "revision": 5,
+  "narrativeImportance": {
+    "value": "medium",
+    "reason": "白雾遮住远处，叙述者此刻能确认的人和物变少了。陆禾去年打碎铜盆的往事在此被提起，碎响属于回忆。"
+  },
+  "visualValue": {
+    "value": "clear",
+    "reason": "局部画面可以让读者一眼看出雾中的可见范围：近处还能辨认蒋绫，铜盆只辨得出边沿，视线再往远处就没有着落。"
+  },
+  "visualReliability": {
+    "value": "sufficient-for-focus",
+    "limits": [
+      "只支持受雾遮挡的局部构图，无法确认远处人物的身份、人数或去留。",
+      "盆底和盆内物不可辨，无法由盆沿判断铜盆是否完整。",
+      "本轮未确认朝向、时段、照明或水簿的可见状态。"
+    ]
+  },
+  "timingIntent": "update",
+  "cadenceReason": "上一轮建议更新时，叙述者还能望遍全堂；该建议的执行受阻。本轮值得再提一次局部画面，因为雾把可见范围收到了近处。去年碎盆的经过留给文字交代。",
+  "conditionalPresentation": {
+    "withoutReference": "new",
+    "withSuitableReference": "edit",
+    "requiredReferenceConditions": [
+      "编辑前须核实参考图来源、适用资格及编辑和预定展示所需的授权。",
+      "参考图中的听泉堂与蒋绫须能对应本段，并能通过裁切和加雾表现门缝来雾、蒋绫在近处、铜盆仅露盆沿。",
+      "编辑后须确认远处人物、盆内和其他未经本轮确认的细节均不可辨。"
+    ]
+  },
+  "focus": [
+    "从门缝扑上来的白雾",
+    "近处可见的蒋绫",
+    "铜盆露出的盆沿"
+  ],
+  "excludedFromImage": [
+    "去年陆禾打碎铜盆的场面、碎片及记忆里的碎响",
+    "远处可辨认的人影、确定的人数或空无一人的全堂",
+    "盆底、盆中水量及暗示铜盆完整或破损的细节",
+    "此前摊开的水簿、当时的采光和未经本轮确认的座次"
+  ],
+  "evidence": [
+    {"rev": 5, "quote": "白雾从门缝扑上来", "use": "focus"},
+    {"rev": 5, "quote": "我只瞧见近处的蒋绫", "use": "focus"},
+    {"rev": 5, "quote": "铜盆只露出盆沿", "use": "focus"},
+    {"rev": 5, "quote": "眼下仍在听泉堂", "use": "narrative"},
+    {"rev": 5, "quote": "远处还有谁看不清", "use": "limit"},
+    {"rev": 5, "quote": "看不清盆底", "use": "limit"},
+    {"rev": 5, "quote": "我记起去年陆禾曾在听泉堂打碎铜盆", "use": "history"},
+    {"rev": 5, "quote": "那声碎响只是记忆", "use": "history"},
+    {"rev": 4, "quote": "我在门边望遍全堂", "use": "history"}
+  ]
+}

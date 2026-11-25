@@ -1,0 +1,53 @@
+{
+  "scope": "research-cliff-01",
+  "revision": 4,
+  "narrativeImportance": {
+    "value": "high",
+    "reason": "第四声落下时石壁翻开，叙述者首次看见石槌敲壳，并认出声音与先前相同。此前悬而未决的敲击声有了可见的来源。"
+  },
+  "visualValue": {
+    "value": "clear",
+    "reason": "从裂口前取景，一幅静帧就能交代翻开的壁面如何框住倒悬的风轮、三枚石槌敲向何处，以及发亮的瓷片河在风轮下方的位置。敲击的先后和声音的一致仍由文字传达。"
+  },
+  "visualReliability": {
+    "value": "sufficient-for-focus",
+    "limits": [
+      "正文只确定裂口前能看清的部分，壁后其余空间的布局未知。",
+      "正文给出了石槌的数量和轮流敲壳的动作，未指明第四声由哪一枚敲出。"
+    ]
+  },
+  "timingIntent": "update",
+  "cadenceReason": "第3轮建议用文字保留悬念，当时又响了三声，壁后仍不可见。本轮石壁实际翻开，风轮、石槌和瓷片河第一次同时进入视野，适合在读者随叙述者看清声源时提出画面。",
+  "conditionalPresentation": {
+    "withoutReference": "new",
+    "withSuitableReference": "edit",
+    "requiredReferenceConditions": [
+      "须先核实参考图的来源、编辑使用资格及相应用途授权。",
+      "参考图须能确认描绘同一处栖霞壁，视角与裂口前所见相容，且能保留已确立的壁面特征。",
+      "编辑后须核对壁面向两侧翻开、白瓷风轮倒悬、三枚石槌敲壳及瓷片河位于其下的关系。"
+    ]
+  },
+  "focus": [
+    "从中线向两侧翻开的栖霞壁",
+    "裂口中整个露出的倒悬白瓷风轮",
+    "三枚石槌与它们敲击的空壳",
+    "风轮下方发亮的瓷片河"
+  ],
+  "excludedFromImage": [
+    "旧闻中困在壁里的人",
+    "云笙与季沅此刻的站位和反应",
+    "裂口视野以外的壁后全景",
+    "第四声对应的具体石槌"
+  ],
+  "evidence": [
+    {"rev": 4, "quote": "栖霞壁从中线翻向两侧", "use": "focus"},
+    {"rev": 4, "quote": "一架倒悬的白瓷风轮整个露出来", "use": "focus"},
+    {"rev": 4, "quote": "三枚石槌正轮流敲着空壳", "use": "focus"},
+    {"rev": 4, "quote": "风轮下积着一条发亮的瓷片河", "use": "focus"},
+    {"rev": 4, "quote": "第四声落下", "use": "narrative"},
+    {"rev": 4, "quote": "声音与先前分毫不差", "use": "narrative"},
+    {"rev": 4, "quote": "我站在裂口前", "use": "limit"},
+    {"rev": 3, "quote": "这一次依旧只听得见，往壁后望去什么也看不到。", "use": "history"},
+    {"rev": 1, "quote": "云笙说旧时有人困在壁里也这样敲", "use": "history"}
+  ]
+}

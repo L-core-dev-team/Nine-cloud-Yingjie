@@ -1,0 +1,203 @@
+{
+  "scope": "Windows offline replay / existing Codex subscription dialogues, 2026-11-25",
+  "commands": [
+    {
+      "command": "python -B packages/ai-snapshot-pilot/stability-repair/verify.py",
+      "exit": 0,
+      "observation": {
+        "status": "STABILITY_REPAIR_REPLAY_PASS",
+        "prefixes": 14,
+        "targetGroups": 12,
+        "basicFields": {
+          "correct": 67,
+          "correct-unknown": 31
+        },
+        "finalChain": "8076a83c1434ea3c9b4966da68701f43aed3f8621079b1c192395a2ccbd0a290"
+      }
+    },
+    {
+      "command": "python -B ../tm-context.py --capture",
+      "exit": 0,
+      "observation": {
+        "verifiedSinglePacketReads": 24,
+        "rawOutputBindings": 24
+      }
+    },
+    {
+      "command": "python -B packages/ai-timing-pilot/verify.py --capture",
+      "exit": 1,
+      "observation": {
+        "error": "FileNotFoundError",
+        "missing": "packets/-old09.json",
+        "cause": "audit prefix slicing off by one",
+        "changed": "replay verifier only"
+      }
+    },
+    {
+      "command": "python -B packages/ai-timing-pilot/verify.py --capture",
+      "exit": 0,
+      "observation": {
+        "prefixes": [
+          14,
+          6
+        ],
+        "accessVerified": 24,
+        "slots": 24,
+        "allBlocked": true
+      }
+    },
+    {
+      "command": "python -B packages/ai-timing-pilot/verify.py",
+      "exit": 0,
+      "observation": {
+        "prefixes": [
+          14,
+          6
+        ],
+        "accessVerified": 24,
+        "slots": 24,
+        "allBlocked": true
+      }
+    },
+    {
+      "command": "python -B packages/ai-timing-pilot/measure.py --capture",
+      "exit": 0,
+      "observation": {
+        "old": {
+          "n": 14,
+          "dimensions": {
+            "importance": 14,
+            "visualValue": 14,
+            "reliability": 13,
+            "intent": 13,
+            "conditionalPresentation": 13,
+            "evidence": 13,
+            "boundary": 14,
+            "requiredReasons": 14
+          },
+          "allDimensions": 11,
+          "intents": {
+            "update": 9,
+            "text-only": 4,
+            "defer": 1,
+            "needs-review": 0
+          }
+        },
+        "new": {
+          "n": 6,
+          "dimensions": {
+            "importance": 6,
+            "visualValue": 6,
+            "reliability": 6,
+            "intent": 5,
+            "conditionalPresentation": 6,
+            "evidence": 6,
+            "boundary": 6,
+            "requiredReasons": 6
+          },
+          "allDimensions": 5,
+          "intents": {
+            "update": 2,
+            "text-only": 3,
+            "defer": 1,
+            "needs-review": 0
+          }
+        }
+      }
+    },
+    {
+      "command": "python -B packages/ai-timing-pilot/measure.py",
+      "exit": 0,
+      "observation": {
+        "old": {
+          "n": 14,
+          "dimensions": {
+            "importance": 14,
+            "visualValue": 14,
+            "reliability": 13,
+            "intent": 13,
+            "conditionalPresentation": 13,
+            "evidence": 13,
+            "boundary": 14,
+            "requiredReasons": 14
+          },
+          "allDimensions": 11,
+          "intents": {
+            "update": 9,
+            "text-only": 4,
+            "defer": 1,
+            "needs-review": 0
+          }
+        },
+        "new": {
+          "n": 6,
+          "dimensions": {
+            "importance": 6,
+            "visualValue": 6,
+            "reliability": 6,
+            "intent": 5,
+            "conditionalPresentation": 6,
+            "evidence": 6,
+            "boundary": 6,
+            "requiredReasons": 6
+          },
+          "allDimensions": 5,
+          "intents": {
+            "update": 2,
+            "text-only": 3,
+            "defer": 1,
+            "needs-review": 0
+          }
+        }
+      }
+    },
+    {
+      "command": "git diff --exit-code 55c43d6fd880a3619bf6eada0ad920d9d9a7a6cf -- packages/ai-snapshot-pilot/stability packages/ai-snapshot-pilot/stability-repair docs/reports/evidence/YJ-P04-STABILITY-01 docs/reports/evidence/YJ-P04-STABILITY-01R",
+      "exit": 0,
+      "observation": "empty"
+    },
+    {
+      "command": "git diff --cached --check",
+      "exit": 1,
+      "observation": "report CRLF interpreted as trailing whitespace; converted report only to LF"
+    },
+    {
+      "command": "git diff --cached --check",
+      "exit": 0,
+      "observation": "empty"
+    }
+  ],
+  "exactModel": "unknown",
+  "subscriptionResourceUse": "unknown",
+  "candidates": {
+    "attempts": 20,
+    "returned": 20,
+    "processingRejected": 3,
+    "deliveryUnknown": 0,
+    "transportFailures": 0,
+    "notRun": 0
+  },
+  "audits": {
+    "attempts": 4,
+    "returned": 4,
+    "supported": 3,
+    "needsReview": 1,
+    "deliveryUnknown": 0,
+    "transportFailures": 0,
+    "notRun": 0
+  },
+  "actualExecution": {
+    "projectModelAPI": 0,
+    "imageTools": 0,
+    "imageDispatchReal": 0,
+    "imageDispatchMock": 0,
+    "extraIndependentApiCostUSD": 0
+  },
+  "notRun": [
+    "reference asset review",
+    "image editing",
+    "image display",
+    "full playthrough",
+    "human independent evaluation"
+  ]
+}

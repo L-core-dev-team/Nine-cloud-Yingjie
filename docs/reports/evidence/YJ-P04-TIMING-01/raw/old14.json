@@ -1,0 +1,46 @@
+{
+  "scope": "research-spring-01",
+  "revision": 14,
+  "narrativeImportance": {
+    "value": "low",
+    "reason": "正式让水发生在上轮。本轮两人坐下来谈明天要不要看幼苗，给签字之后的相处留了一点篇幅。是否成行仍未决定。"
+  },
+  "visualValue": {
+    "value": "small",
+    "reason": "摊开的水簿和已干的墨迹能提示签字后过了一阵，但一张静帧很难单独传达墨迹由湿到干的变化。两人的问话用文字即可交代。"
+  },
+  "visualReliability": {
+    "value": "sufficient-for-focus",
+    "limits": [
+      "本轮直接确认水簿和墨迹的状态。墨迹何时干透、两人坐在水簿哪一侧、堂内光线和观察方向都没有交代。"
+    ]
+  },
+  "timingIntent": "text-only",
+  "cadenceReason": "上轮建议用文字落下签字让水的决定。本轮仍在同一间堂里，墨迹已干这一处变化恰好让读者感到时间经过，此时插入一张水簿特写会把停顿落在墨迹上，打断两人转向闲谈的节奏。",
+  "conditionalPresentation": {
+    "withoutReference": "text-only",
+    "withSuitableReference": "text-only",
+    "requiredReferenceConditions": [
+      "若要复用，须先确认参考图来源、复用资格与授权，并核实图中水簿摊开、墨迹已干。",
+      "若参考图表现湿墨，须具备编辑授权，且能只改可核实的墨迹状态。取景若涉及人物、座次或光线，还须核对画面细节的依据。"
+    ]
+  },
+  "focus": [
+    "仍然摊开的水簿",
+    "已经干了的墨迹"
+  ],
+  "excludedFromImage": [
+    "明天看幼苗的设想与药圃实景",
+    "上轮签字的动作和当时的湿墨",
+    "第三人，以及本轮未交代的座次、光线和视角"
+  ],
+  "evidence": [
+    {"rev": 14, "quote": "水簿仍摊开", "use": "focus"},
+    {"rev": 14, "quote": "墨迹已经干了", "use": "focus"},
+    {"rev": 14, "quote": "我和岑苇仍在听泉堂，堂门一直没再开，堂内没有第三人。", "use": "limit"},
+    {"rev": 14, "quote": "她问我明天要不要去看幼苗", "use": "limit"},
+    {"rev": 14, "quote": "我们便坐着说了一会儿话", "use": "narrative"},
+    {"rev": 13, "quote": "岑苇在水簿上签下自己的名字，把她这一轮井水正式让给陆禾的药圃", "use": "history"},
+    {"rev": 13, "quote": "墨迹尚湿", "use": "history"}
+  ]
+}

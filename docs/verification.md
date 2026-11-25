@@ -1,5 +1,9 @@
 # 映界验证记录
 
+## 2026-11-25 · TIMING-01 实测 PARTIAL
+
+二十份时机首答、四份独立审核已收齐。开闸与显露声源建议更新，让水和撤处分主要用文字。开场和雾堂两处更新建议超出冻结集合，引文使用、参考条件及机械错拒另列。二十回合均执行阻断，派发 0。 [实测判断、分歧与恢复回执](reports/YJ-P04-TIMING-01-report.md)
+
 ## 2026-11-25 · TIMING-01 授权登记（实验 NOT_RUN）
 
 准备范围为一份 [时机任务书](task-briefs/YJ-P04-TIMING-01.md) 与 README、handoff、task-sequence、verification、decisions 五份索引，未执行时机模型请求、审核或实验代码。已读取固定 STABILITY-01R 报告、时机 JSONL 与旧 policies 入口；准备阶段未在本机复跑其工程验收。分支从 `55c43d6fd880a3619bf6eada0ad920d9d9a7a6cf` 接续，两个 main 保持独立。

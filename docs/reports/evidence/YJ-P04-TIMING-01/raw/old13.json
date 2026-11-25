@@ -1,0 +1,47 @@
+{
+  "scope": "research-spring-01",
+  "revision": 13,
+  "narrativeImportance": {
+    "value": "high",
+    "reason": "岑苇签名后，陆禾的药圃正式获得她这一轮井水，她从此失去这一轮的支用权。第2轮的许诺只说到“药圃”，与本轮受益者的对应关系仍待核。"
+  },
+  "visualValue": {
+    "value": "small",
+    "reason": "摊开的水簿上墨迹尚湿，能让读者看出落笔就在刚才。真正改变人物处境的是这一轮水归谁、岑苇失去了什么，这两点由正文交代得更清楚。"
+  },
+  "visualReliability": {
+    "value": "sufficient-for-focus",
+    "limits": [
+      "本轮直接确认水簿摊开、墨迹尚湿，足以支持纸面局部。",
+      "签名已经完成。落笔时的手势、字形、具体条款、此刻的光照与视角均缺少直接依据。"
+    ]
+  },
+  "timingIntent": "text-only",
+  "cadenceReason": "第12轮已就岑苇停手未签的时刻建议更新，执行受阻。本轮承接同一本摊开的水簿，新增的可见细节集中在湿墨。让读者随文字从“没有签字”读到“再不能支用”，足以完成这个转折。",
+  "conditionalPresentation": {
+    "withoutReference": "text-only",
+    "withSuitableReference": "text-only",
+    "requiredReferenceConditions": [
+      "若另作编辑或复用，先核实参考图的来源、使用资格、相应授权及其是否确实描绘听泉堂的这本水簿。",
+      "编辑需能准确表现签名已完成、纸面墨迹尚湿，并能裁去未经确认的细节。直接复用还要求原图已符合这两项现状。"
+    ]
+  },
+  "focus": [
+    "摊开在原处的水簿",
+    "尚湿的墨迹"
+  ],
+  "excludedFromImage": [
+    "陆禾、赶来道谢的人和药圃受水的场面",
+    "岑苇的表情、正在落笔的手势和水簿条款全文",
+    "早先的叶子、铜盆状态与斜阳"
+  ],
+  "evidence": [
+    {"rev": 13, "quote": "水簿摊开在原处", "use": "focus"},
+    {"rev": 13, "quote": "墨迹尚湿", "use": "focus"},
+    {"rev": 13, "quote": "岑苇在水簿上签下自己的名字，把她这一轮井水正式让给陆禾的药圃，从这一刻起她自己再不能支用", "use": "narrative"},
+    {"rev": 13, "quote": "除我仍只有岑苇", "use": "limit"},
+    {"rev": 13, "quote": "窗外没有谁赶来谢她", "use": "limit"},
+    {"rev": 12, "quote": "她的手停在纸上，并没有签字", "use": "history"},
+    {"rev": 2, "quote": "若井脉复流，她愿把自己的一轮水让给药圃", "use": "history"}
+  ]
+}

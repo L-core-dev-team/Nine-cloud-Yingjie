@@ -1,0 +1,54 @@
+{
+  "scope": "research-spring-01",
+  "revision": 9,
+  "narrativeImportance": {
+    "value": "high",
+    "reason": "蒋绫先前只带回井脉回响的消息，本轮才亲眼见到闸下出水。岑苇让水给药圃的承诺有了履行的前提，实际分水仍待后文交代。"
+  },
+  "visualValue": {
+    "value": "clear",
+    "reason": "定格石闸升起的瞬间，可以看清白弧从闸下冲出的形状，以及日光照到飞溅水珠的位置。盆中薄冰的裂纹提供了同一瞬间的另一处细节。"
+  },
+  "visualReliability": {
+    "value": "sufficient-for-focus",
+    "limits": [
+      "正文明确了井栏旁向西的视角，以及石闸、水弧、薄冰和水珠的状态。铜盆与石闸的确切距离、开闸原因及操作者均未交代。"
+    ]
+  },
+  "timingIntent": "update",
+  "cadenceReason": "上轮也建议更新，执行受阻。上轮水汽散去后看清了紧闭的石闸和完整的薄冰，本轮则目睹石闸升起、井水涌出、薄冰裂开。相邻两轮各有值得定格的瞬间，本轮建议独立成立。",
+  "conditionalPresentation": {
+    "withoutReference": "new",
+    "withSuitableReference": "edit",
+    "requiredReferenceConditions": [
+      "须有实际可取得的伏潮井参考图，并核实其适用资格及编辑、展示授权。",
+      "参考图须能沿用井栏旁向西的视角，井台人物与本轮相符，铜盆可确认为井台上的那一只。",
+      "构图须容许将闸门、水流、薄冰及光照编辑到本轮状态，并保留闸下水弧的可辨性。"
+    ]
+  },
+  "focus": [
+    "升起的石闸",
+    "从闸下冲出的一道白色水弧",
+    "铜盆中裂开的薄冰",
+    "日光照到的飞溅水珠"
+  ],
+  "excludedFromImage": [
+    "午钟和井下长鸣的声源",
+    "未经指明的开闸者",
+    "岑苇让水、药圃受水或药苗获救的后续情景",
+    "听泉堂的铜盆及其往事"
+  ],
+  "evidence": [
+    {"rev": 9, "quote": "石闸升起", "use": "focus"},
+    {"rev": 9, "quote": "水脉从闸下冲成一道白弧", "use": "focus"},
+    {"rev": 9, "quote": "铜盆里的薄冰裂开", "use": "focus"},
+    {"rev": 9, "quote": "日光落在飞起的水珠上", "use": "focus"},
+    {"rev": 9, "quote": "蒋绫仍在我身旁，井台没有旁人。", "use": "limit"},
+    {"rev": 9, "quote": "我在井栏旁向西看", "use": "limit"},
+    {"rev": 9, "quote": "午钟响过，伏潮井下传来长鸣。", "use": "narrative"},
+    {"rev": 8, "quote": "铜盆里的薄冰仍完整，石闸紧闭", "use": "history"},
+    {"rev": 6, "quote": "这里另有一只铜盆", "use": "history"},
+    {"rev": 4, "quote": "她带来井脉回响的消息，却说还不能保证一定来水。", "use": "history"},
+    {"rev": 2, "quote": "岑苇说，若井脉复流，她愿把自己的一轮水让给药圃。", "use": "history"}
+  ]
+}

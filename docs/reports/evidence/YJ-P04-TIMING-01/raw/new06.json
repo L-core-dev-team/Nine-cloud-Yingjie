@@ -1,0 +1,45 @@
+{
+  "scope": "research-cliff-01",
+  "revision": 6,
+  "narrativeImportance": {
+    "value": "medium",
+    "reason": "众人已在外壁坐下，今晚的行动停在裂口外。查风轮来历是季沅提出的次日打算，尚无调查结果。"
+  },
+  "visualValue": {
+    "value": "small",
+    "reason": "近处一线瓷白能让读者直观看出夜色把视野压缩到了什么程度。至于为何停在壁外、何时再查，文字已经交代清楚。"
+  },
+  "visualReliability": {
+    "value": "partial",
+    "limits": [
+      "正文确认裂口仍在，却只明确写出近处一线瓷白可见。这线白色属于哪个部件也未指明。",
+      "众人靠壁坐下是已发生的动作，夜色中各人的轮廓、表情和相对位置没有可见依据。"
+    ]
+  },
+  "timingIntent": "defer",
+  "cadenceReason": "第5轮因风轮照旧敲击、石壁与瓷片河未变而建议保留文字。本轮夜色和众人的姿态都有变化，但夜色也遮住了可供辨认的细节。此处可让叙事停在壁外，待后文确实出现新的可见线索时再判断出图时机。",
+  "conditionalPresentation": {
+    "withoutReference": "defer",
+    "withSuitableReference": "defer",
+    "requiredReferenceConditions": [
+      "若以后考虑编辑或复用，须先核实参考图的来源、使用资格及相应授权。",
+      "直接复用须核对壁外视点、夜色及近处瓷白的可见范围。若由较亮的同场景参考图编辑，须能遮去原先可见的内部细节，并保留瓷白来源的不确定性。"
+    ]
+  },
+  "focus": [
+    "黑夜中近处仅见的一线瓷白"
+  ],
+  "excludedFromImage": [
+    "先前看清的完整风轮、石槌和瓷片河全貌",
+    "没有可见依据的人物表情、轮廓和座次",
+    "次日入内调查、查明风轮来历的场面"
+  ],
+  "evidence": [
+    {"rev":6,"quote":"只能看见近处一线瓷白","use":"focus"},
+    {"rev":6,"quote":"黑夜压下来，裂口还在，只能看见近处一线瓷白。","use":"limit"},
+    {"rev":6,"quote":"我们靠着外壁坐下，谁也没走进那条瓷片河。","use":"narrative"},
+    {"rev":6,"quote":"季沅提议天亮后再进去查风轮的来历。","use":"narrative"},
+    {"rev":5,"quote":"白瓷风轮仍倒悬在原处，石槌照旧敲着。","use":"history"},
+    {"rev":5,"quote":"石壁与瓷片河没有再变。","use":"history"}
+  ]
+}

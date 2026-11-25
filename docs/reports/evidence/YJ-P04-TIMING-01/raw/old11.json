@@ -1,0 +1,48 @@
+{
+  "scope": "research-spring-01",
+  "revision": 11,
+  "narrativeImportance": {
+    "value": "medium",
+    "reason": "井水已经复流，先前的让水承诺因而有了分量。此刻主人公仍在等岑苇，读者听见了他的疑虑，承诺会怎样兑现仍是悬念。"
+  },
+  "visualValue": {
+    "value": "small",
+    "reason": "静帧能让读者注意到水簿上压着一片叶子。本轮首次写出这个细节，叶子何时放上去、与让水有何关系都无从判断。等待中的疑虑已由末句表达。"
+  },
+  "visualReliability": {
+    "value": "sufficient-for-focus",
+    "limits": [
+      "叶子压在水簿上的位置明确，叶下书页看不清。",
+      "上一轮见到水簿合拢，本轮的遮挡使当前开合状态无法确认。"
+    ]
+  },
+  "timingIntent": "text-only",
+  "cadenceReason": "第10轮从井边回到空堂，已提出更新画面的建议，执行受阻。第11轮沿用门边朝北的视角，空堂、斜阳和空盆延续了等待。新写出的叶子只增加一个局部细节，此处用文字收在对承诺的疑问上即可。",
+  "conditionalPresentation": {
+    "withoutReference": "text-only",
+    "withSuitableReference": "text-only",
+    "requiredReferenceConditions": [
+      "若考虑编辑或复用，须先核实参考图来源、使用资格及相应授权。",
+      "须核对听泉堂门边朝北的视角、堂内无旁人、斜阳和空铜盆。若直接复用，水簿上的叶子及其遮挡也须吻合。",
+      "若局部编辑，须能保留其余已核实内容，并避免显露叶下书页或断定水簿开合。"
+    ]
+  },
+  "focus": [
+    "水簿上压着一片叶子"
+  ],
+  "excludedFromImage": [
+    "叶下书页的内容、水簿当前的开合状态",
+    "放置叶子的人与动作",
+    "岑苇此后是否到堂、是否把一轮水让给药圃"
+  ],
+  "evidence": [
+    {"rev": 11, "quote": "水簿上压着一片叶子", "use": "focus"},
+    {"rev": 11, "quote": "我看不清它底下的书页", "use": "limit"},
+    {"rev": 11, "quote": "我仍在听泉堂门边朝北等着，堂里一直没有旁人。", "use": "narrative"},
+    {"rev": 11, "quote": "斜阳照着桌脚，铜盆还是空的。", "use": "narrative"},
+    {"rev": 11, "quote": "要是岑苇不来，那句话也只能算一句话。", "use": "narrative"},
+    {"rev": 10, "quote": "水簿合拢在方桌上，桌脚的铜盆空了。", "use": "history"},
+    {"rev": 9, "quote": "水脉从闸下冲成一道白弧", "use": "history"},
+    {"rev": 2, "quote": "岑苇说，若井脉复流，她愿把自己的一轮水让给药圃。", "use": "history"}
+  ]
+}
