@@ -1,0 +1,109 @@
+{
+  "mode": "archived responses only",
+  "commands": [
+    {
+      "command": "python -B packages/ai-timing-pilot/verify.py",
+      "exit": 0,
+      "output": {
+        "prefixes": [
+          14,
+          6
+        ],
+        "accessVerified": 24,
+        "slots": 24,
+        "allBlocked": true
+      }
+    },
+    {
+      "command": "python -B packages/ai-timing-pilot/measure.py",
+      "exit": 0,
+      "output": {
+        "old": {
+          "n": 14,
+          "dimensions": {
+            "importance": 14,
+            "visualValue": 14,
+            "reliability": 13,
+            "intent": 13,
+            "conditionalPresentation": 13,
+            "evidence": 13,
+            "boundary": 14,
+            "requiredReasons": 14
+          },
+          "allDimensions": 11,
+          "intents": {
+            "update": 9,
+            "text-only": 4,
+            "defer": 1,
+            "needs-review": 0
+          }
+        },
+        "new": {
+          "n": 6,
+          "dimensions": {
+            "importance": 6,
+            "visualValue": 6,
+            "reliability": 6,
+            "intent": 5,
+            "conditionalPresentation": 6,
+            "evidence": 6,
+            "boundary": 6,
+            "requiredReasons": 6
+          },
+          "allDimensions": 5,
+          "intents": {
+            "update": 2,
+            "text-only": 3,
+            "defer": 1,
+            "needs-review": 0
+          }
+        }
+      }
+    },
+    {
+      "command": "python -B packages/ai-timing-pilot/repair/verify.py --capture",
+      "exit": 0,
+      "output": {
+        "status": "TIMING_REPAIR_REPLAY_PASS",
+        "originalFiles": 138,
+        "rows": 20,
+        "originalAccepted": 17,
+        "replayAccepted": 20,
+        "controls": 16,
+        "restored": [
+          14,
+          6
+        ],
+        "newModelCalls": 0
+      }
+    },
+    {
+      "command": "python -B packages/ai-timing-pilot/repair/verify.py",
+      "exit": 0,
+      "output": {
+        "status": "TIMING_REPAIR_REPLAY_PASS",
+        "originalFiles": 138,
+        "rows": 20,
+        "originalAccepted": 17,
+        "replayAccepted": 20,
+        "controls": 16,
+        "restored": [
+          14,
+          6
+        ],
+        "newModelCalls": 0
+      }
+    }
+  ],
+  "inlineChecks": "138 baseline files matched both fixed Git blob IDs and current SHA-256 manifest. Local freeze and published freeze have the same root tree and six content SHA-256 digests.",
+  "newCandidate": 0,
+  "followup": 0,
+  "newIndependentAudit": 0,
+  "projectApi": 0,
+  "imageTools": 0,
+  "dispatch": {
+    "real": 0,
+    "mock": 0
+  },
+  "additionalIndependentApiUsd": 0
+}

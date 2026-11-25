@@ -1,0 +1,148 @@
+{
+  "archive": "TIMING-01 original parent rollout / response_item and item_completed; exact original line bytes including terminator hashed; file and command content withheld",
+  "eventTimes": "UTC from existing parent records, not file modification time",
+  "events": [
+    {
+      "line": 19156,
+      "utc": "2026-11-25T10:11:06.433Z",
+      "event": "fixture.json / evaluation/rubric.json 写入返回",
+      "sourceLineSha256": "6aca80660d6eb98ca3aac88258b8fd409dd78832ac33de7a29b39ca894b739bd"
+    },
+    {
+      "line": 19164,
+      "utc": "2026-11-25T10:11:25.425Z",
+      "event": "schema.json / protocol.json 写入返回",
+      "sourceLineSha256": "ad46a4a75cd8869d5103af65200123e3f62a02fea123474099df4086c007202e"
+    },
+    {
+      "line": 19185,
+      "utc": "2026-11-25T10:12:21.389Z",
+      "event": "pilot.py 写入返回",
+      "sourceLineSha256": "5fe81f1a796fd013aff9277e866fede47581a8c779c82c9112b2c94650e9159c"
+    },
+    {
+      "line": 19189,
+      "utc": "2026-11-25T10:12:41.194Z",
+      "event": "slots.py 写入后开始联检并执行本地提交",
+      "sourceLineSha256": "a37138a2e6f5b5bf4e7480dfda8c4254b9e8a13a65aa03bef4b0be9a54c975b3"
+    },
+    {
+      "line": 19193,
+      "utc": "2026-11-25T10:12:43.338Z",
+      "event": "git commit 返回，退出 0；六文件，HEAD af9903e，ahead 1",
+      "sourceLineSha256": "3edee3c76a726a6b2a51c3023f1950c470ccd6574ae468ec50b4c55bbcb62655"
+    },
+    {
+      "line": 19201,
+      "utc": "2026-11-25T10:12:50.157Z",
+      "event": "准备 old01 返回，退出 0，专用目录列出 input.json",
+      "sourceLineSha256": "b68eb27bb12c40186c3c4a6525dc97546e845229489b1286e587b3af0ab1c89b"
+    },
+    {
+      "line": 19203,
+      "utc": "2026-11-25T10:12:53.711Z",
+      "event": "首次派发 old01",
+      "sourceLineSha256": "fc39c00e563931b57212fab315e590c10febaffc70dfb2bd073f25c911fb7f4e"
+    },
+    {
+      "line": 19206,
+      "utc": "2026-11-25T10:12:54.651Z",
+      "event": "派发工具返回 old01 会话名",
+      "sourceLineSha256": "a7c410b24be4c5ab737d3de84455793098b01456d35aecd42e9e67c63634a4c7"
+    },
+    {
+      "line": 19221,
+      "utc": "2026-11-25T10:13:18.656Z",
+      "event": "主轨迹收到 old01 完成事件",
+      "sourceLineSha256": "749d5ced410ee29543dff295a76b0ff9aca7f5dfbe1390fe512dfb8b857540fe"
+    },
+    {
+      "line": 19228,
+      "utc": "2026-11-25T10:13:26.026Z",
+      "event": "GitHub create_tree 完成",
+      "sourceLineSha256": "79604e6ada2920dfc7a55d87f1035e60349d4440af8a6ebbf72af2ea91ed358b"
+    },
+    {
+      "line": 19229,
+      "utc": "2026-11-25T10:13:27.051Z",
+      "event": "GitHub create_commit 完成",
+      "sourceLineSha256": "57fd4474edae9b60623f55c918b146f511ebe83b3a54d38a3ac7b785456f483f"
+    },
+    {
+      "line": 19230,
+      "utc": "2026-11-25T10:13:28.762Z",
+      "event": "GitHub update_ref 完成",
+      "sourceLineSha256": "bfe2c063f78190dfc919c25240a2581e858272f4a4df2f1de7fa1c20573ba131"
+    },
+    {
+      "line": 19235,
+      "utc": "2026-11-25T10:13:32.108Z",
+      "event": "读回远端并核对同树，返回 cdc4b5d",
+      "sourceLineSha256": "28651d4f8e9c403ec75f7e8eaff7c952898f0ece3d2d7aad51739ffd4805685e"
+    },
+    {
+      "line": 19321,
+      "utc": "2026-11-25T10:15:28.383Z",
+      "event": "准备 new01 的命令批次已返回",
+      "sourceLineSha256": "1f9800ea8f1fef981e67f85786bcd1981cb3ba1662ddc0df2772ede368218a2e"
+    },
+    {
+      "line": 19331,
+      "utc": "2026-11-25T10:15:36.507Z",
+      "event": "新篇首次派发 new01",
+      "sourceLineSha256": "860b039cda80488bf8f09372b0609430434045fd04e9f99cadab98691a31fcd8"
+    }
+  ],
+  "localFreeze": {
+    "commit": "af9903ece4e3eecb2794f4a2acd5b6ba01101371",
+    "tree": "2f4c96097fa527dbbf7ae8d263dcda3cde11a653",
+    "committerDate": "2026-11-25T18:12:42+08:00",
+    "sha256": {
+      "fixture.json": "9cab0479c5d6d57ec213283c2108c5c4abda3648a5e112bd95b6f1854d0aa481",
+      "evaluation/rubric.json": "0f4e49beabd8f40d91e7803b688298494b0e3d7541b1617eae1a5f6b2d4e3b0b",
+      "schema.json": "eb5c89403f50dbb8e2b6b244c7a54063c484a678040c653a4a893eceeebeda4f",
+      "protocol.json": "cead670b36011a1df24710ae54a51d349a92e9d91b2042e2ed23efa44c4f842a",
+      "pilot.py": "d19bb24df94bf3dbebee4b259128382cabc985ffcef326faf3c9f490cdae73f8",
+      "slots.py": "db8a78d77d4840ec90c69a974fdeae42ffe65c5db86607933387a787c962f017"
+    }
+  },
+  "publishedFreeze": {
+    "commit": "cdc4b5d137e328341b9dbb8b56dde5cf4cbd9ae6",
+    "tree": "2f4c96097fa527dbbf7ae8d263dcda3cde11a653",
+    "committerDate": "2026-11-25T18:13:25+08:00",
+    "sha256": {
+      "fixture.json": "9cab0479c5d6d57ec213283c2108c5c4abda3648a5e112bd95b6f1854d0aa481",
+      "evaluation/rubric.json": "0f4e49beabd8f40d91e7803b688298494b0e3d7541b1617eae1a5f6b2d4e3b0b",
+      "schema.json": "eb5c89403f50dbb8e2b6b244c7a54063c484a678040c653a4a893eceeebeda4f",
+      "protocol.json": "cead670b36011a1df24710ae54a51d349a92e9d91b2042e2ed23efa44c4f842a",
+      "pilot.py": "d19bb24df94bf3dbebee4b259128382cabc985ffcef326faf3c9f490cdae73f8",
+      "slots.py": "db8a78d77d4840ec90c69a974fdeae42ffe65c5db86607933387a787c962f017"
+    }
+  },
+  "childReturnsFromOriginalContextTrace": [
+    {
+      "firstReturnTime": "2026-11-25T10:15:59.872Z",
+      "forkTurns": "none",
+      "fullPacketReturned": true,
+      "inheritedUserConversation": false,
+      "onlyPacketRead": true,
+      "packetSha256": "6770a793afa6a2465c809f05700bec607c5e7436bbc198387d5962a7b97bf080",
+      "rawSha256": "1124cbb27de58a0b85dcda8ffb2fe30fbe58882b79a05be1c75416db47be95d4",
+      "slot": "new01",
+      "taskMessages": 1
+    },
+    {
+      "firstReturnTime": "2026-11-25T10:13:18.313Z",
+      "forkTurns": "none",
+      "fullPacketReturned": true,
+      "inheritedUserConversation": false,
+      "onlyPacketRead": true,
+      "packetSha256": "a2b479ff9a2974fd02b2668ce778843c204ff34d7282bdace703adb5c1154b0c",
+      "rawSha256": "23e9c5a94a3791f6d3ca14f4b59cf63471f49c34d587960eb4c6e706d46e23c6",
+      "slot": "old01",
+      "taskMessages": 1
+    }
+  ],
+  "exactStandaloneWriteTimeOfSlots": "not evidenced separately; completed by local commit return",
+  "conclusion": "Local commit preceded first dispatch; remote commit and branch publication followed first return. Same Git tree. No evidence of label changes."
+}

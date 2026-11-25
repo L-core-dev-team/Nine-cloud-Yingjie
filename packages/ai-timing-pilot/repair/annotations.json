@@ -1,0 +1,123 @@
+{
+  "origin": "post-hoc operator annotation of original source and alignment to quoted focus; never presented to model; no independent review",
+  "entries": [
+    {
+      "scope": "research-spring-01",
+      "revision": 7,
+      "packetSha256": "0bc7bf327e8c54ba5208bdd39fde00dd83239364e2356557bdbe53603cb4c0bd",
+      "textSha256": "a80af2a11f885aba5b0e5abe1c3d7594c894cff43848d3356a6a0b414dbdc029",
+      "positive": [
+        {
+          "target": "井台/脚边可见范围",
+          "quote": "水汽把井台遮得只剩我脚边几寸"
+        }
+      ],
+      "limits": [
+        {
+          "target": "井台/脚边以外",
+          "quote": "水汽把井台遮得只剩我脚边几寸",
+          "state": "observed-limit",
+          "basis": "只剩脚边，远处不可见"
+        },
+        {
+          "target": "蒋绫/是否在场",
+          "quote": "连蒋绫是不是还在都看不明",
+          "state": "observed-limit",
+          "basis": "同伴是否仍在未能观察"
+        }
+      ],
+      "unestablished": [
+        "井盆/当前冰态",
+        "石闸/当前开合"
+      ],
+      "alignment": [
+        {
+          "focus": "水汽中仅可见的脚边几寸井台",
+          "targets": [
+            "井台/脚边可见范围"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "research-cliff-01",
+      "revision": 2,
+      "packetSha256": "b95c576b3f785bcbaf81e8b91c82764f20965ff13c1a04aeec5d976cff95534b",
+      "textSha256": "4d9266ce75bc9772926053a11b7f5a1fb777156c8400817f6b16445922651b0c",
+      "positive": [
+        {
+          "target": "三人/位置",
+          "quote": "我们仍守在石壁前"
+        },
+        {
+          "target": "三人/未移动",
+          "quote": "三个人都没挪步"
+        },
+        {
+          "target": "石壁/光纹延续",
+          "quote": "壁上的光纹也没有变"
+        }
+      ],
+      "limits": [
+        {
+          "target": "壁后声源",
+          "quote": "我们仍守在石壁前",
+          "state": "missing-current-evidence",
+          "basis": "本句仅给壁外位置；前轮曾听见响动，此句没有重新辨认声源"
+        }
+      ],
+      "unestablished": [
+        "案卷/现场实物",
+        "人物/落笔动作"
+      ],
+      "alignment": [
+        {
+          "focus": "三人仍守在石壁前，谁也没挪步",
+          "targets": [
+            "三人/位置",
+            "三人/未移动"
+          ]
+        },
+        {
+          "focus": "石壁上保持原样的光纹",
+          "targets": [
+            "石壁/光纹延续"
+          ]
+        }
+      ]
+    },
+    {
+      "scope": "research-cliff-01",
+      "revision": 6,
+      "packetSha256": "fbb7dcc66ac59796fe1a19b2ff3e6579c45da88fe4656ab0276d3014c2552be2",
+      "textSha256": "9194a7729f225aa62c3f35fd7a180f14471cf046fec851eb3be5aa809cee78fe",
+      "positive": [
+        {
+          "target": "近处/一线瓷白",
+          "quote": "只能看见近处一线瓷白"
+        }
+      ],
+      "limits": [
+        {
+          "target": "深处",
+          "quote": "只能看见近处一线瓷白",
+          "state": "observed-limit",
+          "basis": "只见近处，深处不能辨认"
+        }
+      ],
+      "unestablished": [
+        "瓷白/部件身份",
+        "深处/布局",
+        "调查/已入内"
+      ],
+      "alignment": [
+        {
+          "focus": "黑夜中近处仅见的一线瓷白",
+          "targets": [
+            "近处/一线瓷白"
+          ]
+        }
+      ]
+    }
+  ]
+}

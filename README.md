@@ -1,5 +1,9 @@
 # 九霄 · 映界
 
+## 2026-11-25 · TIMING-01R 有限收尾已完成
+
+本地六文件冻结提交早于首发，GitHub 同树提交晚于 old01 返回。原样回放二十份首答，三次限制范围误拦已纠正，机械结果为 TIMING_REPAIR_REPLAY_PASS。原实验 PARTIAL、意图 18/20、全维 16/20、原程序接受 17/20。新增实验调用与审核均为 0，规则说明待新模型验证。 [实测与勘误](docs/reports/YJ-P04-TIMING-01R-report.md)
+
 ## 2026-11-25 · TIMING-01R 有限收尾（已批准 / NOT_RUN）
 
 道主已批准 [YJ-P04-TIMING-01R 完整任务书](docs/task-briefs/YJ-P04-TIMING-01R.md)，从 TIMING-01 `c0eb613cbf17ad135e90f90454e518f21c8e2755` 接续，工作分支 `codex/yj-p04-timing-01r`。本轮新增实验候选、补答及独立审核均 0；只核查已有冻结/派发记录，修复 old07/new02/new06 的限制范围误拦，并整理直接复用、画面增益与解释精度的通用边界。
