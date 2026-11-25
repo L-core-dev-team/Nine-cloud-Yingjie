@@ -1,0 +1,187 @@
+{
+  "type": "object",
+  "properties": {
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "narrativeImportance": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "unknown"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "value",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "visualValue": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "enum": [
+            "none",
+            "small",
+            "clear",
+            "unknown"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "value",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "visualReliability": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "enum": [
+            "sufficient-for-focus",
+            "partial",
+            "insufficient",
+            "conflict"
+          ]
+        },
+        "limits": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "value",
+        "limits"
+      ],
+      "additionalProperties": false
+    },
+    "timingIntent": {
+      "enum": [
+        "update",
+        "text-only",
+        "defer",
+        "needs-review"
+      ]
+    },
+    "cadenceReason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "conditionalPresentation": {
+      "type": "object",
+      "properties": {
+        "withoutReference": {
+          "enum": [
+            "new",
+            "text-only",
+            "defer",
+            "needs-review"
+          ]
+        },
+        "withSuitableReference": {
+          "enum": [
+            "edit",
+            "reuse",
+            "text-only",
+            "defer",
+            "needs-review"
+          ]
+        },
+        "requiredReferenceConditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "withoutReference",
+        "withSuitableReference",
+        "requiredReferenceConditions"
+      ],
+      "additionalProperties": false
+    },
+    "focus": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "excludedFromImage": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rev": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "quote": {
+            "type": "string",
+            "minLength": 1
+          },
+          "use": {
+            "enum": [
+              "focus",
+              "narrative",
+              "limit",
+              "history"
+            ]
+          }
+        },
+        "required": [
+          "rev",
+          "quote",
+          "use"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "scope",
+    "revision",
+    "narrativeImportance",
+    "visualValue",
+    "visualReliability",
+    "timingIntent",
+    "cadenceReason",
+    "conditionalPresentation",
+    "focus",
+    "excludedFromImage",
+    "evidence"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,31 @@
+{
+  "version": "timing/1",
+  "attemptLimits": {
+    "old": 14,
+    "new": 6,
+    "audit": 4
+  },
+  "candidate": "你只提供出图时机的研究建议。阅读当前正文、可用前缀、带来源的场景候选及上一条真实建议。分别说明剧情重要性、静态画面能增加的信息、拟表达焦点的可靠性、相对上轮的节奏理由。重要后果可主要靠文字；局部可画并不保证完整场景可靠。区分发生、首次获知、历史、计划和遮挡；不能凭沉默补事实。focus仅列当前可见内容，每项在 evidence 给本轮直接引文并标 focus。其他证据按 narrative/limit/history 注明；quote 在相应修订内须逐字且唯一。按 schema 返回唯一 JSON，不加代码围栏。枚举与理由相符。update 是内容上值得提出画面，text-only 表示文字足够，defer 表示等待，needs-review 表示待核。实况没有已确立的参考图、资格、授权或展示。分别给无参考与假设有适用参考时的建议，并列出编辑或复用必需条件。不能声称任何图、派发或展示确已发生。只回答此题，不修改场景事实。",
+  "audit": "独立审阅候选所见的同一前缀、完整题包、归档首答与机械处理结果。从重要性、可视价值、焦点证据、节奏、条件表现五方面逐一核查；严格区分角色所说、历史和当前可见事实，不把程序阻断等同于内容正确。返回唯一 JSON，含 scope、revision、checks（键 importance/visual/evidence/cadence/conditions，各为 review 说明字符串）、verdict（supported/needs-review/major-error）、findings（具体问题字符串数组）、evidence（{rev,quote} 数组，逐字唯一引文）。不修改首答、不推断实际资产。",
+  "safety": [
+    "no-evaluation-input",
+    "prefix-only",
+    "unique-quotes",
+    "excluded-not-current",
+    "reference-none",
+    "host-only-send",
+    "scope-conflict",
+    "restart-old7-new3",
+    "idempotent"
+  ],
+  "exclusions": [
+    "source.action",
+    "authorTimingBaseline",
+    "fixedBasicFieldScores",
+    "previousExperimentPolicy",
+    "expressibility.originalAdapterDiagnostics",
+    "gold",
+    "audits",
+    "unlisted keys"
+  ]
+}

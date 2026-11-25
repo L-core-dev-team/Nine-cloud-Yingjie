@@ -1,0 +1,126 @@
+{
+  "old": [
+    [
+      "update",
+      "建立堂内的首次可见布局；半盆水、人物或水簿至少一项",
+      "不把药圃忧虑画成事实"
+    ],
+    [
+      "text-only defer",
+      "条件承诺；摆放不保证属性延续",
+      "不可确认已转移，不得无条件复用"
+    ],
+    [
+      "update text-only defer",
+      "翻簿或陆禾实际离场对旧构图的影响",
+      "不可留陆禾在场"
+    ],
+    [
+      "update defer",
+      "蒋绫实际到场；井脉只是消息",
+      "不可提前画复流"
+    ],
+    [
+      "defer text-only needs-review",
+      "雾挡视线、名单不完整",
+      "碎盆和陆禾不在当前焦点"
+    ],
+    [
+      "update defer",
+      "进入井台与新地点的不同铜盆",
+      "不能沿用堂内铜盆"
+    ],
+    [
+      "defer text-only needs-review",
+      "水汽造成现场不可见",
+      "不能把假设开闸画成现实"
+    ],
+    [
+      "update defer text-only",
+      "雾散、重新看清；首次辨向",
+      "不能说转身"
+    ],
+    [
+      "update",
+      "开闸、水弧或裂冰构成井脉复流的可见结果",
+      "未兑现让水，未有参考图",
+      "high",
+      "clear"
+    ],
+    [
+      "update defer",
+      "归堂无人、空盆或合簿，以当下观察重建",
+      "不能推断经手人/时间或把井上景物移入堂内"
+    ],
+    [
+      "text-only defer",
+      "叶遮书页或细小遮挡，仍在等待",
+      "不可还原被遮属性"
+    ],
+    [
+      "update defer text-only",
+      "岑苇到场或移叶；尚未签字",
+      "不能提前兑现"
+    ],
+    [
+      "text-only",
+      "正式签字让水并失去支用权；局部动作不能体现权益本身",
+      "不能把2→9→13关联写为已确证",
+      "high"
+    ],
+    [
+      "text-only defer",
+      "墨干只是小变化；次日提议未执行",
+      "不能画次日出发"
+    ]
+  ],
+  "new": [
+    [
+      "defer text-only",
+      "声源无法判别，传闻不能证实有人受困",
+      "不能画壁后受困者"
+    ],
+    [
+      "text-only",
+      "承担责任、师妹处分撤销，案卷责任归属改变",
+      "不能将过去误报画成现在",
+      "high"
+    ],
+    [
+      "defer text-only",
+      "雨滴微变且敲击延续，仍看不见声源",
+      "不追加画面"
+    ],
+    [
+      "update",
+      "石壁翻开，风轮或石槌揭示声源，有静态可见结果",
+      "不能推定壁后有人",
+      "high",
+      "clear"
+    ],
+    [
+      "text-only defer",
+      "风轮及瓷片河基本未变，拨发不是新关键画面",
+      "不追加同一显露"
+    ],
+    [
+      "text-only defer needs-review",
+      "夜暗视野缩小，入内只属计划",
+      "不画已进入或探查结果"
+    ]
+  ],
+  "columns": [
+    "acceptableIntents",
+    "requiredEvidenceAndReason",
+    "forbiddenClaim",
+    "requiredImportance",
+    "requiredVisualValue"
+  ],
+  "audits": [
+    "old09",
+    "old13",
+    "new04",
+    "new02"
+  ],
+  "acceptance": "按行审查允许意图、必需理由与证据和禁止事实；四个锚点审核五维完整。重大事实或虚构派发 FAIL，其他未满足 PARTIAL。题包污染 INVALID_EXPERIMENT。其余维度按当前证据及理由逐项评阅。"
+}
