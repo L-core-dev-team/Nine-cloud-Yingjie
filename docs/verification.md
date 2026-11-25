@@ -1,5 +1,13 @@
 # 映界验证记录
 
+## 2026-11-25 · TIMING-01 授权登记（实验 NOT_RUN）
+
+准备范围为一份 [时机任务书](task-briefs/YJ-P04-TIMING-01.md) 与 README、handoff、task-sequence、verification、decisions 五份索引，未执行时机模型请求、审核或实验代码。已读取固定 STABILITY-01R 报告、时机 JSONL 与旧 policies 入口；准备阶段未在本机复跑其工程验收。分支从 `55c43d6fd880a3619bf6eada0ad920d9d9a7a6cf` 接续，两个 main 保持独立。
+
+任务要求分别归档 14+6 份候选及最多 4 份独立审核，隔离作者标签、旧评分/策略和未来内容；分别检验重要性、可视价值、可靠性、意图及条件建议。旧篇 R9/R13、新篇 V/Q 与克制/未知边界均需满足，程序阻断不折算为语义正确；原始失败与机械重放分开。预计在旧篇 R7、新篇 R3 做归档建议链恢复，并验证幂等与输入绑定。
+
+当前状态：实验 NOT_RUN；项目 API、图片工具、真实/模拟派发、额外 API 费用均 0。STABILITY-01 原 FAIL / restart PASS、01R 限定回放 PASS、旧审核绑定与未审范围均不变。
+
 ## 2026-11-25 · STABILITY-01R 限定回放通过
 
 十四份原首答、零次新对话。属性按当前证据独立登记；复访观察差异、承诺表态、复流和让水分别保存。14/14 个新前缀中断恢复一致，原 STABILITY-01 语义 FAIL 保留。[实际输出与时机输入](reports/YJ-P04-STABILITY-01R-report.md)
