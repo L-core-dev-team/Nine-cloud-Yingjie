@@ -1,5 +1,14 @@
 # 九霄 · 映界
 
+## 2026-11-25 · P05 原生短局接线（已批准 / NOT_RUN）
+
+道主同意进入 [YJ-P05-PLAYABLE-LOOP-01](docs/task-briefs/YJ-P05-PLAYABLE-LOOP-01.md)。从 TIMING-01R `d75f4ceeea71947cf71ed719513493a38d2b259f` 接续，分支 `codex/yj-p05-playable-loop-01`。本轮接通真实原生行动、确定性正文保存、场景候选、时机建议与同局重启；目标八回合，实际游玩芦花渡/望气台，清障与领奖分别观察可见变化和安静后果。
+
+正文使用固定原生规则 fallback，AI 通过明确标注的 CODEX_RELAY 研究中继，每轮状态/时机各一次，最多 16 次既有订阅首答，补答与独立审核 0。允许本地页面、隔离 PG 与持久侧车；项目 API、图片工具、真实/模拟图片派发及额外独立 API 费用 0，sceneEligible=false / send=false。
+
+当前只提交任务书与五份索引，实现、短局、模型首答和浏览器试玩均 NOT_RUN。原实验 PARTIAL/FAIL、有限修复 PASS 及旧阻塞线不变；本轮完成后再决定图像效果、自动服务化与训练。下方关于 P05 后置的记录保留为历史阶段。
+
+
 ## 2026-11-25 · TIMING-01R 有限收尾已完成
 
 本地六文件冻结提交早于首发，GitHub 同树提交晚于 old01 返回。原样回放二十份首答，三次限制范围误拦已纠正，机械结果为 TIMING_REPAIR_REPLAY_PASS。原实验 PARTIAL、意图 18/20、全维 16/20、原程序接受 17/20。新增实验调用与审核均为 0，规则说明待新模型验证。 [实测与勘误](docs/reports/YJ-P04-TIMING-01R-report.md)
