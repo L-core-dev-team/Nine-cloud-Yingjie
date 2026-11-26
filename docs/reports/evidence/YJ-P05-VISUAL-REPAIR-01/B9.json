@@ -1,0 +1,74 @@
+{
+  "h": {
+    "scope": "12f85fff6c219dc7c9f8fe2073740bfedf6b0f6aadae5f1b237a9ea54693d9e7",
+    "ownerHash": "72d2a52b39cc1423f15d63c5b8aebc4c0841cd8904049ff1dc2baea0403de57b",
+    "saveHash": "dd28168ffa7a49e54b03e418124849d35e451b9ac8f0c3684fad4166cbe5b116",
+    "branch": "root",
+    "revision": 9,
+    "requestKey": "eade03a7-4613-4b82-8deb-1408874f963c",
+    "action": "前往芦花渡",
+    "text": "你到了芦花渡。",
+    "bodySha": "004843db259a752c0323489860d770a6d06a329891b4b14e82733fc9e26a8b00",
+    "receiptSha": "f33d7e79d8cc4130c21adfed367eb143c312a856e0adf4921ee328f5397a23e9",
+    "canonicalReceiptSha": "b634f83a7fc44cc4e637150bf6923c9d7f5493966e6d763793b17cb444fc9856",
+    "source": "deterministic",
+    "recovery": "returned",
+    "ruleVersion": "prologue-v1-candidate-20261005",
+    "canonVersion": "prologue-canon-candidate-20261005",
+    "events": [
+      "move.arrived"
+    ],
+    "native": {
+      "location": "loc_luhuadu",
+      "place": "芦花渡",
+      "sub": null,
+      "quest": {
+        "status": "completed",
+        "rewardClaimed": true
+      },
+      "known": [
+        "loc_luhuadu",
+        "loc_wangqitai",
+        "loc_zheguiping"
+      ],
+      "revision": 9
+    },
+    "sceneEligible": false,
+    "send": false,
+    "actualAction": "blocked",
+    "dispatchAttempted": false,
+    "sceneEvidence": {
+      "ferry": "clear",
+      "obstacle": "cleared",
+      "outcome": "success",
+      "events": [
+        {
+          "type": "move.arrived",
+          "from": "loc_wangqitai",
+          "to": "loc_luhuadu"
+        }
+      ]
+    }
+  },
+  "b": {
+    "version": "p05-native-art/2",
+    "scope": "12f85fff6c219dc7c9f8fe2073740bfedf6b0f6aadae5f1b237a9ea54693d9e7",
+    "revision": 9,
+    "ownerHash": "72d2a52b39cc1423f15d63c5b8aebc4c0841cd8904049ff1dc2baea0403de57b",
+    "saveHash": "dd28168ffa7a49e54b03e418124849d35e451b9ac8f0c3684fad4166cbe5b116",
+    "branch": "root",
+    "requestKey": "eade03a7-4613-4b82-8deb-1408874f963c",
+    "bodySha": "004843db259a752c0323489860d770a6d06a329891b4b14e82733fc9e26a8b00",
+    "receipt": "b634f83a7fc44cc4e637150bf6923c9d7f5493966e6d763793b17cb444fc9856",
+    "location": "loc_luhuadu",
+    "sub": null,
+    "sha": null,
+    "asset": null,
+    "reason": "本次行动没有相容的可见依据",
+    "sourceRevision": null,
+    "basis": "本回合无适用画面",
+    "key": "8bdce30242b50728a3e3993088a2921735de9b60513163da36b7768a5871cb89"
+  },
+  "expected": null,
+  "browser": "158.0.8127.38"
+}

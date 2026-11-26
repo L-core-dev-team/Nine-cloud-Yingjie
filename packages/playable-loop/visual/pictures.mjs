@@ -55,9 +55,17 @@ export function setEnabled(store,scope,value) {
   if(typeof value!=="boolean")fail(400,"图片开关无效");
   store.set("pictures-enabled:"+scope,value?"on":"off");
 }
+function readable(row,scope,rev) {
+  const a=row && Object.hasOwn(catalog.assets,row.asset) && catalog.assets[row.asset];
+  return a && row.scope===scope && row.revision===rev && row.branch==="root" &&
+    hex.test(row.ownerHash) && hex.test(row.saveHash) && hex.test(row.key) &&
+    hex.test(row.receipt) && hex.test(row.bodySha) && !!row.requestKey &&
+    row.sha===a.sha256 && Number.isSafeInteger(row.sourceRevision) &&
+    row.sourceRevision>0 && row.sourceRevision<=rev;
+}
 export function target(store,scope,live,mode,rev,key) {
   const row=binding(store,scope,rev);
-  if (!enabled(store,scope)||!row?.asset||row.key!==key||rev>live.revision ||
+  if (!Number.isSafeInteger(rev)||rev<1||!enabled(store,scope)||!readable(row,scope,rev)||row.key!==key||rev>live.revision ||
       !["current","history"].includes(mode)) fail(404,"无适用画面");
   if(mode==="current" && (rev!==live.revision || row.location!==live.location || row.sub!==live.sub))
     fail(409,"视野已经改变");
@@ -65,7 +73,7 @@ export function target(store,scope,live,mode,rev,key) {
 }
 export function describe(store,scope,revision) {
   const row=binding(store,scope,revision);
-  if(!row?.asset)return null;
+  if(!readable(row,scope,revision))return null;
   const a=catalog.assets[row.asset];
   return {key:row.key,title:a.title,basis:row.basis,asset:row.asset,sha:a.sha256};
 }
@@ -73,8 +81,11 @@ export function recordDisplay(store,row,mode,outcome) {
   if(!["decoded","failed"].includes(outcome))fail(400,"状态无效");
   const k=(outcome==="decoded"?"shown:":"failed:")+row.key+":"+mode;
   if(!store.get(k)){
-    const previous = mode==="current" && Array.from({length:row.revision-1},(_,i)=>binding(store,row.scope,i+1))
-      .some(b=>b?.sha===row.sha && store.get("shown:"+b.key+":current"));
+    let previous=false;
+    if(mode==="current")for(let rev=row.revision-1;rev>0 && !previous;rev--){
+      const prior=binding(store,row.scope,rev);
+      previous=prior?.sha===row.sha && !!store.get("shown:"+prior.key+":current");
+    }
     const state=outcome==="failed"?"load-failed":mode==="history"?"history":row.basis==="上次所见"?"retained":previous?"reused":"first-display";
     store.set(k,JSON.stringify({revision:row.revision,scope:row.scope,asset:row.asset,sha:row.sha,key:row.key,mode,state,at:new Date().toISOString()}));
   }

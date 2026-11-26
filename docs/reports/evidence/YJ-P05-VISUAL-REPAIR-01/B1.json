@@ -1,0 +1,73 @@
+{
+  "h": {
+    "scope": "12f85fff6c219dc7c9f8fe2073740bfedf6b0f6aadae5f1b237a9ea54693d9e7",
+    "ownerHash": "72d2a52b39cc1423f15d63c5b8aebc4c0841cd8904049ff1dc2baea0403de57b",
+    "saveHash": "dd28168ffa7a49e54b03e418124849d35e451b9ac8f0c3684fad4166cbe5b116",
+    "branch": "root",
+    "revision": 1,
+    "requestKey": "10f27ba2-a41e-4444-872c-79f712223226",
+    "action": "与岑九闲谈",
+    "text": "嗯。芦花今年开得晚。",
+    "bodySha": "e78f03db10dc49830239a3833d6ab6635f5e45a3f222148a2fdaa651195f7547",
+    "receiptSha": "ca7750ee47f4fda18b9d0314ae4f3d10fc41e3a9630de845539d6bd18e9c61e7",
+    "canonicalReceiptSha": "347e4a3928c0e5f58e530dd7965b8e8c6817ab4845622560b1c31641159e9c75",
+    "source": "deterministic",
+    "recovery": "returned",
+    "ruleVersion": "prologue-v1-candidate-20261005",
+    "canonVersion": "prologue-canon-candidate-20261005",
+    "events": [
+      "talk.occurred"
+    ],
+    "native": {
+      "location": "loc_luhuadu",
+      "place": "芦花渡",
+      "sub": null,
+      "quest": {
+        "status": "unavailable",
+        "rewardClaimed": false
+      },
+      "known": [
+        "loc_luhuadu",
+        "loc_wangqitai"
+      ],
+      "revision": 1
+    },
+    "sceneEligible": false,
+    "send": false,
+    "actualAction": "blocked",
+    "dispatchAttempted": false,
+    "sceneEvidence": {
+      "ferry": "aground",
+      "obstacle": "blocked",
+      "outcome": "legal_failure",
+      "events": [
+        {
+          "type": "talk.occurred",
+          "outcome": "idle",
+          "npcId": "npc_cenjiu"
+        }
+      ]
+    }
+  },
+  "b": {
+    "version": "p05-native-art/2",
+    "scope": "12f85fff6c219dc7c9f8fe2073740bfedf6b0f6aadae5f1b237a9ea54693d9e7",
+    "revision": 1,
+    "ownerHash": "72d2a52b39cc1423f15d63c5b8aebc4c0841cd8904049ff1dc2baea0403de57b",
+    "saveHash": "dd28168ffa7a49e54b03e418124849d35e451b9ac8f0c3684fad4166cbe5b116",
+    "branch": "root",
+    "requestKey": "10f27ba2-a41e-4444-872c-79f712223226",
+    "bodySha": "e78f03db10dc49830239a3833d6ab6635f5e45a3f222148a2fdaa651195f7547",
+    "receipt": "347e4a3928c0e5f58e530dd7965b8e8c6817ab4845622560b1c31641159e9c75",
+    "location": "loc_luhuadu",
+    "sub": null,
+    "sha": null,
+    "asset": null,
+    "reason": "本次行动没有相容的可见依据",
+    "sourceRevision": null,
+    "basis": "本回合无适用画面",
+    "key": "1cef7ae8b5b56dc84ea791915004b6ee967deb305cbc2a32abffa0142996257f"
+  },
+  "expected": null,
+  "browser": "158.0.8127.38"
+}

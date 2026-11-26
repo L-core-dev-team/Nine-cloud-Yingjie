@@ -18,15 +18,15 @@ function render(){
  el("diag").textContent=JSON.stringify({地点来源:past?"历史回合记录":"已认证原生当前存档",地点:place?.place,子区域:place?.sub,奖励已领:place?.quest?.rewardClaimed,正文来源:entry?.source,状态:state?.result??"待回传",时机:timing?.result??"待回传",参考图:"无",send:false},null,2);
  if(renderer && game.visual){
    renderer.renderPicture(game,rev,past,refresh,request);
-   el("diag").textContent=JSON.stringify({修订:rev,正文来源:entry?.source,地点:place?.place,子区域:place?.sub,奖励已领:place?.quest?.rewardClaimed,画面:game.visual.frames[rev]??"本回合无适用图"},null,2);
+   el("diag").textContent=JSON.stringify({修订:rev,正文来源:entry?.source,地点:place?.place,子区域:place?.sub,奖励已领:place?.quest?.rewardClaimed,画面:game.visual.frames[rev]??"本回合无适用图",配图依据:game.visual.evidence?.[rev]},null,2);
  }
  el("current").hidden=!past;el("choices").replaceChildren();el("history").replaceChildren();
- if(!past && game.current.revision<8)for(const c of game.current.actions){const b=button(c.label,async()=>{
+ if(!past && (game.continuing || game.current.revision<8))for(const c of game.current.actions){const b=button(c.label,async()=>{
    if(locked)return;locked=true;b.disabled=true;try{const scope=game.scope,r=game.current.revision;
    const k=scope+"-"+r+"-"+c.id;const key=sessionStorage.getItem(k)??crypto.randomUUID();sessionStorage.setItem(k,key);
    await request("/act",{scope,revision:r,id:c.id,key});el("msg").textContent="";await refresh()}finally{locked=false;b.disabled=false}
  });b.dataset.action=c.id;el("choices").append(b)}
- if(!past && game.current.revision===8)el("choices").textContent="八回合已完成，可以回看沿途记录。";
+ if(!past && !game.continuing && game.current.revision===8)el("choices").textContent="八回合已完成，可以回看沿途记录。";
  for(const h of game.history){const b=button("R"+h.revision+" "+h.action,async()=>{selected=h.revision;render()});b.dataset.rev=h.revision;b.setAttribute("aria-current",String(rev===h.revision));el("history").append(b)}
 }
 async function refresh(){game=await request("/game");render()}

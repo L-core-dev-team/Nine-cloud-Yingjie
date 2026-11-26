@@ -1,5 +1,10 @@
 # 映界决策台账
 
+## 2026-11-26 · P05_VISUAL_ROUTE_REPAIR_PASS
+
+图文个人档按当前事件、正文和反证选用三张既有图。重复观察无新线索时收图，闲谈/领奖只追溯本档真实显示的原观测。 [修整报告](reports/YJ-P05-VISUAL-REPAIR-01-report.md)
+
+
 ## 2026-11-25 · 试玩后先修配图顺序依赖与继续入口
 
 道主在亲自走过 P05 图文短局后表示可以继续修整。按 [YJ-P05-VISUAL-REPAIR-01](task-briefs/YJ-P05-VISUAL-REPAIR-01.md) 进入下一轮，分支 `codex/yj-p05-visual-repair-01`，基线 `2ae4c1f09df86f8fdba27855f3711fe63fb276f5`。用户未点名具体故障，以下是依据当前实现确定的修整优先级，不记成用户亲自报告的问题。

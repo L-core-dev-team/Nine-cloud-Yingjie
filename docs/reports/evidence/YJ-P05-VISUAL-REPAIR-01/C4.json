@@ -1,0 +1,75 @@
+{
+  "h": {
+    "scope": "bc745ceec5db562a00660fcf090e2d711ed2c6cd5e8f2a92871b6efe109f37e8",
+    "ownerHash": "292e6dbf7732b930639ba4fa7707881f20c497d4ad95f7837ff7a1f863e29d72",
+    "saveHash": "8c655227e5cbb311813409a6c3da4aabe806f185e86bd4b7026ce79d0938a8c7",
+    "branch": "root",
+    "revision": 4,
+    "requestKey": "d8c3539c-a880-43d2-b0e9-f2798821cbed",
+    "action": "察看渡口",
+    "text": "渡槽淤了半尺，水发黄。\n船吃水太深，蹭着淤泥靠不上岸。\n岸边踩倒的芦花没人扶。",
+    "bodySha": "c06f6b269e42447996df098e63ee34479c9e1e1f34ee0f97e3c6c64ba9b77e8a",
+    "receiptSha": "07239bbd9f590abf84e051bcb6c013055322c9f26d865eb42f95bf74b330f354",
+    "canonicalReceiptSha": "c5c211721363bef4f9318d8782ce12d1a980b4a5de16669bc0910a9ad571d896",
+    "source": "deterministic",
+    "recovery": "returned",
+    "ruleVersion": "prologue-v1-candidate-20261005",
+    "canonVersion": "prologue-canon-candidate-20261005",
+    "events": [
+      "observe.result"
+    ],
+    "native": {
+      "location": "loc_luhuadu",
+      "place": "芦花渡",
+      "sub": null,
+      "quest": {
+        "status": "completed",
+        "rewardClaimed": false
+      },
+      "known": [
+        "loc_luhuadu",
+        "loc_wangqitai"
+      ],
+      "revision": 4
+    },
+    "sceneEligible": false,
+    "send": false,
+    "actualAction": "blocked",
+    "dispatchAttempted": false,
+    "sceneEvidence": {
+      "ferry": "clear",
+      "obstacle": "cleared",
+      "outcome": "success",
+      "events": [
+        {
+          "type": "observe.result",
+          "targetId": "obj_ferry",
+          "method": "scan",
+          "result": "found",
+          "clueId": "clue_ferry_stuck"
+        }
+      ]
+    }
+  },
+  "b": {
+    "version": "p05-native-art/2",
+    "scope": "bc745ceec5db562a00660fcf090e2d711ed2c6cd5e8f2a92871b6efe109f37e8",
+    "revision": 4,
+    "ownerHash": "292e6dbf7732b930639ba4fa7707881f20c497d4ad95f7837ff7a1f863e29d72",
+    "saveHash": "8c655227e5cbb311813409a6c3da4aabe806f185e86bd4b7026ce79d0938a8c7",
+    "branch": "root",
+    "requestKey": "d8c3539c-a880-43d2-b0e9-f2798821cbed",
+    "bodySha": "c06f6b269e42447996df098e63ee34479c9e1e1f34ee0f97e3c6c64ba9b77e8a",
+    "receipt": "c5c211721363bef4f9318d8782ce12d1a980b4a5de16669bc0910a9ad571d896",
+    "location": "loc_luhuadu",
+    "sub": null,
+    "sha": null,
+    "asset": null,
+    "reason": "清障状态与旧淤船观察正文冲突",
+    "sourceRevision": null,
+    "basis": "本回合无适用画面",
+    "key": "04490c2b5140b5cca54ad522f48f0e3c8e977b5f4f553a60746817fc18f4f733"
+  },
+  "expected": null,
+  "browser": "158.0.8127.38"
+}

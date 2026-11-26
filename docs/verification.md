@@ -1,5 +1,10 @@
 # 映界验证记录
 
+## 2026-11-26 · P05_VISUAL_ROUTE_REPAIR_PASS
+
+三档实际 2+10+4 个 accepted 回合，16 份正文和规范化回执、18 条 PG 事件相符。首次旧宿主读取失败与正常恢复均有记录。 [修整报告](reports/YJ-P05-VISUAL-REPAIR-01-report.md)
+
+
 ## 2026-11-25 · P05-VISUAL-REPAIR-01 准备核查（NOT_RUN）
 
 道主表示已亲自走过上一图文短局，批准继续修整；未提供逐图评价，不补写体验分数。[新任务书](task-briefs/YJ-P05-VISUAL-REPAIR-01.md) 从 `2ae4c1f09df86f8fdba27855f3711fe63fb276f5` 准备。

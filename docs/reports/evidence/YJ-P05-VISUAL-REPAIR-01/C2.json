@@ -1,0 +1,93 @@
+{
+  "h": {
+    "scope": "bc745ceec5db562a00660fcf090e2d711ed2c6cd5e8f2a92871b6efe109f37e8",
+    "ownerHash": "292e6dbf7732b930639ba4fa7707881f20c497d4ad95f7837ff7a1f863e29d72",
+    "saveHash": "8c655227e5cbb311813409a6c3da4aabe806f185e86bd4b7026ce79d0938a8c7",
+    "branch": "root",
+    "revision": 2,
+    "requestKey": "ca0c376c-fda2-49df-a9f7-a0e11d8f08a1",
+    "action": "赶走灰羽鸦",
+    "text": "鸦群炸开，又落回石头上。\n石堆松了一层。\n石堆散了。渡槽口露出一段黑黢黢的水面。\n远处有桨声。一下，又一下。",
+    "bodySha": "5da3f3f41b458096dc48c251e446176722b0682b07b105befe6b0e40cf0b1427",
+    "receiptSha": "483574f043dec1e8e20b807506c451cc531f096a53e7a834777270d9de237384",
+    "canonicalReceiptSha": "9935308c08caf8640bc04874f338b743544eef4bac2b0ea18a7c8defd1ab6670",
+    "source": "deterministic",
+    "recovery": "returned",
+    "ruleVersion": "prologue-v1-candidate-20261005",
+    "canonVersion": "prologue-canon-candidate-20261005",
+    "events": [
+      "combat.resolved",
+      "quest.completed"
+    ],
+    "native": {
+      "location": "loc_luhuadu",
+      "place": "芦花渡",
+      "sub": "subloc_ferry_berm",
+      "quest": {
+        "status": "completed",
+        "rewardClaimed": false
+      },
+      "known": [
+        "loc_luhuadu",
+        "loc_wangqitai"
+      ],
+      "revision": 2
+    },
+    "sceneEligible": false,
+    "send": false,
+    "actualAction": "blocked",
+    "dispatchAttempted": false,
+    "sceneEvidence": {
+      "ferry": "clear",
+      "obstacle": "cleared",
+      "outcome": "success",
+      "events": [
+        {
+          "type": "combat.resolved",
+          "targetId": "npc_shuiyuya",
+          "outcome": "clear"
+        },
+        {
+          "type": "quest.completed",
+          "questId": "quest_first_clearance"
+        }
+      ]
+    }
+  },
+  "b": {
+    "version": "p05-native-art/2",
+    "scope": "bc745ceec5db562a00660fcf090e2d711ed2c6cd5e8f2a92871b6efe109f37e8",
+    "revision": 2,
+    "ownerHash": "292e6dbf7732b930639ba4fa7707881f20c497d4ad95f7837ff7a1f863e29d72",
+    "saveHash": "8c655227e5cbb311813409a6c3da4aabe806f185e86bd4b7026ce79d0938a8c7",
+    "branch": "root",
+    "requestKey": "ca0c376c-fda2-49df-a9f7-a0e11d8f08a1",
+    "bodySha": "5da3f3f41b458096dc48c251e446176722b0682b07b105befe6b0e40cf0b1427",
+    "receipt": "9935308c08caf8640bc04874f338b743544eef4bac2b0ea18a7c8defd1ab6670",
+    "location": "loc_luhuadu",
+    "sub": "subloc_ferry_berm",
+    "sha": "882b457d551db2e8ff8957e9a6aad4fd180b48e6c496bc2f97e684a81c2f74a9",
+    "asset": "I02",
+    "reason": "作业位清障结算与散石露水正文相符",
+    "sourceRevision": 2,
+    "basis": "当回合正文与原生行动相符",
+    "key": "a79345ae098d98eceb58c8a194e3366b1e17f6cadac797120a114f2e866e5331"
+  },
+  "expected": "I02",
+  "browser": "158.0.8127.38",
+  "decoded": [
+    1536,
+    1024,
+    601.546875
+  ],
+  "shown": {
+    "revision": 2,
+    "scope": "bc745ceec5db562a00660fcf090e2d711ed2c6cd5e8f2a92871b6efe109f37e8",
+    "asset": "I02",
+    "sha": "882b457d551db2e8ff8957e9a6aad4fd180b48e6c496bc2f97e684a81c2f74a9",
+    "key": "a79345ae098d98eceb58c8a194e3366b1e17f6cadac797120a114f2e866e5331",
+    "mode": "current",
+    "state": "first-display",
+    "at": "2026-11-26T11:09:46.878Z"
+  }
+}

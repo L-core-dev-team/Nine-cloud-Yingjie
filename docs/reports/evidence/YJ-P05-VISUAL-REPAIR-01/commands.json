@@ -1,0 +1,109 @@
+{
+  "environment": "Windows; real Chrome headless, native rules, authenticated loopback PG; no model transports",
+  "branchBase": "23426e8a27ecc020575c64c2be456aa30cf5f675",
+  "firstIssue": {
+    "command": "python -B packages/playable-loop/visual/continuity.py before",
+    "exit": 1,
+    "reason": "WinError 10061; stale host and PG PID files",
+    "nativePgStatus": 3,
+    "sidecarRevisions": 8,
+    "recovery": "Verified dead PIDs; native pg_ctl start, previous release session.py resume, authenticated snapshot, clean stop and cold backup"
+  },
+  "commands": [
+    [
+      "git fetch origin codex/yj-p05-visual-repair-01",
+      0
+    ],
+    [
+      "continuity.py before / old session.py stop visual-reader / continuity.py backup",
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      "session.py start repair-{a,b,c}",
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      "node packages/playable-loop/visual/repair-browser.mjs A / B",
+      [
+        0,
+        0
+      ]
+    ],
+    [
+      "session.py stop repair-b; verify host marker and PG pid absent; session.py resume repair-b; repair-browser.mjs B resume",
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      "repair-browser.mjs C",
+      0
+    ],
+    [
+      "native-check.mjs repair-{a,b,c}",
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      "repair-browser.mjs {A,B,C} inspect (final host restart; no action); stop each test host and PG",
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      "session.py resume visual-reader; continuity.py after; repair-browser.mjs personal",
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    [
+      "v1 legacy-read.py; native-check.mjs visual-demo",
+      [
+        0,
+        0
+      ]
+    ],
+    [
+      "Play-P05-Visual.cmd; repair-browser.mjs personal",
+      [
+        0,
+        0
+      ]
+    ],
+    [
+      "node packages/playable-loop/visual/repair-checks.mjs",
+      0
+    ],
+    [
+      "v1 visual/controls.mjs; verify-export.mjs; checks.mjs",
+      [
+        0,
+        0,
+        0
+      ]
+    ]
+  ],
+  "newAccepted": 16,
+  "rejectedNativeRequests": 0,
+  "personalActionSubmissions": 0,
+  "modelAndImageCalls": 0,
+  "extraFeesUSD": 0
+}

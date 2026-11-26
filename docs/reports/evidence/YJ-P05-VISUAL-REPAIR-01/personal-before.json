@@ -1,0 +1,18 @@
+{
+  "state": {
+    "scope": "9a656834e921c46699804ec859633e095f6466f822793a18363e5cf43cf95794",
+    "revision": 8,
+    "originalRows": "8b6f11d2a2958e0a7514f8b1057429941c531d2cb084f5e3552848e4061b918d",
+    "reward": {
+      "status": "unavailable",
+      "rewardClaimed": false
+    },
+    "imagesEnabled": true,
+    "bindings": "66f9401a9aad3f03316c50df4fc03eca52d493786cb69f7dfcd3ac0574b61de7",
+    "shown": "3c7cfc9e72e4370d1cbc6d22a7f2fbf050ad13be5878e96f7c150f79b34f9abf",
+    "nextChoices": 5
+  },
+  "health": "P05",
+  "hostActive": true,
+  "pgActive": true
+}

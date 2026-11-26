@@ -39,9 +39,10 @@ def pg(cfg,d,*args):
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("command",choices=["start","resume","stop","cleanup","open","entry"])
-    ap.add_argument("instance",choices=["demo","rehearsal","reader","visual-reader","visual-demo"])
+    ap.add_argument("instance",choices=["demo","rehearsal","reader","visual-reader","visual-demo","repair-a","repair-b","repair-c"])
     ap.add_argument("--upstream",type=Path);ap.add_argument("--runtime",type=Path);ap.add_argument("--pg-bin",type=Path)
     a=ap.parse_args()
+    expected_health=b"P05-visual/2" if a.instance in ("visual-reader","repair-a","repair-b","repair-c") else b"P05"
     d=BASE/a.instance
     if d.resolve().parent!=BASE.resolve() or BASE.is_symlink() or d.is_symlink() or getattr(d,"is_junction",lambda:False)():
         raise ValueError("unexpected instance directory")
@@ -84,7 +85,8 @@ def main():
     if (d/"active").exists():
         try:
             with urlopen("http://127.0.0.1:%d/health"%cfg["httpPort"],timeout=1) as r:
-                if r.read()==b"P05": print("Already running",d/"open.html");return
+                if r.read()!=expected_health: raise RuntimeError("Previous host version is still active; stop it before upgrading")
+                print("Already running",d/"open.html");return
         except OSError:pass
         # An abandoned marker contains a PID; never start a second living host.
         import ctypes
@@ -94,7 +96,9 @@ def main():
         else:raise RuntimeError("inspect stale host marker")
         (d/"active").unlink()
     (d/"stop").unlink(missing_ok=True)
-    if not (d/"pgdata/postmaster.pid").exists():
+    pg_status=subprocess.run([str(Path(cfg["bin"])/"pg_ctl"),"status","-D",str(d/"pgdata")],stdout=subprocess.DEVNULL).returncode
+    if pg_status not in (0,3):raise RuntimeError("Cannot determine local PG status")
+    if pg_status==3:
         pg(cfg,d,"pg_ctl","-D",d/"pgdata","-l",d/"postgres.log","-o",f"-h 127.0.0.1 -p {cfg['pgPort']}","-w","start")
     env={k:v for k,v in os.environ.items() if k.upper() in {"PATH","SYSTEMROOT","WINDIR","COMSPEC","PATHEXT","TEMP","TMP","LOCALAPPDATA"}}
     env["NODE_ENV"]="test"
@@ -105,7 +109,7 @@ def main():
         if proc.poll() is not None:raise RuntimeError("host stopped; inspect private host.log")
         try:
             with urlopen("http://127.0.0.1:%d/health"%cfg["httpPort"],timeout=.4) as r:
-                if r.read()==b"P05":print("Ready:",d/"open.html");return
+                if r.read()==expected_health:print("Ready:",d/"open.html");return
         except OSError:time.sleep(.25)
     raise RuntimeError("host startup timeout")
 

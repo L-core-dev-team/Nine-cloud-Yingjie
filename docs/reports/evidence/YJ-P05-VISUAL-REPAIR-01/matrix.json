@@ -1,0 +1,50 @@
+{
+  "A": [
+    "loc_wangqitai",
+    "loc_luhuadu"
+  ],
+  "B": [
+    "chat",
+    "scan",
+    "scan",
+    "berm",
+    "combat:npc_shuiyuya",
+    "chat",
+    "quest:claim",
+    "loc_wangqitai",
+    "loc_luhuadu",
+    "loc_wangqitai"
+  ],
+  "C": [
+    "berm",
+    "combat:npc_shuiyuya",
+    "parent ferry via native move",
+    "scan"
+  ],
+  "B7": "disable pictures, stop host/PG, resume exact save, enable before B8",
+  "expected": {
+    "A": [
+      "I03",
+      null
+    ],
+    "B": [
+      null,
+      "I01",
+      null,
+      null,
+      "I02",
+      "carry B5",
+      "carry B5",
+      "I03",
+      null,
+      "reuse I03"
+    ],
+    "C": [
+      null,
+      "I02",
+      null,
+      "clear conflict, no image"
+    ]
+  },
+  "cap": 16
+}

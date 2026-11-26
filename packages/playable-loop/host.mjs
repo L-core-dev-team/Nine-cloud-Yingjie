@@ -9,7 +9,10 @@ import {digest} from "../native-facts/admission.mjs";
 
 const dir=process.argv[2],cfg=JSON.parse(readFileSync(join(dir,"private.json")));
 const store=openStore(dir),db=store.db,n=await openNative(cfg,dir,store);
-const visualMode=["visual-demo","visual-reader"].some(name=>readFileSync(join(dir,"p05-owned"),"utf8")==="P05/1:"+name);
+const instance=readFileSync(join(dir,"p05-owned"),"utf8");
+const continuing=["visual-reader","repair-a","repair-b","repair-c"].some(name=>instance==="P05/1:"+name);
+const policy=continuing?await import("./visual/scene-policy.mjs"):null;
+const visualMode=continuing || instance==="P05/1:visual-demo";
 const pictures=visualMode?await import("./visual/pictures.mjs"):null;
 const ticket=randomBytes(32).toString("hex"),base="http://127.0.0.1:"+cfg.httpPort;
 const scopeOf=(owner,save)=>hash([owner,save.saveId,"root"]);
@@ -23,9 +26,11 @@ function record(owner,save,row,receipt,text,recovery){
     ruleVersion:save.ruleVersion,canonVersion:save.canonVersion,events:receipt.decision.events.map(e=>e.type),
     native:publicState(save,n.labels),...blocked};
   delete entry.native.actions;
+  if(policy)entry.sceneEvidence=policy.sceneEvidence(save,receipt);
   db.exec("BEGIN IMMEDIATE");
   try{db.prepare("UPDATE action SET record=? WHERE k=? AND record IS NULL").run(JSON.stringify(entry),row.k);
-    if(pictures)pictures.bindPicture(store,entry,bound);
+    if(policy)policy.bindScene(store,entry,bound);
+    else if(pictures)pictures.bindPicture(store,entry,bound);
     else prepareState(store,entry);
     db.exec("COMMIT")}catch(e){db.exec("ROLLBACK");throw e}
   return entry;
@@ -44,7 +49,7 @@ const srv=createServer(async(req,res)=>{
   const reply=(status,x,type="application/json")=>{res.writeHead(status,{"Content-Type":type+"; charset=utf-8","Cache-Control":"no-store","Referrer-Policy":"no-referrer","X-Content-Type-Options":"nosniff","Content-Security-Policy":"default-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'none'"});res.end(type==="application/json"?JSON.stringify(x):x)};
   try{
     if(req.headers.host!==new URL(base).host)failure(403,"host");
-    if(req.method==="GET"&&req.url==="/health")return reply(200,"P05","text/plain");
+    if(req.method==="GET"&&req.url==="/health")return reply(200,continuing?"P05-visual/2":"P05","text/plain");
     const files={"/":["page.html","text/html"],"/player.js":["player.js","text/javascript"],"/style.css":["style.css","text/css"]};
     if(pictures){
       files["/"]=["visual/page.html","text/html"];
@@ -68,8 +73,8 @@ const srv=createServer(async(req,res)=>{
         const input=await body(req); if(input.scope!==scope)failure(403,"存档不符");
         pictures.setEnabled(store,scope,input.enabled);return reply(200,{ok:true});
       }
-      const m=/^\/pictures\/(current|history)\/([1-8])\/([0-9a-f]{64})$/.exec(req.url);
-      if(!m)failure(404,"无适用画面");
+      const m=/^\/pictures\/(current|history)\/([1-9][0-9]{0,15})\/([0-9a-f]{64})$/.exec(req.url);
+      if(!m || !Number.isSafeInteger(Number(m[2])) || Number(m[2])>save.revision)failure(404,"无适用画面");
       // Read the POST body before checking the current save, including delayed acknowledgements.
       const outcome=req.method==="POST"?(await body(req)).outcome:null;
       const live=publicState(await n.saveFor(owner),n.labels);
@@ -82,7 +87,11 @@ const srv=createServer(async(req,res)=>{
       const current=publicState(save,n.labels);
       const history=store.history(scope);
       const visual=pictures?{enabled:pictures.enabled(store,scope),frames:Object.fromEntries(history.map(h=>[h.revision,pictures.describe(store,scope,h.revision)]))}:undefined;
-      return reply(200,{scope,current,history,visual,slots:db.prepare("SELECT rev,kind,status,result FROM slot WHERE scope=? ORDER BY rev,kind").all(scope).map(x=>({...x,result:x.result&&JSON.parse(x.result)})),...blocked});
+      if(continuing)visual.evidence=Object.fromEntries(history.map(h=>{
+        const row=pictures.binding(store,scope,h.revision);
+        return [h.revision,row?{version:row.version,reason:row.reason??row.basis,observed:row.sourceRevision}:null];
+      }));
+      return reply(200,{scope,current,history,visual,...(continuing?{continuing:true}:{}),slots:db.prepare("SELECT rev,kind,status,result FROM slot WHERE scope=? ORDER BY rev,kind").all(scope).map(x=>({...x,result:x.result&&JSON.parse(x.result)})),...blocked});
     }
     if(req.method!=="POST"||req.url!=="/act")failure(404,"not found");
     const input=await body(req);
@@ -92,7 +101,7 @@ const srv=createServer(async(req,res)=>{
       if(prior.scope!==scope||prior.expected!==input.revision||JSON.parse(prior.body).id!==input.id)failure(409,"conflicting key");
       if(!prior.record)failure(409,"正文待恢复");return reply(200,{revision:JSON.parse(prior.record).revision,duplicate:true});
     }
-    if(busy||input.revision!==save.revision||save.revision>=8)failure(409,"修订已变化或本局已结束");
+    if(busy||input.revision!==save.revision||(!continuing && save.revision>=8))failure(409,"修订已变化或本局已结束");
     if(db.prepare("SELECT 1 FROM action WHERE scope=? AND record IS NULL").get(scope))failure(409,"上一行动待恢复");
     const choice=publicState(save,n.labels).actions.find(x=>x.id===input.id);
     if(!choice)failure(400,"不可用的行动");

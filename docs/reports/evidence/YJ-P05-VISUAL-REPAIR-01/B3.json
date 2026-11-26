@@ -1,0 +1,74 @@
+{
+  "h": {
+    "scope": "12f85fff6c219dc7c9f8fe2073740bfedf6b0f6aadae5f1b237a9ea54693d9e7",
+    "ownerHash": "72d2a52b39cc1423f15d63c5b8aebc4c0841cd8904049ff1dc2baea0403de57b",
+    "saveHash": "dd28168ffa7a49e54b03e418124849d35e451b9ac8f0c3684fad4166cbe5b116",
+    "branch": "root",
+    "revision": 3,
+    "requestKey": "62c94f7e-175b-4288-85e7-4bf77144d071",
+    "action": "察看渡口",
+    "text": "石头还是那些石头。\n风从南边来，带一点铁锈味。",
+    "bodySha": "def53dfc698983a6ab75a78b3aed9c79ab8c1eb8e147a9f7bab515cb34091e6b",
+    "receiptSha": "b1931da24377410e2b4ff118c9fe9f7efc4257f5a276a67a6490c67facdc09d5",
+    "canonicalReceiptSha": "60db2e6078ea99d660757a0a4f1f0d6afefdebd8b7f2f4d2ad1d8a3568ccab86",
+    "source": "deterministic",
+    "recovery": "returned",
+    "ruleVersion": "prologue-v1-candidate-20261005",
+    "canonVersion": "prologue-canon-candidate-20261005",
+    "events": [
+      "observe.result"
+    ],
+    "native": {
+      "location": "loc_luhuadu",
+      "place": "芦花渡",
+      "sub": null,
+      "quest": {
+        "status": "unavailable",
+        "rewardClaimed": false
+      },
+      "known": [
+        "loc_luhuadu",
+        "loc_wangqitai"
+      ],
+      "revision": 3
+    },
+    "sceneEligible": false,
+    "send": false,
+    "actualAction": "blocked",
+    "dispatchAttempted": false,
+    "sceneEvidence": {
+      "ferry": "aground",
+      "obstacle": "blocked",
+      "outcome": "legal_failure",
+      "events": [
+        {
+          "type": "observe.result",
+          "targetId": "obj_ferry",
+          "method": "scan",
+          "result": "none"
+        }
+      ]
+    }
+  },
+  "b": {
+    "version": "p05-native-art/2",
+    "scope": "12f85fff6c219dc7c9f8fe2073740bfedf6b0f6aadae5f1b237a9ea54693d9e7",
+    "revision": 3,
+    "ownerHash": "72d2a52b39cc1423f15d63c5b8aebc4c0841cd8904049ff1dc2baea0403de57b",
+    "saveHash": "dd28168ffa7a49e54b03e418124849d35e451b9ac8f0c3684fad4166cbe5b116",
+    "branch": "root",
+    "requestKey": "62c94f7e-175b-4288-85e7-4bf77144d071",
+    "bodySha": "def53dfc698983a6ab75a78b3aed9c79ab8c1eb8e147a9f7bab515cb34091e6b",
+    "receipt": "60db2e6078ea99d660757a0a4f1f0d6afefdebd8b7f2f4d2ad1d8a3568ccab86",
+    "location": "loc_luhuadu",
+    "sub": null,
+    "sha": null,
+    "asset": null,
+    "reason": "重复观察未获得新线索",
+    "sourceRevision": null,
+    "basis": "本回合无适用画面",
+    "key": "4bedb4e591aca88d0a57f87c1a850b00025e2cf430bc9e9db596bac6db4f6f1e"
+  },
+  "expected": null,
+  "browser": "158.0.8127.38"
+}

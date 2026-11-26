@@ -1,5 +1,10 @@
 # 九霄 · 映界
 
+## 2026-11-26 · P05_VISUAL_ROUTE_REPAIR_PASS
+
+双击 [Play-P05-Visual.cmd](packages/playable-loop/Play-P05-Visual.cmd) 接续原个人档。换序后可重新配图，第八回合还可继续。 [修整报告](docs/reports/YJ-P05-VISUAL-REPAIR-01-report.md)
+
+
 ## 2026-11-25 · 试玩后继续修整（已批准 / NOT_RUN）
 
 道主已亲自走过图文短局，并批准继续修整。当前 [YJ-P05-VISUAL-REPAIR-01](docs/task-briefs/YJ-P05-VISUAL-REPAIR-01.md) 从 `2ae4c1f09df86f8fdba27855f3711fe63fb276f5` 接续，分支 `codex/yj-p05-visual-repair-01`。

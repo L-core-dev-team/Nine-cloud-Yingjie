@@ -1,0 +1,73 @@
+{
+  "h": {
+    "scope": "c095821f99c75667a7f6c5aaac4788d03569facf3be17504485df0388ed2caab",
+    "ownerHash": "7f987179d169a637e3e4e26ff20e20f6bcdacb3fd5f54d2f7421ceabf66c5f9d",
+    "saveHash": "f74829fb259b9013c5529cca3af3aa23dffbea0caf4ca37b570e6b9882344a2c",
+    "branch": "root",
+    "revision": 2,
+    "requestKey": "0f085741-6f42-47cd-a1a1-6ba00b597f99",
+    "action": "前往芦花渡",
+    "text": "石堆挡住了路。",
+    "bodySha": "1a1305e723f29984967f7de069c05cb6211b8ee60f091d26935bc669f6c3fcde",
+    "receiptSha": "9f96083f8750fed20cee83504e68d7859ecac6b6b2b842108376882734b8a078",
+    "canonicalReceiptSha": "c7aa45ecd44b4de3bb0b2405dc2b5227e13d4e5892ad3b24ad1aeb73fcc486ad",
+    "source": "deterministic",
+    "recovery": "returned",
+    "ruleVersion": "prologue-v1-candidate-20261005",
+    "canonVersion": "prologue-canon-candidate-20261005",
+    "events": [
+      "move.blocked"
+    ],
+    "native": {
+      "location": "loc_wangqitai",
+      "place": "望气台",
+      "sub": null,
+      "quest": {
+        "status": "unavailable",
+        "rewardClaimed": false
+      },
+      "known": [
+        "loc_luhuadu",
+        "loc_wangqitai"
+      ],
+      "revision": 2
+    },
+    "sceneEligible": false,
+    "send": false,
+    "actualAction": "blocked",
+    "dispatchAttempted": false,
+    "sceneEvidence": {
+      "ferry": "aground",
+      "obstacle": "blocked",
+      "outcome": "legal_failure",
+      "events": [
+        {
+          "type": "move.blocked",
+          "toward": "loc_luhuadu",
+          "reason": "rockslide"
+        }
+      ]
+    }
+  },
+  "b": {
+    "version": "p05-native-art/2",
+    "scope": "c095821f99c75667a7f6c5aaac4788d03569facf3be17504485df0388ed2caab",
+    "revision": 2,
+    "ownerHash": "7f987179d169a637e3e4e26ff20e20f6bcdacb3fd5f54d2f7421ceabf66c5f9d",
+    "saveHash": "f74829fb259b9013c5529cca3af3aa23dffbea0caf4ca37b570e6b9882344a2c",
+    "branch": "root",
+    "requestKey": "0f085741-6f42-47cd-a1a1-6ba00b597f99",
+    "bodySha": "1a1305e723f29984967f7de069c05cb6211b8ee60f091d26935bc669f6c3fcde",
+    "receipt": "c7aa45ecd44b4de3bb0b2405dc2b5227e13d4e5892ad3b24ad1aeb73fcc486ad",
+    "location": "loc_wangqitai",
+    "sub": null,
+    "sha": null,
+    "asset": null,
+    "reason": "移动受阻，未重新观察",
+    "sourceRevision": null,
+    "basis": "本回合无适用画面",
+    "key": "6322a251ef4cfe1118d736e1da6ee5096ac4084c9fc3510c88600be669e1516d"
+  },
+  "expected": null,
+  "browser": "158.0.8127.38"
+}

@@ -1,0 +1,90 @@
+{
+  "h": {
+    "scope": "12f85fff6c219dc7c9f8fe2073740bfedf6b0f6aadae5f1b237a9ea54693d9e7",
+    "ownerHash": "72d2a52b39cc1423f15d63c5b8aebc4c0841cd8904049ff1dc2baea0403de57b",
+    "saveHash": "dd28168ffa7a49e54b03e418124849d35e451b9ac8f0c3684fad4166cbe5b116",
+    "branch": "root",
+    "revision": 2,
+    "requestKey": "6df06292-ba77-4250-8ced-4fa245ecdc37",
+    "action": "察看渡口",
+    "text": "渡槽淤了半尺，水发黄。\n船吃水太深，蹭着淤泥靠不上岸。\n岸边踩倒的芦花没人扶。",
+    "bodySha": "c06f6b269e42447996df098e63ee34479c9e1e1f34ee0f97e3c6c64ba9b77e8a",
+    "receiptSha": "d6ad6e51a1161586c4a6fc6639af307e87f8d325a4875e911ab773491b94d481",
+    "canonicalReceiptSha": "60557e5fafa103f845125057a2188a7b3a7d2fbfc07664a4567e6f092ee4f1ff",
+    "source": "deterministic",
+    "recovery": "returned",
+    "ruleVersion": "prologue-v1-candidate-20261005",
+    "canonVersion": "prologue-canon-candidate-20261005",
+    "events": [
+      "observe.result"
+    ],
+    "native": {
+      "location": "loc_luhuadu",
+      "place": "芦花渡",
+      "sub": null,
+      "quest": {
+        "status": "unavailable",
+        "rewardClaimed": false
+      },
+      "known": [
+        "loc_luhuadu",
+        "loc_wangqitai"
+      ],
+      "revision": 2
+    },
+    "sceneEligible": false,
+    "send": false,
+    "actualAction": "blocked",
+    "dispatchAttempted": false,
+    "sceneEvidence": {
+      "ferry": "aground",
+      "obstacle": "blocked",
+      "outcome": "success",
+      "events": [
+        {
+          "type": "observe.result",
+          "targetId": "obj_ferry",
+          "method": "scan",
+          "result": "found",
+          "clueId": "clue_ferry_stuck"
+        }
+      ]
+    }
+  },
+  "b": {
+    "version": "p05-native-art/2",
+    "scope": "12f85fff6c219dc7c9f8fe2073740bfedf6b0f6aadae5f1b237a9ea54693d9e7",
+    "revision": 2,
+    "ownerHash": "72d2a52b39cc1423f15d63c5b8aebc4c0841cd8904049ff1dc2baea0403de57b",
+    "saveHash": "dd28168ffa7a49e54b03e418124849d35e451b9ac8f0c3684fad4166cbe5b116",
+    "branch": "root",
+    "requestKey": "6df06292-ba77-4250-8ced-4fa245ecdc37",
+    "bodySha": "c06f6b269e42447996df098e63ee34479c9e1e1f34ee0f97e3c6c64ba9b77e8a",
+    "receipt": "60557e5fafa103f845125057a2188a7b3a7d2fbfc07664a4567e6f092ee4f1ff",
+    "location": "loc_luhuadu",
+    "sub": null,
+    "sha": "30c1aa4a8ed9b37d2c5e7da7e506b7b785024d5ce2488fc29b99aa726f0bddf3",
+    "asset": "I01",
+    "reason": "渡口父地点的首次淤船线索与未清障状态相符",
+    "sourceRevision": 2,
+    "basis": "当回合正文与原生行动相符",
+    "key": "546db01fffd82cdf585d5cd9b049a254128dbb36462fe921685ce806dce200de"
+  },
+  "expected": "I01",
+  "browser": "158.0.8127.38",
+  "decoded": [
+    1536,
+    1024,
+    601.546875
+  ],
+  "shown": {
+    "revision": 2,
+    "scope": "12f85fff6c219dc7c9f8fe2073740bfedf6b0f6aadae5f1b237a9ea54693d9e7",
+    "asset": "I01",
+    "sha": "30c1aa4a8ed9b37d2c5e7da7e506b7b785024d5ce2488fc29b99aa726f0bddf3",
+    "key": "546db01fffd82cdf585d5cd9b049a254128dbb36462fe921685ce806dce200de",
+    "mode": "current",
+    "state": "first-display",
+    "at": "2026-11-26T11:09:21.071Z"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "h": {
+    "scope": "c095821f99c75667a7f6c5aaac4788d03569facf3be17504485df0388ed2caab",
+    "ownerHash": "7f987179d169a637e3e4e26ff20e20f6bcdacb3fd5f54d2f7421ceabf66c5f9d",
+    "saveHash": "f74829fb259b9013c5529cca3af3aa23dffbea0caf4ca37b570e6b9882344a2c",
+    "branch": "root",
+    "revision": 1,
+    "requestKey": "8b39ef83-c7f1-443c-a198-a6edecb2c97d",
+    "action": "前往望气台",
+    "text": "你到了望气台。\n从望气台往南看。\n压在山脊上的那片白，不是云。",
+    "bodySha": "97dc995a0bcdc5178d62a03e7482c49d0bc291bdcd727a591c2b749767da052d",
+    "receiptSha": "0baacaf73fbffd9dfc4e08226c2abd52e1ef22fe6b274e11d080e2556d5ab754",
+    "canonicalReceiptSha": "75f177519975bcedbe944c3d0fc421fb1130f4a6b95d3ea633bab76214a7ad68",
+    "source": "deterministic",
+    "recovery": "returned",
+    "ruleVersion": "prologue-v1-candidate-20261005",
+    "canonVersion": "prologue-canon-candidate-20261005",
+    "events": [
+      "move.arrived"
+    ],
+    "native": {
+      "location": "loc_wangqitai",
+      "place": "望气台",
+      "sub": null,
+      "quest": {
+        "status": "unavailable",
+        "rewardClaimed": false
+      },
+      "known": [
+        "loc_luhuadu",
+        "loc_wangqitai"
+      ],
+      "revision": 1
+    },
+    "sceneEligible": false,
+    "send": false,
+    "actualAction": "blocked",
+    "dispatchAttempted": false,
+    "sceneEvidence": {
+      "ferry": "aground",
+      "obstacle": "blocked",
+      "outcome": "success",
+      "events": [
+        {
+          "type": "move.arrived",
+          "from": "loc_luhuadu",
+          "to": "loc_wangqitai"
+        }
+      ]
+    }
+  },
+  "b": {
+    "version": "p05-native-art/2",
+    "scope": "c095821f99c75667a7f6c5aaac4788d03569facf3be17504485df0388ed2caab",
+    "revision": 1,
+    "ownerHash": "7f987179d169a637e3e4e26ff20e20f6bcdacb3fd5f54d2f7421ceabf66c5f9d",
+    "saveHash": "f74829fb259b9013c5529cca3af3aa23dffbea0caf4ca37b570e6b9882344a2c",
+    "branch": "root",
+    "requestKey": "8b39ef83-c7f1-443c-a198-a6edecb2c97d",
+    "bodySha": "97dc995a0bcdc5178d62a03e7482c49d0bc291bdcd727a591c2b749767da052d",
+    "receipt": "75f177519975bcedbe944c3d0fc421fb1130f4a6b95d3ea633bab76214a7ad68",
+    "location": "loc_wangqitai",
+    "sub": null,
+    "sha": "77979c8002976334ea57c71a82d59737d435be51dbba1acbec688ff6163c1cd9",
+    "asset": "I03",
+    "reason": "当次抵达望气台，正文确认向南及山脊白色区域",
+    "sourceRevision": 1,
+    "basis": "当回合正文与原生行动相符",
+    "key": "4f460279ec12135860f13ff7a6a7f89db7a6a4c661b1c321dc1f0d18c0a4b041"
+  },
+  "expected": "I03",
+  "browser": "158.0.8127.38",
+  "decoded": [
+    1536,
+    1024,
+    601.546875
+  ],
+  "shown": {
+    "revision": 1,
+    "scope": "c095821f99c75667a7f6c5aaac4788d03569facf3be17504485df0388ed2caab",
+    "asset": "I03",
+    "sha": "77979c8002976334ea57c71a82d59737d435be51dbba1acbec688ff6163c1cd9",
+    "key": "4f460279ec12135860f13ff7a6a7f89db7a6a4c661b1c321dc1f0d18c0a4b041",
+    "mode": "current",
+    "state": "first-display",
+    "at": "2026-11-26T11:09:13.207Z"
+  }
+}

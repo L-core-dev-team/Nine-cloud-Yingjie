@@ -1,0 +1,73 @@
+{
+  "h": {
+    "scope": "12f85fff6c219dc7c9f8fe2073740bfedf6b0f6aadae5f1b237a9ea54693d9e7",
+    "ownerHash": "72d2a52b39cc1423f15d63c5b8aebc4c0841cd8904049ff1dc2baea0403de57b",
+    "saveHash": "dd28168ffa7a49e54b03e418124849d35e451b9ac8f0c3684fad4166cbe5b116",
+    "branch": "root",
+    "revision": 4,
+    "requestKey": "4b4f1650-b252-4ab9-9431-382cb04cc218",
+    "action": "走到渡口作业位",
+    "text": "你到了芦花渡。",
+    "bodySha": "004843db259a752c0323489860d770a6d06a329891b4b14e82733fc9e26a8b00",
+    "receiptSha": "07c871829749129307ac63c3e42a89dbd6d6089b1f188e3eae791d3ccc0711c1",
+    "canonicalReceiptSha": "90d288f4b7a4e1bb9c814341bf1afd3b5782ff49a3f9ce05daa48d8f6ce818d8",
+    "source": "deterministic",
+    "recovery": "returned",
+    "ruleVersion": "prologue-v1-candidate-20261005",
+    "canonVersion": "prologue-canon-candidate-20261005",
+    "events": [
+      "move.arrived"
+    ],
+    "native": {
+      "location": "loc_luhuadu",
+      "place": "芦花渡",
+      "sub": "subloc_ferry_berm",
+      "quest": {
+        "status": "unavailable",
+        "rewardClaimed": false
+      },
+      "known": [
+        "loc_luhuadu",
+        "loc_wangqitai"
+      ],
+      "revision": 4
+    },
+    "sceneEligible": false,
+    "send": false,
+    "actualAction": "blocked",
+    "dispatchAttempted": false,
+    "sceneEvidence": {
+      "ferry": "aground",
+      "obstacle": "blocked",
+      "outcome": "success",
+      "events": [
+        {
+          "type": "move.arrived",
+          "from": "loc_luhuadu",
+          "to": "loc_luhuadu"
+        }
+      ]
+    }
+  },
+  "b": {
+    "version": "p05-native-art/2",
+    "scope": "12f85fff6c219dc7c9f8fe2073740bfedf6b0f6aadae5f1b237a9ea54693d9e7",
+    "revision": 4,
+    "ownerHash": "72d2a52b39cc1423f15d63c5b8aebc4c0841cd8904049ff1dc2baea0403de57b",
+    "saveHash": "dd28168ffa7a49e54b03e418124849d35e451b9ac8f0c3684fad4166cbe5b116",
+    "branch": "root",
+    "requestKey": "4b4f1650-b252-4ab9-9431-382cb04cc218",
+    "bodySha": "004843db259a752c0323489860d770a6d06a329891b4b14e82733fc9e26a8b00",
+    "receipt": "90d288f4b7a4e1bb9c814341bf1afd3b5782ff49a3f9ce05daa48d8f6ce818d8",
+    "location": "loc_luhuadu",
+    "sub": "subloc_ferry_berm",
+    "sha": null,
+    "asset": null,
+    "reason": "本次行动没有相容的可见依据",
+    "sourceRevision": null,
+    "basis": "本回合无适用画面",
+    "key": "e935e846eaf5fb3e7473001e1ab52c69c681bc8a16ac82241d1c1c9d8271b62f"
+  },
+  "expected": null,
+  "browser": "158.0.8127.38"
+}
